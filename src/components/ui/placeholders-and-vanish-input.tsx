@@ -4,6 +4,13 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
+interface CanvasPoint {
+  x: number;
+  y: number;
+  r: number;
+  color: string;
+}
+
 export function PlaceholdersAndVanishInput({
   placeholders,
   onChange,
@@ -109,7 +116,8 @@ export function PlaceholdersAndVanishInput({
       requestAnimationFrame(() => {
         const newArr = [];
         for (let i = 0; i < newDataRef.current.length; i++) {
-          const current: {x:number, y: number, r: number} = newDataRef.current[i];
+          // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+          const current: CanvasPoint= newDataRef.current[i];
           if (current.x < pos) {
             newArr.push(current);
           } else {

@@ -10,11 +10,13 @@ import { HoverBorderGradient } from "../ui/hover-border-gradient";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
 import { Menu, MenuItem } from "../ui/navbarMenu";
 import { FaArrowRightLong } from "react-icons/fa6";
+import HeroModel from "../3dmodels/heroModel";
 
 export default function HeroSection({className}: {className?: string}) {
     const [active, setActive] = useState<string | null>(null);
     return (
         <>
+        <HeroModel />
             <header>
                 <div className={cn("fixed top-7 inset-x-0 mx-auto z-50", className)}>
                     <Menu setActive={setActive}>

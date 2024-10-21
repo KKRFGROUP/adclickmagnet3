@@ -1,6 +1,6 @@
 "use client";
 
-//import Section3Model from "../3dmodels/setion3Model";
+import Section3Model from "../3dmodels/setion3Model";
 import { PlaceholdersAndVanishInput } from "../ui/placeholders-and-vanish-input";
 //import Section3Model from "../3dmodels/setion3Model";
 
@@ -33,6 +33,7 @@ function PlaceholdersAndVanishInputDemo() {
 export default function Section3() {
   return (
     <>
+    <Section3Model />
     <div className="section3-container">
         <div className="input-container flex justify-center">
         <PlaceholdersAndVanishInputDemo />
