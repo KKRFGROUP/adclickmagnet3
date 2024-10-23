@@ -12,7 +12,7 @@ import '../app.css';
 export default function HeroModel() {
   
   return (
-    <div>
+    <div className='model'>
       <Spline
         scene="https://prod.spline.design/xGBBKsEMeyKcN8gb/scene.splinecode"
       />

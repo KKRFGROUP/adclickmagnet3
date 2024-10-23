@@ -23,9 +23,6 @@ body{
 }
 
 .model {
-    position: absolute;
-    top:0;
-    z-index: -1;
     max-height: 90vh;
 }
 .text-gen {
