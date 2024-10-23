@@ -1,9 +1,10 @@
-import dynamic from 'next/dynamic';
+"use client";
+//import dynamic from 'next/dynamic';
 
-const Spline = dynamic(() => import('@splinetool/react-spline').then(mod => mod.default), {
-  ssr: false,
-});
-//import Spline from '@splinetool/react-spline/next';
+//const Spline = dynamic(() => import('@splinetool/react-spline/next'), {
+//  ssr: false,
+//});
+import Spline from '@splinetool/react-spline/next';
 
 import '../app.css';
 

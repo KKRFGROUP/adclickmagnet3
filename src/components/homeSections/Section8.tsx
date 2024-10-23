@@ -6,7 +6,7 @@ import { TextGenerateEffect } from "../ui/text-generate-effect";
 export default function Section8() {
   return (
     <div className="sec8-container h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-      <TextGenerateEffect className="relative top-50" words={"Our Client Review"}  />
+      <TextGenerateEffect color={"inner-color-title"} className="relative top-50" words={"Our Client Review"}  />
       <InfiniteMovingCards
         items={testimonials}
         direction="right"

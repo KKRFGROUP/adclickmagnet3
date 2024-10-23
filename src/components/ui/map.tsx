@@ -18,9 +18,17 @@ const options = {
 };
 
 const GoogleMapComponent = () => {
+  const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+  
+  
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY, // Store API key in .env.local
+    googleMapsApiKey: apiKey || "", // Store API key in .env.local
   });
+  
+  if (!process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY) {
+    return <div>Error: Google Maps API key is missing</div>;
+  }
+  
 
   if (loadError) return <div>Error loading map</div>;
   if (!isLoaded) return <div>Loading map...</div>;

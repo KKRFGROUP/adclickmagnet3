@@ -68,7 +68,7 @@ export default function ContactUs() {
 
                 <div className="contact-sec3-content">
                     <h2 className="contact-sec3-content-head">Have Any Project<br /> on Your Mind?</h2>
-                    <p className="contact-sec3-content-para" >Great! We&apos;re excited to hear from you and let's start something</p>
+                    <p className="contact-sec3-content-para" >Great! We&apos;re excited to hear from you and let&apos;s start something</p>
                     <form onSubmit={() => {}} className="contact-form">
                         <div className="form-name-email flex items-center justify-between">
                             <div className="input-div">
