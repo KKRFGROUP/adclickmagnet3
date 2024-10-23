@@ -24,6 +24,8 @@ body{
 
 .model {
     max-height: 90vh;
+    position: relative;
+    top:0;
 }
 .text-gen {
     font-size: 40px;

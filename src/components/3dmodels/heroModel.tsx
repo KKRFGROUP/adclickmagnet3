@@ -15,7 +15,8 @@ export default function HeroModel() {
     <div className='model'>
       <Spline
         scene="https://prod.spline.design/xGBBKsEMeyKcN8gb/scene.splinecode"
-      />
+        />
     </div>
   );
 }
+//scene="https://prod.spline.design/xGBBKsEMeyKcN8gb/scene.splinecode"
