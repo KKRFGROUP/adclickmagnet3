@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Input, Label } from '../ui/form';
+import { Input, Label } from './ui/form';
 import { cn } from "@/lib/utils";
 import { FaInstagram, FaTwitter, FaFacebook, FaYoutube   } from "react-icons/fa6";
 

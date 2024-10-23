@@ -1,6 +1,6 @@
 
 import HeroSection from "@/components/homeSections/HeroSection";
-import Cursor from '../components/Cursor';
+
 import Section2 from "@/components/homeSections/Section2";
 import Section3 from "@/components/homeSections/Section3";
 import Section5 from "@/components/homeSections/Section5";
@@ -10,7 +10,7 @@ import TeamSection from "@/components/homeSections/TeamSection";
 import Section7 from "@/components/homeSections/Section7";
 import Section8 from "@/components/homeSections/Section8";
 import Section9 from "@/components/homeSections/Section9";
-import Footer from "@/components/homeSections/Footer";
+import Footer from "@/components/Footer";
 //import { useEffect, useState } from "react";
 //import Loading from "@/components/loading";
 //import TextSection from '@/components/TextSection'
@@ -24,7 +24,6 @@ export default function Home() {
 
   return (
     <>
-        <Cursor />
         <HeroSection />
         <div className="after-hero-sec">
 

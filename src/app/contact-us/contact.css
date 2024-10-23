@@ -1,0 +1,226 @@
+.contact-us-main-head {
+    background-image: linear-gradient(to bottom, #000, grey);
+    font-size: 60px;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+}   
+
+.contact-sec1-container {
+    background-image: url("https://frisk-react-bice.vercel.app/assets/img/bg/breadcumb-bg1-6.jpg");
+    background-size: cover;
+    height: 90vh;   
+}
+
+/* section 2 */
+
+.contact-sec2-container {
+    background-color: #E2E2E2;
+    box-shadow: 0px 0px 10px 1px #fff;
+    padding: 90px;
+    height: 90vh;
+    border-radius: 50px;
+    position: relative;
+    bottom: 50px;
+    transition: 0.4s;
+}
+.contact-sec2-container:hover {
+    box-shadow: 0px 0px 20px 1px #fff;
+}
+
+.contact-sec2-card {
+    background-color: #bababa;
+    padding: 30px;
+    width: 30%;
+    border-radius: 20px;
+    color: #000;
+}
+
+.contact-sec2-card-logo {
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+
+.contact-sec2-card-head {
+    font-family: "Syne", sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.contact-sec2-card-para {
+    color: #2b2b2b;
+}
+.contact-sec2-card-link {
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: "Unbounded"; 
+    font-size: 14px;
+    font-weight: bold;
+    
+}
+.get-direction-logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.contact-sec2-card-line {
+    width: 50%;
+    background-color: #000;
+    height: 2px;
+}
+
+/* section 3 */ 
+.contact-sec3-container {
+    background-color: #000;
+    box-shadow: 0px 0px 10px 1px #000;
+    padding: 90px;
+    height: 115vh;
+    border-radius: 50px;
+    position: relative;
+    bottom: 100px;
+    transition: 0.4s;
+}
+.contact-sec3-container:hover {
+    box-shadow: 0px 0px 20px 1px #000;
+
+}
+
+.map-container {
+    width: 50%;
+    height: 500px;
+    border-radius: 20px;
+    background-color: #000;
+}
+
+.contact-sec3-content {
+
+}
+
+.contact-sec3-content-head {
+    font-family: "Syne", sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+}
+.contact-sec3-content-para {
+    font-family: "Poppins", sans-serif;
+}
+
+/* form  */
+
+.contact-form {
+    margin-top: 50px;
+}
+
+.input-div {
+    width: 45%;
+    margin-bottom: 10px;
+}
+
+.contact-form-input {
+    background-color: transparent;
+    color:#E2E2E2;
+    width: 100%;
+    border: none;
+    font-size: 20px;
+}
+.contact-form-input:focus {
+    border-width: 0px;
+}
+.input-line {
+    margin-bottom: 35px;
+    height: 1px;
+    border-radius: 3px;
+    background-color: #E2E2E2;
+}
+.contact-form-button {
+    background-color: #E2E2E2;
+    width: 180px;
+    height: 50px;
+    color: #000;
+    font-weight: bold;
+    font-size: 13px;
+    font-family: "Unbounded", sans-serif;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+.contact-form-button:hover {
+    box-shadow: 0px 0px 10px 1px #fff;
+}
+
+/* scrolling text */
+.scrolling-text-container {
+    background-color: #eff5ff;
+    border-radius: 4px;
+    overflow: hidden;
+    height: 20vh;
+    border-radius: 50px;
+    position: relative;
+    bottom: 150px;
+    box-shadow: 0px 0px 10px 1px #fff;
+    transition: 0.4s;
+    padding: 50px;
+}
+.scrolling-text-container:hover {
+    box-shadow: 0px 0px 20px 1px #fff;
+
+}
+
+/* Inner container styles */
+.scrolling-text-inner {
+    display: flex;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 0;
+    --marquee-speed: 20s; 
+    --direction:scroll-left
+}
+
+/* Text styles */
+.scrolling-text {
+    display: flex;
+    color: #000;
+    font-family: "Syne", sans-serif;
+    font-weight: bold;
+}
+
+.scrolling-text-item {
+    padding: 0 30px;
+    font-size: 40px;
+}
+.infinite-scroll-logo {
+    font-size: 30px;
+}
+
+/* Apply the animation to the text items */
+.scrolling-text-inner>div {
+    animation: var(--direction) var(--marquee-speed) linear infinite;
+}
+
+/* Pause the animation when a user hovers over it */
+.scrolling-text-container:hover .scrolling-text-inner>div {
+    animation-play-state: paused;
+}
+
+/* Setting the Animation using Keyframes */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+} 

@@ -1,45 +1,31 @@
-"use client";
+
 
 import "../../components/app.css";
-//import HeroModel from "../3dmodels/heroModel";
-import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { useState } from "react";
 //import { Button } from "./ui/moving-border";
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
-import { Menu, MenuItem } from "../ui/navbarMenu";
 import { FaArrowRightLong } from "react-icons/fa6";
+import Navbar from "../Navbar";
 import HeroModel from "../3dmodels/heroModel";
 
-export default function HeroSection({className}: {className?: string}) {
-    const [active, setActive] = useState<string | null>(null);
-    return (
-        <>
-        <HeroModel />
-            <header>
-                <div className={cn("fixed top-7 inset-x-0 mx-auto z-50", className)}>
-                    <Menu setActive={setActive}>
-                        <Link href="/" className="cursor-none">
-                            <MenuItem setActive={setActive} active={active} item="Home" />
-                        </Link>
-                        <Link href="/services" className="cursor-none">
-                            <MenuItem setActive={setActive} active={active} item="Services" />
-                        </Link>
-                        <Link href="/portfolio" className="cursor-none">
-                            <MenuItem setActive={setActive} active={active} item="Portfolio" />
-                        </Link>
-                        <Link href="/cokntact-us" className="cursor-none">
-                            <MenuItem setActive={setActive} active={active} item="Contact Us" />
-                        </Link>
-                    </Menu>
-                </div>
 
+
+
+
+
+export default function HeroSection() {
+    
+    return (
+        <div>
+            <HeroModel />
+            <header>
+                <Navbar />
             </header>
 
             <div className="hero-content flex flex-col justify-center absolute  h-80">
-                <TextGenerateEffect words={"Drive More Growth"}  />
-                <TextGenerateEffect  words={"Digital Marketing"}  />
+                <TextGenerateEffect color={"inner-color-title"} words={"Drive More Growth"}  />
+                <TextGenerateEffect color={"inner-color-title"} words={"Digital Marketing"}  />
                 <br />
                 <br />
                     <Link href="/">
@@ -55,7 +41,7 @@ export default function HeroSection({className}: {className?: string}) {
                     </Link>
             </div>
             
-        </>
+        </div>
         );
     }
             

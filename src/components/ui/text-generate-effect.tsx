@@ -7,12 +7,14 @@ import '../app.css';
 export const TextGenerateEffect = ({
   words,
   className,
+  color,
   filter = true,
   duration = 2.3,
 }: {
   words: string;
   className?: string;
   filter?: boolean;
+  color: string;
   duration?: number;
 }) => {
   const [scope, animate] = useAnimate();
@@ -38,7 +40,7 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
-              className="inner-color-title dark:text-white text-black opacity-0"
+              className={`${color} dark:text-white text-black opacity-0`}
               style={{
                 filter: filter ? "blur(10px)" : "none",
               }}

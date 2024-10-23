@@ -131,7 +131,7 @@ export const HeroParallax = ({
 export const Header = () => {
   return (
     <div className="text-anime-cont max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
-      <h2 className="text-2xl md:text-7xl font-bold dark:text-white">
+      <h2 className="data-driven-head text-2xl md:text-7xl font-bold dark:text-white">
       Data-driven, customer-<br />centric digital services
       </h2>
       <h2 className="text-2xl md:text-7xl font-bold dark:text-white">

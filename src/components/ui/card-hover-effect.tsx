@@ -2,7 +2,6 @@
 
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 import { PinContainer } from "../ui/3d-pin";
@@ -29,8 +28,7 @@ export const HoverEffect = ({
       )}
     >
       {items.map((item, idx) => (
-        <Link
-          href={item?.link}
+        <div
           key={item?.link}
           className="relative group  block p-5 m-3 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
@@ -58,7 +56,7 @@ export const HoverEffect = ({
             <CardTitle>{item.title}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
           </Card>
-        </Link>
+        </div>
       ))}
     </div>
   );
@@ -81,7 +79,7 @@ export const Card = ({
         "rounded-2xl h-72 w-60 p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
         className
       )}
-      title={title} link={link}
+      title={title} href={link}
     >
       <div className="relative z-50 w-full">
         <div className="p-4 ">{children}</div>
