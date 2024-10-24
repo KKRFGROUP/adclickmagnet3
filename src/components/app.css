@@ -26,6 +26,7 @@ body{
     max-height: 90vh;
     position: relative;
     bottom: 180px;
+    height: 100vh;
 }
 .text-gen {
     font-size: 40px;
