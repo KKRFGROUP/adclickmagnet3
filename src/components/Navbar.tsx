@@ -12,7 +12,7 @@ export default function Navbar({className}: {className?: string}) {
   return (
     <div className={cn(" fixed top-7 inset-x-0 mx-auto z-50", className)}>
                     <Menu setActive={setActive}>
-                            <Link href="/portfolio" className="cursor-none">
+                            <Link href="/" className="cursor-none">
                                 <MenuItem setActive={setActive} active={active} item="Home" />
                             </Link>
                             <MenuItem setActive={setActive} active={active} item="What We Do">
@@ -28,7 +28,7 @@ export default function Navbar({className}: {className?: string}) {
                                 </div>
                             </MenuItem>
                         
-                        <Link href="/portfolio" className="cursor-none">
+                        <Link href="/about" className="cursor-none">
                             <MenuItem setActive={setActive} active={active} item="Who We Are" />
                         </Link>
                         <Link href="/contact-us" className="cursor-none">
