@@ -22,7 +22,7 @@ export default function Footer() {
         <SignupFormDemo />
       </div>
     </div>
-    <div className="footer-container-2">
+    <div className="footer-container-2 h-[30vh]">
         <h2 className="solutions" >SOLUTIONS</h2>
         <div className="solution-paras flex flex-wrap justify-between">
           <p className="solution-para">Paid search marketing</p>
@@ -40,11 +40,11 @@ export default function Footer() {
         <hr className='solution-gap-line'/>
 
         <div className="flex justify-between px-10 pt-3">
-          <Link href="/about" className='solution-page-link'>About</Link>
+          <Link href="/about" className='solution-page-link'>Press Release</Link>
           <Link href="/blog" className='solution-page-link'>Blog</Link>
           <Link href="/careers" className='solution-page-link'>Careers</Link>
           <Link href="/team" className='solution-page-link'>Team</Link>
-          <Link href="/success-stories" className='solution-page-link'>Success Stories</Link>
+          <Link href="/success-stories" className='solution-page-link'>Case Studies</Link>
           <Link href="/awards" className='solution-page-link'>Awards</Link>
           <Link href="/contact" className='solution-page-link'>Contact</Link>
         </div>

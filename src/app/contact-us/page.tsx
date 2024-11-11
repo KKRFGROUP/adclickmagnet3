@@ -11,9 +11,13 @@ import { ImPhone } from "react-icons/im";
 import GoogleMapComponent from '../../components/ui/map';
 import { FaStarOfLife } from "react-icons/fa";
 
+//ui animation
+import { TracingBeam } from "../../components/ui/tracing-beam";
+
 
 export default function ContactUs() {
     return (
+        <TracingBeam>
         <div className="contact-us-page-main-container">
             <Navbar />
             <Section1 />
@@ -107,5 +111,6 @@ export default function ContactUs() {
             </div>
             <Footer />
         </div>
+        </TracingBeam>
     )
 }

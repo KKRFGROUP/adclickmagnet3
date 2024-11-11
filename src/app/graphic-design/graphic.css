@@ -1,0 +1,450 @@
+.graphic-page-hero-sec-container {
+    height: 100vh;
+    background-image: url("https://img.freepik.com/premium-photo/3d-black-podium-dark-geometric-background_167650-4016.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.graphic-page-hero-sec-content {
+    margin-top: 80px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.graphic-page-hero-sec-head {
+    font-size: 120px;
+    font-family: "Inter";
+    width:50%;
+    margin:0px;
+    padding: 0px ;
+}
+
+.graphic-page-hero-sec-para {
+    width: 50%;
+    font-size: 20px;
+}
+.graphic-page-hero-sec-para-last {
+    
+    font-size: 23px;
+}
+
+/* section 2 */
+
+.graphic-page-sec2-container {
+    background-color: #E2E2E2;
+    height: 100vh; 
+    color: #000;
+    border-radius: 50px;
+    padding: 80px;
+}
+.graphic-page-sec2-content {
+    width: 50%;
+}
+.graphic-page-sec2-content-variety {
+    font-weight: bold;
+    font-size: 20px;
+}
+.graphic-page-sec2-content-head {
+    font-size: 50px;
+    font-family: "Syne"; 
+    font-weight: bold;
+}
+.graphic-page-sec2-content-para {
+    font-size: 20px;
+}
+.graphic-page-sec2-graphic {
+    width: 100%;
+}
+.graphic-page-sec2-gif {
+    height: 500px;
+    width: 500px;
+    border-radius: 20px;
+}
+.graphic-page-sec2-gif:hover {
+    border-radius: 25px;
+    width: 520px;
+    height: 520px;
+    transition: 0.4s;
+    box-shadow: 0px 0px 10px 1px #000;
+}
+
+.graphic-page-sec2-graphic-card {
+    border-radius: 20px;
+}
+
+.graphic-page-sec2-graphic {
+    width: 50%;
+}
+
+
+
+/* service section */
+
+.graphic-page-services-cards-container {
+    width: max-content;
+}
+.graphic-page-services-card {
+    width:23vw;
+    height: 80vh;
+    margin: 20px;
+}
+.graphic-page-services-card-img {
+    height: 50vh;
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.graphic-page-services-card-head {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.graphic-page-services-card-para {
+    font-size: 18px;
+    width: 80%;
+    padding-bottom: 70px;
+}
+.graphic-page-services-card-line {
+    height: 5px;
+    background-color: grey;
+    border: 0px;
+    border-radius: 20px;
+}
+
+.graphic-page-services-sec-container {
+    height: 140vh;
+    background-color: #000;
+    border-radius: 50px;
+    padding: 80px;
+}
+.graphic-page-services-sec-head {
+    font-size: 100px;
+    font-family: "Syne", sans-serif;
+}
+
+
+
+.main-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+ 
+  
+  .image-hover {
+    display: block;
+    height:120px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    transform-origin: top left;
+    animation: skwoop 0.7s var(--easing) backwards;
+    animation-duration: calc(0.6s + (var(--i) * 0.1s));
+    animation-delay: calc((var(--i) * 50ms));
+    cursor: pointer;
+  
+    @keyframes skwoop {
+      from {
+        opacity: 0;
+        transform: translateY(5vh) skewY(5deg);
+      }
+    }
+  
+    .title {
+      font-family: "Unbounded";
+      font-weight: 900;
+      font-size: 9vh;
+      letter-spacing: 0.05ch;
+  
+      &::after {
+        z-index: 5;
+        color: transparent;
+        -webkit-text-stroke: 2px #fff;
+        
+      }
+    }
+  
+    > .img {
+      position: relative;
+      bottom: 30px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 40%;
+      max-height: 60vh;
+      pointer-events: none;
+      z-index: 2;
+      visibility: hidden;
+      opacity: 0;
+      border-radius: 20px;
+      box-shadow: 0px 0px 10px 1px #000;
+      transition: opacity 0.2s linear, visibility 0s linear 0.2s;
+    }
+  
+    &:hover,
+    &:focus {
+      z-index: 10;
+      .title::after {
+        display: block;
+      }
+      > .img {
+        transition-delay: 0s;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  
+  
+  .image-hover > .img {
+    --x-px: calc(var(--x) * 1px);
+    --y-px: calc(var(--y) * 1px);
+    top: 0;
+    left: 0;
+    transform: translate(var(--x-px), var(--y-px)) translate(-50%, -50%);
+  }
+}
+
+.graphic-page-service-sec-para {
+    color: grey;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.graphic-page-service-sec-line-content { 
+    margin-top: 20px;
+}
+
+.graphic-page-service-sec-line {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.graphic-page-service-sec-button {
+    background-color: #E2E2E2;
+    border-radius: 30px;
+    height: 40px;
+    width: 150px;
+    color:#000;
+}
+
+
+/* portfolio section */
+
+.portfolio-sec-container {
+    background-color: #000;
+    padding: 70px;
+}
+
+.portfolio-sec-head-container {
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+.portfolio-sec-card-container {
+    margin-top: 30px;
+    margin-bottom: 90px;
+}
+
+.portfolio-sec-head {
+    font-size: 100px;
+    font-family: "Syne", sans-serif;
+}
+.portfolio-sec-head-second {
+    position: relative;
+    left: 300px;
+    font-size: 100px;
+    font-family: "Syne", sans-serif;
+}
+
+.portfolio-sec-card-img {
+    -webkit-transform: scale(1);
+    width: 100%;
+    height: 100%;
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.portfolio-sec-card-img:hover {
+    -webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+figure {
+	width: 50%;
+	height: 400px;
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	overflow: hidden;
+    border-radius: 50px;
+}
+
+.portfolio-sec-card-head {
+    font-size: 30px;
+    font-family: "Syne";
+}
+
+/* infinite scroll */
+
+
+.infinite-text-section-container {
+    background-color: #E2E2E2;
+    height: 100vh;
+    border-radius: 50px;
+}
+
+.scrolling-text-container {
+    background-color: #000;
+    border-radius: 4px;
+    color: #fff;
+    overflow: hidden;
+    rotate: -7deg;
+    height: 25vh;
+    position: relative;
+    top: 30%;
+    right: 29px;
+    z-index: 1;
+    width: 110vw;
+}
+.scrolling-text-container-second {
+    background-color: #E2E2E2;
+    border-radius: 4px;
+    color: #fff;
+    overflow: hidden;
+    rotate: 7deg;
+    position: relative;
+    top: 30%;
+    height: 25vh;
+    position: relative;
+    right: 29px;
+    width: 110vw;
+}
+
+/* Inner container styles */
+.scrolling-text-inner {
+    display: flex;
+    white-space: nowrap;
+    font-size:100px;
+    font-weight: 600;
+    padding: 8px 0;
+}
+
+
+/* Text styles */
+.scrolling-text {
+    display: flex;
+}
+
+
+.scrolling-text-item {
+    padding: 0 30px;
+    transform: translateX(-100%);
+}
+.scrolling-text-item-second {
+    padding: 0 30px;
+    border: 1px solid #000;
+    border-radius:80px;
+    margin-left: 20px;
+    color: #000;
+}
+
+/* Apply the animation to the text items */
+.scrolling-text-inner>div {
+    animation: scroll-left 20s linear infinite;
+    
+}
+
+/* Pause the animation when a user hovers over it */
+.scrolling-text-container:hover .scrolling-text-inner>div {
+    animation-play-state: paused;
+}
+.scrolling-text-container-second:hover .scrolling-text-inner>div {
+    animation-play-state: paused;
+}
+
+/* Setting the Animation using Keyframes */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+
+/* creative services */
+
+.creative-service-section-container {
+    background-color: #000;
+    padding: 70px;
+    height: 120vh;
+}
+.creative-service-card-container {
+    margin-top: 60px;
+}
+.creative-service-card {
+    width: 23%;
+}
+
+.creative-service-card-content-line {
+    height: 5px;
+    border-radius: 20px;
+    background-color: grey;
+    border:0px;
+    margin-top: 30px;   
+}
+.creative-service-card-content {
+    font-size: 20px;
+}
+.creative-service-card-img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+/* overlapping sections */
+
+
+.custom-card {
+    height: 100vh;
+    border-radius: 50px;
+    padding: 80px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .overlapping-cards {
+    height: 300vh;
+    position: relative;
+  }
+  .card1 {
+    z-index: 2;
+    background-color: #E2E2E2;
+  }
+.card2 {
+    background-color:#E2E2E2;
+    z-index: 3;
+}
+.card3 {
+    background-color:#E2E2E2;
+    z-index: 4;
+}
+
+.read-customer-stories {
+    background-color: #000;
+    border: 0px;
+    border-radius: 20px;
+    height: 60px;
+    width: 250px;
+    color: #fff;
+}

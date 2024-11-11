@@ -1,4 +1,5 @@
 
+
 import HeroSection from "@/components/homeSections/HeroSection";
 
 import Section2 from "@/components/homeSections/Section2";
@@ -22,8 +23,9 @@ export default function Home() {
   //  setLoading(true);
   //}, []);
 
-  return (
-    <>
+  
+    return (
+      <>
         <HeroSection />
         <div className="after-hero-sec">
 
@@ -39,9 +41,8 @@ export default function Home() {
           <Footer />
         </div>
       </>
-    
-      
-  );
+    );
+
 }
 
 //<>
@@ -50,5 +51,5 @@ export default function Home() {
 //      ) : (
 //        <Loading />
 //      )}
-//      </>
+//</>
 

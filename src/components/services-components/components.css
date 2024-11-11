@@ -1,0 +1,351 @@
+.font-syne {
+    font-family: "Syne"; 
+}
+
+.service-hero-sec-container {
+    height: 100vh;
+    background-color: #000;
+    padding: 100px;
+  scroll-snap-align: center;
+}
+
+.service-hero-sec-content-img {
+    position:relative;
+    transition: 0.4s;
+    z-index: 10;
+}
+
+.service-hero-sec-content-img:hover {
+    rotate: 10deg;
+}
+
+.service-hero-sec-content-para {
+    font-size: 20px;
+    color: #fff;
+}
+.service-hero-sec-content-button {
+    height: 50px;
+    width: 150px;
+    background-color: #fff;
+    margin-right: 30px;
+    border: 0px;
+    border-radius: 10px;
+    transition: 0.4s;
+    color: #000;
+}
+.see-more {
+    background-color: transparent;
+    backdrop-filter: 4px;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.service-hero-sec-content-button:hover {
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    width: 160px;
+    height: 55px;
+    box-shadow: 0px 0px 10px 1px #fff;
+}
+
+
+/* section 2 */
+.services-sec2-main-component {
+    height: 160vh;
+    background-color: #000;
+    flex-wrap: wrap;
+    padding: 70px;
+}
+.services-sec2-card {
+    
+    transition: 0.4s;
+}
+
+
+
+.services-sec2-card-content {
+    display: none;
+}
+
+.services-sec2-card-img {
+    transition: 0.4s;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    width: 90%;
+    margin-top: 25px;
+    margin-right: 12px;
+    margin-left: 12px;
+}
+.services-sec2-card:hover {
+    
+    
+        background-color: #fffFFF70;
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 23px;
+        margin-top: 25px;
+        margin-right: 12px;
+        margin-left: 12px;
+    
+    .services-sec2-card-content {
+        display: flex;
+    }
+    .services-sec2-card-img {
+        margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    width: 100%;
+    }
+}
+
+
+.services-sec2-card-content-key {
+    font-size: 15px;
+}
+.services-sec2-card-content-value {
+    font-weight: bold;    
+    font-size: 17px;
+} 
+
+
+/* section 3 */
+
+
+.services-sec3-flex-main-component {
+    background-image: linear-gradient(to bottom, #000, #bdc3c750, #bdc3c7,#bdc3c7, #E2E2E2);
+   
+}
+.services-sec3-content {
+    backdrop-filter: blur(30px);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.services-secs-content-para {
+    font-size: 19px;
+    color: #000;
+}
+
+.services-sec3-content-features {
+    height: 50px;
+    width: 180px;
+    padding: 10px;
+    font-size: 17px;
+    color: #000;
+    gap: 10px;
+    font-weight: 500;
+    background-color: #00000030;
+    border-radius: 30px;
+    transition: 1s;
+}
+
+.services-sec3-content-features:hover {
+    background-image: linear-gradient(120deg, #00000050, #00000030, #00000030, #00000030); 
+}
+.services-sec3-img {
+    border-radius: 30px;
+    width: 30%;
+    height: 75%;
+    transition: 0.4s;
+}
+.services-sec3-img:hover {
+    rotate: 10deg;
+}
+
+/* section 4 */
+
+.services-secs-main-container {
+    padding: 100px;
+    background-color: #E2E2E2;
+    color: #000;
+    /*background-image: radial-gradient(#06052e, #000);*/
+}
+.services-secs-para {
+    color: #00000080;
+    font-size: 20px;
+    font-weight: 600;
+}
+.services-secs-head {
+    font-size: 60px;
+    font-weight: 500;
+    font-family: "Syne", sans-serif;
+}
+
+.services-sec4-card-logo {
+    height: 95px;
+    width: 95px;
+    border-radius: 20px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: inset 0px -4px 5px 1px #000;
+    transition: 0.4s;
+    margin-bottom: 20px;
+}
+.services-sec4-card-logo:hover {
+    box-shadow: inset 0px 0px 10px 1px #000;
+
+}
+.services-sec4-card-head {
+    font-size: 27px; 
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.services-sec4-card-para {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+.services-sec4-card-line  {
+    border:0px;
+    height: 5px;
+    background-color: #00000050;
+    border-radius: 20px;
+}
+
+/* section 6 */
+.services-sec6-main-container {
+    height: 120vh;
+    padding: 80px;
+    padding-top: 150px;
+    padding-bottom: 0px;
+}
+
+.services-secs-main-para {
+    color: #ffffff80;
+    font-size: 17px;
+    font-weight: 600;
+}
+.services-sec6-left-content-para {
+    font-size: 20px;
+}
+.services-sec6-right-content-card {
+    transition: 0.4s;
+    padding: 10px;
+    border-radius: 20px;
+}
+.services-sec6-right-content-card:hover {
+    box-shadow: -5px 5px 10px 1px #fff;
+}
+
+/* section 7 */
+.services-sec7-main-container {
+    padding: 100px;
+}
+.services-sec7-card {
+    background-image: url("https://cdn.sanity.io/images/k0dlbavy/production/64b450f8afc758fd3f221ee2f30f3d6589d2529f-2160x831.png?auto=format&fit=max&q=100&w=1080");
+    background-size: cover;
+    height: 73vh;
+    width: 100%;
+    padding: 60px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 5px 1px #fff;
+}
+
+.book-a-call {
+    height: 50px;
+    width: 150px;
+    background-color: #fff;
+    margin-right: 30px;
+    border: 0px;
+    border-radius: 10px;
+    transition: 0.4s;
+    color: #000;
+}
+..services-sec7-content-para {
+    font-size: 19px;
+    color: #fff;
+}
+.book-a-call:hover {
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 1px #fff;
+}
+.ai-design-service {
+    transition: 2s;
+    font-size: 18px;
+    font-weight: 500;
+}
+.ai-design-service:hover {
+    gap: 5px;   
+}
+
+/* section 8 */
+
+.services-secs-card {
+    background-color: #00000010;
+    backdrop-filter: blur(10px);
+    box-shadow: inset -1px -1px 0px 1px #000;
+    height: 30vh;
+    width: 24%;
+    padding: 30px;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+.services-secs-card:hover {
+    box-shadow: inset 1px 1px 0px 1px #00000050;
+    color: #fff;
+    background-color: #000;
+    /*background-image: linear-gradient(120deg, #00000020, #00000010, #00000000);
+*/
+}
+
+.services-secs-card-count {
+    font-family: "Unbounded";
+
+}
+
+/* contact-our-expert */
+.contact-our-expert-card {
+    background-color: #ffffff70;
+    border-radius: 50px;
+}
+.contact-our-expert-card-content {
+    padding: 50px;
+}
+.contact-our-expert-card-content-head {
+    font-size: 30px;
+    font-weight: 500;
+    font-family: "Syne", sans-serif;
+}
+.contact-our-expert-card-content-btn {
+    height: 50px;
+    width: 170px;
+    background-color: #fff;
+    margin-right: 30px;
+    border: 0px;
+    border-radius: 10px;
+    transition: 0.4s;
+    color: #000;
+}
+
+
+
+/* FAQ */
+.faq-card {
+    height:40vh;
+    width: 80%;
+    border-radius: 10px;
+    background-color: #ffffff50;
+}
+.faq-card-inner {
+    height: 35vh;
+    width: 95%;
+    border-radius: 10px;
+    background-color: #ffffff80;
+    padding: 40px;
+}
+.faq-card-inner-img {
+    width: 100%;
+}
+
+.faq-card-inner-button {
+    background-color: #000;
+    height: 40px;
+    width: 170px;
+    border: 0px;
+    border-radius: 7px;
+    transition: 1s;
+}
+.faq-card-inner-button:hover {
+    gap: 5px;
+}
+

@@ -4,7 +4,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import NextTopLoader from 'nextjs-toploader';
 import Cursor from '../components/Cursor';
-
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -34,7 +33,8 @@ export default function RootLayout({
       >
         <Cursor />
         <NextTopLoader />
-        {children}
+        
+          {children}
       </body>
     </html>
   );
