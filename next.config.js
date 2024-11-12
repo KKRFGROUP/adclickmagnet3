@@ -179,6 +179,26 @@ module.exports = {
           hostname: 'mir-s3-cdn-cf.behance.net',
           port: '',
         },
+        {
+          protocol: 'https',
+          hostname: 'c8.alamy.com',
+          port: '',
+        },
+        {
+          protocol: 'https',
+          hostname: 't3.ftcdn.net',
+          port: '',
+        },
+        {
+          protocol: 'https',
+          hostname: 'cdn.shopify.com',
+          port: '',
+        },
+        {
+          protocol: 'https',
+          hostname: 'w7.pngwing.com',
+          port: '',
+        },
       ], 
     },
   }

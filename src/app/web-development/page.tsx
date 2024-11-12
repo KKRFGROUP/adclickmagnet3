@@ -12,7 +12,6 @@ gsap.registerPlugin(ScrollTrigger);
 import { useEffect } from 'react';
 import Section3 from '@/components/services-components/Section3';
 import Section4 from '@/components/services-components/Section4';
-import Section5 from '@/components/services-components/Section5';
 import Section6 from '@/components/services-components/Section6';
 import Section7 from '@/components/services-components/Section7';
 import Section8 from '@/components/services-components/Section8';
@@ -424,7 +423,7 @@ const faq = {
 
 function WebDev() { 
   useEffect(() => {
-  const scrollBar = Scrollbar.init(document.querySelector(".main"),{
+  const scrollBar = Scrollbar.init(document.querySelector(".page-main"),{
     damping: 0.01,
     thumbMinSize: 20,
     delegateTo: document,
@@ -434,11 +433,11 @@ function WebDev() {
   });
 
   ScrollTrigger.defaults({
-    scroller: ".main",
+    scroller: ".page-main",
 
   });
 
-  ScrollTrigger.scrollerProxy(".main",{
+  ScrollTrigger.scrollerProxy(".page-main",{
     scrollTop(value) {
       if (arguments.length) {
         scrollBar.scrollTop = value;
@@ -457,17 +456,17 @@ function WebDev() {
     
     ScrollTrigger.create({
       trigger: each,
-      scroller: ".main",
+      scroller: ".page-main",
       start: "top 50%",
       onEnter: () => 
-        gsap.to(".main", {
+        gsap.to(".page-main", {
           backgroundColor: each.dataset.bgcolor,
           color: each.dataset.textcolor,
           overwrite: "auto",
 
         }),
         onLeaveBack: () =>
-          gsap.to(".main", {
+          gsap.to(".page-main", {
             backgroundColor: prevBgColor,
             color: prevTextColor,
             overwrite: "auto",
@@ -479,7 +478,7 @@ function WebDev() {
     return () => {};
   }, []);
   return (
-    <div className='main'>
+    <div className='page-main'>
       <TracingBeam>
 
         <Navbar />

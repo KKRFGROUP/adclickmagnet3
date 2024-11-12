@@ -1,6 +1,5 @@
 "use client";
 
-import gsap from "gsap";
 import { useEffect } from "react";
 
 export default function InfiniteText() {

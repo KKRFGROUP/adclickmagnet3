@@ -2,7 +2,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import HeroSection from './sections/HeroSection';
 import CreativeService from './sections/CreativeService';
-import Services from './sections/Services';
+
 import DesignProcess from './sections/DesignProcess';
 import Portfolio from './sections/Portfolio';
 import InfiniteText from './sections/InfiniteText';

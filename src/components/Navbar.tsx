@@ -25,6 +25,7 @@ export default function Navbar({className}: {className?: string}) {
                                     <HoveredLink href="/video-production">Video Production</HoveredLink>
                                     <HoveredLink href="/motion-design">Motion Design</HoveredLink>
                                     <HoveredLink href="/ad-creative">Ad Creative</HoveredLink>
+                                    <HoveredLink href="/google-ads">Google Ads</HoveredLink>
                                 </div>
                             </MenuItem>
                         

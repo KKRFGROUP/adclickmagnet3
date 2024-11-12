@@ -1,7 +1,5 @@
 import React from 'react'
-import { TypewriterEffect } from '../ui/typewriter-effect'
-import Image from 'next/image';
-import { FaAngleRight } from "react-icons/fa6";
+import { TypewriterEffect } from '../ui/typewriter-effect';
 import {Accordion, AccordionItem} from "@nextui-org/accordion";
 
 import { AnimatedTooltip } from "../ui/animated-tooltip";

@@ -12,8 +12,6 @@ gsap.registerPlugin(ScrollTrigger);
 import { useEffect } from 'react';
 import Section3 from '@/components/services-components/Section3';
 import Section4 from '@/components/services-components/Section4';
-import Section5 from '@/components/services-components/Section5';
-import Section6 from '@/components/services-components/Section6';
 import Section7 from '@/components/services-components/Section7';
 import Section8 from '@/components/services-components/Section8';
 import FAQ from '@/components/services-components/FAQ';
@@ -158,70 +156,7 @@ const section4: {mainpara: string; head: string; cards: {logo: React.ReactNode; 
   ]
 }
 
-const section6: {mainpara: string; heading: {text: string; className: string;}[]; para: string; social: {img: string; name: string; para: string}[]} = {
-  mainpara: "PLATFORM PROFICIENCY",
-  heading: [
-    {
-      text: "In-depth",
-      className: "text-white dark:text-white-500 tracking-wider",
-    },
-    {
-        text: "channel",
-        className: "text-white dark:text-white-500 tracking-wider",
-    },
-    {
-        text: "expertise",
-        className: "text-white dark:text-white-500 tracking-wider",
-    },
-    {   
-        text: "for",
-        className: "text-white dark:text-white-500 tracking-wider",
-    },
-    {
-        text: "ad",
-        className: "text-white dark:text-white-500 tracking-wider",
-    },
-    {  
-        text: "creative",
-        className: "text-white dark:text-white-500 tracking-wider",
-    },
-    {  
-        text: "that",
-        className: "text-white dark:text-white-500 tracking-wider",
-    },
-    {  
-        text: "clicks",
-        className: "text-white dark:text-white-500 tracking-wider",
-    },
-],
-  para: "Fueling growth crosses many channels. Thankfully, our highly experienced ad design talent does too. Every digital and social media platform has its own vibe that you need to understand to gain admittance and be accepted. ACM connects you with the ad creative services you need to crack and master these channels quickly and cost-effectively.",
-  social: [
-    {
-      name: "Facebook",
-      para: "Maximize engagement with custom creative tailored for Facebook’s unique audience and platform capabilities." 
-    },
-    {
-      name: "LinkedIn",
-      para: "Position your brand as an industry leader with professional and engaging content designed for LinkedIn’s business-focused community." 
-    },
-    {
-      name: "Instagram",
-      para: "Captivate Instagram’s visually-driven audience with stunning graphics and innovative content formats." 
-    },
-    {
-      name: "TikTok",
-      para: "Tap into the power of viral content with TikTok creatives designed for maximum shareability and engagement." 
-    },
-    {
-      name: "YouTube",
-      para: "Optimize viewer interaction with tailored creatives designed for YouTube's diverse audience and video-friendly platform features." 
-    },
-    {
-      name: "Other platforms",
-      para: "Have another platform in mind? We’re here for it. With a global team of presentation designers to tap into, we have skills across the board and can cater to any preference." 
-    },
-  ]
-}
+
 
 const section7: {mainpara: string; heading: {text: string; className: string;}[]; para1: string; para2: string; button: string} = {
  mainpara: "FUTURE-READY EFFICIENCY",
@@ -373,7 +308,7 @@ const faq:{mainpara: string; people: {id: number;name: string;designation: strin
 
 function BrandingServices() { 
   useEffect(() => {
-  const scrollBar = Scrollbar.init(document.querySelector(".main"),{
+  const scrollBar = Scrollbar.init(document.querySelector(".page-main"),{
     damping: 0.01,
     thumbMinSize: 20,
     delegateTo: document,
@@ -383,11 +318,11 @@ function BrandingServices() {
   });
 
   ScrollTrigger.defaults({
-    scroller: ".main",
+    scroller: ".page-main",
 
   });
 
-  ScrollTrigger.scrollerProxy(".main",{
+  ScrollTrigger.scrollerProxy(".page-main",{
     scrollTop(value) {
       if (arguments.length) {
         scrollBar.scrollTop = value;
@@ -406,17 +341,17 @@ function BrandingServices() {
     
     ScrollTrigger.create({
       trigger: each,
-      scroller: ".main",
+      scroller: ".page-main",
       start: "top 50%",
       onEnter: () => 
-        gsap.to(".main", {
+        gsap.to(".page-main", {
           backgroundColor: each.dataset.bgcolor,
           color: each.dataset.textcolor,
           overwrite: "auto",
 
         }),
         onLeaveBack: () =>
-          gsap.to(".main", {
+          gsap.to(".page-main", {
             backgroundColor: prevBgColor,
             color: prevTextColor,
             overwrite: "auto",
@@ -428,7 +363,7 @@ function BrandingServices() {
     return () => {};
   }, []);
   return (
-    <div className='main'>
+    <div className='page-main'>
       <TracingBeam>
         <Navbar />
         <section data-bgcolor="#070707" data-textcolor="#ffffff">

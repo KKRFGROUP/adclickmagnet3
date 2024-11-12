@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
-import Link from "next/link";
+
 import React, { useEffect, useRef } from 'react';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
@@ -41,8 +41,8 @@ function Cards3dSections({content, className, translate} : {content: {mainpara: 
         <p className="services-secs-para">{content.mainpara}</p>
         <h2 className="services-secs-head">{content.head}</h2>
         <div ref={sectionRef} className="flex mt-[60px] ">
-            {content.cards.map(each => (
-            <CardContainer className="inter-var text-left" containerClassName="">
+            {content.cards.map((each,index) => (
+            <CardContainer key={index} className="inter-var text-left" containerClassName="">
                     <CardBody className="w-[20%] mr-[50px] bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1]  sm:w-[30rem] h-auto rounded-xl p-6 border">
                         <CardItem
                         translateZ="50"

@@ -7,7 +7,7 @@ body{
     max-height: 780vh;
 }
 
-.main {
+.page-main {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -59,12 +59,7 @@ body{
     
 }
 
-@keyframes widthIncrease {
-    from {
-    }
-    to {
-    }
-}
+
 
 .navlinks {
     width: 35%;
@@ -81,8 +76,8 @@ body{
     background-color: #000;
     color: #fff;
     width: auto;
-    gap: 4px;
     font-size: 16px;
+    gap: 4px;
     padding: 15px 25px;
     border-radius: 3.4rem;
     text-decoration: none;
@@ -93,6 +88,35 @@ body{
 .getintouch-card:hover{
     background-color: transparent;
     border: 1px solid #fff;
+}
+
+@media (max-width: 575px) {
+    .navbar-logo {
+        width: 70%;
+    }
+    .getintouch-card {
+        width: 30vw;
+        font-size: 10px;
+        padding: 0px 0px;
+    }
+    .navlinks {
+        width: 70%;
+    }
+    
+}
+@media (max-width: 991px) {
+    .navbar-logo {
+        width: 20%;
+    }
+    .getintouch-card {
+        width: 15vw;
+        font-size: 14px;
+        padding: 10px;
+    }
+    .navlinks {
+        width: 40%;
+    }
+    
 }
 
 
@@ -187,6 +211,40 @@ body{
     font-size: 50px;
     overflow:hidden;
     white-space: nowrap;
+}
+
+@media (max-width: 991px) {
+    .partner-not-ventor {
+        font-weight: bold;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .Companies-partner {
+        padding: 20px;
+        height: 17vh;
+        font-size: 13px;
+    }
+}
+@media (max-width: 575px) {
+    .Companies-partner {
+        padding: 20px;
+        height: 17vh;
+        font-size: 10px;
+    }
+    .partner-not-ventor {
+        font-weight: bold;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .sec2-company-logo {
+        margin-right :20px;
+        width: 15%;
+    }
+
+    .sec2-container {
+        height: 30vh;
+        padding: 50px;
+    }
 }
 
 /* section 3 */

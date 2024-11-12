@@ -30,7 +30,7 @@ export const MenuItem = ({
     <div onMouseEnter={() => setActive(item)} className="relative">
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white text-base"
+        className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white md:text-[10px]"
       >
         {item}
       </motion.p>
@@ -70,12 +70,13 @@ export const Menu = ({
   children: React.ReactNode;
 }) => {
   return (
-    <div className="navbar relative rounded-full border border-transparent dark:bg-white/[0.4] dark:border-black bg-white shadow-input flex justify-between items-center space-x-4 px-8 py-4 mx-10 ">
-                 
-        <Image width={200} height={200} src={adclickImage} alt="logo" className="navbar-logo" />
+    <div className="navbar relative rounded-full border border-transparent dark:bg-white/[0.4] dark:border-black bg-white shadow-input flex justify-between items-center space-x-4 px-8 py-4 md:px-3 md:py-3 mx-10 ">
+          <Link href="/" className="navbar-logo">      
+            <Image width={200} height={200} src={adclickImage} alt="logo"  />
+          </Link>
         <nav
           onMouseLeave={() => setActive(null)} // resets the state
-          className="navlinks relative rounded-full border border-transparent shadow-2xl shadow-black  dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-between items-center space-x-4 px-10 py-4"
+          className="relative rounded-full border border-transparent shadow-2xl shadow-black  dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-between items-center space-x-4 px-10 md:px-7 py-4 md:py-7 navlinks"
           >
         
           {children}

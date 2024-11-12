@@ -149,8 +149,8 @@ function DigitalServices() {
         <h2 className="relative left-[200px] graphic-page-services-sec-head">Services</h2>
 
         <div className='flex graphic-page-services-cards-container' ref={sectionRef}>
-          {items.map(each => (
-          <Link href={`/${each.page}`}>
+          {items.map((each,index) => (
+          <Link key={index} href={`/${each.page}`}>
             <div className="graphic-page-services-card flex-col justify-between" key={each.id}>
               <div>
                 <Image className='graphic-page-services-card-img' height={400} width={400} src={each.imageUrl} alt={each.head} />

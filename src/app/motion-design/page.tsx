@@ -7,13 +7,11 @@ import HeroSection from '@/components/services-components/HeroSection';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import Scrollbar  from 'smooth-scrollbar';
-import Section2 from '@/components/services-components/Section2';
+
 gsap.registerPlugin(ScrollTrigger);
 import { useEffect } from 'react';
 import Section3 from '@/components/services-components/Section3';
 import Section4 from '@/components/services-components/Section4';
-import Section5 from '@/components/services-components/Section5';
-import Section6 from '@/components/services-components/Section6';
 import Section7 from '@/components/services-components/Section7';
 import Section8 from '@/components/services-components/Section8';
 import FAQ from '@/components/services-components/FAQ';
@@ -33,8 +31,8 @@ import ContactOurExperts from '@/components/services-components/ContactOurExpert
 
 const heroContent = {
     heading: "Motion Design Services",
-    para: "Captivate your audience with Superside’s motion design services. Get moving with a team of fully stacked motion designers and enhance your brand’s assets across your website, digital campaigns ads and more.",
-    imgUrl: "Captivate your audience with Superside’s motion design services. Get moving with a team of fully stacked motion designers and enhance your brand’s assets across your website, digital campaigns ads and more."
+    para: "Captivate your audience with ACM’s motion design services. Get moving with a team of fully stacked motion designers and enhance your brand’s assets across your website, digital campaigns ads and more.",
+    imgUrl: "Captivate your audience with ACM’s motion design services. Get moving with a team of fully stacked motion designers and enhance your brand’s assets across your website, digital campaigns ads and more."
 }
 
 
@@ -142,7 +140,7 @@ const section7: {mainpara: string; heading: {text: string; className: string;}[]
   },
   
 ],
-  para1: "Leverage the power of AI to improve efficiency and cost savings in our design services. Superside’s AI-enhanced workflows streamline the creation of motion design and creative, delivering results up to 60% faster.",
+  para1: "Leverage the power of AI to improve efficiency and cost savings in our design services. ACM’s AI-enhanced workflows streamline the creation of motion design and creative, delivering results up to 60% faster.",
   para2: "This ensures that every project is handled with precision, enhancing both the quality and speed of your content production. Experience unparalleled efficiency and innovation with our AI-driven design solutions, tailored to elevate your brand’s creative.",
   button: "AI Design Service" 
 }
@@ -223,13 +221,13 @@ const faq:{mainpara: string; people: {id: number;name: string;designation: strin
   list: [
     {
       id: "1",
-      title: "Are motion design services included in all Superside subscriptions?",
-      description: "Absolutely! Superside's design subscription goes beyond just graphic design-we offer motion design within all of our subscriptions. Your chosen tier grants access to these creative services, letting you scale your motion design efforts seamlessly. This flexibility lets you tap into additional services like social media content, video production and campaign development - all designed to elevate your creative needs of motion to new levels."
+      title: "Are motion design services included in all ACM subscriptions?",
+      description: "Absolutely! ACM's design subscription goes beyond just graphic design-we offer motion design within all of our subscriptions. Your chosen tier grants access to these creative services, letting you scale your motion design efforts seamlessly. This flexibility lets you tap into additional services like social media content, video production and campaign development - all designed to elevate your creative needs of motion to new levels."
     },
     {
       id: "2",
       title: "What is the minimum commitment for motion design services?",
-      description: "All Superside subscriptions require a one-year commitment because we prioritize ongoing creative partnerships. Unlike one-off motion projects, our services shine in fostering long-term brand development. This commitment unlocks access to our full design spectrum, allowing you to not only elevate your motion graphics but also build a dedicated team who understands your vision. The longer we collaborate, the deeper our understanding of your brand becomes, maximizing the value you receive for motion campaigns and overall growth."
+      description: "All ACM subscriptions require a one-year commitment because we prioritize ongoing creative partnerships. Unlike one-off motion projects, our services shine in fostering long-term brand development. This commitment unlocks access to our full design spectrum, allowing you to not only elevate your motion graphics but also build a dedicated team who understands your vision. The longer we collaborate, the deeper our understanding of your brand becomes, maximizing the value you receive for motion campaigns and overall growth."
     },
     {
       id: "3",
@@ -243,20 +241,20 @@ const faq:{mainpara: string; people: {id: number;name: string;designation: strin
     },
     {
       id: "5",
-      title: "How do Superside's motion graphics services work?",
-      description: "Supersides motion graphic design services operate by first understanding the customer's objectives and vision, ensuring a tailored approach to meet specific goals. The creative process involve conceptualizing ideas, leveraging visual storytelling principles and employing animation to create dynamic and engaging content. This streamlined experience makes it effortless for customers to access a fully stacked design team with specialized proficiency in motion graphics and animation, ensuring the seamless delivery of visually compelling and effective content."
+      title: "How do ACM's motion graphics services work?",
+      description: "ACMs motion graphic design services operate by first understanding the customer's objectives and vision, ensuring a tailored approach to meet specific goals. The creative process involve conceptualizing ideas, leveraging visual storytelling principles and employing animation to create dynamic and engaging content. This streamlined experience makes it effortless for customers to access a fully stacked design team with specialized proficiency in motion graphics and animation, ensuring the seamless delivery of visually compelling and effective content."
     },
     {
       id: "6",
       title: "What type of customers use your motion design services?",
-      description: "Superside's motion design services cater to a diverse customer base seeking to distinguish themselves within their respective industries. High-growth brands aspiring to surpass their competitors find immense value in incorporating motion graphic design into their branding strategies. Whether you're a forward-thinking marketer, a dynamic sales or product leader or simply an out-of-the-box thinker, integrating this advanced feature into your brand designs, advertising initiatives and website content can significantly elevate your overall presence and impact in the market. Many in-house marketing and creative teams also use our motion design services to add bandwidth and capacity without adding headcount, as many in-house teams may not have dedicated motion designers on staff."
+      description: "ACM's motion design services cater to a diverse customer base seeking to distinguish themselves within their respective industries. High-growth brands aspiring to surpass their competitors find immense value in incorporating motion graphic design into their branding strategies. Whether you're a forward-thinking marketer, a dynamic sales or product leader or simply an out-of-the-box thinker, integrating this advanced feature into your brand designs, advertising initiatives and website content can significantly elevate your overall presence and impact in the market. Many in-house marketing and creative teams also use our motion design services to add bandwidth and capacity without adding headcount, as many in-house teams may not have dedicated motion designers on staff."
     },
   ]
 }
 
 function AdCreative() { 
   useEffect(() => {
-  const scrollBar = Scrollbar.init(document.querySelector(".main"),{
+  const scrollBar = Scrollbar.init(document.querySelector(".page-main"),{
     damping: 0.01,
     thumbMinSize: 20,
     delegateTo: document,
@@ -266,11 +264,11 @@ function AdCreative() {
   });
 
   ScrollTrigger.defaults({
-    scroller: ".main",
+    scroller: ".page-main",
 
   });
 
-  ScrollTrigger.scrollerProxy(".main",{
+  ScrollTrigger.scrollerProxy(".page-main",{
     scrollTop(value) {
       if (arguments.length) {
         scrollBar.scrollTop = value;
@@ -289,17 +287,17 @@ function AdCreative() {
     
     ScrollTrigger.create({
       trigger: each,
-      scroller: ".main",
+      scroller: ".page-main",
       start: "top 50%",
       onEnter: () => 
-        gsap.to(".main", {
+        gsap.to(".page-main", {
           backgroundColor: each.dataset.bgcolor,
           color: each.dataset.textcolor,
           overwrite: "auto",
 
         }),
         onLeaveBack: () =>
-          gsap.to(".main", {
+          gsap.to(".page-main", {
             backgroundColor: prevBgColor,
             color: prevTextColor,
             overwrite: "auto",
@@ -311,7 +309,7 @@ function AdCreative() {
     return () => {};
   }, []);
   return (
-    <div className='main'>
+    <div className='page-main'>
       <TracingBeam>
         <Navbar />
         <section data-bgcolor="#070707" data-textcolor="#ffffff">

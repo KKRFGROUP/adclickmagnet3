@@ -4,7 +4,7 @@ import { GiFallingBlob } from "react-icons/gi";
 import { PiVideoFill } from "react-icons/pi";
 import { PiCubeTransparentFill } from "react-icons/pi";
 
-function Section5({content}: {content: {mainpara: string; head: string; cards: {logo: React.ReactNode; head: string; para: string;}[]}}) {
+function Section5() {
   return (
     <div className="services-secs-main-container h-[110vh] rounded-b-[50px] flex-col justify-center items-center text-center">
         <p className="services-secs-para">FORMAT MASTERY</p>

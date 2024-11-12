@@ -10,7 +10,7 @@ export default function Section3() {
   return (
     <>
     <Section3Model />
-    <div className="section3-container">
+    <div className="section3-container sm:h-[20vh]">
         <div className="input-container flex justify-center">
           <PlaceholdersAndVanishInputDemo />
         </div>

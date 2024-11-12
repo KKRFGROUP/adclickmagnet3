@@ -35,7 +35,7 @@ function HeroSection({heading, para, imgUrl}: {heading: string; para: string; im
                 </Sphere>
               </Suspense>
           </Canvas>
-          <Image className="service-hero-sec-content-img"  src="https://cdn3d.iconscout.com/3d/premium/thumb/graphic-design-5690847-4759147.png" alt="hero-logo" height={300} width={300} />
+          <Image className="service-hero-sec-content-img rounded-[20px]"  src={imgUrl} alt="hero-logo" height={300} width={300} />
         </div>
 
     </div>

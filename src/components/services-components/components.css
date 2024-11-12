@@ -317,6 +317,32 @@
     color: #000;
 }
 
+/* dynamic content card */
+.dynamic-content-card {
+    border-radius: 50px;
+    border: 2px solid grey;
+    height: 60vh;
+}
+.dynamic-content-card-left {
+    background-color: grey;
+    padding: 50px;
+    width: 100%;
+    text-align: left;
+    overflow-y: auto;
+    color :#000;
+}
+.dynamic-content-card-right {
+    width: 100%;
+}
+.active-para {
+    font-weight: bold;
+}
+
+.dynamic-content-card-right {
+    padding: 50px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+}
 
 
 /* FAQ */

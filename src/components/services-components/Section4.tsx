@@ -1,6 +1,5 @@
 import React from 'react'
 import "./components.css";
-import { TypewriterEffect } from "../ui/typewriter-effect";
 
 function Section4({content , roundb}: {content: {mainpara: string; head: string;para?: string; cards: {logo: React.ReactNode; head: string; para: string;}[]}; roundb?: string;}) {
   return (

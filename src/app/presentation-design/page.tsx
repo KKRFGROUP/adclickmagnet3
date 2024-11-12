@@ -7,14 +7,10 @@ import HeroSection from '@/components/services-components/HeroSection';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import Scrollbar  from 'smooth-scrollbar';
-import Section2 from '@/components/services-components/Section2';
 gsap.registerPlugin(ScrollTrigger);
 import { useEffect } from 'react';
 import Section3 from '@/components/services-components/Section3';
-import Section4 from '@/components/services-components/Section4';
-import Section5 from '@/components/services-components/Section5';
 import Section6 from '@/components/services-components/Section6';
-import Section7 from '@/components/services-components/Section7';
 import Section8 from '@/components/services-components/Section8';
 import FAQ from '@/components/services-components/FAQ';
 import Cards3dSections from '../../components/services-components/Cards3dSections';
@@ -29,56 +25,7 @@ const heroContent = {
     para: "Engage, persuade and delight with ACM’s Presentation Design Services. From on-point PowerPoints to pitch-perfect pitch decks, we craft custom presentations and templates that suit your needs.",
     imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/745fa5bedb9310bd461d7b69073547d975fab304-1200x1200.png?auto=format&fit=max&q=100&w=1200"
 }
-const section2 = [
-  {
-      id: 1,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/f167fb70d9077c2e1a03fa0077056224bb6c8373-800x936.png?auto=format&fit=max&q=100&w=800",
-      customer: "Marqeta",
-      industry: "Financial Serv..."
-  },
-  {
-      id: 2,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/3d6e77a8fe7317759c78b9f9c89a07b863508d41-800x452.png?auto=format&fit=max&q=100&w=800",
-      customer: "Amazon Phar...",
-      industry: "Heathc..."
-  },
-  {
-      id: 3,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/88dc0c4e1aad720988dca3ffcf5cfac0d3ce4455-800x452.png?auto=format&fit=max&q=100&w=800",
-      customer: "Go Henry",
-      industry: "Financial Serv..."
-  },
-  {
-      id: 4,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/f03ebd9dcf2c9e72f7e4621e970eba354041bd72-800x936.png?auto=format&fit=max&q=100&w=800",
-      customer: "Reddit Business",
-      industry: "Tech"
-  },
-  {
-      id: 5,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/a74e5d93c29352eb25edd0264fb0a39bef989563-800x936.png?auto=format&fit=max&q=100&w=800",
-      customer: "Starve",
-      industry: "Tech"
-  },
-  {
-      id: 6,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/6a46ba66f2a0d58ff6ee1bc492406a92e0012e32-800x452.png?auto=format&fit=max&q=100&w=800",
-      customer: "Imperfect Foods",
-      industry: "Customer"
-  },
-  {
-      id: 7,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/736472e7079951373aa33646f75d519428026466-1200x678.png?auto=format&fit=max&q=100&w=1200",
-      customer: "Opa!",
-      industry: "Consumer Goo..."
-  },
-  {
-      id: 8,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/4f986ebd49b52907be569e401ef25b191b412700-800x936.png?auto=format&fit=max&q=100&w=800",
-      customer: "Shopify",
-      industry: "E-commerce & ..."
-  },
-]
+
 
 const section3:{mainpara: string; heading: {text: string; className: string;}[]; para1: string; para2: string; image: string;} = {
   mainpara: "BUILT FOR COMMS, STRATEGY & MARKETING TEAMS",
@@ -395,7 +342,7 @@ const faq:{mainpara: string; people: {id: number;name: string;designation: strin
 
 function AdCreative() { 
   useEffect(() => {
-  const scrollBar = Scrollbar.init(document.querySelector(".main"),{
+  const scrollBar = Scrollbar.init(document.querySelector(".page-main"),{
     damping: 0.01,
     thumbMinSize: 20,
     delegateTo: document,
@@ -405,11 +352,11 @@ function AdCreative() {
   });
 
   ScrollTrigger.defaults({
-    scroller: ".main",
+    scroller: ".page-main",
 
   });
 
-  ScrollTrigger.scrollerProxy(".main",{
+  ScrollTrigger.scrollerProxy(".page-main",{
     scrollTop(value) {
       if (arguments.length) {
         scrollBar.scrollTop = value;
@@ -428,17 +375,17 @@ function AdCreative() {
     
     ScrollTrigger.create({
       trigger: each,
-      scroller: ".main",
+      scroller: ".page-main",
       start: "top 50%",
       onEnter: () => 
-        gsap.to(".main", {
+        gsap.to(".page-main", {
           backgroundColor: each.dataset.bgcolor,
           color: each.dataset.textcolor,
           overwrite: "auto",
 
         }),
         onLeaveBack: () =>
-          gsap.to(".main", {
+          gsap.to(".page-main", {
             backgroundColor: prevBgColor,
             color: prevTextColor,
             overwrite: "auto",
@@ -450,7 +397,7 @@ function AdCreative() {
     return () => {};
   }, []);
   return (
-    <div className='main'>
+    <div className='page-main'>
       <TracingBeam>
         <Navbar />
         <section data-bgcolor="#070707" data-textcolor="#ffffff">

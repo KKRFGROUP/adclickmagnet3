@@ -409,7 +409,7 @@ const faq:{mainpara: string; people: {id: number;name: string;designation: strin
 
 function AdCreative() { 
   useEffect(() => {
-  const scrollBar = Scrollbar.init(document.querySelector(".main"),{
+  const scrollBar = Scrollbar.init(document.querySelector(".page-main"),{
     damping: 0.1,
     delegateTo: document,
     alwaysShowTracks: false,
@@ -418,13 +418,13 @@ function AdCreative() {
   });
 
   ScrollTrigger.defaults({
-    scroller: ".main",
+    scroller: ".page-main",
 
   });
 
-  ScrollTrigger.scrollerProxy(".main",{
-    scrollTop(value) {
-      if (arguments.length) {
+  ScrollTrigger.scrollerProxy(".page-main",{
+    scrollTop(value: any) {
+      if (arguments.length && scrollBar !== null) {
         scrollBar.scrollTop = value;
       }
       return scrollBar.scrollTop; 
@@ -441,17 +441,17 @@ function AdCreative() {
     
     ScrollTrigger.create({
       trigger: each,
-      scroller: ".main",
+      scroller: ".page-main",
       start: "top 50%",
       onEnter: () => 
-        gsap.to(".main", {
+        gsap.to(".page-main", {
           backgroundColor: each.dataset.bgcolor,
           color: each.dataset.textcolor,
           overwrite: "auto",
 
         }),
         onLeaveBack: () =>
-          gsap.to(".main", {
+          gsap.to(".page-main", {
             backgroundColor: prevBgColor,
             color: prevTextColor,
             overwrite: "auto",
@@ -463,7 +463,7 @@ function AdCreative() {
     return () => {};
   }, []);
   return (
-    <div className='main'>
+    <div className='page-main'>
       <TracingBeam>
         <Navbar />
         <section data-bgcolor="#070707" data-textcolor="#ffffff">
