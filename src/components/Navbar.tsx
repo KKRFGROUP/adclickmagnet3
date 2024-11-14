@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { useState } from "react";
-import { Menu,HoveredLink, MenuItem } from "./ui/navbarMenu";
+import { Menu,HoveredLink, MenuItem } from "./ui/NavbarMenu";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 

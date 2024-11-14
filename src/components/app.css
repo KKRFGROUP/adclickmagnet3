@@ -62,7 +62,7 @@ body{
 
 
 .navlinks {
-    width: 35%;
+    width: 40%;
     animation-duration: 2s;
     transition: 0.4s;
     animation-name:widthIncrease;
@@ -91,6 +91,9 @@ body{
 }
 
 @media (max-width: 575px) {
+    .navbar {
+        display: none;
+    }
     .navbar-logo {
         width: 70%;
     }
@@ -114,7 +117,7 @@ body{
         padding: 10px;
     }
     .navlinks {
-        width: 40%;
+        width: 80%;
     }
     
 }
@@ -155,7 +158,12 @@ body{
 .inner-color-title{
     background-image: linear-gradient(to bottom, #fff, grey) ;
     -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text
+    -webkit-background-clip: text;
+}
+@media (max-width: 575px) {
+    .inner-color-title {
+        font-size: 35px;
+    }
 }
 
 .after-hero-sec {
@@ -191,7 +199,7 @@ body{
     background-image: linear-gradient(90deg, #fff, #000000);
     border-bottom-left-radius: 50px;
     height: 50vh;
-    padding: 100px;
+    padding: 80px;
 }
 
 .text-area {
@@ -225,25 +233,36 @@ body{
         font-size: 13px;
     }
 }
+.sec2-head {
+    margin-left: 30px;
+}
+
 @media (max-width: 575px) {
     .Companies-partner {
         padding: 20px;
-        height: 17vh;
-        font-size: 10px;
+        height: 35vh;
+        flex-wrap: wrap;
     }
     .partner-not-ventor {
+        font-size: 17px;
         font-weight: bold;
+        width: 100%;
         padding-left: 10px;
-        padding-right: 10px;
     }
     .sec2-company-logo {
         margin-right :20px;
-        width: 15%;
+        width: 30%;
+        margin: 20px;
     }
 
     .sec2-container {
         height: 30vh;
-        padding: 50px;
+        padding: 20px;
+        padding-top: 30px;
+    }
+    .sec2-head {
+        margin-left: 30px;
+        font-size: 15px;
     }
 }
 
@@ -253,6 +272,33 @@ body{
     position: relative;
     bottom: 150px;
 }
+.placeholder {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+.sec3-model {
+    height: 120vh;
+}
+
+@media (max-width: 575px) {
+    .sec3-model {
+        height: 50vh;
+    }
+    .placeholder {
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%;
+    }
+    .section3-container {
+        height: 20vh;
+    }
+    .input-container {
+        position: relative;
+        bottom: 60px;
+        background-color: #000;
+    }
+}
 
 
 
@@ -260,29 +306,56 @@ body{
 
 .sec5-hover-effect {
     background-color: #E2E2E2;
-    
+}
+@media (max-width: 575px) {
+    .card-hover-effect-card {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 .logo-service {
-    padding: 100px;
+    padding: 90px;
     gap: 30px;
     position: relative;
     bottom: 110px;
     background-color: #000;
-    border-radius: 50px;
-    box-shadow: 0px 0px 10px 1px #fff;
-}
-.sec5-cards-cont {
+    box-shadow: 0px -5px 5px 0px #fff;
 }
 
 .services {
     color: grey;
-    font-size: 25px;
+    font-size: 35px;
+    font-weight: bold;
 }
 .our-services-head {
     font-family: "Syne", sans-serif;
-    font-size: 50px;
-    margin-left: 20px;
-    margin-top: 20px;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+@media (max-width: 575px) {
+    .logo-service {
+        padding: 30px;
+    }
+    .services {
+        color: grey;
+        font-size: 30px;
+    }
+    .our-services-head {
+        font-size: 40px;
+        margin-top: 30px;
+    }
+    .sec5-hover-effect {
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+}
+@media (max-width: 1024px) {
+    .sec5-hover-effect {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* section 6 */
@@ -373,19 +446,22 @@ body{
     font-size: 15px;
 }
 .more-about-underline {
-    width: 54%;
+    width: 59%;
     color: #825fff;
-    background-color: #825fff;
+    background-color: grey;
     height: 2px;
     border-radius: 10px;
 }
+
+
+
 .about-design {
     width: 25%;
 }
 .design-circle {
     height: 13px;
     width: 13px;
-    background-color: #825fff;
+    background-color: #000;
     border-radius: 10px;
 }
 .dooted-line {
@@ -396,7 +472,34 @@ body{
 
 .about-sec-below-design-content-para {
     width: 25%;
+    
 }
+
+@media (max-width: 768px) {
+    .about-sec-container {
+        padding: 30px;
+        padding-top: 50px;
+        height: 90vh;
+    }
+    .about-sec-content {
+        flex-direction: column;
+    }
+    .about-sec-head {
+        font-size: 30px;
+        width: 180%;
+        margin-bottom: 20px;
+    }
+    .more-about-underline {
+        width: 40%;
+    }
+    .about-sec-below-design-content-para {
+        font-size: 10px;
+        
+    }
+}
+
+
+
 
 /* Team Section 8*/
 
@@ -451,9 +554,50 @@ body{
     border: 10px solid #000;
 }
 
+@media (max-width: 768px) {
+    .team-sec-container {
+        height: 100vh;
+        padding: 50px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .team-sec-content {
+        flex-direction: column;
+        width: 100%;
+    }
+    .team-sec-image-container {
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        left: 80px;
+    }
+    .team-sec-head {
+        font-size: 30px;
+    }
+    .team-sec-image {
+        width: 70%;
+    }
+    .small-img {
+        position: relative;
+        top: 150px;
+        width: 60%;
+        height: 95%;
+        border: 10px solid #000;
+    }
+}
+
+
 /* section 6 */
 .data-driven-head {
     font-family: "Syne", sans-serif;
+}
+@media (max-width: 575px) {
+    .sec6-container {
+        height: 300vh;
+    }
 }
 
 /* section 7 */
@@ -528,6 +672,28 @@ body{
     font-size: 20px;
     font-weight: bold;
 }
+.sec7-logo-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+@media (max-width: 575px) {
+    .sec7-container {
+        padding: 50px;
+        position: relative;
+        bottom: 20px;
+        height: 50vh;
+    }
+    .sec7-logo {
+        margin: 10px;
+        width: 40%;
+    }
+    
+}
+
+
 
 /* section 8 */
 .sec8-container {
@@ -552,6 +718,18 @@ body{
     font-size: 30px;
     margin-bottom: 20px;
     color: #000;
+}
+
+@media (max-width: 575px) {
+    .sec9-container {
+        height: 90vh;
+        padding: 50px;
+        position: relative;
+        top: 25px;
+    }
+    .about-sec-head-carousel {
+        flex-direction: column;
+    }
 }
 
 /* blog section carousel */
@@ -585,12 +763,12 @@ body{
     position: relative;
     left: 100px;
 }
-  .carousel-card {
-  }
+  
 .blog-img {
     width: 30px;
     height: 50px;
-    border-radius: 50px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
   }
 .blog-sec-head {
     font-family: "Syne", sans-serif;
@@ -631,6 +809,37 @@ body{
     font-size: 15px;
 }
 
+@media (max-width: 575px) {
+    .blog-sec-head {
+        font-size: 30px;
+    }
+    .carousel-container {
+        width: 100%;
+        left: 0px;
+        margin-top: 30px;
+    }
+    .swiper-container {
+        width: 100%;
+    }
+    .carousel-card {
+        width: 100%;
+    }
+    .blog-img {
+        width: 50vw;
+        height: 75px;
+      }
+      .blog-time {
+        font-size: 11px;
+      }
+    .blog-des {
+        font-size: 11px;
+    }
+    .blog-content {
+        height: 140px;
+        bottom: 30px;
+    }
+}
+
 
 
 
@@ -665,6 +874,27 @@ body{
     top: 10px;
 }
 
+@media (max-width: 575px) {
+    
+    .footer-container-1 {
+        bottom: 50px;
+        height: 150vh;
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 40px;
+    }
+    .footer-head {
+        font-size: 20px;
+        margin-bottom: 50px;
+    }
+    .footer-container-1-head-form {
+        flex-direction: column;
+    }
+    .footer-para {
+        margin-bottom: 30px;
+    }
+}
+
 .footer-container-2 {
     background-color: #E2E2E2;
     padding: 70px;
@@ -695,4 +925,40 @@ body{
 
 .social-media-handle-logo {
     font-size: 30px;
+}
+
+@media (max-width: 575px) {
+    .footer-container-2 {
+        padding: 40px;
+        bottom: 130px;
+        height: 90vh;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .solution-para {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+    .footer-links {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .solution-page-link {
+        width: 30%;
+        height: 50px;
+        font-size: 15px;
+    }
+    .solution-gap-line {
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    .term-and-condition-cont {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .social-media-handles-card {
+        order: -1;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
 }

@@ -24,7 +24,7 @@ import { CgFileDocument,CgLoadbarDoc } from "react-icons/cg";
 import { IoDocumentTextOutline } from "react-icons/io5";
 
 //ui animation
-import { TracingBeam } from "../../components/ui/tracing-beam";
+import { TracingBeam } from "../../components/ui/TracingBeam";
 import ContactOurExperts from '@/components/services-components/ContactOurExperts';
 
 

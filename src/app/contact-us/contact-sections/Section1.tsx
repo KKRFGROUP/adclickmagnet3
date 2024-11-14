@@ -1,5 +1,5 @@
 import '../contact.css';
-import { TextGenerateEffect } from "../../../components/ui/text-generate-effect";
+import { TextGenerateEffect } from "../../../components/ui/TextGenerateEffect";
 
 export default function Section1() {
     return (

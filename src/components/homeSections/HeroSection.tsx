@@ -3,11 +3,11 @@
 import "../../components/app.css";
 import Link from "next/link";
 //import { Button } from "./ui/moving-border";
-import { HoverBorderGradient } from "../ui/hover-border-gradient";
-import { TextGenerateEffect } from "../ui/text-generate-effect";
+import { HoverBorderGradient } from "../ui/HoverBorderGradient";
+import { TextGenerateEffect } from "../ui/TextGenerateEffect";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Navbar from "../Navbar";
-import HeroModel from "../3dmodels/heroModel";
+import HeroModel from "../3dmodels/HeroModel";
 
 
 

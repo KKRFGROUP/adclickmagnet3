@@ -38,7 +38,6 @@ export const HeroParallax = ({
             trigger: ".text-anime-cont",
             start: "30% 50%",
             end: "100% 50%",
-            markers: true,
             scrub: 1
         },
         

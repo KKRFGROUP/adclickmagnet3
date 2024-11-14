@@ -26,7 +26,7 @@ import { MdContactEmergency } from "react-icons/md";
 import { GiFallingBlob } from "react-icons/gi";
 
 //ui animation
-import { TracingBeam } from "../../components/ui/tracing-beam";
+import { TracingBeam } from "../../components/ui/TracingBeam";
 import ContactOurExperts from '@/components/services-components/ContactOurExperts';
 
 

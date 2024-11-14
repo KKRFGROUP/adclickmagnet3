@@ -1,18 +1,34 @@
-import { HoverEffect } from "../ui/card-hover-effect";
+import { HoverEffect } from "../ui/CardHoverEffect";
 import Image from "next/image";
 import img from '../../public/images/logo/adclickmagnetlogogrey.png'
+import { TypewriterEffect } from "../ui/TypewriterEffect";
  
+const words = [
+  {
+    text: "Our",
+    className: "text-white dark:text-white-500 tracking-widest leading-relaxed",
+  },
+  {
+    text: "Digital",
+    className: "text-white dark:text-white-500 tracking-widest leading-relaxed",
+  },
+  {
+    text: "Services",
+    className: "text-white dark:text-white-500 tracking-widest leading-relaxed",
+  },
+];
+
 export default function Section5() {
   return (
     <>
-    <div className="logo-service">
-      <div className=" flex items-center">
-        <Image height={150} width={150} src={img} alt="acm logo" />
+    <div className="logo-service rounded-t-[50px]">
+      <div className="flex items-center">
+        <Image height={200} width={200} src={img} alt="acm logo" />
         <p className="services">Services</p>
       </div>
-      <h2 className="our-services-head">Our Digital Services</h2>
+      <TypewriterEffect className="our-services-head" words={words} />
     </div>
-    <div className="max-w-5xl mx-auto sec5-cards-cont">
+    <div className="max-w-5xl mx-auto">
       <HoverEffect items={projects} />
     </div>
     </>

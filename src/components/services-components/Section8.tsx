@@ -1,5 +1,5 @@
 import React from 'react'
-import { CardSpotlight } from "@/components/ui/card-spotlight";
+import { CardSpotlight } from "@/components/ui/CardSpotlight";
 
 function Section8({content, roundt}: {content: {mainpara: string; heading: string;para?:string; cards: {title: string; count: string; para: string;}[]}; roundt?: string;}) {
   return (

@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import Image from "next/image";
-import { PinContainer } from "../ui/3d-pin";
+import { PinContainer } from "./3dPin";
 
 export const HoverEffect = ({
   items,
@@ -30,14 +30,14 @@ export const HoverEffect = ({
       {items.map((item, idx) => (
         <div
           key={item?.link}
-          className="relative group  block p-5 m-3 h-full w-full"
+          className="relative group  block p-5 m-3 h-full w-full card-hover-effect-card"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="sec5-hover-effect absolute inset-0  h-80 w-80 bg-neutral-200  block  rounded-3xl"
+                className="absolute left-4 inset-0  h-80 w-80 bg-neutral-200  block  rounded-3xl sec5-hover-effect"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -82,7 +82,7 @@ export const Card = ({
       title={title} href={link}
     >
       <div className="relative z-50 w-full">
-        <div className="p-4 ">{children}</div>
+        <div className="p-4">{children}</div>
       </div>
     </PinContainer>
   );

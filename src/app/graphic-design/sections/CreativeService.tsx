@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from 'react';
-import useGsapAnimation from '../../../components/useGsapAnimation';
+import useGsapAnimation from '../../../components/UseGsapAnimation';
 import { PiPaperPlaneRightBold } from "react-icons/pi";
 import Image from 'next/image';
 import '../graphic.css';

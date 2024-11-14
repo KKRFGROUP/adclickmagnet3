@@ -24,7 +24,7 @@ import { MdAnimation } from "react-icons/md";
 import { PiBookOpenTextFill,PiPresentationChartBold } from "react-icons/pi";
 
 //ui animation
-import { TracingBeam } from "../../components/ui/tracing-beam";
+import { TracingBeam } from "../../components/ui/TracingBeam";
 import ContactOurExperts from '@/components/services-components/ContactOurExperts';
 
 

@@ -8,11 +8,11 @@ import Link from "next/link";
 import { HiMiniArrowTopRightOnSquare } from "react-icons/hi2";
 import { BiSolidMessage } from "react-icons/bi";
 import { ImPhone } from "react-icons/im";
-import GoogleMapComponent from '../../components/ui/map';
+import GoogleMapComponent from '../../components/ui/Map';
 import { FaStarOfLife } from "react-icons/fa";
 
 //ui animation
-import { TracingBeam } from "../../components/ui/tracing-beam";
+import { TracingBeam } from "../../components/ui/TracingBeam";
 
 
 export default function ContactUs() {

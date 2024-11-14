@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { TypewriterEffect } from "../ui/typewriter-effect";
+import { TypewriterEffect } from "../ui/TypewriterEffect";
 
 const words = [
     {
@@ -16,22 +16,23 @@ const words = [
     },
     {
       text: "ACM",
-      className: "text-blue-500 dark:text-blue-500",
+      className: "text-black dark:text-black tracking-widest leading-normal",
+      
     },
   ];
 
 export default function Section7() {
     return (
         <div className="sec7-container flex-col justify-center items-center w-full">
-            <TypewriterEffect words={words} />
+            <TypewriterEffect  words={words} />
             <div className="sec7-logo-container flex justify-between mt-10">
-                <Image width={130} height={100} src="https://numerique.vamtam.com/wp-content/uploads/2023/06/jolie-1.svg" alt="company log" />
-                <Image width={130} height={100} src="https://numerique.vamtam.com/wp-content/uploads/2023/06/caridad.svg" alt="company log" />
-                <Image width={50} height={80} src="https://numerique.vamtam.com/wp-content/uploads/2023/06/F7.svg" alt="company log" />
-            
-                <Image width={130} height={100} src="https://numerique.vamtam.com/wp-content/uploads/2023/06/Scuola_Logo_OnlyTop-1.svg" alt="company log" />
-                <Image width={130} height={100} src="https://numerique.vamtam.com/wp-content/uploads/2023/06/petmania.svg" alt="company log" />
-                <Image width={130} height={100} src="https://numerique.vamtam.com/wp-content/uploads/2023/06/tecnologia.svg" alt="company log" />
+                <Image className="sec7-logo" width={130} height={100} src="https://numerique.vamtam.com/wp-content/uploads/2023/06/jolie-1.svg" alt="company log" />
+                <Image className="sec7-logo" width={130} height={100} src="https://numerique.vamtam.com/wp-content/uploads/2023/06/caridad.svg" alt="company log" />
+                <Image className="sec7-logo" width={50} height={80} src="https://numerique.vamtam.com/wp-content/uploads/2023/06/F7.svg" alt="company log" />
+             
+                <Image className="sec7-logo" width={130} height={100} src="https://numerique.vamtam.com/wp-content/uploads/2023/06/Scuola_Logo_OnlyTop-1.svg" alt="company log" />
+                <Image className="sec7-logo" width={130} height={100} src="https://numerique.vamtam.com/wp-content/uploads/2023/06/petmania.svg" alt="company log" />
+                <Image className="sec7-logo" width={130} height={100} src="https://numerique.vamtam.com/wp-content/uploads/2023/06/tecnologia.svg" alt="company log" />
                                 
 
             </div>

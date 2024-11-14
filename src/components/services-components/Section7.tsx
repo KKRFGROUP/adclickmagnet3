@@ -1,5 +1,5 @@
 import React from 'react'
-import { TypewriterEffect } from "../ui/typewriter-effect";
+import { TypewriterEffect } from "../ui/TypewriterEffect";
 import { FaAngleRight } from "react-icons/fa6";
 
 

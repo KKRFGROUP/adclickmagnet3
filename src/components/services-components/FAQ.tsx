@@ -1,8 +1,8 @@
 import React from 'react'
-import { TypewriterEffect } from '../ui/typewriter-effect';
+import { TypewriterEffect } from '../ui/TypewriterEffect';
 import {Accordion, AccordionItem} from "@nextui-org/accordion";
 
-import { AnimatedTooltip } from "../ui/animated-tooltip";
+import { AnimatedTooltip } from "../ui/AnimatedTooltip";
 
 
 

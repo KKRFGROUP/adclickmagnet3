@@ -1,5 +1,5 @@
 import React from 'react'
-import { TypewriterEffect } from "../ui/typewriter-effect";
+import { TypewriterEffect } from "../ui/TypewriterEffect";
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import Image from 'next/image';

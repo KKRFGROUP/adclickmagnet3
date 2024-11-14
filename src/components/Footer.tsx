@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Input, Label } from './ui/form';
+import { Input, Label } from './ui/Form';
 import { cn } from "@/lib/utils";
 import { FaInstagram, FaTwitter, FaFacebook, FaYoutube   } from "react-icons/fa6";
 
@@ -12,12 +12,12 @@ export default function Footer() {
   return (
     <>
     <div className="footer-container-1">
-      <div className="flex justify-between">
+      <div className="flex justify-between footer-container-1-head-form">
         <div className="footer-content flex-col justify-between">
           <h2 className="footer-head">See how we can help<br /> your business grow with<br /> digital marketing</h2>
           <p className='avg-para'><span className='six'>6.<span className='seven'>7</span></span>
           / Average ROAS</p>
-          <p>across our 100+ Global<br /> Clients on SEO, PPC & Social</p>
+          <p className="footer-para">across our 100+ Global<br /> Clients on SEO, PPC & Social</p>
         </div>
         <SignupFormDemo />
       </div>
@@ -39,7 +39,7 @@ export default function Footer() {
         
         <hr className='solution-gap-line'/>
 
-        <div className="flex justify-between px-10 pt-3">
+        <div className="flex justify-between lg:px-10 pt-3 footer-links">
           <Link href="/about" className='solution-page-link'>Press Release</Link>
           <Link href="/blog" className='solution-page-link'>Blog</Link>
           <Link href="/careers" className='solution-page-link'>Careers</Link>
@@ -81,7 +81,7 @@ export function SignupFormDemo() {
     console.log("Form submitted");
   };
   return (
-    <div className="max-w-md w-full  rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
+    <div className="max-w-md w-full  rounded-2xl md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
       We’re here to help you grow
       </h2>

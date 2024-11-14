@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
+import { CardBody, CardContainer, CardItem } from "../ui/3dCard";
 
 import React, { useEffect, useRef } from 'react';
 import ScrollTrigger from 'gsap/ScrollTrigger';

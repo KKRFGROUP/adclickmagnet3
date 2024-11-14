@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
-import { TypewriterEffect } from "../ui/typewriter-effect";
+import { TypewriterEffect } from "../ui/TypewriterEffect";
 import { IoMdCheckmark } from "react-icons/io";
 
 

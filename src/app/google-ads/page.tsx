@@ -35,7 +35,7 @@ import { GrHostMaintenance } from "react-icons/gr";
 
 
 //ui animation
-import { TracingBeam } from "../../components/ui/tracing-beam";
+import { TracingBeam } from "../../components/ui/TracingBeam";
 import ContactOurExperts from '@/components/services-components/ContactOurExperts';
 import DynamicContentCard from '@/components/services-components/DynamicContentCard';
 

@@ -4,7 +4,7 @@ import Image from "next/image";
 import adclickImage from "../../public/images/logo/adclickmagnetlogogrey.png"
 import { useEffect } from "react";
 import {gsap} from 'gsap'
-import { TypewriterEffect } from "../ui/typewriter-effect";
+import { TypewriterEffect } from "../ui/TypewriterEffect";
  
 
 const words = [
@@ -22,7 +22,7 @@ const words = [
     },
     {
       text: "Acm.",
-      className: "text-grey dark:text-grey",
+      className: "text-grey dark:text-grey ",
     },
   ];
 
@@ -33,7 +33,6 @@ export default function Section2() {
                 trigger: ".sec2-container",
                 start: "80% 50%",
                 end: "100% 50%",
-                markers: true,
                 scrub: 1
             },
             
@@ -53,9 +52,9 @@ export default function Section2() {
         <Image className="sec2-company-logo hidden lg:block" src="https://numerique.vamtam.com/wp-content/uploads/2023/05/tiktok.svg" width={100} height={100} alt="company logo"  />
       </div>  
         <div className="sec2-container">
-            <Image width={150} height={150} src={adclickImage} alt="acmlogo" className="mb-3 h-[50%] relative right-[25px]"/>
+            <Image width={250} height={250} src={adclickImage} alt="acmlogo" className="mb-3 relative right-[15px]"/>
             
-            <TypewriterEffect words={words} />
+            <TypewriterEffect className="sec2-head" words={words} />
         </div>
       </>
     )

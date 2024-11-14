@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { HeroParallax } from "../ui/hero-parallax";
+import { HeroParallax } from "../ui/HeroParallax";
 
 export default function Section6() {
   return (
@@ -10,6 +10,7 @@ export default function Section6() {
     </div>
   )
 }
+
 export const products = [
   {
     title: "card 1",

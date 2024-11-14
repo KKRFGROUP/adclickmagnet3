@@ -26,7 +26,7 @@ import { BiSolidBookContent } from "react-icons/bi";
 import { SiTestcafe } from "react-icons/si";
 
 //ui animation
-import { TracingBeam } from "../../components/ui/tracing-beam";
+import { TracingBeam } from "../../components/ui/TracingBeam";
 import ContactOurExperts from '@/components/services-components/ContactOurExperts';
 
 const heroContent = {

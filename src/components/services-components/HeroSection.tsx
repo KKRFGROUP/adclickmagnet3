@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { TextGenerateEffect } from '../ui/text-generate-effect';
+import { TextGenerateEffect } from '../ui/TextGenerateEffect';
 import Link from 'next/link';
 import "./components.css";
 import Image from 'next/image';

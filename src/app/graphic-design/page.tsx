@@ -12,7 +12,7 @@ import "./graphic.css";
 import DigitalServices from './sections/DigitalServices';
 
 //ui animation
-import { TracingBeam } from "../../components/ui/tracing-beam";
+import { TracingBeam } from "../../components/ui/TracingBeam";
 
 
 const GraphicDesignPage = () => {

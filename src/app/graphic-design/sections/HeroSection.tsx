@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from 'react';
-import useGsapAnimation from '../../../components/ui/useGsapAnimation';
+import useGsapAnimation from '../../../components/ui/UseGsapAnimation';
 import '../graphic.css';
 //import { TextGenerateEffect } from '@/components/ui/text-generate-effect';
 

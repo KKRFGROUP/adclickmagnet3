@@ -17,7 +17,7 @@ import FAQ from '@/components/services-components/FAQ';
 import Cards3dSections from '@/components/services-components/Cards3dSections';
 
 //ui animation
-import { TracingBeam } from "../../components/ui/tracing-beam";
+import { TracingBeam } from "../../components/ui/TracingBeam";
 
 // logos
 import { MdOutlineContentPasteSearch } from "react-icons/md";

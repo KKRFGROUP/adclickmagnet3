@@ -1,6 +1,6 @@
 
-import { InfiniteMovingCards } from "../ui/infinite-moving-cards";
-import { TextGenerateEffect } from "../ui/text-generate-effect";
+import { InfiniteMovingCards } from "../ui/InfiniteMovingCards";
+import { TextGenerateEffect } from "../ui/TextGenerateEffect";
 
 
 export default function Section8() {
