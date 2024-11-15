@@ -8,10 +8,10 @@ import { IoMdCheckmark } from "react-icons/io";
 function Section3({content, order, roundb, hide}: {content: {mainpara: string; heading: {text: string; className: string;}[]; para1: string; para2: string; image: string;}; order?: string;roundb?: string;hide?: string;}) {
     const lines = content.para2.split('\n');
   return (
-    <div className={`services-sec3-flex-main-component pt-[130px] p-[100px] h-[120vh] flex justify-between ${roundb}`}>
-       <div className={`services-sec3-content w-[50%] ${order}`}>
+    <div className={` pt-[130px]   flex justify-between services-sec3-flex-main-component ${roundb}`}>
+       <div className={`w-[50%] services-sec3-content ${order}`}>
             <p className='services-secs-main-para'>{content.mainpara}</p>
-            <div className='w-[30vw] mt-7 mb-9'>
+            <div className='md:w-[30vw] mt-7 mb-9'>
                 <TypewriterEffect className="services-secs-head" words={content.heading} />
             </div>
             <p className="services-secs-content-para">{content.para1}</p>
@@ -24,7 +24,7 @@ function Section3({content, order, roundb, hide}: {content: {mainpara: string; h
                     </span>
                 ))}
             </p>
-            <div className={`flex items-center mt-5 gap-5 ${hide}`} >
+            <div className={`flex flex-wrap items-center mt-5 gap-5 ${hide}`} >
                 <div className='services-sec3-content-features flex justify-center items-center'>
                     Cost-effective
                     <IoMdCheckmark />

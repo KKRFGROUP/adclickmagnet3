@@ -15,8 +15,8 @@ const words = [
       text: "choose",
     },
     {
-      text: "ACM",
-      className: "text-black dark:text-black tracking-widest leading-normal",
+      text: "ACM.",
+      className: "text-black dark:text-black ",
       
     },
   ];

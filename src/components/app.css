@@ -90,7 +90,44 @@ body{
     border: 1px solid #fff;
 }
 
-@media (max-width: 575px) {
+/* mopbile view navbar*/
+
+.mobile-view-navbar-container {
+    display: none;
+    transition: 1s;
+    backdrop-filter: blur(7px);
+}
+
+
+
+
+@media (max-width: 768px) {
+    .mobile-view-navbar-container {
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .mobile-view-navbar-logo {
+        height: 90px;
+        width: 90px;
+    }
+    .mobile-navlinks {
+        margin-top: 20%;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 25px;
+        transition: 1s;
+    }
+    .services-drop-down {
+        display: flex;
+        flex-direction: column;
+        color: grey;
+        padding-left: 10px;
+        transition: 1s;
+    }
     .navbar {
         display: none;
     }
@@ -123,7 +160,12 @@ body{
 }
 
 
+
 /* hero section */
+
+.home-model {
+    height: max-content;
+}
 .hero-content {
     position: absolute;
     top: 25vh;
@@ -154,13 +196,20 @@ body{
     .hero-h-title{
         font-size:2rem;
     }
+    .hero-content {
+        position: absolute;
+        top: 30vh;
+        
+    }
 }
 .inner-color-title{
     background-image: linear-gradient(to bottom, #fff, grey) ;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    font-size: 45px;
+    font-family: "Syne";
 }
-@media (max-width: 575px) {
+@media (max-width: 768px) {
     .inner-color-title {
         font-size: 35px;
     }
@@ -168,8 +217,8 @@ body{
 
 .after-hero-sec {
     position:relative;
-    bottom: 100px;
-    height: 680vh;
+    bottom: 50px;
+    height: max-content;
 }
 
 /* section 2 */
@@ -179,27 +228,38 @@ body{
     background-image: linear-gradient(90deg, #bccacf,#bccacf, #000);
     color: #000;
     padding: 40px;
-    height: 20vh;
+    height: max-content;
+    margin-left: 20px;
+    margin-right: 20px;
     
 }
 .partner-not-ventor {
     font-weight: bold;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 .sec2-company-logo {
     margin-right :20px;
+    width: 17%;
 }
 
 .sec2-container {
     position: relative;
-    top: -10px;
+    bottom: 10px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     background-image: linear-gradient(90deg, #fff, #000000);
     border-bottom-left-radius: 50px;
-    height: 50vh;
+    height: max-content;
     padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.sec-2company-logo {
+    height: 150px;
+    width: 150px;
 }
 
 .text-area {
@@ -229,18 +289,21 @@ body{
     }
     .Companies-partner {
         padding: 20px;
-        height: 17vh;
+        height: max-content;
         font-size: 13px;
+        position: relative;
+        bottom: 25px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
 .sec2-head {
-    margin-left: 30px;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 768px) {
     .Companies-partner {
         padding: 20px;
-        height: 35vh;
+        height: max-content;
         flex-wrap: wrap;
     }
     .partner-not-ventor {
@@ -250,15 +313,15 @@ body{
         padding-left: 10px;
     }
     .sec2-company-logo {
-        margin-right :20px;
         width: 30%;
         margin: 20px;
+        
     }
 
     .sec2-container {
-        height: 30vh;
+        height: max-content;
+        bottom: 45px;
         padding: 20px;
-        padding-top: 30px;
     }
     .sec2-head {
         margin-left: 30px;
@@ -281,7 +344,7 @@ body{
     height: 120vh;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 768px) {
     .sec3-model {
         height: 50vh;
     }
@@ -314,13 +377,18 @@ body{
     }
 }
 .logo-service {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     padding: 90px;
+    padding-bottom: 0px;
     gap: 30px;
     position: relative;
     bottom: 110px;
     background-color: #000;
     box-shadow: 0px -5px 5px 0px #fff;
 }
+
 
 .services {
     color: grey;
@@ -332,14 +400,25 @@ body{
     font-size: 60px;
     font-weight: bold;
 }
+.our-service-hover-cards {
+    height: max-content;
+}
 
-@media (max-width: 575px) {
+@media (max-width: 768px) {
+    .sec-5-logo {
+        position: relative;
+        left: 0px;
+    }
     .logo-service {
-        padding: 30px;
+        padding: 20px;
     }
     .services {
         color: grey;
-        font-size: 30px;
+        font-size: 24px;
+    }
+    .mobile-our-digital-service {
+        justify-content: space-between;
+        padding-right: 20px;
     }
     .our-services-head {
         font-size: 40px;
@@ -410,13 +489,13 @@ body{
 /* about section */
 .about-sec-container {
     background-color: hsl(0, 0%, 89%);
-    
     padding: 70px;
     border-radius: 50px;
     box-shadow: 0px 0px 10px 1px #fff;
     transition: 0.4s;
     color: #000;
-    height: 85vh;
+    height: max-content;
+    margin-bottom: 30px;
 }
 .about-sec-container:hover {
     box-shadow: 0px 0px 20px 1px #fff;
@@ -479,7 +558,8 @@ body{
     .about-sec-container {
         padding: 30px;
         padding-top: 50px;
-        height: 90vh;
+        margin-bottom: 30px;
+        height: max-content;
     }
     .about-sec-content {
         flex-direction: column;
@@ -506,7 +586,7 @@ body{
 .team-sec-container {
     position: relative;
     bottom: 50px;
-    height: 100vh;
+    height: max-content;
     background-color: #000;
     border-radius: 50px;
     padding: 70px;
@@ -556,7 +636,7 @@ body{
 
 @media (max-width: 768px) {
     .team-sec-container {
-        height: 100vh;
+        height: max-content;
         padding: 50px;
         flex-direction: column;
         align-items: flex-start;
@@ -578,11 +658,11 @@ body{
         font-size: 30px;
     }
     .team-sec-image {
-        width: 70%;
+        width: 60%;
     }
     .small-img {
         position: relative;
-        top: 150px;
+        top: 130px;
         width: 60%;
         height: 95%;
         border: 10px solid #000;
@@ -594,9 +674,9 @@ body{
 .data-driven-head {
     font-family: "Syne", sans-serif;
 }
-@media (max-width: 575px) {
+@media (max-width: 768px) {
     .sec6-container {
-        height: 300vh;
+        height: max-content;
     }
 }
 
@@ -609,7 +689,7 @@ body{
     padding: 100px;
     border-radius: 50px;
     
-    height: 50vh;
+    height: max-content;
     color: #000;
 }
 
@@ -679,12 +759,12 @@ body{
 
 
 
-@media (max-width: 575px) {
+@media (max-width: 768px) {
     .sec7-container {
         padding: 50px;
         position: relative;
         bottom: 20px;
-        height: 50vh;
+        height: max-content;
     }
     .sec7-logo {
         margin: 10px;
@@ -705,7 +785,7 @@ body{
     background-color: #E2E2E2;
     
     border-radius: 50px;
-    height: 120vh;
+    height: max-content;
     padding: 100px;
     color: #000;
     box-shadow: 0px 0px 20px 1px #fff;
@@ -720,9 +800,9 @@ body{
     color: #000;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 768px) {
     .sec9-container {
-        height: 90vh;
+        height: max-content;
         padding: 50px;
         position: relative;
         top: 25px;
@@ -809,7 +889,7 @@ body{
     font-size: 15px;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 768px) {
     .blog-sec-head {
         font-size: 30px;
     }
@@ -849,7 +929,7 @@ body{
     background-color: #4d4d4d;
     position: relative;
     bottom: 50px;
-    height: 120vh;
+    height: max-content;
     margin-left: 50px;
     margin-right: 50px;
     border-radius: 50px;
@@ -874,11 +954,11 @@ body{
     top: 10px;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 768px) {
     
     .footer-container-1 {
         bottom: 50px;
-        height: 150vh;
+        height: max-content;
         margin-left: 15px;
         margin-right: 15px;
         padding: 40px;
@@ -900,7 +980,7 @@ body{
     padding: 70px;
     position: relative;
     bottom: 130px;
-    height: 61vh;
+    height: max-content;
     margin-left: 50px;
     margin-right: 50px;
     border-radius: 50px;
@@ -919,7 +999,9 @@ body{
 .solution-gap-line {
     margin-top: 40px;
     margin-bottom: 20px;
-    height: 1px;
+    border: 0px;
+    height: 2px;
+    border-radius: 10px;
     background-color: #00000060;
 }
 
@@ -927,11 +1009,11 @@ body{
     font-size: 30px;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 768px) {
     .footer-container-2 {
         padding: 40px;
         bottom: 130px;
-        height: 90vh;
+        height: max-content;
         margin-left: 20px;
         margin-right: 20px;
     }

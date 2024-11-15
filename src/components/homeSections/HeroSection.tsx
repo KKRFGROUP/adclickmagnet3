@@ -10,10 +10,6 @@ import Navbar from "../Navbar";
 import HeroModel from "../3dmodels/HeroModel";
 
 
-
-
-
-
 export default function HeroSection() {
     
     return (
@@ -23,7 +19,7 @@ export default function HeroSection() {
                 <Navbar />
             </header>
 
-            <div className="hero-content flex flex-col justify-center absolute  h-80">
+            <div className="hero-content flex flex-col justify-center absolute hero-content">
                 <TextGenerateEffect color={"inner-color-title"} words={"Drive More Growth"}  />
                 <TextGenerateEffect color={"inner-color-title"} words={"Digital Marketing"}  />
                 <br />
@@ -45,15 +41,5 @@ export default function HeroSection() {
         );
     }
             
-/* <div className="flex flex-col space-y-4 text-sm">
-                                    
-<ProductItem title="design" description="Website Design
-Website Redesign
-Rapid Web Design
-Social Media Design
-Ecommerce Website Design
-Email Marketing Testing & Design" href="/ui-ux-design" src='https://tse4.mm.bing.net/th?id=OIP.doYHfVKgVncrGIL5jmSOMgHaE8&pid=Api&P=0&h=180'  />
-</div> 
 
-*/
         

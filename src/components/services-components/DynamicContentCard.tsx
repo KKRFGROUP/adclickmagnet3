@@ -1,24 +1,23 @@
 import React, { useState } from 'react'
-import { Spotlight } from "../ui/Spotlight";
-
+import Image from "next/image";
+import google3dimage from '../../public/images/pngwing.com.png'
 
 function DynamicContentCard({content} : {content: {id: number; title: string; logo: React.ReactNode; para: string;}[]}) {
     const [active, setActive] = useState(1);
     const activeCard = content[active -1];
   return (
-      <div className="h-[120vh] w-full rounded-[50px] flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
-        <Spotlight
-            className="-top-40 left-0 md:right-60 md:-top-20"
-            fill="white"
-          />
-        <div className="services-secs-main-container dark:bg-black dark:text-white  flex-col justify-center items-center text-center">
+        <div className="relative h-[120vh] rounded-[50px] dark:bg-black dark:text-white  flex-col justify-center items-center text-center services-secs-main-container">
         <h2 className="services-secs-head mb-5">How Do Google Ads Campaign Management Services Work?</h2>
 
+        <Image className="dynamic-content-card-right-object" src={google3dimage} height={200} width={200} />
         <div className="dynamic-content-card flex">
-            <div className="dynamic-content-card-left overflow-y-hidden rounded-l-[50px]">
+            <div className="dynamic-content-card-left  rounded-l-[50px]">
                 <ul className='p-0 list-decimal'>
                     {content.map(each => (
-                        <li key={each.id} className={`text-2xl mb-9 ${active=== each.id? "active-para": ""}`} onClick={() => setActive(each.id)} >{each.title}</li>
+                        <div className="mb-9">
+                            <li key={each.id} className={`dynamic-content-card-left-para ${active=== each.id? "active-para": ""}`} onClick={() => setActive(each.id)} >{each.title}</li>
+                            <hr className="dynamic-content-card-left-line"/>
+                        </div>
                     ))}
                 </ul>
             </div>
@@ -27,7 +26,6 @@ function DynamicContentCard({content} : {content: {id: number; title: string; lo
                 <p className="services-secs-content-para dark:text-white text-left mt-9">{activeCard.para}</p>
             </div>
         </div>
-    </div>
     </div>
   )
 }

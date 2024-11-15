@@ -19,31 +19,36 @@ export default function Section8() {
 const testimonials = [
   {
     quote:
-      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-    name: "Charles Dickens",
-    title: "A Tale of Two Cities",
+      "ACM transformed our online presence with a stunning website and effective SEO strategies. Their expertise boosted our traffic and conversions dramatically, taking our business to the next level!",
+    name: "Ryan",
+    title: "Elevate Homescriptions",
   },
   {
     quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: "William Shakespeare",
-    title: "Hamlet",
-  },
-  {
-    quote: "All that we see or seem is but a dream within a dream.",
-    name: "Edgar Allan Poe",
-    title: "A Dream Within a Dream",
+      "Thanks to ACM's Google Ads campaigns, we reached our ideal audience and doubled our leads in no time. Their strategic approach and attention to detail truly set them apart in the digital space.",
+    name: "Marcio",
+    title: "IQ Homecare",
   },
   {
     quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "Jane Austen",
-    title: "Pride and Prejudice",
+      "ACM's graphic design team crafted visuals that perfectly represent our brand. Their creativity, dedication, and ability to capture our vision have been an absolute game-changer for us.",
+    name: "Joe",
+    title: "Anderson Glass Contractors",
   },
   {
     quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "Herman Melville",
-    title: "Moby-Dick",
+      "The team at ACM delivered a sleek, modern website that exceeded our expectations. Their professionalism and attention to detail ensured a seamless experience from start to finish.",
+    name: "Afraz",
+    title: "Heartsaver NY",
+  },
+  {
+    quote:
+      "Partnering with ACM was the best decision for our business. They handled web development, SEO, and ads with precision, providing outstanding results that far surpassed our expectations.",
+    name: "Christina",
+    title: "Tapis Rugs & Carpets",
   },
 ];
+
+
+
+

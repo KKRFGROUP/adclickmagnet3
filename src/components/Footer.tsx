@@ -4,9 +4,9 @@ import React from 'react';
 import Link from 'next/link';
 import { Input, Label } from './ui/Form';
 import { cn } from "@/lib/utils";
-import { FaInstagram, FaTwitter, FaFacebook, FaYoutube   } from "react-icons/fa6";
-
-
+import { FaInstagram, FaFacebook, FaYoutube   } from "react-icons/fa6";
+import { RiWhatsappFill } from "react-icons/ri";
+import { MdAttachEmail } from "react-icons/md";
 
 export default function Footer() {
   return (
@@ -22,31 +22,34 @@ export default function Footer() {
         <SignupFormDemo />
       </div>
     </div>
-    <div className="footer-container-2 h-[30vh]">
+    <div className="footer-container-2">
         <h2 className="solutions" >SOLUTIONS</h2>
         <div className="solution-paras flex flex-wrap justify-between">
-          <p className="solution-para">Paid search marketing</p>
-          <p className="solution-para">Email marketing</p>
-          <p className="solution-para">Social Media Marketing</p>
-          <p className="solution-para">Influencer marketing</p>
+          <Link href="web-development" className="solution-para"><p >Web Development</p></Link>
+          <Link href="google-ads" className="solution-para"><p >Google Ads</p></Link>
+          <Link href="seo" className="solution-para"><p >SEO</p></Link>
+          <Link href="graphic-design" className="solution-para"><p >Graphic Design</p></Link>
           <br />
           <br />
-          <p className="solution-para">Search engine optimization</p>
-          <p className="solution-para">Conversion rate optimization</p>
-          <p className="solution-para">Google shopping</p>
-          <p className="solution-para">Amazon shopping</p>
+          <Link href="ad-creative" className="solution-para"><p >Ad Creative</p></Link>
+          <Link href="motion-design" className="solution-para"><p >Motion Design</p></Link>
+          <Link href="video-production" className="solution-para"><p >Video Production</p></Link>
+          <Link href="presentation-design" className="solution-para"><p >Presentation Design</p></Link>
+          
+          <br />
+          <br />
         </div>
         
         <hr className='solution-gap-line'/>
 
         <div className="flex justify-between lg:px-10 pt-3 footer-links">
-          <Link href="/about" className='solution-page-link'>Press Release</Link>
-          <Link href="/blog" className='solution-page-link'>Blog</Link>
-          <Link href="/careers" className='solution-page-link'>Careers</Link>
-          <Link href="/team" className='solution-page-link'>Team</Link>
-          <Link href="/success-stories" className='solution-page-link'>Case Studies</Link>
-          <Link href="/awards" className='solution-page-link'>Awards</Link>
-          <Link href="/contact" className='solution-page-link'>Contact</Link>
+          <Link href="/" className='solution-page-link'>Press Release</Link>
+          <Link href="/" className='solution-page-link'>Blog</Link>
+          <Link href="/" className='solution-page-link'>Careers</Link>
+          <Link href="/" className='solution-page-link'>Team</Link>
+          <Link href="/" className='solution-page-link'>Case Studies</Link>
+          <Link href="/" className='solution-page-link'>Awards</Link>
+          <Link href="/contact-us" className='solution-page-link'>Contact</Link>
         </div>
 
         <hr className="solution-gap-line" />
@@ -60,10 +63,11 @@ export default function Footer() {
           </div>
 
           <div className="social-media-handles-card flex items-center gap-7">
-              <FaInstagram className='social-media-handle-logo'/>
-              <FaTwitter className='social-media-handle-logo'/>
-              <FaFacebook className='social-media-handle-logo'/>
-              <FaYoutube className='social-media-handle-logo'/>
+              <Link href="https://www.instagram.com/adclickmagnet?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><FaInstagram className='social-media-handle-logo'/> </Link>
+              <Link href="https://wa.me/+918800262061"><RiWhatsappFill className='social-media-handle-logo'/> </Link>
+              <Link href="https://www.facebook.com/profile.php?id=61552551834420"><FaFacebook className='social-media-handle-logo'/> </Link>
+              <Link href="mailto:info@adclickmagnet.com"><MdAttachEmail className='social-media-handle-logo'/> </Link>
+              
           </div>
         </div>
     </div>

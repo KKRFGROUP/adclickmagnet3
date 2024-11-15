@@ -68,20 +68,20 @@ const section2 = [
   {
       id: 6,
       imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbOo6Qs4bmldUhw7s_yufF3XHwbwK7bRr2pQ&s",
-      customer: "Lockheed Martin",
+      customer: "Lockheed...",
       industry: "Defence"
   },
   {
       id: 7,
       imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/736472e7079951373aa33646f75d519428026466-1200x678.png?auto=format&fit=max&q=100&w=1200",
       customer: "Opa!",
-      industry: "Consumer Goo..."
+      industry: "Consumer..."
   },
   {
       id: 8,
       imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/4f986ebd49b52907be569e401ef25b191b412700-800x936.png?auto=format&fit=max&q=100&w=800",
       customer: "Shopify",
-      industry: "E-commerce & ..."
+      industry: "E-commerce..."
   },
 ]
 
@@ -255,8 +255,8 @@ const section7 = {
         className: "lg:text-4xl text-white dark:text-white-500 tracking-wider",
       },
     ],
-    para1: "Leverage AI to optimize and accelerate the web development process. ACM’s AI-driven workflows streamline coding, debugging, and testing, reducing project timelines by up to 60%.",
-    para2: "Our AI-driven development approach ensures precision, speed, and enhanced quality, boosting project efficiency. Elevate your digital presence with our innovative, reliable web development services.",
+    para1: "Use AI to streamline and speed up web development. ACM’s AI workflows optimize coding, debugging, and testing, cutting project timelines by up to 60%.",
+    para2: "Our AI-driven approach delivers precision, speed, and quality, enhancing project efficiency. Boost your digital presence with our innovative web development services.",
     button: "AI Web Development Service"
 };
 
@@ -305,7 +305,7 @@ const section8 = {
       {
         title: "PROJECTS COMPLETED",
         count: "15k+",
-        para: "Web development projects successfully delivered to clients."
+        para: "Web dev projects successfully delivered to clients."
       },
       {
         title: "TOTAL CLIENTS",
@@ -478,7 +478,8 @@ function WebDev() {
     return () => {};
   }, []);
   return (
-    <div className='page-main'>
+    <>
+    <div className='page-main tracing-beam'>
       <TracingBeam>
 
         <Navbar />
@@ -488,7 +489,7 @@ function WebDev() {
         <Section2 Cards={section2}/>
         <Section3  content={section3}/>
         <Section4 content={section4} roundb='rounded-b-[50px]'/>
-        <Section6 content={section6}/>
+        <Section6 content={section6} translate="-100%"/>
         <Cards3dSections translate='-150%' content={section3dCards} className="rounded-[50px]"/>
         <Section7 content={section7}/>
         <Section8 content={section8}/>
@@ -497,6 +498,26 @@ function WebDev() {
         <Footer />
       </TracingBeam>
     </div>
+    <div className='page-main mobile-tracing-beam'>
+      <TracingBeam>
+
+        <Navbar />
+        <section data-bgcolor="#070707" data-textcolor="#ffffff">
+          <HeroSection heading={heroContent.heading} para={heroContent.para} imgUrl={heroContent.imgUrl}/>
+        </section>
+        <Section2 Cards={section2}/>
+        <Section3  content={section3}/>
+        <Section4 content={section4} roundb='rounded-b-[50px]'/>
+        <Section6 content={section6} translate="-100%"/>
+        <Cards3dSections translate='-150%' content={section3dCards} className="rounded-[50px]"/>
+        <Section7 content={section7}/>
+        <Section8 content={section8}/>
+        <ContactOurExperts />
+        <FAQ  content={faq}/>
+        <Footer />
+      </TracingBeam>
+    </div>
+    </>
   )
 }
 

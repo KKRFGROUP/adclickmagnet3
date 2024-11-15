@@ -5,6 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import adclickImage from '../../public/images/logo/adclickmagnetlogoblack.png';
 import '../app.css';
+import { CgMenuHotdog } from "react-icons/cg";
+
 
 const transition = {
   type: "spring",
@@ -82,7 +84,7 @@ export const Menu = ({
           {children}
           
         </nav>
-        <Link href="/">
+        <Link href="/contact-us">
         <button type="button" className="getintouch-card flex items-center justify-center view">
                             Get in touch
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"

@@ -34,19 +34,19 @@ const words1 = [
 
 function FAQ({content}: {content: {mainpara: string; people: {id: number;name: string;designation: string;image: string;}[]; list: {id: string;title: string; description: string;}[]}}) {
   return (
-    <div className="p-[90px] h-[150vh] flex justify-between items-start">
-       <div className="services-sec3-content w-[50%]">
+    <div className="p-[90px] h-[150vh] flex justify-between items-start faq-container">
+       <div className="w-[50%] faq-content">
             <p className='services-secs-main-para'>{content.mainpara}</p>
-            <div className='w-[35vw] mt-7 mb-9'>
+            <div className='w-[35vw] mt-7 mb-9 faq-content-head'>
                 <TypewriterEffect className="services-secs-head" words={words1} />
             </div>
-            <div className='flex mt-4'>
+            <div className='flex justify-center mt-4 mb-7'>
 
             <AnimatedTooltip items={content.people} />
             </div>
         </div>
 
-        <div className="faq-right-container w-[50%] h-[90%]">
+        <div className="w-[50%] h-[90%] faq-right-container">
         <Accordion variant="splitted">
             {content.list.map(each => (
                 <AccordionItem className='mb-2'  key={each.id} aria-label={`Accordion ${each.id}`} title={each.title}>

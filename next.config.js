@@ -199,6 +199,11 @@ module.exports = {
           hostname: 'w7.pngwing.com',
           port: '',
         },
+        {
+          protocol: 'https',
+          hostname: 'png.pngtree.com',
+          port: '',
+        },
       ], 
     },
   }

@@ -40,7 +40,7 @@ import ContactOurExperts from '@/components/services-components/ContactOurExpert
 import DynamicContentCard from '@/components/services-components/DynamicContentCard';
 
 const heroContent = {
-    heading: "Google Ads Management Services",
+    heading: "Google Ads Services",
     para: "Since 2004, we’ve been a paid search marketing agency focused on Google Ads management – our services boosting paid search conversions by more than 485%. We’ll apply proven Ads management strategies to your campaign – increasing conversions and eliminating wasted spend!",
     imgUrl: "https://images.pexels.com/photos/67112/pexels-photo-67112.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
 }
@@ -78,14 +78,14 @@ const section2 = [
   {
       id: 6,
       imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbOo6Qs4bmldUhw7s_yufF3XHwbwK7bRr2pQ&s",
-      customer: "Lockheed Martin",
+      customer: "Lockheed...",
       industry: "Defence"
   },
   {
       id: 7,
       imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/736472e7079951373aa33646f75d519428026466-1200x678.png?auto=format&fit=max&q=100&w=1200",
       customer: "Opa!",
-      industry: "Consumer Goo..."
+      industry: "Consumer ..."
   },
   {
       id: 8,
@@ -148,7 +148,7 @@ const section4 = {
       {
         logo: <HiDocumentReport className='text-3xl' />,
         head: "Detailed Reporting & Team Meetings",
-        para: "Each month, we’ll provide a detailed report on campaign performance, and schedule review meetings to discuss strategies and ongoing improvements."
+        para: "Each month, we will deliver a comprehensive report on campaign performance and arrange review meetings to discuss strategies and continuous improvements."
       },
       {
         logo: <GiOnTarget className='text-3xl' />,
@@ -539,8 +539,8 @@ function GoogleAds() {
         </section>
         <Section2 Cards={section2}/>
         <Section3  content={section3}/>
-        <Section4 content={section4} roundb='rounded-b-[50px] h-[170vh]'/>
-        <Section6 content={section6}/>
+        <Section4 content={section4} roundb='rounded-b-[50px] h-[200vh]'/>
+        <Section6 content={section6} translate="-75%"/>
         <DynamicContentCard content={dynamicContentSec}/>
         <Cards3dSections translate='-150%' content={section3dCards} className="rounded-[50px]"/>
         <Section7 content={section7}/>

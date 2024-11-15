@@ -161,7 +161,7 @@ export const TypewriterEffectSmooth = ({
             whiteSpace: "nowrap",
           }}
         >
-          {renderWords()}{" "}
+          {renderWords()}{""}
         </div>{" "}
       </motion.div>
       <motion.span

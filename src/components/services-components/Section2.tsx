@@ -6,8 +6,8 @@ import Image from 'next/image';
 
 function Section2({Cards}: {Cards: {id: number; imgUrl: string; customer: string; industry: string;}[]}) {
   return (
-    <div className="services-sec2-main-component flex justify-center items-center">
-        <div className="flex-col h-[100vh] w-[25%] p-0 m-0">
+    <div className=" services-sec2-main-component">
+        <div className="flex-col h-[100vh] w-[25%] p-0 m-0 services-sec2-flex-card">
             <div className="services-sec2-card h-[65%]">
                 <Image className='services-sec2-card-img h-[80%]' src={Cards[0].imgUrl} alt={Cards[0].customer} height={300} width={300} />
                 <div className="flex justify-between services-sec2-card-content">
@@ -35,7 +35,7 @@ function Section2({Cards}: {Cards: {id: number; imgUrl: string; customer: string
                 </div>
             </div>
         </div>
-        <div className="flex-col h-[100vh] w-[25%] p-0 m-0">
+        <div className="flex-col h-[100vh] w-[25%] p-0 m-0 services-sec2-flex-card">
             <div className="services-sec2-card h-[35%]">
                 <Image className='services-sec2-card-img h-[75%]' src={Cards[2].imgUrl} alt={Cards[2].customer} height={300} width={300} />
                 <div className="flex justify-between services-sec2-card-content">
@@ -64,7 +64,7 @@ function Section2({Cards}: {Cards: {id: number; imgUrl: string; customer: string
             </div>
         </div>
 
-        <div className="flex-col h-[100vh] w-[25%] p-0 m-0">
+        <div className="flex-col h-[100vh] w-[25%] p-0 m-0 services-sec2-flex-card">
             <div className="services-sec2-card h-[65%]">
                 <Image className='services-sec2-card-img h-[80%]' src={Cards[4].imgUrl} alt={Cards[4].customer} height={300} width={300} />
                 <div className="flex justify-between services-sec2-card-content">
@@ -94,7 +94,7 @@ function Section2({Cards}: {Cards: {id: number; imgUrl: string; customer: string
         </div>
 
         
-        <div className="flex-col h-[100vh] w-[25%] p-0 m-0">
+        <div className="flex-col h-[100vh] w-[25%] p-0 m-0 services-sec2-flex-card">
             <div className="services-sec2-card h-[35%]">
                 <Image className='services-sec2-card-img h-[75%]' src={Cards[6].imgUrl} alt={Cards[6].customer} height={300} width={300} />
                 <div className="flex justify-between services-sec2-card-content">

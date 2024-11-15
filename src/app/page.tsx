@@ -25,7 +25,7 @@ export default function Home() {
 
   
     return (
-      <>
+      <div className="dark:bg-balck bg-black overflow-hidden">
         <HeroSection />
         <div className="after-hero-sec">
 
@@ -40,7 +40,7 @@ export default function Home() {
           <Section9 />
           <Footer />
         </div>
-      </>
+      </div>
     );
 
 }

@@ -12,7 +12,7 @@ export default function TeamSection() {
                 </h2>
                 <h2 className="team-sec-head">Team of over 450<br /> experts</h2>
                 <p className="team-sec-para">At ACM, we’re focused on building strong and lasting client partnerships. By drawing on our deep industry knowledge and expertise, we provide the insights you need to build and evolve your brand, drive business performance and mitigate risk.</p>
-                <Link href="/" className="link-width"><button className="flex justify-center gap-3 items-center lets-connect-button" type="button">Let&apos;s connect <FaArrowRightLong /></button> </Link>
+                <Link href="/contact-us" className="link-width"><button className="flex justify-center gap-3 items-center lets-connect-button" type="button">Let&apos;s connect <FaArrowRightLong /></button> </Link>
             </div>
             <div className="team-sec-image-container flex justify-end">
                 <Image className="team-sec-image" width={400} height={300} alt="team-img" src="https://numerique.vamtam.com/wp-content/uploads/2023/05/GettyImages-1436826358.jpg" />
