@@ -1,3 +1,4 @@
+"use client"
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -7,7 +8,6 @@ import Link from "next/link";
 import { HiMiniArrowTopRightOnSquare } from "react-icons/hi2";
 import { BiSolidMessage } from "react-icons/bi";
 import { ImPhone } from "react-icons/im";
-import GoogleMapComponent from '../../components/ui/Map';
 import { FaStarOfLife } from "react-icons/fa";
 
 //ui animation
@@ -39,8 +39,8 @@ export default function ContactUs() {
                 <div className="contact-sec2-card">
                     <BiSolidMessage className="contact-sec2-card-logo"/>
                     <h2 className="contact-sec2-card-head">Email Address</h2>
-                    <p className="contact-sec2-card-para">frisk.agency@mail.com<br />frisk.agency@mail.com</p>
-                    <Link href="https://maps.google.com/">
+                    <p className="contact-sec2-card-para">info@adclickmagnet.com<br />info@adclickmagnet.com</p>
+                    <Link href="mailto:info@adclickmagnet.com">
                         <div className="flex items-center gap-3 contact-sec2-card-link">
                             <p>GET DIRECTION</p>
                             <HiMiniArrowTopRightOnSquare className="get-direction-logo"/>
@@ -52,8 +52,8 @@ export default function ContactUs() {
                 <div className="contact-sec2-card">
                     <ImPhone className="contact-sec2-card-logo"/>
                     <h2 className="contact-sec2-card-head">Phone Number</h2>
-                    <p className="contact-sec2-card-para">+1 800 123 654 987<br />+1 800 223 984 002</p>
-                    <Link href="https://maps.google.com/">
+                    <p className="contact-sec2-card-para">+1 718 577 2718<br />+1 718 577 2718</p>
+                    <Link href="https://wa.me/+918800262061">
                         <div className="flex items-center gap-3 contact-sec2-card-link">
                             <p>GET DIRECTION</p>
                             <HiMiniArrowTopRightOnSquare className="get-direction-logo"/>
@@ -66,7 +66,6 @@ export default function ContactUs() {
 
             <div className="contact-sec3-container flex justify-between">
                 <div className="map-container">
-                    <GoogleMapComponent />
                 </div>
 
                 <div className="contact-sec3-content">

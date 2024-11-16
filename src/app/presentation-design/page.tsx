@@ -1,14 +1,9 @@
-"use client";
+"use client"
 
 import React from 'react'
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/services-components/HeroSection';
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-import Scrollbar  from 'smooth-scrollbar';
-gsap.registerPlugin(ScrollTrigger);
-import { useEffect } from 'react';
 import Section3 from '@/components/services-components/Section3';
 import Section6 from '@/components/services-components/Section6';
 import Section8 from '@/components/services-components/Section8';
@@ -99,23 +94,6 @@ const section4: {mainpara: string; head: string; cards: {head: string; para: str
     },
 ]
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -341,63 +319,10 @@ const faq:{mainpara: string; people: {id: number;name: string;designation: strin
 }
 
 function AdCreative() { 
-  useEffect(() => {
-  const scrollBar = Scrollbar.init(document.querySelector(".page-main"),{
-    damping: 0.01,
-    thumbMinSize: 20,
-    delegateTo: document,
-    alwaysShowTracks: false,
-    speed: 3,
-
-  });
-
-  ScrollTrigger.defaults({
-    scroller: ".page-main",
-
-  });
-
-  ScrollTrigger.scrollerProxy(".page-main",{
-    scrollTop(value) {
-      if (arguments.length) {
-        scrollBar.scrollTop = value;
-      }
-      return scrollBar.scrollTop; 
-    },
-  });
-
-  scrollBar.addListener(ScrollTrigger.update);
-
-  const sectionColor = document.querySelectorAll('[data-bgcolor]');
-
-  sectionColor.forEach((each,i) => {
-    const prevBgColor = i ===0 ? "" : sectionColor[i-1].dataset.bgcolor;
-    const prevTextColor = i ===0 ? "" : sectionColor[i-1].dataset.textcolor;
-    
-    ScrollTrigger.create({
-      trigger: each,
-      scroller: ".page-main",
-      start: "top 50%",
-      onEnter: () => 
-        gsap.to(".page-main", {
-          backgroundColor: each.dataset.bgcolor,
-          color: each.dataset.textcolor,
-          overwrite: "auto",
-
-        }),
-        onLeaveBack: () =>
-          gsap.to(".page-main", {
-            backgroundColor: prevBgColor,
-            color: prevTextColor,
-            overwrite: "auto",
-
-          })
-    })
-  })
-
-    return () => {};
-  }, []);
+  
   return (
-    <div className='page-main'>
+    <>
+    <div className='page-main tracing-beam'>
       <TracingBeam>
         <Navbar />
         <section data-bgcolor="#070707" data-textcolor="#ffffff">
@@ -406,13 +331,31 @@ function AdCreative() {
         <Section3  content={section3}/>
         <Cards3dSections content={section4}/>
         <Cards3dSections content={section5} className="rounded-b-[50px]"/>
-        <Section6 content={section6}/>
+        <Section6 content={section6} translate='-50%'/>
         <Section8 content={section8}/>
         <ContactOurExperts />
         <FAQ  content={faq}/>
         <Footer />
       </TracingBeam>
     </div>
+
+    <div className='page-main mobile-tracing-beam'>
+      <TracingBeam>
+        <Navbar />
+        <section data-bgcolor="#070707" data-textcolor="#ffffff">
+          <HeroSection heading={heroContent.heading} para={heroContent.para} imgUrl={heroContent.imgUrl}/>
+        </section>
+        <Section3  content={section3}/>
+        <Cards3dSections content={section4}/>
+        <Cards3dSections content={section5} className="rounded-b-[50px]"/>
+        <Section6 content={section6} translate='-50%'/>
+        <Section8 content={section8}/>
+        <ContactOurExperts />
+        <FAQ  content={faq}/>
+        <Footer />
+      </TracingBeam>
+    </div>
+    </>
   )
 }
 

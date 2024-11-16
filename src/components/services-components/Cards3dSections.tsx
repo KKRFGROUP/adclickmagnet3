@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { CardBody, CardContainer, CardItem } from "../ui/3dCard";
 
@@ -9,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 
-function Cards3dSections({content, className, translate} : {content: {mainpara: string; head: string; cards: {head: string; para: string; img: string;}[]}; className?: string;translate?: string;}) {
+function Cards3dSections({content, className, translate, end} : {content: {mainpara: string; head: string; cards: {head: string; para: string; img: string;}[]}; className?: string;translate?: string; end?: string;}) {
     const triggerRef = useRef(null);
   const sectionRef = useRef(null);
 
@@ -25,7 +27,7 @@ function Cards3dSections({content, className, translate} : {content: {mainpara: 
           trigger: triggerRef.current,
           scroller: "body",
           start: "top -40%",
-          end: "27% top",
+          end: end || "27% top",
           scrub: 2,
           pin: true
         }

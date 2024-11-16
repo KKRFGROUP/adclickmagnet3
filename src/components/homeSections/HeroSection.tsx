@@ -19,7 +19,7 @@ export default function HeroSection() {
                 <Navbar />
             </header>
 
-            <div className="hero-content flex flex-col justify-center absolute hero-content">
+            <div className="flex flex-col justify-center absolute hero-content">
                 <TextGenerateEffect color={"inner-color-title"} words={"Drive More Growth"}  />
                 <TextGenerateEffect color={"inner-color-title"} words={"Digital Marketing"}  />
                 <br />

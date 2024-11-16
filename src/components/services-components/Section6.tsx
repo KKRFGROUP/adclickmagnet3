@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import { TypewriterEffect } from "../ui/TypewriterEffect";
 import { useEffect, useRef } from 'react';
@@ -6,7 +8,7 @@ import Image from 'next/image';
 
 
 
-function Section6({content, translate}: {content: {mainpara: string; heading: {text: string; className: string;}[]; para: string; social: {img: string;name: string; para: string}[]}; translate: string;}) {
+function Section6({content, translate}: {content: {mainpara: string; heading: {text: string; className: string;}[]; para: string; social: {img: string;name: string; para: string}[]}; translate?: string;}) {
     const triggerRef = useRef(null);
   const sectionRef = useRef(null);
 

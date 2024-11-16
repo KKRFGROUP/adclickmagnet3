@@ -1,12 +1,12 @@
 "use client";
 
 import React from 'react'
-import { useState, useEffect } from "react";
+import { useState,useEffect } from "react";
+
 import { Menu,HoveredLink, MenuItem } from "./ui/NavbarMenu";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
-import {Accordion, AccordionItem} from "@nextui-org/accordion";
 import { FaChevronDown } from "react-icons/fa6";
 //logos
 import { CgMenuHotdog } from "react-icons/cg";
@@ -20,8 +20,7 @@ export default function Navbar({className}: {className?: string}) {
     const [services, setServices] = useState(false);
     const [graphicDesign, setGraphicDesign] = useState(false);
 
-
-  const [isVisible, setIsVisible] = useState(true);
+    const [isVisible, setIsVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
 
   useEffect(() => {
@@ -38,19 +37,23 @@ export default function Navbar({className}: {className?: string}) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollPos]);
 
+  
+
 
   return (
+    <>
+    
     <div style={{
-                    transition: "top 0.4s",
-                    top: isVisible ? "10px" : "-120px", // Adjust "-80px" to the height of your navbar
-                    zIndex: 1000,
-                }} className={cn(" fixed inset-x-0 mx-auto z-50", className)}>
+        transition: "top 0.4s",
+        top: isVisible ? "10px" : "-120px", // Adjust "-80px" to the height of your navbar
+        zIndex: 1000,
+    }} className={cn(" fixed inset-x-0 mx-auto z-50", className)}>
                     <Menu setActive={setActive}>
                             <Link href="/" className="cursor-none">
                                 <MenuItem setActive={setActive} active={active} item="Home" />
                             </Link>
                             <MenuItem setActive={setActive} active={active} item="What We Do">
-                                <div className="flex flex-col space-y-4 text-sm">  
+                                <div className="flex flex-col space-y-4 py-3 text-sm what-we-do-links">  
                                     <HoveredLink href="/web-development">Web Development</HoveredLink>
                                     <HoveredLink href="/graphic-design">Graphic Design</HoveredLink>
                                     <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
@@ -74,7 +77,12 @@ export default function Navbar({className}: {className?: string}) {
                     
                         
                         
-                    <div className="mobile-view-navbar-container rounded-[20px] border border-transparent dark:bg-white/[0.4] dark:border-black bg-white shadow-input space-x-4 py-1 px-3 mx-1">
+                    
+                    
+    </div>
+
+
+    <div className="mobile-view-navbar-container fixed inset-x-0 z-50 mx-2 top-[10px] rounded-[20px] border border-transparent dark:bg-white/[0.4] dark:border-black bg-white shadow-input space-x-4 py-1 px-3 mx-1">
                         <Link href="/" className=" font-bold">
                             <Image className="mobile-view-navbar-logo" src={companylogo} alt="logo" height={100} width={150} />
                         </Link>
@@ -135,8 +143,7 @@ export default function Navbar({className}: {className?: string}) {
                                 <Link href="/contact-us" onClick={() => setIsOpen(false)}>Contact</Link>
                             </nav>
                         </div>
-                    
-    </div>
+    </>
   )
 }
 

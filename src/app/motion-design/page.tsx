@@ -1,15 +1,9 @@
-"use client";
+"use client"
 
 import React from 'react'
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/services-components/HeroSection';
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-import Scrollbar  from 'smooth-scrollbar';
-
-gsap.registerPlugin(ScrollTrigger);
-import { useEffect } from 'react';
 import Section3 from '@/components/services-components/Section3';
 import Section4 from '@/components/services-components/Section4';
 import Section7 from '@/components/services-components/Section7';
@@ -75,42 +69,47 @@ const section3:{mainpara: string; heading: {text: string; className: string;}[];
 
 
 
-const section4: {mainpara: string; head: string; cards: {logo: React.ReactNode; head: string; para: string;}[]} = {
+const section4: { 
+  mainpara: string; 
+  head: string; 
+  cards: { logo: React.ReactNode; head: string; para: string; }[] 
+} = {
   mainpara: "MOVING POSSIBILITIES",
-  head: "Comprehensive motion design services",
+  head: "Comprehensive Motion Design Services",
   cards: [
     {
-      logo: <LuMousePointerClick  className='text-3xl'/>,
+      logo: <LuMousePointerClick className="text-3xl" />,
       head: "Motion Ads",
-      para: "Get the click with scroll-stopping motion ads designed to tell compelling stories, delight audiences and increase conversions."
+      para: "Drive engagement with scroll-stopping motion ads that captivate audiences, tell stories, and boost conversions."
     },
     {
-      logo: <GiFallingBlob  className='text-3xl'/>,
+      logo: <GiFallingBlob className="text-3xl" />,
       head: "Custom Motion Graphics",
-      para: "Transform your brand assets with tailor-made motion graphics for every channel and medium from your website to social platforms."
+      para: "Elevate your brand with bespoke motion graphics designed for every platform, from websites to social media."
     },
     {
-      logo: <BsCollectionPlay  className='text-3xl'/>,
+      logo: <BsCollectionPlay className="text-3xl" />,
       head: "Animated Videos",
-      para: "Amp up your animation game with videos across the funnel whether you’re informing with explainers or entertaining with brand stories."
+      para: "Enhance your animation strategy with videos tailored to inform, entertain, and convert across the funnel."
     },
     {
-      logo: <MdAnimation  className='text-3xl'/>,
+      logo: <MdAnimation className="text-3xl" />,
       head: "Animated Logos",
-      para: "Breathe life into your brand with animated logos and motion graphics that set your marketing materials apart from the competition."
+      para: "Bring your brand to life with animated logos and graphics that make your marketing stand out."
     },
     {
-      logo: <PiBookOpenTextFill  className='text-3xl'/>,
-      head: "Animated e-books",
-      para: "Create even more immersive experiences with animated e-books that increase engagement, read rates and overall results."
+      logo: <PiBookOpenTextFill className="text-3xl" />,
+      head: "Animated eBooks",
+      para: "Deliver immersive experiences with animated eBooks that captivate audiences and improve read rates."
     },
     {
-      logo: <PiPresentationChartBold  className='text-3xl'/>,
+      logo: <PiPresentationChartBold className="text-3xl" />,
       head: "Animated Presentations",
-      para: "Elevate your presentations with animations that highlight all the right points and ensure your audience is actively listening."
+      para: "Make presentations unforgettable with animations that emphasize key points and keep audiences engaged."
     },
   ]
-}
+};
+
 
 
 
@@ -140,9 +139,9 @@ const section7: {mainpara: string; heading: {text: string; className: string;}[]
   },
   
 ],
-  para1: "Leverage the power of AI to improve efficiency and cost savings in our design services. ACM’s AI-enhanced workflows streamline the creation of motion design and creative, delivering results up to 60% faster.",
-  para2: "This ensures that every project is handled with precision, enhancing both the quality and speed of your content production. Experience unparalleled efficiency and innovation with our AI-driven design solutions, tailored to elevate your brand’s creative.",
-  button: "AI Design Service" 
+  para1: "Leverage AI to boost efficiency and reduce costs in design services. ACM’s AI-enhanced workflows create motion designs 60% faster.",
+  para2: "Every project is executed with precision, improving quality and production speed. Experience unmatched efficiency and innovation with our AI-driven solutions to elevate your brand.",
+button: "AI Design Service" 
 }
 
 const section8: {mainpara: string; heading: string; cards: {title: string; count: string; para: string;}[]} = {
@@ -253,63 +252,10 @@ const faq:{mainpara: string; people: {id: number;name: string;designation: strin
 }
 
 function AdCreative() { 
-  useEffect(() => {
-  const scrollBar = Scrollbar.init(document.querySelector(".page-main"),{
-    damping: 0.01,
-    thumbMinSize: 20,
-    delegateTo: document,
-    alwaysShowTracks: false,
-    speed: 3,
-
-  });
-
-  ScrollTrigger.defaults({
-    scroller: ".page-main",
-
-  });
-
-  ScrollTrigger.scrollerProxy(".page-main",{
-    scrollTop(value) {
-      if (arguments.length) {
-        scrollBar.scrollTop = value;
-      }
-      return scrollBar.scrollTop; 
-    },
-  });
-
-  scrollBar.addListener(ScrollTrigger.update);
-
-  const sectionColor = document.querySelectorAll('[data-bgcolor]');
-
-  sectionColor.forEach((each,i) => {
-    const prevBgColor = i ===0 ? "" : sectionColor[i-1].dataset.bgcolor;
-    const prevTextColor = i ===0 ? "" : sectionColor[i-1].dataset.textcolor;
-    
-    ScrollTrigger.create({
-      trigger: each,
-      scroller: ".page-main",
-      start: "top 50%",
-      onEnter: () => 
-        gsap.to(".page-main", {
-          backgroundColor: each.dataset.bgcolor,
-          color: each.dataset.textcolor,
-          overwrite: "auto",
-
-        }),
-        onLeaveBack: () =>
-          gsap.to(".page-main", {
-            backgroundColor: prevBgColor,
-            color: prevTextColor,
-            overwrite: "auto",
-
-          })
-    })
-  })
-
-    return () => {};
-  }, []);
+  
   return (
-    <div className='page-main'>
+    <>
+    <div className='page-main tracing-beam'>
       <TracingBeam>
         <Navbar />
         <section data-bgcolor="#070707" data-textcolor="#ffffff">
@@ -324,6 +270,23 @@ function AdCreative() {
         <Footer />
       </TracingBeam>
     </div>
+
+    <div className='page-main mobile-tracing-beam'>
+      <TracingBeam>
+      <Navbar />
+        <section data-bgcolor="#070707" data-textcolor="#ffffff">
+          <HeroSection heading={heroContent.heading} para={heroContent.para} imgUrl={heroContent.imgUrl}/>
+        </section>
+        <Section3  content={section3}/>
+        <Section4 content={section4} roundb="rounded-b-[50px]"/>
+        <Section7 content={section7}/>
+        <Section8 content={section8}/>
+        <ContactOurExperts />
+        <FAQ  content={faq}/>
+        <Footer />
+    </TracingBeam>
+    </div>
+    </>
   )
 }
 

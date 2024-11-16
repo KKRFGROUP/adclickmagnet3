@@ -44,11 +44,11 @@ export const blogs: {
     },
 ]
 
-export default function Carousel() {
+export default function Carousel({slides}: {slides: number;}) {
     return (
         <>
       <Swiper
-        slidesPerView={2}
+        slidesPerView={slides || 2}
         spaceBetween={30}
         pagination={{
           clickable: true,

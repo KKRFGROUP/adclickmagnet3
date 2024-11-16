@@ -1,15 +1,10 @@
-"use client";
+"use client"
 
 import React from 'react'
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/services-components/HeroSection';
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-import Scrollbar  from 'smooth-scrollbar';
 import Section2 from '@/components/services-components/Section2';
-gsap.registerPlugin(ScrollTrigger);
-import { useEffect } from 'react';
 import Section3 from '@/components/services-components/Section3';
 import Section4 from '@/components/services-components/Section4';
 import Section6 from '@/components/services-components/Section6';
@@ -268,48 +263,53 @@ const section7 = {
         className: "lg:text-4xl text-white dark:text-white-500 tracking-wider",
       },
     ],
-    para1: "Utilize the power of AI to enhance your Google Ads campaigns. Our AI-driven optimization techniques analyze vast amounts of data in real-time to deliver the highest quality leads and maximize ROI.",
-    para2: "With our AI-powered approach, we ensure that your ads are continuously optimized for performance, targeting, and efficiency. Stay ahead of the competition and drive exceptional results with our innovative Google Ads solutions.",
+    para1: "Harness AI to elevate your Google Ads campaigns. Our AI-driven techniques analyze data in real-time, delivering high-quality leads and maximizing ROI.",
+    para2: "Our AI-powered approach ensures continuous optimization of your ads for performance, targeting, and efficiency. Stay ahead and achieve outstanding results with our innovative Google Ads solutions.",
     button: "AI-Driven G.A. Service"
   };
   
 
-const section3dCards: {mainpara: string; head: string; cards: {head: string; para: string; img: string;}[]} = {
+  const section3dCards: { 
+    mainpara: string; 
+    head: string; 
+    cards: { head: string; para: string; img: string; }[] 
+  } = {
     mainpara: "WORKING WITH ACM",
-    head: "Experience video excellence in every frame",
+    head: "Master Google Ads with our expertise",
     cards: [
       {
-          head: "Static Website Designing",
-          para: "A static website is a type of website that consists of a set of HTML pages that remain unchanged until they are manually updated.",
-          img: "https://5.imimg.com/data5/SELLER/Default/2024/6/428433457/KL/LG/NL/224212668/static-website-designing-service-500x500.jpg"
+        head: "Campaign Strategy",
+        para: "Develop customized Google Ads strategies tailored to your business goals, ensuring maximum reach and conversions.",
+        img: "https://images.unsplash.com/photo-1606741964586-7a0b2a2f51ab?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.0.3"
       },
       {
-          head: "Website Designing Services",
-          para: "Having a strong online presence is crucial for any business in today’s digital world. A well-designed website is the foundation of your online presence.",
-          img: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        head: "Keyword Research",
+        para: "Leverage in-depth keyword research to target the right audience and maximize the efficiency of your ad spend.",
+        img: "https://images.unsplash.com/photo-1595254082351-bf2238b1f07a?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.0.3"
       },
       {
-          head: "E- commerce websites",
-          para: "An e-commerce website is an online platform where businesses sell their products or services to customers over the internet.",
-          img: "https://plus.unsplash.com/premium_photo-1683758344058-60a1506db480?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        head: "Ad Copy Creation",
+        para: "Craft compelling ad copies that engage users, drive traffic, and boost click-through rates across campaigns.",
+        img: "https://images.unsplash.com/photo-1581299895126-16e6fd62140b?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.0.3"
       },
       {
-        head: "Idea based websites",
-        para: "An idea-based website is a digital platform centered around sharing and exploring concepts, innovations, or creative thoughts.",
-        img: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/6f5bc0101084519.5f170c2bc09c7.png"
-    },
-    {
-        head: "Corporate Website",
-        para: "A corporate website serves as the digital face of a company, providing a comprehensive overview of its identity, offerings, and values to various stakeholders",
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqrj86bI16uGV1kXMZjFqkjm5Svokh6nAbBg&s"
-    },
-    {
-        head: "Web Portals",
-        para: "A web portal website serves as a gateway or centralized access point to a variety of information, services, and resources available on the internet.",
-        img: "https://plus.unsplash.com/premium_photo-1681433426886-3d6d17f79d53?q=80&w=2029&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-  ]
-} 
+        head: "Performance Optimization",
+        para: "Continuously monitor and optimize ad performance for better ROI by analyzing metrics and implementing data-driven changes.",
+        img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.0.3"
+      },
+      {
+        head: "Remarketing Campaigns",
+        para: "Re-engage your audience with strategic remarketing campaigns that increase conversions and brand loyalty.",
+        img: "https://images.unsplash.com/photo-1560264280-88b68371db91?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.0.3"
+      },
+      {
+        head: "Analytics & Reporting",
+        para: "Receive detailed insights and reports to understand your campaign’s performance and make informed decisions.",
+        img: "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.0.3"
+      },
+    ]
+  };
+  
 
 const dynamicContentSec: {id: number; title: string; logo: React.ReactNode; para: string;}[] = [
     {
@@ -355,7 +355,7 @@ const section8 = {
       {
         title: "CAMPAIGNS MANAGED",
         count: "10K+",
-        para: "Google Ads campaigns successfully managed for clients across diverse industries."
+        para: "Google Ads campaigns managed for clients across diverse industries."
       },
       {
         title: "TOTAL CLIENTS",
@@ -474,63 +474,10 @@ const faq = {
   
 
 function GoogleAds() { 
-  useEffect(() => {
-  const scrollBar = Scrollbar.init(document.querySelector(".page-main"),{
-    damping: 0.01,
-    thumbMinSize: 20,
-    delegateTo: document,
-    alwaysShowTracks: false,
-    speed: 3,
-
-  });
-
-  ScrollTrigger.defaults({
-    scroller: ".page-main",
-
-  });
-
-  ScrollTrigger.scrollerProxy(".page-main",{
-    scrollTop(value) {
-      if (arguments.length) {
-        scrollBar.scrollTop = value;
-      }
-      return scrollBar.scrollTop; 
-    },
-  });
-
-  scrollBar.addListener(ScrollTrigger.update);
-
-  const sectionColor = document.querySelectorAll('[data-bgcolor]');
-
-  sectionColor.forEach((each,i) => {
-    const prevBgColor = i ===0 ? "" : sectionColor[i-1].dataset.bgcolor;
-    const prevTextColor = i ===0 ? "" : sectionColor[i-1].dataset.textcolor;
-    
-    ScrollTrigger.create({
-      trigger: each,
-      scroller: ".page-main",
-      start: "top 50%",
-      onEnter: () => 
-        gsap.to(".page-main", {
-          backgroundColor: each.dataset.bgcolor,
-          color: each.dataset.textcolor,
-          overwrite: "auto",
-
-        }),
-        onLeaveBack: () =>
-          gsap.to(".page-main", {
-            backgroundColor: prevBgColor,
-            color: prevTextColor,
-            overwrite: "auto",
-
-          })
-    })
-  })
-
-    return () => {};
-  }, []);
+  
   return (
-    <div className='page-main'>
+    <>
+    <div className='page-main tracing-beam'>
       <TracingBeam>
 
         <Navbar />
@@ -540,9 +487,9 @@ function GoogleAds() {
         <Section2 Cards={section2}/>
         <Section3  content={section3}/>
         <Section4 content={section4} roundb='rounded-b-[50px] h-[200vh]'/>
-        <Section6 content={section6} translate="-75%"/>
+        <Section6 content={section6} translate="-50%"/>
         <DynamicContentCard content={dynamicContentSec}/>
-        <Cards3dSections translate='-150%' content={section3dCards} className="rounded-[50px]"/>
+        <Cards3dSections translate='-160%' content={section3dCards} className="rounded-[50px]"/>
         <Section7 content={section7}/>
         <Section8 content={section8}/>
         <ContactOurExperts />
@@ -550,6 +497,27 @@ function GoogleAds() {
         <Footer />
       </TracingBeam>
     </div>
+
+    <div className='page-main mobile-tracing-beam'>
+      <TracingBeam>
+      <Navbar />
+        <section data-bgcolor="#070707" data-textcolor="#ffffff">
+          <HeroSection heading={heroContent.heading} para={heroContent.para} imgUrl={heroContent.imgUrl}/>
+        </section>
+        <Section2 Cards={section2}/>
+        <Section3  content={section3}/>
+        <Section4 content={section4} roundb='rounded-b-[50px] h-[200vh]'/>
+        <Section6 content={section6} translate="-50%"/>
+        <DynamicContentCard content={dynamicContentSec}/>
+        <Cards3dSections translate='-160%' content={section3dCards} className="rounded-[50px]"/>
+        <Section7 content={section7}/>
+        <Section8 content={section8}/>
+        <ContactOurExperts />
+        <FAQ  content={faq}/>
+        <Footer />
+      </TracingBeam>
+    </div>
+    </>
   )
 }
 

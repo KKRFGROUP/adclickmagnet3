@@ -1,4 +1,4 @@
-import Loader from "@/components/3dmodels/loaderModel";
+import Loader from "@/components/3dmodels/LoaderModel";
 
 export default function Loading() {
     return (

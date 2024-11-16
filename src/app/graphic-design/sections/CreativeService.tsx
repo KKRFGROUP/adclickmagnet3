@@ -18,7 +18,7 @@ export default function CreativeService() {
 
     return (
       <section ref={creativeRef} className="creative-service-section-container">
-        <div className="portfolio-container">
+        <div className="text-white">
           <div className="flex justify-between items-center">
             <p>DRIVING GREAT OUTCOMES</p>
             <button type='button' className="flex items-center gap-4 animate__headShake">Book a Demo
@@ -29,9 +29,9 @@ export default function CreativeService() {
         </div>
 
         <div className='creative-service-head-card-container'>
-          <h2 className='portfolio-sec-head'>CREATIVE AS</h2>
-          <h2 className='portfolio-sec-head-second mb-9'>A SERVICE</h2>
-          <div className="creative-service-card-container flex justify-between items-start">
+          <h2 className='creative-service-head'>Creative As</h2>
+          <h2 className='creative-service-head-second mb-9'>An Art</h2>
+          <div className="flex justify-between items-start creative-service-card-container">
             <div className="creative-service-card">
               <Image className='creative-service-card-img' src="https://cdn.sanity.io/images/k0dlbavy/production/3663db6035f44498f43f218cc084314cfe3b9da4-632x320.jpg?auto=format&fit=max&q=100&w=632" alt="crative image" height={100} width={100} />
               <p className='creative-service-card-content' >Up to 65% lift in ad performance driven by deep expertise in breakthrough creative</p>
@@ -44,7 +44,7 @@ export default function CreativeService() {
             </div>
             <div className="creative-service-card">
               <Image className='creative-service-card-img' src="https://cdn.sanity.io/images/k0dlbavy/production/e9711069938bd5fbeecf62d125a32a317b2543da-2528x1280.jpg?auto=format&fit=max&q=100&w=1896" alt="crative image" height={100} width={100} />
-              <p className='creative-service-card-content' >Lowered employee churn and increased happiness on various creative and marketing teams</p>
+              <p className='creative-service-card-content' >Significantly reduced employee churn while boosting morale and happiness across diverse creative and marketing teams.</p>
               <hr className='creative-service-card-content-line' />
             </div>
             <div className="creative-service-card">

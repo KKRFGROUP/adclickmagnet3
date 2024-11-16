@@ -1,15 +1,10 @@
-"use client";
+"use client"
 
 import React from 'react'
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/services-components/HeroSection';
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-import Scrollbar  from 'smooth-scrollbar';
 import Section2 from '@/components/services-components/Section2';
-gsap.registerPlugin(ScrollTrigger);
-import { useEffect } from 'react';
 import Section3 from '@/components/services-components/Section3';
 import Section4 from '@/components/services-components/Section4';
 import Section8 from '@/components/services-components/Section8';
@@ -29,8 +24,8 @@ import ContactOurExperts from '@/components/services-components/ContactOurExpert
 
 
 const heroContent = {
-    heading: "Ad Creative Services",
-    para: "From high-volume, multi-channel campaigns to testing and exploration, get the outstanding ad creative services you need. Plug-in a fully-stacked design team and start fueling your ad campaigns today.",
+    heading: "Video Production Services",
+    para: "Elevate your video campaigns with exceptional creative solutions tailored for multi-channel impact. Partner with a dedicated design team to bring your vision to life and supercharge your ad performance today.",
     imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/745fa5bedb9310bd461d7b69073547d975fab304-1200x1200.png?auto=format&fit=max&q=100&w=1200"
 }
 const section2 = [
@@ -84,38 +79,27 @@ const section2 = [
   },
 ]
 
-const section3a:{mainpara: string; heading: {text: string; className: string;}[]; para1: string; para2: string; image: string;} = {
-  mainpara: "BUILT FOR COMMS, STRATEGY & MARKETING TEAMS",
+const section3a = {
+  mainpara: "ENGINEERED FOR IMPACT",
   heading: [
-    {  
-      text: "Ad",
-      className: "text-white dark:text-white-500 tracking-wider",
-    },
-    {
-        text: "creative",
-        className: "text-white dark:text-white-500 tracking-wider",
-    },
-    {
-        text: "for",
-        className: "text-white dark:text-white-500 tracking-wider",
-    },
-    {   
-        text: "campaigns",
-        className: "text-white dark:text-white-500 tracking-wider",
-    },
-    {
-        text: "that",
-        className: "text-white dark:text-white-500 tracking-wider",
-    },
-    {  
-        text: "perform",
-        className: "text-white dark:text-white-500 tracking-wider",
-      },
-],
-  para1: "The need for compelling ad creative has never been greater. But, when your biggest challenge is getting to market, the best solution is plugging into ACM’s flexible ad design services.",
-  para2: "In a world where talent is hard to find, ours has no borders. Our global team of highly skilled ad designers can help with everything from market research and concept development to applying the latest AI, AR and 3D overlays.", 
-  image: "https://res.cloudinary.com/deepcnbrz/image/upload/v1730822005/Screenshot_2024-11-05_212211_hhbsos.png"
-}
+    { text: "Unleash", className: "text-white dark:text-white-500 tracking-wider" },
+    { text: "the", className: "text-white dark:text-white-500 tracking-wider" },
+    { text: "power", className: "text-white dark:text-white-500 tracking-wider" },
+    { text: "of", className: "text-white dark:text-white-500 tracking-wider" },
+    { text: "video", className: "text-white dark:text-white-500 tracking-wider" },
+    { text: "for", className: "text-white dark:text-white-500 tracking-wider" },
+    { text: "your", className: "text-white dark:text-white-500 tracking-wider" },
+    { text: "marketing", className: "text-white dark:text-white-500 tracking-wider" },
+  ],
+  para1: 
+    "Harness the power of video in today’s digital world. Our comprehensive video production services cater to creative and marketing teams, delivering impactful content tailored to your audience.",
+  para2: 
+    "From brand videos that build awareness to performance-driven videos that boost conversions, we offer a cost-effective, hassle-free approach with speed and flexibility through our subscription model.",
+  image: 
+    "https://res.cloudinary.com/deepcnbrz/image/upload/v1730822005/Screenshot_2024-11-05_212211_hhbsos.png",
+};
+
+
 const section3b:{mainpara: string; heading: {text: string; className: string;}[]; para1: string; para2: string; image: string;} = {
   mainpara: "BRAND VIDEO FOR AWARENESS",
   heading: [
@@ -386,63 +370,10 @@ const faq:{mainpara: string; people: {id: number;name: string;designation: strin
 }
 
 function VideoProduction() { 
-  useEffect(() => {
-  const scrollBar = Scrollbar.init(document.querySelector(".page-main"),{
-    damping: 0.01,
-    thumbMinSize: 20,
-    delegateTo: document,
-    alwaysShowTracks: false,
-    speed: 3,
-
-  });
-
-  ScrollTrigger.defaults({
-    scroller: ".page-main",
-
-  });
-
-  ScrollTrigger.scrollerProxy(".page-main",{
-    scrollTop(value) {
-      if (arguments.length) {
-        scrollBar.scrollTop = value;
-      }
-      return scrollBar.scrollTop; 
-    },
-  });
-
-  scrollBar.addListener(ScrollTrigger.update);
-
-  const sectionColor = document.querySelectorAll('[data-bgcolor]');
-
-  sectionColor.forEach((each,i) => {
-    const prevBgColor = i ===0 ? "" : sectionColor[i-1].dataset.bgcolor;
-    const prevTextColor = i ===0 ? "" : sectionColor[i-1].dataset.textcolor;
-    
-    ScrollTrigger.create({
-      trigger: each,
-      scroller: ".page-main",
-      start: "top 50%",
-      onEnter: () => 
-        gsap.to(".page-main", {
-          backgroundColor: each.dataset.bgcolor,
-          color: each.dataset.textcolor,
-          overwrite: "auto",
-
-        }),
-        onLeaveBack: () =>
-          gsap.to(".page-main", {
-            backgroundColor: prevBgColor,
-            color: prevTextColor,
-            overwrite: "auto",
-
-          })
-    })
-  })
-
-    return () => {};
-  }, []);
+  
   return (
-    <div className='page-main'>
+    <>
+    <div className='page-main tracing-beam'>
       <TracingBeam>
         <Navbar />
         <section data-bgcolor="#070707" data-textcolor="#ffffff">
@@ -453,7 +384,7 @@ function VideoProduction() {
         <Section3  content={section3b} order="order-1" roundb="rounded-b-[50px]" hide="invisible"/>
         <Section3  content={section3c}  hide="invisible" roundb="rounded-b-[50px]"/>
         <Section3  content={section3d} order="order-1"  hide="invisible"/>
-        <Cards3dSections content={section3dCards} translate='-60%'/>
+        <Cards3dSections content={section3dCards} translate='-30%'/>
         <Section4 content={section4}/>
         <Section8 content={section8} roundt="rounded-t-[0px]"/>
         <ContactOurExperts />
@@ -461,6 +392,28 @@ function VideoProduction() {
         <Footer />
       </TracingBeam>
     </div>
+
+    <div className='page-main mobile-tracing-beam'>
+      <TracingBeam>
+
+      <Navbar />
+          <section data-bgcolor="#070707" data-textcolor="#ffffff">
+            <HeroSection heading={heroContent.heading} para={heroContent.para} imgUrl={heroContent.imgUrl}/>
+          </section>
+          <Section2 Cards={section2}/>
+          <Section3  content={section3a}  roundb="rounded-b-[50px]"/>
+          <Section3  content={section3b} order="order-1" roundb="rounded-b-[50px]" hide="invisible"/>
+          <Section3  content={section3c}  hide="invisible" roundb="rounded-b-[50px]"/>
+          <Section3  content={section3d} order="order-1"  hide="invisible"/>
+          <Cards3dSections content={section3dCards} translate='-30%'/>
+          <Section4 content={section4}/>
+          <Section8 content={section8} roundt="rounded-t-[0px]"/>
+          <ContactOurExperts />
+          <FAQ  content={faq}/>
+          <Footer />
+      </TracingBeam>
+    </div>
+</>
   )
 }
 

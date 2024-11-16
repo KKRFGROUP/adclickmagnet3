@@ -1,9 +1,8 @@
-"use client";
+
 
 import Image from "next/image";
 import adclickImage from "../../public/images/logo/adclickmagnetlogoblacklogo.png"
-import { useEffect } from "react";
-import {gsap} from 'gsap'
+
 import { TypewriterEffect } from "../ui/TypewriterEffect";
  
 
@@ -31,31 +30,18 @@ const words = [
   ];
 
 export default function Section2() {
-    useEffect(() => {
-        const t1 = gsap.timeline({
-            scrollTrigger:{
-                trigger: ".sec2-container",
-                start: "80% 50%",
-                end: "100% 50%",
-                scrub: 1
-            },
-            
-        })
-        t1.to(".text-area-hover", {
-            width: "100%"
-        })
-    })
+    
     return (
       <>
       <div className="Companies-partner flex-col items-center">
         <h2 className="partner-not-ventor">A PARTNER, NOT<br /> A VENDOR</h2>
-        <div className="flex items-center">
+        <div className="flex items-center flex-wrap">
 
         <Image className="sec2-company-logo" src="https://numerique.vamtam.com/wp-content/uploads/2023/05/meta-partner.svg" width={90} height={90} alt="company logo"  />
         <Image className="sec2-company-logo" src="https://numerique.vamtam.com/wp-content/uploads/2023/05/google-cloud.svg" width={90} height={90} alt="company logo"  />
         <Image className="sec2-company-logo" src="https://numerique.vamtam.com/wp-content/uploads/2023/05/google-partner.svg" width={90} height={90} alt="company logo"  />
-        <Image className="sec2-company-logo" src="https://numerique.vamtam.com/wp-content/uploads/2023/05/shopify.svg" width={90} height={90} alt="company logo"  />
         <Image className="sec2-company-logo hidden lg:block" src="https://numerique.vamtam.com/wp-content/uploads/2023/05/tiktok.svg" width={90} height={90} alt="company logo"  />
+        <Image className="sec2-company-logo" src="https://numerique.vamtam.com/wp-content/uploads/2023/05/shopify.svg" width={90} height={90} alt="company logo"  />
         </div>
       </div>  
         <div className="sec2-container">

@@ -51,6 +51,7 @@
     background-color: transparent;
     backdrop-filter: 4px;
     color: #fff;
+    margin-right:0px;
     border: 2px solid #fff;
 }
 
@@ -203,8 +204,6 @@
    height: max-content;
 }
 .services-sec3-content {
-    backdrop-filter: blur(30px);
-    border-radius: 20px;
     padding: 20px;
 }
 
@@ -411,11 +410,12 @@
 /* section 7 */
 .services-sec7-main-container {
     padding: 80px;
+    height: max-content;
 }
 .services-sec7-card {
     background-image: url("https://cdn.sanity.io/images/k0dlbavy/production/64b450f8afc758fd3f221ee2f30f3d6589d2529f-2160x831.png?auto=format&fit=max&q=100&w=1080");
     background-size: cover;
-    height: 73vh;
+    height: max-content;
     width: 100%;
     padding: 40px;
     border-radius: 20px;
@@ -499,7 +499,7 @@
 }
 
 .services-sec8-card-count {
-    font-family: "Unbounded";
+    font-family: "Syne";
 
 }
 
@@ -575,12 +575,18 @@
     }
     .contact-our-expert-card-img {
         width: 100%;
+        order:-1;
     }
 }
 
 
 /* dynamic content card */
-
+.services-dynamic-main-container {
+    padding: 100px;
+    background-color: #E2E2E2;
+    color: #000;
+    /*background-image: radial-gradient(#06052e, #000);*/
+}
 
 .dynamic-content-card {
     border-radius: 50px;
@@ -630,6 +636,12 @@
     padding: 50px;
     background-color: transparent;
     backdrop-filter: blur(10px);
+}
+
+@media (max-width: 768px) {
+    .services-dynamic-main-container {
+        display: none;
+    }
 }
 
 

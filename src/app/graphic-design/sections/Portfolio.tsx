@@ -6,43 +6,43 @@ const Portfolio = () => {
     return (
       <section className="portfolio-sec-container">
         <div className="portfolio-container">
-          <div className="flex justify-between items-center">
-            <p>PORTFOLIO</p>
-            <button type='button' className="flex items-center gap-4 animate__headShake">SEE ALL PROJECTS
+          <div className="flex justify-between items-center portfolio-container-flex">
+            <p className='portfolio'>PORTFOLIO</p>
+            <button type='button' className="flex items-center gap-3 portfolio">SEE ALL PROJECTS
               <PiPaperPlaneRightBold />
             </button>
           </div>
-          <hr className='mt-3'/>
+          <hr className='portfolio-container-line'/>
         </div>
         <div className='portfolio-sec-head-container flex-col'>
 
           <h2 className='portfolio-sec-head'>Selected</h2>
           <h2 className='portfolio-sec-head-second'>Works</h2>
-        <div className='portfolio-sec-card-container flex items-end gap-9'>
+        <div className='flex items-end gap-9 text-center portfolio-sec-card-container'>
           <figure>
-            <Image className='portfolio-sec-card-img' width={100} height={100} src="https://618media.com/wp-content/uploads/2024/02/understanding-ad-performance-metrics-for-success.webp" alt="portfolio img" />
+            <Image className='portfolio-sec-card-img' width={500} height={500} src="https://res.cloudinary.com/dgdgrniut/image/upload/v1731761859/8aaaa2eb0023b159c2f653f5aac2dab4_pwnmnf.jpg" alt="portfolio img" />
           </figure>
-          <div>
-            <h2 className='portfolio-sec-card-head'>Up to 65% lift in ad performance<br /> driven by deep expertise in<br /> breakthrough creative</h2>
+          <div className="flex justify-center items-center">
+            <h2 className='portfolio-sec-card-head'>How ACM Create the Brand.</h2>
           </div>
         </div>
 
-        <div className='portfolio-sec-card-container flex justify-end text-right items-end gap-9 mt-9 mb-9'>
+        <div className='portfolio-sec-card-container flex justify-end text-center items-end gap-9 mt-9 mb-9'>
           
-          <div>
-            <h2 className='portfolio-sec-card-head'>50% reduction in overall costs as<br /> compared to a traditional<br /> agency, while ensuring high-quality creative</h2>
+          <div className="flex justify-center items-center mobile-text-order">
+            <h2 className='portfolio-sec-card-head'>How ACM Create the Logo.</h2>
           </div>
           <figure>
-            <Image className='portfolio-sec-card-img' width={100} height={100} src="https://618media.com/wp-content/uploads/2024/02/understanding-ad-performance-metrics-for-success.webp" alt="portfolio img" />
+            <Image className='portfolio-sec-card-img' width={500} height={500} src="https://res.cloudinary.com/dgdgrniut/image/upload/v1731761861/5dc9e87a43abebc9aba438e8258d8903_ckqkcw.jpg" alt="portfolio img" />
           </figure>
         </div>
 
-        <div className='portfolio-sec-card-container flex items-end gap-9 mt-9'>
+        <div className='portfolio-sec-card-container text-center flex items-end gap-9 mt-9'>
           <figure>
-            <Image className='portfolio-sec-card-img' width={100} height={100} src="https://618media.com/wp-content/uploads/2024/02/understanding-ad-performance-metrics-for-success.webp" alt="portfolio img" />
+            <Image className='portfolio-sec-card-img' width={500} height={500} src="https://res.cloudinary.com/dgdgrniut/image/upload/v1731761860/6ae336ccabe55227021e419e84241faf_u86afq.jpg" alt="portfolio img" />
           </figure>
-          <div>
-            <h2 className='portfolio-sec-card-head'>Lowered employee churn and increased<br /> happiness on various creative<br /> and marketing teams</h2>
+          <div className="flex justify-center items-center">
+            <h2 className='portfolio-sec-card-head'>How ACM Create the Brand Colors.</h2>
           </div>
         </div>
         </div>

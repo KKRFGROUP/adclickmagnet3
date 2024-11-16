@@ -1,11 +1,11 @@
-"use client";
+
 import React from "react";
+
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import adclickImage from '../../public/images/logo/adclickmagnetlogoblack.png';
 import '../app.css';
-import { CgMenuHotdog } from "react-icons/cg";
 
 
 const transition = {
@@ -71,8 +71,9 @@ export const Menu = ({
   setActive: (item: string | null) => void;
   children: React.ReactNode;
 }) => {
+
   return (
-    <div className="navbar relative rounded-full border border-transparent dark:bg-white/[0.4] dark:border-black bg-white shadow-input flex justify-between items-center space-x-4 px-8 py-4 md:px-3 md:py-3 mx-10 ">
+    <div  className="navbar relative rounded-full border border-transparent dark:bg-white/[0.4] dark:border-black bg-white shadow-input flex justify-between items-center space-x-4 px-8 py-4 md:px-3 md:py-3 mx-10 ">
           <Link href="/" className="navbar-logo">      
             <Image width={200} height={200} src={adclickImage} alt="logo"  />
           </Link>

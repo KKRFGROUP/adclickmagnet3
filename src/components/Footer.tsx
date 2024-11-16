@@ -1,10 +1,10 @@
 "use client";
-
+import { useState } from "react";
 import React from 'react';
 import Link from 'next/link';
 import { Input, Label } from './ui/Form';
 import { cn } from "@/lib/utils";
-import { FaInstagram, FaFacebook, FaYoutube   } from "react-icons/fa6";
+import { FaInstagram, FaFacebook  } from "react-icons/fa6";
 import { RiWhatsappFill } from "react-icons/ri";
 import { MdAttachEmail } from "react-icons/md";
 
@@ -46,7 +46,6 @@ export default function Footer() {
           <Link href="/" className='solution-page-link'>Press Release</Link>
           <Link href="/" className='solution-page-link'>Blog</Link>
           <Link href="/" className='solution-page-link'>Careers</Link>
-          <Link href="/" className='solution-page-link'>Team</Link>
           <Link href="/" className='solution-page-link'>Case Studies</Link>
           <Link href="/" className='solution-page-link'>Awards</Link>
           <Link href="/contact-us" className='solution-page-link'>Contact</Link>
@@ -80,9 +79,52 @@ export default function Footer() {
 
 
 export function SignupFormDemo() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted");
+    setStatus("Submitting...");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setStatus("Form submitted successfully!");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phoneNumber: "",
+          message: "",
+        });
+      } else {
+        setStatus("Failed to submit form.");
+      }
+    } catch (error) {
+      setStatus("An error occurred while submitting the form.");
+    }
   };
   return (
     <div className="max-w-md w-full  rounded-2xl md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
@@ -97,25 +139,43 @@ export function SignupFormDemo() {
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
             <Label htmlFor="firstname">First name</Label>
-            <Input id="firstname" placeholder="Tyler" type="text" />
+            <Input id="firstname"  placeholder="Tyler" type="text"
+            name="firstName"
+            value={formData.firstName}
+            onChange={handleChange}
+            required />
           </LabelInputContainer>
           <LabelInputContainer>
-            <Label htmlFor="lastname">Last name</Label>
-            <Input id="lastname" placeholder="Durden" type="text" />
+            <Label htmlFor="lastname" >Last name</Label>
+            <Input id="lastname" placeholder="Durden" type="text"
+            name="lastName"
+            value={formData.lastName}
+            onChange={handleChange}
+            required />
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="email">Email Address</Label>
-          <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
+          <Label htmlFor="email" >Email Address</Label>
+          <Input id="email" type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required placeholder="projectmayhem@fc.com" />
         </LabelInputContainer>
+
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="password">Phone Number</Label>
-          <Input id="password" placeholder="+911234567889" type="password" />
+          <Label htmlFor="phoneNumber">Phone Number</Label>
+          <Input id="phoneNumber" value={formData.phoneNumber}
+            onChange={handleChange} placeholder="+911234567889" type="text" />
         </LabelInputContainer>
 
         <LabelInputContainer className="mb-4">
           <Label htmlFor="message">Drop a Message</Label>
-          <Input id="message" placeholder="What can we help you with?" type="text" />
+          <Input id="message" type="text"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required placeholder="What can we help you with?" />
         </LabelInputContainer>
         
 
@@ -160,9 +220,3 @@ const LabelInputContainer = ({
 
 
 
-
-//<div className='flex-col justify-center items-end'>
-//          <p className="Ready-to-speak">Ready to speak with a marketing expert? Give us a ring</p>
-//          <p className="number">888-400-5050</p>
-//          <button type="button" className='flex justify-center items-center gap-3 get-free-audit-button'>GET A FREEE AUDIT <FaArrowRightLong /></button>
-//</div>

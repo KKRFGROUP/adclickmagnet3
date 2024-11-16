@@ -1,18 +1,12 @@
-"use client";
+"use client"
 
 import React from 'react'
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/services-components/HeroSection';
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-import Scrollbar  from 'smooth-scrollbar';
 import Section2 from '@/components/services-components/Section2';
-gsap.registerPlugin(ScrollTrigger);
-import { useEffect } from 'react';
 import Section3 from '@/components/services-components/Section3';
 import Section4 from '@/components/services-components/Section4';
-import Section5 from '@/components/services-components/Section5';
 import Section6 from '@/components/services-components/Section6';
 import Section7 from '@/components/services-components/Section7';
 import Section8 from '@/components/services-components/Section8';
@@ -21,9 +15,9 @@ import FAQ from '@/components/services-components/FAQ';
 // logos
 import { FaPenNib, FaImage } from "react-icons/fa";
 import { IoPhonePortraitOutline, IoSparkles } from "react-icons/io5";
-import { PiCursorClickBold, PiVideoFill, PiCubeTransparentFill } from "react-icons/pi";
+import { PiCursorClickBold } from "react-icons/pi";
 import { MdContactEmergency } from "react-icons/md";
-import { GiFallingBlob } from "react-icons/gi";
+
 
 //ui animation
 import { TracingBeam } from "../../components/ui/TracingBeam";
@@ -156,32 +150,32 @@ const section4: {mainpara: string; head: string; cards: {logo: React.ReactNode; 
   ]
 }
 
-const section5: {mainpara: string; head: string; cards: {logo: React.ReactNode; head: string; para: string;}[]} = {
-  mainpara: "FORMAT MASTERY",
-  head: "Mix and match multiple ad formats for maximum impact",
-  cards: [
-    {
-      logo: <GiFallingBlob  className='text-3xl'/>,
-      head: "Animated / Motion Ads",
-      para: "Bring your ads to life with captivating animation and illustrations. Motion design can also be applied with other formats like video."
-    },
-    {
-      logo: <FaImage  className='text-3xl'/>,
-      head: "Static Image Ads",
-      para: "From a single campaign to multichannel rollouts, design striking static ads that make a statement and leave a lasting impression."
-    },
-    {
-      logo: <PiVideoFill  className='text-3xl'/>,
-      head: "Video Ads",
-      para: "Move at a solid clip with full-service video capabilities that let you make an instant impact across a wide range of platforms and channels."
-    },
-    {
-      logo: <PiCubeTransparentFill  className='text-3xl'/>,
-      head: "Augmented Reality Ads",
-      para: "Push the boundaries of creativity with world- and front-facing AR applications for innovative immersive campaigns and experiences."
-    },
-  ]
-}
+//const section5: {mainpara: string; head: string; cards: {logo: React.ReactNode; head: string; para: string;}[]} = {
+//  mainpara: "FORMAT MASTERY",
+//  head: "Mix and match multiple ad formats for maximum impact",
+//  cards: [
+//    {
+//      logo: <GiFallingBlob  className='text-3xl'/>,
+//      head: "Animated / Motion Ads",
+//      para: "Bring your ads to life with captivating animation and illustrations. Motion design can also be applied with other formats like video."
+//    },
+//    {
+//      logo: <FaImage  className='text-3xl'/>,
+//      head: "Static Image Ads",
+//      para: "From a single campaign to multichannel rollouts, design striking static ads that make a statement and leave a lasting impression."
+//    },
+//    {
+//      logo: <PiVideoFill  className='text-3xl'/>,
+//      head: "Video Ads",
+//      para: "Move at a solid clip with full-service video capabilities that let you make an instant impact across a wide range of platforms and channels."
+//    },
+//    {
+//      logo: <PiCubeTransparentFill  className='text-3xl'/>,
+//      head: "Augmented Reality Ads",
+//      para: "Push the boundaries of creativity with world- and front-facing AR applications for innovative immersive campaigns and experiences."
+//    },
+//  ]
+//}
 
 const section6: {mainpara: string; heading: {text: string; className: string;}[]; para: string; social: {img: string;name: string; para: string}[]} = {
   mainpara: "PLATFORM PROFICIENCY",
@@ -408,62 +402,10 @@ const faq:{mainpara: string; people: {id: number;name: string;designation: strin
 }
 
 function AdCreative() { 
-  useEffect(() => {
-  const scrollBar = Scrollbar.init(document.querySelector(".page-main"),{
-    damping: 0.1,
-    delegateTo: document,
-    alwaysShowTracks: false,
-    speed: 3,
-
-  });
-
-  ScrollTrigger.defaults({
-    scroller: ".page-main",
-
-  });
-
-  ScrollTrigger.scrollerProxy(".page-main",{
-    scrollTop(value: any) {
-      if (arguments.length && scrollBar !== null) {
-        scrollBar.scrollTop = value;
-      }
-      return scrollBar.scrollTop; 
-    },
-  });
-
-  scrollBar.addListener(ScrollTrigger.update);
-
-  const sectionColor = document.querySelectorAll('[data-bgcolor]');
-
-  sectionColor.forEach((each,i) => {
-    const prevBgColor = i ===0 ? "" : sectionColor[i-1].dataset.bgcolor;
-    const prevTextColor = i ===0 ? "" : sectionColor[i-1].dataset.textcolor;
-    
-    ScrollTrigger.create({
-      trigger: each,
-      scroller: ".page-main",
-      start: "top 50%",
-      onEnter: () => 
-        gsap.to(".page-main", {
-          backgroundColor: each.dataset.bgcolor,
-          color: each.dataset.textcolor,
-          overwrite: "auto",
-
-        }),
-        onLeaveBack: () =>
-          gsap.to(".page-main", {
-            backgroundColor: prevBgColor,
-            color: prevTextColor,
-            overwrite: "auto",
-
-          })
-    })
-  })
-
-    return () => {};
-  }, []);
+  
   return (
-    <div className='page-main'>
+    <>
+    <div className='page-main tracing-beam'>
       <TracingBeam>
         <Navbar />
         <section data-bgcolor="#070707" data-textcolor="#ffffff">
@@ -472,8 +414,7 @@ function AdCreative() {
         <Section2 Cards={section2}/>
         <Section3  content={section3}/>
         <Section4 content={section4}/>
-        <Section5 content={section5}/>
-        <Section6 content={section6}/>
+        <Section6 content={section6} translate='-40%'/>
         <Section7 content={section7}/>
         <Section8 content={section8}/>
         <ContactOurExperts />
@@ -481,6 +422,25 @@ function AdCreative() {
         <Footer />
       </TracingBeam>
     </div>
+
+    <div className='page-main mobile-tracing-beam'>
+    <TracingBeam>
+        <Navbar />
+        <section data-bgcolor="#070707" data-textcolor="#ffffff">
+          <HeroSection heading={heroContent.heading} para={heroContent.para} imgUrl={heroContent.imgUrl}/>
+        </section>
+        <Section2 Cards={section2}/>
+        <Section3  content={section3}/>
+        <Section4 content={section4}/>
+        <Section6 content={section6} translate='-40%'/>
+        <Section7 content={section7}/>
+        <Section8 content={section8}/>
+        <ContactOurExperts />
+        <FAQ  content={faq}/>
+        <Footer />
+      </TracingBeam>
+    </div>
+    </>
   )
 }
 

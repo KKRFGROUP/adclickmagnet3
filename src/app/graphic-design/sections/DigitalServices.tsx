@@ -12,35 +12,35 @@ const items = [
         id: 1,
         imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQlQgBYHc-oK1CtI_SeIkYNHT0UWkIaPLQCQ&s',
         head: "Ad Creative",
-        page: "ad-creative",
-        para: "Get static and motion ad creative, concepts, and variations for testing your way to better results across social media."
+        page: "/ad-creative",
+        para: "Get static and motion ad creatives, concepts, and variations to test your way to better results on social media."
     },
     {
         id: 2,
         imageUrl: 'https://cdn.sanity.io/images/k0dlbavy/production/7b0e427fbedc93ed4326fa45798280b14e250302-1296x1256.png?auto=format&fit=max&q=100&w=1296',
         head: "Branding Services",
-        page: "branding-services",
-        para: "Get the brand expertise you need, however you need it, from brand development and design to custom branding solutions."
+        page: "/branding-services",
+        para: "Get the brand expertise you need, from brand development and design to custom branding solutions."
     },
     {
         id: 3,
         imageUrl: 'https://img.freepik.com/premium-photo/back-view-young-white-man-editing-video_1015182-43245.jpg',
         head: "Video Production",
-        page: "video-production",
+        page: "/video-production",
         para: "Receive strategy-aligned video content services, from pre-production to final edit, to maximize your online success."
     },
     {
         id: 4,
         imageUrl: 'https://slidestack-prod.s3.amazonaws.com/templates/h7gCcfhlvKogPwOBxxMptBQehIalCW8Iq7nscqVP.jpg',
         head: "Presentation Design",
-        page: "presentation-design",
+        page: "/presentation-design",
         para: "Get original presentations designed for your persuasive pitch decks, sales decks, or PowerPoint presentations."
     },
     {
         id: 5,
         imageUrl: 'https://blog.openreplay.com/assets/hero_2aW9uI.png',
         head: "Motion Design",
-        page: "motion-design",
+        page: "/motion-design",
         para: "Get on-brand motion graphics designed to enhance your website, digital campaigns, presentations and ads."
     },
     //{
@@ -120,40 +120,48 @@ const items = [
 function DigitalServices() {
   const triggerRef = useRef(null);
   const sectionRef = useRef(null);
+  
+  
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
+
+      const windowWidth = window.innerWidth;
+    
     const hscroll = gsap.fromTo(
       sectionRef.current,
       {translateX:0},
       {
-        translateX: "-100%",
+        translateX: windowWidth <= 768 ? "-120%" : "-40%",
         ease: "none",
         duration: 2,
         scrollTrigger:{
           trigger: triggerRef.current,
-          start: "top -40%",
+          start: windowWidth <= 768 ? "top 0%": "top -55%",
           end: "180% top",
           scrub: 2,
           pin: true
         }
       }
     )
+    
     return () => {
       hscroll.kill();
     }
+  }
 
   })
   return (
     <div className='graphic-page-services-sec-container' ref={triggerRef}>
         <h2 className="graphic-page-services-sec-head">Design</h2>
-        <h2 className="relative left-[200px] graphic-page-services-sec-head">Services</h2>
+        <h2 className="graphic-page-services-sec-head-second">Services</h2>
 
         <div className='flex graphic-page-services-cards-container' ref={sectionRef}>
           {items.map((each,index) => (
-          <Link key={index} href={`/${each.page}`}>
-            <div className="graphic-page-services-card flex-col justify-between" key={each.id}>
-              <div>
-                <Image className='graphic-page-services-card-img' height={400} width={400} src={each.imageUrl} alt={each.head} />
+          <Link key={index} href={each.page}>
+            <div className="flex-col justify-between graphic-page-services-card" key={each.id}>
+              <div className="mobile-graphic-page-services-card-content">
+                <Image className='graphic-page-services-card-img' height={500} width={500} src={each.imageUrl} alt={each.head} />
                 <h1 className='graphic-page-services-card-head' >{each.head}</h1>
                 <p className='graphic-page-services-card-para' >{each.para}</p>
               </div>

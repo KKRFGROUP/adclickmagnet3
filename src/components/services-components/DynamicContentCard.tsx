@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState } from 'react'
 import Image from "next/image";
 import google3dimage from '../../public/images/pngwing.com.png'
@@ -6,15 +8,15 @@ function DynamicContentCard({content} : {content: {id: number; title: string; lo
     const [active, setActive] = useState(1);
     const activeCard = content[active -1];
   return (
-        <div className="relative h-[120vh] rounded-[50px] dark:bg-black dark:text-white  flex-col justify-center items-center text-center services-secs-main-container">
+        <div className="relative h-[120vh] rounded-[50px] dark:bg-black dark:text-white  flex-col justify-center items-center text-center services-dynamic-main-container">
         <h2 className="services-secs-head mb-5">How Do Google Ads Campaign Management Services Work?</h2>
 
-        <Image className="dynamic-content-card-right-object" src={google3dimage} height={200} width={200} />
+        <Image alt="google logo" className="dynamic-content-card-right-object" src={google3dimage} height={200} width={200} />
         <div className="dynamic-content-card flex">
             <div className="dynamic-content-card-left  rounded-l-[50px]">
                 <ul className='p-0 list-decimal'>
-                    {content.map(each => (
-                        <div className="mb-9">
+                    {content.map((each,index) => (
+                        <div className="mb-9" key={index}>
                             <li key={each.id} className={`dynamic-content-card-left-para ${active=== each.id? "active-para": ""}`} onClick={() => setActive(each.id)} >{each.title}</li>
                             <hr className="dynamic-content-card-left-line"/>
                         </div>

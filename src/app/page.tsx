@@ -13,7 +13,7 @@ import Section8 from "@/components/homeSections/Section8";
 import Section9 from "@/components/homeSections/Section9";
 import Footer from "@/components/Footer";
 //import { useEffect, useState } from "react";
-//import Loading from "@/components/loading";
+//import Loading from "@/components/Loading";
 //import TextSection from '@/components/TextSection'
 
 export default function Home() {

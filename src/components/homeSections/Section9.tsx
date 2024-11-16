@@ -18,7 +18,10 @@ export default function Section9() {
                 <div className="flex justify-center about-sec-head-carousel">
                     <h2 className="blog-sec-head">Digital marketing & industry insights</h2>
                     <div className="carousel-container">
-                        <Carousel />
+                        <Carousel slides={2}/>
+                    </div>
+                    <div className="mobile-carousel-container">
+                        <Carousel slides={1}/>
                     </div>
                 </div>
                 <Link href="/blogs">
