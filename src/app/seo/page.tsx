@@ -24,8 +24,6 @@ import { SiPowerpages,SiPagespeedinsights } from "react-icons/si";
 import { VscSymbolKeyword } from "react-icons/vsc";
 import ContactOurExperts from '@/components/services-components/ContactOurExperts';
 
-gsap.registerPlugin(ScrollTrigger);
-
 
 const heroContent = {
     heading: "SEO Services for Enhanced Visibility",

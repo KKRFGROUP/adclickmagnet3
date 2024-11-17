@@ -8,6 +8,7 @@ import Portfolio from './sections/Portfolio';
 import InfiniteText from './sections/InfiniteText';
 import OverlappingSections from './sections/OverlappingSections';
 //import ContactSection from './sections/ContactSection';
+import "../../components/app.css";
 import "./graphic.css";
 import "../../components/services-components/components.css";
 import DigitalServices from './sections/DigitalServices';

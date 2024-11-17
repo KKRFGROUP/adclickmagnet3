@@ -15,12 +15,11 @@ export function PlaceholdersAndVanishInput({
   placeholders,
   onChange,
   onSubmit,
-  className,
 }: {
   placeholders: string[];
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
-  className: string;
+  className?: string;
 }) {
   const [currentPlaceholder, setCurrentPlaceholder] = useState(0);
 

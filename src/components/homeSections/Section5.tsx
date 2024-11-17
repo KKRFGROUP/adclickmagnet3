@@ -1,19 +1,8 @@
 import { HoverEffect } from "../ui/CardHoverEffect";
 import Image from "next/image";
 import img from '../../public/images/logo/adclickmagnetlogogrey.png'
-import { TypewriterEffect } from "../ui/TypewriterEffect";
-import webDevelopment from '../../public/images/Website Developer Logo.png';
 
-const words = [
-  {
-    text: "Our",
-    className: "text-white dark:text-white-500 tracking-widest leading-relaxed",
-  },
-  {
-    text: "Servicess",
-    className: "text-white dark:text-white-500 tracking-widest leading-relaxed",
-  },
-];
+
 
 export default function Section5() {
   return (

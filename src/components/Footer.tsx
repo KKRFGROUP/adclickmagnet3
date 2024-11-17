@@ -87,7 +87,7 @@ export function SignupFormDemo() {
     message: "",
   });
 
-  const [status, setStatus] = useState("");
+  //const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -99,7 +99,7 @@ export function SignupFormDemo() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setStatus("Submitting...");
+    //setStatus("Submitting...");
 
     try {
       const response = await fetch("/api/contact", {
@@ -111,7 +111,7 @@ export function SignupFormDemo() {
       const result = await response.json();
 
       if (result.success) {
-        setStatus("Form submitted successfully!");
+        //setStatus("Form submitted successfully!");
         setFormData({
           firstName: "",
           lastName: "",
@@ -120,10 +120,11 @@ export function SignupFormDemo() {
           message: "",
         });
       } else {
-        setStatus("Failed to submit form.");
+        //setStatus("Failed to submit form.");
       }
     } catch (error) {
-      setStatus("An error occurred while submitting the form.");
+      console.log(error);
+      //setStatus("An error occurred while submitting the form.");
     }
   };
   return (

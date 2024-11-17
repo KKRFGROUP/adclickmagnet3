@@ -6,7 +6,7 @@ import "./components.css";
 import { Spotlight } from "../ui/Spotlight";
 
 
-function HeroSection({heading, para, imgUrl}: {heading: string; para: string; imgUrl?: string;}) {
+function HeroSection({heading, para}: {heading: string; para: string;}) {
   return (
     
     <div className="w-full bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
