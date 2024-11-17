@@ -169,7 +169,7 @@ body{
 /* hero section */
 
 .home-model {
-    height: max-content;
+    height: 100vh;
     position: relative;
     top: 30px;
 }
