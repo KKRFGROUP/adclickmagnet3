@@ -259,7 +259,7 @@ function AdCreative() {
       <TracingBeam>
         <Navbar />
         <section data-bgcolor="#070707" data-textcolor="#ffffff">
-          <HeroSection heading={heroContent.heading} para={heroContent.para} imgUrl={heroContent.imgUrl}/>
+          <HeroSection heading={heroContent.heading} para={heroContent.para}/>
         </section>
         <Section3  content={section3}/>
         <Section4 content={section4} roundb="rounded-b-[50px]"/>
@@ -275,7 +275,7 @@ function AdCreative() {
       <TracingBeam>
       <Navbar />
         <section data-bgcolor="#070707" data-textcolor="#ffffff">
-          <HeroSection heading={heroContent.heading} para={heroContent.para} imgUrl={heroContent.imgUrl}/>
+          <HeroSection heading={heroContent.heading} para={heroContent.para} />
         </section>
         <Section3  content={section3}/>
         <Section4 content={section4} roundb="rounded-b-[50px]"/>

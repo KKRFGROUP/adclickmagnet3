@@ -89,7 +89,7 @@ export function SignupFormDemo() {
 
   //const [status, setStatus] = useState("");
 
-  const handleChange = (e) => {
+  const handleChange = (e: { target: { name: any; value: any; }; }) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,

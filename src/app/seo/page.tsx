@@ -425,7 +425,7 @@ function Seo() {
         <TracingBeam >
             <Navbar />
             <section data-bgcolor="#070707" data-textcolor="#ffffff">
-            <HeroSection heading={heroContent.heading} para={heroContent.para} imgUrl={heroContent.imgUrl}/>
+            <HeroSection heading={heroContent.heading} para={heroContent.para} />
             </section>
             <Section2 Cards={section2}/>
             <Section3  content={section3}/>
@@ -444,7 +444,7 @@ function Seo() {
       <TracingBeam>
       <Navbar />
             <section data-bgcolor="#070707" data-textcolor="#ffffff">
-            <HeroSection heading={heroContent.heading} para={heroContent.para} imgUrl={heroContent.imgUrl}/>
+            <HeroSection heading={heroContent.heading} para={heroContent.para} />
             </section>
             <Section2 Cards={section2}/>
             <Section3  content={section3}/>

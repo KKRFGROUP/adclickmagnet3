@@ -30,7 +30,7 @@ export const BentoGridItem = ({
 }: {
   className?: string;
   title?: string | React.ReactNode;
-  description?: string | React.ReactNode;
+  description?: string ;
   title2?: string | React.ReactNode;
   description2?: string | React.ReactNode;
   image: string;
@@ -42,7 +42,7 @@ export const BentoGridItem = ({
         className
       )}
     >
-        <Image src={image} alt={description} height={200} width={200} />
+        <Image src={image} alt={description || "bento"} height={200} width={200} />
       <div className="flex justify-between items-center group-hover/bento:translate-x-1 transition duration-200">
         <div>
             <div className="font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2">
