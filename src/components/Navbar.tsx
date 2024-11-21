@@ -11,7 +11,6 @@ import { FaChevronDown } from "react-icons/fa6";
 //logos
 import { CgMenuHotdog } from "react-icons/cg";
 import { RxCross2 } from "react-icons/rx";
-import companylogo from '../public/images/logo/adclickmagnetlogoblacklogo.png';
 
 
 export default function Navbar({className}: {className?: string}) {
@@ -53,7 +52,7 @@ export default function Navbar({className}: {className?: string}) {
                                 <MenuItem setActive={setActive} active={active} item="Home" />
                             </Link>
                             <MenuItem setActive={setActive} active={active} item="What We Do">
-                                <div className="flex flex-col space-y-4 py-3 text-sm what-we-do-links">  
+                                <div className="flex flex-col space-y-4 py-3 text-sm">  
                                     <HoveredLink href="/web-development">Web Development</HoveredLink>
                                     <HoveredLink href="/graphic-design">Graphic Design</HoveredLink>
                                     <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
@@ -63,10 +62,12 @@ export default function Navbar({className}: {className?: string}) {
                                     <HoveredLink href="/motion-design">Motion Design</HoveredLink>
                                     <HoveredLink href="/ad-creative">Ad Creative</HoveredLink>
                                     <HoveredLink href="/google-ads">Google Ads</HoveredLink>
+                                    <HoveredLink href="/linkedin-ads">Linkedin Ads</HoveredLink>
+                                    <HoveredLink href="/meta-ads">Meta Ads</HoveredLink>
                                 </div>
                             </MenuItem>
                         
-                        <Link href="/about" className="cursor-none">
+                        <Link href="/about-us" className="cursor-none">
                             <MenuItem setActive={setActive} active={active} item="Who We Are" />
                         </Link>
                         <Link href="/contact-us" className="cursor-none">
@@ -84,7 +85,7 @@ export default function Navbar({className}: {className?: string}) {
 
     <div className="mobile-view-navbar-container fixed inset-x-0 z-50 mx-2 top-[10px] rounded-[20px] border border-transparent dark:bg-white/[0.4] dark:border-black bg-white shadow-input space-x-4 py-1 px-3 mx-1">
                         <Link href="/" className=" font-bold">
-                            <Image className="mobile-view-navbar-logo" src={companylogo} alt="logo" height={100} width={150} />
+                            <Image className="mobile-view-navbar-logo" src="https://res.cloudinary.com/dgdgrniut/image/upload/v1732186526/adclickmagnetlogoblacklogo_reqzpl.png" alt="logo" height={100} width={150} />
                         </Link>
 
                         

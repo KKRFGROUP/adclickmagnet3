@@ -21,6 +21,7 @@ body {
   cursor: none;
   scroll-behavior: smooth;
   scroll-snap-align: center;
+  overflow-x: hidden;
 }
 @media (max-width: 575px) {
   body {
@@ -42,7 +43,6 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #E2E2E2;
-  ;
 }
 
 .cursor-text {

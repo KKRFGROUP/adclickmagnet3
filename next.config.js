@@ -204,6 +204,11 @@ module.exports = {
           hostname: 'png.pngtree.com',
           port: '',
         },
+        {
+          protocol: 'https',
+          hostname: 'i.pinimg.com',
+          port: '',
+        },
       ], 
     },
   }
