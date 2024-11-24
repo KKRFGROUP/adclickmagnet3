@@ -423,15 +423,127 @@
     }
     .inspired-video-content {
         position: relative;
-        margin-top: 10%;
+        margin-top: 0%;
         top: 30%;
         width: 100%;
+
     }
     
     .inspired-video-content-head {
         font-size: 35px;
     }
 }
+
+
+
+
+@media (max-width: 768px) {
+    .lets-grow-head {
+        top: 30%;
+    }
+}
+
+/* founders section */
+.founders-main-container {
+    padding: 80px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: max-content;
+}
+.words-from-our-founders {
+    font-family: "Syne";
+    font-weight: bold;
+    font-size: 70px;
+    margin-bottom: 30px;
+}
+.founder-img-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.founder-img-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.founder-img {
+    border-radius: 80px;
+    margin: 30px;
+    height: 70vh;
+    width: 70vh;
+}
+
+
+.founder-content-card {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+.founder-content-para {
+    font-family: "Unbounded";
+    font-size: 15px;
+    width: 90%;
+}
+
+.founder-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 7%;
+    margin-bottom: 10%;
+}
+
+.text-right {
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .founders-main-container {
+        padding: 20px;
+        padding-top: 40px;
+        height: max-content;
+    }
+    .words-from-our-founders {
+        font-family: "Syne";
+        font-weight: bold;
+        font-size: 50px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .founder-img-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 30px;
+    }
+    .founder-img {
+        border-radius: 80px;
+        margin: 20px;
+        height: 50vh;
+        width: 50vh;
+    }
+    .founder-img-card {
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 575px) {
+    .words-from-our-founders {
+        font-size: 30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .founder-img {
+        margin: 10px;
+        height: 50vh;
+        width: 50vh;
+    }
+}
+
+
+
 
 
 
@@ -444,15 +556,15 @@
 }
 .lets-grow-head {
     position: relative;
-    top: 25%;
+    top: 7%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .about-lets-model {
     position: relative;
-    top: 0%;
-    height: 100vh;
+    bottom: 10%;
+    height: 90vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -460,7 +572,7 @@
 }
 .lets-grow-btn-card {
     position: relative;
-    bottom: 15%;
+    bottom: 23%;
 }
 .lets-grow-btn {
     border: 1px solid #E2E2E2;
@@ -470,84 +582,4 @@
     width: 150px;
     font-weight: bold;
     margin-top: 20px;
-}
-
-@media (max-width: 768px) {
-    .lets-grow-head {
-        top: 30%;
-    }
-}
-
-/* founders section */
-.founders-main-container {
-    padding: 80px;
-    height: max-content;
-}
-.founder-img-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.founder-img {
-    border-radius: 80px;
-    margin: 30px;
-}
-.founder-content-card-flex {
-    display: flex;
-    justify-content: center;
-}
-.founder-img-content {
-    position: relative;
-    right: 80px;
-    bottom: 50px;
-    text-align: right;
-}
-.founder-head {
-    font-family: "Syne";
-    font-size: 40px;
-}
-.founder-para {
-    font-family: "Newsletter";
-    font-size: 20px;
-}
-.founder-content-card {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-}
-.founder-content-para {
-    font-family: "Unbounded";
-    font-size: 15px;
-    width: 50%;
-}
-
-/* co-founder */
-.cofounder-card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-top: 10%;
-    margin-bottom: 10%;
-}
-.cofounder-img-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-}
-.cofounder-img-content{
-    position: relative;
-    left: 80px;
-    bottom: 50px;
-}
-.cofounder-content-card {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    text-align: right;
 }

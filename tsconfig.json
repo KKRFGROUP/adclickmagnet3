@@ -38,7 +38,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/api/contact.ts"
-  ],
+, "src/app/blogs/category/[slug].tsx"  ],
   "exclude": [
     "node_modules"
   ]

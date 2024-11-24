@@ -8,7 +8,6 @@ import Section2 from '@/components/services-components/Section2';
 import Section3 from '@/components/services-components/Section3';
 import Section4 from '@/components/services-components/Section4';
 import Section6 from '@/components/services-components/Section6';
-import Section7 from '@/components/services-components/Section7';
 import Section8 from '@/components/services-components/Section8';
 import FAQ from '@/components/services-components/FAQ';
 import Cards3dSections from '@/components/services-components/Cards3dSections';
@@ -238,38 +237,7 @@ const section6 = {
   
     
 
-const section7 = { 
-    mainpara: "FUTURE-READY EFFICIENCY",
-    heading: [
-      {  
-        text: "AI",
-        className: "lg:text-4xl text-white dark:text-white-500 tracking-wider",
-      },
-      {
-        text: "-",
-        className: "lg:text-4xl text-white dark:text-white-500 tracking-wider",
-      },
-      {
-        text: "Powered",
-        className: "lg:text-4xl text-white dark:text-white-500 tracking-wider",
-      },
-      {   
-        text: "LinkedIn",
-        className: "lg:text-4xl text-white dark:text-white-500 tracking-wider",
-      },
-      {
-        text: "Ads",
-        className: "lg:text-4xl text-white dark:text-white-500 tracking-wider",
-      },
-      {
-        text: "Solutions",
-        className: "lg:text-4xl text-white dark:text-white-500 tracking-wider",
-      },
-    ],
-    para1: "Harness AI to transform your LinkedIn Ads campaigns. Our AI-driven strategies analyze professional insights in real-time, generating high-quality leads and enhancing ROI.",
-    para2: "With AI-powered tools, we ensure your LinkedIn Ads are continuously optimized for precision targeting, engagement, and performance. Stay ahead in the competitive landscape with our innovative LinkedIn Ads solutions.",
-    button: "AI-Driven LinkedIn Service"
-};
+
 
   
 
@@ -488,7 +456,7 @@ function LinkedInAds() {
         <Section6 content={section6} translate="-50%"/>
         <DynamicContentCard content={dynamicContentSec}/>
         <Cards3dSections translate='-160%' content={section3dCards} className="rounded-[50px]"/>
-        <Section7 content={section7}/>
+        
         <Section8 content={section8}/>
         <ContactOurExperts />
         <FAQ  content={faq}/>
@@ -508,7 +476,7 @@ function LinkedInAds() {
         <Section6 content={section6} translate="-50%"/>
         <DynamicContentCard content={dynamicContentSec}/>
         <Cards3dSections translate='-160%' content={section3dCards} className="rounded-[50px]"/>
-        <Section7 content={section7}/>
+        
         <Section8 content={section8}/>
         <ContactOurExperts />
         <FAQ  content={faq}/>

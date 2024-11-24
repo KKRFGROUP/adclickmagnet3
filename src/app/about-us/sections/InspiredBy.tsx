@@ -29,7 +29,12 @@ function InspiredBy() {
       window.addEventListener("resize", handleResize);
       return () => window.removeEventListener("resize", handleResize);
     }
-  }, []);
+    
+    
+    }, [windowWidth]);
+
+    
+
   return (
     <>
     <div className='inspired-us-main-container'>
@@ -66,7 +71,7 @@ function InspiredBy() {
                 <br />
                 <p className='inspired-video-content-para' >We are committed to delivering measurable results, fostering meaningful connections between brands and their audiences, and helping our clients achieve sustainable growth.</p>
             </div>
-            <video style={{ width: windowWidth <= 768 ? "100%": "100%", height: windowWidth <= 768 ? "100vh": "130vh", borderRadius: "50px" }} autoPlay preload='auto' loop muted src="https://res.cloudinary.com/dgdgrniut/video/upload/v1732097945/rewards-desktop-final_yqhhyy.mp4"></video>
+            <video style={{ width: windowWidth <= 768 ? "100%": "100%", height: windowWidth <= 768? "100vh": "130vh", borderRadius: "50px" }} autoPlay preload='auto' loop muted src="https://res.cloudinary.com/dgdgrniut/video/upload/v1732097945/rewards-desktop-final_yqhhyy.mp4"></video>
         </div>
         </>
   )

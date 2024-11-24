@@ -12,8 +12,8 @@ function AboutUs() {
         <AboutHeroSec />
         <ImpactMatrics />
         <InspiredBy />
-        <LetsGrow />
         <Founders />
+        <LetsGrow />
         <Footer />
     </div >
   )

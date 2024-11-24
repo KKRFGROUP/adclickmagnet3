@@ -209,6 +209,11 @@ module.exports = {
           hostname: 'i.pinimg.com',
           port: '',
         },
+        {
+          protocol: 'https',
+          hostname: 'tse4.mm.bing.net',
+          port: '',
+        },
       ], 
     },
   }

@@ -1,0 +1,246 @@
+
+.top-blogs {
+    padding: 80px;
+    padding-top: 140px;
+    height: max-content;
+}
+.blog-search-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.searchBox {
+    background: #ffffff50;
+    height: 60px;
+    border-radius: 40px;
+    padding: 10px;
+    width: 60px;
+    transition: 0.5s ease-in-out;
+}
+.searchBox:hover {
+    width: 100%;
+    
+}
+
+.searchBox:hover > .searchInput {
+    width: 90%;
+    padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+  background: white;
+  color : #2f3640;
+}
+
+.searchButton {
+    color: white;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ;
+}
+
+.searchInput {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: #000;
+    font-size: 16px;
+    transition: 0.4s ease-in;
+    line-height: 40px;
+    width: 0px;
+
+}
+
+@media screen and (max-width: 620px) {
+.searchBox:hover > .searchInput {
+    width: 150px;
+    padding: 0 6px;
+    }
+}
+
+
+
+.top1-blog-card {
+    display: flex;
+    margin-top: 2%;
+    height: 40vh;
+}
+
+.blogs-page-blog-img {
+    border-radius: 20px;
+    width: 50%;
+}
+
+.top1-blog-card-content {
+    padding: 20px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    font-family: "Unbounded";
+}
+
+.blog-card-content-category {
+    color: grey; 
+}
+.blog-card-content-name {
+    color: grey;
+    font-size: 17px;
+}
+
+.blog-card-content-heading {
+    font-size: 30px;
+    font-family: "Syne";
+}
+
+.flex-blog-cards {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flex-blog-content {
+    width: 90%;
+}
+.flex-blog-card-content-heading {
+    font-size: 25px;
+    font-family: "Syne";
+} 
+
+.flex-blogs-page-blog-img {
+    border-radius: 20px;
+    width: 90%;
+    height: 50%;    
+} 
+.flex-blog-card-content-para {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+.flex-blog-card-content-name {
+    color: grey;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+
+
+
+/*lastet blogs*/
+.blog-page-latest-head {
+    font-family: "Syne";
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+.blog-page-latest-blog-list {
+    width: 60%;
+}
+
+.blog-page-latest-blog-card{
+    width: 100%;
+    height: 30vh;
+    margin-bottom: 40px;
+    display: flex;
+
+}
+.blog-page-lastest-blog-card-img {
+    width: 50%;
+    border-radius: 20px;
+}
+.blog-page-lastest-blog-card-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 20px;
+    font-family: "Unbounded";
+}
+
+.blog-page-lastest-blog-card-content-category {
+    color: grey;
+
+}
+.blog-page-lastest-blog-card-content-heading {
+    font-family: "Syne";
+    font-size: 25px;    
+} 
+.blog-page-lastest-blog-card-content-para {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+.blog-page-lastest-blog-card-content-name {
+    color: grey;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+.pagination-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 110px;
+    height: 50px;
+    font-family: "Syne";
+    transition: 0.4s ease-in-out;
+}
+.pagination-btn:hover {
+    border: 1px solid #000;
+    border-radius: 12px;
+    background-color: grey;
+    color: #000;
+}
+
+
+
+.blog-page-latest-blog-categories {
+    width: 50%;
+}
+
+.blog-page-categories-head {
+    font-family: "Syne";
+    font-size: 20px;
+    margin-bottom: 20px;
+} 
+.blog-page-categories-line {
+    border: 0px;
+    background-color: grey;
+    height:1px;
+    border-radius: 2px;
+    margin-bottom: 40px;
+}
+.blog-page-category-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    font-size: 17px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    font-family: "Syne";
+    transition: 0.4s ease-in-out;
+}
+.blog-page-category-btn:hover {
+    border: 1px solid #000;
+    border-radius: 10px;
+    color:#000;
+    background-color: grey;
+    font-family: "Syne";
+    transition: 0.4s ease-in-out;
+
+}
