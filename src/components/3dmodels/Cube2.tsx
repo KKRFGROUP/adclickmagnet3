@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useRef } from "react";
-import { useFrame } from "@react-three/fiber";
+import React from "react";
+//import { useFrame } from "@react-three/fiber";
 import {  TextureLoader } from "three";
 import { useLoader } from "@react-three/fiber";
 const Cube2 = () => {
-  const cubeRef = useRef();
+  //const cubeRef = useRef();
   
   const textures = [
     useLoader(TextureLoader, "https://res.cloudinary.com/dgdgrniut/image/upload/v1732166229/66ef60583159af66c2df6d6b_Frame_2_ucpit0.jpg"),
@@ -15,16 +15,16 @@ const Cube2 = () => {
     useLoader(TextureLoader, "https://res.cloudinary.com/dgdgrniut/image/upload/v1732166226/66ef5cfe9fcc1c5948b15a89_Frame_5-p-500_u5gs0o.jpg"),
     useLoader(TextureLoader, "https://res.cloudinary.com/dgdgrniut/image/upload/v1732166226/66ef5cfe9fcc1c5948b15a89_Frame_5-p-500_u5gs0o.jpg"),
   ];
-  useFrame(() => {
-    if (cubeRef.current) {
-      cubeRef.current.rotation.x += 0.01; // Adjust speed by changing this value
-    }
-  });
+  //useFrame(() => {
+  //  if (cubeRef.current) {
+  //    cubeRef.current.rotation.x += 0.01; // Adjust speed by changing this value
+  //  }
+  //});
 
 
   
   return (
-    <mesh ref={cubeRef} recieveShadow={true}>
+    <mesh >
       <boxGeometry args={[4,1.4,1.4]}/>
       {textures.map((texture, index) => (
         <meshStandardMaterial key={index} attach={`material-${index}`} map={texture} />

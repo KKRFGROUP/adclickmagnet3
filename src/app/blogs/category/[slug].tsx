@@ -161,7 +161,7 @@ const webDevelopmentBlogs = [
 function Page() {
     const router = useRouter()
     console.log(router.query.slug);
-
+    console.log(webDevelopmentBlogs[0]);
     if (router.isFallback) {
       return <div>Loading...</div>; // Show a loading state for fallback pages
     }
