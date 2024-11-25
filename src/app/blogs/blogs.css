@@ -3,6 +3,8 @@
     padding: 80px;
     padding-top: 140px;
     height: max-content;
+    background-color: #E2E2E2;
+    color: #000;
 }
 .blog-search-container {
     width: 100%;

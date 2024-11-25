@@ -1,0 +1,215 @@
+.blog-slug-hero-sec {
+    background-color: #000;
+    
+    height: 100vh;
+    padding: 100px;
+    padding-top: 10%;
+}
+.blog-slug-hero-sec-home {
+    font-family: "Unbounded";
+    font-size: 15px;
+}
+
+.blog-slug-hero-content{
+    height: 100%;
+}
+.blog-slug-hero-content-head {
+    font-family: "Syne";
+    font-size: 50px;
+    margin-bottom: 10%;
+}
+
+.blog-slug-hero-content-para{
+    font-family: "Unbounded";
+    font-size: 20px;
+}
+
+
+.blog-slug-hero-content-name-date {
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+    align-items: center;
+}
+.blog-slug-hero-img{
+    height: 50vh;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .blog-slug-hero-sec {
+        height: 100vh;
+        padding: 20px;
+        padding-top: 25%;
+        padding-bottom: 10%;
+    }
+    .blog-slug-hero-sec-home {
+        margin-bottom: 30px;
+    }
+    .blog-slug-hero-content-card {
+        flex-direction: column;
+
+    }
+    .blog-slug-hero-content-head {
+        font-size: 40px;
+        margin-bottom: 7%;
+    }
+    .blog-slug-hero-content-name-date {
+        width: 45%;
+    }
+    
+    .blog-slug-hero-content-para{   
+        font-size: 17px;
+        margin-bottom: 30px;
+    }
+    .blog-slug-hero-img{
+        height: 40vh;
+        border-radius: 10px;
+    }
+}
+
+
+@media (max-width: 575px) {
+    .blog-slug-hero-sec {
+        height: 100vh;
+        padding: 20px;
+        padding-top: 30%;
+        padding-bottom: 10%;
+    }
+    .blog-slug-hero-content-name-date {
+        width: 60%;
+    } 
+    .blog-slug-hero-img{
+        height: 35vh;
+        border-radius: 10px;
+    }
+    
+}
+
+
+
+/* blog slug content */
+.blog-slug-content-sec{
+    display: flex;
+    align-items: flex-start;
+    padding: 70px;
+    background-color: #E2E2E2;
+    border-radius: 50px;
+    color: #000;
+}
+.blog-slug-content {
+    width: 75%;
+    padding-right: 50px;
+    font-size: 15px;
+    font-family: "Unbounded";
+    font-weight: 300;
+}
+.blog-slug-content-suncontent {
+    margin-bottom: 40px;
+}
+.blog-slug-content-head {
+    font-family: "Syne";
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.blog-slug-contact-form-card {
+    width: 25%;
+}
+
+.blog-slug-contact-form {
+    background-color: #000;
+    border-radius: 20px;
+    width: 100%;
+    color: #E2E2E2;
+    font-family: "Unbounded";
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.blog-slug-contact-form-content-head {
+    font-family: "Syne";
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.blog-slug-contact-form-img {
+    border-radius: 20px;
+}
+
+.blog-slug-contact-form-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.blog-slug-contact-form-content-label-input {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.blog-slug-contact-form-content-input {
+    width: 100%;
+    background-color: transparent;
+}
+
+.blog-slug-contact-form-content-btn {
+    margin-top: 20px;
+    font-size: 17px;
+    border:1px solid #E2E2E2;
+    width: 50%;
+    height: 40px;   
+    border-radius: 10px;
+    align-self: center;
+    transition: 0.4s ease-in-out;
+}
+
+.blog-slug-contact-form-content-btn:hover {
+    background-color: #E2E2E2;
+    color: #000;
+    border:1px solid #000;  
+    border-radius: 11px;
+}
+
+@media (max-width: 768px) {
+    .blog-slug-content-sec{
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .blog-slug-content {
+        width: 100%;
+        padding-right: 50px;
+        font-size: 15px;
+        font-family: "Unbounded";
+        font-weight: 300;
+    }
+    .blog-slug-contact-form-card {
+        display: none;
+    }
+    
+}
+
+@media (max-width: 575px) {
+    .blog-slug-content {
+        width: 100%;
+        padding-right: 50px;
+        font-size: 15px;
+    }
+    .blog-slug-content-suncontent {
+        margin-bottom: 40px;
+    }
+    .blog-slug-content-head {
+        font-size: 30px;
+        margin-bottom:25px;
+    }
+}

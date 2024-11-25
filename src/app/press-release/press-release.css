@@ -1,0 +1,255 @@
+.press-release-main-container {
+    padding: 80px;
+    height: max-content;
+    background-color: #E2E2E2;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    color: #000;
+}
+
+.top-press-release-card {
+    align-items: center;
+    justify-content: center;
+    min-height: 40vh;
+    max-height: max-content;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+.top-press-release-card-img {
+    width: 35%;
+    border-radius: 10px;
+}
+.top-press-release-card-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding-right: 30px;
+}
+
+.top-press-release-card-head{
+    font-family: "Syne";
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.top-press-release-card-para {
+    font-family: "Unbounded";
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.top-press-release-card-btn{
+    color: grey;
+    font-size: 20px;
+    gap: 4px;
+}
+
+@media (max-width: 1028px) {
+    .press-release-main-container {
+        padding: 20px;
+        height: max-content;
+    }
+    
+    .top-press-release-card {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: max-content;
+        margin-top: 20%;
+        margin-bottom: 10%;
+    }
+    .top-press-release-card-img {
+        width: 80%;
+        order: -1;
+        border-radius: 10px;
+    }
+    .top-press-release-card-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding-right: 0px;
+        padding: 40px;
+    }
+    
+    .top-press-release-card-head{
+        font-size: 3vw;
+        margin-bottom: 20px;
+    }
+    .top-press-release-card-para {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+    
+    .top-press-release-card-btn{
+        font-size: 17px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .press-release-main-container {
+        padding: 20px;
+        height: max-content;
+    }
+    
+    .top-press-release-card {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: max-content;
+        margin-top: 20%;
+        margin-bottom: 10%;
+    }
+    .top-press-release-card-img {
+        width: 80%;
+        order: -1;
+        border-radius: 10px;
+    }
+    .top-press-release-card-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding-right: 0px;
+        padding: 40px;
+    }
+    
+    .top-press-release-card-head{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .top-press-release-card-para {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+    
+    .top-press-release-card-btn{
+        font-size: 17px;
+    }
+}
+
+
+/* list of press list card */
+.press-release-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.press-release-card{
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.press-release-card-img {
+    border-radius: 10px;
+    height: 45%;
+    margin-bottom: 20px;
+}
+
+
+.press-release-card-head {
+    font-family: "Syne";
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.press-release-card-para {
+    font-family: "Unbounded";
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+.press-release-card-line {
+    border: 0px;
+    margin-top: 20px;
+    height: 3px;
+    background-color: grey;
+    border-radius: 10px;
+}
+
+@media (max-width: 1028px) {
+    .press-release-cards-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .press-release-card{
+        display: flex;
+        width: 50%;
+        flex-direction: column;
+        height: max-content;
+        align-items: center;
+    }
+    
+    .press-release-card-img {
+        height: 45%;
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    .press-release-card-content {
+        padding: 40px;
+    }
+    
+    .press-release-card-head {
+        font-size: 3vw;
+        margin-bottom: 20px;
+    }
+    .press-release-card-para {
+        font-family: "Unbounded";
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+    .press-release-card-line {
+        border: 0px;
+        margin-top: 20px;
+        height: 3px;
+        background-color: grey;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .press-release-cards-container {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .press-release-card{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        height: max-content;
+        align-items: center;
+    }
+    
+    .press-release-card-img {
+        height: 45%;
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    .press-release-card-content {
+        padding: 40px;
+    }
+    
+    .press-release-card-head {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .press-release-card-para {
+        font-family: "Unbounded";
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+    .press-release-card-line {
+        border: 0px;
+        margin-top: 20px;
+        height: 3px;
+        background-color: grey;
+        border-radius: 10px;
+    }
+}

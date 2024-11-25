@@ -1,7 +1,6 @@
 
 "use client";
 import React, { useEffect, useState, useRef } from 'react';
-import { IoSearch } from "react-icons/io5";
 import Image from 'next/image';
 import { FaCaretRight,FaCaretLeft } from "react-icons/fa";
 import Link from 'next/link';
@@ -10,160 +9,178 @@ import gsap from 'gsap';
 
 const demoBlogs = [
   {
-    id:1 , 
+    id: 1,
     heading: "10 Tips for Writing Clean Code",
     paragraph: "Writing clean code is essential for maintainability and scalability. Here are 10 tips to help you write better code.",
     time: "2024-11-22T09:00:00Z",
     category: "web development",
     name: "John Doe",
-    image: "https://tse4.mm.bing.net/th?id=OIP.MnjMcHg698AEHQXPRb5o7AHaDt&pid=Api&P=0&h=180"
+    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+    link: "10-tips-for-writing-clean-code"
   },
   {
-    id:2 , 
+    id: 2,
     heading: "The Future of Responsive Design",
     paragraph: "Learn how responsive design is evolving and why it's critical for modern web development.",
     time: "2024-11-21T12:00:00Z",
     category: "web development",
     name: "Jane Smith",
-    image: "https://tse4.mm.bing.net/th?id=OIP.MnjMcHg698AEHQXPRb5o7AHaDt&pid=Api&P=0&h=180"
+    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+    link: "the-future-of-responsive-design"
   },
   {
-    id:3 , 
+    id: 3,
     heading: "Top 5 Graphic Design Trends of 2024",
     paragraph: "Discover the latest trends in graphic design that are shaping the creative industry.",
     time: "2024-11-20T15:00:00Z",
     category: "graphic design",
     name: "Alex Johnson",
-    image: "https://tse4.mm.bing.net/th?id=OIP.MnjMcHg698AEHQXPRb5o7AHaDt&pid=Api&P=0&h=180"
+    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+    link: "top-5-graphic-design-trends-of-2024"
   },
   {
-    id:4, 
+    id: 4,
     heading: "Mastering Logo Design Basics",
     paragraph: "A guide to creating impactful logos that leave a lasting impression.",
     time: "2024-11-19T10:00:00Z",
     category: "graphic design",
     name: "Emily Brown",
-    image: "https://tse4.mm.bing.net/th?id=OIP.MnjMcHg698AEHQXPRb5o7AHaDt&pid=Api&P=0&h=180"
+    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+    link: "mastering-logo-design-basics"
   },
   {
-    id:5 , 
+    id: 5,
     heading: "How SEO Impacts Business Growth",
     paragraph: "Understand the key role of SEO in driving traffic and revenue for your business.",
     time: "2024-11-18T08:30:00Z",
     category: "SEO",
     name: "Michael Green",
-    image: "https://tse4.mm.bing.net/th?id=OIP.MnjMcHg698AEHQXPRb5o7AHaDt&pid=Api&P=0&h=180"
+    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+    link: "how-seo-impacts-business-growth"
   },
   {
-    id:6 , 
+    id: 6,
     heading: "SEO Best Practices for 2024",
     paragraph: "Stay ahead in search rankings with these SEO best practices.",
     time: "2024-11-17T11:15:00Z",
     category: "SEO",
     name: "Sophia Lee",
-    image: "https://tse4.mm.bing.net/th?id=OIP.MnjMcHg698AEHQXPRb5o7AHaDt&pid=Api&P=0&h=180"
+    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+    link: "seo-best-practices-for-2024"
   },
   {
-    id:7 , 
+    id: 7,
     heading: "Meta Ads: A Comprehensive Guide",
     paragraph: "Learn how to create effective Meta Ads to maximize your ROI.",
     time: "2024-11-16T14:45:00Z",
     category: "meta ads",
     name: "Daniel Martinez",
-    image: "https://tse4.mm.bing.net/th?id=OIP.MnjMcHg698AEHQXPRb5o7AHaDt&pid=Api&P=0&h=180"
+    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+    link: "meta-ads-a-comprehensive-guide"
   },
   {
-    id:8 , 
+    id: 8,
     heading: "Maximizing Your Meta Ads Budget",
     paragraph: "Tips to optimize your ad spend and get better results with Meta Ads.",
     time: "2024-11-15T09:00:00Z",
     category: "meta ads",
     name: "Olivia Wilson",
-    image: "https://tse4.mm.bing.net/th?id=OIP.MnjMcHg698AEHQXPRb5o7AHaDt&pid=Api&P=0&h=180"
+    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+    link: "maximizing-your-meta-ads-budget"
   },
   {
-    id:9 , 
+    id: 9,
     heading: "LinkedIn Ads: Targeting Professionals",
     paragraph: "Learn how LinkedIn Ads can help you reach a professional audience effectively.",
     time: "2024-11-14T13:30:00Z",
     category: "LinkedIn ads",
     name: "Ethan Taylor",
-    image: "https://tse4.mm.bing.net/th?id=OIP.MnjMcHg698AEHQXPRb5o7AHaDt&pid=Api&P=0&h=180"
+    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+    link: "linkedin-ads-targeting-professionals"
   },
   {
-    id:10 , 
+    id: 10,
     heading: "Creating Compelling LinkedIn Ads",
     paragraph: "Strategies for designing LinkedIn Ads that capture attention and drive engagement.",
     time: "2024-11-13T16:00:00Z",
     category: "LinkedIn ads",
     name: "Isabella Davis",
-    image: "https://tse4.mm.bing.net/th?id=OIP.MnjMcHg698AEHQXPRb5o7AHaDt&pid=Api&P=0&h=180"
+    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+    link: "creating-compelling-linkedin-ads"
   },
+
   {
-    id:11 , 
+    id: 11,
     heading: "The Basics of Google Ads",
     paragraph: "An introduction to Google Ads and how to use them effectively.",
     time: "2024-11-12T08:00:00Z",
     category: "google ads",
     name: "Aiden White",
-    image: "https://tse4.mm.bing.net/th?id=OIP.MnjMcHg698AEHQXPRb5o7AHaDt&pid=Api&P=0&h=180"
+    link: "the-basics-of-google-ads",
+    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png"
   },
   {
-    id:12 , 
+    id: 12,
     heading: "Advanced Google Ads Strategies",
     paragraph: "Take your Google Ads campaigns to the next level with these advanced techniques.",
     time: "2024-11-11T10:30:00Z",
     category: "google ads",
     name: "Mia Thompson",
-    image: "https://tse4.mm.bing.net/th?id=OIP.MnjMcHg698AEHQXPRb5o7AHaDt&pid=Api&P=0&h=180"
+    link: "advanced-google-ads-strategies",
+    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png"
   },
   {
-    id:13 , 
+    id: 13,
     heading: "Exploring the Latest JavaScript Frameworks",
     paragraph: "A look at the newest JavaScript frameworks shaping modern web development.",
     time: "2024-11-10T12:45:00Z",
     category: "web development",
     name: "Liam Harris",
-    image: "https://tse4.mm.bing.net/th?id=OIP.MnjMcHg698AEHQXPRb5o7AHaDt&pid=Api&P=0&h=180"
+    link: "exploring-the-latest-javaScript-frameworks",
+    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png"
   },
   {
-    id:14 , 
+    id: 14,
     heading: "Building UI Components with Figma",
     paragraph: "Learn how to design and share reusable UI components using Figma.",
     time: "2024-11-09T11:15:00Z",
     category: "graphic design",
     name: "Emma Walker",
-    image: "https://tse4.mm.bing.net/th?id=OIP.MnjMcHg698AEHQXPRb5o7AHaDt&pid=Api&P=0&h=180"
+    link: "building-ui-components-with-figma",
+    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png"
   },
   {
-    id:15 , 
+    id: 15,
     heading: "Keyword Research Simplified",
     paragraph: "A step-by-step guide to finding the right keywords for your SEO strategy.",
     time: "2024-11-08T14:00:00Z",
     category: "SEO",
     name: "Noah Adams",
-    image: "https://tse4.mm.bing.net/th?id=OIP.MnjMcHg698AEHQXPRb5o7AHaDt&pid=Api&P=0&h=180"
+    link: "keyword-research-simplified",
+    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png"
   },
   {
-    id:16 , 
+    id: 16,
     heading: "Getting Started with Google Ads for Beginners",
     paragraph: "A beginner-friendly guide to setting up your first Google Ads campaign.",
     time: "2024-11-07T13:30:00Z",
     category: "google ads",
     name: "Ava Scott",
-    image: "https://tse4.mm.bing.net/th?id=OIP.MnjMcHg698AEHQXPRb5o7AHaDt&pid=Api&P=0&h=180"
+    link: "getting-started-with-google-ads-for-beginners",
+    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png"
   },
   {
-    id:17 , 
+    id: 17,
     heading: "Leveraging Meta Ads for Brand Awareness",
     paragraph: "How to use Meta Ads to build brand recognition and loyalty.",
     time: "2024-11-06T09:15:00Z",
     category: "meta ads",
     name: "Oliver Young",
-    image: "https://tse4.mm.bing.net/th?id=OIP.MnjMcHg698AEHQXPRb5o7AHaDt&pid=Api&P=0&h=180"
-  },
-  
+    link: "leveraging-meta-ads-for-brand-awareness",
+    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png"
+  }
 ];
+
 
 const categories = [
   {
@@ -259,18 +276,9 @@ function TopBlogs() {
  
   return (
     <div className="top-blogs">
-       {/* search container */}
-        <div className="blog-search-container">
-            <div className="searchBox">
-              <input className="searchInput"type="text" name="" placeholder="Search" />
-              <button className="searchButton">
-                <IoSearch />
-              </button>
-            </div>
-        </div>
-
+      
         {/*top 1 blog */}
-        <div className="top1-blog-card mb-9">
+        <Link href={`/blogs/${sortedBlogs[0].link}`} className="top1-blog-card mb-9">
           <Image className='blogs-page-blog-img' src={sortedBlogs[0].image} alt={sortedBlogs[0].heading} height={500} width={500} />
 
           <div className='top1-blog-card-content '>
@@ -281,11 +289,11 @@ function TopBlogs() {
             <p className='blog-card-content-name'>{sortedBlogs[0].name}</p>
             
           </div>
-        </div>
+        </Link>
 
           {/*top 3 blogs */}
         <div className='flex  mb-[5%]'>
-          <div className="flex-blog-cards">
+          <Link href={`/blogs/${sortedBlogs[1].link}`} className="flex-blog-cards">
             
             <p className='mb-3 blog-card-content-category'>{sortedBlogs[1].category}</p>
             <Image className="flex-blogs-page-blog-img mb-5" src={sortedBlogs[1].image} alt={sortedBlogs[1].heading} height={500} width={500} />
@@ -294,10 +302,10 @@ function TopBlogs() {
               <p className='flex-blog-card-content-para'>{sortedBlogs[1].paragraph}</p>
               <p className='flex-blog-card-content-name'>{sortedBlogs[1].name}</p>
             </div>
-          </div>
+          </Link>
 
 
-          <div className="flex-blog-cards">
+          <Link href={`/blogs/${sortedBlogs[2].link}`} className="flex-blog-cards">
             
             <p className='mb-3 blog-card-content-category'>{sortedBlogs[2].category}</p>
             <Image className="flex-blogs-page-blog-img mb-5" src={sortedBlogs[2].image} alt={sortedBlogs[2].heading} height={500} width={500} />
@@ -306,9 +314,9 @@ function TopBlogs() {
               <p className='flex-blog-card-content-para'>{sortedBlogs[2].paragraph}</p>
               <p className='flex-blog-card-content-name'>{sortedBlogs[2].name}</p>
             </div>
-          </div>
+          </Link>
 
-          <div className="flex-blog-cards">
+          <Link href={`/blogs/${sortedBlogs[3].link}`}className="flex-blog-cards">
             <p className='mb-3 blog-card-content-category'>{sortedBlogs[3].category}</p>
             <Image className="flex-blogs-page-blog-img mb-5" src={sortedBlogs[3].image} alt={sortedBlogs[3].heading} height={500} width={500} />
             <div className='flex-blog-content'>
@@ -316,7 +324,7 @@ function TopBlogs() {
               <p className='flex-blog-card-content-para'>{sortedBlogs[3].paragraph}</p>
               <p className='flex-blog-card-content-name'>{sortedBlogs[3].name}</p>
             </div>
-          </div>
+          </Link>
         </div>
 
         {/* latest blogs list */}
@@ -325,7 +333,7 @@ function TopBlogs() {
           <div ref={latestBlogTriggerRef} className="flex">
             <div ref={latestBlogSectionRef} className="blog-page-latest-blog-list">
               {paginatedBlogs.map((blog) => (
-                <div className='blog-page-latest-blog-card' key={blog.id}>
+                <Link href={`/blogs/${blog.link}`} className='blog-page-latest-blog-card' key={blog.id}>
                     <Image className='blog-page-lastest-blog-card-img' src={blog.image} alt={blog.heading} height={500} width={500} />
 
                     <div className='blog-page-lastest-blog-card-content'>
@@ -335,11 +343,11 @@ function TopBlogs() {
                       <p className='blog-page-lastest-blog-card-content-para'>{blog.paragraph}</p>
                       <div className='flex items-center'>
                         <p className='blog-page-lastest-blog-card-content-name'>{blog.name}</p>
-                        <p className='blog-page-lastest-blog-card-content-name'>{new Date(blog.time).toLocaleDateString()}</p>
+                        <p className='blog-page-lastest-blog-card-content-name'>{new Date(blog.time).toDateString()}</p>
                       </div>
                       
                     </div>
-                </div>
+                </Link>
               ))}
               <div className=' flex justify-between mx-9 '>
                 <button className='pagination-btn' onClick={() => setCurrentPage((prev) => prev - 1)} disabled={currentPage === 1}>

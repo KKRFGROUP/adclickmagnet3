@@ -211,7 +211,17 @@ module.exports = {
         },
         {
           protocol: 'https',
-          hostname: 'tse4.mm.bing.net',
+          hostname: 'png.pngtree.com',
+          port: '',
+        },
+        {
+          protocol: 'http',
+          hostname: 'www.threegirlsmedia.com',
+          port: '',
+        },
+        {
+          protocol: 'http',
+          hostname: 'eliteflowpiping.com',
           port: '',
         },
       ], 
