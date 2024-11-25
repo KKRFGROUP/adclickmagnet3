@@ -6,7 +6,7 @@ export default function Section6() {
   return (
     <div className="sec6-container">
 
-    <HeroParallax products={products} />;
+      <HeroParallax products={products} />;
     </div>
   )
 }

@@ -175,10 +175,9 @@ body{
 }
 .hero-content {
     position: absolute;
-    top: 25vh;
+    top: 40%;
     width: max-content;
-    margin-left: 50px;
-    
+    margin-left: 50px;  
 }
 
 
@@ -235,8 +234,7 @@ body{
 
 /* section 2 */
 .Companies-partner {
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
+    border-radius: 50px;
     background-image: linear-gradient(90deg, #bccacf,#bccacf, #000);
     color: #000;
     padding: 40px;
@@ -252,7 +250,7 @@ body{
 }
 .sec2-company-logo {
     margin-right :20px;
-    width: 17%;
+    width: 15%;
 }
 
 .sec2-container {
@@ -360,6 +358,12 @@ body{
     height: 120vh;
 }
 
+@media (max-width: 1028px) {
+    .sec3-model {
+        height: 90vh;
+    }
+}
+
 @media (max-width: 768px) {
     .sec3-model {
         height: 50vh;
@@ -455,8 +459,7 @@ body{
 
 /* section 6 */
 
-.sec6-container {
-}
+
 
 
 /* Optimize section 6 */
@@ -589,8 +592,35 @@ body{
         width: 40%;
     }
     .about-sec-below-design-content-para {
-        font-size: 10px;
-        
+        font-size: 10px;  
+    }
+}
+
+@media (max-width:575px) {
+    .home-about-design-mobile{
+        display: flex;
+        justify-content: flex-start ;
+    }
+    .about-se-design-cont{
+        flex-direction: column;
+    }
+    .about-design {
+        flex-direction: column;
+    }
+    .dooted-line {
+        border-top: 40px dashed grey;
+        width: 2px;
+    }
+    .dooted-line-last {
+        display: none;
+    }
+    .about-sec-below-design-content{
+        flex-direction: column;
+        width: 100%;
+    }
+    .about-sec-below-design-content-para {
+        width: 100%;
+        margin-bottom: 25px;  
     }
 }
 
@@ -609,7 +639,7 @@ body{
     box-shadow: 0px 0px 10px 1px #000;
 }
 .team-sec-content {
-    width: 40%;
+    width: 50%;
 }
 .team-behind {
     font-weight: bold;
@@ -640,17 +670,18 @@ body{
 }
 .team-sec-image {
     border-radius: 50px;
+    width: 45%;
 }
 .small-img {
     position: relative;
     top: 200px;
     right: 100px;
-    height: 320px;
-    width: 280px;
+    height: 35%;
+    width: 30%;
     border: 10px solid #000;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1028px) {
     .team-sec-container {
         height: max-content;
         padding: 50px;
@@ -678,8 +709,21 @@ body{
     }
     .small-img {
         position: relative;
-        top: 130px;
-        width: 60%;
+        top: 150px;
+        width: 40%;
+        height: 95%;
+        border: 10px solid #000;
+    }
+}
+
+@media (max-width: 575px) {
+    .team-sec-image {
+        width: 90%;
+    }
+    .small-img {
+        position: relative;
+        top: 150px;
+        width: 45%;
         height: 95%;
         border: 10px solid #000;
     }
@@ -703,8 +747,8 @@ body{
     background-color: #E2E2E2;
     box-shadow: 0px 0px 20px 1px #fff;
     padding: 100px;
-    border-radius: 50px;
-    
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
     height: max-content;
     color: #000;
 }
@@ -768,9 +812,23 @@ body{
     font-size: 20px;
     font-weight: bold;
 }
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
 .sec7-logo-container {
+    overflow-x: hidden;
+    white-space: nowrap;
+    animation: scroll-left 10s reverse infinite;
     display: flex;
-    flex-wrap: wrap;
+    will-change: transform; 
+    justify-content: space-between;
 }
 
 
@@ -791,9 +849,58 @@ body{
 
 
 
-/* section 8 */
-.sec8-container {
+/* client video */
+
+.client-video-section {
+    background-color: #E2E2E2;
+    padding: 80px;
+    text-align: center;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
+
+.client-videos-card {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 7%;
+}
+.client-video-card {
+    font-family: "Unbounded";
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+    height: 70vh;
+    width: 25%;
+}
+
+.client-video-card-div {
+    height: max-content;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+.client-video-card-video {
+    border-radius: 20px;
+    
+}
+
+@media (max-width: 768px) {
+    .client-video-section {
+        position: relative;
+        bottom: 5%;
+        padding: 30px;
+        padding-top: 50px;
+    }
+    .client-video-card {
+        height: 70vh;
+        width: 50%;
+    }
+}
+
 
 /* section 9 */
 

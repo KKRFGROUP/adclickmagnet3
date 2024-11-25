@@ -45,7 +45,7 @@ export const projects = [
     title: "Web Development",
     description:
       "Create cutting-edge websites tailored to your brand and user needs.",
-    link: "/website-development",
+    link: "/web-development",
     imageUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1731673056/Website_Developer_Logo_djqgpq.png"
   },
   {
@@ -59,7 +59,7 @@ export const projects = [
     title: "LinkedIn",
     description:
       "Use LinkedIn marketing to expand networks and enhance your brand.",
-    link: "/linkedin",
+    link: "/linkedin-ads",
     imageUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1731676028/LinkedIn_Logo_ekl0mc.png"
   },
 ];

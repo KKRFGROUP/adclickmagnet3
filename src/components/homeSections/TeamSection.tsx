@@ -5,7 +5,7 @@ import teamImg from '../../public/images/GettyImages-1437209359.webp'
 
 export default function TeamSection() {
     return(
-        <div className="team-sec-container flex items-center justify-between w-full">
+        <div className="flex items-center justify-between w-full team-sec-container">
             <div className="team-sec-content">
                 <h2 className="team-behind">
                 THE TEAM BEHIND
@@ -16,7 +16,7 @@ export default function TeamSection() {
             </div>
             <div className="team-sec-image-container flex justify-end">
                 <Image className="team-sec-image" width={400} height={300} alt="team-img" src="https://numerique.vamtam.com/wp-content/uploads/2023/05/GettyImages-1436826358.jpg" />
-                <Image className="team-sec-image small-img" width={100} height={100} alt="team-img" src={teamImg} />
+                <Image className="team-sec-image small-img" width={500} height={500} alt="team-img" src={teamImg} />
 
             </div>
         </div>

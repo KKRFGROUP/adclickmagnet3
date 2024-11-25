@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@axe-core/react": "^4.10.1",
     "@next/env": "^15.0.0",
     "@nextui-org/accordion": "^2.0.40",
     "@nextui-org/navbar": "^2.0.37",
@@ -23,6 +24,7 @@
     "@studio-freight/react-lenis": "^0.0.47",
     "@tabler/icons-react": "^3.19.0",
     "animate.css": "^4.1.1",
+    "axe-core": "^4.10.2",
     "clsx": "^2.1.1",
     "flickity": "^3.0.0",
     "framer-motion": "^11.11.9",

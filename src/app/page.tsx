@@ -12,6 +12,7 @@ import Section7 from "@/components/homeSections/Section7";
 import Section8 from "@/components/homeSections/Section8";
 import Section9 from "@/components/homeSections/Section9";
 import Footer from "@/components/Footer";
+import ClientVideSec from "@/components/homeSections/ClientVideSec";
 //import { useEffect, useState } from "react";
 //import Loading from "@/components/Loading";
 //import TextSection from '@/components/TextSection'
@@ -36,6 +37,7 @@ export default function Home() {
           <TeamSection />
           <Section6 />
           <Section7 />
+          <ClientVideSec />
           <Section8 />
           <Section9 />
           <Footer />

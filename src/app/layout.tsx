@@ -2,6 +2,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+
 import NextTopLoader from 'nextjs-toploader';
 import Cursor from '../components/Cursor';
 const geistSans = localFont({
@@ -25,6 +26,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
+  
+
   return (
     <html lang="en" className="dark">
       
