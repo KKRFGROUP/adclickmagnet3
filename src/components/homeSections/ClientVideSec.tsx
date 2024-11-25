@@ -88,13 +88,15 @@ const clientVideos = [
 function ClientVideSec() {
 
 
-    const handleMouseEnter = (event) => {
-      event.target.pause();
+    const handleMouseEnter = (event: React.MouseEvent<HTMLVideoElement>) => {
+        const video = event.target as HTMLVideoElement;
+        video.play();
     };
     
-    const handleMouseLeave = (event) => {
-      event.target.pause();
-      event.target.currentTime = 0; // Reset to the start
+    const handleMouseLeave = (event: React.MouseEvent<HTMLVideoElement>) => {
+        const video = event.target as HTMLVideoElement; // Cast target to HTMLVideoElement
+        video.pause();
+        video.currentTime = 0; // Reset to the start
     };
         
   return (
