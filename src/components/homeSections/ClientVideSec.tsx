@@ -90,7 +90,7 @@ function ClientVideSec() {
 
     const handleMouseEnter = (event: React.MouseEvent<HTMLVideoElement>) => {
         const video = event.target as HTMLVideoElement;
-        video.play();
+        video.pause();
     };
     
     const handleMouseLeave = (event: React.MouseEvent<HTMLVideoElement>) => {
