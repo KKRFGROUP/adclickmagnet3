@@ -265,11 +265,6 @@ const section3dCards: {mainpara: string; head: string; cards: {head: string; par
           img: "https://5.imimg.com/data5/SELLER/Default/2024/6/428433457/KL/LG/NL/224212668/static-website-designing-service-500x500.jpg"
       },
       {
-          head: "Website Designing Services",
-          para: "Having a strong online presence is crucial for any business in today’s digital world. A well-designed website is the foundation of your online presence.",
-          img: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      },
-      {
           head: "E- commerce websites",
           para: "An e-commerce website is an online platform where businesses sell their products or services to customers over the internet.",
           img: "https://plus.unsplash.com/premium_photo-1683758344058-60a1506db480?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -283,11 +278,6 @@ const section3dCards: {mainpara: string; head: string; cards: {head: string; par
         head: "Corporate Website",
         para: "A corporate website serves as the digital face of a company, providing a comprehensive overview of its identity, offerings, and values to various stakeholders",
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqrj86bI16uGV1kXMZjFqkjm5Svokh6nAbBg&s"
-    },
-    {
-        head: "Web Portals",
-        para: "A web portal website serves as a gateway or centralized access point to a variety of information, services, and resources available on the internet.",
-        img: "https://plus.unsplash.com/premium_photo-1681433426886-3d6d17f79d53?q=80&w=2029&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
   ]
 } 

@@ -22,7 +22,7 @@ export const blogs: {
         id: 1,
         url: "https://numerique.vamtam.com/wp-content/uploads/2023/05/milad-fakurian-58Z17lnVS4U-unsplash-Copy.jpg",
         time: "May, 2023",
-        description: "The evolution of live-stream content and short-form video: a look at the TikTok revolution"
+        description: "Live-stream and short-form videos redefine content: the TikTok effect."
     },
     {
         id: 2,
@@ -34,7 +34,7 @@ export const blogs: {
         id: 3,
         url: "https://numerique.vamtam.com/wp-content/uploads/2023/05/milad-fakurian-58Z17lnVS4U-unsplash-Copy.jpg",
         time: "May, 2023",
-        description: "The evolution of live-stream content and short-form video: a look at the TikTok revolution"
+        description: "Live-stream and short-form videos redefine content: the TikTok effect."
     },
     {
         id: 4,
@@ -59,7 +59,7 @@ export default function Carousel({slides}: {slides: number;}) {
         {blogs.map(blog => (
             <SwiperSlide key={blog.id}>
             <div className='carousel-card'>
-                <Image className='blog-img' alt="blog img" src={blog.url} height={100} width={100} />
+                <Image className='blog-img' alt="blog img" src={blog.url} height={500} width={500} />
                     
                 <div className="blog-content flex-col justify-center">
                     <p className='blog-time'>{blog.time}</p>

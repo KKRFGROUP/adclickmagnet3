@@ -19,25 +19,25 @@ export default function Footer() {
           / Average ROAS</p>
           <p className="footer-para">across our 100+ Global<br /> Clients on SEO, PPC & Social</p>
         </div>
-        <SignupFormDemo />
+        <div className="footer-mobile-signup-form">
+          <SignupFormDemo />
+        </div>
       </div>
     </div>
     <div className="footer-container-2">
         <h2 className="solutions" >SOLUTIONS</h2>
-        <div className="solution-paras flex flex-wrap justify-between">
+        <div className="flex flex-wrap justify-between solution-paras">
           <Link href="web-development" className="solution-para"><p >Web Development</p></Link>
           <Link href="google-ads" className="solution-para"><p >Google Ads</p></Link>
           <Link href="seo" className="solution-para"><p >SEO</p></Link>
           <Link href="graphic-design" className="solution-para"><p >Graphic Design</p></Link>
-          <br />
-          <br />
+          
           <Link href="ad-creative" className="solution-para"><p >Ad Creative</p></Link>
           <Link href="motion-design" className="solution-para"><p >Motion Design</p></Link>
           <Link href="video-production" className="solution-para"><p >Video Production</p></Link>
           <Link href="presentation-design" className="solution-para"><p >Presentation Design</p></Link>
           
-          <br />
-          <br />
+          
         </div>
         
         <hr className='solution-gap-line'/>

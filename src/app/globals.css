@@ -22,9 +22,13 @@ body {
   scroll-behavior: smooth;
   scroll-snap-align: center;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 @media (max-width: 575px) {
-  body {
+  .custom-cursor {
+    top: 10px;
     cursor: default;
   }
 }

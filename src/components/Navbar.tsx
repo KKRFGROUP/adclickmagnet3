@@ -64,6 +64,8 @@ export default function Navbar({className}: {className?: string}) {
                                     <HoveredLink href="/google-ads">Google Ads</HoveredLink>
                                     <HoveredLink href="/linkedin-ads">Linkedin Ads</HoveredLink>
                                     <HoveredLink href="/meta-ads">Meta Ads</HoveredLink>
+                                    <HoveredLink href="/press-release">Press Release</HoveredLink>
+                                    <HoveredLink href="/blogs">Blogs</HoveredLink>
                                 </div>
                             </MenuItem>
                         
@@ -110,7 +112,9 @@ export default function Navbar({className}: {className?: string}) {
 
                             <nav className="mobile-navlinks">
                                 <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
-                                <Link href="/about" onClick={() => setIsOpen(false)}>Who We Are</Link>
+                                <Link href="/about-us" onClick={() => setIsOpen(false)}>Who We Are</Link>
+                                <Link href="/press-release" onClick={() => setIsOpen(false)}>Press Release</Link>
+                                <Link href="/blogs" onClick={() => setIsOpen(false)}>Blogs</Link>
                                 <div className="flex justify-between items-center">
                                     <p>services</p>
                                     <div onClick={() => setServices(!services)}>

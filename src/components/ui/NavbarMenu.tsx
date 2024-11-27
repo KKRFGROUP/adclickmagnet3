@@ -73,20 +73,20 @@ export const Menu = ({
 }) => {
 
   return (
-    <div  className="navbar relative rounded-full border border-transparent dark:bg-white/[0.4] dark:border-black bg-white shadow-input flex justify-between items-center space-x-4 px-8 py-4 md:px-3 md:py-3 mx-10 ">
+    <div  className="navbar relative rounded-full border border-transparent dark:bg-white/[0.4] dark:border-black bg-white shadow-input flex justify-between items-center space-x-4 px-8 py-2 md:py-3 md:px-3 mx-10 ">
           <Link href="/" className="navbar-logo">      
-            <Image width={200} height={200} src={adclickImage} alt="logo"  />
+            <Image className="navbar-company-logo" width={200} height={200} src={adclickImage} alt="logo"  />
           </Link>
         <nav
           onMouseLeave={() => setActive(null)} // resets the state
-          className="relative rounded-full border border-transparent shadow-2xl shadow-black  dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-between items-center space-x-4 px-10 md:px-7 py-4 md:py-7 navlinks"
+          className="relative rounded-full border border-transparent shadow-2xl shadow-black  dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-between items-center space-x-4 px-10 md:px-7 py-3 md:py-4 navlinks"
           >
         
           {children}
           
         </nav>
         <Link href="/contact-us">
-        <button type="button" className="getintouch-card flex items-center justify-center view">
+        <button type="button" className="flex items-center justify-center py-2 md:py-3 px-5 getintouch-card">
                             Get in touch
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                                 className="bi bi-arrow-right-short" viewBox="0 0 16 16">

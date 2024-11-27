@@ -1,17 +1,9 @@
 
-import React from "react";
-import { HeroParallax } from "../ui/HeroParallax";
+import React from "react"
+import { HeroParallax } from "../ui/HeroParallax"
 
-export default function Section6() {
-  return (
-    <div className="sec6-container">
 
-      <HeroParallax products={products} />;
-    </div>
-  )
-}
-
-export const products = [
+const products = [
   {
     title: "card 1",
     link: "/",
@@ -81,4 +73,16 @@ export const products = [
       head: "Content Planning & Analytics",
       para: "Seamless content research, planning, and tracking capabilities"
   }
-];
+]
+
+
+export default function Section6() {
+  return (
+    <div className="sec6-container">
+
+      <HeroParallax products={products} />
+    </div>
+  )
+}
+
+

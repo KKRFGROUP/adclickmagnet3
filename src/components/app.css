@@ -60,6 +60,11 @@ body{
     
 }
 
+.navbar-company-logo {
+    height: 70px;
+    width: 200px;
+}
+
 .what-we-do-links {
     height: max-content;
 }
@@ -83,7 +88,6 @@ body{
     width: auto;
     font-size: 16px;
     gap: 4px;
-    padding: 15px 25px;
     border-radius: 3.4rem;
     text-decoration: none;
     cursor: none;
@@ -136,17 +140,6 @@ body{
     .navbar {
         display: none;
     }
-    .navbar-logo {
-        width: 70%;
-    }
-    .getintouch-card {
-        width: 30vw;
-        font-size: 10px;
-        padding: 0px 0px;
-    }
-    .navlinks {
-        width: 70%;
-    }
     
 }
 @media (max-width: 991px) {
@@ -154,12 +147,15 @@ body{
         width: 20%;
     }
     .getintouch-card {
-        width: 15vw;
-        font-size: 14px;
+        width: 17vw;
+        font-size: 13px;
         padding: 10px;
     }
     .navlinks {
-        width: 80%;
+        width: 60%;
+    }
+    .navlinks:hover {
+        width: 60%;
     }
     
 }
@@ -175,9 +171,10 @@ body{
 }
 .hero-content {
     position: absolute;
-    top: 40%;
-    width: max-content;
-    margin-left: 50px;  
+    top: 35%;
+    width: 100%;
+    margin-left: 30px;
+      
 }
 
 
@@ -204,9 +201,9 @@ body{
     }
     .hero-content {
         position: absolute;
-        top: 30vh;
-        margin-left: 20px;
-        
+        top: 30%;
+        align-items: center;
+        margin-left: 0px;
     }
 }
 .inner-color-title{
@@ -215,6 +212,7 @@ body{
     -webkit-background-clip: text;
     font-size: 45px;
     font-family: "Syne";
+    mix-blend-mode: difference;
 }
 @media (max-width: 768px) {
     .inner-color-title {
@@ -745,7 +743,7 @@ body{
 
 .sec7-container {
     background-color: #E2E2E2;
-    box-shadow: 0px 0px 20px 1px #fff;
+    box-shadow: 0px -1px 10px 1px #E2E2E2;
     padding: 100px;
     border-top-right-radius: 50px;
     border-top-left-radius: 50px;
@@ -753,65 +751,8 @@ body{
     color: #000;
 }
 
-.sec7-head {
-    font-weight: bold;
-    font-size: 45px;
-    margin-bottom: 40px;
-}
-.blue-text {
-    color: blue;
-}
 
-.company-img{
-    margin: 25px;
-}
-.sec7-companies-logos {
-    width: 70%;
 
-}
-
-.sec7-right-card {
-    background-color: #000;
-    border-radius: 15px;
-    padding: 40px;
-    width: 43%;
-    transition: 0.4s;
-}
-.sec7-right-card:hover {
-    box-shadow: 0px 0px 20px 1px #000;
-}
-
-.sec7-right-card-head {
-    font-weight: bold;
-    font-size: 30px;
-    margin-bottom: 20px;
-    color: #fff;
-}
-.yellow-text {
-    color: blue;
-}
-.sec7-right-card-button {
-    width: 100%;
-    height: 50px;
-    background-color: #E2E2E2;
-    
-    border-radius: 10px;
-    color: #825fff;
-    font-weight: bold;
-    font-size: 20px;
-}
-.sec7-right-card-para {
-    font-size: 20px;
-    font-weight: bold;
-    color: #fff;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-.sec7-right-card-span {
-    color: skyblue;
-    font-size: 20px;
-    font-weight: bold;
-}
 
 @keyframes scroll-left {
     0% {
@@ -819,30 +760,37 @@ body{
     }
 
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-90%);
     }
 }
 .sec7-logo-container {
     overflow-x: hidden;
     white-space: nowrap;
-    animation: scroll-left 10s reverse infinite;
+    animation: scroll-left 10s linear infinite;
     display: flex;
     will-change: transform; 
+    width: max-content;
     justify-content: space-between;
 }
-
+.sec7-logo {
+    margin-left: 20px;
+    margin-right: 20px;
+}
 
 
 @media (max-width: 768px) {
     .sec7-container {
         padding: 50px;
         position: relative;
-        bottom: 20px;
+        bottom: 0px;
         height: max-content;
     }
     .sec7-logo {
         margin: 10px;
         width: 40%;
+    }
+    .sec7-logo-container {
+        width: max-content;
     }
     
 }
@@ -888,15 +836,31 @@ body{
     
 }
 
+
+@media (max-width: 1028px) {
+    .client-video-card {
+        height: 50vh;
+    }
+}
+
+
 @media (max-width: 768px) {
     .client-video-section {
-        position: relative;
-        bottom: 5%;
         padding: 30px;
         padding-top: 50px;
     }
     .client-video-card {
         height: 70vh;
+        width: 50%;
+    }
+}
+
+@media (max-width: 575px) {
+    .client-videos-card {
+        margin-top: 10%;
+    }
+    .client-video-card {
+        height: 55vh;
         width: 50%;
     }
 }
@@ -923,12 +887,14 @@ body{
     color: #000;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1028px) {
     .sec9-container {
         height: max-content;
-        padding: 50px;
+        padding: 20px;
+        padding-top: 50px;
+        padding-bottom: 70px;
         position: relative;
-        top: 25px;
+        top: 0px;
     }
     .about-sec-head-carousel {
         flex-direction: column;
@@ -974,8 +940,8 @@ body{
 }  
 
 .blog-img {
-    width: 30px;
-    height: 50px;
+    width: 100%;
+    height: 35%;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
   }
@@ -986,16 +952,20 @@ body{
     width: 70vw;
     margin-top: 20px;
 }
+.carousel-card {
+    height: 70%;
+}
 
 .blog-content {
     background-color: #000000;
     position: relative;
     bottom: 60px;
-    height: 160px;
+    height: 65%;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
-    color: #fff;
+    color: #E2E2E2;
     padding: 20px;
+    padding-bottom: 20px;
     text-align: left;
   }
 
@@ -1018,11 +988,41 @@ body{
     font-size: 15px;
 }
 
-@media (max-width: 768px) {
+
+
+@media (max-width: 1028px) {
+    .carousel-container {
+        width: 100%;
+        position: relative;
+        left: 0px;
+    }
     .blog-sec-head {
         font-size: 30px;
+        margin-bottom: 30px;
     }
+    .swiper-container {
+        width: 100%;
+    }
+    .carousel-card {
+        width: 100%;
+    }
+    .blog-img {
+        width: 100%;
+        height: 50%;
+    }
+    .blog-time {
+      font-size: 17px;
+    }
+    .blog-des {
+        font-size: 17px;
+    }
+    .blog-content {
+        height: 140px;
+        bottom: 30px;
+    }
+}
 
+@media (max-width: 575px) {
     .carousel-container {
         display: none;
     }
@@ -1033,25 +1033,21 @@ body{
         margin-top: 30px;
     }
     .swiper-container {
-        width: 100%;
+        width: 90%;
     }
     .carousel-card {
         width: 100%;
     }
-    .blog-img {
-        width: 50vw;
-        height: 75px;
-      }
-      .blog-time {
-        font-size: 11px;
-      }
-    .blog-des {
-        font-size: 11px;
+    .blog-sec-head {
+        font-size: 30px;
+        margin-bottom: 30px;
     }
-    .blog-content {
-        height: 140px;
-        bottom: 30px;
-    }
+    .blog-time {
+        font-size: 17px;
+      }
+      .blog-des {
+          font-size: 17px;
+      }
 }
 
 
@@ -1064,8 +1060,8 @@ body{
     position: relative;
     bottom: 50px;
     height: max-content;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
     border-radius: 50px;
     padding: 70px;
 }
@@ -1073,7 +1069,7 @@ body{
     font-family: "Syne", sans-serif;
     font-weight: bold;
     font-size: 40px;
-    margin-bottom: 180px;
+    margin-bottom: 20%;
 }
 .avg-para {
     font-weight: bold;
@@ -1088,6 +1084,19 @@ body{
     top: 10px;
 }
 
+@media (max-width: 1028px) {
+    .footer-container-1 {
+        margin-left: 30px;
+        margin-right: 30px;
+        padding: 50px;
+        padding-top: 40px;
+    }
+    .footer-head {
+        font-size: 30px;
+        margin-bottom: 15%;
+    }
+}
+
 @media (max-width: 768px) {
     
     .footer-container-1 {
@@ -1098,8 +1107,12 @@ body{
         padding: 20px;
         padding-top: 40px;
     }
+    .footer-mobile-signup-form {
+        display: flex;
+        justify-content: center;
+    }
     .footer-head {
-        font-size: 20px;
+        font-size: 40px;
         margin-bottom: 50px;
     }
     .footer-container-1-head-form {
@@ -1128,6 +1141,7 @@ body{
 }
 .solution-para {
     width: 25%;
+    margin-bottom: 30px;
     color: grey;
 }
 
@@ -1148,6 +1162,7 @@ body{
     .footer-container-2 {
         padding: 20px;
         padding-top: 40px;
+        padding-bottom: 40px;
         bottom: 110px;
         height: max-content;
         margin-left: 20px;
@@ -1163,6 +1178,8 @@ body{
     }
     .solution-page-link {
         width: 30%;
+        display: flex;
+        justify-content: center;
         height: 50px;
         font-size: 15px;
     }
