@@ -85,27 +85,27 @@ const section3 = {
     heading: [
       {  
         text: "Web",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
       {
         text: "development",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
       {
         text: "for",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
       {   
         text: "websites",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
       {
         text: "that",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
       {  
         text: "excel",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
     ],
     para1: "The need for reliable, scalable websites has never been greater. When your priority is a seamless digital experience, ACM’s flexible web development services are the solution.",
@@ -122,7 +122,7 @@ const section4: {mainpara: string; head: string;para?: string; cards: {logo: Rea
     {
       logo: <FcCollect className='text-3xl' />,
       head: "Requirements Gathering",
-      para: "Define your website’s objectives, target audience, and content focus. This foundation creates a clear vision to guide the design and development stages, ensuring the website meets its goals."
+      para: "Define your website’s objectives, audience, and content focus. This foundation provides a clear vision to guide design and development, ensuring the website achieves its goals."
     },
     {
       logo: <GrPlan className='text-3xl' />,
@@ -217,11 +217,6 @@ const section6 = {
         name: "Drupal",
         para: "Utilize Drupal’s powerful CMS features to create content-rich websites that adapt to complex requirements and high levels of customization."
       },
-      {
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNQsFL-tSq1eIsxkJP5ZW55YfiGFOqWpN8sQ&s",
-        name: "Custom Solutions",
-        para: "Have specific needs? Our experienced global team can create tailored solutions across various platforms, ensuring your web presence is effective and unique."
-      },
     ]
   };
   
@@ -300,7 +295,7 @@ const section8 = {
       {
         title: "DEVELOPMENT HOURS",
         count: "150K+",
-        para: "Hours spent on high-quality web development and design."
+        para: "Hours spent on high-quality web development."
       },
       {
         title: "CLIENT SATISFACTION",
@@ -440,7 +435,7 @@ function WebDev() {
         <Section3  content={section3}/>
         <Section4 content={section4} roundb='rounded-b-[50px]'/>
         <Section6 content={section6} translate="-100%"/>
-        <Cards3dSections translate='-150%' content={section3dCards} className="rounded-[50px]"/>
+        <Cards3dSections translate='-50%' content={section3dCards} className="rounded-[50px]"/>
         <Section7 content={section7}/>
         <Section8 content={section8}/>
         <ContactOurExperts />

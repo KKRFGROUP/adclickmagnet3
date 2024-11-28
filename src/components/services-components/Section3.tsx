@@ -7,11 +7,13 @@ import { IoMdCheckmark } from "react-icons/io";
 
 function Section3({content, order, roundb, hide}: {content: {mainpara: string; heading: {text: string; className: string;}[]; para1: string; para2: string; image: string;}; order?: string;roundb?: string;hide?: string;}) {
     const lines = content.para2.split('\n');
+    
+    
   return (
     <div id="service-section3" className={` pt-[130px]   flex justify-between services-sec3-flex-main-component ${roundb}`}>
-       <div className={`w-[50%] services-sec3-content ${order}`}>
+       <div className={` services-sec3-content ${order}`}>
             <p className='services-secs-main-para'>{content.mainpara}</p>
-            <div className='md:w-[30vw] mt-7 mb-9'>
+            <div className=' mt-7 mb-9'>
                 <TypewriterEffect className="services-secs-head" words={content.heading} />
             </div>
             <p className="services-secs-content-para">{content.para1}</p>

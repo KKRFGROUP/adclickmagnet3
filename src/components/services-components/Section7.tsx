@@ -1,6 +1,5 @@
 import React from 'react'
 import { TypewriterEffect } from "../ui/TypewriterEffect";
-import { FaAngleRight } from "react-icons/fa6";
 
 
 
@@ -19,9 +18,7 @@ function Section7({content}: {content: {mainpara: string; heading: {text: string
                 <p className="services-sec7-content-para mb-9">{content.para2}</p>
                 <div className="flex items-center">
                     <button type="button" className='book-a-call'>Book a call</button>
-                    <button type="button" className='ai-design-service flex items-center'>{content.button}
-                        <FaAngleRight />
-                    </button>
+                    
                 </div>
             </div>
         </div>

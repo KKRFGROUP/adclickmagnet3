@@ -34,7 +34,7 @@ const words1 = [
 
 function FAQ({content}: {content: {mainpara: string; people: {id: number;name: string;designation: string;image: string;}[]; list: {id: string;title: string; description: string;}[]}}) {
   return (
-    <div className="p-[90px] h-[150vh] flex justify-between items-start faq-container">
+    <div className="flex justify-between items-start faq-container">
        <div className="w-[50%] faq-content">
             <p className='services-secs-main-para'>{content.mainpara}</p>
             <div className='w-[35vw] mt-7 mb-9 faq-content-head'>

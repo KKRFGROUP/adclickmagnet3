@@ -7,7 +7,7 @@ import Image from 'next/image';
 function Section2({Cards}: {Cards: {id: number; imgUrl: string; customer: string; industry: string;}[]}) {
   return (
     <div className=" services-sec2-main-component">
-        <div className="flex-col h-[100vh] w-[25%] p-0 m-0 services-sec2-flex-card">
+        <div className="flex-col  p-0 m-0 services-sec2-flex-card">
             <div className="services-sec2-card h-[65%]">
                 <Image className='services-sec2-card-img h-[80%]' src={Cards[0].imgUrl} alt={Cards[0].customer} height={300} width={300} />
                 <div className="flex justify-between services-sec2-card-content">

@@ -13,6 +13,7 @@ body{
     flex-direction: column;
     justify-content: center;
     font-family: "Oswald", sans-serif;
+    height: max-content;
     
     .spline {
         position: absolute;
