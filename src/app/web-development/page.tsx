@@ -409,14 +409,13 @@ function WebDev() {
       <TracingBeam>
 
         <Navbar />
-        <section data-bgcolor="#070707" data-textcolor="#ffffff">
-          <HeroSection heading={heroContent.heading} para={heroContent.para} />
-        </section>
+        <HeroSection heading={heroContent.heading} para={heroContent.para} />
+        
         <Section2 Cards={section2}/>
         <Section3  content={section3}/>
         <Section4 content={section4} roundb='rounded-b-[50px]'/>
-        <Section6 content={section6} translate="-50%"/>
-        <Cards3dSections translate='-160%' content={section3dCards} className="rounded-[50px]"/>
+        <Section6 content={section6} translate="-50%" responsiveTranslate="-75%"/>
+        <Cards3dSections translate='-70%' responsiveTraslate="-90%" end="+=500"  content={section3dCards} className="rounded-[50px]"/>
         <Section7 content={section7}/>
         <Section8 content={section8}/>
         <ContactOurExperts />
@@ -425,23 +424,21 @@ function WebDev() {
       </TracingBeam>
     </div>
     <div className='page-main mobile-tracing-beam'>
-      <TracingBeam>
-
+      
         <Navbar />
-        <section data-bgcolor="#070707" data-textcolor="#ffffff">
           <HeroSection heading={heroContent.heading} para={heroContent.para}/>
-        </section>
+        
         <Section2 Cards={section2}/>
         <Section3  content={section3}/>
         <Section4 content={section4} roundb='rounded-b-[50px]'/>
         <Section6 content={section6} translate="-100%"/>
-        <Cards3dSections translate='-50%' content={section3dCards} className="rounded-[50px]"/>
+        <Cards3dSections translate='-70%' responsiveTraslate="-90%" end="+=500" content={section3dCards} className="rounded-[50px]"/>
         <Section7 content={section7}/>
         <Section8 content={section8}/>
         <ContactOurExperts />
         <FAQ  content={faq}/>
         <Footer />
-      </TracingBeam>
+      
     </div>
     </>
   )

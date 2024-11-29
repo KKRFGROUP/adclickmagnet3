@@ -94,27 +94,27 @@ const section3 = {
     heading: [
       {  
         text: "LinkedIn",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
       {
         text: "Ads",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
       {
         text: "Solutions",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
       {   
         text: "that",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
       {
         text: "Deliver",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
       {  
         text: "Growth",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
     ],
     para1: "In today’s professional network-driven world, LinkedIn Ads offer a powerful way to amplify your brand, connect with decision-makers, and drive meaningful business growth. Our customized LinkedIn Ads services ensure your campaigns resonate with the right audience for maximum visibility and ROI.",
@@ -225,11 +225,6 @@ const section6 = {
         img: "https://cdn.shopify.com/app-store/listing_images/415acef59ea18c992554e646bb315f54/icon/CNnqi5_U0fUCEAE=.png",
         name: "ClickCease",
         para: "Safeguard your LinkedIn Ads budget with ClickCease by identifying and preventing fraudulent clicks for better campaign performance."
-      },
-      {
-        img: "https://w7.pngwing.com/pngs/679/637/png-transparent-hotjar-logo-thumbnail-tech-companies-thumbnail.png",
-        name: "Hotjar",
-        para: "Analyze user experience on your landing pages with Hotjar to optimize conversions and enhance the overall campaign impact."
       },
     ]
 };
@@ -453,9 +448,9 @@ function LinkedInAds() {
         <Section2 Cards={section2}/>
         <Section3  content={section3}/>
         <Section4 content={section4} roundb='rounded-b-[50px] h-[200vh]'/>
-        <Section6 content={section6} translate="-50%"/>
+        <Section6 content={section6} translate="-60%" responsiveTranslate="-85%"/>
         <DynamicContentCard content={dynamicContentSec}/>
-        <Cards3dSections translate='-160%' content={section3dCards} className="rounded-[50px]"/>
+        <Cards3dSections translate='-60%' responsiveTraslate="-90%" end="+=500" content={section3dCards} className="rounded-[50px]"/>
         
         <Section8 content={section8}/>
         <ContactOurExperts />
@@ -465,7 +460,6 @@ function LinkedInAds() {
     </div>
 
     <div className='page-main mobile-tracing-beam'>
-      <TracingBeam>
       <Navbar />
         <section data-bgcolor="#070707" data-textcolor="#ffffff">
           <HeroSection heading={heroContent.heading} para={heroContent.para} />
@@ -473,15 +467,14 @@ function LinkedInAds() {
         <Section2 Cards={section2}/>
         <Section3  content={section3}/>
         <Section4 content={section4} roundb='rounded-b-[50px] h-[200vh]'/>
-        <Section6 content={section6} translate="-50%"/>
+        <Section6 content={section6} translate="-60%" responsiveTranslate="-85%"/>
         <DynamicContentCard content={dynamicContentSec}/>
-        <Cards3dSections translate='-160%' content={section3dCards} className="rounded-[50px]"/>
+        <Cards3dSections translate='-60%' responsiveTraslate="-90%" end="+=500" content={section3dCards} className="rounded-[50px]"/>
         
         <Section8 content={section8}/>
         <ContactOurExperts />
         <FAQ  content={faq}/>
         <Footer />
-      </TracingBeam>
     </div>
     </>
   )

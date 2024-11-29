@@ -142,6 +142,8 @@ export default function Navbar({className}: {className?: string}) {
                                         <Link className="w-full mb-3" href="/google-ads" onClick={() => setIsOpen(false)}>google ads</Link>
                                         <Link className="w-full mb-3" href="/web-development" onClick={() => setIsOpen(false)}>web development</Link>
                                         <Link className="w-full mb-3" href="/seo" onClick={() => setIsOpen(false)}>seo</Link>
+                                        <Link className="w-full mb-3" href="/linkedin-ads" onClick={() => setIsOpen(false)}>Linkedin Ads</Link>
+                                        <Link className="w-full mb-3" href="/meta-ads" onClick={() => setIsOpen(false)}>Meta Ads</Link>
                                     </div>
                                 )}
                                 

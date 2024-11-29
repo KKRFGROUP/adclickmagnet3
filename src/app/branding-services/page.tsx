@@ -86,23 +86,23 @@ const section3:{mainpara: string; heading: {text: string; className: string;}[];
   heading: [
     {  
       text: "Strategic",
-      className: "text-white dark:text-white-500 tracking-wider",
+      className: "text-black dark:text-white-500 tracking-wider",
     },
     {
         text: "branding",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
     },
     {
         text: "for",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
     },
     {   
         text: "every",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
     },
     {
         text: "business",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
     },
 ],
   para1: "Brands are fueled by a mixture of emotion and strategy. The true art of branding design is combining both—to stand out from the competition and forge memorable connections.",

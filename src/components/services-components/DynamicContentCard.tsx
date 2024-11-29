@@ -8,7 +8,7 @@ function DynamicContentCard({content} : {content: {id: number; title: string; lo
     const [active, setActive] = useState(1);
     const activeCard = content[active -1];
   return (
-        <div className="relative h-[120vh] rounded-[50px] dark:bg-black dark:text-white  flex-col justify-center items-center text-center services-dynamic-main-container">
+        <div className="relative  rounded-[50px] dark:bg-black dark:text-white  flex-col justify-center items-center text-center services-dynamic-main-container">
         <h2 className="services-secs-head mb-5">How Do Google Ads Campaign Management Services Work?</h2>
 
         <Image alt="google logo" className="dynamic-content-card-right-object" src={google3dimage} height={200} width={200} />

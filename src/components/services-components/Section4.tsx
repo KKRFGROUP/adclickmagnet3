@@ -9,7 +9,7 @@ function Section4({content , roundb}: {content: {mainpara: string; head: string;
         <p className="services-secs-content-para" >{content.para}</p>
         <div className="flex flex-wrap mt-[60px] services-sec4-content-cards">
             {content.cards.map((each, index) => (
-                <div key={index} className="m-4  text-left services-sec4-content-card">
+                <div key={index} className={`m-4  text-left ${index%2==1 ? "services-sec4-content-card-right" : "services-sec4-content-card"}`} >
                     <div  className="services-sec4-card-logo flex justify-center items-center">
                         {each.logo}
                     </div>

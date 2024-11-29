@@ -82,14 +82,14 @@ const section2 = [
 const section3a = {
   mainpara: "ENGINEERED FOR IMPACT",
   heading: [
-    { text: "Unleash", className: "text-white dark:text-white-500 tracking-wider" },
-    { text: "the", className: "text-white dark:text-white-500 tracking-wider" },
-    { text: "power", className: "text-white dark:text-white-500 tracking-wider" },
-    { text: "of", className: "text-white dark:text-white-500 tracking-wider" },
-    { text: "video", className: "text-white dark:text-white-500 tracking-wider" },
-    { text: "for", className: "text-white dark:text-white-500 tracking-wider" },
-    { text: "your", className: "text-white dark:text-white-500 tracking-wider" },
-    { text: "marketing", className: "text-white dark:text-white-500 tracking-wider" },
+    { text: "Unleash", className: "text-black dark:text-white-500 tracking-wider" },
+    { text: "the", className: "text-black dark:text-white-500 tracking-wider" },
+    { text: "power", className: "text-black dark:text-white-500 tracking-wider" },
+    { text: "of", className: "text-black dark:text-white-500 tracking-wider" },
+    { text: "video", className: "text-black dark:text-white-500 tracking-wider" },
+    { text: "for", className: "text-black dark:text-white-500 tracking-wider" },
+    { text: "your", className: "text-black dark:text-white-500 tracking-wider" },
+    { text: "marketing", className: "text-black dark:text-white-500 tracking-wider" },
   ],
   para1: 
     "Harness the power of video in today’s digital world. Our comprehensive video production services cater to creative and marketing teams, delivering impactful content tailored to your audience.",
@@ -105,31 +105,31 @@ const section3b:{mainpara: string; heading: {text: string; className: string;}[]
   heading: [
     {  
       text: "Brand",
-      className: "text-white dark:text-white-500 tracking-wider",
+      className: "text-black dark:text-white-500 tracking-wider",
     },
     {
         text: "video",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
     },
     {
         text: "that",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
     },
     {   
         text: "captures",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
     },
     {
         text: "the",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
     },
     {  
         text: "big",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
       {  
         text: "picture",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
 ],
   para1: "Videos like brand films, explainers, demos, testimonials, case studies, and manifestos are perfect for positioning and elevating your brand.",
@@ -141,27 +141,27 @@ const section3c:{mainpara: string; heading: {text: string; className: string;}[]
   heading: [
     {  
       text: "Social",
-      className: "text-white dark:text-white-500 tracking-wider",
+      className: "text-black dark:text-white-500 tracking-wider",
     },
     {
         text: "video",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
     },
     {
         text: "that",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
     },
     {   
         text: "fits",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
     },
     {
         text: "the",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
     },
     {  
         text: "feed",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
 ],
   para1: "Establish a custom video content strategy and production cycle to create fresh video content that is geared to boost organic awareness and engagement.",

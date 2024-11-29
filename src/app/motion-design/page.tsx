@@ -35,31 +35,31 @@ const section3:{mainpara: string; heading: {text: string; className: string;}[];
   heading: [
     {  
       text: "Move",
-      className: "text-white dark:text-white-500 tracking-wider",
+      className: "text-black dark:text-white-500 tracking-wider",
     },
     {
         text: "the",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
     },
     {
         text: "needle",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
     },
     {   
         text: "with",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
     },
     {
         text: "expert",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
     },
     {  
         text: "motion",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
       {  
         text: "design",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },    
 ],
   para1: "Goodbye, static creativity. Hello, motion! Our motion design brings dynamic graphics and animations to every touchpoint, ensuring attention-grabbing content that boosts conversions.",

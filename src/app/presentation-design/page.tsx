@@ -27,35 +27,35 @@ const section3:{mainpara: string; heading: {text: string; className: string;}[];
   heading: [
     {  
       text: "Elevate",
-      className: "text-white dark:text-white-500 tracking-wider",
+      className: "text-black dark:text-white-500 tracking-wider",
     },
     {
         text: "your",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
     },
     {
         text: "presentations",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
     },
     {   
         text: "and",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
     },
     {
         text: "sales",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
     },
     {  
         text: "decks",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
     },
     {  
       text: "with",
-      className: "text-white dark:text-white-500 tracking-wider",
+      className: "text-black dark:text-white-500 tracking-wider",
     },
     {  
       text: "ACM",
-      className: "text-white dark:text-white-500 tracking-wider",
+      className: "text-black dark:text-white-500 tracking-wider",
     },
 ],
   para1: "We do your ideas justice with beautifully designed presentations that follow a logical structure, showcase your data in a clear, compelling manner and convey your message in the most persuasive way possible.",

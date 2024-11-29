@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 
 
-function Section6({content, translate}: {content: {mainpara: string; heading: {text: string; className: string;}[]; para: string; social: {img: string;name: string; para: string}[]}; translate?: string;}) {
+function Section6({content, translate, responsiveTranslate}: {content: {mainpara: string; heading: {text: string; className: string;}[]; para: string; social: {img: string;name: string; para: string}[]}; translate?: string;responsiveTranslate?: string;}) {
     const triggerRef = useRef(null);
   const sectionRef = useRef(null);
   const [windowWidth, setWindowWidth] = useState(0);
@@ -23,16 +23,16 @@ function Section6({content, translate}: {content: {mainpara: string; heading: {t
       sectionRef.current,
       {translateY:0},
       {
-        translateY: translate || "-100%",
+        translateY: windowWidth <= 1280 ? responsiveTranslate : translate || "-100%",
         ease: "none",
         duration: 2,
         scrollTrigger:{
           trigger: triggerRef.current,
           scroller: "body",
-          start: "top -15%",
-          end: windowWidth <= 1280 ? "150% top" : "100% top" ,
+          start: windowWidth <= 1280 ? "top -5%" : "top -15%",
+          end: windowWidth <= 1280 ? "100% top" : "100% top" ,
           scrub: 2,
-          pin: true
+          pin: true,
         }
       }
     )
@@ -40,7 +40,7 @@ function Section6({content, translate}: {content: {mainpara: string; heading: {t
       hscroll.kill();
     }
 
-  })
+  }, [windowWidth, responsiveTranslate,translate])
 
 
   return (

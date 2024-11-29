@@ -26,19 +26,19 @@ export const TracingBeam = ({
 
   useEffect(() => {
     if (contentRef.current) {
-      setSvgHeight(contentRef.current.offsetHeight);
+      setSvgHeight(contentRef.current.getBoundingClientRect().height);
     }
   }, []);
 
   const y1 = useSpring(
-    useTransform(scrollYProgress, [0, 0.9], [50, svgHeight]),
+    useTransform(scrollYProgress, [0, 0.9], [0, svgHeight ]),
     {
       stiffness: 500,
       damping: 90,
     }
   );
   const y2 = useSpring(
-    useTransform(scrollYProgress, [0, 1], [50, svgHeight]),
+    useTransform(scrollYProgress, [0, 1], [0, svgHeight ]),
     {
       stiffness: 500,
       damping: 90,
@@ -48,7 +48,7 @@ export const TracingBeam = ({
   return (
     <motion.div
       ref={ref}
-      className={cn("relative z-100   h-full", className)}
+      className={cn("relative z-100 ", className)}
     >
       <div className="absolute">
         <motion.div
@@ -81,7 +81,7 @@ export const TracingBeam = ({
         <svg
           viewBox={`0 0 20 ${svgHeight}`}
           width="20"
-          height={svgHeight } // Set the SVG height
+          height={svgHeight} // Set the SVG height
           className=" ml-4 block"
           aria-hidden="true"
         >
@@ -121,7 +121,7 @@ export const TracingBeam = ({
           </defs>
         </svg>
       </div>
-      <div ref={contentRef}>{children}</div>
+      <div className="tracing-beam-height" ref={contentRef}>{children}</div>
     </motion.div>
   );
 };

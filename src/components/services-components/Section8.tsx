@@ -9,7 +9,7 @@ function Section8({content, roundt}: {content: {mainpara: string; heading: strin
         <p className="services-secs-content-para" >{content.para}</p>
         <div className="flex justify-between flex-wrap mt-[60px] services-sec8-content-cards">
             {content.cards.map(each => (
-                <CardSpotlight key={each.title} className="h-96 w-96 text-left services-sec8-card">
+                <CardSpotlight key={each.title} className=" text-left services-sec8-card">
                     <p className="services-sec8-card-title font-medium">{each.title}</p>
                     <h2 className="services-sec8-card-count text-6xl font-medium" >{each.count}</h2>
                     <p className="services-sec8-card-para font-light" >{each.para}</p>

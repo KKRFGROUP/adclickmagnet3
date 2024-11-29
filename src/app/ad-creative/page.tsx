@@ -85,27 +85,27 @@ const section3:{mainpara: string; heading: {text: string; className: string;}[];
   heading: [
     {  
       text: "Ad",
-      className: "text-white dark:text-white-500 tracking-wider",
+      className: "text-black dark:text-white-500 tracking-wider",
     },
     {
         text: "creative",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
     },
     {
         text: "for",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
     },
     {   
         text: "campaigns",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
     },
     {
         text: "that",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
     },
     {  
         text: "perform",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
 ],
   para1: "The need for compelling ad creative has never been greater. But, when your biggest challenge is getting to market, the best solution is plugging into ACM’s flexible ad design services.",

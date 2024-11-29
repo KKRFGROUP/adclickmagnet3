@@ -14,7 +14,11 @@ function HeroSection({heading, para}: {heading: string; para: string;}) {
           className="-top-40 left-0 md:right-60 md:-top-20"
           fill="white"
         />
-      <div className="flex-col justify-center items-center text-center service-hero-sec-container h-[100vh] mt-12">
+        <Spotlight
+          className="-top-40 right-0  spotlight2"
+          fill="white"
+        />
+      <div className="flex-col justify-center items-center text-center service-hero-sec-container mt-12">
           
         <TextGenerateEffect className="font-syne" color={"contact-us-main-head"} words={"Professional"} />
         <TextGenerateEffect className="font-syne" color={"contact-us-main-head"} words={heading} />

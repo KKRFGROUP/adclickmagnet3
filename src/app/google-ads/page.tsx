@@ -95,27 +95,27 @@ const section3 = {
     heading: [
       {  
         text: "Google",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
       {
         text: "Ads",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
       {
         text: "Solutions",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
       {   
         text: "that",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
       {
         text: "Drive",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
       {  
         text: "Results",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
     ],
     para1: "In a competitive digital landscape, targeted Google Ads can elevate your brand’s visibility and drive high-quality traffic to your website. Our tailored Google Ads services help you reach the right audience effectively and maximize your ROI.",
@@ -133,7 +133,7 @@ const section4 = {
       {
         logo: <TbListSearch className='text-3xl' />,
         head: "Keyword Research & Competitor Ads Analysis",
-        para: "Choosing the right keywords to bid on is the foundation of success. We'll research keywords and the competition to create a Google Ads campaign that drives sales and a positive ROI."
+        para: "Choosing the right keywords is key to success. We’ll research keywords and competition to create a Google Ads campaign that boosts sales and ensures a positive ROI."
       },
       {
         logo: <FaRegEdit className='text-3xl' />,
@@ -203,34 +203,30 @@ const section6 = {
       {
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWK2nVTguVf7cLwkJqDVwDOKiMMlRaT2joDQ&s",
         name: "Google Ads Manager",
-        para: "Manage and optimize campaigns with Google Ads Manager, ensuring that every ad reaches the right audience and maximizes your ad spend."
+        para: "Optimize campaigns with Google Ads Manager to reach the right audience and maximize ad spend."
       },
       {
         img: "https://cdn3d.iconscout.com/3d/free/thumb/free-analytics-3d-logo-download-in-png-blend-fbx-gltf-file-formats--statistics-graph-social-media-pack-company-brand-logos-4781242.png",
         name: "Google Analytics",
-        para: "Analyze campaign performance and user behavior on your site with Google Analytics, helping you make data-driven decisions."
+        para: "Track campaign performance and user behavior with Google Analytics for data-driven decisions."
       },
       {
         img: "https://www.gstatic.com/analytics-suite/header/suite/v2/ic_tag_manager.svg",
         name: "Google Tag Manager",
-        para: "Easily track user interactions across your site and manage tags for effective retargeting and conversion tracking."
+        para: "Track user interactions and manage tags for retargeting and conversion tracking with ease."
       },
       {
         img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBjXOKHUfK3gOaM_dxWFnHggOUWUZvvKxF0w&s",
         name: "Optmyzr",
-        para: "Automate and enhance your Google Ads management with Optmyzr’s tools for bid optimization, keyword analysis, and A/B testing."
+        para: "Use Optmyzr to automate bid optimization, keyword analysis, and A/B testing for better ads."
       },
       {
         img: "https://cdn.shopify.com/app-store/listing_images/415acef59ea18c992554e646bb315f54/icon/CNnqi5_U0fUCEAE=.png",
         name: "ClickCease",
-        para: "Protect your Google Ads budget with ClickCease by detecting and preventing click fraud to improve campaign ROI and ad performance."
-      },
-      {
-        img: "https://w7.pngwing.com/pngs/679/637/png-transparent-hotjar-logo-thumbnail-tech-companies-thumbnail.png",
-        name: "Hotjar",
-        para: "Gain insights into user experience with Hotjar, allowing for optimization of landing pages to improve conversion rates."
+        para: "Protect your ad budget with ClickCease by detecting and stopping click fraud to boost ROI."
       },
     ]
+    
 };
   
   
@@ -481,15 +477,14 @@ function GoogleAds() {
       <TracingBeam>
 
         <Navbar />
-        <section data-bgcolor="#070707" data-textcolor="#ffffff">
           <HeroSection heading={heroContent.heading} para={heroContent.para} />
-        </section>
+       
         <Section2 Cards={section2}/>
         <Section3  content={section3}/>
         <Section4 content={section4} roundb='rounded-b-[50px] h-[200vh]'/>
-        <Section6 content={section6} translate="-50%"/>
-        <DynamicContentCard content={dynamicContentSec}/>
-        <Cards3dSections translate='-160%' content={section3dCards} className="rounded-[50px]"/>
+        <Section6 content={section6} translate="-50%" responsiveTranslate='-85%'/>
+        <DynamicContentCard content={dynamicContentSec}  />
+        <Cards3dSections translate='-70%' responsiveTraslate="-90%" end="+=500" content={section3dCards} className="rounded-[50px]"/>
         <Section7 content={section7}/>
         <Section8 content={section8}/>
         <ContactOurExperts />
@@ -499,23 +494,20 @@ function GoogleAds() {
     </div>
 
     <div className='page-main mobile-tracing-beam'>
-      <TracingBeam>
       <Navbar />
-        <section data-bgcolor="#070707" data-textcolor="#ffffff">
           <HeroSection heading={heroContent.heading} para={heroContent.para} />
-        </section>
+        
         <Section2 Cards={section2}/>
         <Section3  content={section3}/>
         <Section4 content={section4} roundb='rounded-b-[50px] h-[200vh]'/>
-        <Section6 content={section6} translate="-50%"/>
+        <Section6 content={section6} translate="-50%" responsiveTranslate='-85%'/>
         <DynamicContentCard content={dynamicContentSec}/>
-        <Cards3dSections translate='-160%' content={section3dCards} className="rounded-[50px]"/>
+        <Cards3dSections translate='-80%' responsiveTraslate="-90%" end="+=500" content={section3dCards} className="rounded-[50px]"/>
         <Section7 content={section7}/>
         <Section8 content={section8}/>
         <ContactOurExperts />
         <FAQ  content={faq}/>
         <Footer />
-      </TracingBeam>
     </div>
     </>
   )

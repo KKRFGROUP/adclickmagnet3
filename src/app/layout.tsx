@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-
+import 'animate.css';
 import NextTopLoader from 'nextjs-toploader';
 import Cursor from '../components/Cursor';
 const geistSans = localFont({

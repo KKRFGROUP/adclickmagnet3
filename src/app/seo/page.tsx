@@ -87,35 +87,35 @@ const section3 = {
     heading: [
       {  
         text: "SEO",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
       {
         text: "and",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
       {
         text: "Web",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
       {   
         text: "Optimization",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
       {
         text: "for",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
       {  
         text: "Sites",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
       {
         text: "That",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
       {
         text: "Perform",
-        className: "text-white dark:text-white-500 tracking-wider",
+        className: "text-black dark:text-white-500 tracking-wider",
       },
     ],
     para1: "Achieve a strong digital presence with a site built for optimal performance, speed, and search visibility. At ACM, we specialize in web development with SEO as a core focus, ensuring your website is seen and trusted by users and search engines alike.",
@@ -217,16 +217,6 @@ const section6 = {
         img: "https://cdn3d.iconscout.com/3d/free/thumb/free-google-3d-logo-download-in-png-blend-fbx-gltf-file-formats--social-media-ios-apps-pack-logos-3105336.png?f=webp",
         name: "Google Search Console",
         para: "Monitor your website’s indexing status, optimize visibility in Google search results, and fix technical SEO issues."
-      },
-      {
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdH-VKSIsrPUbreWypHp_JAssMuRCIK571Cw&s",
-        name: "Moz",
-        para: "Optimize on-page elements and track rankings with Moz’s keyword research and site crawl features for consistent improvements."
-      },
-      {
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2qJ8waOiROjEwk9oEjksp7bTRyrmFnRhZfA&s",
-        name: "Screaming Frog",
-        para: "Crawl and audit your website to identify technical SEO errors, broken links, and areas for structural optimization."
       },
     ]
 };
@@ -430,8 +420,8 @@ function Seo() {
             <Section2 Cards={section2}/>
             <Section3  content={section3}/>
             <Section4 content={section4} roundb='rounded-b-[50px]'/>
-            <Section6 content={section6} translate='-50%'/>
-            <Cards3dSections translate='-150%' content={section3dCards} className="rounded-[50px]"/>
+            <Section6 content={section6} translate="-50%" responsiveTranslate="-75%"/>
+            <Cards3dSections translate='-60%' responsiveTraslate="-90%" end="+=500" content={section3dCards} className="rounded-[50px]"/>
             <Section7 content={section7}/>
             <Section8 content={section8}/>
             <ContactOurExperts />
@@ -441,7 +431,6 @@ function Seo() {
     </div>
 
     <div className='page-main mobile-tracing-beam'>
-      <TracingBeam>
       <Navbar />
             <section data-bgcolor="#070707" data-textcolor="#ffffff">
             <HeroSection heading={heroContent.heading} para={heroContent.para} />
@@ -449,14 +438,13 @@ function Seo() {
             <Section2 Cards={section2}/>
             <Section3  content={section3}/>
             <Section4 content={section4} roundb='rounded-b-[50px]'/>
-            <Section6 content={section6} translate='-50%'/>
-            <Cards3dSections translate='-150%' content={section3dCards} className="rounded-[50px]"/>
+            <Section6 content={section6} translate="-50%" responsiveTranslate="-75%"/>
+            <Cards3dSections translate='-60%' responsiveTraslate="-90%" end="+=500" content={section3dCards} className="rounded-[50px]"/>
             <Section7 content={section7}/>
             <Section8 content={section8}/>
             <ContactOurExperts />
             <FAQ  content={faq}/>
             <Footer />
-        </TracingBeam>
     </div>
     </>
   )
