@@ -3,7 +3,7 @@
 import React from 'react'
 import { useState,useEffect } from "react";
 
-import { Menu,HoveredLink, MenuItem } from "./ui/NavbarMenu";
+import { Menu, MenuItem } from "./ui/NavbarMenu";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
@@ -52,20 +52,39 @@ export default function Navbar({className}: {className?: string}) {
                                 <MenuItem setActive={setActive} active={active} item="Home" />
                             </Link>
                             <MenuItem setActive={setActive} active={active} item="What We Do">
-                                <div className="flex flex-col space-y-4 py-3 text-sm">  
-                                    <HoveredLink href="/web-development">Web Development</HoveredLink>
-                                    <HoveredLink href="/graphic-design">Graphic Design</HoveredLink>
-                                    <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
-                                    <HoveredLink href="/branding-services">Branding Services</HoveredLink>
-                                    <HoveredLink href="/presentation-design">Presentation Design</HoveredLink>
-                                    <HoveredLink href="/video-production">Video Production</HoveredLink>
-                                    <HoveredLink href="/motion-design">Motion Design</HoveredLink>
-                                    <HoveredLink href="/ad-creative">Ad Creative</HoveredLink>
-                                    <HoveredLink href="/google-ads">Google Ads</HoveredLink>
-                                    <HoveredLink href="/linkedin-ads">Linkedin Ads</HoveredLink>
-                                    <HoveredLink href="/meta-ads">Meta Ads</HoveredLink>
-                                    <HoveredLink href="/press-release">Press Release</HoveredLink>
-                                    <HoveredLink href="/blogs">Blogs</HoveredLink>
+                                <div className="what-we-do-hover-sec1">
+                                    <h2 className="what-we-do-hover-sec1-head">Built to Elevate Your Growth</h2>
+                                    <p className="what-we-do-hover-sec1-para">Our digital services are designed to transform your vision into measurable success.</p>
+                                    <hr className="what-we-do-hover-sec1-line"/>
+                                    <div className="what-we-do-hover-sec1-img-card">
+                                        
+                                        <p className="what-we-do-hover-sec1-img-card-para">See How we made graphic design solution for our clients.</p>
+                                    </div>
+                                    <hr className="what-we-do-hover-sec1-line"/>
+                                    <p className="what-we-do-hover-sec1-para">What We Think</p>
+                                    <p className="what-we-do-hover-sec1-para-company">Blogs</p>
+                                    <p className="what-we-do-hover-sec1-para-company">Press Release</p>
+                                </div>
+                                <div className="what-we-do-hover-secs">  
+                                    <Link href="/graphic-design"><h2 className="what-we-do-hover-secs-head">Graphic Design</h2></Link>
+                                    <Link href="/ad-creative"><p className="what-we-do-hover-secs-para">Ad Creative</p></Link>
+                                    <Link href="/branding-services"><p className="what-we-do-hover-secs-para">Branding Services</p></Link>
+                                    <Link href="/presentation-design"><p className="what-we-do-hover-secs-para">Presentation Design</p></Link>
+                                    <Link href="/video-production"><p className="what-we-do-hover-secs-para">Video Production</p></Link>
+                                    <Link href="/motion-design"><p className="what-we-do-hover-secs-para">Motion Design</p></Link>
+                                    <Link href="/web-development"><h2 className="what-we-do-hover-secs-head mt-10">Web Development</h2></Link>
+                                </div>
+                                <div className="what-we-do-hover-secs">
+                                    <h2 className="what-we-do-hover-secs-head">Digital Ads Services</h2>
+                                    <Link href="/google-ads"><p className="what-we-do-hover-secs-para">Google Ads</p></Link>
+                                    <Link href="/meta-ads"><p className="what-we-do-hover-secs-para">Meta Ads</p></Link>
+                                    <Link href="/linkedin-ads"><p className="what-we-do-hover-secs-para">Linkedin Ads</p></Link>
+                                    
+                                </div>
+                                <div className="what-we-do-hover-secs">
+                                    <Link href="/seo"><p className="what-we-do-hover-secs-para">Search Engine Optimization</p></Link>
+                                    <Link href="/web-development"><p className="what-we-do-hover-secs-para">Web Development</p></Link>
+                                    
                                 </div>
                             </MenuItem>
                         

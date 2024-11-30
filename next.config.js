@@ -224,6 +224,11 @@ module.exports = {
           hostname: 'eliteflowpiping.com',
           port: '',
         },
+        {
+          protocol: 'https',
+          hostname: 'www.thinkleansixsigma.com',
+          port: '',
+        },
       ], 
     },
   }

@@ -71,9 +71,69 @@ body{
 }
 
 .what-we-do-links {
+    height: 78vh;
+    width: 80vw;
+    padding: 35px;
+    display: flex;
+    color: #000;
+    background-color: #E2E2E210;
+    backdrop-filter: blur(10px);
+    font-family: "Unbounded";
+    justify-content: space-between;
+}
+.what-we-do-hover-sec1 {
+    width: 30%
+}
+.what-we-do-hover-secs {
+    width: 20%;
+}
+.what-we-do-hover-sec1-head {
+    font-family: "Syne";
+    font-size: 30px;
+}
+.what-we-do-hover-sec1-para {
+    color: grey;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+.what-we-do-hover-sec1-img-card {
+    background-image: url("https://www.thinkleansixsigma.com/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Fvoitto-blog%2Faead9917-02f6-41fb-b845-c161c0b0c5c0_creativity-and-innovation.jpg&w=1920&q=95");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     height: max-content;
+    padding: 40px;
+    border-radius: 20px;
+    margin-bottom: 20px;
 }
 
+.what-we-do-hover-sec1-img-card-para {
+   font-size: 15px;
+}
+.what-we-do-hover-sec1-line {
+    border:0px;
+    border-radius: 10px;
+    height: 2px;
+    background-color: grey;
+    margin-bottom: 20px;
+}
+.what-we-do-hover-sec1-para-company {
+    margin-bottom: 10px;
+}
+
+/* hover services */
+.what-we-do-hover-secs-head {
+    font-size: 30px;
+    font-family: "Syne";
+    height: 12vh;
+    margin-bottom: 20px;
+}
+.what-we-do-hover-secs-para {
+    margin-bottom: 10px;
+    color: grey;
+}
 
 
 .navlinks {
