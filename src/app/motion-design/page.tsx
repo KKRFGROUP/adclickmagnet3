@@ -258,10 +258,10 @@ function AdCreative() {
     <div className='page-main tracing-beam'>
       <TracingBeam>
         <Navbar />
-        <section data-bgcolor="#070707" data-textcolor="#ffffff">
           <HeroSection heading={heroContent.heading} para={heroContent.para}/>
-        </section>
-        <Section3  content={section3}/>
+        <div className="mt-10">
+          <Section3  content={section3} roundb="rounded-t-[50px]" />
+        </div>
         <Section4 content={section4} roundb="rounded-b-[50px]"/>
         <Section7 content={section7}/>
         <Section8 content={section8}/>
@@ -272,19 +272,16 @@ function AdCreative() {
     </div>
 
     <div className='page-main mobile-tracing-beam'>
-      <TracingBeam>
       <Navbar />
-        <section data-bgcolor="#070707" data-textcolor="#ffffff">
           <HeroSection heading={heroContent.heading} para={heroContent.para} />
-        </section>
-        <Section3  content={section3}/>
+        
+        <Section3  content={section3} roundb="rounded-t-[50px]" />
         <Section4 content={section4} roundb="rounded-b-[50px]"/>
         <Section7 content={section7}/>
         <Section8 content={section8}/>
         <ContactOurExperts />
         <FAQ  content={faq}/>
         <Footer />
-    </TracingBeam>
     </div>
     </>
   )

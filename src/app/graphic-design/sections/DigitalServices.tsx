@@ -132,12 +132,12 @@ function DigitalServices() {
       sectionRef.current,
       {translateX:0},
       {
-        translateX: windowWidth <= 768 ? "-120%" : "-40%",
+        translateX: windowWidth <= 1280 ? "-120%" : "-40%",
         ease: "none",
         duration: 2,
         scrollTrigger:{
           trigger: triggerRef.current,
-          start: windowWidth <= 768 ? "top 0%": "top -55%",
+          start: windowWidth <= 1280 ? "top 0%": "top -55%",
           end: "180% top",
           scrub: 2,
           pin: true

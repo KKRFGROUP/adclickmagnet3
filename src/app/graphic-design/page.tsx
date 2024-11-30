@@ -42,7 +42,6 @@ const GraphicDesignPage = () => {
     </div>
 
     <div className='page-main mobile-tracing-beam'>
-      <TracingBeam>
       <Navbar />
         <HeroSection />
         <DesignProcess />
@@ -53,7 +52,6 @@ const GraphicDesignPage = () => {
         <OverlappingSections />
         <InfiniteText />
         <Footer />
-      </TracingBeam>
     </div>
     </>
   );

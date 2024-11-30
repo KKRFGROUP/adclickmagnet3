@@ -8,9 +8,9 @@ const HeroSection = () => {
       <section  className="graphic-page-hero-sec-container flex justify-center items-center text-white py-16 text-center">
         <div className="graphic-page-hero-sec-content flex-col justify-center items-center mt-10 w-[80%]">
           
-          <TextGenerateEffect className="font-syne" color={"contact-us-main-head"} words={"adClickMagnet"} />
+          <TextGenerateEffect className="graphic-page-hero-sec-head" color={"contact-us-main-head"} words={"adClickMagnet"} />
           
-          <TextGenerateEffect className="font-syne" color={"contact-us-main-head"} words={"Creative Graphic Design"} />
+          <TextGenerateEffect className="graphic-page-hero-sec-head" color={"contact-us-main-head"} words={"Creative Graphic Design"} />
             
       
            <p className="graphic-page-hero-sec-para-last">Specialized in Branding and Content Creation</p>

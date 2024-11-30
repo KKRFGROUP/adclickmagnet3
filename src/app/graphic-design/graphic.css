@@ -12,9 +12,9 @@
 }
 
 .graphic-page-hero-sec-head {
-    font-size: 80px;
-    font-family: "Inter";
-    width:50%;
+    font-size: 65px;
+    font-family: "Syne";
+    width:100%;
     margin:0px;
     padding: 0px ;
 }
@@ -29,6 +29,37 @@
     font-size: 23px;
 }
 
+@media (max-width: 1280px) {
+    .graphic-page-hero-sec-container {
+        background-size: 200vh;
+        background-repeat: no-repeat;
+        height: 100vh;
+        padding: 20px;
+    }
+    .graphic-page-hero-sec-container {
+        background-size: 200vh;
+        background-repeat: no-repeat;
+        height: 100vh;
+        padding: 20px;
+    }
+    .graphic-page-hero-sec-head {
+        font-size: 50px;
+        width:100%;
+        margin:0px;
+        padding: 0px ;
+    }
+    
+    .graphic-page-hero-sec-para {
+        font-size: 12px;
+        text-align: center;
+    }
+    .graphic-page-hero-sec-para-last {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: 20px;
+    }
+}
+
 @media (max-width: 768px) {
     .graphic-page-hero-sec-container {
         background-size: 200vh;
@@ -38,8 +69,6 @@
     }
     .graphic-page-hero-sec-head {
         font-size: 30px;
-        font-family: "Inter";
-        width:50%;
         margin:0px;
         padding: 0px ;
     }
@@ -89,25 +118,69 @@
 }
 
 .graphic-page-sec2-gif {
-    width: 80%;
-    margin-left: auto;
+    width: 90%;
     border-radius: 20px;
+    transition: 0.4s;
+    transition-timing-function: ease-in-out;
 }
 .graphic-page-sec2-gif:hover {
     border-radius: 25px;
-    width: 82%;
-    transition: 0.4s;
-    transition-timing-function: ease-in;
+    width: 92%;
     box-shadow: 0px 0px 10px 1px #000;
 }
 
 .graphic-page-sec2-graphic-card {
     border-radius: 20px;
-}
-
-.graphic-page-sec2-graphic {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     width: 50%;
 }
+
+
+@media (max-width: 1280px) {
+    .graphic-page-sec2-container {
+        height: max-content; 
+        color: #000;
+        padding: 20px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        flex-direction: column;
+    }
+    .graphic-page-sec2-graphic {
+        width: 100%;
+        
+    }
+    .graphic-page-sec2-content {
+        width: 100%;
+    }
+    .graphic-page-sec2-content-variety {
+        font-weight: bold;
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+    .graphic-page-sec2-content-head {
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+    .graphic-page-sec2-content-para {
+        font-size: 17px;
+    }
+    .graphic-page-sec2-graphic-card {
+        align-items: flex-start;
+        width: 100%;
+        height: 50%;
+    }
+    .graphic-page-sec2-gif {
+        width: 80%;
+        height: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        border-radius: 20px;
+    }
+}
+
 
 
 @media (max-width: 768px) {
@@ -136,8 +209,14 @@
     .graphic-page-sec2-content-para {
         font-size: 12px;
     }
+    .graphic-page-sec2-graphic-card {
+        align-items: flex-start;
+        width: 100%;
+        height: 50%;
+    }
     .graphic-page-sec2-gif {
         width: 80%;
+        height: 70%;
         margin-left: auto;
         margin-right: auto;
         margin-top: 30px;
@@ -198,6 +277,52 @@
     border-radius: 20px;
 }
 
+@media (max-width: 1280px) {
+    .graphic-page-services-sec-container {
+        padding: 20px;
+    }
+    .graphic-page-services-sec-head {
+        font-size: 55px;
+    }
+    .graphic-page-services-sec-head-second {
+        font-size: 55px;
+        left: 50px;
+    }
+    .graphic-page-services-card {
+        width:90vw;
+        height: 70vh;
+        margin: 15px;
+    }
+    .mobile-graphic-page-services-card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .graphic-page-services-card-img {
+        height: 30vh;
+        width: 30vh;
+        border-radius: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .graphic-page-services-card-head {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    .graphic-page-services-card-para {
+        font-size: 18px;
+        width: 80%;
+        padding-bottom: 50px;
+        text-align: center;
+    }
+    .graphic-page-services-card-line {
+        height: 5px;
+        background-color: grey;
+        border: 0px;
+        border-radius: 20px;
+    }
+    
+}
 
 
 @media (max-width: 768px) {
@@ -421,6 +546,42 @@ figure {
     border-radius: 50px;
 }
 
+@media (max-width: 1280px) {
+    .portfolio-sec-container {
+        padding: 30px;
+        padding-top: 50px;
+    }
+    .portfolio {
+        font-size: 17px;
+    }
+    .mobile-text-order {
+        order: 1;
+    }
+    .portfolio-sec-head {
+        font-size: 65px;
+    }
+    .portfolio-sec-head-second {
+        left: 20%;
+        font-size: 65px;
+    }
+    .portfolio-sec-card-head {
+        font-size: 30px;
+    }
+    .portfolio-sec-card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    figure {
+        width: 90%;
+        height: 50%;
+        margin: 0;
+        padding: 0;
+        background: #E2E2E2;
+        overflow: hidden;
+        border-radius: 50px;
+    }
+}
+
 
 @media (max-width: 768px) {
     .portfolio-sec-container {
@@ -497,9 +658,39 @@ figure {
 }
 .creative-service-card-img {
     width: 100%;
+    height: 45%;
     border-radius: 15px;
     margin-bottom: 30px;
 }
+
+@media (max-width: 1280px) {
+    .creative-service-section-container {
+        padding: 30px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    
+    .creative-service-head {
+        font-size: 65px;
+    }
+    
+    .creative-service-head-second {
+        left: 20%;
+        font-size: 65px;
+    }
+    .creative-service-card-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .creative-service-card {
+        width: 80%;
+        margin-bottom: 70px;
+    }
+    .creative-service-card-content {
+        font-size: 30px;
+    }
+}
+
 
 @media (max-width: 768px) {
     .creative-service-section-container {
@@ -523,6 +714,9 @@ figure {
         width: 100%;
         margin-bottom: 40px;
     }
+    .creative-service-card-content {
+        font-size: 20px;
+    }
 }
 
 
@@ -536,6 +730,7 @@ figure {
     height: max-content;
     border-radius: 50px;
     padding: 80px;
+    margin-bottom: 5%;
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
   }
   
@@ -565,21 +760,17 @@ figure {
     color: #E2E2E2;
 }
 
-.overlapping-card-img {
 
+@media (max-width: 1280px) {
+    .custom-card {
+        height: 100vh;
+        padding: 20px;
+        padding-top: 40px;
+        flex-direction: column;
+    }
 }
 
-.graphic-page-sec2-gif {
-    width: 80%;
-    margin-left: auto;
-    border-radius: 20px;
-}
-.graphic-page-sec2-gif:hover {
-    border-radius: 25px;
-    width: 82%;
-    transition: 0.4s;
-    box-shadow: 0px 0px 10px 1px #000;
-}
+
 
 @media (max-width: 768px) {
     .custom-card {
@@ -693,8 +884,7 @@ figure {
     }
 }
 
-
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
     .infinite-text-section-container {
         height: 50vh;
     }
@@ -703,14 +893,43 @@ figure {
         height: 10vh;
         top: 30%;
         right: 15px;
-        width: 110vw;
+        width: max-content;
     }
     .scrolling-text-container-second {
         rotate: 7deg;
         top: 30%;
         height: 10vh;
         right: 29px;
-        width: 110vw;
+        width: max-content;
+    }
+    .scrolling-text-inner {
+        font-size:40px;
+        font-weight: 600;
+        padding: 10px;
+    }
+    .scrolling-text-item-second {
+        padding: 0 20px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .infinite-text-section-container {
+        height: 50vh;
+    }
+    .scrolling-text-container {
+        rotate: -7deg;
+        height: 10vh;
+        top: 25%;
+        right: 15px;
+        width: max-content;
+    }
+    .scrolling-text-container-second {
+        rotate: 7deg;
+        top: 30%;
+        height: 10vh;
+        right: 29px;
+        width: max-content;
     }
     .scrolling-text-inner {
         font-size:40px;

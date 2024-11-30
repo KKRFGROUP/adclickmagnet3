@@ -480,11 +480,11 @@ function GoogleAds() {
           <HeroSection heading={heroContent.heading} para={heroContent.para} />
        
         <Section2 Cards={section2}/>
-        <Section3  content={section3}/>
+        <Section3  content={section3} roundb="rounded-t-[50px]" />
         <Section4 content={section4} roundb='rounded-b-[50px] h-[200vh]'/>
         <Section6 content={section6} translate="-50%" responsiveTranslate='-85%'/>
         <DynamicContentCard content={dynamicContentSec}  />
-        <Cards3dSections translate='-70%' responsiveTraslate="-90%" end="+=500" content={section3dCards} className="rounded-[50px]"/>
+        <Cards3dSections translate='-75%' responsiveTraslate="-90%" end="+=500" content={section3dCards} className="rounded-[50px]"/>
         <Section7 content={section7}/>
         <Section8 content={section8}/>
         <ContactOurExperts />
@@ -498,11 +498,11 @@ function GoogleAds() {
           <HeroSection heading={heroContent.heading} para={heroContent.para} />
         
         <Section2 Cards={section2}/>
-        <Section3  content={section3}/>
+        <Section3  content={section3} roundb="rounded-t-[50px]" />
         <Section4 content={section4} roundb='rounded-b-[50px] h-[200vh]'/>
         <Section6 content={section6} translate="-50%" responsiveTranslate='-85%'/>
         <DynamicContentCard content={dynamicContentSec}/>
-        <Cards3dSections translate='-80%' responsiveTraslate="-90%" end="+=500" content={section3dCards} className="rounded-[50px]"/>
+        <Cards3dSections translate='-75%' responsiveTraslate="-90%" end="+=500" content={section3dCards} className="rounded-[50px]"/>
         <Section7 content={section7}/>
         <Section8 content={section8}/>
         <ContactOurExperts />

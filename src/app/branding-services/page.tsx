@@ -52,7 +52,7 @@ const section2 = [
   {
       id: 4,
       imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/76f40781affb978c77b739da0fa6b72ed9b4bf62-600x702.png?auto=format&fit=max&q=100&w=600",
-      customer: "Brio",
+      customer: "ACM",
       industry: "HealthCare"
   },
   {
@@ -312,7 +312,7 @@ function BrandingServices() {
           <HeroSection heading={heroContent.heading} para={heroContent.para} />
         </section>
         <Section2 Cards={section2}/>
-        <Section3  content={section3}/>
+        <Section3  content={section3} roundb="rounded-t-[50px]" />
         <Section4 content={section4} roundb="rounded-b-[50px]"/>
         <Section7 content={section7}/>
         <Section8 content={section8}/>
@@ -324,20 +324,18 @@ function BrandingServices() {
 
 
       <div className='page-main mobile-tracing-beam'>
-        <TracingBeam>
           <Navbar />
           <section data-bgcolor="#070707" data-textcolor="#ffffff">
             <HeroSection heading={heroContent.heading} para={heroContent.para} />
           </section>
           <Section2 Cards={section2}/>
-          <Section3  content={section3}/>
+          <Section3  content={section3} roundb="rounded-t-[50px]" />
           <Section4 content={section4} roundb="rounded-b-[50px]"/>
           <Section7 content={section7}/>
           <Section8 content={section8}/>
           <ContactOurExperts />
           <FAQ  content={faq}/>
           <Footer />
-        </TracingBeam>
       </div>
       </>
 

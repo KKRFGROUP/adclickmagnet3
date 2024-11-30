@@ -228,11 +228,6 @@ const section6 = {
         name: "AdEspresso",
         para: "Enhance your Meta Ads management with AdEspresso, automating campaign A/B testing, optimization, and creative variation management."
       },
-      {
-        img: "https://w7.pngwing.com/pngs/679/637/png-transparent-hotjar-logo-thumbnail-tech-companies-thumbnail.png",
-        name: "Hotjar",
-        para: "Gain insights into user behavior on your landing pages with Hotjar, optimizing for better user engagement and higher conversion rates."
-      },
     ]
 };
 
@@ -489,11 +484,11 @@ function MetaAds() {
         <Navbar />
         <HeroSection heading={heroContent.heading} para={heroContent.para} />
         <Section2 Cards={section2}/>
-        <Section3  content={section3}/>
+        <Section3  content={section3} roundb="rounded-t-[50px]" />
         <Section4 content={section4} roundb='rounded-b-[50px] h-[200vh]'/>
-        <Section6 content={section6} translate="-50%"/>
+        <Section6 content={section6} translate="-65%" responsiveTranslate="-100%"/>
         <DynamicContentCard content={dynamicContentSec}/>
-        <Cards3dSections translate='-160%' content={section3dCards} className="rounded-[50px]"/>
+        <Cards3dSections translate='-75%' responsiveTraslate="-100%" end="+=500" content={section3dCards} className="rounded-[50px]"/>
         <Section7 content={section7}/>
         <Section8 content={section8}/>
         <ContactOurExperts />
@@ -503,23 +498,21 @@ function MetaAds() {
     </div>
 
     <div className='page-main mobile-tracing-beam'>
-      <TracingBeam>
       <Navbar />
         <section data-bgcolor="#070707" data-textcolor="#ffffff">
           <HeroSection heading={heroContent.heading} para={heroContent.para} />
         </section>
         <Section2 Cards={section2}/>
-        <Section3  content={section3}/>
+        <Section3  content={section3} roundb="rounded-t-[50px]" />
         <Section4 content={section4} roundb='rounded-b-[50px] h-[200vh]'/>
-        <Section6 content={section6} translate="-50%"/>
+        <Section6 content={section6} translate="-60%" responsiveTranslate="-95%"/>
         <DynamicContentCard content={dynamicContentSec}/>
-        <Cards3dSections translate='-160%' content={section3dCards} className="rounded-[50px]"/>
+        <Cards3dSections translate='-60%' responsiveTraslate="-90%" end="+=500" content={section3dCards} className="rounded-[50px]"/>
         <Section7 content={section7}/>
         <Section8 content={section8}/>
         <ContactOurExperts />
         <FAQ  content={faq}/>
         <Footer />
-      </TracingBeam>
     </div>
     </>
   )

@@ -168,35 +168,7 @@ const section3c:{mainpara: string; heading: {text: string; className: string;}[]
   para2: "1. Collaborate with video experts\n2. Shoot or repurpose existing footage\n3. Amplify with motion, animation and 3D\n4. Use our global, remote network with minimal overheads", 
   image: "https://res.cloudinary.com/deepcnbrz/image/upload/v1730822005/Screenshot_2024-11-05_212211_hhbsos.png"
 }
-const section3d:{mainpara: string; heading: {text: string; className: string;}[]; para1: string; para2: string; image: string;} = {
-  mainpara: "SOCIAL VIDEO FOR ENGAGEMENT",
-  heading: [
-    {  
-      text: "Performance",
-      className: "text-white dark:text-white-500 tracking-wider",
-    },
-    {
-        text: "video",
-        className: "text-white dark:text-white-500 tracking-wider",
-    },
-    {
-        text: "that",
-        className: "text-white dark:text-white-500 tracking-wider",
-    },
-    {   
-        text: "drives",
-        className: "text-white dark:text-white-500 tracking-wider",
-    },
-    {
-        text: "action",
-        className: "text-white dark:text-white-500 tracking-wider",
-    },
-    
-],
-  para1: "If you have clear goals, get help achieving them with video geared to drive conversion in paid campaigns.",
-  para2: "1. Build campaigns that convert\n2. Optimize rollout for every channel\n3. Experiment with an experienced team by your side\n4. Quickly apply what you learn", 
-  image: "https://res.cloudinary.com/deepcnbrz/image/upload/v1730822005/Screenshot_2024-11-05_212211_hhbsos.png"
-}
+
 
 const section3dCards: {mainpara: string; head: string; cards: {head: string; para: string; img: string;}[]} = {
   mainpara: "WORKING WITH ACM",
@@ -376,15 +348,14 @@ function VideoProduction() {
     <div className='page-main tracing-beam'>
       <TracingBeam>
         <Navbar />
-        <section data-bgcolor="#070707" data-textcolor="#ffffff">
           <HeroSection heading={heroContent.heading} para={heroContent.para} />
-        </section>
+        
         <Section2 Cards={section2}/>
-        <Section3  content={section3a}  roundb="rounded-b-[50px]"/>
-        <Section3  content={section3b} order="order-1" roundb="rounded-b-[50px]" hide="invisible"/>
-        <Section3  content={section3c}  hide="invisible" roundb="rounded-b-[50px]"/>
-        <Section3  content={section3d} order="order-1"  hide="invisible"/>
-        <Cards3dSections content={section3dCards} translate='-30%'/>
+        <Section3  content={section3a}  roundb="rounded-t-[50px]"/>
+        <Section3  content={section3b} order="order-1" roundb="" hide="invisible"/>
+        <Section3  content={section3c}  hide="invisible" roundb=""/>
+        {/*<Section3  content={section3d} order="order-1"  hide="invisible"/>*/}
+        <Cards3dSections content={section3dCards} translate='-45%' responsiveTraslate="-90%" end="+=500"/>
         <Section4 content={section4}/>
         <Section8 content={section8} roundt="rounded-t-[0px]"/>
         <ContactOurExperts />
@@ -394,24 +365,21 @@ function VideoProduction() {
     </div>
 
     <div className='page-main mobile-tracing-beam'>
-      <TracingBeam>
 
       <Navbar />
-          <section data-bgcolor="#070707" data-textcolor="#ffffff">
             <HeroSection heading={heroContent.heading} para={heroContent.para} />
-          </section>
+          
           <Section2 Cards={section2}/>
-          <Section3  content={section3a}  roundb="rounded-b-[50px]"/>
-          <Section3  content={section3b} order="order-1" roundb="rounded-b-[50px]" hide="invisible"/>
-          <Section3  content={section3c}  hide="invisible" roundb="rounded-b-[50px]"/>
-          <Section3  content={section3d} order="order-1"  hide="invisible"/>
-          <Cards3dSections content={section3dCards} translate='-30%'/>
+          <Section3  content={section3a} roundb="rounded-t-[50px]"/>
+          <Section3  content={section3b} order="" roundb="" hide="invisible"/>
+          <Section3  content={section3c}  hide="invisible" roundb=""/>
+          {/*<Section3  content={section3d} order="order-1"  hide="invisible"/>*/}
+          <Cards3dSections content={section3dCards} translate='-45%' responsiveTraslate="-90%" end="+=500"/>
           <Section4 content={section4}/>
           <Section8 content={section8} roundt="rounded-t-[0px]"/>
           <ContactOurExperts />
           <FAQ  content={faq}/>
           <Footer />
-      </TracingBeam>
     </div>
 </>
   )

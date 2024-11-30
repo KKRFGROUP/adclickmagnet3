@@ -180,11 +180,6 @@ const section6: {mainpara: string; heading: {text: string; className: string;}[]
       name: "Figma",
       para: "If you live in Figma, we’re right there with you. Our designers are fluent in Figma and prepared to deliver high-quality presentation designs using this collaborative platform." 
     },
-    {
-      img: "https://cdn.sanity.io/images/k0dlbavy/production/51e4ef8405d2ac1c783d00e72c51f38b8fbeb68c-240x240.png?auto=format&fit=max&q=100&w=240",
-      name: "Other platforms",
-      para: "Have another platform in mind? We’re here for it. With a global team of presentation designers to tap into, we have skills across the board and can cater to any preference." 
-    },
   ]
 }
 
@@ -325,13 +320,13 @@ function AdCreative() {
     <div className='page-main tracing-beam'>
       <TracingBeam>
         <Navbar />
-        <section data-bgcolor="#070707" data-textcolor="#ffffff">
           <HeroSection heading={heroContent.heading} para={heroContent.para}/>
-        </section>
-        <Section3  content={section3}/>
-        <Cards3dSections content={section4}/>
-        <Cards3dSections content={section5} className="rounded-b-[50px]"/>
-        <Section6 content={section6} translate='-50%'/>
+        <div className="mt-10">
+          <Section3  content={section3} roundb="rounded-t-[50px]" />
+        </div>
+        <Cards3dSections content={section4} translate='-70%' responsiveTraslate="-90%" end="+=500"/>
+        <Cards3dSections content={section5} translate='-70%' responsiveTraslate="-90%" end="+=500" className="rounded-b-[50px]"/>
+        <Section6 content={section6} translate="-50%" responsiveTranslate="-75%"/>
         <Section8 content={section8}/>
         <ContactOurExperts />
         <FAQ  content={faq}/>
@@ -340,20 +335,17 @@ function AdCreative() {
     </div>
 
     <div className='page-main mobile-tracing-beam'>
-      <TracingBeam>
         <Navbar />
-        <section data-bgcolor="#070707" data-textcolor="#ffffff">
           <HeroSection heading={heroContent.heading} para={heroContent.para} />
-        </section>
-        <Section3  content={section3}/>
-        <Cards3dSections content={section4}/>
-        <Cards3dSections content={section5} className="rounded-b-[50px]"/>
-        <Section6 content={section6} translate='-50%'/>
+        
+        <Section3  content={section3} roundb="rounded-t-[50px]" />
+        <Cards3dSections content={section4} translate='-70%' responsiveTraslate="-90%" end="+=500"/>
+        <Cards3dSections content={section5} translate='-70%' responsiveTraslate="-90%" end="+=500" className="rounded-b-[50px]"/>
+        <Section6 content={section6} translate="-50%" responsiveTranslate="-75%"/>
         <Section8 content={section8}/>
         <ContactOurExperts />
         <FAQ  content={faq}/>
         <Footer />
-      </TracingBeam>
     </div>
     </>
   )

@@ -240,11 +240,6 @@ const section6: {mainpara: string; heading: {text: string; className: string;}[]
       name: "YouTube",
       para: "Optimize viewer interaction with tailored creatives designed for YouTube's diverse audience and video-friendly platform features." 
     },
-    {
-      img: "https://cdn.sanity.io/images/k0dlbavy/production/51e4ef8405d2ac1c783d00e72c51f38b8fbeb68c-240x240.png?auto=format&fit=max&q=100&w=240",
-      name: "Other platforms",
-      para: "Have another platform in mind? We’re here for it. With a global team of presentation designers to tap into, we have skills across the board and can cater to any preference." 
-    },
   ]
 }
 
@@ -408,13 +403,12 @@ function AdCreative() {
     <div className='page-main tracing-beam'>
       <TracingBeam>
         <Navbar />
-        <section data-bgcolor="#070707" data-textcolor="#ffffff">
           <HeroSection heading={heroContent.heading} para={heroContent.para} />
-        </section>
+        
         <Section2 Cards={section2}/>
-        <Section3  content={section3}/>
+        <Section3  content={section3} roundb="rounded-t-[50px]"/>
         <Section4 content={section4}/>
-        <Section6 content={section6} translate='-40%'/>
+        <Section6 content={section6} translate="-70%" responsiveTranslate='-85%'/>
         <Section7 content={section7}/>
         <Section8 content={section8}/>
         <ContactOurExperts />
@@ -424,21 +418,18 @@ function AdCreative() {
     </div>
 
     <div className='page-main mobile-tracing-beam'>
-    <TracingBeam>
         <Navbar />
-        <section data-bgcolor="#070707" data-textcolor="#ffffff">
           <HeroSection heading={heroContent.heading} para={heroContent.para} />
-        </section>
+        
         <Section2 Cards={section2}/>
-        <Section3  content={section3}/>
+        <Section3  content={section3} roundb="rounded-t-[50px]"/>
         <Section4 content={section4}/>
-        <Section6 content={section6} translate='-40%'/>
+        <Section6 content={section6} translate="-70%" responsiveTranslate='-85%'/>
         <Section7 content={section7}/>
         <Section8 content={section8}/>
         <ContactOurExperts />
         <FAQ  content={faq}/>
         <Footer />
-      </TracingBeam>
     </div>
     </>
   )

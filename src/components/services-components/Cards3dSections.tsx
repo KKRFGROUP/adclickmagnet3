@@ -58,7 +58,7 @@ function Cards3dSections({content, className, translate,responsiveTraslate, end}
           start: windowWidth <= 1028 ? "top -10%" : "top -40%",
           end: windowWidth <= 768 ? "+=1000" :  end,
           scrub: 2,
-          pin: true
+          pin: true,
         }
       }
     )

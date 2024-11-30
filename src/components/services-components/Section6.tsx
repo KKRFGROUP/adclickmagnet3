@@ -30,7 +30,7 @@ function Section6({content, translate, responsiveTranslate}: {content: {mainpara
           trigger: triggerRef.current,
           scroller: "body",
           start: windowWidth <= 1280 ? "top -5%" : "top -15%",
-          end: windowWidth <= 1280 ? "100% top" : "100% top" ,
+          end: windowWidth <= 1280 ? "150% top" : "100% top" ,
           scrub: 2,
           pin: true,
         }
