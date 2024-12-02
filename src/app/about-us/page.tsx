@@ -6,9 +6,12 @@ import InspiredBy from "./sections/InspiredBy";
 import LetsGrow from "./sections/LetsGrow";
 import Founders from "./sections/Founders";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 function AboutUs() {
   return (
-    <div className="about-us-main-page dark:bg-black bg-black">
+    <>
+    <Navbar />
+    <div className="page-main dark:bg-black bg-black">
         <AboutHeroSec />
         <ImpactMatrics />
         <InspiredBy />
@@ -16,6 +19,7 @@ function AboutUs() {
         <LetsGrow />
         <Footer />
     </div >
+    </>
   )
 }
 

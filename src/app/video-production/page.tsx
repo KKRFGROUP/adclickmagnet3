@@ -345,42 +345,44 @@ function VideoProduction() {
   
   return (
     <>
-    <div className='page-main tracing-beam'>
-      <TracingBeam>
         <Navbar />
-          <HeroSection heading={heroContent.heading} para={heroContent.para} />
-        
-        <Section2 Cards={section2}/>
-        <Section3  content={section3a}  roundb="rounded-t-[50px]"/>
-        <Section3  content={section3b} order="order-1" roundb="" hide="invisible"/>
-        <Section3  content={section3c}  hide="invisible" roundb=""/>
-        {/*<Section3  content={section3d} order="order-1"  hide="invisible"/>*/}
-        <Cards3dSections content={section3dCards} translate='-45%' responsiveTraslate="-90%" end="+=500"/>
-        <Section4 content={section4}/>
-        <Section8 content={section8} roundt="rounded-t-[0px]"/>
-        <ContactOurExperts />
-        <FAQ  content={faq}/>
-        <Footer />
-      </TracingBeam>
-    </div>
+        <div className="page-main">
+          <div className='tracing-beam'>
+            <TracingBeam>
+                <HeroSection heading={heroContent.heading} para={heroContent.para} />
+              
+              <Section2 Cards={section2}/>
+              <Section3  content={section3a}  roundb="rounded-t-[50px]"/>
+              <Section3  content={section3b} order="order-1" roundb="" hide="invisible"/>
+              <Section3  content={section3c}  hide="invisible" roundb=""/>
+              {/*<Section3  content={section3d} order="order-1"  hide="invisible"/>*/}
+              <Cards3dSections content={section3dCards} translate='-45%' responsiveTraslate="-90%" end="+=500"/>
+              <Section4 content={section4}/>
+              <Section8 content={section8} roundt="rounded-t-[0px]"/>
+              <ContactOurExperts />
+              <FAQ  content={faq}/>
+              <Footer />
+            </TracingBeam>
+          </div>
 
-    <div className='page-main mobile-tracing-beam'>
+          <div className='mobile-tracing-beam'>
 
-      <Navbar />
-            <HeroSection heading={heroContent.heading} para={heroContent.para} />
-          
-          <Section2 Cards={section2}/>
-          <Section3  content={section3a} roundb="rounded-t-[50px]"/>
-          <Section3  content={section3b} order="" roundb="" hide="invisible"/>
-          <Section3  content={section3c}  hide="invisible" roundb=""/>
-          {/*<Section3  content={section3d} order="order-1"  hide="invisible"/>*/}
-          <Cards3dSections content={section3dCards} translate='-45%' responsiveTraslate="-90%" end="+=500"/>
-          <Section4 content={section4}/>
-          <Section8 content={section8} roundt="rounded-t-[0px]"/>
-          <ContactOurExperts />
-          <FAQ  content={faq}/>
-          <Footer />
-    </div>
+                  <HeroSection heading={heroContent.heading} para={heroContent.para} />
+                
+                <Section2 Cards={section2}/>
+                <Section3  content={section3a} roundb="rounded-t-[50px]"/>
+                <Section3  content={section3b} order="" roundb="" hide="invisible"/>
+                <Section3  content={section3c}  hide="invisible" roundb=""/>
+                {/*<Section3  content={section3d} order="order-1"  hide="invisible"/>*/}
+                <Cards3dSections content={section3dCards} translate='-45%' responsiveTraslate="-90%" end="+=500"/>
+                <Section4 content={section4}/>
+                <Section8 content={section8} roundt="rounded-t-[0px]"/>
+                <ContactOurExperts />
+                <FAQ  content={faq}/>
+                <Footer />
+          </div>
+        </div>
+
 </>
   )
 }

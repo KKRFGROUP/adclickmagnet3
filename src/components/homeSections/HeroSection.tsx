@@ -6,18 +6,16 @@ import Link from "next/link";
 import { HoverBorderGradient } from "../ui/HoverBorderGradient";
 import { TextGenerateEffect } from "../ui/TextGenerateEffect";
 import { FaArrowRightLong } from "react-icons/fa6";
-import Navbar from "../Navbar";
+
 import HeroModel from "../3dmodels/HeroModel";
 
 
 export default function HeroSection() {
     
     return (
-        <div>
+        <div >
             <HeroModel />
-            <header>
-                <Navbar />
-            </header>
+            
 
             <div className="flex flex-col justify-center hero-content">
                 <TextGenerateEffect color={"inner-color-title"} words={"Drive More Growth"}  />

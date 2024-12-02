@@ -13,6 +13,8 @@ import Section8 from "@/components/homeSections/Section8";
 import Section9 from "@/components/homeSections/Section9";
 import Footer from "@/components/Footer";
 import ClientVideSec from "@/components/homeSections/ClientVideSec";
+import Navbar from "@/components/Navbar";
+
 //import { useEffect, useState } from "react";
 //import Loading from "@/components/Loading";
 //import TextSection from '@/components/TextSection'
@@ -26,10 +28,11 @@ export default function Home() {
 
   
     return (
-      <div className="dark:bg-balck bg-black overflow-hidden">
+      <>
+      <Navbar />
+      <div className="dark:bg-balck bg-black overflow-hidden page-main">
         <HeroSection />
         <div className="after-hero-sec">
-
           <Section2 />
           <Section3 />
           <Section5 />
@@ -43,6 +46,7 @@ export default function Home() {
           <Footer />
         </div>
       </div>
+      </>
     );
 
 }

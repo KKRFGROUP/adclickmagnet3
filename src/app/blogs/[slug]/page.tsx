@@ -96,12 +96,14 @@ const heroContent: {head: string; name: string; time: string; img: string}={head
 
 function page() {
   return (
-    <div className="blog-slug-page-container">
-        <Navbar />
-        <BlogSlugHero content={heroContent} />
-        <BlogSlugContent content={slugblogcontent} />
-        <Footer  />
-    </div>
+    <>
+      <Navbar />
+      <div className="page-main">
+          <BlogSlugHero content={heroContent} />
+          <BlogSlugContent content={slugblogcontent} />
+          <Footer  />
+      </div>
+    </>
   )
 }
 

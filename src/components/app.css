@@ -14,7 +14,6 @@ body{
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     overflow: hidden;
     font-family: "Oswald", sans-serif;
     height: min-content;
@@ -26,6 +25,9 @@ body{
         margin: 0;
         background-color: #000;
     }
+}
+.display-none-mobile-navbar {
+    display: none;
 }
 
 .model {
@@ -71,22 +73,40 @@ body{
 }
 
 .what-we-do-links {
-    height: 78vh;
+    height: 80vh;
     width: 80vw;
-    padding: 35px;
-    display: flex;
     color: #000;
     background-color: #E2E2E210;
     backdrop-filter: blur(10px);
     font-family: "Unbounded";
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
+.what-we-do-hover-header {
+    padding: 35px;
+    display: flex;
+    height: 80%;
+    justify-content: space-between;
+}
+.what-we-do-hover-footer {
+    background-image: url("https://media.istockphoto.com/id/1407063872/vector/modern-abstract-background-with-black-gradient-abstract-black-business-background.jpg?s=612x612&w=0&k=20&c=6QftyGArm3LTpQsLw29DpZ9ZB42HMNK-wboAWyFZvto=");
+    background-size: cover;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    padding: 30px;
+    color: #fff;
+    height: 20%;
+}
+
 .what-we-do-hover-sec1 {
     width: 30%
 }
 .what-we-do-hover-secs {
     width: 20%;
 }
+
 .what-we-do-hover-sec1-head {
     font-family: "Syne";
     font-size: 30px;
@@ -104,13 +124,13 @@ body{
     align-items: center;
     width: 100%;
     height: max-content;
-    padding: 40px;
+    padding: 30px;
     border-radius: 20px;
     margin-bottom: 20px;
 }
 
 .what-we-do-hover-sec1-img-card-para {
-   font-size: 15px;
+    font-size: 15px;
 }
 .what-we-do-hover-sec1-line {
     border:0px;
@@ -130,9 +150,15 @@ body{
     height: 12vh;
     margin-bottom: 20px;
 }
+
 .what-we-do-hover-secs-para {
     margin-bottom: 10px;
     color: grey;
+}
+.what-we-do-hover-secs-img {
+    height: 50%;
+    border-radius: 20px;
+    margin-bottom: 30px;
 }
 
 
@@ -172,6 +198,30 @@ body{
     backdrop-filter: blur(7px);
 }
 
+.mobile-navbar-fullscreen-overlay {
+    height: max-content;
+    min-height: 100vh;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mobile-overlay-logo-cross {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mobile-overlay-btn {
+    border:0px;
+    border-radius: 20px;
+    height: 50px;
+    width: 60%;
+    color: #000;
+    background-color: grey;
+
+}
 
 
 
@@ -181,26 +231,27 @@ body{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        cursor: default;
     }
     .mobile-view-navbar-logo {
         height: 90px;
         width: 90px;
     }
     .mobile-navlinks {
-        margin-top: 20%;
+        margin-top: 10%;
+        font-family: "Unbounded";
         padding: 30px;
         display: flex;
         flex-direction: column;
-        gap: 20px;
-        font-size: 20px;
+        font-size: 17px;
         transition: 1s;
     }
     .services-drop-down {
         display: flex;
         flex-direction: column;
         color: grey;
-        padding-left: 10px;
-        transition: 1s;
+        padding-left: 25px;
+        transition: 0.4s;
     }
     .navbar {
         display: none;
@@ -236,7 +287,7 @@ body{
 }
 .hero-content {
     position: absolute;
-    top: 35%;
+    top: 2%;
     width: 100%;
     margin-left: 30px;
       
@@ -265,8 +316,7 @@ body{
         font-size:2rem;
     }
     .hero-content {
-        position: absolute;
-        top: 30%;
+        top: 2%;
         align-items: center;
         margin-left: 0px;
     }

@@ -229,6 +229,16 @@ module.exports = {
           hostname: 'www.thinkleansixsigma.com',
           port: '',
         },
+        {
+          protocol: 'https',
+          hostname: 'www.simplilearn.com',
+          port: '',
+        },
+        {
+          protocol: 'https',
+          hostname: 'unctad.org',
+          port: '',
+        },
       ], 
     },
   }

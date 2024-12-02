@@ -4,7 +4,7 @@ import React, { Suspense, useEffect,useState } from 'react'
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Cube from "../../../components/3dmodels/Cube";
-import Navbar from '@/components/Navbar';
+
 import "../about.css"
 
 
@@ -21,7 +21,7 @@ function AboutHeroSec() {
   }, []);
     return (
         <div className="about-us-hero-sec-container">
-        <Navbar />
+        
         <div className='w-[100vw]'>
             <div className="about-hero-infinite-text-1  flex justify-around">
                 <span className="infinite-text-para about-hero-para-1">ABOUT <span className="font-news">US - </span></span>

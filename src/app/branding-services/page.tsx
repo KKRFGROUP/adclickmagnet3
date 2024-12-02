@@ -305,38 +305,40 @@ function BrandingServices() {
   
   return (
     <>
-    <div className='page-main tracing-beam'>
-      <TracingBeam>
         <Navbar />
-        <section data-bgcolor="#070707" data-textcolor="#ffffff">
-          <HeroSection heading={heroContent.heading} para={heroContent.para} />
-        </section>
-        <Section2 Cards={section2}/>
-        <Section3  content={section3} roundb="rounded-t-[50px]" />
-        <Section4 content={section4} roundb="rounded-b-[50px]"/>
-        <Section7 content={section7}/>
-        <Section8 content={section8}/>
-        <ContactOurExperts />
-        <FAQ  content={faq}/>
-        <Footer />
-      </TracingBeam>
-    </div>
+        <div className='page-main'>
+          <div className='tracing-beam'>
+            <TracingBeam>
+              <section data-bgcolor="#070707" data-textcolor="#ffffff">
+                <HeroSection heading={heroContent.heading} para={heroContent.para} />
+              </section>
+              <Section2 Cards={section2}/>
+              <Section3  content={section3} roundb="rounded-t-[50px]" />
+              <Section4 content={section4} roundb="rounded-b-[50px]"/>
+              <Section7 content={section7}/>
+              <Section8 content={section8}/>
+              <ContactOurExperts />
+              <FAQ  content={faq}/>
+              <Footer />
+            </TracingBeam>
+          </div>
+
+          <div className='mobile-tracing-beam'>
+              <section data-bgcolor="#070707" data-textcolor="#ffffff">
+                <HeroSection heading={heroContent.heading} para={heroContent.para} />
+              </section>
+              <Section2 Cards={section2}/>
+              <Section3  content={section3} roundb="rounded-t-[50px]" />
+              <Section4 content={section4} roundb="rounded-b-[50px]"/>
+              <Section7 content={section7}/>
+              <Section8 content={section8}/>
+              <ContactOurExperts />
+              <FAQ  content={faq}/>
+              <Footer />
+          </div>
+        </div>
 
 
-      <div className='page-main mobile-tracing-beam'>
-          <Navbar />
-          <section data-bgcolor="#070707" data-textcolor="#ffffff">
-            <HeroSection heading={heroContent.heading} para={heroContent.para} />
-          </section>
-          <Section2 Cards={section2}/>
-          <Section3  content={section3} roundb="rounded-t-[50px]" />
-          <Section4 content={section4} roundb="rounded-b-[50px]"/>
-          <Section7 content={section7}/>
-          <Section8 content={section8}/>
-          <ContactOurExperts />
-          <FAQ  content={faq}/>
-          <Footer />
-      </div>
       </>
 
   )

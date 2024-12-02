@@ -255,34 +255,36 @@ function AdCreative() {
   
   return (
     <>
-    <div className='page-main tracing-beam'>
-      <TracingBeam>
         <Navbar />
-          <HeroSection heading={heroContent.heading} para={heroContent.para}/>
-        <div className="mt-10">
-          <Section3  content={section3} roundb="rounded-t-[50px]" />
-        </div>
-        <Section4 content={section4} roundb="rounded-b-[50px]"/>
-        <Section7 content={section7}/>
-        <Section8 content={section8}/>
-        <ContactOurExperts />
-        <FAQ  content={faq}/>
-        <Footer />
-      </TracingBeam>
-    </div>
+        <div className='page-main'>
+          <div className='tracing-beam'>
+            <TracingBeam>
+                <HeroSection heading={heroContent.heading} para={heroContent.para}/>
+              <div className="mt-10">
+                <Section3  content={section3} roundb="rounded-t-[50px]" />
+              </div>
+              <Section4 content={section4} roundb="rounded-b-[50px]"/>
+              <Section7 content={section7}/>
+              <Section8 content={section8}/>
+              <ContactOurExperts />
+              <FAQ  content={faq}/>
+              <Footer />
+            </TracingBeam>
+          </div>
 
-    <div className='page-main mobile-tracing-beam'>
-      <Navbar />
-          <HeroSection heading={heroContent.heading} para={heroContent.para} />
-        
-        <Section3  content={section3} roundb="rounded-t-[50px]" />
-        <Section4 content={section4} roundb="rounded-b-[50px]"/>
-        <Section7 content={section7}/>
-        <Section8 content={section8}/>
-        <ContactOurExperts />
-        <FAQ  content={faq}/>
-        <Footer />
-    </div>
+          <div className='mobile-tracing-beam'>
+                <HeroSection heading={heroContent.heading} para={heroContent.para} />
+              
+              <Section3  content={section3} roundb="rounded-t-[50px]" />
+              <Section4 content={section4} roundb="rounded-b-[50px]"/>
+              <Section7 content={section7}/>
+              <Section8 content={section8}/>
+              <ContactOurExperts />
+              <FAQ  content={faq}/>
+              <Footer />
+          </div>
+        </div>
+
     </>
   )
 }

@@ -26,33 +26,35 @@ import { TracingBeam } from "../../components/ui/TracingBeam";
 const GraphicDesignPage = () => {
   return (
     <>
-    <div className='page-main tracing-beam'>
-      <TracingBeam>
         <Navbar />
-        <HeroSection />
-        <DesignProcess />
-        <DigitalServices />
-        
-        <Portfolio />
-        <CreativeService />
-        <OverlappingSections />
-        <InfiniteText />
-        <Footer />
-      </TracingBeam>
-    </div>
+        <div className='page-main'>
+          <div className='tracing-beam'>
+            <TracingBeam>
+              <HeroSection />
+              <DesignProcess />
+              <DigitalServices />
+              
+              <Portfolio />
+              <CreativeService />
+              <OverlappingSections />
+              <InfiniteText />
+              <Footer />
+            </TracingBeam>
+          </div>
 
-    <div className='page-main mobile-tracing-beam'>
-      <Navbar />
-        <HeroSection />
-        <DesignProcess />
-        <DigitalServices />
-        
-        <Portfolio />
-        <CreativeService />
-        <OverlappingSections />
-        <InfiniteText />
-        <Footer />
-    </div>
+          <div className='mobile-tracing-beam'>
+              <HeroSection />
+              <DesignProcess />
+              <DigitalServices />
+              
+              <Portfolio />
+              <CreativeService />
+              <OverlappingSections />
+              <InfiniteText />
+              <Footer />
+          </div>
+        </div>
+
     </>
   );
 };

@@ -400,37 +400,40 @@ function AdCreative() {
   
   return (
     <>
-    <div className='page-main tracing-beam'>
-      <TracingBeam>
-        <Navbar />
-          <HeroSection heading={heroContent.heading} para={heroContent.para} />
-        
-        <Section2 Cards={section2}/>
-        <Section3  content={section3} roundb="rounded-t-[50px]"/>
-        <Section4 content={section4}/>
-        <Section6 content={section6} translate="-70%" responsiveTranslate='-85%'/>
-        <Section7 content={section7}/>
-        <Section8 content={section8}/>
-        <ContactOurExperts />
-        <FAQ  content={faq}/>
-        <Footer />
-      </TracingBeam>
-    </div>
+      <Navbar />
+      <div className='page-main'>
+        <div className='tracing-beam'>
+          <TracingBeam>
+              <HeroSection heading={heroContent.heading} para={heroContent.para} />
+            
+            <Section2 Cards={section2}/>
+            <Section3  content={section3} roundb="rounded-t-[50px]"/>
+            <Section4 content={section4}/>
+            <Section6 content={section6} translate="-70%" responsiveTranslate='-85%'/>
+            <Section7 content={section7}/>
+            <Section8 content={section8}/>
+            <ContactOurExperts />
+            <FAQ  content={faq}/>
+            <Footer />
+          </TracingBeam>
+        </div>
 
-    <div className='page-main mobile-tracing-beam'>
-        <Navbar />
-          <HeroSection heading={heroContent.heading} para={heroContent.para} />
+        <div className='mobile-tracing-beam'>
+              <HeroSection heading={heroContent.heading} para={heroContent.para} />
+            
+            <Section2 Cards={section2}/>
+            <Section3  content={section3} roundb="rounded-t-[50px]"/>
+            <Section4 content={section4}/>
+            <Section6 content={section6} translate="-70%" responsiveTranslate='-85%'/>
+            <Section7 content={section7}/>
+            <Section8 content={section8}/>
+            <ContactOurExperts />
+            <FAQ  content={faq}/>
+            <Footer />
+        </div>
+      </div>
+
         
-        <Section2 Cards={section2}/>
-        <Section3  content={section3} roundb="rounded-t-[50px]"/>
-        <Section4 content={section4}/>
-        <Section6 content={section6} translate="-70%" responsiveTranslate='-85%'/>
-        <Section7 content={section7}/>
-        <Section8 content={section8}/>
-        <ContactOurExperts />
-        <FAQ  content={faq}/>
-        <Footer />
-    </div>
     </>
   )
 }

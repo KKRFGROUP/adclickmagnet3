@@ -317,36 +317,38 @@ function AdCreative() {
   
   return (
     <>
-    <div className='page-main tracing-beam'>
-      <TracingBeam>
         <Navbar />
-          <HeroSection heading={heroContent.heading} para={heroContent.para}/>
-        <div className="mt-10">
-          <Section3  content={section3} roundb="rounded-t-[50px]" />
-        </div>
-        <Cards3dSections content={section4} translate='-70%' responsiveTraslate="-90%" end="+=500"/>
-        <Cards3dSections content={section5} translate='-70%' responsiveTraslate="-90%" end="+=500" className="rounded-b-[50px]"/>
-        <Section6 content={section6} translate="-50%" responsiveTranslate="-75%"/>
-        <Section8 content={section8}/>
-        <ContactOurExperts />
-        <FAQ  content={faq}/>
-        <Footer />
-      </TracingBeam>
-    </div>
+        <div className="page-main">
+          <div className='tracing-beam'>
+            <TracingBeam>
+                <HeroSection heading={heroContent.heading} para={heroContent.para}/>
+              <div className="mt-10">
+                <Section3  content={section3} roundb="rounded-t-[50px]" />
+              </div>
+              <Cards3dSections content={section4} translate='-70%' responsiveTraslate="-90%" end="+=500"/>
+              <Cards3dSections content={section5} translate='-70%' responsiveTraslate="-90%" end="+=500" className="rounded-b-[50px]"/>
+              <Section6 content={section6} translate="-50%" responsiveTranslate="-75%"/>
+              <Section8 content={section8}/>
+              <ContactOurExperts />
+              <FAQ  content={faq}/>
+              <Footer />
+            </TracingBeam>
+          </div>
 
-    <div className='page-main mobile-tracing-beam'>
-        <Navbar />
-          <HeroSection heading={heroContent.heading} para={heroContent.para} />
-        
-        <Section3  content={section3} roundb="rounded-t-[50px]" />
-        <Cards3dSections content={section4} translate='-70%' responsiveTraslate="-90%" end="+=500"/>
-        <Cards3dSections content={section5} translate='-70%' responsiveTraslate="-90%" end="+=500" className="rounded-b-[50px]"/>
-        <Section6 content={section6} translate="-50%" responsiveTranslate="-75%"/>
-        <Section8 content={section8}/>
-        <ContactOurExperts />
-        <FAQ  content={faq}/>
-        <Footer />
-    </div>
+          <div className='mobile-tracing-beam'>
+                <HeroSection heading={heroContent.heading} para={heroContent.para} />
+              
+              <Section3  content={section3} roundb="rounded-t-[50px]" />
+              <Cards3dSections content={section4} translate='-70%' responsiveTraslate="-90%" end="+=500"/>
+              <Cards3dSections content={section5} translate='-70%' responsiveTraslate="-90%" end="+=500" className="rounded-b-[50px]"/>
+              <Section6 content={section6} translate="-50%" responsiveTranslate="-75%"/>
+              <Section8 content={section8}/>
+              <ContactOurExperts />
+              <FAQ  content={faq}/>
+              <Footer />
+          </div>
+        </div>
+
     </>
   )
 }

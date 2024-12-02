@@ -8,8 +8,10 @@ function page() {
   return (
     <>
         <Navbar />
-        <TopBlogs />
-        <Footer />
+        <div className='page-main'>
+          <TopBlogs />
+          <Footer />
+        </div>
     </>
   )
 }

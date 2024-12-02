@@ -1,18 +1,30 @@
 "use client";
 
-import React, { useEffect } from 'react'
+import React, { useEffect,useState } from 'react'
 import {gsap} from 'gsap'
 export default function Cursor() {
+    const [windowWidth, setWindowWidth] = useState(0);
+
+    
+    
     useEffect(() => {
+        if (typeof window !== "undefined") {
+            setWindowWidth(window.innerWidth);
+            const handleResize = () => setWindowWidth(window.innerWidth);
+            window.addEventListener("resize", handleResize);
+        
+        }
         const cursor = document.getElementById("custom-cursor");
         const links = document.querySelectorAll("a");
         // eslint-disable-next-line @typescript-eslint/no-unused-expressions
         //const cursorText = document.querySelector(".cursor-text") ;
         // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+        
         const onMouseMove = (event: MouseEvent) => {
             const {clientX, clientY} = event;
             gsap.to(cursor,{x: clientX, y: clientY})
         } 
+        
         // eslint-disable-next-line @typescript-eslint/no-unused-expressions
         const onMouseEnterLink = (event: MouseEvent) => {
             const link = event.target as Element | null;
@@ -29,12 +41,18 @@ export default function Cursor() {
             //cursorText.style.display = "none";
         }
 
-        document.addEventListener("mousemove", onMouseMove)
+        if (windowWidth > 1028) {
+            document.addEventListener("mousemove", onMouseMove)
+        }
         links.forEach(link => {
             link.addEventListener("mouseenter", onMouseEnterLink)
             link.addEventListener("mouseleave", onMouseLeave)
         })
-    })
+
+        
+    }, [windowWidth])
+
+
   return (
     <div id="custom-cursor" className="custom-cursor">
         <span className='cursor-text'>View</span>
