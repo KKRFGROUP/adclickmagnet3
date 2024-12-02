@@ -164,7 +164,38 @@ body{
 }
 
 @media (max-width: 1280px) {
+    .what-we-do-hover-header {
+        padding: 30px;
+    }
+    .what-we-do-hover-footer {
+        font-size: 15px;
+    }
+    .what-we-do-hover-sec1-head {
+        font-family: "Syne";
+        font-size: 25px;
+    }
+    .what-we-do-hover-sec1-para {
+        color: grey;
+        font-size: 10px;
+        margin-bottom: 17px;
+    }
+    .what-we-do-hover-sec1-img-card {
+        padding: 25px;
+        margin-bottom: 20px;
+    }
+    .what-we-do-hover-sec1-img-card-para {
+        font-size: 13px;
+    }
+    .what-we-do-hover-secs-head {
+        font-size: 25px;
+        height: 10vh;
+        margin-bottom: 20px;
+    }
     
+    .what-we-do-hover-secs-para {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
 }
 
 /* what we do hover content ends*/
