@@ -1,5 +1,6 @@
 "use client"
-import React from 'react'
+
+import React,{useRef,useState} from 'react'
 import { useParams } from 'next/navigation';
 import { FiCornerDownLeft } from "react-icons/fi";
 import Image from 'next/image';
@@ -164,13 +165,29 @@ const categoryBlogs = [
     },
 ]
 
-function Page() {
+function BlogCategory() {
+  const pageMainRef = useRef<HTMLDivElement | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = (arg?: boolean) => {
+    setIsOpen(arg ?? !isOpen);
+
+    if (pageMainRef.current) {
+      if (!isOpen) {
+        pageMainRef.current.classList.add("display-none-mobile-navbar");
+      } else {
+        pageMainRef.current.classList.remove("display-none-mobile-navbar");
+      }
+    }
+  };
     const params = useParams();
     console.log(params.slug);
     
   return (
     <>
-    <Navbar />
+    <Navbar mobileOverlayOpen={toggleMenu} isOpen={isOpen}/>
+    <div ref={pageMainRef} className="page-main">
+
     <div className='blog-category-page-main-container'>
       <div className="blog-category-page-return-to-home flex items-center">
         <FiCornerDownLeft />
@@ -195,10 +212,11 @@ function Page() {
       
     </div>
     <Footer />
+    </div>
     </>
   )
 }
 
-export default Page
+export default BlogCategory
 
  
