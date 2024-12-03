@@ -17,7 +17,7 @@ const OverlappingSections = () => {
           opacity: 0,
           scrollTrigger:{
             trigger: ".card1",
-            start: "top 0%",
+            start: "top 10%",
             end: "bottom 15%",
             scrub: true,
           }
@@ -27,7 +27,7 @@ const OverlappingSections = () => {
           opacity: 0,
           scrollTrigger:{
             trigger: ".card2",
-            start: "top 0%",
+            start: "top 10%",
             end: "bottom 15%",
             scrub: true,
           }
@@ -37,7 +37,7 @@ const OverlappingSections = () => {
           opacity: 0,
           scrollTrigger:{
             trigger: ".card3",
-            start: "top 0%",
+            start: "top 10%",
             end: "bottom 15%",
             scrub: true,
           }
@@ -52,7 +52,7 @@ const OverlappingSections = () => {
   
     return (
       <section className="overlapping-cards">
-        <div className="flex card1 sticky top-[1vh] custom-card" >
+        <div className="flex card1 sticky top-[5vh] custom-card" >
           <div className="graphic-page-sec2-content text-black">
             <p className="graphic-page-sec2-content-variety mb-4">Customer Stories</p>
             <h2 className="graphic-page-sec2-content-head mb-4">ACM Revamps To<br /> Build Trust &<br /> Reputation at Scale</h2>
@@ -66,7 +66,7 @@ const OverlappingSections = () => {
         </div>
 
 
-        <div className="flex card2 sticky top-[1vh] custom-card" >
+        <div className="flex card2 sticky top-[5vh] custom-card" >
             <div className="graphic-page-sec2-graphic-card graphic-page-sec2-graphic-card-second">
               <Image className="graphic-page-sec2-gif" src="https://cdn.sanity.io/images/k0dlbavy/production/52bfaef9d3c7b13d75f292805e10f21bf16e6f43-1200x800.png?auto=format&fit=max&q=100&w=1200" alt="gif" width={500} height={500} />
             </div>
@@ -80,7 +80,7 @@ const OverlappingSections = () => {
         </div>
         
 
-        <div className="flex custom-card card3 sticky top-[1vh] mb-4" >
+        <div className="flex custom-card card3 sticky top-[5vh] mb-4" >
           <div className="graphic-page-sec2-content text-black">
             <h2 className="graphic-page-sec2-content-head mb-4">What makes our design services different?</h2>
             <p className="graphic-page-sec2-content-para">We deliver speedy, high-quality graphic design services through a transparent subscription model. We are a tech-enabled company, developing its own proprietary software to brief, manage, and coordinate a high-volume of design projects, making it possible to keep pace with teams at Amazon, Puma, Facebook, and more.

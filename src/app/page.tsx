@@ -1,4 +1,6 @@
+"use client"
 
+import React,{useRef,useState} from 'react'
 
 import HeroSection from "@/components/homeSections/HeroSection";
 
@@ -20,6 +22,20 @@ import Navbar from "@/components/Navbar";
 //import TextSection from '@/components/TextSection'
 
 export default function Home() {
+  const pageMainRef = useRef<HTMLDivElement | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = (arg?: boolean) => {
+    setIsOpen(arg ?? !isOpen);
+
+    if (pageMainRef.current) {
+      if (!isOpen) {
+        pageMainRef.current.classList.add("display-none-mobile-navbar");
+      } else {
+        pageMainRef.current.classList.remove("display-none-mobile-navbar");
+      }
+    }
+  };
   //const [loading, setLoading] = useState(false);
 //
   //useEffect(() => {
@@ -29,8 +45,8 @@ export default function Home() {
   
     return (
       <>
-      <Navbar />
-      <div className="dark:bg-balck bg-black overflow-hidden page-main">
+      <Navbar mobileOverlayOpen={toggleMenu} isOpen={isOpen}/>
+      <div ref={pageMainRef} className="dark:bg-balck bg-black overflow-hidden page-main">
         <HeroSection />
         <div className="after-hero-sec">
           <Section2 />
