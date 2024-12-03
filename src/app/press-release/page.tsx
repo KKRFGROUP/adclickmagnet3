@@ -1,4 +1,6 @@
-import React from 'react'
+"use client"
+
+import React,{useRef,useState} from 'react'
 import Image from 'next/image'
 import { LuMoveRight } from "react-icons/lu";
 import Navbar from '@/components/Navbar';
@@ -63,47 +65,63 @@ const pressReleases = [
   
   
 
-function page() {
+function PressRelease() {
+  const pageMainRef = useRef<HTMLDivElement | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = (arg?: boolean) => {
+    setIsOpen(arg ?? !isOpen);
+
+    if (pageMainRef.current) {
+      if (!isOpen) {
+        pageMainRef.current.classList.add("display-none-mobile-navbar");
+      } else {
+        pageMainRef.current.classList.remove("display-none-mobile-navbar");
+      }
+    }
+  };
   return (
     <>
-    <Navbar />
-    <div className="press-release-main-container">
-        <div className="flex top-press-release-card">
-            <div className="top-press-release-card-content">
-                <h2 className="top-press-release-card-head">{pressReleases[0].heading}</h2>
-                <div>
-                    <p className="top-press-release-card-para">{pressReleases[0].para}</p>
-                    <button type="button" className="flex items-center top-press-release-card-btn">
-                            Read More
-                            <LuMoveRight />
-                    </button>
-                </div>
-            </div>
-            <Image className="top-press-release-card-img" src={pressReleases[0].img} alt={pressReleases[0].heading} height={500} width={500} />
-        </div>
+    <Navbar mobileOverlayOpen={toggleMenu} isOpen={isOpen}/>
+    <div ref={pageMainRef} className="page-main">
+      <div className="press-release-main-container">
+          <div className="flex top-press-release-card">
+              <div className="top-press-release-card-content">
+                  <h2 className="top-press-release-card-head">{pressReleases[0].heading}</h2>
+                  <div>
+                      <p className="top-press-release-card-para">{pressReleases[0].para}</p>
+                      <button type="button" className="flex items-center top-press-release-card-btn">
+                              Read More
+                              <LuMoveRight />
+                      </button>
+                  </div>
+              </div>
+              <Image className="top-press-release-card-img" src={pressReleases[0].img} alt={pressReleases[0].heading} height={500} width={500} />
+          </div>
 
-        <div className=" pb-8  press-release-cards-container">
-            {pressReleases.map((each,index) => (
-                <Link key={index} href={`/press-release/${each.link}`} className="press-release-card">
-                    
-                        <Image className="press-release-card-img" src={each.img} alt="press release img" height={500} width={500} />
-                        <div className="press-release-card-content">
-                            <h2 className="press-release-card-head">{each.heading}</h2>
-                            <p className="press-release-card-para">{each.para}</p>
-                            <button type="button" className="flex items-center top-press-release-card-btn">
-                                Read More
-                                <LuMoveRight />
-                            </button>
-                            <hr className='press-release-card-line'/>
-                        </div>
-                    
-                </Link>
-            ))}
-        </div>
+          <div className=" pb-8  press-release-cards-container">
+              {pressReleases.map((each,index) => (
+                  <Link key={index} href={`/press-release/${each.link}`} className="press-release-card">
+                      
+                          <Image className="press-release-card-img" src={each.img} alt="press release img" height={500} width={500} />
+                          <div className="press-release-card-content">
+                              <h2 className="press-release-card-head">{each.heading}</h2>
+                              <p className="press-release-card-para">{each.para}</p>
+                              <button type="button" className="flex items-center top-press-release-card-btn">
+                                  Read More
+                                  <LuMoveRight />
+                              </button>
+                              <hr className='press-release-card-line'/>
+                          </div>
+                      
+                  </Link>
+              ))}
+          </div>
+      </div>
+      <Footer />
     </div>
-    <Footer />
     </>
   )
 }
 
-export default page
+export default PressRelease

@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react'
+import React,{useRef,useState} from 'react'
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/services-components/HeroSection';
@@ -408,11 +408,25 @@ const faq = {
   
 
 function Seo() { 
+  const pageMainRef = useRef<HTMLDivElement | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = (arg?: boolean) => {
+    setIsOpen(arg ?? !isOpen);
+
+    if (pageMainRef.current) {
+      if (!isOpen) {
+        pageMainRef.current.classList.add("display-none-mobile-navbar");
+      } else {
+        pageMainRef.current.classList.remove("display-none-mobile-navbar");
+      }
+    }
+  };
   
   return (
     <>
-        <Navbar />
-        <div className="page-main">
+        <Navbar  mobileOverlayOpen={toggleMenu} isOpen={isOpen}/>
+        <div ref={pageMainRef} className="page-main">
           <div className='tracing-beam'>
                   <TracingBeam >
                       <section data-bgcolor="#070707" data-textcolor="#ffffff">
@@ -432,10 +446,8 @@ function Seo() {
           </div>
 
           <div className='mobile-tracing-beam'>
-            <Navbar />
-                  <section data-bgcolor="#070707" data-textcolor="#ffffff">
                   <HeroSection heading={heroContent.heading} para={heroContent.para} />
-                  </section>
+                  
                   <Section2 Cards={section2}/>
                   <Section3  content={section3} roundb="rounded-t-[50px]" />
                   <Section4 content={section4} roundb='rounded-b-[50px]'/>

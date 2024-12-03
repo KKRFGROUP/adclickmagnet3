@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect,useRef, useState } from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import { FaFacebook,FaLinkedin,FaTwitter } from "react-icons/fa";
@@ -190,9 +190,23 @@ const morePressRelease = [
 ]
 
 
-function Page() {
-    const [slugContent, setSlugContent] = useState<Record<string, any> | null>(null);
-    const params = useParams();
+function SlugPressRelease() {
+  const pageMainRef = useRef<HTMLDivElement | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const [slugContent, setSlugContent] = useState<Record<string, any> | null>(null);
+  const params = useParams();
+
+  const toggleMenu = (arg?: boolean) => {
+    setIsOpen(arg ?? !isOpen);
+
+    if (pageMainRef.current) {
+      if (!isOpen) {
+        pageMainRef.current.classList.add("display-none-mobile-navbar");
+      } else {
+        pageMainRef.current.classList.remove("display-none-mobile-navbar");
+      }
+    }
+  };
     useEffect(() => {
         const list = content.find((each) => each.link === params.slug) || []
         setSlugContent(list);
@@ -200,76 +214,78 @@ function Page() {
     
     return (
         <>
-        <Navbar />
-        <div className="press-release-slug-page-container">
-            <div className="mb-[10%]">
-                <div className="press-release-hero-sec">
-                  <div>
-                    <h2 className="press-release-hero-sec-head">{slugContent?.heading}</h2>
-                    <p className="press-release-hero-sec-para">adClickMagnet • {new Date(slugContent?.time).toLocaleDateString()}</p>
-                  </div>
-                    <Image className="press-release-hero-sec-img" src={slugContent?.img} alt={slugContent?.heading} height={500} width={500}/>
-                </div>
-            </div>
-
-            {/*content of slug data */}
-            <div className="flex press-release-slug-content-card">
-                <div className="sharing-social-handles">
-                    <div className="flex items-center justify-between text-2xl">
-                        <FaLinkedin />
-                        <FaFacebook />
-                        <FaTwitter />
-                    </div>
-                    <p className="sharing-social-handles-para">Share This Article</p>
-                </div>
-
-                <div className="press-release-slug-content">
-                  {slugContent?.mainPara.map((each: string[],index: number) => (
-                    <>
-                    <p key={index} className="press-release-slug-content-para">{each}</p>
-                    <br />
-                    </>
-                  ))}
-                  {slugContent?.subSections.map((each: {subHeading: string; subPara: string;},index: number) => (
-                      <div key={index} className='mb-6'>
-                        <h2 className="press-release-slug-content-head">{each.subHeading}</h2>
-                        <p className="press-release-slug-content-para">{each.subPara}</p>
-                      </div>
-                  ))}
-                  <div className="press-release-author-card">
-                    <Image className="press-release-author-card-img" src="https://res.cloudinary.com/dgdgrniut/image/upload/v1732186526/adclickmagnetlogoblacklogo_reqzpl.png" alt="logo" height={500} width={500} />
+        <Navbar mobileOverlayOpen={toggleMenu} isOpen={isOpen}/>
+        <div ref={pageMainRef} className='page-main'>
+          <div className="press-release-slug-page-container">
+              <div className="mb-[10%]">
+                  <div className="press-release-hero-sec">
                     <div>
-                      <p className="press-release-author-card-author">THE AUTHOR</p>
-                     
-                      <p className="press-release-author-card-name">Aftab • adClickMagnet</p>
+                      <h2 className="press-release-hero-sec-head">{slugContent?.heading}</h2>
+                      <p className="press-release-hero-sec-para">adClickMagnet • {new Date(slugContent?.time).toLocaleDateString()}</p>
                     </div>
+                      <Image className="press-release-hero-sec-img" src={slugContent?.img} alt={slugContent?.heading} height={500} width={500}/>
                   </div>
-                </div>
-            </div>
-
-            {/* read more press release */}
-            <div className="read-more-press-release mt-2">
-              <h2 className="read-more-press-release-head">Read More Press Release</h2>
-              <div className="flex justify-between read-more-press-release-flex">
-                {morePressRelease.map((each,index) => (
-                  <div key={index} className='read-more-press-release-card' >
-                    <Image className="read-more-press-release-card-img" src={each.img} alt={each.heading} height={500} width={500} />
-                    <h2 className="read-more-press-release-card-head">{each.heading}</h2>
-                    <p className="read-more-press-release-card-para">{each.para}</p>
-                    <div className="flex">
-                      <p className="read-more-press-release-card-acm-date">adClickMagnet</p>
-                      <p className="read-more-press-release-card-acm-date">{new Date(each.time).toLocaleTimeString()}</p>
-                    </div>
-                  </div>
-                ))}
               </div>
-            </div>
-            
+
+              {/*content of slug data */}
+              <div className="flex press-release-slug-content-card">
+                  <div className="sharing-social-handles">
+                      <div className="flex items-center justify-between text-2xl">
+                          <FaLinkedin />
+                          <FaFacebook />
+                          <FaTwitter />
+                      </div>
+                      <p className="sharing-social-handles-para">Share This Article</p>
+                  </div>
+
+                  <div className="press-release-slug-content">
+                    {slugContent?.mainPara.map((each: string[],index: number) => (
+                      <>
+                      <p key={index} className="press-release-slug-content-para">{each}</p>
+                      <br />
+                      </>
+                    ))}
+                    {slugContent?.subSections.map((each: {subHeading: string; subPara: string;},index: number) => (
+                        <div key={index} className='mb-6'>
+                          <h2 className="press-release-slug-content-head">{each.subHeading}</h2>
+                          <p className="press-release-slug-content-para">{each.subPara}</p>
+                        </div>
+                    ))}
+                    <div className="press-release-author-card">
+                      <Image className="press-release-author-card-img" src="https://res.cloudinary.com/dgdgrniut/image/upload/v1732186526/adclickmagnetlogoblacklogo_reqzpl.png" alt="logo" height={500} width={500} />
+                      <div>
+                        <p className="press-release-author-card-author">THE AUTHOR</p>
+                      
+                        <p className="press-release-author-card-name">Aftab • adClickMagnet</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+              {/* read more press release */}
+              <div className="read-more-press-release mt-2">
+                <h2 className="read-more-press-release-head">Read More Press Release</h2>
+                <div className="flex justify-between read-more-press-release-flex">
+                  {morePressRelease.map((each,index) => (
+                    <div key={index} className='read-more-press-release-card' >
+                      <Image className="read-more-press-release-card-img" src={each.img} alt={each.heading} height={500} width={500} />
+                      <h2 className="read-more-press-release-card-head">{each.heading}</h2>
+                      <p className="read-more-press-release-card-para">{each.para}</p>
+                      <div className="flex">
+                        <p className="read-more-press-release-card-acm-date">adClickMagnet</p>
+                        <p className="read-more-press-release-card-acm-date">{new Date(each.time).toLocaleTimeString()}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+          </div>
+          <Footer />
         </div>
-        <Footer />
         </>
 
     )
 }
 
-export default Page;
+export default SlugPressRelease;

@@ -12,7 +12,8 @@ import Link from "next/link";
 import { CgMenuHotdog } from "react-icons/cg";
 import { RxCross2 } from "react-icons/rx";
 import { IoMdAdd } from "react-icons/io";
-
+import { FaInstagram, FaFacebook  } from "react-icons/fa6";
+import { RiWhatsappFill } from "react-icons/ri";
 
 const hoverImageArr = [
     {
@@ -28,52 +29,37 @@ const hoverImageArr = [
 const defaultImage =  "https://media.istockphoto.com/id/1407063872/vector/modern-abstract-background-with-black-gradient-abstract-black-business-background.jpg?s=612x612&w=0&k=20&c=6QftyGArm3LTpQsLw29DpZ9ZB42HMNK-wboAWyFZvto="
 
 
-export default function Navbar({className}: {className?: string}) {
+
+export default function Navbar({className, mobileOverlayOpen, isOpen }: {className?: string; mobileOverlayOpen:  (arg?: boolean) => void; isOpen: boolean;}) {
     const [active, setActive] = useState<string | null>(null);
-    const [isOpen, setIsOpen] = useState(false);
     const [whoWeAre, setWhoWeAre] = useState(false);
     const [services, setServices] = useState(false);
     const [graphicDesign, setGraphicDesign] = useState(false);
     const [adServices, setAdServices] = useState(false);
-    const [pageMain, setPageMain] = useState<HTMLElement | null>(null);
    const [isVisible, setIsVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [hoverImage, setHoverImage] = useState(defaultImage);
+  console.log(typeof mobileOverlayOpen);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
-      const element1 = document.querySelector<HTMLElement>(".page-main");
-      if (element1) {
-        setPageMain(element1);
-      }
-      
-      // Hide navbar if scrolling down, show if scrolling up
-      setIsVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
-      setPrevScrollPos(currentScrollPos);
-    };
+        const handleScroll = () => {
+        const currentScrollPos = window.scrollY;
 
-    window.addEventListener("scroll", handleScroll);
+        // Hide navbar if scrolling down, show if scrolling up
+        setIsVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+        setPrevScrollPos(currentScrollPos);
+        };
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollPos,pageMain]);
+        window.addEventListener("scroll", handleScroll);
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [prevScrollPos]);
+
+    
 
   
-  const updateIsOpen =  () => {
-    setIsOpen((prevIsOpen) => {
-      const newIsOpen = !prevIsOpen;
+
   
-      if (pageMain) {
-        if (newIsOpen) { // State after the update
-          pageMain.classList.add('display-none-mobile-navbar');
-        } else {
-          pageMain.classList.remove('display-none-mobile-navbar');
-        }
-      }
-  
-      return newIsOpen; // Return the new state
-    });
-  };
 
   const handleHoverImage = (name: string) => {
     const object = hoverImageArr.find((each) => each.name === name)
@@ -159,7 +145,7 @@ export default function Navbar({className}: {className?: string}) {
                         </Link>
 
                         
-                        <button type="button" className="navbar-menu-container" onClick={() => updateIsOpen()}>
+                        <button type="button" className="navbar-menu-container" onClick={() => mobileOverlayOpen()}>
                             <CgMenuHotdog className="text-4xl text-black bg:text-black"/>
                         </button>
 
@@ -178,7 +164,7 @@ export default function Navbar({className}: {className?: string}) {
                                     </Link>
 
                                     <button
-                                        onClick={() => updateIsOpen()}
+                                        onClick={() => mobileOverlayOpen()}
                                         className="mr-3"
                                         >
                                         <RxCross2 className="text-4xl text-white bg:text-black"/>
@@ -187,7 +173,7 @@ export default function Navbar({className}: {className?: string}) {
                                 </div>
 
                                 <nav className="mobile-navlinks">
-                                    <Link className="w-full mb-7" href="/" onClick={() => setIsOpen(false)}>Home</Link>
+                                    <Link className="w-full mb-7" href="/" onClick={() => mobileOverlayOpen(false)}>Home</Link>
                                     <div className="flex gap-4 items-center mb-7">
                                         <p>Who We Are</p>
                                         <div onClick={() => setWhoWeAre(!whoWeAre)}>
@@ -195,15 +181,15 @@ export default function Navbar({className}: {className?: string}) {
                                         </div>
                                     </div>
                                     <div className={`services-drop-down ${whoWeAre ? "scale-100 h-full" : "scale-0 h-0"}`}>
-                                            <Link className="w-full mb-2" href="/about-us" onClick={() => setIsOpen(false)}>Who We Are</Link>
+                                            <Link className="w-full mb-2" href="/about-us" onClick={() => mobileOverlayOpen(false)}>Who We Are</Link>
                                             <hr className="w-full mb-3"/>
-                                            <Link className="w-full mb-2" href="/careers" onClick={() => setIsOpen(false)}>Careers</Link>
+                                            <Link className="w-full mb-2" href="/careers" onClick={() => mobileOverlayOpen(false)}>Careers</Link>
                                             <hr className="w-full mb-3"/>
-                                            <Link className="w-full mb-2" href="/press-release" onClick={() => setIsOpen(false)}>Press Release</Link>
+                                            <Link className="w-full mb-2" href="/press-release" onClick={() => mobileOverlayOpen(false)}>Press Release</Link>
                                             <hr className="w-full mb-3"/>
-                                            <Link className="w-full mb-2" href="/blogs" onClick={() => setIsOpen(false)}>Blogs</Link>
+                                            <Link className="w-full mb-2" href="/blogs" onClick={() => mobileOverlayOpen(false)}>Blogs</Link>
                                             <hr className="w-full mb-3"/>
-                                            <Link className="w-full mb-2" href="/case-studies" onClick={() => setIsOpen(false)}>Case Studies</Link>
+                                            <Link className="w-full mb-2" href="/case-studies" onClick={() => mobileOverlayOpen(false)}>Case Studies</Link>
                                             <hr className="w-full mb-5"/>
                                         </div>
 
@@ -218,23 +204,25 @@ export default function Navbar({className}: {className?: string}) {
                                     <div className={`services-drop-down ${services ? "scale-100 h-full" : "scale-0 h-0"}`}>
                                             
                                             <div className="flex gap-4 items-center mb-2" >
-                                                <Link  href="/graphic-design" onClick={() => setIsOpen(false)}>Graphic Design</Link>
+                                                <p>Creative Design</p>
                                                 <div onClick={() => setGraphicDesign(!graphicDesign)}>
                                                     <IoMdAdd /> 
                                                 </div>
                                             </div>
                                             <hr className="w-full mb-5"/>
                                                 
-                                                    <div className={`services-drop-down dark:text-white ${graphicDesign ? "animate__backInUp " : "animate__backOutDown scale-0 h-0"}`}>
-                                                        <Link className="w-full mb-2" href="/ad-creative" onClick={() => setIsOpen(false)}>Ad Creative</Link>
+                                                    <div className={`services-drop-down dark:text-white ${graphicDesign ? "animate__backInUp h-full" : "animate__backOutDown scale-0 h-0"}`}>
+                                                        <Link className="w-full mb-2" href="/graphic-design" onClick={() => mobileOverlayOpen(false)}>Graphic Design</Link>
                                                         <hr className="w-full mb-3"/>
-                                                        <Link className="w-full mb-2" href="/motion-design" onClick={() => setIsOpen(false)}>Motion Design</Link>
+                                                        <Link className="w-full mb-2" href="/ad-creative" onClick={() => mobileOverlayOpen(false)}>Ad Creative</Link>
                                                         <hr className="w-full mb-3"/>
-                                                        <Link className="w-full mb-2" href="/branding-design" onClick={() => setIsOpen(false)}>Branding Service</Link>
+                                                        <Link className="w-full mb-2" href="/motion-design" onClick={() => mobileOverlayOpen(false)}>Motion Design</Link>
                                                         <hr className="w-full mb-3"/>
-                                                        <Link className="w-full mb-2" href="/video-production" onClick={() => setIsOpen(false)}>Video Production</Link>
+                                                        <Link className="w-full mb-2" href="/branding-design" onClick={() => mobileOverlayOpen(false)}>Branding Service</Link>
                                                         <hr className="w-full mb-3"/>
-                                                        <Link className="w-full mb-2" href="/presentation-design" onClick={() => setIsOpen(false)}>Presentation Design</Link>
+                                                        <Link className="w-full mb-2" href="/video-production" onClick={() => mobileOverlayOpen(false)}>Video Production</Link>
+                                                        <hr className="w-full mb-3"/>
+                                                        <Link className="w-full mb-2" href="/presentation-design" onClick={() => mobileOverlayOpen(false)}>Presentation Design</Link>
                                                         <hr className="w-full mb-5"/>
                                                     </div>
                                             <div className="flex gap-4 items-center mb-2" >
@@ -245,30 +233,29 @@ export default function Navbar({className}: {className?: string}) {
                                             </div>
                                             <hr className="w-full mb-5"/>
                                             <div className={`services-drop-down dark:text-white ${adServices ? "animate__backInUp " : "animate__backOutDown scale-0 h-0"}`}>
-                                                <Link className="w-full mb-2" href="/google-ads" onClick={() => setIsOpen(false)}>google ads</Link>
+                                                <Link className="w-full mb-2" href="/google-ads" onClick={() => mobileOverlayOpen(false)}>google ads</Link>
                                                 <hr className="w-full mb-3"/>
-                                                <Link className="w-full mb-2" href="/linkedin-ads" onClick={() => setIsOpen(false)}>Linkedin Ads</Link>
+                                                <Link className="w-full mb-2" href="/linkedin-ads" onClick={() => mobileOverlayOpen(false)}>Linkedin Ads</Link>
                                                 <hr className="w-full mb-3"/>
-                                                <Link className="w-full mb-2" href="/meta-ads" onClick={() => setIsOpen(false)}>Meta Ads</Link>
+                                                <Link className="w-full mb-2" href="/meta-ads" onClick={() => mobileOverlayOpen(false)}>Meta Ads</Link>
                                                 <hr className="w-full mb-3"/>
-                                                <Link className="w-full mb-2" href="/seo" onClick={() => setIsOpen(false)}>seo</Link>
+                                                <Link className="w-full mb-2" href="/seo" onClick={() => mobileOverlayOpen(false)}>seo</Link>
+                                                <hr className="w-full mb-3"/>
+                                                <Link className="w-full mb-2" href="/web-development" onClick={() => mobileOverlayOpen(false)}>web development</Link>
                                                 <hr className="w-full mb-5"/>
                                             </div>
-
-
-                                            
-                                            <Link className="w-full mb-2" href="/web-development" onClick={() => setIsOpen(false)}>web development</Link>
-                                            <hr className="w-full mb-3"/>
-                                            
                                         </div>
-                                    
-                                    
-                                
                                 </nav>
                             </div>
-                            <Link className=' flex justify-center items-end mt-10' href="/contact-us" onClick={() => setIsOpen(false)}>
-                                <button type="button" className='mobile-overlay-btn'>Contact</button>
-                            </Link>
+                            <div className=' flex-col justify-end items-center text-center mb-10' >
+                                <Link className="w-full mb-2" href="/contact-us" onClick={() => mobileOverlayOpen(false)}><button type="button" className='mobile-overlay-btn'>Contact</button></Link>
+                                <div className="flex items-center justify-center gap-10 mt-5 text-2xl">
+                                    <Link href="https://www.instagram.com/adclickmagnet?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><FaInstagram className='social-media-handle-logo'/> </Link>
+                                    <Link href="https://wa.me/+918800262061"><RiWhatsappFill className='social-media-handle-logo'/> </Link>
+                                    <Link href="https://www.facebook.com/profile.php?id=61552551834420"><FaFacebook className='social-media-handle-logo'/> </Link>
+              
+                                </div>
+                            </div>
                         </div>
     </>
   )

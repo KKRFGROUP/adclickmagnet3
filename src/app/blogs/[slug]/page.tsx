@@ -1,6 +1,7 @@
+"use client"
+import React,{useRef,useState} from 'react'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
-import React from 'react'
 import BlogSlugHero from './sections/BlogSlugHero'
 import "./slug.css"
 import BlogSlugContent from './sections/BlogSlugContent'
@@ -94,11 +95,25 @@ const slugblogcontent = {
 
 const heroContent: {head: string; name: string; time: string; img: string}={head: slugblogcontent.heroHeading, name: slugblogcontent.name, img: slugblogcontent.image, time: slugblogcontent.time}
 
-function page() {
+function SlugBlogs() {
+  const pageMainRef = useRef<HTMLDivElement | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = (arg?: boolean) => {
+    setIsOpen(arg ?? !isOpen);
+
+    if (pageMainRef.current) {
+      if (!isOpen) {
+        pageMainRef.current.classList.add("display-none-mobile-navbar");
+      } else {
+        pageMainRef.current.classList.remove("display-none-mobile-navbar");
+      }
+    }
+  };
   return (
     <>
-      <Navbar />
-      <div className="page-main">
+      <Navbar mobileOverlayOpen={toggleMenu} isOpen={isOpen}/>
+      <div ref={pageMainRef} className="page-main">
           <BlogSlugHero content={heroContent} />
           <BlogSlugContent content={slugblogcontent} />
           <Footer  />
@@ -107,4 +122,4 @@ function page() {
   )
 }
 
-export default page
+export default SlugBlogs
