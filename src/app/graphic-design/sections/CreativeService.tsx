@@ -44,7 +44,7 @@ export default function CreativeService() {
             </div>
             <div className="creative-service-card">
               <Image className='creative-service-card-img' src="https://cdn.sanity.io/images/k0dlbavy/production/e9711069938bd5fbeecf62d125a32a317b2543da-2528x1280.jpg?auto=format&fit=max&q=100&w=1896" alt="crative image" height={300} width={300} />
-              <p className='creative-service-card-content' >Significantly reduced employee churn while boosting morale and happiness across diverse creative and marketing teams.</p>
+              <p className='creative-service-card-content' >Reduced employee churn and boosted morale across creative and marketing teams.</p>
               <hr className='creative-service-card-content-line' />
             </div>
             <div className="creative-service-card">

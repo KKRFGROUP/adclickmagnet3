@@ -153,7 +153,7 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
                        
                     </div>
                         <div
-                            className={`${isOpen ? "relative" : "fixed top-0 left-0"}  w-[100vw] inset-0  bg-black bg-opacity-95 z-50 flex flex-col   transition-transform duration-300 mobile-navbar-fullscreen-overlay ${
+                            className={`${isOpen ? "relative" : "fixed top-0 left-0"}  w-[100vw] inset-0  bg-black  z-50 flex flex-col   transition-transform duration-300 mobile-navbar-fullscreen-overlay ${
                             isOpen ? 'scale-100' : 'scale-0'
                             }`}
                         >
