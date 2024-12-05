@@ -1,7 +1,7 @@
 "use client";
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 gsap.registerPlugin(ScrollTrigger);
@@ -120,37 +120,49 @@ const items = [
 function DigitalServices() {
   const triggerRef = useRef(null);
   const sectionRef = useRef(null);
+  const [windowWidth, setWindowWidth] = useState(0);
   
   
 
   useEffect(() => {
     if (typeof window !== "undefined") {
+      gsap.registerPlugin(ScrollTrigger);
 
-      const windowWidth = window.innerWidth;
+      // Update windowWidth on resize
+      const updateWidth = () => setWindowWidth(window.innerWidth);
+      updateWidth();
+      window.addEventListener("resize", updateWidth);
     
-    const hscroll = gsap.fromTo(
-      sectionRef.current,
-      {translateX:0},
-      {
-        translateX: windowWidth <= 1280 ? "-120%" : "-40%",
-        ease: "none",
-        duration: 2,
-        scrollTrigger:{
-          trigger: triggerRef.current,
-          start: windowWidth <= 1280 ? "top 0%": "top -55%",
-          end: "180% top",
-          scrub: 2,
-          pin: true
+      const hscroll = gsap.fromTo(
+        sectionRef.current,
+        {translateX:0},
+        {
+          translateX: windowWidth <= 1280 ? "-120%" : "-40%",
+          ease: "none",
+          duration: 2,
+          scrollTrigger:{
+            trigger: triggerRef.current,
+            start: windowWidth <= 1280 ? "top 0%": "top -45%",
+            end: "180% top",
+            scrub: 2,
+            pin: true
+          }
         }
-      }
-    )
-    
-    return () => {
-      hscroll.kill();
-    }
-  }
+      )
 
-  })
+      ScrollTrigger.refresh();
+
+      return () => {
+        window.removeEventListener("resize", updateWidth);
+        ScrollTrigger.killAll(); // Clean up triggers
+        hscroll.kill();
+      };
+    }
+})
+
+
+
+
   return (
     <div className='graphic-page-services-sec-container' ref={triggerRef}>
         <h2 className="graphic-page-services-sec-head">Design</h2>

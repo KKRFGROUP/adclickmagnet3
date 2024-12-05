@@ -24,10 +24,10 @@ function AboutHeroSec() {
         
         <div className='w-[100vw]'>
             <div className="about-hero-infinite-text-1  flex justify-around">
-                <span className="infinite-text-para about-hero-para-1">ABOUT <span className="font-news">US - </span></span>
-                <span className="infinite-text-para about-hero-para-1">ABOUT <span className="font-news">US - </span></span>
-                <span className="infinite-text-para about-hero-para-1">ABOUT <span className="font-news">US - </span></span>
-                <span className="infinite-text-para about-hero-para-1">ABOUT <span className="font-news">US - </span></span>
+                <span className="about-hero-para-1">ABOUT <span className="font-news">US - </span></span>
+                <span className="about-hero-para-1">ABOUT <span className="font-news">US - </span></span>
+                <span className="about-hero-para-1">ABOUT <span className="font-news">US - </span></span>
+                <span className="about-hero-para-1">ABOUT <span className="font-news">US - </span></span>
             </div>
         </div>
         <div className="about-hero-model">
@@ -42,10 +42,10 @@ function AboutHeroSec() {
         </div>
         <div className='w-[100vw]'>
             <div className="about-hero-infinite-text-2  flex items-center">
-                <span className="infinite-text-para about-hero-para-2">WHO WE <span className="font-news" >ARE - </span></span>
-                <span className="infinite-text-para about-hero-para-2">WHO WE <span className="font-news" >ARE - </span></span>
-                <span className="infinite-text-para about-hero-para-2">WHO WE <span className="font-news" >ARE - </span></span>
-                <span className="infinite-text-para about-hero-para-2">WHO WE <span className="font-news" >ARE - </span></span>
+                <span className="about-hero-para-2">WHO WE <span className="font-news" >ARE - </span></span>
+                <span className="about-hero-para-2">WHO WE <span className="font-news" >ARE - </span></span>
+                <span className="about-hero-para-2">WHO WE <span className="font-news" >ARE - </span></span>
+                <span className="about-hero-para-2">WHO WE <span className="font-news" >ARE - </span></span>
             </div>
         </div>
         <div className='flex justify-center absolute top-[90vh] w-[100vw]'>

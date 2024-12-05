@@ -40,8 +40,8 @@ function Founders() {
                         <p className="founder-content-para">As the founder of adClickMagnet, I am thrilled to be part of a dynamic team that is dedicated to transforming the digital landscape. Our company thrives on creativity, innovation, and an unwavering commitment to delivering exceptional digital services.<br /><br /> We are passionate about helping businesses elevate their online presence, increase their reach, and achieve measurable success.</p>
                     </div>
                 </div>
-                <div className="founder-img-card">
-                    <Image className="founder-img" src="https://res.cloudinary.com/dgdgrniut/image/upload/v1731761906/Untitled_design_isejv4.png" alt="founder" height={600} width={600} />
+                <div className="founder-img-card items-end">
+                    <Image className="founder-img " src="https://res.cloudinary.com/dgdgrniut/image/upload/v1731761906/Untitled_design_isejv4.png" alt="founder" height={600} width={600} />
                     <div className="founder-content-card items-end text-right">
                         <div className="flex items-center justify-end gap-3 mb-3">
                             <h2 className='inspired-us-content-card-head'>Aftab Khan</h2>

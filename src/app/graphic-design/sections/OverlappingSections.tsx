@@ -53,7 +53,8 @@ const OverlappingSections = () => {
               },
             });
           } 
-          ScrollTrigger.refresh();
+      
+        ScrollTrigger.refresh();
         
         
 
@@ -71,7 +72,7 @@ const OverlappingSections = () => {
   
     return (
       <section className="overlapping-cards">
-        <div className={`flex card1    custom-card ${windowWidth <= 768 ? "" : ""}`} >
+        <div className={`flex card1  custom-card ${windowWidth <= 768 ? "" : ""}`} >
           <div className="graphic-page-sec2-content text-black">
             <p className="graphic-page-sec2-content-variety mb-4">Customer Stories</p>
             <h2 className="graphic-page-sec2-content-head mb-4">ACM Revamps To<br /> Build Trust &<br /> Reputation at Scale</h2>

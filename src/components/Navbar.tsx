@@ -39,7 +39,7 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
    const [isVisible, setIsVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [hoverImage, setHoverImage] = useState(defaultImage);
-  console.log(typeof mobileOverlayOpen);
+  
 
   useEffect(() => {
         const handleScroll = () => {
@@ -180,7 +180,7 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
                                             <IoMdAdd /> 
                                         </div>
                                     </div>
-                                    <div className={`services-drop-down ${whoWeAre ? "scale-100 h-full" : "scale-0 h-0"}`}>
+                                    <div className={`services-drop-down ${whoWeAre ? "scale-100" : "scale-0 h-0"}`}>
                                             <Link className="w-full mb-2" href="/about-us" onClick={() => mobileOverlayOpen(false)}>Who We Are</Link>
                                             <hr className="w-full mb-3"/>
                                             <Link className="w-full mb-2" href="/careers" onClick={() => mobileOverlayOpen(false)}>Careers</Link>
@@ -201,7 +201,7 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
                                     </div>
                                     
                                     
-                                    <div className={`services-drop-down ${services ? "scale-100 h-full" : "scale-0 h-0"}`}>
+                                    <div className={`services-drop-down ${services ? "scale-100" : "scale-0 h-0"}`}>
                                             
                                             <div className="flex gap-4 items-center mb-2" >
                                                 <p>Creative Design</p>
@@ -211,7 +211,7 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
                                             </div>
                                             <hr className="w-full mb-5"/>
                                                 
-                                                    <div className={`services-drop-down dark:text-white ${graphicDesign ? "animate__backInUp h-full" : "animate__backOutDown scale-0 h-0"}`}>
+                                                    <div className={`services-drop-down dark:text-white ${graphicDesign ? "animate__backInUp" : "animate__backOutDown scale-0 h-0"}`}>
                                                         <Link className="w-full mb-2" href="/graphic-design" onClick={() => mobileOverlayOpen(false)}>Graphic Design</Link>
                                                         <hr className="w-full mb-3"/>
                                                         <Link className="w-full mb-2" href="/ad-creative" onClick={() => mobileOverlayOpen(false)}>Ad Creative</Link>

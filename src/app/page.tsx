@@ -47,6 +47,7 @@ export default function Home() {
       <>
       <Navbar mobileOverlayOpen={toggleMenu} isOpen={isOpen}/>
       <div ref={pageMainRef} className="dark:bg-balck bg-black overflow-hidden page-main">
+        
         <HeroSection />
         <div className="after-hero-sec">
           <Section2 />

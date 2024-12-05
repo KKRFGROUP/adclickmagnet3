@@ -44,7 +44,9 @@ body {
   background-color: #E2E2E2;
 }
 @media (max-width: 1028px) {
-  
+  body {
+    cursor: default;
+  }
   .custom-cursor {
     cursor: default;
     top: -20px;

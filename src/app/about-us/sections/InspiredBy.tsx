@@ -5,15 +5,15 @@ import { TypewriterEffect } from '@/components/ui/TypewriterEffect'
 
 const words = [
     { 
-        text: "•INSPIRED",
+        text: "•Inspired",
         className: "text-white dark:text-white-500 tracking-wider impact-matric-head-1",
     },
     { 
-        text: "BY",
+        text: "By",
         className: "text-white dark:text-white-500 tracking-wider impact-matric-head-1",
     },
     {
-        text: "INNOVATION",
+        text: "Innovation",
         className: "text-white dark:text-white-500 tracking-wider impact-matric-head-2",
     },
     
@@ -71,7 +71,7 @@ function InspiredBy() {
                 <br />
                 <p className='inspired-video-content-para' >We are committed to delivering measurable results, fostering meaningful connections between brands and their audiences, and helping our clients achieve sustainable growth.</p>
             </div>
-            <video style={{ width: windowWidth <= 768 ? "100%": "100%", height: windowWidth <= 768? "100vh": "130vh", borderRadius: "50px" }} autoPlay preload='auto' loop muted src="https://res.cloudinary.com/dgdgrniut/video/upload/v1732097945/rewards-desktop-final_yqhhyy.mp4"></video>
+            <video style={{ width: windowWidth <= 768 ? "100%": "100%", height: windowWidth <= 1028? "90vh": "130vh", borderRadius: "50px" }} autoPlay preload='auto' loop muted src="https://res.cloudinary.com/dgdgrniut/video/upload/v1732097945/rewards-desktop-final_yqhhyy.mp4"></video>
         </div>
         </>
   )

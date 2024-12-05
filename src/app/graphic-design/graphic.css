@@ -732,7 +732,8 @@ figure {
     border-radius: 50px;
     padding: 80px;
     margin-bottom: 0%;
-    
+    position: relative;
+    top: 5vh;
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
   }
   
@@ -769,7 +770,16 @@ figure {
     }
 }
 
-
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
 @media (max-width: 768px) {
     .custom-card {
@@ -778,9 +788,10 @@ figure {
         padding-top: 40px;
         flex-direction: column;
         transition: 0.4s;
-        animation:backInUp 2s ease-out;
+        animation: fadeIn 2s ease-out forwards;
         animation-timeline: view(50% 50%);
-        top: 10vh;
+        /*animation:backInUp 2s ease-out;
+        animation-timeline: view(50% 50%);*/
     }
 }
     

@@ -5,11 +5,11 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 const words = [
     { 
-        text: "•IMPACT",
+        text: "•Impact",
         className: "text-white dark:text-white-500 tracking-wider impact-matric-head-1",
     },
     {
-        text: "METRICS",
+        text: "Metrics",
         className: "text-white dark:text-white-500 tracking-wider impact-matric-head-2",
     },
     

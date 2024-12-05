@@ -1,11 +1,11 @@
 .about-us-hero-sec-container {
-    height:100vh;
+    height:109vh;
     overflow-x: hidden;
     position: relative;
 }
 .about-hero-model {
     position: absolute;
-    top: 10%;
+    top: 7%;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -34,7 +34,7 @@
 
 .about-hero-infinite-text-1 {
     color: #ffffff20;
-    top: 25%;
+    top: 20%;
     left: 0%;
     overflow-x: hidden;
     position: absolute;
@@ -45,7 +45,7 @@
 }
 .about-hero-infinite-text-2 {
     color: #E2E2E2;
-    top: 55%;
+    top: 45%;
     right: 0%;
     overflow-x: hidden;
     position: absolute;
@@ -61,18 +61,47 @@
 }
 .about-hero-para-1 {
     padding: 0 30px;
+    font-family: "Syne";
     transform: translateX(-100%);
 }
 .about-hero-para-2 {
+    font-family: "Syne";
     padding: 0 30px;
     transform: translateX(0%);
 }
 .font-news {
-    font-family: "Newsreader", serif;
+    font-family: "Unbounded", serif;
+    font-weight: 300;
 }
 .about-hero-bottom-para {
     font-family: "Syne";
     font-size: 20px;
+}
+
+
+@media (max-width: 1028px) {
+    .about-us-hero-sec-container {
+        height:100vh;
+    }
+    .about-hero-model {
+        position: absolute;
+        top: 5%;
+        height: 80vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-hero-para-1 {
+        font-size: 140px;
+    }
+    .about-hero-para-2 {
+        font-size: 140px;
+        
+    }
+    .about-hero-bottom-para {
+        font-size: 17px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -128,8 +157,8 @@
 }
 .impact-matric-head-2 {
     font-size: 90px;
-    font-family: "Newsreader";
-    font-weight: bold;
+    font-weight: 500;
+    font-family: "Unbounded";
     line-height: 150%;
 }
 .impact-matric-count-card-numbers {
@@ -147,25 +176,39 @@
 
 /* responsiovenesss of impact metrics */
 
+@media (max-width: 1280px) {
+    .impact-matrics-main-container {
+        padding: 60px;
+        height: 75vh;
+    }
+    .impact-matric-head-1 {
+        font-size: 60px;
+    }
+    .impact-matric-head-2 {
+        line-height: 150%;
+        font-size: 60px;
+    }
+}
+
 
 @media (max-width: 1028px) {
     .impact-matrics-main-container {
         padding: 70px;
-        height: 100vh;
+        height: 60vh;
     }
     .impact-matrics-head-card {
         margin: 40px;
     }
     .impact-matric-head-1 {
-        font-size: 60px;
+        font-size: 50px;
         font-family: "Syne";
         font-weight: bold;
     }
     .impact-matric-head-2 {
         line-height: 150%;
-        font-size: 60px;
-        font-family: "Newsreader";
-        font-weight: bold;
+        font-size: 50px;
+        font-family: "Unbounded";
+        font-weight: 500;
     }
     .impact-matric-count-card-numbers {
         font-size: 80px;
@@ -203,8 +246,8 @@
     .impact-matric-head-2 {
         font-size: 50px;
         line-height: 150%;
-        font-family: "Newsreader";
-        font-weight: bold;
+        font-family: "Unbounded";
+        font-weight: 500;
     }
     .impact-matric-count-card-numbers {
         font-size: 60px;
@@ -258,6 +301,7 @@
 .inspired-us-main-container {
     padding: 100px;
     padding-top: 50px;
+    padding-bottom: 0px;
     height: max-content;
     display: flex;
     flex-direction: column;
@@ -291,6 +335,7 @@
     color:  #E2E2E2;
     width: 50%;
     height: 50px;
+    border-radius: 30px;
     font-weight: bold;
 }
 .inspired-us-content-card-between {
@@ -300,8 +345,8 @@
     align-items: center;
 }
 .inspired-us-content-card-head {
-    font-size: 40px;
-    font-family: "Newsletter";
+    font-size: 37px;
+    font-family: "Unbounded";
 }
 .inspired-video-card {
     margin-top: 10%;
@@ -309,11 +354,10 @@
     border-radius: 100px;
     width: 100vw;
     height: max-content;
-    position: relative;
 }
 .inspired-video-content {
     position: absolute;
-    top: 50%;
+    top: 48%;
     left: 50%;
     text-align: center;
     transform: translate(-50%, -50%);
@@ -336,6 +380,7 @@
     width: 15%;
     height: 50px;
     font-weight: bold;
+    border-radius: 30px;
     margin-top: 50px;
 }
 
@@ -375,8 +420,8 @@
     }
     .inspired-video-content {
         position: relative;
-        margin-top: 10%;
-        top: 30%;
+        margin-top: 0%;
+        top: 20%;
         width: 100%;
     }
     
@@ -423,6 +468,7 @@
     .inspired-video-content {
         position: relative;
         margin-top: 0%;
+        font-family: "Syne";
         top: 30%;
         width: 90%;
     }
@@ -431,8 +477,11 @@
         font-size: 35px;
     }
 }
-
-
+@media (max-width: 575px) {
+    .inspired-us-content-card-btn {
+        width: 70%;
+    }
+}
 
 
 @media (max-width: 768px) {
@@ -440,6 +489,9 @@
         top: 30%;
     }
 }
+
+
+
 
 /* founders section */
 .founders-main-container {
@@ -481,6 +533,7 @@
 }
 .founder-content-para {
     font-family: "Unbounded";
+    font-weight: 500;
     font-size: 15px;
     width: 90%;
 }
@@ -495,6 +548,30 @@
 
 .text-right {
     text-align: right;
+}
+
+@media (max-width: 1028px) {
+    .founders-main-container {
+        padding: 20px;
+        padding-top: 40px;
+        height: max-content;
+    }
+    .founder-img-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 30px;
+    }
+    .founder-img-card {
+        margin-bottom: 10%;
+    }
+    .founder-img {
+        border-radius: 80px;
+        margin: 20px;
+        height: 50vh;
+        width: 50vh;
+    }
 }
 
 @media (max-width: 768px) {
@@ -524,7 +601,7 @@
         width: 50vh;
     }
     .founder-img-card {
-        margin-bottom: 20px;
+        margin-bottom: 10%;
     }
 }
 @media (max-width: 575px) {
@@ -533,10 +610,14 @@
         margin-top: 30px;
         margin-bottom: 30px;
     }
+    .founder-img-card {
+        margin-bottom: 10%;
+        align-items: center;
+    }
     .founder-img {
         margin: 10px;
-        height: 50vh;
-        width: 50vh;
+        height: 60vh;
+        width: 60vh;
     }
 }
 
@@ -579,5 +660,6 @@
     height: 50px;
     width: 150px;
     font-weight: bold;
+    border-radius: 20px;
     margin-top: 20px;
 }
