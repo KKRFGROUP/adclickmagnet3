@@ -3,6 +3,11 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
+import gsap from "gsap";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+
+gsap.registerPlugin(ScrollTrigger);
 
 interface CanvasPoint {
   x: number;
@@ -21,6 +26,7 @@ export function PlaceholdersAndVanishInput({
   onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
   className?: string;
 }) {
+  const [windowWidth, setWindowWidth] = useState(0);
   const [currentPlaceholder, setCurrentPlaceholder] = useState(0);
 
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -41,14 +47,44 @@ export function PlaceholdersAndVanishInput({
   useEffect(() => {
     startAnimation();
     document.addEventListener("visibilitychange", handleVisibilityChange);
+    if (typeof window !== "undefined") {
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Update windowWidth on resize
+      const updateWidth = () => setWindowWidth(window.innerWidth);
+      updateWidth();
+      window.addEventListener("resize", updateWidth);
+      let startFrom;
+      if (windowWidth <= 575) {
+        startFrom = "top 50%"
+      } else if (windowWidth <= 768) {
+        startFrom = "top 30%"
+      } else {
+        startFrom = "top -10%"
+      }
+      gsap.to(".placeholder", {
+        scale: 1,
+        height: windowWidth <= 1028 ? "8vh" : "10vh",
+        opacity: 1,
+        scrollTrigger: {
+          trigger: ".home-sec3-trigger",
+          start:  startFrom,
+          scroller: "body",
+          end: "bottom 90%",
+          scrub: true,
+          markers: true,
+        },
+      });
+    }
 
     return () => {
       if (intervalRef.current) {
         clearInterval(intervalRef.current);
       }
+      
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
-  }, [placeholders]);
+  }, [placeholders, windowWidth]);
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const newDataRef = useRef<CanvasPoint[]>([]);
@@ -205,7 +241,7 @@ export function PlaceholdersAndVanishInput({
         value={value}
         type="text"
         className={cn(
-          "w-full relative text-sm sm:text-base z-50 border-none dark:text-black bg-transparent text-black h-full rounded-full focus:outline-none focus:ring-0 pl-4 sm:pl-10 pr-20",
+          "w-full relative text-xl z-50 border-none dark:text-black bg-transparent text-black h-full rounded-full focus:outline-none focus:ring-0 pl-4 sm:pl-10 pr-20",
           animating && "text-transparent dark:text-transparent"
         )}
       />
@@ -213,12 +249,13 @@ export function PlaceholdersAndVanishInput({
       <button
         disabled={!value}
         type="submit"
-        className="absolute right-2 top-1/2 z-50 -translate-y-1/2 h-8 w-8 rounded-full disabled:bg-gray-100 bg-black dark:bg-zinc-900 dark:disabled:bg-zinc-800 transition duration-200 flex items-center justify-center"
+        className="absolute right-2 top-1/2 z-50 -translate-y-1/2 h-12 w-[15%] rounded-full disabled:bg-gray-100 bg-black dark:bg-zinc-900 dark:disabled:bg-zinc-800 transition duration-200 flex items-center justify-center"
       >
-        <motion.svg
+        Submit
+        {/*<motion.svg
           xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
+          width="27"
+          height="27"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -244,7 +281,7 @@ export function PlaceholdersAndVanishInput({
           />
           <path d="M13 18l6 -6" />
           <path d="M13 6l6 6" />
-        </motion.svg>
+        </motion.svg>*/}
       </button>
 
       <div className="absolute inset-0 flex items-center rounded-full pointer-events-none">
@@ -282,11 +319,12 @@ export function PlaceholdersAndVanishInput({
 
 export function PlaceholdersAndVanishInputDemo() {
   const placeholders = [
-    "Your Website URL",
-    "Start Analysis Your Site",
+    "Share Your Website URL",
+    "Start Analyze Your Site",
     "Lets Grow with ACM",
-    "We Analysis your site",
-    "make a differene on your site",
+    "We Analyze your Website",
+    "make a difference on your site",
+    "Get a Report in a few Minutes",
   ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

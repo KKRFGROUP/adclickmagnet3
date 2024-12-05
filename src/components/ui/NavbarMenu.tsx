@@ -85,7 +85,7 @@ export const Menu = ({
           {children}
           
         </nav>
-        <Link href="/contact-us">
+        <Link href="tel:+17185772718">
         <button type="button" className="flex items-center justify-center py-2 md:py-3 px-5 getintouch-card">
                             Get in touch
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"

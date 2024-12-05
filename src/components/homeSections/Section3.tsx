@@ -8,7 +8,7 @@ import { PlaceholdersAndVanishInputDemo } from "../ui/PlaceholdersAndVanishInput
 
 export default function Section3() {
   return (
-    <>
+    <div className="home-sec3-trigger">
     <Section3Model />
     <div className="section3-container">
 
@@ -16,7 +16,7 @@ export default function Section3() {
           <PlaceholdersAndVanishInputDemo />
       </div>
     </div>
-    </>
+    </div >
   );
 }
 

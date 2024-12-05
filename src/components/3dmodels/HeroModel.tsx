@@ -1,6 +1,7 @@
-"use client";
-//import dynamic from 'next/dynamic';
+"use client"
 
+//import dynamic from 'next/dynamic';
+//
 //const Spline = dynamic(() => import('@splinetool/react-spline/next'), {
 //  ssr: false,
 //});
@@ -19,4 +20,4 @@ export default function HeroModel() {
     </div>
   );
 }
-//scene="https://prod.spline.design/xGBBKsEMeyKcN8gb/scene.splinecode"
+

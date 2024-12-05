@@ -1,11 +1,12 @@
-"use client";
+"use clint"
 
 //import dynamic from 'next/dynamic';
-
-
-//const Spline = dynamic(() => import('@splinetool/react-spline'), {
+//
+//
+//const Spline = dynamic(() => import('@splinetool/react-spline/next'), {
 //  ssr: false,
 //});
+
 import Spline from '@splinetool/react-spline/next';
 
 export default function Section3Model() {

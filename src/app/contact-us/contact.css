@@ -1,10 +1,106 @@
+
+.contact-us-page-main-container {
+    height: 110vh;
+    padding: 100px;
+    padding-top: 10%;
+    padding-left: 150px;
+    padding-right: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-us-page-layout-left {
+    padding: 40px;
+    background-image: linear-gradient(to bottom, #3C8EF1,#3C8EF1, #CBE3FC);
+    font-family: "Syne";
+    border-radius: 20px; 
+    height: 100%;
+    width: 40%;
+}
+.contact-us-page-layout-left-head {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.contact-us-page-layout-left-subhead {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.contact-us-page-layout-right {
+    width: 50%;
+    height: 100%;
+}
+.contact-us-page-layout-right-form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+@media (max-width: 1028px) {
+    .contact-us-page-main-container {
+        height: 80vh;
+        padding: 100px;
+        padding-top: 20%;
+        padding-left: 60px;
+        padding-right: 60px;
+        margin-bottom: 50px;
+    }
+    .contact-us-page-layout-left {
+        padding: 35px;
+    }
+    .contact-us-page-layout-left-logos {
+        width: 80%;
+    }
+}
+
+@media (max-width: 575px) {
+    .contact-us-page-main-container {
+        height: max-content;
+        padding: 30px;
+        padding-top: 40%;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-bottom: 50px;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .contact-us-page-layout-left {
+        padding: 30px;
+        padding-bottom: 50px;
+        height: max-content;
+        width: 100%;
+        margin-bottom: 20%;
+    }
+    .contact-us-page-layout-right {
+        width: 100%;
+        height: max-content;
+    }
+    .contact-us-page-layout-right-form-label-input {
+        margin-bottom: 25px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .contact-us-main-head {
     background-image: linear-gradient(to bottom, #fff, grey);
     font-size: 50px;
     font-family: "Syne";
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-
 }   
 
 .contact-sec1-container {
@@ -102,9 +198,7 @@
     background-color: #000;
 }
 
-.contact-sec3-content {
 
-}
 
 .contact-sec3-content-head {
     font-family: "Syne", sans-serif;

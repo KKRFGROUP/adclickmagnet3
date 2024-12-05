@@ -225,12 +225,9 @@ body{
     border: 1px solid #fff;
     transition: all 0.5s;
 }
-.getintouch-card:hover{
-    background-color: transparent;
-    border: 1px solid #fff;
-}
 
-/* mopbile view navbar*/
+
+/* mobile view navbar*/
 
 .mobile-view-navbar-container {
     display: none;
@@ -502,10 +499,25 @@ body{
     position: relative;
     bottom: 150px;
 }
+@keyframes increaseSize {
+    0% {
+        height: 5vh;
+    }
+    100% {
+        height: 10vh;
+    }
+}
+
 .placeholder {
     margin-left: auto;
     margin-right: auto;
     width: 60%;
+    height: 5vh;
+    opacity: 0.5;
+    transform: scale(0.5);
+    transition: 0.4s;
+    animation: increaseSize 2s ease-out forwards;
+    animation-timeline: view(50% 0%);
 }
 .sec3-model {
     height: 120vh;
@@ -513,7 +525,12 @@ body{
 
 @media (max-width: 1028px) {
     .sec3-model {
-        height: 90vh;
+        height: 80vh;
+    }
+    .placeholder {
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%;
     }
 }
 
