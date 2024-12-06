@@ -2,7 +2,7 @@
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
 import React, { useEffect, useRef, useState } from 'react';
-import Image from 'next/image';
+//import Image from 'next/image';
 import Link from 'next/link';
 gsap.registerPlugin(ScrollTrigger);
 
@@ -10,35 +10,35 @@ gsap.registerPlugin(ScrollTrigger);
 const items = [
     {
         id: 1,
-        imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQlQgBYHc-oK1CtI_SeIkYNHT0UWkIaPLQCQ&s',
+        imageUrl: 'https://assets.pinterest.com/ext/embed.html?id=17310779813421983',
         head: "Ad Creative",
         page: "/ad-creative",
         para: "Get static and motion ad creatives, concepts, and variations to test your way to better results on social media."
     },
     {
         id: 2,
-        imageUrl: 'https://cdn.sanity.io/images/k0dlbavy/production/7b0e427fbedc93ed4326fa45798280b14e250302-1296x1256.png?auto=format&fit=max&q=100&w=1296',
+        imageUrl: 'https://assets.pinterest.com/ext/embed.html?id=289074869851146379',
         head: "Branding Services",
         page: "/branding-services",
         para: "Get the brand expertise you need, from brand development and design to custom branding solutions."
     },
     {
         id: 3,
-        imageUrl: 'https://img.freepik.com/premium-photo/back-view-young-white-man-editing-video_1015182-43245.jpg',
+        imageUrl: 'https://assets.pinterest.com/ext/embed.html?id=3025924744020565',
         head: "Video Production",
         page: "/video-production",
         para: "Receive strategy-aligned video content services, from pre-production to final edit, to maximize your online success."
     },
     {
         id: 4,
-        imageUrl: 'https://slidestack-prod.s3.amazonaws.com/templates/h7gCcfhlvKogPwOBxxMptBQehIalCW8Iq7nscqVP.jpg',
+        imageUrl: "https://assets.pinterest.com/ext/embed.html?id=448319337916941456" ,
         head: "Presentation Design",
         page: "/presentation-design",
         para: "Get original presentations designed for your persuasive pitch decks, sales decks, or PowerPoint presentations."
     },
     {
         id: 5,
-        imageUrl: 'https://blog.openreplay.com/assets/hero_2aW9uI.png',
+        imageUrl: "https://assets.pinterest.com/ext/embed.html?id=3025924744021065",
         head: "Motion Design",
         page: "/motion-design",
         para: "Get on-brand motion graphics designed to enhance your website, digital campaigns, presentations and ads."
@@ -173,7 +173,8 @@ function DigitalServices() {
           <Link key={index} href={each.page}>
             <div className="flex-col justify-between graphic-page-services-card" key={each.id}>
               <div className="mobile-graphic-page-services-card-content">
-                <Image className='graphic-page-services-card-img' height={500} width={500} src={each.imageUrl} alt={each.head} />
+              <iframe className='graphic-page-services-card-img' src={each.imageUrl} height="500" width="500"  scrolling="no" ></iframe>
+                {/*<Image className='graphic-page-services-card-img' height={500} width={500} src={each.imageUrl} alt={each.head} />*/}
                 <h1 className='graphic-page-services-card-head' >{each.head}</h1>
                 <p className='graphic-page-services-card-para' >{each.para}</p>
               </div>

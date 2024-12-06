@@ -107,7 +107,7 @@ const section3:{mainpara: string; heading: {text: string; className: string;}[];
 ],
   para1: "Brands are fueled by a mixture of emotion and strategy. The true art of branding design is combining both—to stand out from the competition and forge memorable connections.",
   para2: "Our global team of brand experts, who’ve worked at top brand design agencies and well-known brands, will help you grow and elevate your brand. Whether it's a logo or a complete brand development, we help you express what makes your brand unique.", 
-  image: "https://res.cloudinary.com/deepcnbrz/image/upload/v1730822005/Screenshot_2024-11-05_212211_hhbsos.png"
+  image: "https://i.pinimg.com/736x/19/db/4c/19db4c0e7d30bf925f95eb2a0cacc566.jpg"
 }
 
 

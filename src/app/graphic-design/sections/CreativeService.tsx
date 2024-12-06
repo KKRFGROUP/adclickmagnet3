@@ -29,27 +29,27 @@ export default function CreativeService() {
         </div>
 
         <div className='creative-service-head-card-container'>
-          <h2 className='creative-service-head'>Creative As</h2>
-          <h2 className='creative-service-head-second mb-9'>An Art</h2>
+          <h2 className='creative-service-head'>Where sophistication </h2>
+          <h2 className='creative-service-head-second mb-9'>meets creativity.</h2>
           <div className="flex justify-between items-start creative-service-card-container">
             <div className="creative-service-card">
               <Image className='creative-service-card-img' src="https://cdn.sanity.io/images/k0dlbavy/production/3663db6035f44498f43f218cc084314cfe3b9da4-632x320.jpg?auto=format&fit=max&q=100&w=632" alt="crative image" height={300} width={300} />
-              <p className='creative-service-card-content' >Up to 65% lift in ad performance driven by deep expertise in breakthrough creative</p>
+              <p className='creative-service-card-content' >Precision-driven designs that enhance brand identity, focusing on high-quality, impactful visuals crafted for long-term success.</p>
               <hr className='creative-service-card-content-line ' />
             </div>
             <div className="creative-service-card">
               <Image className='creative-service-card-img' src="https://cdn.sanity.io/images/k0dlbavy/production/ab1b600a1065802a161343b72e7367e3c779f301-632x320.jpg?auto=format&fit=max&q=100&w=632" alt="crative image" height={300} width={300} />
-              <p className='creative-service-card-content' >50% reduction in overall costs as compared to a traditional agency, while ensuring high-quality creative</p>
+              <p className='creative-service-card-content' >Delivering sophisticated, creative solutions that blend modern aesthetics with strategic design to effectively communicate your message.              </p>
               <hr className='creative-service-card-content-line' />
             </div>
             <div className="creative-service-card">
               <Image className='creative-service-card-img' src="https://cdn.sanity.io/images/k0dlbavy/production/e9711069938bd5fbeecf62d125a32a317b2543da-2528x1280.jpg?auto=format&fit=max&q=100&w=1896" alt="crative image" height={300} width={300} />
-              <p className='creative-service-card-content' >Reduced employee churn and boosted morale across creative and marketing teams.</p>
+              <p className='creative-service-card-content' >Pushing the boundaries of design, we create innovative and visually compelling graphics that set your brand apart in a competitive market.</p>
               <hr className='creative-service-card-content-line' />
             </div>
             <div className="creative-service-card">
               <Image className='creative-service-card-img' src="https://cdn.sanity.io/images/k0dlbavy/production/483f93680d2e68ec33ab24d1a397bf19fff1186a-632x320.jpg?auto=format&fit=max&q=100&w=632" alt="crative image" height={300} width={300} />
-              <p className='creative-service-card-content' >Tripled the rate of learning by giving teams the ability to produce creative at scale and test fast</p>
+              <p className='creative-service-card-content' >Focused on results, we design with purpose. Our graphics are built for performance, ensuring maximum engagement and effectiveness.</p>
               <hr className='creative-service-card-content-line' />
             </div>
           </div>

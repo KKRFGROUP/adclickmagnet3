@@ -110,7 +110,7 @@ const section3:{mainpara: string; heading: {text: string; className: string;}[];
 ],
   para1: "The need for compelling ad creative has never been greater. But, when your biggest challenge is getting to market, the best solution is plugging into ACM’s flexible ad design services.",
   para2: "In a world where talent is hard to find, ours has no borders. Our global team of highly skilled ad designers can help with everything from market research and concept development to applying the latest AI, AR and 3D overlays.", 
-  image: "https://res.cloudinary.com/deepcnbrz/image/upload/v1730822005/Screenshot_2024-11-05_212211_hhbsos.png"
+  image: "https://i.pinimg.com/736x/03/04/70/03047007da349008be8987f909ca7327.jpg"
 }
 
 const section4: {mainpara: string; head: string; cards: {logo: React.ReactNode; head: string; para: string;}[]} = {

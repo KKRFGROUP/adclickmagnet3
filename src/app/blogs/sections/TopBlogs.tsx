@@ -257,7 +257,6 @@ function TopBlogs() {
             trigger: latestBlogTriggerRef.current,
             scroller: "body",
             start: "top -10%",
-            markers: true,
             end: "-10% top",
             scrub: 2,
             pin: true

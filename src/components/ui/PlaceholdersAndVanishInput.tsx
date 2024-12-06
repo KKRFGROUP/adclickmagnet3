@@ -72,7 +72,6 @@ export function PlaceholdersAndVanishInput({
           scroller: "body",
           end: "bottom 90%",
           scrub: true,
-          markers: true,
         },
       });
     }
