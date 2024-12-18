@@ -8,7 +8,6 @@ import { TextGenerateEffect } from "../ui/TextGenerateEffect";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 import dynamic from 'next/dynamic';
-import { Suspense } from 'react';
 
 const HeroModel = dynamic(() => import("../3dmodels/HeroModel"), {
     ssr: false,

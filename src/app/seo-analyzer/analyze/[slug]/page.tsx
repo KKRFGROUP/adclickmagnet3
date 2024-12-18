@@ -12,7 +12,7 @@ const AnalyzeProgress = ({
   url: string;
   onProgressChange: (progress: number) => void;
 }) => {
-  const [status, setStatus] = useState('Initializing...');
+  
   const [progress, setProgress] = useState(10);
   const [error, setError] = useState<string | null>(null);
 
@@ -34,7 +34,7 @@ const AnalyzeProgress = ({
         eventSource.onmessage = (event) => {
           const data = JSON.parse(event.data);
           setProgress(data.progress);
-          setStatus(data.status || 'Analyzing...');
+          
           onProgressChange(data.progress);
           
           if (data.progress === 100) {
@@ -112,8 +112,7 @@ function Analyze({ params }: { params: { slug: string } }) {
         </p>
           <AnalyzeProgress 
             url={slug} 
-            onProgressChange={() => 10}
-            //onProgressChange={handleProgressChange}
+            onProgressChange={handleProgressChange}
           />
       </div>
     </div>

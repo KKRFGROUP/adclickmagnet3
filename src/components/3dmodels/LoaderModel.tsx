@@ -1,17 +1,28 @@
 "use client";
 
-import Spline from '@splinetool/react-spline/next';
+import dynamic from 'next/dynamic';
 
-export default function Loader() {
+const OptimizedModel = dynamic(() => import('./OptimizedModel'), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-screen flex items-center justify-center">
+      Loading Model...
+    </div>
+  ),
+});
+
+export default function loader() {
   return (
-    <main>
-      <Spline
-        scene="https://prod.spline.design/KLexcFs7SerOk1Es/scene.splinecode" 
-      />
-      
-    </main>
+    <div className="h-96 w-full">
+        <OptimizedModel 
+          sceneUrl="https://prod.spline.design/KLexcFs7SerOk1Es/scene.splinecode"
+          height="100vh"
+        />
+    </div>
   );
 }
+
+
 
 
 

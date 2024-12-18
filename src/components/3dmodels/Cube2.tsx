@@ -1,11 +1,11 @@
 "use client";
 
-import React,{useRef, useState, useEffect} from "react";
-import { useFrame } from "@react-three/fiber";
+import React,{ useState, useEffect} from "react";
+//import { useFrame } from "@react-three/fiber";
 import {  TextureLoader } from "three";
 import { useLoader } from "@react-three/fiber";
 const Cube2 = () => {
-  const cubeRef = useRef();
+  //const cubeRef = useRef();
   const textures = [
     useLoader(TextureLoader, "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734531889/Mockups_for_Vogue_swim_%EF%B8%8F_modernbrief_modernbriefvogue_jib8dm.jpg"), //top
     useLoader(TextureLoader, "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734531889/Mockups_for_Vogue_swim_%EF%B8%8F_modernbrief_modernbriefvogue_jib8dm.jpg"),//bottom
@@ -15,11 +15,11 @@ const Cube2 = () => {
     useLoader(TextureLoader, "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734531890/Seth_Rogen_s_cannabis_brand_Houseplant_unveils_collectable_lego-like_packaging_pnn7cm.jpg"),
   ];
   
-  useFrame(() => {
-    if (cubeRef.current) {
-      cubeRef.current.rotation.x += 0.01; // Adjust speed by changing this value
-    }
-  });
+  //useFrame(() => {
+  //  if (cubeRef.current) {
+  //    cubeRef.current.rotation.x += 0.01; // Adjust speed by changing this value
+  //  }
+  //});
   const [windowWidth, setWindowWidth] = useState(0);
   
     useEffect(() => {
