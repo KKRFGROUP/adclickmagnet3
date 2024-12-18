@@ -5,13 +5,40 @@
 
 module.exports = {
   reactStrictMode: true,
-  transpilePackages: ['@splinetool/react-spline'],
-  
+  webpack: (config) => {
+    // Add rule for @splinetool/runtime
+    config.module.rules.push({
+      test: /\@splinetool\/runtime/,
+      loader: 'next-babel-loader',
+      options: {
+        presets: ['next/babel'],
+      },
+    });
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@splinetool/runtime': '@splinetool/runtime'
+    };
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      canvas: false,
+    };
+    config.externals = [...(config.externals || []), { canvas: 'canvas' }];
+
+    return config;
+  },
+  transpilePackages: ['@splinetool/react-spline', '@splinetool/runtime', 'three'],
+  reactStrictMode: true,
+  swcMinify: true,
     images: {
       remotePatterns: [
         {
           protocol: 'https',
           hostname: 'www.webfx.com',
+          port: '',
+        },
+        {
+          protocol: 'https',
+          hostname: 'assets.pinterest.com',
           port: '',
         },
         {
@@ -46,22 +73,12 @@ module.exports = {
         },
         {
           protocol: 'https',
-          hostname: 'djdesignerlab.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
           hostname: 'img.freepik.com',
           port: '',
         },
         {
           protocol: 'https',
           hostname: 'i.graphicmama.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: '618media.com',
           port: '',
         },
         {
@@ -76,22 +93,7 @@ module.exports = {
         },
         {
           protocol: 'https',
-          hostname: 'slidestack-prod.s3.amazonaws.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'blog.openreplay.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
           hostname: 'i.pinimg.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'i.graphicmama.com',
           port: '',
         },
         {
@@ -141,11 +143,6 @@ module.exports = {
         },
         {
           protocol: 'https',
-          hostname: 'encrypted-tbn0.gstatic.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
           hostname: 'ms-f7-sites-prod-cdn.akamaized.net',
           port: '',
         },
@@ -157,11 +154,6 @@ module.exports = {
         {
           protocol: 'https',
           hostname: 'img.foodprocessing.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'encrypted-tbn0.gstatic.com',
           port: '',
         },
         {
@@ -197,21 +189,6 @@ module.exports = {
         {
           protocol: 'https',
           hostname: 'w7.pngwing.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'png.pngtree.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'i.pinimg.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'png.pngtree.com',
           port: '',
         },
         {

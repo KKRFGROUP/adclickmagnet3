@@ -53,6 +53,7 @@
     transition: 0.4s;
     color: #000;
 }
+
 .see-more {
     background-color: transparent;
     backdrop-filter: 4px;
@@ -69,6 +70,45 @@
     height: 55px;
     box-shadow: 0px 0px 10px 1px #fff;
 }
+
+/* pop up */
+
+.service-page-popup {
+    background-image: url("https://res.cloudinary.com/dgdgrniut/image/upload/v1734538406/DALL_E_2024-12-18_20.22.23_-_A_minimalist_background_image_for_a_website_featuring_a_black_theme_with_subtle_glowing_light_effects_or_abstract_objects_in_the_center._The_objects_zin44f.webp");
+    background-size: cover;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    position: relative;
+    width: 30%;
+    opacity: 1;
+    font-family: "Syne";
+}
+.service-page-popup-head {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+}
+
+@media (max-width: 1280px) {
+    .service-page-popup {
+        width: 40%;
+    }
+}
+@media (max-width: 1028px) {
+    .service-page-popup {
+        width: 45%;
+    }
+}
+@media (max-width: 768px) {
+    .service-page-popup {
+        width: 55%;
+    }
+}
+
+
+
+
+
 @media (max-width: 1280px) {
     .spotlight2 {
         display: none;

@@ -1,6 +1,13 @@
+import dynamic from 'next/dynamic';
 
-
-import Section3Model from "../3dmodels/Setion3Model";
+const Section3Model = dynamic(() => import("../3dmodels/Setion3Model"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-screen flex items-center justify-center">
+      <div className="animate-pulse">Loading 3D Model...</div>
+    </div>
+  ),
+});
 import { PlaceholdersAndVanishInputDemo } from "../ui/PlaceholdersAndVanishInput";
 
 

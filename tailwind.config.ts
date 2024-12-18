@@ -30,6 +30,14 @@ const config: Config = {
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
       keyframes: {
+        shimmer: {
+          from: {
+            backgroundPosition: "0 0",
+          },
+          to: {
+            backgroundPosition: "-200% 0",
+          },
+        },
         spotlight: {
           "0%": {
             opacity: "0",

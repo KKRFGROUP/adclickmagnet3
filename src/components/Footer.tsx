@@ -43,8 +43,8 @@ export default function Footer() {
         <hr className='solution-gap-line'/>
 
         <div className="flex justify-between lg:px-10 pt-3 footer-links">
-          <Link href="/" className='solution-page-link'>Press Release</Link>
-          <Link href="/" className='solution-page-link'>Blog</Link>
+          <Link href="/press-release" className='solution-page-link'>Press Release</Link>
+          <Link href="/blogs" className='solution-page-link'>Blog</Link>
           <Link href="/" className='solution-page-link'>Careers</Link>
           <Link href="/" className='solution-page-link'>Case Studies</Link>
           <Link href="/" className='solution-page-link'>Awards</Link>

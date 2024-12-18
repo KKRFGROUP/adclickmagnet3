@@ -62,10 +62,6 @@ body{
     backdrop-filter: blur(7px);
 }
 
-.navbar:hover {
-    box-shadow: 0px 0px 20px 1px #fff;
-    
-}
 
 .navbar-company-logo {
     height: 70px;
@@ -77,8 +73,7 @@ body{
 .what-we-do-links {
     height: 80vh;
     width: 80vw;
-    color: #000;
-    background-color: #E2E2E210;
+    
     backdrop-filter: blur(10px);
     font-family: "Unbounded";
     display: flex;
@@ -86,14 +81,23 @@ body{
     justify-content: space-between;
 }
 .what-we-do-hover-header {
+    background-image: url("https://res.cloudinary.com/dgdgrniut/image/upload/v1734538406/DALL_E_2024-12-18_20.22.23_-_A_minimalist_background_image_for_a_website_featuring_a_black_theme_with_subtle_glowing_light_effects_or_abstract_objects_in_the_center._The_objects_zin44f.webp");
+    background-size: cover;
+    height: 80%;
+    
+}
+.bg-blur {
     padding: 35px;
     display: flex;
-    height: 80%;
+    height: 100%;
     justify-content: space-between;
+    backdrop-filter: blur(20px);
 }
 .what-we-do-hover-footer {
     background-image: url("https://media.istockphoto.com/id/1407063872/vector/modern-abstract-background-with-black-gradient-abstract-black-business-background.jpg?s=612x612&w=0&k=20&c=6QftyGArm3LTpQsLw29DpZ9ZB42HMNK-wboAWyFZvto=");
     background-size: cover;
+    background-image: linear-gradient(120deg, #E2CBFF00, #393BB250, #E2CBFF );
+
     display: flex;
     gap: 40px;
     align-items: center;
@@ -112,15 +116,20 @@ body{
 .what-we-do-hover-sec1-head {
     font-family: "Syne";
     font-size: 30px;
+    
+    mix-blend-mode: difference;
 }
 .what-we-do-hover-sec1-para {
-    color: grey;
     font-size: 12px;
     margin-bottom: 20px;
+    background-color: #fff;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    mix-blend-mode: difference;
 }
 .what-we-do-hover-sec1-img-card {
-    background-image: url("https://www.thinkleansixsigma.com/_next/image?url=https%3A%2F%2Fimages.prismic.io%2Fvoitto-blog%2Faead9917-02f6-41fb-b845-c161c0b0c5c0_creativity-and-innovation.jpg&w=1920&q=95");
-    background-size: cover;
+    background-image: linear-gradient(120deg, #E2CBFF, #393BB250, #E2CBFF00  );
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,11 +147,15 @@ body{
     border:0px;
     border-radius: 10px;
     height: 2px;
-    background-color: grey;
+    background-color: #fff;
     margin-bottom: 20px;
 }
 .what-we-do-hover-sec1-para-company {
     margin-bottom: 10px;
+    background-color: #fff;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    mix-blend-mode: difference;
 }
 
 
@@ -151,11 +164,18 @@ body{
     font-family: "Syne";
     height: 12vh;
     margin-bottom: 20px;
+    background-color: #fff;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    mix-blend-mode: difference;
 }
 
 .what-we-do-hover-secs-para {
     margin-bottom: 10px;
-    color: grey;
+    background-color: #fff;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    mix-blend-mode: difference;
 }
 .what-we-do-hover-secs-img {
     height: 50%;
@@ -165,7 +185,7 @@ body{
 }
 
 @media (max-width: 1280px) {
-    .what-we-do-hover-header {
+    .bg-blur {
         padding: 30px;
     }
     .what-we-do-hover-footer {
@@ -176,7 +196,6 @@ body{
         font-size: 25px;
     }
     .what-we-do-hover-sec1-para {
-        color: grey;
         font-size: 10px;
         margin-bottom: 17px;
     }
@@ -217,12 +236,11 @@ body{
     background-color: #000;
     color: #fff;
     width: auto;
-    font-size: 16px;
-    gap: 4px;
+    font-size: 15px;
+    font-family: "Unbounded";
     border-radius: 3.4rem;
     text-decoration: none;
     cursor: none;
-    border: 1px solid #fff;
     transition: all 0.5s;
 }
 
@@ -301,8 +319,7 @@ body{
     }
     .getintouch-card {
         width: 17vw;
-        font-size: 13px;
-        padding: 10px;
+        font-size: 10px;
     }
     .navlinks {
         width: 60%;
@@ -320,12 +337,13 @@ body{
 .home-model {
     height: 100vh;
     position: relative;
+    inset: 0;
     top: 30px;
 }
 .hero-content {
     position: absolute;
-    top: 2%;
-    width: 100%;
+    top: 35vh;
+    width: max-content;
     margin-left: 30px;
       
 }
@@ -581,8 +599,8 @@ body{
 
 
 .services {
-    color: grey;
-    font-size: 40px;
+    color: #fff;
+    font-size: 43px;
     font-weight: bold;
     font-family: "Syne"
 }
@@ -845,7 +863,7 @@ body{
 }
 .small-img {
     position: relative;
-    top: 200px;
+    top: 300px;
     right: 100px;
     height: 35%;
     width: 30%;
@@ -880,7 +898,7 @@ body{
     }
     .small-img {
         position: relative;
-        top: 150px;
+        top: 250px;
         width: 40%;
         height: 95%;
         border: 10px solid #000;
@@ -889,12 +907,13 @@ body{
 
 @media (max-width: 575px) {
     .team-sec-image {
-        width: 90%;
+        width: 80%;
+        right: 130px;
     }
     .small-img {
         position: relative;
-        top: 150px;
-        width: 45%;
+        top: 200px;
+        width: 50%;
         height: 95%;
         border: 10px solid #000;
     }
@@ -929,17 +948,17 @@ body{
 
 @keyframes scroll-right {
     0% {
-        transform: translateX(-100%);
+        transform: translateX(-92%);
     }
 
     100% {
-        transform: translateX(90%);
+        transform: translateX(80%);
     }
 }
 .sec7-logo-container {
     overflow-x: hidden;
     white-space: nowrap;
-    animation: scroll-right 10s linear infinite;
+    animation: scroll-right 15s linear infinite;
     display: flex;
     will-change: transform; 
     width: max-content;

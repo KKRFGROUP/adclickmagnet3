@@ -1,6 +1,6 @@
 import { HoverEffect } from "../ui/CardHoverEffect";
 import Image from "next/image";
-import img from '../../public/images/logo/adclickmagnetlogogrey.png'
+//import img from '../../public/images/logo/adclickmagnetlogogrey.png'
 
 
 
@@ -9,7 +9,7 @@ export default function Section5() {
     <div className="mb-[50px]">
     <div className="logo-service rounded-t-[50px]">
       <div className="flex items-center mobile-our-digital-service">
-        <Image className="sec-5-logo" height={180} width={180} src={img} alt="acm logo" />
+        <Image className="sec-5-logo" height={190} width={190} src="https://res.cloudinary.com/dgdgrniut/image/upload/c_crop,ar_16:9/v1734527641/acm_white_logo-removebg-preview_qgn8qq_hs2io7.png" alt="acm logo" />
         <p className="services">Services</p>
       </div>
     </div>

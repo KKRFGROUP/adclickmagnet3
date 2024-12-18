@@ -6,12 +6,12 @@ import { useLoader } from "@react-three/fiber";
 const Cube = () => {
   
   const textures = [
-    useLoader(TextureLoader, "https://res.cloudinary.com/dgdgrniut/image/upload/v1732166229/66ef60583159af66c2df6d6b_Frame_2_ucpit0.jpg"),
-    useLoader(TextureLoader, "https://res.cloudinary.com/dgdgrniut/image/upload/v1732166228/66ef5cfe4f93b80bfbf4617a_Frame_2_ept6pf.jpg"),
-    useLoader(TextureLoader, "https://res.cloudinary.com/dgdgrniut/image/upload/v1732166226/66ef5cfe9fcc1c5948b15a89_Frame_5-p-500_u5gs0o.jpg"), //top
-    useLoader(TextureLoader, "https://res.cloudinary.com/dgdgrniut/image/upload/v1732166226/66ef5cfe9fcc1c5948b15a89_Frame_5-p-500_u5gs0o.jpg"),//bottom
-    useLoader(TextureLoader, "https://res.cloudinary.com/dgdgrniut/image/upload/v1732166227/66ef5cfea8f2c57494566f45_Frame_3_vsz1mz.jpg"), 
-    useLoader(TextureLoader, "https://res.cloudinary.com/dgdgrniut/image/upload/v1732166226/66ef5cfe9fcc1c5948b15a89_Frame_5-p-500_u5gs0o.jpg"),
+    useLoader(TextureLoader, "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734531895/Piled_Up_Packaging_Tape_Rolls_Mockup_yeboto.jpg"),
+    useLoader(TextureLoader, "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734531897/Curame_Hair_Care_Branding_Packaging_Design_tjwnwh.jpg"),
+    useLoader(TextureLoader, "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734531889/Mockups_for_Vogue_swim_%EF%B8%8F_modernbrief_modernbriefvogue_jib8dm.jpg"), //top
+    useLoader(TextureLoader, "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734531889/Mockups_for_Vogue_swim_%EF%B8%8F_modernbrief_modernbriefvogue_jib8dm.jpg"),//bottom
+    useLoader(TextureLoader, "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734531893/Wedge-Designed_Ami_Ami_Shows_That_Boxed_Wine_Can_Be_Pretty_Gosh_Darn_Cool_cxoxor.jpg"), 
+    useLoader(TextureLoader, "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734531890/Seth_Rogen_s_cannabis_brand_Houseplant_unveils_collectable_lego-like_packaging_pnn7cm.jpg"),
   ];
 
 

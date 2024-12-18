@@ -519,8 +519,8 @@
 .founder-img {
     border-radius: 80px;
     margin: 30px;
-    height: 70vh;
-    width: 70vh;
+    height: 65vh;
+    width: 65vh;
 }
 
 
@@ -548,6 +548,15 @@
 
 .text-right {
     text-align: right;
+}
+
+@media (max-width: 1280px) {
+    .founder-img {
+        border-radius: 80px;
+        margin: 20px;
+        height: 50vh;
+        width: 50vh;
+    }
 }
 
 @media (max-width: 1028px) {

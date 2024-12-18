@@ -31,52 +31,53 @@ const heroContent = {
 }
 const section2 = [
   {
-      id: 1,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/f167fb70d9077c2e1a03fa0077056224bb6c8373-800x936.png?auto=format&fit=max&q=100&w=800",
-      customer: "Marqeta",
-      industry: "Financial Serv..."
+    id: 1,
+    imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523287/Untitled_design_14_uhowlh.png",
+    customer: "Smokey",
+    industry: "Substain..."
   },
   {
       id: 2,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/3d6e77a8fe7317759c78b9f9c89a07b863508d41-800x452.png?auto=format&fit=max&q=100&w=800",
-      customer: "Amazon Phar...",
-      industry: "Heathc..."
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524086/Untitled_design_18_n8m9uw.png",
+      customer: "Blends",
+      industry: "Design"
   },
   {
       id: 3,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/88dc0c4e1aad720988dca3ffcf5cfac0d3ce4455-800x452.png?auto=format&fit=max&q=100&w=800",
-      customer: "Go Henry",
-      industry: "Financial Serv..."
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524083/Untitled_design_19_mh9s3w.png",
+      customer: "PGroomer",
+      industry: "Pet..."
   },
   {
-      id: 4,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/f03ebd9dcf2c9e72f7e4621e970eba354041bd72-800x936.png?auto=format&fit=max&q=100&w=800",
-      customer: "Reddit Business",
-      industry: "Tech"
+    id: 4,
+    imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523290/Untitled_design_13_bnalvy.png",
+    customer: "Silsi",
+    industry: "Robotics"
   },
   {
-      id: 5,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/a74e5d93c29352eb25edd0264fb0a39bef989563-800x936.png?auto=format&fit=max&q=100&w=800",
-      customer: "Starve",
-      industry: "Tech"
+    id: 5,
+    imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523212/Untitled_design_17_tm74f2.png",
+    customer: "IQ Home Care",
+    industry: "E-commerce & ..."
   },
+  
   {
       id: 6,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/6a46ba66f2a0d58ff6ee1bc492406a92e0012e32-800x452.png?auto=format&fit=max&q=100&w=800",
-      customer: "Imperfect Foods",
-      industry: "Customer"
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524079/Untitled_design_20_lutddy.png",
+      customer: "Canada View",
+      industry: "Defence"
   },
   {
       id: 7,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/736472e7079951373aa33646f75d519428026466-1200x678.png?auto=format&fit=max&q=100&w=1200",
-      customer: "Opa!",
-      industry: "Consumer Goo..."
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524079/Untitled_design_21_g746dl.png",
+      customer: "Jen Thomson",
+      industry: "Consumer ..."
   },
   {
-      id: 8,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/4f986ebd49b52907be569e401ef25b191b412700-800x936.png?auto=format&fit=max&q=100&w=800",
-      customer: "Shopify",
-      industry: "E-commerce & ..."
+    id: 8,
+    imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523286/Untitled_design_15_mrmwez.png",
+    customer: "DonGon",
+    industry: "Food"
   },
 ]
 
@@ -110,7 +111,7 @@ const section3:{mainpara: string; heading: {text: string; className: string;}[];
 ],
   para1: "The need for compelling ad creative has never been greater. But, when your biggest challenge is getting to market, the best solution is plugging into ACM’s flexible ad design services.",
   para2: "In a world where talent is hard to find, ours has no borders. Our global team of highly skilled ad designers can help with everything from market research and concept development to applying the latest AI, AR and 3D overlays.", 
-  image: "https://i.pinimg.com/736x/03/04/70/03047007da349008be8987f909ca7327.jpg"
+  image: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734514156/Exceptional_designs_never_fail_to_impress_xumx5a.jpg"
 }
 
 const section4: {mainpara: string; head: string; cards: {logo: React.ReactNode; head: string; para: string;}[]} = {

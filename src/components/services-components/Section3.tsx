@@ -5,8 +5,19 @@ import { IoMdCheckmark } from "react-icons/io";
 
 
 
-function Section3({content, order, roundb, hide}: {content: {mainpara: string; heading: {text: string; className: string;}[]; para1: string; para2: string; image: string;}; order?: string;roundb?: string;hide?: string;}) {
+function Section3({content, order, roundb, hide}: {content: {mainpara: string; heading: {text: string; className: string;}[]; para1: string; para2: string; image: string; video?: string;}; order?: string;roundb?: string;hide?: string;}) {
     const lines = content.para2.split('\n');
+
+    //const handleMouseEnter = (event: React.MouseEvent<HTMLVideoElement>) => {
+    //        const video = event.target as HTMLVideoElement;
+    //        video.play();
+    //    };
+    //    
+    //    const handleMouseLeave = (event: React.MouseEvent<HTMLVideoElement>) => {
+    //        const video = event.target as HTMLVideoElement; // Cast target to HTMLVideoElement
+    //        video.pause();
+    //        video.currentTime = 0; // Reset to the start
+    //    };
     
     
   return (
@@ -42,7 +53,15 @@ function Section3({content, order, roundb, hide}: {content: {mainpara: string; h
             </div>
        </div>
 
-       <Image className="services-sec3-img" src={content.image} alt="sec3-img" height={300} width={300} />
+       
+       {content.video ? <video className="services-sec3-img" autoPlay preload='auto' loop muted src={content.video} onLoadedData={(e) => {
+    const videoElement = e.target as HTMLVideoElement; // Explicitly cast to HTMLVideoElement
+        videoElement
+        .play()
+        .catch((error: DOMException) => { // Provide a type for `error`
+            console.error('Autoplay failed:', error);
+            });
+        }}></video> : <Image className="services-sec3-img" src={content.image} alt="sec3-img" height={300} width={300} /> } 
     </div>
   )
 }

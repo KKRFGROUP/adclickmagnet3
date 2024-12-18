@@ -32,52 +32,53 @@ const heroContent = {
 }
 const section2 = [
   {
-      id: 1,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/1521d0996f9c49817a95295850617435befde675-600x702.png?auto=format&fit=max&q=100&w=600",
-      customer: "Runway",
-      industry: "Professional..."
+    id: 1,
+    imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523287/Untitled_design_14_uhowlh.png",
+    customer: "Smokey",
+    industry: "Substain..."
   },
   {
       id: 2,
-      imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMg1c_BLN343IUblaKiry2owM4f-9MHq014Q&s",
-      customer: "Collabera",
-      industry: "IT & Internet..."
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524086/Untitled_design_18_n8m9uw.png",
+      customer: "Blends",
+      industry: "Design"
   },
   {
       id: 3,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/6cdab4a1b44557f08b17898f59e51c8d4e94ac6c-800x452.png?auto=format&fit=max&q=100&w=800",
-      customer: "Antler",
-      industry: "FinServ"
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524083/Untitled_design_19_mh9s3w.png",
+      customer: "PGroomer",
+      industry: "Pet..."
   },
   {
-      id: 4,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/76f40781affb978c77b739da0fa6b72ed9b4bf62-600x702.png?auto=format&fit=max&q=100&w=600",
-      customer: "ACM",
-      industry: "HealthCare"
+    id: 4,
+    imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523290/Untitled_design_13_bnalvy.png",
+    customer: "Silsi",
+    industry: "Robotics"
   },
   {
-      id: 5,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/1410ddf3021b9de414aeff69340e0a75d7706135-600x702.png?auto=format&fit=max&q=100&w=600",
-      customer: "Entelo Tale...",
-      industry: "Professional.."
+    id: 5,
+    imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523212/Untitled_design_17_tm74f2.png",
+    customer: "IQ Home Care",
+    industry: "E-commerce & ..."
   },
+  
   {
       id: 6,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/9ee7450d759274f3ed7666d493d0ca618bd6216a-800x452.png?auto=format&fit=max&q=100&w=800",
-      customer: "SALT",
-      industry: "Financial Serv..."
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524079/Untitled_design_20_lutddy.png",
+      customer: "Canada View",
+      industry: "Defence"
   },
   {
       id: 7,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/2f7be0c53fdce687d3f3a3b3ada07b274a562607-1460x824.png?auto=format&fit=max&q=100&w=1460",
-      customer: "Diamond Crys...",
-      industry: "Associatio..."
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524079/Untitled_design_21_g746dl.png",
+      customer: "Jen Thomson",
+      industry: "Consumer ..."
   },
   {
-      id: 8,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/38653a81bccea9551d6c431560ac139e55ae348c-800x936.png?auto=format&fit=max&q=100&w=800",
-      customer: "Packt",
-      industry: "Education & E-..."
+    id: 8,
+    imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523286/Untitled_design_15_mrmwez.png",
+    customer: "DonGon",
+    industry: "Food"
   },
 ]
 

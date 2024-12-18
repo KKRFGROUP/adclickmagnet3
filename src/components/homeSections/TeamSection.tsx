@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { FaArrowRightLong } from "react-icons/fa6";
-import teamImg from '../../public/images/GettyImages-1437209359.webp'
+//import teamImg from '../../public/images/GettyImages-1437209359.webp'
 
 export default function TeamSection() {
     return(
@@ -15,8 +15,8 @@ export default function TeamSection() {
                 <Link href="/contact-us" className="link-width"><button className="flex justify-center gap-3 items-center lets-connect-button" type="button">Let&apos;s connect <FaArrowRightLong /></button> </Link>
             </div>
             <div className="team-sec-image-container flex justify-end">
-                <Image className="team-sec-image" width={400} height={300} alt="team-img" src="https://numerique.vamtam.com/wp-content/uploads/2023/05/GettyImages-1436826358.jpg" />
-                <Image className="team-sec-image small-img" width={500} height={500} alt="team-img" src={teamImg} />
+                <Image className="team-sec-image" width={400} height={300} alt="team-img" src="https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734531691/Unlocking_Inspiration__The_Power_of_Keynote_Speakers_in_Driving_Change__ahj6xc.jpg" />
+                <Image className="team-sec-image small-img" width={500} height={500} alt="team-img" src="https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734531690/Choosing_the_Perfect_Keynote_Speaker_for_Your_Upcoming_Business_Event_tlgy38.jpg" />
 
             </div>
         </div>

@@ -29,26 +29,33 @@ export default function CreativeService() {
         </div>
 
         <div className='creative-service-head-card-container'>
-          <h2 className='creative-service-head'>Where sophistication </h2>
-          <h2 className='creative-service-head-second mb-9'>meets creativity.</h2>
+          <h2 className='creative-service-head'>Where Sophistication </h2>
+          <h2 className='creative-service-head-second mb-9'>Meets Creativity.</h2>
           <div className="flex justify-between items-start creative-service-card-container">
             <div className="creative-service-card">
-              <Image className='creative-service-card-img' src="https://cdn.sanity.io/images/k0dlbavy/production/3663db6035f44498f43f218cc084314cfe3b9da4-632x320.jpg?auto=format&fit=max&q=100&w=632" alt="crative image" height={300} width={300} />
+              <Image className='creative-service-card-img' src="https://res.cloudinary.com/dvhmy6a4u/image/upload/v1733682584/4501ec186308f5038f02eb919dbf80f7_azjpct.gif" alt="crative image" height={300} width={300} />
               <p className='creative-service-card-content' >Precision-driven designs that enhance brand identity, focusing on high-quality, impactful visuals crafted for long-term success.</p>
               <hr className='creative-service-card-content-line ' />
             </div>
             <div className="creative-service-card">
-              <Image className='creative-service-card-img' src="https://cdn.sanity.io/images/k0dlbavy/production/ab1b600a1065802a161343b72e7367e3c779f301-632x320.jpg?auto=format&fit=max&q=100&w=632" alt="crative image" height={300} width={300} />
+              <video className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl creative-service-card-img" autoPlay preload='auto' loop muted src="https://res.cloudinary.com/dvhmy6a4u/video/upload/v1733738086/534d6aff87e86b29b17312ba147078a9_yplz9m.mp4" onLoadedData={(e) => {
+                              const videoElement = e.target as HTMLVideoElement; // Explicitly cast to HTMLVideoElement
+                              videoElement
+                                .play()
+                                .catch((error: DOMException) => { // Provide a type for `error`
+                                  console.error('Autoplay failed:', error);
+                                });
+                }}></video>
               <p className='creative-service-card-content' >Delivering sophisticated, creative solutions that blend modern aesthetics with strategic design to effectively communicate your message.              </p>
               <hr className='creative-service-card-content-line' />
             </div>
             <div className="creative-service-card">
-              <Image className='creative-service-card-img' src="https://cdn.sanity.io/images/k0dlbavy/production/e9711069938bd5fbeecf62d125a32a317b2543da-2528x1280.jpg?auto=format&fit=max&q=100&w=1896" alt="crative image" height={300} width={300} />
+              <Image className='creative-service-card-img' src="https://res.cloudinary.com/dvhmy6a4u/image/upload/v1733744640/pinterestdownloader.com-1733744603.09512_x4zzrx.gif" alt="crative image" height={300} width={300} />
               <p className='creative-service-card-content' >Pushing the boundaries of design, we create innovative and visually compelling graphics that set your brand apart in a competitive market.</p>
               <hr className='creative-service-card-content-line' />
             </div>
             <div className="creative-service-card">
-              <Image className='creative-service-card-img' src="https://cdn.sanity.io/images/k0dlbavy/production/483f93680d2e68ec33ab24d1a397bf19fff1186a-632x320.jpg?auto=format&fit=max&q=100&w=632" alt="crative image" height={300} width={300} />
+              <Image className='creative-service-card-img' src="https://res.cloudinary.com/dvhmy6a4u/image/upload/v1733749999/05ba8567214b5d0c0bdeb73a0d908d7a_c1aatc.gif" alt="crative image" height={300} width={300} />
               <p className='creative-service-card-content' >Focused on results, we design with purpose. Our graphics are built for performance, ensuring maximum engagement and effectiveness.</p>
               <hr className='creative-service-card-content-line' />
             </div>

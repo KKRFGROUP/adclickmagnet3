@@ -16,13 +16,14 @@ import ContactOurExperts from '@/components/services-components/ContactOurExpert
 
 
 const heroContent = {
-    heading: "Presentation Design",
+    preheading: "Designing Impactful",
+    heading: "Presentations with Precision",
     para: "Engage, persuade and delight with ACM’s Presentation Design Services. From on-point PowerPoints to pitch-perfect pitch decks, we craft custom presentations and templates that suit your needs.",
     imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/745fa5bedb9310bd461d7b69073547d975fab304-1200x1200.png?auto=format&fit=max&q=100&w=1200"
 }
 
 
-const section3:{mainpara: string; heading: {text: string; className: string;}[]; para1: string; para2: string; image: string;} = {
+const section3:{mainpara: string; heading: {text: string; className: string;}[]; para1: string; para2: string; image: string; video?: string;} = {
   mainpara: "BUILT FOR COMMS, STRATEGY & MARKETING TEAMS",
   heading: [
     {  
@@ -60,7 +61,8 @@ const section3:{mainpara: string; heading: {text: string; className: string;}[];
 ],
   para1: "We do your ideas justice with beautifully designed presentations that follow a logical structure, showcase your data in a clear, compelling manner and convey your message in the most persuasive way possible.",
   para2: "Whether you need a pitch deck to persuade VCs, templates for internal communications or slides for a key event, our world-class team of presentation designers will work with you to deliver a stunning final product.", 
-  image: "https://res.cloudinary.com/deepcnbrz/image/upload/v1730822005/Screenshot_2024-11-05_212211_hhbsos.png"
+  image: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734514461/Determ_by_studio_size______Determ_is_an_AI-powered_media_monitoring_tool_that_helps_you_track_measure_and_create_reports_about_your___Instagram_ukycbh.jpg",
+  //video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1733681971/e7179a38ce0e25b77ac5c3c15b92dccc_tfhsfw.mp4"
 }
 
 const section4: {mainpara: string; head: string; cards: {head: string; para: string; img: string;}[]} = {
@@ -70,27 +72,27 @@ const section4: {mainpara: string; head: string; cards: {head: string; para: str
     {
         head: "Custom PowerPoint design",
         para: "Get unique, visually stunning PowerPoint designs that bring your ideas to life, ensuring your presentations are engaging and persuasive.",
-        img: "https://images.unsplash.com/photo-1541462608143-67571c6738dd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734171538/Dark_Innovation_Creative_Multipurpose_Keynote_Template_pfaquc.jpg"
     },
     {
         head: "Presentation templates",
         para: "Enjoy customizable, on-brand presentation templates that deliver consistent messaging, incorporating existing designs or built from scratch.",
-        img: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        img: ""
     },
     {
         head: "Custom & motion graphics",
         para: "Request captivating animations and custom graphics to add flair to your presentation designs and a dynamic layer to your storytelling.",
-        img: "https://images.unsplash.com/photo-1651813338290-2f869def49b0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734172091/552a787860b6065cb634e51df02cdceb_osmbra.gif"
     },
     {
         head: "Data visualization",
         para: "Let us transform your complex data into clear, insightful and delightful visuals, making your information more accessible and impactful.",
-        img: "https://plus.unsplash.com/premium_photo-1681426499183-bd8be49a9a7e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734171762/Data_Visualization_-_PowerPoint_Presentation_owvami.jpg"
     },
     {
         head: "Infographics",
         para: "Add visually striking infographics to your presentation designs to convey information visually and share engagingly digestible messages.",
-        img: "https://images.pexels.com/photos/8518675/pexels-photo-8518675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734351200/Gemini_lvjydi.jpg"
     },
 ]
 }
@@ -104,27 +106,27 @@ const section5: {mainpara: string; head: string; cards: {head: string; para: str
     {
         head: "Business presentations",
         para: "Get professional, effective presentations tailored to your business, designed to communicate your message clearly and leave a lasting impression on your audience.",
-        img: "https://images.pexels.com/photos/7889216/pexels-photo-7889216.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734426064/Data_Visualization_-_Google_Slides_Presentation_isys6s.jpg"
     },
     {
         head: "Elevator & pitch decks",
         para: "Collaborate on persuasive pitch decks perfect for supporting narratives and sealing partnerships, presented in a compelling format to capture immediate interest.",
-        img: "https://media.licdn.com/dms/image/C4D12AQH21jE2vIEalA/article-cover_image-shrink_720_1280/0/1606914922904?e=2147483647&v=beta&t=JEo-iTiWPRet9iCsG4o83DIpfG0QsQb4c2DpMMDrPB0"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734426467/Modern_Minimalist_PowerPoint_Template_pmhjy8.jpg"
     },
     {
         head: "Sales decks & reports",
         para: "Get sales decks designed to drive decisions and conversions, combining persuasive storytelling with clear data visualizations to communicate your message.",
-        img: "https://images.pexels.com/photos/7947704/pexels-photo-7947704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734427165/Ad_Astra_-_Territory_Studio_mqu2zo.jpg"
     },
     {
         head: "Investor decks & reports",
         para: "Share detailed presentations and reports to engage investors, showcasing your business's value and potential with clear, persuasive narratives and visuals.",
-        img: "https://plus.unsplash.com/premium_photo-1682310156923-3f4a463610f0?q=80&w=1824&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734427265/Smart_Financial_Analytics_Crypto_Tracking_tljkbd.jpg"
     },
     {
         head: "Slide decks",
         para: "Get engaging slide decks customized to meet your specific objectives, whether you’re presenting ideas or getting buy-in from an internal or external audience.",
-        img: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734427359/Data_Financials_Slide_Templates_-_slidddo_o9bpbr.jpg"
     },
 ]
 }

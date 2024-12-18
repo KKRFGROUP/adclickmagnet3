@@ -5,7 +5,7 @@ import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Cube from "../../../components/3dmodels/Cube";
 
-import "../about.css"
+
 
 
 function AboutHeroSec() {

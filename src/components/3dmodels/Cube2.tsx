@@ -1,42 +1,46 @@
 "use client";
 
-import React from "react";
-//import { useFrame } from "@react-three/fiber";
+import React,{useRef, useState, useEffect} from "react";
+import { useFrame } from "@react-three/fiber";
 import {  TextureLoader } from "three";
 import { useLoader } from "@react-three/fiber";
 const Cube2 = () => {
-  //const cubeRef = useRef();
-  
+  const cubeRef = useRef();
   const textures = [
-    useLoader(TextureLoader, "https://res.cloudinary.com/dgdgrniut/image/upload/v1732166229/66ef60583159af66c2df6d6b_Frame_2_ucpit0.jpg"),
-    useLoader(TextureLoader, "https://res.cloudinary.com/dgdgrniut/image/upload/v1732166228/66ef5cfe4f93b80bfbf4617a_Frame_2_ept6pf.jpg"),
-    useLoader(TextureLoader, "https://res.cloudinary.com/dgdgrniut/image/upload/v1732166227/66ef5cfea8f2c57494566f45_Frame_3_vsz1mz.jpg"), //top
-    useLoader(TextureLoader, "https://res.cloudinary.com/dgdgrniut/image/upload/v1732166226/66ef5cfe9fcc1c5948b15a89_Frame_5-p-500_u5gs0o.jpg"), //bottom
-    useLoader(TextureLoader, "https://res.cloudinary.com/dgdgrniut/image/upload/v1732166226/66ef5cfe9fcc1c5948b15a89_Frame_5-p-500_u5gs0o.jpg"),
-    useLoader(TextureLoader, "https://res.cloudinary.com/dgdgrniut/image/upload/v1732166226/66ef5cfe9fcc1c5948b15a89_Frame_5-p-500_u5gs0o.jpg"),
+    useLoader(TextureLoader, "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734531889/Mockups_for_Vogue_swim_%EF%B8%8F_modernbrief_modernbriefvogue_jib8dm.jpg"), //top
+    useLoader(TextureLoader, "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734531889/Mockups_for_Vogue_swim_%EF%B8%8F_modernbrief_modernbriefvogue_jib8dm.jpg"),//bottom
+    useLoader(TextureLoader, "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734531895/Piled_Up_Packaging_Tape_Rolls_Mockup_yeboto.jpg"),
+    useLoader(TextureLoader, "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734531897/Curame_Hair_Care_Branding_Packaging_Design_tjwnwh.jpg"),
+    useLoader(TextureLoader, "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734531893/Wedge-Designed_Ami_Ami_Shows_That_Boxed_Wine_Can_Be_Pretty_Gosh_Darn_Cool_cxoxor.jpg"), 
+    useLoader(TextureLoader, "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734531890/Seth_Rogen_s_cannabis_brand_Houseplant_unveils_collectable_lego-like_packaging_pnn7cm.jpg"),
   ];
-  //useFrame(() => {
-  //  if (cubeRef.current) {
-  //    cubeRef.current.rotation.x += 0.01; // Adjust speed by changing this value
-  //  }
-  //});
+  
+  useFrame(() => {
+    if (cubeRef.current) {
+      cubeRef.current.rotation.x += 0.01; // Adjust speed by changing this value
+    }
+  });
+  const [windowWidth, setWindowWidth] = useState(0);
+  
+    useEffect(() => {
+      if (typeof window !== "undefined") {
+        setWindowWidth(window.innerWidth);
+        const handleResize = () => setWindowWidth(window.innerWidth);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+      }
+    }, []);
 
 
   
   return (
     <mesh >
-      <boxGeometry args={[4,1.4,1.4]}/>
+      
+      {windowWidth <768 ? <boxGeometry args={[2.5,1,1]}/> : <boxGeometry args={[4,1.4,1.4]}/>}
       {textures.map((texture, index) => (
         <meshStandardMaterial key={index} attach={`material-${index}`} map={texture} />
       ))}
-        {/*<RenderTexture attach="map" >
-          <PerspectiveCamera makeDefault position={[0, 0, 5]} />
-          <color attach="background"  args={["#fff"]} />
-          <Text ref={textRef}  fontSize={1} lineHeight={10} color="#000">
-            Who We Are
-          </Text>
-        </RenderTexture>
-      </meshStandardMaterial>*/}
+        
     </mesh>
   );
 };

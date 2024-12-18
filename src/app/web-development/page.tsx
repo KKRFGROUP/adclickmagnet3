@@ -31,52 +31,53 @@ const heroContent = {
 }
 const section2 = [
   {
-      id: 1,
-      imgUrl: "https://www.commercialdesignindia.com/cloud/2023/03/23/tI16mkGo-image.png",
-      customer: "Deloitte",
-      industry: "Tech"
+    id: 1,
+    imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523287/Untitled_design_14_uhowlh.png",
+    customer: "Smokey",
+    industry: "Substain..."
   },
   {
       id: 2,
-      imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq7WmioB86esKm0iy-crHfKL9WzTi-O9ri-A&s",
-      customer: "Moderna",
-      industry: "Heathc..."
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524086/Untitled_design_18_n8m9uw.png",
+      customer: "Blends",
+      industry: "Design"
   },
   {
       id: 3,
-      imgUrl: "https://ms-f7-sites-prod-cdn.akamaized.net/docs/stories/787157-chipotle-retailers-azure/resources/04ec8017-81cb-4b3b-b3a4-a7a3cd29c1f7/1209721216221477916_1209721216221477916",
-      customer: "chipotle",
-      industry: "Food"
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524083/Untitled_design_19_mh9s3w.png",
+      customer: "PGroomer",
+      industry: "Pet..."
   },
   {
-      id: 4,
-      imgUrl: "https://filecenter.deltaww.com/news/images/album/news_default.jpg?w=305",
-      customer: "Delta",
-      industry: "Telecom"
+    id: 4,
+    imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523290/Untitled_design_13_bnalvy.png",
+    customer: "Silsi",
+    industry: "Robotics"
   },
   {
-      id: 5,
-      imgUrl: "https://img.foodprocessing.com/files/base/ebm/foodprocessing/image/2023/09/Pepsico.650cc18c5f449.png?auto=format%2Ccompress&w=640&width=640",
-      customer: "Pepsico",
-      industry: "Food"
+    id: 5,
+    imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523212/Untitled_design_17_tm74f2.png",
+    customer: "IQ Home Care",
+    industry: "E-commerce & ..."
   },
+  
   {
       id: 6,
-      imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbOo6Qs4bmldUhw7s_yufF3XHwbwK7bRr2pQ&s",
-      customer: "Lockheed...",
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524079/Untitled_design_20_lutddy.png",
+      customer: "Canada View",
       industry: "Defence"
   },
   {
       id: 7,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/736472e7079951373aa33646f75d519428026466-1200x678.png?auto=format&fit=max&q=100&w=1200",
-      customer: "Opa!",
-      industry: "Consumer..."
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524079/Untitled_design_21_g746dl.png",
+      customer: "Jen Thomson",
+      industry: "Consumer ..."
   },
   {
-      id: 8,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/4f986ebd49b52907be569e401ef25b191b412700-800x936.png?auto=format&fit=max&q=100&w=800",
-      customer: "Shopify",
-      industry: "E-commerce..."
+    id: 8,
+    imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523286/Untitled_design_15_mrmwez.png",
+    customer: "DonGon",
+    industry: "Food"
   },
 ]
 
@@ -110,7 +111,8 @@ const section3 = {
     ],
     para1: "The need for reliable, scalable websites has never been greater. When your priority is a seamless digital experience, ACM’s flexible web development services are the solution.",
     para2: "Our global team of expert web developers can help with everything from concept and planning to implementation, integrating the latest in front-end, back-end, and full-stack solutions for a truly comprehensive digital presence.",
-    image: "https://res.cloudinary.com/deepcnbrz/image/upload/v1730822005/Screenshot_2024-11-05_212211_hhbsos.png"
+    image: "https://res.cloudinary.com/deepcnbrz/image/upload/v1730822005/Screenshot_2024-11-05_212211_hhbsos.png",
+    video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1734526689/04d0c008e3499a6210058c048be30fe7_jeizan.mp4"
   };
 
 
@@ -250,29 +252,32 @@ const section7 = {
     button: "AI Web Development Service"
 };
 
-const section3dCards: {mainpara: string; head: string; cards: {head: string; para: string; img: string;}[]} = {
+const section3dCards: {mainpara: string; head: string; cards: {head: string; para: string; img: string; video?: string;}[]} = {
     mainpara: "WORKING WITH ACM",
     head: "Experience video excellence in every frame",
     cards: [
       {
           head: "Static Website Designing",
           para: "A static website is a type of website that consists of a set of HTML pages that remain unchanged until they are manually updated.",
-          img: "https://5.imimg.com/data5/SELLER/Default/2024/6/428433457/KL/LG/NL/224212668/static-website-designing-service-500x500.jpg"
-      },
+          img: "https://5.imimg.com/data5/SELLER/Default/2024/6/428433457/KL/LG/NL/224212668/static-website-designing-service-500x500.jpg",
+          video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1734526739/726fb854de761daa523edf50e93f595d_vgmku9.mp4"
+        },
       {
           head: "E- commerce websites",
           para: "An e-commerce website is an online platform where businesses sell their products or services to customers over the internet.",
-          img: "https://plus.unsplash.com/premium_photo-1683758344058-60a1506db480?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      },
+          img: "https://plus.unsplash.com/premium_photo-1683758344058-60a1506db480?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1734526687/9bf3809cae7b54e7505023fa7ef7bba6_zxugwr.mp4"
+        },
       {
         head: "Idea based websites",
         para: "An idea-based website is a digital platform centered around sharing and exploring concepts, innovations, or creative thoughts.",
-        img: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/6f5bc0101084519.5f170c2bc09c7.png"
-    },
+        img: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/6f5bc0101084519.5f170c2bc09c7.png",
+        video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1734526993/b85d984c64debd3ed46640ce77dbaf16_fcsdbw.mp4"
+      },
     {
         head: "Corporate Website",
         para: "A corporate website serves as the digital face of a company, providing a comprehensive overview of its identity, offerings, and values to various stakeholders",
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqrj86bI16uGV1kXMZjFqkjm5Svokh6nAbBg&s"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734526682/Proxima_website_template_hjwlwi.jpg"
     },
   ]
 } 

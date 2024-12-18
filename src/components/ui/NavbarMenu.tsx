@@ -1,12 +1,26 @@
-
 import React from "react";
-
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import adclickImage from '../../public/images/logo/adclickmagnetlogoblack.png';
-import '../app.css';
+import { createPortal } from 'react-dom';
+//import adclickImage from '../../public/images/logo/adclickmagnetlogoblack.png';
 
+interface PortalProps {
+  children: React.ReactNode;
+  buttonRef: React.RefObject<HTMLDivElement>;
+}
+
+interface MenuItemProps {
+  setActive: (item: string) => void;
+  active: string | null;
+  item: string;
+  children?: React.ReactNode;
+}
+
+interface MenuProps {
+  setActive: (item: string | null) => void;
+  children: React.ReactNode;
+}
 
 const transition = {
   type: "spring",
@@ -17,84 +31,122 @@ const transition = {
   restSpeed: 0.001,
 };
 
-export const MenuItem = ({
+const DropdownPortal: React.FC<PortalProps> = ({ children, buttonRef }) => {
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted || !buttonRef.current) return null;
+
+  const rect = buttonRef.current.getBoundingClientRect();
+  const dropdownStyle: React.CSSProperties = {
+    position: 'fixed',
+    top: `${rect.bottom + 20}px`,
+    left: `${rect.left - (rect.width)}px`,
+    zIndex: 1000
+  };
+
+  return createPortal(
+    <div style={dropdownStyle} className="top-[calc(100%_+_1.2rem)] transform -translate-x-[45%] mx-10 pt-1">{children}</div>,
+    document.body
+  );
+};
+
+export const MenuItem: React.FC<MenuItemProps> = ({
   setActive,
   active,
   item,
   children,
-}: {
-  setActive: (item: string) => void;
-  active: string | null;
-  item: string;
-  children?: React.ReactNode;
 }) => {
+  const buttonRef = React.useRef<HTMLDivElement>(null);
+
   return (
-    <div onMouseEnter={() => setActive(item)} className="relative">
+    <div ref={buttonRef} onMouseEnter={() => setActive(item)} className="relative">
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white lg:text-sm md:text-[10px]"
+        className="cursor-pointer text-white hover:opacity-[0.9] lg:text-sm md:text-[10px] whitespace-nowrap"
       >
         {item}
       </motion.p>
-      {active !== null && (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.85, y: 10 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={transition}
-        >
-          {active === item && children && (
-            <div className="absolute top-[calc(100%_+_1.2rem)] transform -translate-x-[45%] mx-10 pt-1">
+      
+      <AnimatePresence>
+        {active === item && children && (
+          <DropdownPortal buttonRef={buttonRef}>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 10 }}
+              transition={transition}
+            >
               <motion.div
                 transition={transition}
-                layoutId="active" // layoutId ensures smooth animation
-                className="bg-black  dark:bg-white backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
+                layoutId="active"
+                className=" backdrop-blur-2xl rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
               >
-                <motion.div
-                  layout // layout ensures smooth animation
-                  className="what-we-do-links"
-                >
+                <motion.div layout className="what-we-do-links">
                   {children}
                 </motion.div>
               </motion.div>
-            </div>
-          )}
-        </motion.div>
-      )}
+            </motion.div>
+          </DropdownPortal>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
 
-export const Menu = ({
+export const Menu: React.FC<MenuProps> = ({
   setActive,
   children,
-}: {
-  setActive: (item: string | null) => void;
-  children: React.ReactNode;
 }) => {
-
   return (
-    <div  className="navbar relative rounded-full border border-transparent dark:bg-white/[0.4] dark:border-black bg-white shadow-input flex justify-between items-center space-x-4 px-8 py-2 md:py-3 md:px-3 mx-10 ">
-          <Link href="/" className="navbar-logo">      
-            <Image className="navbar-company-logo" width={200} height={200} src={adclickImage} alt="logo"  />
-          </Link>
-        <nav
-          onMouseLeave={() => setActive(null)} // resets the state
-          className="relative rounded-full border border-transparent shadow-2xl shadow-black  dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-between items-center space-x-4 px-10 md:px-7 py-3 md:py-4 navlinks"
-          >
-        
+    <div className="navbar relative rounded-full border border-transparent dark:bg-white/[0.4] dark:border-black bg-white shadow-input flex justify-between items-center space-x-4 px-8 py-2 md:py-3 md:px-3 mx-10">
+      <Link href="/" className="navbar-logo">      
+        <Image 
+          className="navbar-company-logo" 
+          width={300} 
+          height={300} 
+          src="https://res.cloudinary.com/dgdgrniut/image/upload/c_crop,w_900,h_200/v1734526527/adclick_magnet_black_logo-removebg-preview_sfbddu_c9us7e.png"
+          alt="logo" 
+        />
+      </Link>
+
+      <nav
+        onMouseLeave={() => setActive(null)}
+        className="relative inline-flex overflow-hidden rounded-full p-[2px] navlinks"
+      >
+        <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+        <span className="relative inline-flex h-full w-full items-center justify-center rounded-full bg-slate-950 px-10 md:px-7 py-3 md:py-4 space-x-[40px] w-[90%] hover:w-[100%]">
           {children}
+        </span>
+      </nav>
+
+      <Link href="tel:+17185772718">
+        <button type="button" className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 getintouch-card">
+        
+          <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+          <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
+           +1 718 577 2718
+
+            <svg 
+            width="25" 
+            height="25" 
+            fill="currentColor"
+            className="bi bi-arrow-right-short" 
+            viewBox="0 0 16 16"
+            >
+              <path 
+                fillRule="evenodd" 
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"
+              />
+            </svg>
+          </span>
           
-        </nav>
-        <Link href="tel:+17185772718">
-        <button type="button" className="flex items-center justify-center py-2 md:py-3 px-5 getintouch-card">
-                            Get in touch
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                                className="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                                <path fillRule="evenodd"
-                                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
-                            </svg>
+          
         </button>
-        </Link>
+      </Link>
     </div>
   );
 };
@@ -131,14 +183,5 @@ export const ProductItem = ({
   );
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const HoveredLink = ({ children, ...rest }: any) => {
-  return (
-    <Link
-      {...rest}
-      className="text-neutral-700 dark:text-black font-semibold hover:text-black cursor-none"
-    >
-      {children}
-    </Link>
-  );
-};
+
+export default Menu;

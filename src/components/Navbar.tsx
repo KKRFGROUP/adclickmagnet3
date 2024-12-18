@@ -24,9 +24,55 @@ const hoverImageArr = [
         name: "Digital Ads Services",
         img: "https://unctad.org/sites/default/files/inline-images/2019-03-29_DigitalServices_400x225.jpg"
     },
+    {
+        name: "Graphic Design",
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734468025/unions___highlights_up12yg.jpg"
+    },
+    {
+        name: "Ad Creative",
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734468145/lovesbitesberlin_cg61ks.jpg"
+    },
+    {
+        name: "Branding Services",
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734468488/emerald_postermockup_003_jpg_by_Emily_Xie_llqglz.jpg"
+    },
+    {
+        name: "Presentation Design",
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734468588/Premium_PSD___Interface_presentation_mockup_with_frosted_glass_morphism_effects_3D_Render_fszpnk.jpg"
+    },
+    {
+        name: "Video Production",
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734468646/Video_Production_Agency_Website_tj2bxd.jpg"
+    },
+    {
+        name: "Motion Design",
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734468750/join_us__Photo_jhlnet.gif"
+    },
+    {
+        name: "Google Ads",
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734512567/google_ads_1_arhyff.jpg"
+    },
+    {
+        name: "Meta Ads",
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734518219/meta_logo_white_grvgck.jpg"
+    },
+    {
+        name: "Search Engine Optimization",
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734442064/seo_logo_white_tgmpnn.jpg"
+    },
+    {
+        name: "Linkedin Ads",
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524683/Untitled_design_11_gknymx.png"
+    },
+    {
+        name: "Web Development",
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734434830/a83bd63c2147df066ce4c89f3adbabff_wqlp7s.gif"
+    },
+   
+    
 ]
 
-const defaultImage =  "https://media.istockphoto.com/id/1407063872/vector/modern-abstract-background-with-black-gradient-abstract-black-business-background.jpg?s=612x612&w=0&k=20&c=6QftyGArm3LTpQsLw29DpZ9ZB42HMNK-wboAWyFZvto="
+const defaultImage =  "https://res.cloudinary.com/dgdgrniut/image/upload/v1734527641/acm_white_logo-removebg-preview_qgn8qq_hs2io7.png"
 
 
 
@@ -81,6 +127,7 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
                             </Link>
                             <MenuItem setActive={setActive} active={active} item="What We Do">
                                 <div className='what-we-do-hover-header'>
+                                    <div className="bg-blur">
                                     <div className="what-we-do-hover-sec1">
                                         <h2 className="what-we-do-hover-sec1-head">Built to Elevate Your Growth</h2>
                                         <p className="what-we-do-hover-sec1-para">Our digital services are designed to transform your vision into measurable success.</p>
@@ -91,30 +138,31 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
                                         </div>
                                         <hr className="what-we-do-hover-sec1-line"/>
                                         <p className="what-we-do-hover-sec1-para">What We Think</p>
-                                        <p className="what-we-do-hover-sec1-para-company">Blogs</p>
-                                        <p className="what-we-do-hover-sec1-para-company">Press Release</p>
+                                        <Link href="/blogs"><p className="what-we-do-hover-sec1-para-company">Blogs</p></Link>
+                                        <Link href="/press-release"><p className="what-we-do-hover-sec1-para-company">Press Release</p></Link>
                                     </div>
                                     <div className="what-we-do-hover-secs">  
                                         <h2 className="what-we-do-hover-secs-head" onMouseEnter={() => handleHoverImage("Creative services")} onMouseLeave={() => handleHoverImage(defaultImage)}>Creative services</h2>
-                                        <Link href="/graphic-design"><p className="what-we-do-hover-secs-para">Graphic Design</p></Link>
-                                        <Link href="/ad-creative"><p className="what-we-do-hover-secs-para">Ad Creative</p></Link>
-                                        <Link href="/branding-services"><p className="what-we-do-hover-secs-para">Branding Services</p></Link>
-                                        <Link href="/presentation-design"><p className="what-we-do-hover-secs-para">Presentation Design</p></Link>
-                                        <Link href="/video-production"><p className="what-we-do-hover-secs-para">Video Production</p></Link>
-                                        <Link href="/motion-design"><p className="what-we-do-hover-secs-para">Motion Design</p></Link>
+                                        <Link href="/graphic-design" onMouseEnter={() => handleHoverImage("Graphic Design")} onMouseLeave={() => handleHoverImage(defaultImage)}><p className="what-we-do-hover-secs-para">Graphic Design</p></Link>
+                                        <Link href="/ad-creative" onMouseEnter={() => handleHoverImage("Ad Creative")} onMouseLeave={() => handleHoverImage(defaultImage)}><p className="what-we-do-hover-secs-para">Ad Creative</p></Link>
+                                        <Link href="/branding-services" onMouseEnter={() => handleHoverImage("Branding Services")} onMouseLeave={() => handleHoverImage(defaultImage)}><p className="what-we-do-hover-secs-para">Branding Services</p></Link>
+                                        <Link href="/presentation-design" onMouseEnter={() => handleHoverImage("Presentation Design")} onMouseLeave={() => handleHoverImage(defaultImage)}><p className="what-we-do-hover-secs-para">Presentation Design</p></Link>
+                                        <Link href="/video-production" onMouseEnter={() => handleHoverImage("Video Production")} onMouseLeave={() => handleHoverImage(defaultImage)}><p className="what-we-do-hover-secs-para">Video Production</p></Link>
+                                        <Link href="/motion-design" onMouseEnter={() => handleHoverImage("Motion Design")} onMouseLeave={() => handleHoverImage(defaultImage)}><p className="what-we-do-hover-secs-para">Motion Design</p></Link>
                                     </div>
                                     <div className="what-we-do-hover-secs">
                                         <h2 className="what-we-do-hover-secs-head" onMouseEnter={() => handleHoverImage("Digital Ads Services")} onMouseLeave={() => handleHoverImage(defaultImage)}>Digital Ads Services</h2>
-                                        <Link href="/google-ads"><p className="what-we-do-hover-secs-para">Google Ads</p></Link>
-                                        <Link href="/meta-ads"><p className="what-we-do-hover-secs-para">Meta Ads</p></Link>
-                                        <Link href="/seo"><p className="what-we-do-hover-secs-para">Search Engine Optimization</p></Link>
-                                        <Link href="/linkedin-ads"><p className="what-we-do-hover-secs-para">Linkedin Ads</p></Link>
-                                        <Link href="/web-development"><p className="what-we-do-hover-secs-para">Web Development</p></Link>
+                                        <Link href="/google-ads" onMouseEnter={() => handleHoverImage("Google Ads")} onMouseLeave={() => handleHoverImage(defaultImage)}><p className="what-we-do-hover-secs-para">Google Ads</p></Link>
+                                        <Link href="/meta-ads" onMouseEnter={() => handleHoverImage("Meta Ads")} onMouseLeave={() => handleHoverImage(defaultImage)}><p className="what-we-do-hover-secs-para">Meta Ads</p></Link>
+                                        <Link href="/seo" onMouseEnter={() => handleHoverImage("Search Engine Optimization")} onMouseLeave={() => handleHoverImage(defaultImage)}><p className="what-we-do-hover-secs-para">Search Engine Optimization</p></Link>
+                                        <Link href="/linkedin-ads" onMouseEnter={() => handleHoverImage("Linkedin Ads")} onMouseLeave={() => handleHoverImage(defaultImage)}><p className="what-we-do-hover-secs-para">Linkedin Ads</p></Link>
+                                        <Link href="/web-development" onMouseEnter={() => handleHoverImage("Web Development")} onMouseLeave={() => handleHoverImage(defaultImage)}><p className="what-we-do-hover-secs-para">Web Development</p></Link>
                                         
                                     </div>
                                     <div className="what-we-do-hover-secs text-center">
                                         <Image className="what-we-do-hover-secs-img" src={hoverImage} alt="" height={300} width={300} />
-                                        <p>service</p>
+                                        
+                                    </div>
                                     </div>
                                 </div>
                                 <div className="what-we-do-hover-footer">

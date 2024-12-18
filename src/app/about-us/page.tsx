@@ -7,6 +7,8 @@ import LetsGrow from "./sections/LetsGrow";
 import Founders from "./sections/Founders";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import './about.css'
+import "../../components/app.css"
 function AboutUs() {
   const pageMainRef = useRef<HTMLDivElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);

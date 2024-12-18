@@ -644,6 +644,10 @@ figure {
 }
 .creative-service-card {
     width: 23%;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .creative-service-card-content-line {
@@ -684,6 +688,7 @@ figure {
     }
     .creative-service-card {
         width: 80%;
+        height: max-content;
         margin-bottom: 70px;
     }
     .creative-service-card-content {

@@ -121,7 +121,7 @@ const section3 = {
     ],
     para1: "In today’s social media-driven world, Meta Ads (Facebook & Instagram) offer a powerful way to boost your brand's presence, engage with potential customers, and drive significant business growth. Our customized Meta Ads services ensure that your campaigns reach the right audience for maximum engagement and ROI.",
     para2: "Our team of Meta Ads specialists offers a full range of services, from audience targeting and creative ad design to performance tracking and continuous optimization, ensuring that your ad spend is impactful and efficient for optimal results.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgREW9pcOkR9fdzIW9vMvOCd28E7NjTFuyGg&s"
+    image: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734466565/Untitled_design_10_xynrvx.png"
 };
 
 
@@ -278,70 +278,72 @@ const section3dCards = {
       {
         head: "Campaign Strategy",
         para: "Develop customized Meta Ads strategies tailored to your business goals, ensuring maximum reach and conversions on Facebook and Instagram.",
-        img: "https://images.unsplash.com/photo-1606741964586-7a0b2a2f51ab?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.0.3"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734518375/Facebook_ads_campaign_expert_u126ir.jpg"
       },
       {
         head: "Audience Research",
         para: "Leverage in-depth audience research to target the right users on Facebook and Instagram, maximizing the efficiency of your ad spend.",
-        img: "https://images.unsplash.com/photo-1595254082351-bf2238b1f07a?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.0.3"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734518375/I_will_manage_and_setup_your_facebook_ads_campaign_efficiently_kcmq7s.jpg"
       },
       {
         head: "Ad Copy & Creative Design",
         para: "Create engaging ad copies and visually appealing creatives that resonate with your target audience, boosting interaction and engagement.",
-        img: "https://images.unsplash.com/photo-1581299895126-16e6fd62140b?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.0.3"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734518220/Screenshot_2024-12-17_at_7.02.29_PM_j42f67.png"
       },
       {
         head: "Performance Optimization",
         para: "Continuously monitor and optimize Meta Ads performance by analyzing metrics and implementing data-driven changes to enhance ROI.",
-        img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.0.3"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734518219/facebook-meta-business_sfwicr.webp"
       },
       {
         head: "Remarketing Campaigns",
         para: "Re-engage users who have interacted with your ads or website with strategic remarketing campaigns, driving more conversions.",
-        img: "https://images.unsplash.com/photo-1560264280-88b68371db91?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.0.3"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734518219/word-image-11_aor4gr.png"
       },
       {
         head: "Analytics & Reporting",
         para: "Receive detailed reports on Meta Ads performance, helping you understand results and make informed decisions for further improvements.",
-        img: "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.0.3"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734518219/Screenshot_2024-12-17_at_7.00.34_PM_pg0ajr.png"
       },
     ]
 };
 
   
 
-const dynamicContentSec = [
-    {
+const dynamicContentSec = {
+  heading: "How Do Meta Ads Campaign Management Services Work?",
+  content: [ {
         id: 1,
-        title: "Campaign Analysis & Optimization",
+        title: "Boost ROI with Precision",
         logo: <IoMdAnalytics className='text-6xl' />,
-        para: "We analyze the performance of your Meta Ads campaigns on Facebook and Instagram, identifying key trends, top-performing ads, and areas for improvement. Based on these insights, we optimize targeting, ad creatives, bidding strategies, and campaign structure to ensure maximum engagement and ROI."
+        para: "Take your Meta campaigns to the next level with data-driven strategies designed to maximize returns and minimize costs."
     },
     {
         id: 2,
-        title: "Lead Tracking & ROI Measurement",
+        title: "Smart Ads, Smarter Results",
         logo: <SiPivotaltracker className='text-6xl' />,
-        para: "Our advanced tracking system provides deep insights into which campaigns, audiences, and ad creatives generate the best-quality leads. This data allows us to refine strategies and improve lead conversion rates while maximizing return on investment (ROI)."
+        para: "Unlock the full potential of Meta's platforms with expert campaign management that delivers measurable success."
     },
     {
         id: 3,
-        title: "Audience Targeting & Sponsored Content",
+        title: "Target Optimize Convert",
         logo: <FcAdvertising className='text-6xl' />,
-        para: "We leverage Meta's powerful audience targeting tools, including demographics, interests, behaviors, and location targeting, to reach key decision-makers. Our Sponsored Content is designed to engage users, increase brand visibility, and drive meaningful interactions."
+        para: "Reach the right audience at the right time with finely-tuned Meta ads that drive meaningful engagement."
     },
     {
         id: 4,
-        title: "Ad Testing & Iteration",
+        title: "Your Ads, Perfectly Managed",
         logo: <SiTestcafe className='text-6xl' />,
-        para: "We conduct A/B testing across different ad variations to determine which headlines, images, and calls-to-action perform the best. Continuous testing and iteration ensure that your Meta Ads campaigns achieve the highest click-through and conversion rates possible."
+        para: "From strategy to execution, we handle every detail of your Meta campaigns to ensure peak performance."
     },
     {
         id: 5,
-        title: "Ongoing Campaign Management",
+        title: "Effortless Growth on Meta",
         logo: <GrHostMaintenance className='text-6xl' />,
-        para: "We provide ongoing management and optimization of your Meta Ads campaigns. Monthly performance reviews allow us to adjust targeting, creatives, budgets, and bidding strategies to continuously improve results and maintain high campaign performance."
+        para: "Sit back and watch your business grow as our Meta specialists manage, optimize, and scale your ad campaigns."
     },
-];
+]
+}
 
 
   

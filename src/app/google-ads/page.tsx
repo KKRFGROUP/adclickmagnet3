@@ -41,52 +41,53 @@ const heroContent = {
 }
 const section2 = [
   {
-      id: 1,
-      imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh6WuTXjtoN-PTU45bBM00_Kpcy70O4aKDrA&s",
-      customer: "ABB",
-      industry: "Robotics"
+    id: 1,
+    imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523287/Untitled_design_14_uhowlh.png",
+    customer: "Smokey",
+    industry: "Substain..."
   },
   {
       id: 2,
-      imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgZDWl8q0aIfgVqwy9POKEKEsM_D-9b3sdXw&s",
-      customer: "Matco Tools",
-      industry: "Hardware"
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524086/Untitled_design_18_n8m9uw.png",
+      customer: "Blends",
+      industry: "Design"
   },
   {
       id: 3,
-      imgUrl: "https://c8.alamy.com/comp/PFWB5T/close-up-of-sign-with-logo-on-facade-of-erp-software-company-epicor-in-dublin-california-april-9-2018-PFWB5T.jpg",
-      customer: "epicor",
-      industry: "Tech"
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524083/Untitled_design_19_mh9s3w.png",
+      customer: "PGroomer",
+      industry: "Pet..."
   },
   {
-      id: 4,
-      imgUrl: "https://t3.ftcdn.net/jpg/05/58/48/98/360_F_558489893_wSk1j0CxHMMgnFJ1BD1ZkenF2kBcQobJ.jpg",
-      customer: "Atlas",
-      industry: "Substain..."
+    id: 4,
+    imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523290/Untitled_design_13_bnalvy.png",
+    customer: "Silsi",
+    industry: "Robotics"
   },
   {
-      id: 5,
-      imgUrl: "https://img.foodprocessing.com/files/base/ebm/foodprocessing/image/2023/09/Pepsico.650cc18c5f449.png?auto=format%2Ccompress&w=640&width=640",
-      customer: "Pepsico",
-      industry: "Food"
+    id: 5,
+    imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523212/Untitled_design_17_tm74f2.png",
+    customer: "IQ Home Care",
+    industry: "E-commerce & ..."
   },
+  
   {
       id: 6,
-      imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbOo6Qs4bmldUhw7s_yufF3XHwbwK7bRr2pQ&s",
-      customer: "Lockheed...",
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524079/Untitled_design_20_lutddy.png",
+      customer: "Canada View",
       industry: "Defence"
   },
   {
       id: 7,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/736472e7079951373aa33646f75d519428026466-1200x678.png?auto=format&fit=max&q=100&w=1200",
-      customer: "Opa!",
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524079/Untitled_design_21_g746dl.png",
+      customer: "Jen Thomson",
       industry: "Consumer ..."
   },
   {
-      id: 8,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/4f986ebd49b52907be569e401ef25b191b412700-800x936.png?auto=format&fit=max&q=100&w=800",
-      customer: "Shopify",
-      industry: "E-commerce & ..."
+    id: 8,
+    imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523286/Untitled_design_15_mrmwez.png",
+    customer: "DonGon",
+    industry: "Food"
   },
 ]
 
@@ -120,7 +121,7 @@ const section3 = {
     ],
     para1: "In a competitive digital landscape, targeted Google Ads can elevate your brand’s visibility and drive high-quality traffic to your website. Our tailored Google Ads services help you reach the right audience effectively and maximize your ROI.",
     para2: "Our team of certified Google Ads specialists provides end-to-end solutions, from keyword research and ad creation to performance tracking and optimization, ensuring you achieve the best possible outcomes for your ad spend.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgREW9pcOkR9fdzIW9vMvOCd28E7NjTFuyGg&s"
+    image: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734512567/google_ads_1_arhyff.jpg"
   };
   
 
@@ -276,39 +277,41 @@ const section7 = {
       {
         head: "Campaign Strategy",
         para: "Develop customized Google Ads strategies tailored to your business goals, ensuring maximum reach and conversions.",
-        img: "https://images.unsplash.com/photo-1606741964586-7a0b2a2f51ab?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.0.3"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734522123/website_photo_7_v9f7lh.jpg"
       },
       {
         head: "Keyword Research",
         para: "Leverage in-depth keyword research to target the right audience and maximize the efficiency of your ad spend.",
-        img: "https://images.unsplash.com/photo-1595254082351-bf2238b1f07a?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.0.3"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734519384/website_photo_2_zlelxg.jpg"
       },
       {
         head: "Ad Copy Creation",
         para: "Craft compelling ad copies that engage users, drive traffic, and boost click-through rates across campaigns.",
-        img: "https://images.unsplash.com/photo-1581299895126-16e6fd62140b?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.0.3"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734519384/website_photo_5_fgxfk7.jpg"
       },
       {
         head: "Performance Optimization",
         para: "Continuously monitor and optimize ad performance for better ROI by analyzing metrics and implementing data-driven changes.",
-        img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.0.3"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734519383/website_photo_4_pijonc.jpg"
       },
       {
         head: "Remarketing Campaigns",
         para: "Re-engage your audience with strategic remarketing campaigns that increase conversions and brand loyalty.",
-        img: "https://images.unsplash.com/photo-1560264280-88b68371db91?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.0.3"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734519384/website_new_photo_wppkrd.jpg"
       },
       {
         head: "Analytics & Reporting",
         para: "Receive detailed insights and reports to understand your campaign’s performance and make informed decisions.",
-        img: "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.0.3"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734519384/website_photo_3_dz0xdi.jpg"
       },
     ]
   };
   
 
-const dynamicContentSec: {id: number; title: string; logo: React.ReactNode; para: string;}[] = [
-    {
+const dynamicContentSec: {heading: string; content: {id: number; title: string; logo: React.ReactNode; para: string;}[]} = {
+  heading: "How Do Google Ads Campaign Management Services Work?",
+    content: [
+      {
         id:1,
         title: "Paid Campaign Analysis & Implementation",
         logo: <IoMdAnalytics className='text-6xl' />,
@@ -342,6 +345,7 @@ const dynamicContentSec: {id: number; title: string; logo: React.ReactNode; para
         para: "All aspects of the account will be reviewed each month to determine what areas can be improved and ensure the campaign is running smoothly. Negative keywords and changes to your keywords will continuously improve results."
     },
 ]
+}
   
 
 const section8 = {

@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 
-function Cards3dSections({content, className, translate,responsiveTraslate, end} : {content: {mainpara: string; head: string; cards: {head: string; para: string; img: string;}[]}; className?: string;translate?: string; end?: string;responsiveTraslate?: string;}) {
+function Cards3dSections({content, className, translate,responsiveTraslate, end} : {content: {mainpara: string; head: string; cards: {head: string; para: string; img: string; video?: string;}[]}; className?: string;translate?: string; end?: string;responsiveTraslate?: string;}) {
     const card3dTriggerRef = useRef(null);
   const card3dSectionRef = useRef(null);
   const [windowWidth, setWindowWidth] = useState(
@@ -97,14 +97,27 @@ function Cards3dSections({content, className, translate,responsiveTraslate, end}
                             {each.para}
                         </CardItem>
                         <CardItem translateZ="100" className="w-full mt-4">
-                        <Image
-                            src={each.img}
-                            height="1000"
-                            width="1000"
-                            className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl mobile-card-3d-img"
-                            alt="thumbnail"
-                        />
-                        </CardItem>
+                          {each.video ? 
+                  
+                          <video className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl mobile-card-3d-img" autoPlay preload='auto' loop muted src={each.video} onLoadedData={(e) => {
+                            const videoElement = e.target as HTMLVideoElement; // Explicitly cast to HTMLVideoElement
+                            videoElement
+                              .play()
+                              .catch((error: DOMException) => { // Provide a type for `error`
+                                console.error('Autoplay failed:', error);
+                              });
+                          }}></video>
+                        : 
+                            <Image
+                                src={each.img}
+                                height="1000"
+                                width="1000"
+                                className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl mobile-card-3d-img"
+                                alt="thumbnail"
+                            />
+                          }
+                        </CardItem> 
+                        
                         <div className="flex justify-start items-center mt-10">
                         
                         

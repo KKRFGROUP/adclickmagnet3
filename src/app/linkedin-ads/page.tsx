@@ -41,50 +41,50 @@ const heroContent = {
 const section2 = [
   {
       id: 1,
-      imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh6WuTXjtoN-PTU45bBM00_Kpcy70O4aKDrA&s",
-      customer: "ABB",
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523290/Untitled_design_13_bnalvy.png",
+      customer: "Silsi",
       industry: "Robotics"
   },
   {
       id: 2,
-      imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgZDWl8q0aIfgVqwy9POKEKEsM_D-9b3sdXw&s",
-      customer: "Matco Tools",
-      industry: "Hardware"
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524086/Untitled_design_18_n8m9uw.png",
+      customer: "Blends",
+      industry: "Design"
   },
   {
       id: 3,
-      imgUrl: "https://c8.alamy.com/comp/PFWB5T/close-up-of-sign-with-logo-on-facade-of-erp-software-company-epicor-in-dublin-california-april-9-2018-PFWB5T.jpg",
-      customer: "epicor",
-      industry: "Tech"
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524083/Untitled_design_19_mh9s3w.png",
+      customer: "PGroomer",
+      industry: "Pet..."
   },
   {
       id: 4,
-      imgUrl: "https://t3.ftcdn.net/jpg/05/58/48/98/360_F_558489893_wSk1j0CxHMMgnFJ1BD1ZkenF2kBcQobJ.jpg",
-      customer: "Atlas",
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523287/Untitled_design_14_uhowlh.png",
+      customer: "Smokey",
       industry: "Substain..."
   },
   {
       id: 5,
-      imgUrl: "https://img.foodprocessing.com/files/base/ebm/foodprocessing/image/2023/09/Pepsico.650cc18c5f449.png?auto=format%2Ccompress&w=640&width=640",
-      customer: "Pepsico",
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523286/Untitled_design_15_mrmwez.png",
+      customer: "DonGon",
       industry: "Food"
   },
   {
       id: 6,
-      imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbOo6Qs4bmldUhw7s_yufF3XHwbwK7bRr2pQ&s",
-      customer: "Lockheed...",
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524079/Untitled_design_20_lutddy.png",
+      customer: "Canada View",
       industry: "Defence"
   },
   {
       id: 7,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/736472e7079951373aa33646f75d519428026466-1200x678.png?auto=format&fit=max&q=100&w=1200",
-      customer: "Opa!",
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524079/Untitled_design_21_g746dl.png",
+      customer: "Jen Thomson",
       industry: "Consumer ..."
   },
   {
       id: 8,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/4f986ebd49b52907be569e401ef25b191b412700-800x936.png?auto=format&fit=max&q=100&w=800",
-      customer: "Shopify",
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523212/Untitled_design_17_tm74f2.png",
+      customer: "IQ Home Care",
       industry: "E-commerce & ..."
   },
 ]
@@ -119,7 +119,7 @@ const section3 = {
     ],
     para1: "In today’s professional network-driven world, LinkedIn Ads offer a powerful way to amplify your brand, connect with decision-makers, and drive meaningful business growth. Our customized LinkedIn Ads services ensure your campaigns resonate with the right audience for maximum visibility and ROI.",
     para2: "Our team of LinkedIn Ads experts provides a complete suite of services, from audience targeting and content creation to performance analytics and continuous optimization, ensuring your ad spend is both effective and efficient.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgREW9pcOkR9fdzIW9vMvOCd28E7NjTFuyGg&s"
+    image: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524683/Untitled_design_11_gknymx.png"
 };
 
   
@@ -243,70 +243,73 @@ const section3dCards = {
       {
         head: "Campaign Strategy",
         para: "Design personalized LinkedIn Ads strategies that align with your business goals, enhancing professional reach and engagement.",
-        img: "https://images.unsplash.com/photo-1606741964586-7a0b2a2f51ab?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.0.3"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734522012/COST-EFFECTIVE_9_rlfchx.png"
       },
       {
         head: "Audience Targeting",
         para: "Utilize LinkedIn’s advanced targeting options to connect with the right professionals and decision-makers for impactful results.",
-        img: "https://images.unsplash.com/photo-1595254082351-bf2238b1f07a?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.0.3"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734521876/COST-EFFECTIVE_5_lntjvm.png"
       },
       {
         head: "Ad Copy Optimization",
         para: "Create persuasive ad copies tailored to LinkedIn’s professional audience to boost click-through rates and conversions.",
-        img: "https://images.unsplash.com/photo-1581299895126-16e6fd62140b?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.0.3"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734521804/COST-EFFECTIVE_6_ge7n3b.png"
       },
       {
         head: "Performance Optimization",
         para: "Continuously analyze campaign metrics to fine-tune strategies, ensuring the best ROI for your LinkedIn Ads campaigns.",
-        img: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.0.3"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734521815/COST-EFFECTIVE_8_zc4jka.png"
       },
       {
         head: "Remarketing Campaigns",
         para: "Reconnect with professionals who’ve interacted with your brand using LinkedIn’s remarketing tools to drive conversions.",
-        img: "https://images.unsplash.com/photo-1560264280-88b68371db91?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.0.3"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734519384/website_new_photo_wppkrd.jpg"
       },
       {
         head: "Analytics & Reporting",
         para: "Gain in-depth insights into your campaign performance with detailed reports, enabling data-driven improvements.",
-        img: "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.0.3"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523294/COST-EFFECTIVE_10_yj5xpz.png"
       },
     ]
 };
 
   
 
-const dynamicContentSec = [
+const dynamicContentSec = {
+  heading: "How Do Linkedin Ads Campaign Management Services Work?",
+  content: [
     {
         id: 1,
-        title: "Campaign Analysis & Optimization",
+        title: "Connect with Decision-Makers",
         logo: <IoMdAnalytics className='text-6xl' />,
-        para: "We analyze historical LinkedIn Ads performance to identify high-performing campaigns and areas for improvement. Based on insights, we optimize targeting, bidding, ad creatives, and campaign structure to maximize professional engagement and ROI."
+        para: "Leverage LinkedIn’s powerful network to reach professionals who matter most to your business goals."
     },
     {
         id: 2,
-        title: "Lead Tracking & ROI Measurement",
+        title: "B2B Success, Simplified",
         logo: <SiPivotaltracker className='text-6xl' />,
-        para: "Our detailed tracking system provides insights into which campaigns, audiences, and ad creatives generate the highest-quality leads. This data enables us to refine strategies for improved conversions and ROI."
+        para: "Maximize your LinkedIn ad performance with tailored strategies that drive leads and build partnerships."
     },
     {
         id: 3,
-        title: "Audience Targeting & Sponsored Content",
+        title: "LinkedIn Ads Done Right",
         logo: <FcAdvertising className='text-6xl' />,
-        para: "We fine-tune your audience targeting using LinkedIn's robust filters, such as industry, job title, and seniority, to reach key decision-makers. Sponsored content is optimized to drive meaningful engagement and brand visibility."
+        para: "From precise targeting to detailed analytics, we ensure your LinkedIn campaigns deliver measurable growth."
     },
     {
         id: 4,
-        title: "Ad Testing & Iteration",
+        title: "Turn Connections into Conversions",
         logo: <SiTestcafe className='text-6xl' />,
-        para: "We conduct A/B testing on ad variations to determine which headlines, images, and calls-to-action deliver the best performance. Continuous iteration ensures your campaigns achieve the highest click-through and conversion rates."
+        para: "Engage the right audience with expertly managed LinkedIn ads that generate leads and strengthen your brand."
     },
     {
         id: 5,
-        title: "Ongoing Campaign Management",
+        title: "Professional Ads for Professional Results",
         logo: <GrHostMaintenance className='text-6xl' />,
-        para: "Each month, we review and refine your LinkedIn Ads campaigns to maintain optimal performance. Adjustments include negative keyword strategies, audience updates, and bidding enhancements to continuously improve results."
+        para: "Unlock LinkedIn’s potential with ad campaigns crafted to elevate your business in the professional sphere."
     },
-];
+  ]
+}
 
   
 

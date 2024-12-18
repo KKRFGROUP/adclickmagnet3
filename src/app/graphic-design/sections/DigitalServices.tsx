@@ -2,192 +2,187 @@
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
 import React, { useEffect, useRef, useState } from 'react';
-//import Image from 'next/image';
+import Image from 'next/image';
 import Link from 'next/link';
 gsap.registerPlugin(ScrollTrigger);
 
 
-const items = [
+
+const items: {
+  id: number;
+  imageUrl: string;
+  head: string;
+  page: string;
+  para: string;
+  video? : string;
+}[] = [
     {
         id: 1,
         imageUrl: 'https://assets.pinterest.com/ext/embed.html?id=17310779813421983',
+        video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1733681397/57124bc04f286670b7b126d11f2c0055_izib7c.mp4",
         head: "Ad Creative",
         page: "/ad-creative",
         para: "Get static and motion ad creatives, concepts, and variations to test your way to better results on social media."
-    },
-    {
+      },
+      {
         id: 2,
         imageUrl: 'https://assets.pinterest.com/ext/embed.html?id=289074869851146379',
+        video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1733660227/2fc3296e70d1efba5915a76712eabf87_orx5z9.mp4",
         head: "Branding Services",
         page: "/branding-services",
         para: "Get the brand expertise you need, from brand development and design to custom branding solutions."
-    },
-    {
+      },
+      {
         id: 3,
         imageUrl: 'https://assets.pinterest.com/ext/embed.html?id=3025924744020565',
+        video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1733659254/b2c9669c5de9f04909df5e71d2d6eea5_afsbbh.mp4",
         head: "Video Production",
         page: "/video-production",
         para: "Receive strategy-aligned video content services, from pre-production to final edit, to maximize your online success."
-    },
-    {
+      },
+      {
         id: 4,
         imageUrl: "https://assets.pinterest.com/ext/embed.html?id=448319337916941456" ,
+        video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1733681971/e7179a38ce0e25b77ac5c3c15b92dccc_tfhsfw.mp4",
         head: "Presentation Design",
         page: "/presentation-design",
         para: "Get original presentations designed for your persuasive pitch decks, sales decks, or PowerPoint presentations."
-    },
-    {
+      },
+      {
         id: 5,
-        imageUrl: "https://assets.pinterest.com/ext/embed.html?id=3025924744021065",
+        imageUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734172091/552a787860b6065cb634e51df02cdceb_osmbra.gif",
         head: "Motion Design",
         page: "/motion-design",
         para: "Get on-brand motion graphics designed to enhance your website, digital campaigns, presentations and ads."
     },
-    //{
-    //    id: 6,
-    //    imageUrl: 'https://i.pinimg.com/736x/ec/d6/62/ecd662c702bdf61baa72d9dd9b3bf253.jpg',
-    //    head: "Social Media Creative",
-    //    page: "social-media-creative",
-    //    para: "Get original designs for your social media channels. Static, animated or video, from Instagram to YouTube or Facebook."
-    //  },  
-    //{
-    //    id: 7,
-    //    imageUrl: 'https://img.freepik.com/free-psd/3d-illustration-nocturnal-person-staying-up_23-2150944847.jpg',
-    //    head: "Illustration Design",
-    //    page: "illustration-design",
-    //    para: "Get custom, on-brand illustrations for your business or marketing efforts that act as an extension of your company."
-    //},
-    //{
-    //    id: 8,
-    //    imageUrl: 'https://res.cloudinary.com/deepcnbrz/image/upload/v1730102325/Screenshot_2024-10-28_132305_ybjjpp.png',
-    //    head: "Concept Creation",
-    //    page: "concept-creation",
-    //    para: "Get 360 campaigns, designs and concept ideas for ads that capture and entice your audience be it online or offline."
-    //},
-    //{
-    //    id: 9,
-    //    imageUrl: 'https://img.freepik.com/premium-psd/safe-delivery-icon-packing-box-with-shield-symbol-goods-delivery-guarantee-3d-render_471402-558.jpg?w=360',
-    //    head: "Packaging and Merch",
-    //    page: "packaging-merch",
-    //    para: "Get on-brand apparel, merchandise, or packaging designs to make your business or product stand out."
-    //},
-    //{
-    //    id: 10,
-    //    imageUrl: 'https://i.graphicmama.com/blog/wp-content/uploads/2022/10/13115229/cute-3d-models-presented-in-website-design.jpg',
-    //    head: "AR / 3D Design",
-    //    page: "ar-3d-Design",
-    //    para: "Push your creative boundaries into a new dimension with social AR and 3D design o capture your audience's attention."
-    //},
-    //{
-    //    id: 11,
-    //    imageUrl: 'https://outerorbittech.com/wp-content/uploads/2024/05/Enhance-Graphic-Design.jpg',
-    //    head: "AI-Enhanced Design",
-    //    page: "ai-enhanced-design",
-    //    para: "Leverage AI experts to boost design efficiency by 30%-60%, reducing costs while ensuring quality and brand consistency."
-    //},
-    //{
-    //    id: 12,
-    //    imageUrl: 'https://img.freepik.com/free-psd/3d-email-icon-3d-illustration-design_460848-16721.jpg',
-    //    head: "Email Design",
-    //    page: "email-design",
-    //    para: "Invigorate your communications your emails with original email designs, templates, and creative to capture your audience’s attention."
-    //},
-    //{
-    //    id: 13,
-    //    imageUrl: 'https://cdn.sanity.io/images/k0dlbavy/production/cd09b731c56977a92f0d9f87b44dedc9253ffcf9-1200x1200.png?auto=format&fit=max&q=100&w=600',
-    //    head: "eBooks & Report Design",
-    //    page: "ebooks-report-design",
-    //    para: "Get eBooks and reports with designs that demands attention. Supercharge your reports, eBooks and digital learning content."
-    //},
-    //{
-    //    id: 14,
-    //    imageUrl: 'https://static-cse.canva.com/blob/1171659/Printvsweb_featuredimagefinal.png',
-    //    head: "Print Design",
-    //    page: "print-design",
-    //    para: "From book covers, magazines, posters and flyer designs, get custom print designs to capture your audience’s attention."
-    //},
-    //{
-    //    id: 15,
-    //    imageUrl: 'https://media.licdn.com/dms/image/D4E12AQFeHRxxhDlAeg/article-cover_image-shrink_720_1280/0/1709830828348?e=2147483647&v=beta&t=0vFE-JvYL2_GSLliKxCsGHjg2lvqkv5wj0q57Si_PTI',
-    //    head: "Digital Marketing Consult",
-    //    page: "digital-marketing-consult",
-    //    para: "Empower your business with data-driven digital marketing strategies and expert insights from our consultants."
-    //},
-
 ]
 
 
 function DigitalServices() {
-  const triggerRef = useRef(null);
-  const sectionRef = useRef(null);
-  const [windowWidth, setWindowWidth] = useState(0);
-  
-  
+  const triggerRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const videoRefs = useRef<Map<number, HTMLVideoElement>>(new Map());
+  const [windowWidth, setWindowWidth] = useState<number>(0);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       gsap.registerPlugin(ScrollTrigger);
 
-      // Update windowWidth on resize
       const updateWidth = () => setWindowWidth(window.innerWidth);
       updateWidth();
       window.addEventListener("resize", updateWidth);
     
       const hscroll = gsap.fromTo(
         sectionRef.current,
-        {translateX:0},
+        {translateX: 0},
         {
           translateX: windowWidth <= 1280 ? "-120%" : "-40%",
           ease: "none",
           duration: 2,
-          scrollTrigger:{
+          scrollTrigger: {
             trigger: triggerRef.current,
-            start: windowWidth <= 1280 ? "top 0%": "top -45%",
+            start: windowWidth <= 1280 ? "top 0%" : "top -45%",
             end: "180% top",
             scrub: 2,
             pin: true
           }
         }
-      )
+      );
 
       ScrollTrigger.refresh();
 
       return () => {
         window.removeEventListener("resize", updateWidth);
-        ScrollTrigger.killAll(); // Clean up triggers
+        ScrollTrigger.killAll();
         hscroll.kill();
       };
     }
-})
+  }, [windowWidth]);
 
+  const setVideoRef = (id: number, element: HTMLVideoElement | null) => {
+    if (element) {
+      element.muted = true;
+      element.volume = 0;
+      videoRefs.current.set(id, element);
+    }
+  };
 
+  const handleMouseEnter = async (id: number) => {
+    const video = videoRefs.current.get(id);
+    if (video) {
+      try {
+        video.muted = false;
+        video.volume = 1;
+        await video.play();
+      } catch (error) {
+        console.error(`Video playback failed for id ${id}:`, error);
+        // Fallback to muted playback
+        try {
+          video.muted = true;
+          video.volume = 0;
+          await video.play();
+        } catch (mutedError) {
+          console.error(`Muted video playback also failed for id ${id}:`, mutedError);
+        }
+      }
+    }
+  };
 
+  const handleMouseLeave = (id: number) => {
+    const video = videoRefs.current.get(id);
+    if (video) {
+      video.muted = true;
+      video.volume = 0;
+      video.pause();
+      video.currentTime = 0;
+    }
+  };
 
   return (
     <div className='graphic-page-services-sec-container' ref={triggerRef}>
-        <h2 className="graphic-page-services-sec-head">Design</h2>
-        <h2 className="graphic-page-services-sec-head-second">Services</h2>
+      <h2 className="graphic-page-services-sec-head">Design</h2>
+      <h2 className="graphic-page-services-sec-head-second">Services</h2>
 
-        <div className='flex graphic-page-services-cards-container' ref={sectionRef}>
-          {items.map((each,index) => (
-          <Link key={index} href={each.page}>
-            <div className="flex-col justify-between graphic-page-services-card" key={each.id}>
+      <div className='flex graphic-page-services-cards-container' ref={sectionRef}>
+        {items.map((item) => (
+          <Link key={item.id} href={item.page}>
+            <div 
+              className="flex-col justify-between graphic-page-services-card"
+              onMouseEnter={() => item.video && handleMouseEnter(item.id)}
+              onMouseLeave={() => item.video && handleMouseLeave(item.id)}
+            >
               <div className="mobile-graphic-page-services-card-content">
-              <iframe className='graphic-page-services-card-img' src={each.imageUrl} height="500" width="500"  scrolling="no" ></iframe>
-                {/*<Image className='graphic-page-services-card-img' height={500} width={500} src={each.imageUrl} alt={each.head} />*/}
-                <h1 className='graphic-page-services-card-head' >{each.head}</h1>
-                <p className='graphic-page-services-card-para' >{each.para}</p>
+                {item.video ? (
+                  <video 
+                    className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl graphic-page-services-card-img"
+                    height={500}
+                    ref={(element) => setVideoRef(item.id, element)}
+                    preload="auto"
+                    loop
+                    src={item.video}
+                    playsInline
+                  />
+                ) : (
+                  <Image 
+                    className='graphic-page-services-card-img'
+                    height={500}
+                    width={500}
+                    src={item.imageUrl}
+                    alt={item.head}
+                  />
+                )}
+                
+                <h1 className='graphic-page-services-card-head'>{item.head}</h1>
+                <p className='graphic-page-services-card-para'>{item.para}</p>
               </div>
               
-              <hr className='graphic-page-services-card-line ' />
-              
+              <hr className='graphic-page-services-card-line' />
             </div>
           </Link>
-          )
-        )}
-        </div>
+        ))}
+      </div>
     </div>
-  )
+  );
 }
 
-export default DigitalServices
+export default DigitalServices;

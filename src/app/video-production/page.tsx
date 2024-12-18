@@ -30,52 +30,53 @@ const heroContent = {
 }
 const section2 = [
   {
-      id: 1,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/f167fb70d9077c2e1a03fa0077056224bb6c8373-800x936.png?auto=format&fit=max&q=100&w=800",
-      customer: "Marqeta",
-      industry: "Financial Serv..."
+    id: 1,
+    imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523287/Untitled_design_14_uhowlh.png",
+    customer: "Smokey",
+    industry: "Substain..."
   },
   {
       id: 2,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/3d6e77a8fe7317759c78b9f9c89a07b863508d41-800x452.png?auto=format&fit=max&q=100&w=800",
-      customer: "Amazon Phar...",
-      industry: "Heathc..."
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524086/Untitled_design_18_n8m9uw.png",
+      customer: "Blends",
+      industry: "Design"
   },
   {
       id: 3,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/88dc0c4e1aad720988dca3ffcf5cfac0d3ce4455-800x452.png?auto=format&fit=max&q=100&w=800",
-      customer: "Go Henry",
-      industry: "Financial Serv..."
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524083/Untitled_design_19_mh9s3w.png",
+      customer: "PGroomer",
+      industry: "Pet..."
   },
   {
-      id: 4,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/f03ebd9dcf2c9e72f7e4621e970eba354041bd72-800x936.png?auto=format&fit=max&q=100&w=800",
-      customer: "Reddit Business",
-      industry: "Tech"
+    id: 4,
+    imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523290/Untitled_design_13_bnalvy.png",
+    customer: "Silsi",
+    industry: "Robotics"
   },
   {
-      id: 5,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/a74e5d93c29352eb25edd0264fb0a39bef989563-800x936.png?auto=format&fit=max&q=100&w=800",
-      customer: "Starve",
-      industry: "Tech"
+    id: 5,
+    imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523212/Untitled_design_17_tm74f2.png",
+    customer: "IQ Home Care",
+    industry: "E-commerce & ..."
   },
+  
   {
       id: 6,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/6a46ba66f2a0d58ff6ee1bc492406a92e0012e32-800x452.png?auto=format&fit=max&q=100&w=800",
-      customer: "Imperfect Foods",
-      industry: "Customer"
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524079/Untitled_design_20_lutddy.png",
+      customer: "Canada View",
+      industry: "Defence"
   },
   {
       id: 7,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/736472e7079951373aa33646f75d519428026466-1200x678.png?auto=format&fit=max&q=100&w=1200",
-      customer: "Opa!",
-      industry: "Consumer Goo..."
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524079/Untitled_design_21_g746dl.png",
+      customer: "Jen Thomson",
+      industry: "Consumer ..."
   },
   {
-      id: 8,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/4f986ebd49b52907be569e401ef25b191b412700-800x936.png?auto=format&fit=max&q=100&w=800",
-      customer: "Shopify",
-      industry: "E-commerce & ..."
+    id: 8,
+    imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523286/Untitled_design_15_mrmwez.png",
+    customer: "DonGon",
+    industry: "Food"
   },
 ]
 
@@ -96,11 +97,11 @@ const section3a = {
   para2: 
     "From brand videos that build awareness to performance-driven videos that boost conversions, we offer a cost-effective, hassle-free approach with speed and flexibility through our subscription model.",
   image: 
-    "https://res.cloudinary.com/deepcnbrz/image/upload/v1730822005/Screenshot_2024-11-05_212211_hhbsos.png",
+    "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1733753713/a90c8ee9adc73f1cc63b3556d751f372_1_mssj1g.gif",
 };
 
 
-const section3b:{mainpara: string; heading: {text: string; className: string;}[]; para1: string; para2: string; image: string;} = {
+const section3b:{mainpara: string; heading: {text: string; className: string;}[]; para1: string; para2: string; image: string; video?: string;} = {
   mainpara: "BRAND VIDEO FOR AWARENESS",
   heading: [
     {  
@@ -134,9 +135,10 @@ const section3b:{mainpara: string; heading: {text: string; className: string;}[]
 ],
   para1: "Videos like brand films, explainers, demos, testimonials, case studies, and manifestos are perfect for positioning and elevating your brand.",
   para2: "1. Collaborate with video experts\n2. Shoot or repurpose existing footage\n3. Amplify with motion, animation and 3D\n4. Use our global, remote network with minimal overheads", 
-  image: "https://res.cloudinary.com/deepcnbrz/image/upload/v1730822005/Screenshot_2024-11-05_212211_hhbsos.png"
+  image: "https://res.cloudinary.com/deepcnbrz/image/upload/v1730822005/Screenshot_2024-11-05_212211_hhbsos.png",
+  video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1733754134/bf6a6475a11651b407a612026380a396_1_awqfcs.mp4"
 }
-const section3c:{mainpara: string; heading: {text: string; className: string;}[]; para1: string; para2: string; image: string;} = {
+const section3c:{mainpara: string; heading: {text: string; className: string;}[]; para1: string; para2: string; image: string; video?: string;} = {
   mainpara: "SOCIAL VIDEO FOR ENGAGEMENT",
   heading: [
     {  
@@ -166,28 +168,30 @@ const section3c:{mainpara: string; heading: {text: string; className: string;}[]
 ],
   para1: "Establish a custom video content strategy and production cycle to create fresh video content that is geared to boost organic awareness and engagement.",
   para2: "1. Collaborate with video experts\n2. Shoot or repurpose existing footage\n3. Amplify with motion, animation and 3D\n4. Use our global, remote network with minimal overheads", 
-  image: "https://res.cloudinary.com/deepcnbrz/image/upload/v1730822005/Screenshot_2024-11-05_212211_hhbsos.png"
+  image: "https://res.cloudinary.com/deepcnbrz/image/upload/v1730822005/Screenshot_2024-11-05_212211_hhbsos.png",
+  video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1734434559/e1ac435d4bb6db97dcbadff381809a61_dzahc8.mp4"
 }
 
 
-const section3dCards: {mainpara: string; head: string; cards: {head: string; para: string; img: string;}[]} = {
+const section3dCards: {mainpara: string; head: string; cards: {head: string; para: string; img: string; video?: string}[]} = {
   mainpara: "WORKING WITH ACM",
   head: "Experience video excellence in every frame",
   cards: [
     {
         head: "Top 1% of global creative talent",
         para: "We're not limited by borders. Top-tier talent from diverse backgrounds equals consistently high-quality work for your brand.",
-        img: "https://plus.unsplash.com/premium_photo-1695807489199-4ba908b63826?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734434830/a83bd63c2147df066ce4c89f3adbabff_wqlp7s.gif"
     },
     {
         head: "Ultra-fast turnaround times",
         para: "With dedicated proejct managers, collaboratibe online tools and expert use of AI, projects can be completed in as little as 40, 24, or even 12 hours.",
-        img: "https://www.cflowapps.com/wp-content/uploads/2023/04/turnaround-time-improvement.jpg"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734435213/6b7146f63961d1142c6df3c3ed9fb16e_szjgdf.gif"
     },
     {
         head: "Enhanced by AI",
         para: "Our creative talent is trained and certified on the latest AI tools. You get the best of both worlds: top talent enhanced by AI efficiency. The savings incurred from AI directly translate into lower costs for you.",
-        img: "https://images.pexels.com/photos/17483868/pexels-photo-17483868/free-photo-of-an-artist-s-illustration-of-artificial-intelligence-ai-this-image-represents-how-machine-learning-is-inspired-by-neuroscience-and-the-human-brain-it-was-created-by-novoto-studio-as-par.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        img: "https://images.pexels.com/photos/17483868/pexels-photo-17483868/free-photo-of-an-artist-s-illustration-of-artificial-intelligence-ai-this-image-represents-how-machine-learning-is-inspired-by-neuroscience-and-the-human-brain-it-was-created-by-novoto-studio-as-par.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1734436530/88476fd44a47341a7c3bdf0da16b50f6_hmyybv.mp4"
     },
 ]
 }

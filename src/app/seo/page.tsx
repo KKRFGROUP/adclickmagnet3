@@ -34,50 +34,50 @@ const heroContent = {
 const section2 = [
   {
       id: 1,
-      imgUrl: "https://www.commercialdesignindia.com/cloud/2023/03/23/tI16mkGo-image.png",
-      customer: "Deloitte",
-      industry: "Tech"
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523290/Untitled_design_13_bnalvy.png",
+      customer: "Silsi",
+      industry: "Robotics"
   },
   {
       id: 2,
-      imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq7WmioB86esKm0iy-crHfKL9WzTi-O9ri-A&s",
-      customer: "Moderna",
-      industry: "Heathc..."
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524086/Untitled_design_18_n8m9uw.png",
+      customer: "Blends",
+      industry: "Design"
   },
   {
       id: 3,
-      imgUrl: "https://ms-f7-sites-prod-cdn.akamaized.net/docs/stories/787157-chipotle-retailers-azure/resources/04ec8017-81cb-4b3b-b3a4-a7a3cd29c1f7/1209721216221477916_1209721216221477916",
-      customer: "chipotle",
-      industry: "Food"
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524083/Untitled_design_19_mh9s3w.png",
+      customer: "PGroomer",
+      industry: "Pet..."
   },
   {
       id: 4,
-      imgUrl: "https://filecenter.deltaww.com/news/images/album/news_default.jpg?w=305",
-      customer: "Delta",
-      industry: "Telecom"
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523287/Untitled_design_14_uhowlh.png",
+      customer: "Smokey",
+      industry: "Substain..."
   },
   {
       id: 5,
-      imgUrl: "https://img.foodprocessing.com/files/base/ebm/foodprocessing/image/2023/09/Pepsico.650cc18c5f449.png?auto=format%2Ccompress&w=640&width=640",
-      customer: "Pepsico",
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523286/Untitled_design_15_mrmwez.png",
+      customer: "DonGon",
       industry: "Food"
   },
   {
       id: 6,
-      imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbOo6Qs4bmldUhw7s_yufF3XHwbwK7bRr2pQ&s",
-      customer: "Lockheed Martin",
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524079/Untitled_design_20_lutddy.png",
+      customer: "Canada View",
       industry: "Defence"
   },
   {
       id: 7,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/736472e7079951373aa33646f75d519428026466-1200x678.png?auto=format&fit=max&q=100&w=1200",
-      customer: "Opa!",
-      industry: "Consumer Goo..."
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524079/Untitled_design_21_g746dl.png",
+      customer: "Jen Thomson",
+      industry: "Consumer ..."
   },
   {
       id: 8,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/4f986ebd49b52907be569e401ef25b191b412700-800x936.png?auto=format&fit=max&q=100&w=800",
-      customer: "Shopify",
+      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523212/Untitled_design_17_tm74f2.png",
+      customer: "IQ Home Care",
       industry: "E-commerce & ..."
   },
 ]
@@ -120,7 +120,7 @@ const section3 = {
     ],
     para1: "Achieve a strong digital presence with a site built for optimal performance, speed, and search visibility. At ACM, we specialize in web development with SEO as a core focus, ensuring your website is seen and trusted by users and search engines alike.",
     para2: "Our team of SEO-savvy developers and strategists collaborates globally to deliver full-stack solutions, from front-end to back-end, elevating your site’s functionality and search visibility for an unparalleled digital experience.",
-    image: "https://res.cloudinary.com/deepcnbrz/image/upload/v1730822005/Screenshot_2024-11-05_212211_hhbsos.png"
+    image: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734442064/seo_logo_white_tgmpnn.jpg"
 };
 
 
@@ -258,27 +258,27 @@ const section3dCards: {mainpara: string; head: string; cards: {head: string; par
       {
           head: "Organic Search Is A Primary Source Of Website Traffic",
           para: "Organic search results drive the majority of website traffic, and studies show that over 50% of website traffic comes from organic search. This means that if your website is not optimized for search engines, you’re missing out on a significant amount of potential traffic.",
-          img: "https://5.imimg.com/data5/SELLER/Default/2024/6/428433457/KL/LG/NL/224212668/static-website-designing-service-500x500.jpg"
+          img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734518969/seo_logo_new_pyjljd.jpg"
       },
       {
           head: "Helps Build Trust And Credibility",
           para: "People trust search engines, and if your website ranks high in search results, it can help build trust and credibility with your target audience. High search engine rankings indicate that your website is a relevant and authoritative source of information.",
-          img: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1955&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734458072/COST-EFFECTIVE_1_hvjk4g.png"
       },
       {
           head: "Improves User Experience And Engagement On Website",
           para: "SEO involves optimizing your website’s structure and content to make it easy for search engines to understand and index your pages. This also improves the user experience by making your website more organized, informative, and user-friendly.",
-          img: "https://plus.unsplash.com/premium_photo-1683758344058-60a1506db480?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734458620/COST-EFFECTIVE_2_r2fh0c.png"
       },
       {
         head: "Cost-Effective",
         para: "SEO is a cost-effective way to drive traffic to your website. Unlike paid advertising, which requires ongoing investment, SEO can provide long-term results with minimal ongoing costs.",
-        img: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/6f5bc0101084519.5f170c2bc09c7.png"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734457644/COST-EFFECTIVE_qarpb0.png"
     },
     {
         head: "Competitive Advantage",
         para: "SEO is a highly competitive field, and businesses that invest in SEO can gain a competitive advantage over their competitors. By optimizing your website for search engines, you can attract more traffic and leads, which can lead to increased sales and revenue.",
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqrj86bI16uGV1kXMZjFqkjm5Svokh6nAbBg&s"
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734457312/Untitled_design_9_fhdsyo.png"
     },
   ]
 } 
