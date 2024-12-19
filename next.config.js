@@ -7,6 +7,7 @@ module.exports = {
       '@splinetool/runtime': '@splinetool/runtime'
     };
     
+    
     config.resolve.fallback = {
       ...config.resolve.fallback,
       canvas: false,
