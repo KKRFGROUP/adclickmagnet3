@@ -26,7 +26,7 @@ interface OptimizedModelProps {
 
 const OptimizedModel = ({ sceneUrl }: OptimizedModelProps) => {
   return (
-      <div className="home-model">
+      <div className="">
           <Spline 
             scene={sceneUrl} 
           />

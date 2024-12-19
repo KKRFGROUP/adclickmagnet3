@@ -11,12 +11,12 @@ const OptimizedModel = dynamic(() => import('./OptimizedModel'), {
   ),
 });
 
-export default function HeroModel() {
+export default function Section3Model() {
   return (
     <div className="sec3-model">
         <OptimizedModel 
           sceneUrl="https://prod.spline.design/KHokVySkT2jgUhp4/scene.splinecode"
-          height="100vh"
+          
         />
     </div>
   );

@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic';
 
-const Section3Model = dynamic(() => import("../3dmodels/Setion3Model"), {
+const Section3Model = dynamic(() => import("../3dmodels/Section3Model"), {
   ssr: false,
   loading: () => (
     <div className="w-full h-screen flex items-center justify-center">
