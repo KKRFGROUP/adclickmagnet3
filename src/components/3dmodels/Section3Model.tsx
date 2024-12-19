@@ -11,6 +11,7 @@ const OptimizedModel = dynamic(() => import('./OptimizedModel'), {
   ),
 });
 
+
 export default function Section3Model() {
   return (
     <div className="sec3-model">

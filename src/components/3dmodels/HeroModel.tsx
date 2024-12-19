@@ -12,6 +12,7 @@ const OptimizedModel = dynamic(() => import('./OptimizedModel'), {
   ),
 });
 
+
 export default function HeroModel() {
   return (
     <div className="home-model">

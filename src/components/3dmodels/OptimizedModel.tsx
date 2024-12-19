@@ -18,7 +18,6 @@ if (typeof window !== 'undefined' && !window.Application) {
 import Spline from '@splinetool/react-spline';
 
 
-
 interface OptimizedModelProps {
   sceneUrl: string;
   height?: string;
