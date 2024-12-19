@@ -22,4 +22,3 @@ export default function Section3Model() {
     </div>
   );
 }
-

@@ -161,12 +161,12 @@ const section8: {mainpara: string; heading: string; cards: {title: string; count
     },
     {
       title: "TOTAL HOURS",
-      count: "70K+",
+      count: "700000+",
       para: "hours dedicated to motion design"
     },
     {
       title: "CUSTOMER SATISFACTION",
-      count: "4.9/5",
+      count: "5",
       para: "Average motion graphics project approval rating"
     },
   ] 

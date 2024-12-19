@@ -167,7 +167,7 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
                                 </div>
                                 <div className="what-we-do-hover-footer">
                                     <p>Need a dedicated solution tailored to your needs?<br />Contact us, we will create it especially for you!</p>
-                                    <p>or call  +1 718 577 2718</p>
+                                    <p>or    call  +1 718 577 2718</p>
                                 </div>
                             </MenuItem>
                         

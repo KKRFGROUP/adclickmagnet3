@@ -289,22 +289,22 @@ const section8 = {
     cards: [
       {
         title: "PROJECTS COMPLETED",
-        count: "15k+",
+        count: "15000+",
         para: "Web dev projects successfully delivered to clients."
       },
       {
         title: "TOTAL CLIENTS",
-        count: "900+",
+        count: "600+",
         para: "Clients who have utilized our web development services."
       },
       {
         title: "DEVELOPMENT HOURS",
-        count: "150K+",
+        count: "150000+",
         para: "Hours spent on high-quality web development."
       },
       {
         title: "CLIENT SATISFACTION",
-        count: "4.8/5",
+        count: "5",
         para: "Average client satisfaction rating for web projects."
       },
     ]
@@ -437,7 +437,7 @@ function WebDev() {
               <Section3  content={section3} roundb="rounded-t-[50px]" />
               <Section4 content={section4} roundb='rounded-b-[50px]'/>
               <Section6 content={section6} translate="-60%" responsiveTranslate="-120%"/>
-              <Cards3dSections translate='-70%' responsiveTraslate="-80%" end="+=500"  content={section3dCards} className="rounded-[50px]"/>
+              <Cards3dSections translate='-30%' responsiveTraslate="-80%" end="+=900"  content={section3dCards} className="rounded-[50px]"/>
               <Section7 content={section7}/>
               <Section8 content={section8}/>
               <ContactOurExperts />

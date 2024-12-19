@@ -280,22 +280,22 @@ const section8: {mainpara: string; heading: string; cards: {title: string; count
   cards: [
     {
       title: "PROJECTS COMPLETED",
-      count: "20k+",
+      count: "800+",
       para: "Ad design projects completed to date"
     },
     {
       title: "TOTAL CUSTOMERS",
-      count: "1,100+",
+      count: "500+",
       para: "Total customers used our ad design services"
     },
     {
       title: "TOTAL HOURS",
-      count: "200K+",
+      count: "3000000+",
       para: "hours dedicated to ad creative and design"
     },
     {
       title: "CUSTOMER SATISFACTION",
-      count: "4.9/5",
+      count: "5",
       para: "Average ad creative project approval rating"
     },
   ] 

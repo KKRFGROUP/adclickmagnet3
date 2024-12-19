@@ -436,7 +436,7 @@
 
 .services-secs-head {
     font-size: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     line-height: 100%;
     height: max-content;
     width: 100%;
@@ -1016,7 +1016,7 @@
 }
 .mobile-card-3d-container {
     width: max-content;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 .mobile-card-3d {
     width: 100%;

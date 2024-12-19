@@ -354,7 +354,7 @@ const section8 = {
     cards: [
       {
         title: "CAMPAIGNS MANAGED",
-        count: "10K+",
+        count: "10000+",
         para: "Google Ads campaigns managed for clients across diverse industries."
       },
       {
@@ -364,12 +364,12 @@ const section8 = {
       },
       {
         title: "AD SPEND MANAGED",
-        count: "50M+",
+        count: "15000000+",
         para: "Total ad spend managed to drive optimal results and maximize ROI."
       },
       {
         title: "CLIENT SATISFACTION",
-        count: "4.9/5",
+        count: "5",
         para: "Average client satisfaction rating for Google Ads campaigns."
       },
     ]

@@ -193,7 +193,7 @@ const section8: {mainpara: string; heading: string; cards: {title: string; count
   cards: [
     {
       title: "Proven Experience",
-      count: "41k+",
+      count: "41000+",
       para: "Presentation design projects completed"
     },
     {
@@ -203,7 +203,7 @@ const section8: {mainpara: string; heading: string; cards: {title: string; count
     },
     {
       title: "Customer Satisfaction",
-      count: "4.8/5",
+      count: "5",
       para: "Average presentation project approval rating"
     },
     {

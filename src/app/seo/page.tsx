@@ -293,22 +293,22 @@ const section8 = {
     cards: [
       {
         title: "PROJECTS COMPLETED",
-        count: "15k+",
+        count: "150000+",
         para: "SEO projects completed to date"
       },
       {
         title: "TOTAL CLIENTS",
-        count: "900+",
+        count: "1200+",
         para: "Total customers used our SEO services."
       },
       {
         title: "SEO HOURS INVESTED",
-        count: "150K",
+        count: "500000",
         para: "Hours dedicated to SEO audits."
       },
       {
         title: "CLIENT SATISFACTION",
-        count: "4.8/5",
+        count: "5",
         para: "Average SEO project approval rating."
       },
     ]

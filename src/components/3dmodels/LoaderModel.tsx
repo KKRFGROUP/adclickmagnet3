@@ -13,10 +13,10 @@ const OptimizedModel = dynamic(() => import('./OptimizedModel'), {
 
 export default function loader() {
   return (
-    <div className="h-96 w-full">
+    <div className="h-[100vh] w-full">
         <OptimizedModel 
-          sceneUrl="https://prod.spline.design/KLexcFs7SerOk1Es/scene.splinecode"
-          height="100vh"
+          sceneUrl="https://prod.spline.design/7dwYguRwiqBWu8a6/scene.splinecode"
+          
         />
     </div>
   );

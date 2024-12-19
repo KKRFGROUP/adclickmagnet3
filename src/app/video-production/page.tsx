@@ -253,12 +253,12 @@ const section8: {mainpara: string; heading: string;para?:string; cards: {title: 
     },
     {
       title: "TOTAL HOURS",
-      count: "20k+",
+      count: "200000+",
       para: "Hours dedicated to video production"
     },
     {
       title: "CUSTOMER SATISFACTION",
-      count: "4.7/5",
+      count: "5",
       para: "Average video project approval rating"
     },
   ] 

@@ -200,12 +200,12 @@ const section8: {mainpara: string; heading: string; cards: {title: string; count
     },
     {
       title: "TOTAL HOURS",
-      count: "55K+",
+      count: "55000+",
       para: "hours dedicated to branding services"
     },
     {
       title: "CUSTOMER SATISFACTION",
-      count: "4.9/5",
+      count: "5",
       para: "Average branding project approval rating"
     },
   ] 

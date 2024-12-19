@@ -355,7 +355,7 @@ const section8 = {
     cards: [
       {
         title: "CAMPAIGNS MANAGED",
-        count: "5K+",
+        count: "150000+",
         para: "Meta Ads campaigns managed for clients across diverse industries on Facebook and Instagram."
       },
       {
@@ -365,12 +365,12 @@ const section8 = {
       },
       {
         title: "AD SPEND MANAGED",
-        count: "$30M+",
+        count: "30000+",
         para: "Total ad spend managed across Meta Ads platforms to drive optimal results and maximize ROI."
       },
       {
         title: "CLIENT SATISFACTION",
-        count: "4.8/5",
+        count: "390",
         para: "Average client satisfaction rating for Meta Ads campaigns."
       },
     ]
