@@ -1,33 +1,25 @@
 /** @type {import('next').NextConfig} */
-
-
-
-
 module.exports = {
   reactStrictMode: true,
   webpack: (config) => {
-    // Add rule for @splinetool/runtime
-    config.module.rules.push({
-      test: /\@splinetool\/runtime/,
-      loader: 'next-babel-loader',
-      options: {
-        presets: ['next/babel'],
-      },
-    });
     config.resolve.alias = {
       ...config.resolve.alias,
       '@splinetool/runtime': '@splinetool/runtime'
     };
+    
     config.resolve.fallback = {
       ...config.resolve.fallback,
       canvas: false,
     };
-    config.externals = [...(config.externals || []), { canvas: 'canvas' }];
+    
+    // Remove the external canvas configuration
+    config.externals = (config.externals || []).filter(
+      external => typeof external !== 'object' || !('canvas' in external)
+    );
 
     return config;
   },
   transpilePackages: ['@splinetool/react-spline', '@splinetool/runtime', 'three'],
-  reactStrictMode: true,
   swcMinify: true,
     images: {
       remotePatterns: [
