@@ -88,14 +88,16 @@ function HeroSection({heading, preheading, para}: {
 
   return (
     <div className="w-full bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
-      <Spotlight
-        className="-top-40 left-0 md:right-60 md:-top-20"
-        fill="white"
-      />
-      <Spotlight
-        className="-top-40 right-0 spotlight2"
-        fill="white"
-      />
+      <div className="hidden md:block">
+        <Spotlight
+          className="-top-40 left-0 md:right-60 md:-top-20"
+          fill="white"
+          />
+        <Spotlight
+          className="-top-40 right-0 spotlight2"
+          fill="white"
+          />
+      </div>
       <div className="flex-col justify-center items-center text-center service-hero-sec-container mt-12">
         <TextGenerateEffect 
           className="font-syne" 
@@ -126,7 +128,7 @@ function HeroSection({heading, preheading, para}: {
 
       {/* Popup Modal */}
       {isPopupOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center top-[10%] z-2000">
           <div className="service-page-popup">
             <div className="bg-blur rounded-2xl flex-col">
             <button

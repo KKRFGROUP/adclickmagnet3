@@ -19,7 +19,7 @@ const items: {
     {
         id: 1,
         imageUrl: 'https://assets.pinterest.com/ext/embed.html?id=17310779813421983',
-        video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1733681397/57124bc04f286670b7b126d11f2c0055_izib7c.mp4",
+        video: "https://res.cloudinary.com/dgdgrniut/video/upload/v1734619255/57124bc04f286670b7b126d11f2c0055_izib7c_lcglaa.mp4",
         head: "Ad Creative",
         page: "/ad-creative",
         para: "Get static and motion ad creatives, concepts, and variations to test your way to better results on social media."

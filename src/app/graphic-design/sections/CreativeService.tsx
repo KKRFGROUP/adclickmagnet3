@@ -29,8 +29,8 @@ export default function CreativeService() {
         </div>
 
         <div className='creative-service-head-card-container'>
-          <h2 className='creative-service-head'>Where Sophistication </h2>
-          <h2 className='creative-service-head-second mb-9'>Meets Creativity.</h2>
+          <h2 className='creative-service-head'>Innovation Meets </h2>
+          <h2 className='creative-service-head-second mb-9'>Elegance.</h2>
           <div className="flex justify-between items-start creative-service-card-container">
             <div className="creative-service-card">
               <Image className='creative-service-card-img' src="https://res.cloudinary.com/dvhmy6a4u/image/upload/v1733682584/4501ec186308f5038f02eb919dbf80f7_azjpct.gif" alt="crative image" height={300} width={300} />

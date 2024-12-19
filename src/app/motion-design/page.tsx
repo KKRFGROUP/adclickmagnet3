@@ -30,7 +30,7 @@ const heroContent = {
 }
 
 
-const section3:{mainpara: string; heading: {text: string; className: string;}[]; para1: string; para2: string; image: string;} = {
+const section3:{mainpara: string; heading: {text: string; className: string;}[]; para1: string; para2: string; image: string; video?: string;} = {
   mainpara: "BUILT FOR COMMS, STRATEGY & MARKETING TEAMS",
   heading: [
     {  
@@ -64,7 +64,8 @@ const section3:{mainpara: string; heading: {text: string; className: string;}[];
 ],
   para1: "Goodbye, static creativity. Hello, motion! Our motion design brings dynamic graphics and animations to every touchpoint, ensuring attention-grabbing content that boosts conversions.",
   para2: "Our expert motion designers collaborate closely with you, crafting custom creative from concept to final product. We ensure engaging experiences that captivate your audience.", 
-  image: "https://res.cloudinary.com/deepcnbrz/image/upload/v1730822005/Screenshot_2024-11-05_212211_hhbsos.png"
+  image: "https://res.cloudinary.com/deepcnbrz/image/upload/v1730822005/Screenshot_2024-11-05_212211_hhbsos.png",
+  video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1734437223/41f9d1a87094aaa461e499207fbfb6a6_lbqxb4.mp4"
 }
 
 

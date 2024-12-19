@@ -53,11 +53,11 @@ export default function Home() {
           <Section2 />
           <Section3 />
           <Section5 />
+          <ClientVideSec />
           <AboutSection />
           <TeamSection />
           <Section6 />
           <Section7 />
-          <ClientVideSec />
           <Section8 />
           <Section9 />
           <Footer />

@@ -7,12 +7,9 @@ export default function InfiniteText() {
         <div className="scrolling-text-container flex items-center">
             <div className="scrolling-text-inner"  >
                 <div className="scrolling-text">
-                    <div className="scrolling-text-item">BENEFITS</div>
-                    <div className="scrolling-text-item">BENEFITS</div>
-                    <div className="scrolling-text-item">BENEFITS</div>
-                    <div className="scrolling-text-item">BENEFITS</div>
-                    <div className="scrolling-text-item">BENEFITS</div>
-                    <div className="scrolling-text-item">BENEFITS</div>
+                    <div className="scrolling-text-item">"Art enables us to find ourselves and lose ourselves at the same time."</div>
+                    <div className="scrolling-text-item">"The purpose of art is washing the dust of daily life off our souls."</div>
+                    <div className="scrolling-text-item">"Art is not what you see, but what you make others see."</div>
                 </div>
             </div>
         </div>
@@ -20,12 +17,12 @@ export default function InfiniteText() {
         <div className="scrolling-text-container-second flex items-center">
             <div className="scrolling-text-inner" >
                 <div className="scrolling-text">
-                    <div className="scrolling-text-item-second">UNIQUE DESIGN</div>
-                    <div className="scrolling-text-item-second">PREMIUM SUPPORT</div>
-                    <div className="scrolling-text-item-second">UNIQUE DESIGN</div>
-                    <div className="scrolling-text-item-second">PREMIUM SUPPORT</div>
-                    <div className="scrolling-text-item-second">UNIQUE DESIGN</div>
-                    <div className="scrolling-text-item-second">PREMIUM SUPPORT</div>
+                    <div className="scrolling-text-item-second">Thomas Merton</div>
+                    <div className="scrolling-text-item-second">Pablo Picasso</div>
+                    <div className="scrolling-text-item-second">Edgar Degas</div>
+                    <div className="scrolling-text-item-second">Vango Gogh</div>
+                    <div className="scrolling-text-item-second">Henri Matisse</div>
+                    <div className="scrolling-text-item-second">Da Vinci</div>
                 </div>
             </div>
         </div>

@@ -50,7 +50,7 @@ const hoverImageArr = [
     },
     {
         name: "Google Ads",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734512567/google_ads_1_arhyff.jpg"
+        img: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627623/-m_lcxuia.png"
     },
     {
         name: "Meta Ads",

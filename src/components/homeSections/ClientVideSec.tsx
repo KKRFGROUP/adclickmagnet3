@@ -60,28 +60,28 @@ const words = [
 
 const clientVideos = [
     {
-        name:"Edgar",
-        position: "CEO",
-        company: "xyz",
-        video: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/video/tourist-testimonial.mp4"
+        name:"Chris",
+        position: "Founder",
+        company: "PGroomer",
+        video: "https://res.cloudinary.com/dgdgrniut/video/upload/v1734614484/Chris_Testimonial_nd0kjc_ddvtrb.mov"
     },
     {
-        name:"Tushar Patel",
-        position: "CEO",
-        company: "xyz",
-        video: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/video/healthcare-product-testimonial.mp4"
+        name:"Elisha",
+        position: "Marketing Head",
+        company: "RockWood Kitchen",
+        video: "https://res.cloudinary.com/dgdgrniut/video/upload/v1734614633/Elisha_-_Testimonial_qbzohz_p93dhi.mov"
     },
     {
-        name:"Daniel Zukich",
-        position: "Co-founder",
-        company: "xyz",
-        video: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/video/plandid-testimonial.mp4"
+        name:"Mark",
+        position: "Founder",
+        company: "Real Result Sales Training",
+        video: "https://res.cloudinary.com/dgdgrniut/video/upload/v1734614638/Mark_Testimonial_w5rn63_yjreuk.mov"
     },
     {
-        name:"Edgar",
-        position: "CEO",
-        company: "xyz",
-        video: "https://appinventiv.com/wp-content/themes/twentynineteen-child/new-images/video/saying-about-appinventiv.mp4"
+        name:"Avnish",
+        position: "Founder",
+        company: "Spartan Tattoos",
+        video: "https://res.cloudinary.com/dgdgrniut/video/upload/v1734629696/WhatsApp_Video_2024-12-19_at_21.13.13_m9icpo.mp4"
     }
 ]
 
@@ -90,13 +90,14 @@ function ClientVideSec() {
 
     const handleMouseEnter = (event: React.MouseEvent<HTMLVideoElement>) => {
         const video = event.target as HTMLVideoElement;
-        video.pause();
+        video.play();
     };
     
     const handleMouseLeave = (event: React.MouseEvent<HTMLVideoElement>) => {
         const video = event.target as HTMLVideoElement; // Cast target to HTMLVideoElement
         video.pause();
         video.currentTime = 0; // Reset to the start
+        
     };
         
   return (
@@ -106,10 +107,10 @@ function ClientVideSec() {
             {clientVideos.map((each,index) => (
                 <div key={index} className="client-video-card">
                     <div className="client-video-card-div">
-                        <video className={`client-video-card-video ${index%2 ==1 ? "mt-9": ""}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} preload='auto' loop muted src={each.video}></video>
+                        <video className={`client-video-card-video ${index%2 ==1 ? "mt-9": ""}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} preload='auto' loop muted controls src={each.video}></video>
                     </div>
                     <p>{each.name}</p>
-                    <p>{each.position}, {each.company}</p>
+                    <p className='w-[80%] mt-2'>{each.position}, {each.company}</p>
                 </div>
             ))}
         </div>

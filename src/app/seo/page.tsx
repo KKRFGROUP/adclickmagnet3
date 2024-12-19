@@ -33,52 +33,53 @@ const heroContent = {
 
 const section2 = [
   {
-      id: 1,
-      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523290/Untitled_design_13_bnalvy.png",
-      customer: "Silsi",
-      industry: "Robotics"
+    id: 1,
+    imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627890/smokey_white_logo_mzeibt.jpg",
+    customer: "Smokey",
+    industry: "Restaurant"
   },
   {
       id: 2,
-      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524086/Untitled_design_18_n8m9uw.png",
-      customer: "Blends",
-      industry: "Design"
+      imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627976/blind_by_design_white_logo_p6fxlo.jpg",
+      customer: "Blinds",
+      industry: "Interior"
   },
   {
       id: 3,
-      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524083/Untitled_design_19_mh9s3w.png",
+      imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627919/pgroomer_white_logo_d7wtgt.jpg",
       customer: "PGroomer",
-      industry: "Pet..."
+      industry: "Tools..."
   },
   {
-      id: 4,
-      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523287/Untitled_design_14_uhowlh.png",
-      customer: "Smokey",
-      industry: "Substain..."
+    id: 4,
+    imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627890/sisli_white_logo_es0u96.jpg",
+    customer: "Silsi",
+    industry: "Restaurant"
   },
   {
-      id: 5,
-      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523286/Untitled_design_15_mrmwez.png",
-      customer: "DonGon",
-      industry: "Food"
+    id: 5,
+    imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627962/iq_white_logo_cqoxeh.jpg",
+    customer: "IQ Home Care",
+    industry: "Cleaning..."
   },
+  
   {
       id: 6,
-      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524079/Untitled_design_20_lutddy.png",
+      imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627974/canada_view_white_logo_wkry1n.jpg",
       customer: "Canada View",
-      industry: "Defence"
+      industry: "Cleaning..."
   },
   {
       id: 7,
-      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524079/Untitled_design_21_g746dl.png",
+      imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627961/jen_thomsan_white_logo_exia89.jpg",
       customer: "Jen Thomson",
-      industry: "Consumer ..."
+      industry: "Realtor..."
   },
   {
-      id: 8,
-      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523212/Untitled_design_17_tm74f2.png",
-      customer: "IQ Home Care",
-      industry: "E-commerce & ..."
+    id: 8,
+    imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627962/donjon_white_logo_pij18u.jpg",
+    customer: "DonGon",
+    industry: "Restaurant"
   },
 ]
 
@@ -251,37 +252,39 @@ const section7 = {
     button: "AI SEO Services",
 }
 
-const section3dCards: {mainpara: string; head: string; cards: {head: string; para: string; img: string;}[]} = {
-    mainpara: "Why is SEO Still So Important?",
-    head: "SEO boosts visibility and reach. Here's why it's essential:",
-    cards: [
-      {
-          head: "Organic Search Is A Primary Source Of Website Traffic",
-          para: "Organic search results drive the majority of website traffic, and studies show that over 50% of website traffic comes from organic search. This means that if your website is not optimized for search engines, you’re missing out on a significant amount of potential traffic.",
-          img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734518969/seo_logo_new_pyjljd.jpg"
-      },
-      {
-          head: "Helps Build Trust And Credibility",
-          para: "People trust search engines, and if your website ranks high in search results, it can help build trust and credibility with your target audience. High search engine rankings indicate that your website is a relevant and authoritative source of information.",
-          img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734458072/COST-EFFECTIVE_1_hvjk4g.png"
-      },
-      {
-          head: "Improves User Experience And Engagement On Website",
-          para: "SEO involves optimizing your website’s structure and content to make it easy for search engines to understand and index your pages. This also improves the user experience by making your website more organized, informative, and user-friendly.",
-          img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734458620/COST-EFFECTIVE_2_r2fh0c.png"
-      },
-      {
-        head: "Cost-Effective",
-        para: "SEO is a cost-effective way to drive traffic to your website. Unlike paid advertising, which requires ongoing investment, SEO can provide long-term results with minimal ongoing costs.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734457644/COST-EFFECTIVE_qarpb0.png"
+const section3dCards: {mainpara: string; head: string; cards: {head: string; para: string; img: string;}[]} = { 
+  mainpara: "Why is SEO Still So Important?",
+  head: "SEO boosts visibility and reach. Here's why it's essential:",
+  cards: [
+    {
+        head: "Organic Search",
+        para: "Organic search results drive most website traffic, with over 50% coming from organic search. If your website isn’t search-optimized, you’re missing a major traffic opportunity.",
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734518969/seo_logo_new_pyjljd.jpg"
     },
     {
-        head: "Competitive Advantage",
-        para: "SEO is a highly competitive field, and businesses that invest in SEO can gain a competitive advantage over their competitors. By optimizing your website for search engines, you can attract more traffic and leads, which can lead to increased sales and revenue.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734457312/Untitled_design_9_fhdsyo.png"
+        head: "Helps Build Trust And Credibility",
+        para: "People trust search engines, and a high rank in search results builds credibility. It shows your site is relevant and authoritative to your audience.",
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734458072/COST-EFFECTIVE_1_hvjk4g.png"
     },
-  ]
-} 
+    {
+        head: "Improves User Experience",
+        para: "SEO optimizes your site’s structure and content for search engines, improving user experience by making your site organized, informative, and user-friendly.",
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734458620/COST-EFFECTIVE_2_r2fh0c.png"
+    },
+    {
+      head: "Cost-Effective",
+      para: "SEO is a cost-effective strategy to drive traffic. Unlike paid ads requiring ongoing investment, SEO offers long-term results with minimal costs.",
+      img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734457644/COST-EFFECTIVE_qarpb0.png"
+  },
+  {
+      head: "Competitive Advantage",
+      para: "SEO is highly competitive. Businesses investing in SEO attract more traffic, leading to increased leads, sales, and a stronger market position.",
+      img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734457312/Untitled_design_9_fhdsyo.png"
+  },
+]
+}
+
+
   
 
 const section8 = {
@@ -300,7 +303,7 @@ const section8 = {
       },
       {
         title: "SEO HOURS INVESTED",
-        count: "150K+",
+        count: "150K",
         para: "Hours dedicated to SEO audits."
       },
       {

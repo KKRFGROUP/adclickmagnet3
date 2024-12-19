@@ -445,7 +445,7 @@
 }
 .services-sec4-content-card {
     width: 28%;
-    height: 60vh;
+    height: 55vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -453,7 +453,7 @@
 }
 .services-sec4-content-card-right {
     width: 28%;
-    height: 60vh;
+    height: 55vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

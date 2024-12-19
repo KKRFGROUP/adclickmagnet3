@@ -77,7 +77,7 @@ const section4: {mainpara: string; head: string; cards: {head: string; para: str
     {
         head: "Presentation templates",
         para: "Enjoy customizable, on-brand presentation templates that deliver consistent messaging, incorporating existing designs or built from scratch.",
-        img: ""
+        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734426467/Modern_Minimalist_PowerPoint_Template_pmhjy8.jpg"
     },
     {
         head: "Custom & motion graphics",
@@ -341,8 +341,8 @@ function AdCreative() {
               <div className="mt-10">
                 <Section3  content={section3} roundb="rounded-t-[50px]" />
               </div>
-              <Cards3dSections content={section4} translate='-70%' responsiveTraslate="-90%" end="+=500"/>
-              <Cards3dSections content={section5} translate='-70%' responsiveTraslate="-90%" end="+=500" className="rounded-b-[50px]"/>
+              <Cards3dSections content={section4} translate='-50%' responsiveTraslate="-90%" end="+=500"/>
+              <Cards3dSections content={section5} translate='-50%' responsiveTraslate="-90%" end="+=500" className="rounded-b-[50px]"/>
               <Section6 content={section6} translate="-50%" responsiveTranslate="-75%"/>
               <Section8 content={section8}/>
               <ContactOurExperts />

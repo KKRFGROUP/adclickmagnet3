@@ -42,52 +42,53 @@ const heroContent = {
 
 const section2 = [
   {
-      id: 1,
-      imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh6WuTXjtoN-PTU45bBM00_Kpcy70O4aKDrA&s",
-      customer: "ABB",
-      industry: "Robotics"
+    id: 1,
+    imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627890/smokey_white_logo_mzeibt.jpg",
+    customer: "Smokey",
+    industry: "Restaurant"
   },
   {
       id: 2,
-      imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgZDWl8q0aIfgVqwy9POKEKEsM_D-9b3sdXw&s",
-      customer: "Matco Tools",
-      industry: "Hardware"
+      imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627976/blind_by_design_white_logo_p6fxlo.jpg",
+      customer: "Blinds",
+      industry: "Interior"
   },
   {
       id: 3,
-      imgUrl: "https://c8.alamy.com/comp/PFWB5T/close-up-of-sign-with-logo-on-facade-of-erp-software-company-epicor-in-dublin-california-april-9-2018-PFWB5T.jpg",
-      customer: "epicor",
-      industry: "Tech"
+      imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627919/pgroomer_white_logo_d7wtgt.jpg",
+      customer: "PGroomer",
+      industry: "Tools..."
   },
   {
-      id: 4,
-      imgUrl: "https://t3.ftcdn.net/jpg/05/58/48/98/360_F_558489893_wSk1j0CxHMMgnFJ1BD1ZkenF2kBcQobJ.jpg",
-      customer: "Atlas",
-      industry: "Substain..."
+    id: 4,
+    imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627890/sisli_white_logo_es0u96.jpg",
+    customer: "Silsi",
+    industry: "Restaurant"
   },
   {
-      id: 5,
-      imgUrl: "https://img.foodprocessing.com/files/base/ebm/foodprocessing/image/2023/09/Pepsico.650cc18c5f449.png?auto=format%2Ccompress&w=640&width=640",
-      customer: "Pepsico",
-      industry: "Food"
+    id: 5,
+    imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627962/iq_white_logo_cqoxeh.jpg",
+    customer: "IQ Home Care",
+    industry: "Cleaning..."
   },
+  
   {
       id: 6,
-      imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbOo6Qs4bmldUhw7s_yufF3XHwbwK7bRr2pQ&s",
-      customer: "Lockheed...",
-      industry: "Defence"
+      imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627974/canada_view_white_logo_wkry1n.jpg",
+      customer: "Canada View",
+      industry: "Cleaning..."
   },
   {
       id: 7,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/736472e7079951373aa33646f75d519428026466-1200x678.png?auto=format&fit=max&q=100&w=1200",
-      customer: "Opa!",
-      industry: "Consumer ..."
+      imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627961/jen_thomsan_white_logo_exia89.jpg",
+      customer: "Jen Thomson",
+      industry: "Realtor..."
   },
   {
-      id: 8,
-      imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/4f986ebd49b52907be569e401ef25b191b412700-800x936.png?auto=format&fit=max&q=100&w=800",
-      customer: "Shopify",
-      industry: "E-commerce & ..."
+    id: 8,
+    imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627962/donjon_white_logo_pij18u.jpg",
+    customer: "DonGon",
+    industry: "Restaurant"
   },
 ]
 

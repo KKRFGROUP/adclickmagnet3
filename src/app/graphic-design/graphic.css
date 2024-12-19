@@ -63,7 +63,7 @@
 @media (max-width: 768px) {
     .graphic-page-hero-sec-container {
         background-size: 200vh;
-        background-repeat: no-repeat;
+        background-image: none;
         height: 100vh;
         padding: 20px;
     }
@@ -118,12 +118,18 @@
 }
 
 .graphic-page-sec2-gif {
+    width: 100%;
+    height: 50vh;
+}
+
+
+.graphic-page-overlap-gif {
     width: 90%;
     border-radius: 20px;
     transition: 0.4s;
     transition-timing-function: ease-in-out;
 }
-.graphic-page-sec2-gif:hover {
+.graphic-page-overlap-gif:hover {
     border-radius: 25px;
     width: 92%;
     box-shadow: 0px 0px 10px 1px #000;
@@ -134,7 +140,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    width: 50%;
+    width: 100%;
 }
 
 
@@ -171,7 +177,7 @@
         width: 100%;
         height: 50%;
     }
-    .graphic-page-sec2-gif {
+    .graphic-page-overlap-gif {
         width: 80%;
         height: 70%;
         margin-left: auto;
@@ -214,7 +220,7 @@
         width: 100%;
         height: 50%;
     }
-    .graphic-page-sec2-gif {
+    .graphic-page-overlap-gif {
         width: 80%;
         height: 70%;
         margin-left: auto;

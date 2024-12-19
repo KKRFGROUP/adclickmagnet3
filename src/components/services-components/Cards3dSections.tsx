@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { CardBody, CardContainer, CardItem } from "../ui/3dCard";
 
-import React, { useEffect, useRef,useState,useMemo } from 'react';
+import React, { useEffect, useRef,useState} from 'react';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
 gsap.registerPlugin(ScrollTrigger);
@@ -17,9 +17,7 @@ function Cards3dSections({content, className, translate,responsiveTraslate, end}
   const [windowWidth, setWindowWidth] = useState(
     typeof window !== "undefined" ? window.innerWidth : 0
   );
-  const translateXValue = useMemo(() => {
-    return windowWidth <= 768 ? responsiveTraslate || "-90%" : translate;
-  }, [windowWidth, translate, responsiveTraslate]);
+  
 
   useEffect(() => {
     let timeout: NodeJS.Timeout;
@@ -43,19 +41,18 @@ function Cards3dSections({content, className, translate,responsiveTraslate, end}
     if (windowWidth === null) return; 
 
     
-    
-    console.log(translateXValue)
+    console.log(windowWidth);
     const hscroll = gsap.fromTo(
       card3dSectionRef.current,
       {translateX:0},
       {
-        translateX:  translateXValue ,
+        translateX:  translate ,
         ease: "none",
         duration: 2,
         scrollTrigger:{
           trigger: card3dTriggerRef.current,
           scroller: "body",
-          start: windowWidth <= 1028 ? "top -10%" : "top -40%",
+          start: windowWidth <= 1028 ? "top -10%" : "top -5%",
           end: windowWidth <= 768 ? "+=1000" :  end,
           scrub: 2,
           pin: true,

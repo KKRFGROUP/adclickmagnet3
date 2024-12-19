@@ -33,52 +33,52 @@ const heroContent = {
 const section2 = [
   {
     id: 1,
-    imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523287/Untitled_design_14_uhowlh.png",
+    imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627890/smokey_white_logo_mzeibt.jpg",
     customer: "Smokey",
-    industry: "Substain..."
+    industry: "Restaurant"
   },
   {
       id: 2,
-      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524086/Untitled_design_18_n8m9uw.png",
-      customer: "Blends",
-      industry: "Design"
+      imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627976/blind_by_design_white_logo_p6fxlo.jpg",
+      customer: "Blinds",
+      industry: "Interior"
   },
   {
       id: 3,
-      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524083/Untitled_design_19_mh9s3w.png",
+      imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627919/pgroomer_white_logo_d7wtgt.jpg",
       customer: "PGroomer",
-      industry: "Pet..."
+      industry: "Tools..."
   },
   {
     id: 4,
-    imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523290/Untitled_design_13_bnalvy.png",
+    imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627890/sisli_white_logo_es0u96.jpg",
     customer: "Silsi",
-    industry: "Robotics"
+    industry: "Restaurant"
   },
   {
     id: 5,
-    imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523212/Untitled_design_17_tm74f2.png",
+    imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627962/iq_white_logo_cqoxeh.jpg",
     customer: "IQ Home Care",
-    industry: "E-commerce & ..."
+    industry: "Cleaning..."
   },
   
   {
       id: 6,
-      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524079/Untitled_design_20_lutddy.png",
+      imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627974/canada_view_white_logo_wkry1n.jpg",
       customer: "Canada View",
-      industry: "Defence"
+      industry: "Cleaning..."
   },
   {
       id: 7,
-      imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524079/Untitled_design_21_g746dl.png",
+      imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627961/jen_thomsan_white_logo_exia89.jpg",
       customer: "Jen Thomson",
-      industry: "Consumer ..."
+      industry: "Realtor..."
   },
   {
     id: 8,
-    imgUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523286/Untitled_design_15_mrmwez.png",
+    imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627962/donjon_white_logo_pij18u.jpg",
     customer: "DonGon",
-    industry: "Food"
+    industry: "Restaurant"
   },
 ]
 

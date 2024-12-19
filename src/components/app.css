@@ -371,9 +371,11 @@ body{
         font-size:2rem;
     }
     .hero-content {
-        top: 2%;
-        align-items: center;
-        margin-left: 0px;
+        top: 53vh;
+        width: 100%;
+        justify-content: end;
+        align-items: flex-start;
+        margin-left: 20px;
     }
 }
 .inner-color-title{
@@ -696,19 +698,18 @@ body{
 
 /* about section */
 .about-sec-container {
-    background-color: hsl(0, 0%, 89%);
+    background-color: #E2E2E2;
     padding: 70px;
-    border-radius: 50px;
-    box-shadow: 0px 0px 10px 1px #fff;
+    border: 0px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    
     transition: 0.4s;
     color: #000;
     height: max-content;
     margin-bottom: 30px;
 }
-.about-sec-container:hover {
-    box-shadow: 0px 0px 20px 1px #fff;
 
-}
 .about-sec-acm {
     font-weight: bold;
     font-size: 20px;
@@ -876,6 +877,7 @@ body{
         padding: 50px;
         flex-direction: column;
         align-items: flex-start;
+        margin-bottom: 50px;
     }
     .team-sec-content {
         flex-direction: column;
@@ -926,7 +928,7 @@ body{
 }
 @media (max-width: 768px) {
     .sec6-container {
-        height: max-content;
+        display: none;
     }
 }
 
@@ -937,8 +939,7 @@ body{
     background-color: #E2E2E2;
     box-shadow: 0px -1px 10px 1px #E2E2E2;
     padding: 100px;
-    border-top-right-radius: 50px;
-    border-top-left-radius: 50px;
+    border-radius: 50px;
     height: max-content;
     color: #000;
 }
@@ -948,17 +949,17 @@ body{
 
 @keyframes scroll-right {
     0% {
-        transform: translateX(-92%);
+        transform: translateX(-91%);
     }
 
     100% {
-        transform: translateX(80%);
+        transform: translateX(19%);
     }
 }
 .sec7-logo-container {
     overflow-x: hidden;
     white-space: nowrap;
-    animation: scroll-right 15s linear infinite;
+    animation: scroll-right 40s linear infinite;
     display: flex;
     will-change: transform; 
     width: max-content;
@@ -995,8 +996,9 @@ body{
     background-color: #E2E2E2;
     padding: 80px;
     text-align: center;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
+    box-shadow: 0px 0px 10px 1px #fff;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
 }
 
 .client-videos-card {
