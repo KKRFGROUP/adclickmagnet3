@@ -949,11 +949,20 @@ body{
 
 @keyframes scroll-right {
     0% {
-        transform: translateX(-91%);
+        transform: translateX(-98%);
     }
 
     100% {
-        transform: translateX(19%);
+        transform: translateX(17%);
+    }
+}
+@keyframes scroll-right-mobile {
+    0% {
+        transform: translateX(-98%);
+    }
+
+    100% {
+        transform: translateX(8%);
     }
 }
 .sec7-logo-container {
@@ -984,6 +993,7 @@ body{
     }
     .sec7-logo-container {
         width: max-content;
+        animation: scroll-right-mobile 45s linear infinite;
     }
     
 }

@@ -22,6 +22,7 @@ export const HeroParallax = ({
     thumbnail: string;
     head: string;
     para: string;
+    point: {id: number; text: string;}[];
   }[];
 }) => {
   const firstRow = products.slice(0, 5);
@@ -157,6 +158,7 @@ export const ProductCard = ({
     thumbnail: string;
     head: string;
     para: string;
+    point: {id: number; text: string;}[];
   };
   translate: MotionValue<number>;
   head: string;
@@ -180,8 +182,8 @@ export const ProductCard = ({
         <div className="sec6-card flex h-full w-full text-black bg-white">
             <Image
             src={product.thumbnail}
-            height="200"
-            width="200"
+            height="600"
+            width="600"
             className="object-cover w-full object-left-top absolute  inset-0"
             alt={product.title}
             />
@@ -189,11 +191,11 @@ export const ProductCard = ({
                 <h2 className="sec6-card-head text-center" >{product.head}</h2>
                 <p className="sec6-card-para">{product.para}</p>
                 <ul className="sec6-content-list">
-                    <li className="sec6-content-list-item">Automatically calculate cost per lead per marketing channel</li>    
-                    
-                    <li>Easily compare channel performance to make better investment decisions</li>    
-                    
-                    <li>Forecast results and model ROI scenarios</li>    
+                  {product.point.map((each, id) => (
+                    <li key={id} className="sec6-content-list-item">{each.text}</li>    
+
+                  ))}
+  
                 </ul>            
             </div>
         </div>
