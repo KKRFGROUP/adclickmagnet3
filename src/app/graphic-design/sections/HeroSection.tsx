@@ -105,7 +105,7 @@ const [isPopupOpen, setIsPopupOpen] = useState(false);
 
         {/* Popup Modal */}
       {isPopupOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center top-[10%] z-2000">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center top-[20%] md:top-[10%] z-2000">
           <div className="service-page-popup">
             <div className="bg-blur rounded-2xl flex-col">
             <button

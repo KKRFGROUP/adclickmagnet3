@@ -39,6 +39,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "types/**/*.d.ts",
     ".next/types/**/*.ts",
     "src/app/api/contact.ts",
     "src/app/blogs/category/[slug].tsx"

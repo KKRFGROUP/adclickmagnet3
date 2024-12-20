@@ -202,8 +202,8 @@ const section8: {mainpara: string; heading: string; cards: {title: string; count
       para: "Total customers used our presentation design services"
     },
     {
-      title: "Customer Satisfaction",
-      count: "5",
+      title: "Customer Satisfaction 5/5",
+      count: "4",
       para: "Average presentation project approval rating"
     },
     {
@@ -341,8 +341,8 @@ function AdCreative() {
               <div className="mt-10">
                 <Section3  content={section3} roundb="rounded-t-[50px]" />
               </div>
-              <Cards3dSections content={section4} translate='-50%' responsiveTraslate="-90%" end="+=500"/>
-              <Cards3dSections content={section5} translate='-50%' responsiveTraslate="-90%" end="+=500" className="rounded-b-[50px]"/>
+              <Cards3dSections content={section4} translate='-40%' responsiveTraslate="-90%" end="+=500"/>
+              <Cards3dSections content={section5} translate='-40%' responsiveTraslate="-90%" end="+=500" className="rounded-b-[50px]"/>
               <Section6 content={section6} translate="-50%" responsiveTranslate="-75%"/>
               <Section8 content={section8}/>
               <ContactOurExperts />
@@ -355,8 +355,8 @@ function AdCreative() {
                 <HeroSection heading={heroContent.heading} para={heroContent.para} />
               
               <Section3  content={section3} roundb="rounded-t-[50px]" />
-              <Cards3dSections content={section4} translate='-70%' responsiveTraslate="-90%" end="+=500"/>
-              <Cards3dSections content={section5} translate='-70%' responsiveTraslate="-90%" end="+=500" className="rounded-b-[50px]"/>
+              <Cards3dSections content={section4} translate='-83%' end="+=500"/>
+              <Cards3dSections content={section5} translate='-83%' end="+=500" className="rounded-b-[50px]"/>
               <Section6 content={section6} translate="-50%" responsiveTranslate="-75%"/>
               <Section8 content={section8}/>
               <ContactOurExperts />

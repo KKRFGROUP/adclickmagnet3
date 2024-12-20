@@ -49,7 +49,7 @@ body {
   }
   .custom-cursor {
     cursor: default;
-    top: -20px;
+    top: -100px;
     pointer-events:visible;
   }
 }

@@ -41,54 +41,55 @@ const heroContent = {
 const section2 = [
   {
     id: 1,
-    imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627890/smokey_white_logo_mzeibt.jpg",
+    imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734696498/smokey_white_logo_wdokst.jpg",
     customer: "Smokey",
     industry: "Restaurant"
   },
   {
       id: 2,
-      imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627976/blind_by_design_white_logo_p6fxlo.jpg",
+      imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734696497/blind_by_design_white_logo_vfpxim.jpg",
       customer: "Blinds",
       industry: "Interior"
   },
   {
       id: 3,
-      imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627919/pgroomer_white_logo_d7wtgt.jpg",
+      imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734696498/pgroomer_white_logo_geg0ou.jpg",
       customer: "PGroomer",
       industry: "Tools..."
   },
   {
     id: 4,
-    imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627890/sisli_white_logo_es0u96.jpg",
+    imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734696497/sisli_white_logo_ohjfsp.jpg",
     customer: "Silsi",
     industry: "Restaurant"
   },
   {
     id: 5,
-    imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627962/iq_white_logo_cqoxeh.jpg",
+    imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734696497/iq_white_logo_cufpld.jpg",
     customer: "IQ Home Care",
     industry: "Cleaning..."
   },
   
   {
       id: 6,
-      imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627974/canada_view_white_logo_wkry1n.jpg",
+      imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734696499/canada_view_white_logo_zdclw9.jpg",
       customer: "Canada View",
       industry: "Cleaning..."
   },
   {
       id: 7,
-      imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627961/jen_thomsan_white_logo_exia89.jpg",
+      imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734696498/jen_thomsan_white_logo_mkjyma.jpg",
       customer: "Jen Thomson",
       industry: "Realtor..."
   },
   {
     id: 8,
-    imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627962/donjon_white_logo_pij18u.jpg",
+    imgUrl: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734696498/donjon_white_logo_wb1gvt.jpg",
     customer: "DonGon",
     industry: "Restaurant"
   },
 ]
+
 
 const section3 = {
     mainpara: "DRIVEN BY STRATEGY, IMPACT & ROI",
@@ -334,8 +335,8 @@ const section8 = {
         para: "Total ad spend managed to drive optimal results and maximize ROI."
       },
       {
-        title: "CLIENT SATISFACTION",
-        count: "5",
+        title: "CLIENT SATISFACTION 5/5",
+        count: "4",
         para: "Average client satisfaction rating for Google Ads campaigns."
       },
     ]
@@ -469,7 +470,7 @@ function LinkedInAds() {
               <Section4 content={section4} roundb='rounded-b-[50px] h-[200vh]'/>
               <Section6 content={section6} translate="-55%" responsiveTranslate="-95%"/>
               <DynamicContentCard content={dynamicContentSec}/>
-              <Cards3dSections translate='-75%' responsiveTraslate="-90%" end="+=500" content={section3dCards} className="rounded-[50px]"/>
+              <Cards3dSections translate='-53%' responsiveTraslate="-90%" end="+=500" content={section3dCards} className="rounded-[50px]"/>
               
               <Section8 content={section8}/>
               <ContactOurExperts />
@@ -487,7 +488,7 @@ function LinkedInAds() {
               <Section4 content={section4} roundb='rounded-b-[50px] h-[200vh]'/>
               <Section6 content={section6} translate="-65%" responsiveTranslate="-85%"/>
               <DynamicContentCard content={dynamicContentSec}/>
-              <Cards3dSections translate='-60%' responsiveTraslate="-90%" end="+=500" content={section3dCards} className="rounded-[50px]"/>
+              <Cards3dSections translate='-85%' end="+=1000" content={section3dCards} className="rounded-[50px]"/>
               
               <Section8 content={section8}/>
               <ContactOurExperts />

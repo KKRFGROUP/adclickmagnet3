@@ -54,7 +54,7 @@ function Section3({content, order, roundb, hide}: {content: {mainpara: string; h
        </div>
 
        
-       {content.video ? <video className="services-sec3-img" autoPlay preload='auto' loop muted src={content.video} onLoadedData={(e) => {
+       {content.video ? <video className="services-sec3-img" autoPlay preload='auto' loop muted playsInline src={content.video} onLoadedData={(e) => {
     const videoElement = e.target as HTMLVideoElement; // Explicitly cast to HTMLVideoElement
         videoElement
         .play()

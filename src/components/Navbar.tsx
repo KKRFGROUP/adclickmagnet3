@@ -222,9 +222,63 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
 
                                 <nav className="mobile-navlinks">
                                     <Link className="w-full mb-7" href="/" onClick={() => mobileOverlayOpen(false)}>Home</Link>
-                                    <div className="flex gap-4 items-center mb-7">
+                                    
+                                    <div onClick={() => setServices(!services)} className="flex gap-4 items-center mb-7">
+                                        <p>Services</p>
+                                        <div >
+                                            <IoMdAdd /> 
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div className={`services-drop-down ${services ? "scale-100" : "scale-0 h-0"}`}>
+                                            
+                                            <div onClick={() => setGraphicDesign(!graphicDesign)} className="flex gap-4 items-center mb-2" >
+                                                <p>Creative Design</p>
+                                                <div >
+                                                    <IoMdAdd /> 
+                                                </div>
+                                            </div>
+                                            <hr className="w-full mb-5"/>
+                                                
+                                                    <div className={`services-drop-down dark:text-white ${graphicDesign ? "animate__backInUp" : "animate__backOutDown scale-0 h-0"}`}>
+                                                        <Link className="w-full mb-2" href="/graphic-design" onClick={() => mobileOverlayOpen(false)}>Graphic Design</Link>
+                                                        <hr className="w-full mb-3"/>
+                                                        <Link className="w-full mb-2" href="/ad-creative" onClick={() => mobileOverlayOpen(false)}>Ad Creative</Link>
+                                                        <hr className="w-full mb-3"/>
+                                                        <Link className="w-full mb-2" href="/motion-design" onClick={() => mobileOverlayOpen(false)}>Motion Design</Link>
+                                                        <hr className="w-full mb-3"/>
+                                                        <Link className="w-full mb-2" href="/branding-services" onClick={() => mobileOverlayOpen(false)}>Branding Service</Link>
+                                                        <hr className="w-full mb-3"/>
+                                                        <Link className="w-full mb-2" href="/video-production" onClick={() => mobileOverlayOpen(false)}>Video Production</Link>
+                                                        <hr className="w-full mb-3"/>
+                                                        <Link className="w-full mb-2" href="/presentation-design" onClick={() => mobileOverlayOpen(false)}>Presentation Design</Link>
+                                                        <hr className="w-full mb-5"/>
+                                                    </div>
+                                            <div onClick={() => setAdServices(!adServices)} className="flex gap-4 items-center mb-2" >
+                                                <p>Digital Ads Services</p>
+                                                <div >
+                                                    <IoMdAdd /> 
+                                                </div>
+                                            </div>
+                                            <hr className="w-full mb-5"/>
+                                            <div className={`services-drop-down dark:text-white ${adServices ? "animate__backInUp " : "animate__backOutDown scale-0 h-0"}`}>
+                                                <Link className="w-full mb-2" href="/google-ads" onClick={() => mobileOverlayOpen(false)}>Google ads</Link>
+                                                <hr className="w-full mb-3"/>
+                                                <Link className="w-full mb-2" href="/linkedin-ads" onClick={() => mobileOverlayOpen(false)}>Linkedin Ads</Link>
+                                                <hr className="w-full mb-3"/>
+                                                <Link className="w-full mb-2" href="/meta-ads" onClick={() => mobileOverlayOpen(false)}>Meta Ads</Link>
+                                                <hr className="w-full mb-3"/>
+                                                <Link className="w-full mb-2" href="/seo" onClick={() => mobileOverlayOpen(false)}>SEO</Link>
+                                                <hr className="w-full mb-3"/>
+                                                <Link className="w-full mb-2" href="/web-development" onClick={() => mobileOverlayOpen(false)}>Web Development</Link>
+                                                <hr className="w-full mb-5"/>
+                                            </div>
+                                    </div>
+
+                                    <div onClick={() => setWhoWeAre(!whoWeAre)} className="flex gap-4 items-center mb-7">
                                         <p>Who We Are</p>
-                                        <div onClick={() => setWhoWeAre(!whoWeAre)}>
+                                        <div >
                                             <IoMdAdd /> 
                                         </div>
                                     </div>
@@ -241,58 +295,6 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
                                             <hr className="w-full mb-5"/>
                                         </div>
 
-                                    <div className="flex gap-4 items-center mb-7">
-                                        <p>services</p>
-                                        <div onClick={() => setServices(!services)}>
-                                            <IoMdAdd /> 
-                                        </div>
-                                    </div>
-                                    
-                                    
-                                    <div className={`services-drop-down ${services ? "scale-100" : "scale-0 h-0"}`}>
-                                            
-                                            <div className="flex gap-4 items-center mb-2" >
-                                                <p>Creative Design</p>
-                                                <div onClick={() => setGraphicDesign(!graphicDesign)}>
-                                                    <IoMdAdd /> 
-                                                </div>
-                                            </div>
-                                            <hr className="w-full mb-5"/>
-                                                
-                                                    <div className={`services-drop-down dark:text-white ${graphicDesign ? "animate__backInUp" : "animate__backOutDown scale-0 h-0"}`}>
-                                                        <Link className="w-full mb-2" href="/graphic-design" onClick={() => mobileOverlayOpen(false)}>Graphic Design</Link>
-                                                        <hr className="w-full mb-3"/>
-                                                        <Link className="w-full mb-2" href="/ad-creative" onClick={() => mobileOverlayOpen(false)}>Ad Creative</Link>
-                                                        <hr className="w-full mb-3"/>
-                                                        <Link className="w-full mb-2" href="/motion-design" onClick={() => mobileOverlayOpen(false)}>Motion Design</Link>
-                                                        <hr className="w-full mb-3"/>
-                                                        <Link className="w-full mb-2" href="/branding-design" onClick={() => mobileOverlayOpen(false)}>Branding Service</Link>
-                                                        <hr className="w-full mb-3"/>
-                                                        <Link className="w-full mb-2" href="/video-production" onClick={() => mobileOverlayOpen(false)}>Video Production</Link>
-                                                        <hr className="w-full mb-3"/>
-                                                        <Link className="w-full mb-2" href="/presentation-design" onClick={() => mobileOverlayOpen(false)}>Presentation Design</Link>
-                                                        <hr className="w-full mb-5"/>
-                                                    </div>
-                                            <div className="flex gap-4 items-center mb-2" >
-                                                <p>Digital Ads Services</p>
-                                                <div onClick={() => setAdServices(!adServices)}>
-                                                    <IoMdAdd /> 
-                                                </div>
-                                            </div>
-                                            <hr className="w-full mb-5"/>
-                                            <div className={`services-drop-down dark:text-white ${adServices ? "animate__backInUp " : "animate__backOutDown scale-0 h-0"}`}>
-                                                <Link className="w-full mb-2" href="/google-ads" onClick={() => mobileOverlayOpen(false)}>google ads</Link>
-                                                <hr className="w-full mb-3"/>
-                                                <Link className="w-full mb-2" href="/linkedin-ads" onClick={() => mobileOverlayOpen(false)}>Linkedin Ads</Link>
-                                                <hr className="w-full mb-3"/>
-                                                <Link className="w-full mb-2" href="/meta-ads" onClick={() => mobileOverlayOpen(false)}>Meta Ads</Link>
-                                                <hr className="w-full mb-3"/>
-                                                <Link className="w-full mb-2" href="/seo" onClick={() => mobileOverlayOpen(false)}>seo</Link>
-                                                <hr className="w-full mb-3"/>
-                                                <Link className="w-full mb-2" href="/web-development" onClick={() => mobileOverlayOpen(false)}>web development</Link>
-                                                <hr className="w-full mb-5"/>
-                                            </div>
-                                        </div>
                                 </nav>
                             </div>
                             <div className=' flex-col justify-end items-center text-center mb-10' >

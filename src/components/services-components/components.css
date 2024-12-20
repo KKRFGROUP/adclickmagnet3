@@ -105,6 +105,11 @@
     }
 }
 
+@media (max-width: 575px) {
+    .service-page-popup {
+        width: 70%;
+    }
+}
 
 
 
@@ -351,6 +356,10 @@
 
 .services-sec3-content-features:hover {
     background-image: linear-gradient(120deg, #00000050, #00000030, #00000030, #00000030); 
+}
+
+video::-webkit-media-controls {
+    display: none !important;
 }
 .services-sec3-img {
     border-radius: 30px;
@@ -672,7 +681,8 @@
     height: max-content;
 }
 .services-sec7-card {
-    background-image: url("https://cdn.sanity.io/images/k0dlbavy/production/64b450f8afc758fd3f221ee2f30f3d6589d2529f-2160x831.png?auto=format&fit=max&q=100&w=1080");
+    /*background-image: linear-gradient(120deg, #E2CBFF00, #393BB250, #E2CBFF );*/
+    background-image: url("https://res.cloudinary.com/dgdgrniut/image/upload/v1734714495/Screenshot_2024-12-20_at_10.34.33_PM_am2skb.png");
     background-size: cover;
     height: max-content;
     width: 100%;

@@ -6,7 +6,16 @@ module.exports = {
       ...config.resolve.alias,
       '@splinetool/runtime': '@splinetool/runtime'
     };
-    
+    config.module.rules.push({
+      test: /\.(gltf)$/,
+      type: 'asset/resource',
+    });
+
+    // Add Draco loader configuration
+    config.module.rules.push({
+      test: /draco_decoder\.wasm$/,
+      type: 'asset/resource',
+    });
     
     config.resolve.fallback = {
       ...config.resolve.fallback,

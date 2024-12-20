@@ -1,7 +1,7 @@
 "use client"
 import { TypewriterEffect } from '@/components/ui/TypewriterEffect'
 import React, { Suspense, useEffect }  from 'react'
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls } from '@react-three/drei/core/OrbitControls'
 import { Canvas } from "@react-three/fiber";
 
 import Cube2 from '@/components/3dmodels/Cube2';

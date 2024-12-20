@@ -355,6 +355,9 @@
     width: 100vw;
     height: max-content;
 }
+video::-webkit-media-controls {
+    display: none !important;
+}
 .inspired-video-content {
     position: absolute;
     top: 48%;

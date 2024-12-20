@@ -165,8 +165,8 @@ const section8: {mainpara: string; heading: string; cards: {title: string; count
       para: "hours dedicated to motion design"
     },
     {
-      title: "CUSTOMER SATISFACTION",
-      count: "5",
+      title: "CUSTOMER SATISFACTION 5/5",
+      count: "4",
       para: "Average motion graphics project approval rating"
     },
   ] 

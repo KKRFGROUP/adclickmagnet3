@@ -2,22 +2,41 @@
 
 import Image from "next/image";
 import { CardBody, CardContainer, CardItem } from "../ui/3dCard";
-
-import React, { useEffect, useRef,useState} from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
-gsap.registerPlugin(ScrollTrigger);
 
+// Register GSAP plugin outside component
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
-
-
-function Cards3dSections({content, className, translate,responsiveTraslate, end} : {content: {mainpara: string; head: string; cards: {head: string; para: string; img: string; video?: string;}[]}; className?: string;translate?: string; end?: string;responsiveTraslate?: string;}) {
-    const card3dTriggerRef = useRef(null);
-  const card3dSectionRef = useRef(null);
-  const [windowWidth, setWindowWidth] = useState(
-    typeof window !== "undefined" ? window.innerWidth : 0
-  );
-  
+function Cards3dSections({
+  content,
+  className,
+  translate,
+  responsiveTraslate,
+  end
+}: {
+  content: {
+    mainpara: string;
+    head: string;
+    cards: {
+      head: string;
+      para: string;
+      img: string;
+      video?: string;
+    }[];
+  };
+  className?: string;
+  translate?: string;
+  end?: string;
+  responsiveTraslate?: string;
+}) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const card3dTriggerRef = useRef<HTMLDivElement>(null);
+  const card3dSectionRef = useRef<HTMLDivElement>(null);
+  const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
     let timeout: NodeJS.Timeout;
@@ -25,154 +44,128 @@ function Cards3dSections({content, className, translate,responsiveTraslate, end}
       clearTimeout(timeout);
       timeout = setTimeout(() => {
         setWindowWidth(window.innerWidth);
-      }, 150); // Adjust debounce timing as needed
+      }, 150);
     };
-  
-    handleResize(); // Initial call
-    window.addEventListener("resize", handleResize);
-  
+
+    if (typeof window !== 'undefined') {
+      setWindowWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+    }
+
     return () => {
       clearTimeout(timeout);
-      window.removeEventListener("resize", handleResize);
+      if (typeof window !== 'undefined') {
+        window.removeEventListener("resize", handleResize);
+      }
     };
   }, []);
 
   useEffect(() => {
-    if (windowWidth === null) return; 
+    if (!card3dTriggerRef.current || !card3dSectionRef.current) return;
 
-    
-    console.log(windowWidth);
-    const hscroll = gsap.fromTo(
-      card3dSectionRef.current,
-      {translateX:0},
-      {
-        translateX:  translate ,
-        ease: "none",
-        duration: 2,
-        scrollTrigger:{
-          trigger: card3dTriggerRef.current,
-          scroller: "body",
-          start: windowWidth <= 1028 ? "top -10%" : "top -5%",
-          end: windowWidth <= 768 ? "+=1000" :  end,
-          scrub: 2,
-          pin: true,
-        }
+    // Kill existing ScrollTriggers for this section
+    ScrollTrigger.getAll().forEach(trigger => {
+      if (trigger.vars.trigger === card3dTriggerRef.current) {
+        trigger.kill();
       }
-    )
+    });
 
-    
+    // Create GSAP context
+    const ctx = gsap.context(() => {
+      const animation = gsap.fromTo(
+        card3dSectionRef.current,
+        {
+          translateX: 0,
+        },
+        {
+          translateX: translate,
+          ease: "none",
+          scrollTrigger: {
+            trigger: card3dTriggerRef.current,
+            start:windowWidth <= 1028 ? "top -10%" : "top -5%",
+            end: windowWidth <= 768 ? "+=1000" : end,
+            scrub: 2,
+            pin: true,
+            pinSpacing: true,
+            invalidateOnRefresh: true, // Recalculate on resize
+            
+          }
+        }
+      );
 
-
-
-    ScrollTrigger.refresh();
+      return () => {
+        animation.kill();
+      };
+    }, containerRef); // Scope to container
 
     return () => {
-      hscroll.kill();
-    }
+      ctx.revert();
+    };
+  }, [windowWidth, end, translate, responsiveTraslate]);
 
-  }, [windowWidth,end,translate,responsiveTraslate])
   return (
-    <>
-    <div ref={card3dTriggerRef} className={`services-secs-main-container overflow-hidden flex-col justify-center items-center text-center services-3dcard-main-container ${className}`}>
+    <div ref={containerRef}>
+      <div
+        ref={card3dTriggerRef}
+        className={`services-secs-main-container overflow-hidden flex-col justify-center items-center text-center services-3dcard-main-container ${className}`}
+      >
         <p className="services-secs-para">{content.mainpara}</p>
         <h2 className="services-secs-head">{content.head}</h2>
         <div ref={card3dSectionRef} className="flex mobile-card-3d-container">
-            {content.cards.map((each,index) => (
-            <CardContainer key={index} className="inter-var text-left w-[100%]" containerClassName="">
-                    <CardBody className=" bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1]  h-auto rounded-xl p-6 border mobile-card-3d">
-                        <CardItem
-                        translateZ="50"
-                        className="text-xl font-bold text-neutral-600 dark:text-white mobile-card-3d-head"
-                        >
-                        {each.head}
-                        </CardItem>
-                        <CardItem
-                        as="p"
-                        translateZ="60"
-                        className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300 mobile-card-3d-para"
-                        >
-                            {each.para}
-                        </CardItem>
-                        <CardItem translateZ="100" className="w-full mt-4">
-                          {each.video ? 
-                  
-                          <video className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl mobile-card-3d-img" autoPlay preload='auto' loop muted src={each.video} onLoadedData={(e) => {
-                            const videoElement = e.target as HTMLVideoElement; // Explicitly cast to HTMLVideoElement
-                            videoElement
-                              .play()
-                              .catch((error: DOMException) => { // Provide a type for `error`
-                                console.error('Autoplay failed:', error);
-                              });
-                          }}></video>
-                        : 
-                            <Image
-                                src={each.img}
-                                height="1000"
-                                width="1000"
-                                className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl mobile-card-3d-img"
-                                alt="thumbnail"
-                            />
-                          }
-                        </CardItem> 
-                        
-                        <div className="flex justify-start items-center mt-10">
-                        
-                        
-                        </div>
-                    </CardBody>
+          {content.cards.map((each, index) => (
+            <CardContainer
+              key={index}
+              className="inter-var text-left w-[100%] md:w-[30vw]"
+              containerClassName=""
+            >
+              <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] h-auto rounded-xl p-6 border mobile-card-3d">
+                <CardItem
+                  translateZ="50"
+                  className="text-xl font-bold text-neutral-600 dark:text-white mobile-card-3d-head"
+                >
+                  {each.head}
+                </CardItem>
+                <CardItem
+                  as="p"
+                  translateZ="60"
+                  className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300 mobile-card-3d-para"
+                >
+                  {each.para}
+                </CardItem>
+                <CardItem translateZ="100" className="w-full mt-4">
+                  {each.video ? (
+                    <video
+                      className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl mobile-card-3d-img"
+                      autoPlay
+                      preload="auto"
+                      loop
+                      muted
+                      src={each.video}
+                      onLoadedData={(e) => {
+                        const videoElement = e.target as HTMLVideoElement;
+                        videoElement.play().catch((error: DOMException) => {
+                          console.error('Autoplay failed:', error);
+                        });
+                      }}
+                    />
+                  ) : (
+                    <Image
+                      src={each.img}
+                      height="1000"
+                      width="1000"
+                      className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl mobile-card-3d-img"
+                      alt="thumbnail"
+                    />
+                  )}
+                </CardItem>
+                <div className="flex justify-start items-center mt-10"></div>
+              </CardBody>
             </CardContainer>
-            ))}
+          ))}
         </div>
-        
+      </div>
     </div>
-    
-    
-    
-    </>
-  )
+  );
 }
 
-export default Cards3dSections
-
-
-
-//<div className={`services-secs-main-container overflow-hidden flex-col justify-center items-center text-center mobile-services-3dcard-main-container ${className}`}>
-//        <p className="services-secs-para">{content.mainpara}</p>
-//        <h2 className="services-secs-head">{content.head}</h2>
-//        
-//              
-//        <div className="flex mt-[60px] mobile-card-3d-container">
-//            {content.cards.map((each,index) => (
-//            <CardContainer key={index} className="inter-var text-left" >
-//                    <CardBody className="md:w-[20%] mr-[50px] bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1]  sm:w-[30rem] h-auto rounded-xl p-6 border mobile-card-3d">
-//                        <CardItem
-//                        translateZ="50"
-//                        className="text-xl font-bold text-neutral-600 dark:text-white mobile-card-3d-head"
-//                        >
-//                        {each.head}
-//                        </CardItem>
-//                        <CardItem
-//                        as="p"
-//                        translateZ="60"
-//                        className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300 mobile-card-3d-para"
-//                        >
-//                            {each.para}
-//                        </CardItem>
-//                        <CardItem translateZ="100" className="w-full mt-4">
-//                        <Image
-//                            src={each.img}
-//                            height="1000"
-//                            width="1000"
-//                            className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl mobile-card-3d-img"
-//                            alt="thumbnail"
-//                        />
-//                        </CardItem>
-//                        <div className="flex justify-start items-center mt-10">
-//                        
-//                        
-//                        </div>
-//                    </CardBody>
-//            </CardContainer>
-//            ))}
-//        </div>
-//    </div>
+export default Cards3dSections;
