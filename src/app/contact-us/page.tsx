@@ -21,13 +21,65 @@ export default function ContactUs() {
     const pageMainRef = useRef<HTMLDivElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phoneNumber: "",
-    companyName: "",
-    message: "",
-  });
+      firstName: "",
+      lastName: "",
+      email: "",
+      companyName: "",
+      phoneNumber: "",
+      message: "",
+    });
+  
+    const [status, setStatus] = useState({
+      message: "",
+      isError: false
+    });
+  
+    const handleChange = (e: { target: { name: any; value: any; }; }) => {
+      const { name, value } = e.target;
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    };
+  
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      setStatus({ message: "Submitting...", isError: false });
+  
+      try {
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
+  
+        const result = await response.json();
+  
+        if (result.success) {
+          setStatus({ message: "Form submitted successfully!", isError: false });
+          setFormData({
+            firstName: "",
+            lastName: "",
+            email: "",
+            companyName: "",
+            phoneNumber: "",
+            message: "",
+          });
+        } else {
+          setStatus({ 
+            message: result.error || "Failed to submit form.", 
+            isError: true 
+          });
+        }
+      } catch (error) {
+        console.error(error);
+        setStatus({ 
+          message: "An error occurred while submitting the form.", 
+          isError: true 
+        });
+      }
+    };
+  
 
   const toggleMenu = (arg?: boolean) => {
     setIsOpen(arg ?? !isOpen);
@@ -42,45 +94,6 @@ export default function ContactUs() {
   };
 
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    //setStatus("Submitting...");
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await response.json();
-
-      if (result.success) {
-        //setStatus("Form submitted successfully!");
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          companyName: "",
-          phoneNumber: "",
-          message: "",
-        });
-      } else {
-        //setStatus("Failed to submit form.");
-      }
-    } catch (error) {
-      console.log(error);
-      //setStatus("An error occurred while submitting the form.");
-    }
-  };
-
-  const handleChange = (e: { target: { name: any; value: any; }; }) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
 
 
     return (
@@ -159,7 +172,7 @@ export default function ContactUs() {
                                 <LabelInputContainer className="mb-4 contact-us-page-layout-right-form-label-input">
                                     <Label htmlFor="phoneNumber">Phone Number</Label>
                                     <Input id="phoneNumber" value={formData.phoneNumber}
-                                        onChange={handleChange} placeholder="+911234567889" type="text" />
+                                        onChange={handleChange} name="phoneNumber" placeholder="+911234567889" type="text" />
                                 </LabelInputContainer>
 
                                 <LabelInputContainer className="mb-4 contact-us-page-layout-right-form-label-input">
@@ -170,6 +183,17 @@ export default function ContactUs() {
                                         onChange={handleChange}
                                         required placeholder="What can we help you with?" />
                                 </LabelInputContainer>
+
+
+                                {status.message && (
+                                  <div className={`mb-4 p-4 rounded ${
+                                    status.isError 
+                                      ? 'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-100' 
+                                      : 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-100'
+                                  }`}>
+                                    {status.message}
+                                  </div>
+                                )}
                                 
 
                                 <button
@@ -293,7 +317,7 @@ export default function ContactUs() {
                                 </div>
 
                                 <LabelInputContainer className="mb-4 contact-us-page-layout-right-form-label-input">
-                                    <Label htmlFor="email" >Company Name</Label>
+                                    <Label htmlFor="companyName" >Company Name</Label>
                                     <Input id="companyName" type="text"
                                         name="companyName"
                                         value={formData.companyName}
@@ -312,7 +336,7 @@ export default function ContactUs() {
 
                                 <LabelInputContainer className="mb-4 contact-us-page-layout-right-form-label-input">
                                     <Label htmlFor="phoneNumber">Phone Number</Label>
-                                    <Input id="phoneNumber" value={formData.phoneNumber}
+                                    <Input id="phoneNumber" name="phoneNumber" value={formData.phoneNumber}
                                         onChange={handleChange} placeholder="+911234567889" type="text" />
                                 </LabelInputContainer>
 
@@ -324,6 +348,16 @@ export default function ContactUs() {
                                         onChange={handleChange}
                                         required placeholder="What can we help you with?" />
                                 </LabelInputContainer>
+
+                                {status.message && (
+                                  <div className={`mb-4 p-4 rounded ${
+                                    status.isError 
+                                      ? 'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-100' 
+                                      : 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-100'
+                                  }`}>
+                                    {status.message}
+                                  </div>
+                                )}
                                 
 
                                 <button

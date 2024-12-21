@@ -1027,6 +1027,9 @@ body{
     height: 70vh;
     width: 25%;
 }
+video::-webkit-media-controls {
+    display: none !important;
+}
 
 .client-video-card-div {
     height: max-content;

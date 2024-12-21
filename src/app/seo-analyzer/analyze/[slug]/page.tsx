@@ -3,59 +3,68 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion } from "framer-motion";
-import "./analyze.css";
+import { useRouter } from "next/navigation";
+import "../../analyze.css";
+
+interface ProgressData {
+  progress: number;
+  status: string;
+}
 
 const AnalyzeProgress = ({ 
   url, 
   onProgressChange 
 }: { 
   url: string;
-  onProgressChange: (progress: number) => void;
+  onProgressChange: (progress: number, status: string) => void;
 }) => {
-  
-  const [progress, setProgress] = useState(10);
+  const router = useRouter();
+  const [progress, setProgress] = useState(0);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchData = async () => {
+    let isMounted = true;
+    const fetchProgress = async () => {
       try {
-        // First API call to start the analysis
-        const response = await fetch(`/api/analyze/${url}`, {
-          method: 'GET',
+        const response = await fetch('/api/analyze', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ url })
         });
-
+        
         if (!response.ok) {
-          throw new Error('Analysis failed');
+          throw new Error('Failed to fetch progress');
         }
 
-        // Setup event source for progress updates with the same URL
-        const eventSource = new EventSource(`/api/analyze/${url}`);
+        const data: ProgressData = await response.json();
         
-        eventSource.onmessage = (event) => {
-          const data = JSON.parse(event.data);
+        if (isMounted) {
           setProgress(data.progress);
-          
-          onProgressChange(data.progress);
-          
-          if (data.progress === 100) {
-            eventSource.close();
+          onProgressChange(data.progress, data.status);
+
+          // If not complete, schedule next fetch
+          if (data.progress < 100) {
+            setTimeout(fetchProgress, 1000);
           }
-        };
-
-        eventSource.onerror = () => {
-          eventSource.close();
-          setError('Connection lost');
-        };
-
-        return () => {
-          eventSource.close();
-        };
+          else {
+            router.push(`/seo-analyzer/analyze/report`);
+          }
+        }
       } catch (err) {
-        setError(err instanceof Error ? err.message : 'An error occurred');
+        if (isMounted) {
+          setError(err instanceof Error ? err.message : 'An error occurred');
+          onProgressChange(0, 'Error in analysis');
+        }
       }
     };
 
-    fetchData();
+    fetchProgress();
+
+    return () => {
+      isMounted = false;
+    };
   }, [url, onProgressChange]);
 
   return (
@@ -79,21 +88,23 @@ const AnalyzeProgress = ({
   );
 };
 
+function generateURLFromName(name: string, domain: string = "com"): string {
+  if (!name) {
+    throw new Error("Invalid name provided.");
+  }
+
+  // Construct the URL
+  const url = `https://${name}.${domain}`;
+  return url;
+}
+
 function Analyze({ params }: { params: { slug: string } }) {
   const slug = params.slug;
-  const [analysisProgress, setAnalysisProgress] = useState(50);
+  const url = generateURLFromName(slug);
+  const [analysisStatus, setAnalysisStatus] = useState("Initializing analysis...");
 
-  const handleProgressChange = (newProgress: number) => {
-    setAnalysisProgress(newProgress);
-  };
-
-  const getAnalysisStatus = (progress: number) => {
-    if (progress === 0) return "Initializing analysis...";
-    if (progress < 25) return "Scanning website structure...";
-    if (progress < 50) return "Analyzing SEO elements...";
-    if (progress < 75) return "Checking performance metrics...";
-    if (progress < 100) return "Finalizing results...";
-    return "Analysis complete!";
+  const handleProgressChange = (_progress: number, newStatus: string) => {
+    setAnalysisStatus(newStatus);
   };
 
   return (
@@ -108,12 +119,12 @@ function Analyze({ params }: { params: { slug: string } }) {
         />
         <h1 className="analyze-your-web-loader-head">Analyzing {slug}</h1>
         <p className="analyze-your-web-loader-para">
-          {getAnalysisStatus(analysisProgress)}
+          {analysisStatus}
         </p>
-          <AnalyzeProgress 
-            url={slug} 
-            onProgressChange={handleProgressChange}
-          />
+        <AnalyzeProgress 
+          url={url} 
+          onProgressChange={handleProgressChange}
+        />
       </div>
     </div>
   );

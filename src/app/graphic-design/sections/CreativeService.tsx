@@ -38,7 +38,7 @@ export default function CreativeService() {
               <hr className='creative-service-card-content-line ' />
             </div>
             <div className="creative-service-card">
-              <video className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl creative-service-card-img" autoPlay preload='auto' loop muted src="https://res.cloudinary.com/dvhmy6a4u/video/upload/v1733738086/534d6aff87e86b29b17312ba147078a9_yplz9m.mp4"></video>
+              <video className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl creative-service-card-img" autoPlay preload='auto' loop muted playsInline src="https://res.cloudinary.com/dvhmy6a4u/video/upload/v1733738086/534d6aff87e86b29b17312ba147078a9_yplz9m.mp4"></video>
               <p className='creative-service-card-content' >Delivering sophisticated, creative solutions that blend modern aesthetics with strategic design to effectively communicate your message.              </p>
               <hr className='creative-service-card-content-line' />
             </div>

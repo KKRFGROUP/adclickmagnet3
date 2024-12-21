@@ -87,7 +87,10 @@ export function SignupFormDemo() {
     message: "",
   });
 
-  //const [status, setStatus] = useState("");
+  const [status, setStatus] = useState({
+    message: "",
+    isError: false
+  });
 
   const handleChange = (e: { target: { name: any; value: any; }; }) => {
     const { name, value } = e.target;
@@ -99,7 +102,7 @@ export function SignupFormDemo() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    //setStatus("Submitting...");
+    setStatus({ message: "Submitting...", isError: false });
 
     try {
       const response = await fetch("/api/contact", {
@@ -111,7 +114,7 @@ export function SignupFormDemo() {
       const result = await response.json();
 
       if (result.success) {
-        //setStatus("Form submitted successfully!");
+        setStatus({ message: "Form submitted successfully!", isError: false });
         setFormData({
           firstName: "",
           lastName: "",
@@ -120,11 +123,17 @@ export function SignupFormDemo() {
           message: "",
         });
       } else {
-        //setStatus("Failed to submit form.");
+        setStatus({ 
+          message: result.error || "Failed to submit form.", 
+          isError: true 
+        });
       }
     } catch (error) {
-      console.log(error);
-      //setStatus("An error occurred while submitting the form.");
+      console.error(error);
+      setStatus({ 
+        message: "An error occurred while submitting the form.", 
+        isError: true 
+      });
     }
   };
   return (
@@ -167,7 +176,7 @@ export function SignupFormDemo() {
         <LabelInputContainer className="mb-4">
           <Label htmlFor="phoneNumber">Phone Number</Label>
           <Input id="phoneNumber" value={formData.phoneNumber}
-            onChange={handleChange} placeholder="+911234567889" type="text" />
+            onChange={handleChange} name="phoneNumber" placeholder="+911234567889" type="text" />
         </LabelInputContainer>
 
         <LabelInputContainer className="mb-4">
@@ -179,6 +188,16 @@ export function SignupFormDemo() {
             required placeholder="What can we help you with?" />
         </LabelInputContainer>
         
+
+        {status.message && (
+          <div className={`mb-4 p-4 rounded ${
+            status.isError 
+              ? 'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-100' 
+              : 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-100'
+          }`}>
+            {status.message}
+          </div>
+        )}
 
         <button
           className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"

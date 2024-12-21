@@ -15,7 +15,7 @@ function ContactOurExperts() {
                     <button type="button" className="contact-our-expert-card-content-btn">Consult Our Experts</button>
                 </Link>
             </div>
-            <Image className='rounded-2xl contact-our-expert-card-img' src="https://res.cloudinary.com/dgdgrniut/image/upload/v1734715546/ed7df8d14dea4213f1c68446eb91d6cf_wpd2zx.jpg" alt="contact" height={400} width={400} />
+            <Image className='rounded-2xl contact-our-expert-card-img' src="https://res.cloudinary.com/dgdgrniut/image/upload/v1734784996/website_image_ly5ziq.jpg" alt="contact" height={400} width={400} />
         </div>
     </div>
   )

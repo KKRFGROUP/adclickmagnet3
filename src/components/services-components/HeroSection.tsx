@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { TextGenerateEffect } from '../ui/TextGenerateEffect';
-import Link from 'next/link';
+
 import "./components.css";
 import { Spotlight } from "../ui/Spotlight";
 import { IoMdCloseCircle } from "react-icons/io";
@@ -44,12 +44,16 @@ function HeroSection({heading, preheading, para}: {
       phoneNumber: "",
       message: "",
     });
+    const [status, setStatus] = useState({
+        message: "",
+        isError: false
+      });
 
   
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-      //setStatus("Submitting...");
+      setStatus({ message: "Submitting...", isError: false });
   
       try {
         const response = await fetch("/api/contact", {
@@ -61,7 +65,7 @@ function HeroSection({heading, preheading, para}: {
         const result = await response.json();
   
         if (result.success) {
-          //setStatus("Form submitted successfully!");
+          setStatus({ message: "Form submitted successfully!", isError: false });
           setFormData({
             firstName: "",
             lastName: "",
@@ -70,11 +74,17 @@ function HeroSection({heading, preheading, para}: {
             message: "",
           });
         } else {
-          //setStatus("Failed to submit form.");
+          setStatus({ 
+            message: result.error || "Failed to submit form.", 
+            isError: true 
+          });
         }
       } catch (error) {
         console.log(error);
-        //setStatus("An error occurred while submitting the form.");
+        setStatus({ 
+          message: "An error occurred while submitting the form.", 
+          isError: true 
+        });
       }
     };
 
@@ -84,6 +94,13 @@ function HeroSection({heading, preheading, para}: {
       ...prevData,
       [name]: value,
     }));
+  };
+
+  const scrollToSection = () => {
+    const targetElement = document.getElementById("service-section3");
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
 
   return (
@@ -118,17 +135,16 @@ function HeroSection({heading, preheading, para}: {
           >
             Get Started
           </button>
-          <Link href="#service-section3">
-            <button className="service-hero-sec-content-button see-more" type="button">
+          
+            <button onClick={scrollToSection} className="service-hero-sec-content-button see-more" type="button">
               See More
             </button>
-          </Link>
         </div>
       </div>
 
       {/* Popup Modal */}
       {isPopupOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center top-[20%] md:top-[10%] z-2000">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center pt-[20%] md:pt-[7%] h-[100vh] popup-z-index">
           <div className="service-page-popup">
             <div className="bg-blur rounded-2xl flex-col">
             <button
@@ -172,7 +188,7 @@ function HeroSection({heading, preheading, para}: {
               <LabelInputContainer className="mb-4">
                 <Label htmlFor="phoneNumber">Phone Number</Label>
                 <Input id="phoneNumber" value={formData.phoneNumber}
-                  onChange={handleChange} placeholder="+911234567889" type="text" />
+                  onChange={handleChange} name="phoneNumber" placeholder="+911234567889" type="text" />
               </LabelInputContainer>
 
               <LabelInputContainer className="mb-4">
@@ -184,6 +200,16 @@ function HeroSection({heading, preheading, para}: {
                   required placeholder="What can we help you with?" />
               </LabelInputContainer>
               
+
+              {status.message && (
+                <div className={`mb-4 p-4 rounded ${
+                  status.isError 
+                    ? 'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-100' 
+                    : 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-100'
+                }`}>
+                  {status.message}
+                </div>
+              )}
 
               <button
                 className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"

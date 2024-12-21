@@ -669,6 +669,9 @@ figure {
 .creative-service-card-content {
     font-size: 20px;
 }
+video::-webkit-media-controls {
+    display: none !important;
+}
 .creative-service-card-img {
     width: 100%;
     height: 45%;

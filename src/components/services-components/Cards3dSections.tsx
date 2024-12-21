@@ -140,6 +140,7 @@ function Cards3dSections({
                       preload="auto"
                       loop
                       muted
+                      playsInline
                       src={each.video}
                       onLoadedData={(e) => {
                         const videoElement = e.target as HTMLVideoElement;

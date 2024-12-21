@@ -5,7 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
+import { useRouter } from "next/navigation";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -185,11 +185,11 @@ export function PlaceholdersAndVanishInput({
     animateFrame(start);
   };
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter" && !animating) {
-      vanishAndSubmit();
-    }
-  };
+  //const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  //  if (e.key === "Enter" && !animating) {
+  //    vanishAndSubmit();
+  //  }
+  //};
 
   const vanishAndSubmit = () => {
     setAnimating(true);
@@ -208,9 +208,9 @@ export function PlaceholdersAndVanishInput({
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    vanishAndSubmit();
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+    //eslint-disable-next-line @typescript-eslint/no-unused-expressions
     onSubmit && onSubmit(e);
+    vanishAndSubmit();
   };
   return (
     <form
@@ -235,7 +235,7 @@ export function PlaceholdersAndVanishInput({
             onChange && onChange(e);
           }
         }}
-        onKeyDown={handleKeyDown}
+        //onKeyDown={handleKeyDown}
         ref={inputRef}
         value={value}
         type="text"
@@ -248,39 +248,9 @@ export function PlaceholdersAndVanishInput({
       <button
         disabled={!value}
         type="submit"
-        className="absolute right-2 top-1/2 z-50 -translate-y-1/2 h-12 w-[15%] rounded-full disabled:bg-gray-100 bg-black dark:bg-zinc-900 dark:disabled:bg-zinc-800 transition duration-200 flex items-center justify-center"
+        className="absolute right-2 top-1/2 z-50 -translate-y-1/2 h-12 w-[20%] md:w-[15%] rounded-full disabled:bg-gray-100 bg-black dark:bg-zinc-900 dark:disabled:bg-zinc-800 transition duration-200 flex items-center justify-center"
       >
         Submit
-        {/*<motion.svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="27"
-          height="27"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="text-gray-300 h-4 w-4"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <motion.path
-            d="M5 12l14 0"
-            initial={{
-              strokeDasharray: "50%",
-              strokeDashoffset: "50%",
-            }}
-            animate={{
-              strokeDashoffset: value ? 0 : "50%",
-            }}
-            transition={{
-              duration: 0.3,
-              ease: "linear",
-            }}
-          />
-          <path d="M13 18l6 -6" />
-          <path d="M13 6l6 6" />
-        </motion.svg>*/}
       </button>
 
       <div className="absolute inset-0 flex items-center rounded-full pointer-events-none">
@@ -317,6 +287,9 @@ export function PlaceholdersAndVanishInput({
 
 
 export function PlaceholdersAndVanishInputDemo() {
+  const router = useRouter();
+  const [value, setValue] = useState("");
+
   const placeholders = [
     "Share Your Website URL",
     "Start Analyze Your Site",
@@ -327,11 +300,25 @@ export function PlaceholdersAndVanishInputDemo() {
   ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value);
     console.log(e.target.value);
   };
+
+  function getWebsiteName(url: string): string {
+    try {
+      const hostname = new URL(url).hostname; // Extract hostname (e.g., adclickmagnet.com)
+      const name = hostname.split(".")[0]; // Split by "." and take the first part
+      return name;
+    } catch (error) {
+      console.error("Invalid URL:", error);
+      return ""; // Return an empty string for invalid URLs
+    }
+  }
+
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("submitted");
+    const name = getWebsiteName(value);
+    router.push(`/seo-analyzer/analyze/${name}`);
   };
   return (
 
