@@ -1,12 +1,25 @@
 
+.blog-page-hero-sec {
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: "Syne";
+    font-size: 70px;
+}
+
 .top-blogs {
     padding: 80px;
     padding-top: 140px;
     height: max-content;
     background-color: #E2E2E2;
     color: #000;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
+    position: relative;
+    bottom: 50px;
+    border-radius: 50px;
 }
 .blog-search-container {
     width: 100%;
@@ -139,6 +152,7 @@
 }
 
 @media (max-width: 1028px) {
+    
     .top-blogs {
         padding: 50px;
         padding-top: 140px;
@@ -167,13 +181,36 @@
     }
 }
 @media (max-width: 768px) {
+    .top1-blog-card {
+        flex-direction: column;
+        height: 65vh;
+        margin-bottom: 70px;
+    }
+    .blogs-page-blog-img {
+        width: 100%;
+        height: 70%;
+    }
     .top-blogs {
         padding: 30px;
         padding-top: 140px;
     }
     .top1-blog-card-content {
-        padding: 15px;
-        padding-left: 30px;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        padding-top: 10px;
+    }
+    .blog-card-content-category {
+        font-size: 16px;
+    }
+    .blog-card-content-heading {
+        font-size: 20px;
+    }
+    .blog-card-content-para {
+        font-size: 11px;
+    }
+    .blog-card-content-name {
+        font-size: 10px;
     }
     
     .blog-card-content-heading {
@@ -189,10 +226,11 @@
     }
     .flex-blog-cards {
         width: 100%;
-        height: 50vh;
+        height: 65vh;
+        margin-bottom: 40px;
     }
     .flex-blogs-page-blog-img {
-        height: 50%;
+        height: 70%;
         width: 100%;
     }
 }
@@ -356,13 +394,13 @@
 @media (max-width: 575px) {
     .blog-page-latest-blog-card{
         width: 100%;
-        height: 50vh;
+        height: 65vh;
         margin-bottom: 30px;
         flex-direction: column;
     }
     .blog-page-latest-blog-card-img {
         width: 100%;
-        height: 60%;
+        height: 70%;
         margin-bottom: 20px;
         border-radius: 20px;
     }

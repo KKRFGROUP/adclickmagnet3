@@ -3,6 +3,7 @@
 import React from 'react'
 import Image from 'next/image';
 import '../../../press-release/press-release.css'
+import { useRouter } from "next/navigation";
 
 function CaseStudiesSlugContent({content}: {content: {
     heroHeading: string;
@@ -11,16 +12,18 @@ function CaseStudiesSlugContent({content}: {content: {
     category: string;
     image: string;
     content: {
-      para: string[];
-      subcontent: {
-        subhead: string;
+        para: string[];
+        subcontent: {
+            subhead: string;
         subpara: string[];
       }[];
     };
-  }}) {
-
+}}) {
+    
+    const router = useRouter();
     const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
+        router.push("/thank-you");
     }
 
   return (

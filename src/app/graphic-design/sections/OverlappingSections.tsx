@@ -80,7 +80,7 @@ const OverlappingSections = () => {
             <button className="read-customer-stories mt-[40px]" type="button">Get Customer Stories</button>
           </div>
             <div className="graphic-page-sec2-graphic-card">
-              <Image className="graphic-page-overlap-gif" src="https://res.cloudinary.com/dgdgrniut/image/upload/v1733497938/Untitled_design_6_bm5rhg.png" alt="gif" width={500} height={500} />
+              <Image className="graphic-page-overlap-gif overlapping-cards-img" src="https://res.cloudinary.com/dgdgrniut/image/upload/v1733497938/Untitled_design_6_bm5rhg.png" alt="gif" width={300} height={300} />
             </div>
           
         </div>
@@ -88,7 +88,7 @@ const OverlappingSections = () => {
 
         <div className="flex card2   custom-card" >
             <div className="graphic-page-sec2-graphic-card graphic-page-sec2-graphic-card-second">
-              <Image className="graphic-page-overlap-gif" src="https://res.cloudinary.com/dgdgrniut/image/upload/v1733497938/Untitled_design_7_digizs.png" alt="gif" width={500} height={500} />
+              <Image className="graphic-page-overlap-gif overlapping-cards-img" src="https://res.cloudinary.com/dgdgrniut/image/upload/v1733497938/Untitled_design_7_digizs.png" alt="gif" width={300} height={300} />
             </div>
           
           <div className="graphic-page-sec2-content text-black">
@@ -108,7 +108,7 @@ const OverlappingSections = () => {
             <Link href="/contact-us"><button className="read-customer-stories mt-[40px]" type="button">Book A Call</button></Link>
           </div>
             <div className="graphic-page-sec2-graphic-card">
-              <Image className="graphic-page-overlap-gif" src="https://i.gifer.com/fxVE.gif" alt="gif" width={500} height={500} />
+              <Image className="graphic-page-overlap-gif overlapping-cards-img" src="https://i.gifer.com/fxVE.gif" alt="gif" width={300} height={300} />
             </div>
           
         </div>

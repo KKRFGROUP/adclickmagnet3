@@ -321,10 +321,11 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
                                             <IoMdAdd /> 
                                         </div>
                                     </div>
+                                    
                                     <div className={`services-drop-down ${whoWeAre ? "scale-100" : "scale-0 h-0"}`}>
                                             <Link className="w-full mb-2" href="/about-us" onClick={() => mobileOverlayOpen(false)}>Who We Are</Link>
                                             <hr className="w-full mb-3"/>
-                                            <Link className="w-full mb-2" href="/careers" onClick={() => mobileOverlayOpen(false)}>Careers</Link>
+                                            <Link className="w-full mb-2" href="/career" onClick={() => mobileOverlayOpen(false)}>Careers</Link>
                                             <hr className="w-full mb-3"/>
                                             <Link className="w-full mb-2" href="/press-release" onClick={() => mobileOverlayOpen(false)}>Press Release</Link>
                                             <hr className="w-full mb-3"/>

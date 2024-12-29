@@ -1,7 +1,7 @@
 .career-hero-sec {
     height: 100vh;
+    padding: 100px;
     display: flex;
-    justify-content: center;
     align-items: center;
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
@@ -10,7 +10,7 @@
 
 .career-hero-sec-content {
     display: flex;
-    width: 60%;
+    width: 100%;
     gap: 100px;
 }
 
@@ -94,11 +94,17 @@
 
 
 @media (max-width: 768px) {
+    .career-hero-sec {
+        padding: 40px;
+    }
     .career-hero-sec-content {
         display: flex;
         flex-direction: column;
         width: 80%;
         gap: 70px;
+    }
+    .career-hero-sec-head {
+        width: 80%;
     }
     .career-current-openings-flex {
         flex-direction: column;
@@ -116,5 +122,14 @@
     }
     .career-current-openings-head {
         margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    .career-hero-sec {
+        padding: 20px;
+    }
+    .career-hero-sec-para {
+        display: none;
     }
 }

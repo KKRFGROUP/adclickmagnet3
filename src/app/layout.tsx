@@ -34,6 +34,8 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <title>ACM Digital Marketing - Digital with Finesse</title>
+        <meta name="description" content="ACM" />
         {/* Optional: add more icon formats 
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />

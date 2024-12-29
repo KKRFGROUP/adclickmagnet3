@@ -211,7 +211,7 @@ const categories = [
 
 
 
-function TopBlogs() {
+function TopCaseStudies() {
     //const [blogs, setBlogs] = useState([]);
     //const [error, setError] = useState(null);
     const latestBlogTriggerRef = useRef(null);
@@ -275,12 +275,13 @@ function TopBlogs() {
  
   return (
     <>
-    <AuroraBackground>
-      <div className="blog-page-hero-sec" >
-        <h1>Blogs</h1>
-      </div>
-    </AuroraBackground>
+      <AuroraBackground>
+            <div className="blog-page-hero-sec" >
+              <h1>Case Studies</h1>
+            </div>
+      </AuroraBackground>
     <div className="top-blogs">
+        
         {/*top 1 blog */}
         <Link href={`/blogs/${sortedBlogs[0].link}`} className="top1-blog-card mb-9">
           <Image className='blogs-page-blog-img' src={sortedBlogs[0].image} alt={sortedBlogs[0].heading} height={500} width={500} />
@@ -387,7 +388,7 @@ function TopBlogs() {
   )
 }
 
-export default TopBlogs
+export default TopCaseStudies
 
 
 

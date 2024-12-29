@@ -3,7 +3,7 @@
 import React from 'react'
 import Image from 'next/image';
 import '../../../press-release/press-release.css'
-
+import { useRouter } from "next/navigation";
 function BlogSlugContent({content}: {content: {
     heroHeading: string;
     name: string;
@@ -18,9 +18,10 @@ function BlogSlugContent({content}: {content: {
       }[];
     };
   }}) {
-
+    const router = useRouter();
     const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
+        router.push("/thank-you");
     }
 
   return (
