@@ -73,7 +73,7 @@
 
 /* pop up */
 .popup-z-index {
-    z-index: 500;
+    z-index: 11500;
 }
 
 
@@ -94,11 +94,7 @@
     color: #fff;
 }
 
-@media (max-width: 1280px) {
-    .service-page-popup {
-        width: 40%;
-    }
-}
+
 @media (max-width: 1028px) {
     .service-page-popup {
         width: 45%;

@@ -16,7 +16,7 @@ export default function Section3Model() {
   return (
     <div className="sec3-model">
         <OptimizedModel 
-          sceneUrl="https://prod.spline.design/KHokVySkT2jgUhp4/scene.splinecode"
+          sceneUrl="https://prod.spline.design/OIogab2K3RnhDy-R/scene.splinecode"
           
         />
     </div>

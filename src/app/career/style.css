@@ -1,0 +1,120 @@
+.career-hero-sec {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    z-index: 10;
+}
+
+.career-hero-sec-content {
+    display: flex;
+    width: 60%;
+    gap: 100px;
+}
+
+.career-hero-sec-head {
+    font-family: "Syne";
+    font-size: 35px;
+    width: 150%;
+}
+
+.career-hero-sec-para {
+    font-family: "Unbounded";
+    font-size: 15px;
+}
+
+.career-current-openings {
+    padding: 50px;
+    padding-top: 90px;
+    padding-right: 70px;
+    padding-left: 70px;
+    background-color: #E2E2E2;
+    position: relative;
+    border-radius: 50px;
+    bottom: 10px;
+    height: max-content;
+    color: #000;
+}
+.career-current-openings-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+
+.career-current-openings-head {
+    font-family: "Syne";
+    font-size: 35px;
+}
+
+.career-current-opening-list {
+    width: 60%;
+    font-family: "Unbounded";
+}
+
+.career-current-opening-list-item {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.career-current-opening-list-item-left-head {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.career-current-opening-list-item-left-para {
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: grey;
+}
+
+.career-current-opening-list-item-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.career-current-opening-list-item-right-btn {
+    margin-top: 20px;
+}
+
+.career-current-opening-list-item-line {
+    height: 2px;
+    background-color: grey;
+    border-radius: 2px;
+}
+.bg-gray {
+    background-color: grey;
+}
+
+
+@media (max-width: 768px) {
+    .career-hero-sec-content {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        gap: 70px;
+    }
+    .career-current-openings-flex {
+        flex-direction: column;
+    }
+    .career-current-openings {
+        padding: 30px;
+        padding-top: 70px;
+        padding-right: 30px;
+        padding-left: 30px;
+        border-radius: 50px;
+    }
+    .career-current-opening-list {
+        width: 100%;
+        font-family: "Unbounded";
+    }
+    .career-current-openings-head {
+        margin-bottom: 20px;
+    }
+}

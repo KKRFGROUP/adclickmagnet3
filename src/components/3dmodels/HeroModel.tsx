@@ -17,7 +17,7 @@ export default function HeroModel() {
   return (
     <div className="home-model">
         <OptimizedModel 
-          sceneUrl="https://prod.spline.design/xGBBKsEMeyKcN8gb/scene.splinecode"
+          sceneUrl="https://prod.spline.design/jGFRigHr1utzE3TT/scene.splinecode"
           />
     </div>
   );

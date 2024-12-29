@@ -15,25 +15,26 @@ import "../../components/services-components/components.css"
 //ui animation
 import { Input, Label } from '../../components/ui/Form';
 import { TracingBeam } from "../../components/ui/TracingBeam";
-
+import { useRouter } from "next/navigation";
 
 export default function ContactUs() {
-    const pageMainRef = useRef<HTMLDivElement | null>(null);
+  const router = useRouter();
+  const pageMainRef = useRef<HTMLDivElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState({
-      firstName: "",
+    firstName: "",
       lastName: "",
       email: "",
       companyName: "",
       phoneNumber: "",
       message: "",
     });
-  
+    
     const [status, setStatus] = useState({
       message: "",
       isError: false
     });
-  
+    
     const handleChange = (e: { target: { name: any; value: any; }; }) => {
       const { name, value } = e.target;
       setFormData((prevData) => ({
@@ -45,39 +46,40 @@ export default function ContactUs() {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
       setStatus({ message: "Submitting...", isError: false });
+      router.push("/thank-you");
   
-      try {
-        const response = await fetch("/api/contact", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        });
-  
-        const result = await response.json();
-  
-        if (result.success) {
-          setStatus({ message: "Form submitted successfully!", isError: false });
-          setFormData({
-            firstName: "",
-            lastName: "",
-            email: "",
-            companyName: "",
-            phoneNumber: "",
-            message: "",
-          });
-        } else {
-          setStatus({ 
-            message: result.error || "Failed to submit form.", 
-            isError: true 
-          });
-        }
-      } catch (error) {
-        console.error(error);
-        setStatus({ 
-          message: "An error occurred while submitting the form.", 
-          isError: true 
-        });
-      }
+      //try {
+      //  const response = await fetch("/api/contact", {
+      //    method: "POST",
+      //    headers: { "Content-Type": "application/json" },
+      //    body: JSON.stringify(formData),
+      //  });
+  //
+      //  const result = await response.json();
+  //
+      //  if (result.success) {
+      //    setStatus({ message: "Form submitted successfully!", isError: false });
+      //    setFormData({
+      //      firstName: "",
+      //      lastName: "",
+      //      email: "",
+      //      companyName: "",
+      //      phoneNumber: "",
+      //      message: "",
+      //    });
+      //  } else {
+      //    setStatus({ 
+      //      message: result.error || "Failed to submit form.", 
+      //      isError: true 
+      //    });
+      //  }
+      //} catch (error) {
+      //  console.error(error);
+      //  setStatus({ 
+      //    message: "An error occurred while submitting the form.", 
+      //    isError: true 
+      //  });
+      //}
     };
   
 

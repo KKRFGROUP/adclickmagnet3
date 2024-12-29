@@ -73,13 +73,13 @@ body{
 .what-we-do-links {
     height: 80vh;
     width: 80vw;
-    
     backdrop-filter: blur(10px);
     font-family: "Unbounded";
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
 .what-we-do-hover-header {
     background-image: url("https://res.cloudinary.com/dgdgrniut/image/upload/v1734538406/DALL_E_2024-12-18_20.22.23_-_A_minimalist_background_image_for_a_website_featuring_a_black_theme_with_subtle_glowing_light_effects_or_abstract_objects_in_the_center._The_objects_zin44f.webp");
     background-size: cover;
@@ -139,6 +139,10 @@ body{
     border-radius: 20px;
     margin-bottom: 20px;
 }
+.who-we-are-hover-sec1-img-card {
+    background-image: url("https://res.cloudinary.com/dvhmy6a4u/image/upload/v1735479812/man-593372_640_jzn0cw.jpg");
+    background-size: cover;
+}
 
 .what-we-do-hover-sec1-img-card-para {
     font-size: 15px;
@@ -169,6 +173,14 @@ body{
     -webkit-background-clip: text;
     mix-blend-mode: difference;
 }
+.who-we-are-hover-head {
+    margin-bottom: 10px;
+    height: 6vh;
+}
+
+.who-we-are-hover-head:hover {
+    background-color: skyblue;
+}
 
 .what-we-do-hover-secs-para {
     margin-bottom: 10px;
@@ -176,13 +188,21 @@ body{
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     mix-blend-mode: difference;
+    font-weight: 300;
 }
+.who-we-are-hover-para {
+    margin-bottom: 50px;
+
+}
+
 .what-we-do-hover-secs-img {
     height: 50%;
     border-radius: 20px;
     margin-bottom: 30px;
     transition: 0.4s;
 }
+
+
 
 @media (max-width: 1280px) {
     .bg-blur {
@@ -215,6 +235,25 @@ body{
     .what-we-do-hover-secs-para {
         font-size: 13px;
         margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 1028px) and (max-height: 1280px) {
+    .what-we-do-links {
+        height: 50vh;
+        width: 90vw;
+        backdrop-filter: blur(10px);
+        font-family: "Unbounded";
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .what-we-do-hover-secs-head {
+        height: 7vh;
+    }
+    .who-we-are-hover-head {
+        margin-bottom: 10px;
+        height: 3vh;
     }
 }
 
@@ -257,6 +296,7 @@ body{
     height: max-content;
     min-height: 100vh;
     overflow: auto;
+    color: #000;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

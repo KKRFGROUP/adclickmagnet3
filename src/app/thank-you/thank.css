@@ -1,0 +1,65 @@
+.thankyou-main-container {
+    background-image: url("https://res.cloudinary.com/dgdgrniut/image/upload/v1734538406/DALL_E_2024-12-18_20.22.23_-_A_minimalist_background_image_for_a_website_featuring_a_black_theme_with_subtle_glowing_light_effects_or_abstract_objects_in_the_center._The_objects_zin44f.webp");
+    background-size: cover;
+    height: 100vh;
+}
+
+.thanks-bg-blur {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    backdrop-filter: blur(20px);
+    height: 100%;
+}
+
+.thankyou-head {
+    font-size: 70px;
+    font-family: "Syne";
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.thankyou-para {
+    font-size: 25px;
+    font-family: "Unbounded";
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .thanks-bg-blur {
+        padding: 30px;
+    }
+    
+    .thankyou-head {
+        font-size: 30px;
+    }
+    
+    .thankyou-para {
+        font-size: 15px;
+    }
+    .thankyou-btn {
+        width: 130px;
+    }
+}
+
+@media (max-width: 575px) {
+    .thanks-bg-blur {
+        padding: 25px;
+    }
+    
+    .thankyou-head {
+        font-size: 32px;
+    }
+    
+    .thankyou-para {
+        font-size: 13px;
+    }
+    .thankyou-btn {
+        width: 150px;
+    }
+}

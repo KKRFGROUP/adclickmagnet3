@@ -7,6 +7,9 @@ import { cn } from "@/lib/utils";
 import { FaInstagram, FaFacebook  } from "react-icons/fa6";
 import { RiWhatsappFill } from "react-icons/ri";
 import { MdAttachEmail } from "react-icons/md";
+import { useRouter } from "next/navigation";
+
+
 
 export default function Footer() {
   return (
@@ -45,9 +48,9 @@ export default function Footer() {
         <div className="flex justify-between lg:px-10 pt-3 footer-links">
           <Link href="/press-release" className='solution-page-link'>Press Release</Link>
           <Link href="/blogs" className='solution-page-link'>Blog</Link>
-          <Link href="/" className='solution-page-link'>Careers</Link>
-          <Link href="/" className='solution-page-link'>Case Studies</Link>
-          <Link href="/" className='solution-page-link'>Awards</Link>
+          <Link href="/career" className='solution-page-link'>Careers</Link>
+          <Link href="/case-studies" className='solution-page-link'>Case Studies</Link>
+          <Link href="/site-map" className='solution-page-link'>Site Map</Link>
           <Link href="/contact-us" className='solution-page-link'>Contact</Link>
         </div>
 
@@ -55,10 +58,9 @@ export default function Footer() {
       
         <div className="term-and-condition-cont flex justify-between items-center">
           <div className="term-and-condition-content flex items-center gap-6">
-            <p>© 2024
-            ACM</p>
-            <p>Terms & Conditions</p>
-            <p>Privacy Policy</p>
+            <p>© 2025 ACM</p>
+            <Link href="/terms-and-conditions"><p>Terms & Conditions</p></Link>
+            <Link href="/privacy-policy"><p>Privacy Policy</p></Link>
           </div>
 
           <div className="social-media-handles-card flex items-center gap-7">
@@ -77,8 +79,8 @@ export default function Footer() {
 
 
 
-
 export function SignupFormDemo() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -91,7 +93,7 @@ export function SignupFormDemo() {
     message: "",
     isError: false
   });
-
+  
   const handleChange = (e: { target: { name: any; value: any; }; }) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -103,38 +105,39 @@ export function SignupFormDemo() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus({ message: "Submitting...", isError: false });
+    router.push("/thank-you");
 
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await response.json();
-
-      if (result.success) {
-        setStatus({ message: "Form submitted successfully!", isError: false });
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phoneNumber: "",
-          message: "",
-        });
-      } else {
-        setStatus({ 
-          message: result.error || "Failed to submit form.", 
-          isError: true 
-        });
-      }
-    } catch (error) {
-      console.error(error);
-      setStatus({ 
-        message: "An error occurred while submitting the form.", 
-        isError: true 
-      });
-    }
+    //try {
+    //  const response = await fetch("/api/contact", {
+    //    method: "POST",
+    //    headers: { "Content-Type": "application/json" },
+    //    body: JSON.stringify(formData),
+    //  });
+//
+    //  const result = await response.json();
+//
+    //  if (result.success) {
+    //    setStatus({ message: "Form submitted successfully!", isError: false });
+    //    setFormData({
+    //      firstName: "",
+    //      lastName: "",
+    //      email: "",
+    //      phoneNumber: "",
+    //      message: "",
+    //    });
+    //  } else {
+    //    setStatus({ 
+    //      message: result.error || "Failed to submit form.", 
+    //      isError: true 
+    //    });
+    //  }
+    //} catch (error) {
+    //  console.error(error);
+    //  setStatus({ 
+    //    message: "An error occurred while submitting the form.", 
+    //    isError: true 
+    //  });
+    //}
   };
   return (
     <div className="max-w-md w-full  rounded-2xl md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">

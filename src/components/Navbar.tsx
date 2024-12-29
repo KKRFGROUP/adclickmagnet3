@@ -14,6 +14,7 @@ import { RxCross2 } from "react-icons/rx";
 import { IoMdAdd } from "react-icons/io";
 import { FaInstagram, FaFacebook  } from "react-icons/fa6";
 import { RiWhatsappFill } from "react-icons/ri";
+import './app.css'
 
 const hoverImageArr = [
     {
@@ -142,7 +143,7 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
                                         <Link href="/press-release"><p className="what-we-do-hover-sec1-para-company">Press Release</p></Link>
                                     </div>
                                     <div className="what-we-do-hover-secs">  
-                                        <h2 className="what-we-do-hover-secs-head" onMouseEnter={() => handleHoverImage("Creative services")} onMouseLeave={() => handleHoverImage(defaultImage)}>Creative services</h2>
+                                        <h2 className="what-we-do-hover-secs-head">Creative services</h2>
                                         <Link href="/graphic-design" onMouseEnter={() => handleHoverImage("Graphic Design")} onMouseLeave={() => handleHoverImage(defaultImage)}><p className="what-we-do-hover-secs-para">Graphic Design</p></Link>
                                         <Link href="/ad-creative" onMouseEnter={() => handleHoverImage("Ad Creative")} onMouseLeave={() => handleHoverImage(defaultImage)}><p className="what-we-do-hover-secs-para">Ad Creative</p></Link>
                                         <Link href="/branding-services" onMouseEnter={() => handleHoverImage("Branding Services")} onMouseLeave={() => handleHoverImage(defaultImage)}><p className="what-we-do-hover-secs-para">Branding Services</p></Link>
@@ -151,7 +152,7 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
                                         <Link href="/motion-design" onMouseEnter={() => handleHoverImage("Motion Design")} onMouseLeave={() => handleHoverImage(defaultImage)}><p className="what-we-do-hover-secs-para">Motion Design</p></Link>
                                     </div>
                                     <div className="what-we-do-hover-secs">
-                                        <h2 className="what-we-do-hover-secs-head" onMouseEnter={() => handleHoverImage("Digital Ads Services")} onMouseLeave={() => handleHoverImage(defaultImage)}>Digital Ads Services</h2>
+                                        <h2 className="what-we-do-hover-secs-head">Digital Ads Services</h2>
                                         <Link href="/google-ads" onMouseEnter={() => handleHoverImage("Google Ads")} onMouseLeave={() => handleHoverImage(defaultImage)}><p className="what-we-do-hover-secs-para">Google Ads</p></Link>
                                         <Link href="/meta-ads" onMouseEnter={() => handleHoverImage("Meta Ads")} onMouseLeave={() => handleHoverImage(defaultImage)}><p className="what-we-do-hover-secs-para">Meta Ads</p></Link>
                                         <Link href="/seo" onMouseEnter={() => handleHoverImage("Search Engine Optimization")} onMouseLeave={() => handleHoverImage(defaultImage)}><p className="what-we-do-hover-secs-para">Search Engine Optimization</p></Link>
@@ -171,9 +172,47 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
                                 </div>
                             </MenuItem>
                         
-                        <Link href="/about-us" className="cursor-none">
-                            <MenuItem setActive={setActive} active={active} item="Who We Are" />
-                        </Link>
+                        
+                            <MenuItem setActive={setActive} active={active} item="Who We Are">
+                            <div className='what-we-do-hover-header'>
+                                    <div className="bg-blur">
+                                    <div className="what-we-do-hover-sec1">
+                                        <h2 className="what-we-do-hover-sec1-head">Crafted to Propel Your Success</h2>
+                                        <p className="what-we-do-hover-sec1-para">Our case studies showcase how we transform visions into measurable outcomes.</p>
+                                        <hr className="what-we-do-hover-sec1-line"/>
+                                        <Link href="/case-studies"><div className="what-we-do-hover-sec1-img-card who-we-are-hover-sec1-img-card">
+                                            <p className="what-we-do-hover-sec1-img-card-para text-black">Explore how we delivered impactful solutions for our clients' growth.</p>
+                                            
+                                        </div></Link>
+                                        <hr className="what-we-do-hover-sec1-line"/>
+                                    </div>
+                                    <div className="what-we-do-hover-secs">  
+                                        <Link href="/about-us"><h2 className="what-we-do-hover-secs-head who-we-are-hover-head">Who We Are</h2></Link>
+                                        <p className="what-we-do-hover-secs-para who-we-are-hover-para">ACM transforms ideas through cutting-edge digital innovation.</p>
+
+                                        <Link href="/career"><h2 className="what-we-do-hover-secs-head who-we-are-hover-head">Career</h2></Link>
+                                        <p className="what-we-do-hover-secs-para who-we-are-hover-para">Join ACM to shape impactful digital solutions together.</p>
+                                    </div>
+                                    <div className="what-we-do-hover-secs">
+                                        <Link href="/case-studies"><h2 className="what-we-do-hover-secs-head who-we-are-hover-head">Case Studies</h2></Link>
+                                        <p className="what-we-do-hover-secs-para who-we-are-hover-para">See how ACM delivers measurable results for clients.</p>
+                                        
+                                        <Link href="/press-release"><h2 className="what-we-do-hover-secs-head who-we-are-hover-head">Press Release</h2></Link>
+                                        <p className="what-we-do-hover-secs-para who-we-are-hover-para">Stay updated on ACM’s achievements and industry innovations.</p>
+                                    </div>
+                                    <div className="what-we-do-hover-secs">
+                                        <Link href="/blogs"><h2 className="what-we-do-hover-secs-head who-we-are-hover-head">Blogs</h2></Link>
+                                        <p className="what-we-do-hover-secs-para who-we-are-hover-para">Discover insights on digital trends and services today.</p>
+                                    </div>
+                                    
+                                    </div>
+                                </div>
+                                <div className="what-we-do-hover-footer">
+                                    <p>Need a dedicated solution tailored to your needs?<br />Contact us, we will create it especially for you!</p>
+                                    <p>or    call  +1 718 577 2718</p>
+                                </div>
+                            </MenuItem>
+                        
                         <Link href="/contact-us" className="cursor-none">
                             <MenuItem setActive={setActive} active={active} item="Contact Us" />
                         </Link>
@@ -201,21 +240,21 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
                        
                     </div>
                         <div
-                            className={`${isOpen ? "relative" : "fixed top-0 left-0"}  w-[100vw] inset-0  bg-black  z-50 flex flex-col   transition-transform duration-300 mobile-navbar-fullscreen-overlay ${
+                            className={`${isOpen ? "relative" : "fixed top-0 left-0"}  w-[100vw] inset-0  bg-white   z-50 flex flex-col   transition-transform duration-300 mobile-navbar-fullscreen-overlay ${
                             isOpen ? 'scale-100' : 'scale-0'
                             }`}
                         >
                             <div>
                                 <div className="mobile-overlay-logo-cross mx-4">
                                     <Link href="/" className=" font-bold">
-                                        <Image className="w-[37vw] h-[90px]" src="https://res.cloudinary.com/dgdgrniut/image/upload/v1732186526/adclickmagnetlogogrey_xs0elw.png" alt="logo" height={100} width={150} />
+                                        <Image className="mobile-view-navbar-logo" src="https://res.cloudinary.com/dgdgrniut/image/upload/v1732186526/adclickmagnetlogoblacklogo_reqzpl.png" alt="logo" height={200} width={250} />
                                     </Link>
 
                                     <button
                                         onClick={() => mobileOverlayOpen()}
                                         className="mr-3"
                                         >
-                                        <RxCross2 className="text-4xl text-white bg:text-black"/>
+                                        <RxCross2 className="text-4xl text-black bg:text-black"/>
                                     </button>
 
                                 </div>
@@ -223,7 +262,7 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
                                 <nav className="mobile-navlinks">
                                     <Link className="w-full mb-7" href="/" onClick={() => mobileOverlayOpen(false)}>Home</Link>
                                     
-                                    <div onClick={() => setServices(!services)} className="flex gap-4 items-center mb-7">
+                                    <div onClick={() => {setServices(!services); setWhoWeAre(false)}} className="flex gap-4 items-center mb-7">
                                         <p>Services</p>
                                         <div >
                                             <IoMdAdd /> 
@@ -233,7 +272,7 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
                                     
                                     <div className={`services-drop-down ${services ? "scale-100" : "scale-0 h-0"}`}>
                                             
-                                            <div onClick={() => setGraphicDesign(!graphicDesign)} className="flex gap-4 items-center mb-2" >
+                                            <div onClick={() => {setGraphicDesign(!graphicDesign); setAdServices(false); setWhoWeAre(false)}} className="flex gap-4 items-center mb-2" >
                                                 <p>Creative Design</p>
                                                 <div >
                                                     <IoMdAdd /> 
@@ -241,7 +280,7 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
                                             </div>
                                             <hr className="w-full mb-5"/>
                                                 
-                                                    <div className={`services-drop-down dark:text-white ${graphicDesign ? "animate__backInUp" : "animate__backOutDown scale-0 h-0"}`}>
+                                                    <div className={`services-drop-down dark:text-black ${graphicDesign ? "animate__backInUp" : "animate__backOutDown scale-0 h-0"}`}>
                                                         <Link className="w-full mb-2" href="/graphic-design" onClick={() => mobileOverlayOpen(false)}>Graphic Design</Link>
                                                         <hr className="w-full mb-3"/>
                                                         <Link className="w-full mb-2" href="/ad-creative" onClick={() => mobileOverlayOpen(false)}>Ad Creative</Link>
@@ -255,14 +294,14 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
                                                         <Link className="w-full mb-2" href="/presentation-design" onClick={() => mobileOverlayOpen(false)}>Presentation Design</Link>
                                                         <hr className="w-full mb-5"/>
                                                     </div>
-                                            <div onClick={() => setAdServices(!adServices)} className="flex gap-4 items-center mb-2" >
+                                            <div onClick={() => {setAdServices(!adServices); setGraphicDesign(false); setWhoWeAre(false)}} className="flex gap-4 items-center mb-2" >
                                                 <p>Digital Ads Services</p>
                                                 <div >
                                                     <IoMdAdd /> 
                                                 </div>
                                             </div>
                                             <hr className="w-full mb-5"/>
-                                            <div className={`services-drop-down dark:text-white ${adServices ? "animate__backInUp " : "animate__backOutDown scale-0 h-0"}`}>
+                                            <div className={`services-drop-down dark:text-black ${adServices ? "animate__backInUp " : "animate__backOutDown scale-0 h-0"}`}>
                                                 <Link className="w-full mb-2" href="/google-ads" onClick={() => mobileOverlayOpen(false)}>Google ads</Link>
                                                 <hr className="w-full mb-3"/>
                                                 <Link className="w-full mb-2" href="/linkedin-ads" onClick={() => mobileOverlayOpen(false)}>Linkedin Ads</Link>
@@ -276,7 +315,7 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
                                             </div>
                                     </div>
 
-                                    <div onClick={() => setWhoWeAre(!whoWeAre)} className="flex gap-4 items-center mb-7">
+                                    <div onClick={() => {setWhoWeAre(!whoWeAre); setServices(false);}} className="flex gap-4 items-center mb-7">
                                         <p>Who We Are</p>
                                         <div >
                                             <IoMdAdd /> 

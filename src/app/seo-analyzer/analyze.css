@@ -1,16 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&family=Unbounded:wght@200..900&display=swap');
 
 .analyze-your-web-loader-main-container {
-    height: 100vh;
-    background-color: #E2E2E2;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
+
+
+
+
 
 .analyze-your-web-loader {
     background-color: #00000030;
-    background-image: linear-gradient(120deg, #E2CBFF00, #393BB250, #E2CBFF );
+    background-image: linear-gradient(120deg, #E2E2E2, #e2e2e280, #E2CBFF );
     width: 80%;
     backdrop-filter: blur(10px);
     display: flex;
@@ -18,12 +22,15 @@
     justify-content: center;
     align-items: center;
     padding: 40px;
+    padding-top: 0px;
+    font-family: "Unbounded";
+    text-align: center;
 }
 
 .analyze-your-web-loader-head {
   font-size: 50px;
   font-family: "Syne";
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .analyze-your-web-loader-para {
@@ -56,3 +63,26 @@
     background-size: 200% 200%;
     animation: gradient 2s ease infinite;
   }
+
+
+@media (max-width: 768px) {
+  .analyze-your-web-loader-main-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .arora-bg {
+    height: max-content;
+  }
+  .report-page-logo {
+    height: 100px;
+    width: 100px;
+  }
+  .analyze-your-web-loader {
+    padding: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+  .report-page-submit-btn {
+    font-size: 13px;
+  }
+}

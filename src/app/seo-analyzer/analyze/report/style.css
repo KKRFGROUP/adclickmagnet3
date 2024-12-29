@@ -1,0 +1,30 @@
+.report-popup {
+    background-image: url("https://res.cloudinary.com/dgdgrniut/image/upload/v1734538406/DALL_E_2024-12-18_20.22.23_-_A_minimalist_background_image_for_a_website_featuring_a_black_theme_with_subtle_glowing_light_effects_or_abstract_objects_in_the_center._The_objects_zin44f.webp");
+    background-size: cover;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    position: relative;
+    width: 60%;
+    opacity: 1;
+    font-family: "Syne";
+}
+
+
+.report-popup-para {
+    font-family: "Unbounded";
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+.report-popup-button {
+    height: 50px;
+    width: 150px;
+    background-color: #fff;
+    margin-right: 30px;
+    border: 0px;
+    border-radius: 10px;
+    transition: 0.4s;
+    color: #000;
+}
+
+.analyze-your-web-report-head {}

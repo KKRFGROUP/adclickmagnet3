@@ -3,7 +3,7 @@
 import React from 'react'
 
 
-function BlogSlugHero({content}: {content:{head: string; name: string; time: string; img: string}}) {
+function CaseStudiesSlugHero({content}: {content:{head: string; name: string; time: string; img: string}}) {
    
   return (
     <div className="blog-slug-hero-sec" style={{backgroundImage: `url(${content.img})`, backgroundSize: "cover"}}>
@@ -20,4 +20,4 @@ function BlogSlugHero({content}: {content:{head: string; name: string; time: str
   )
 }
 
-export default BlogSlugHero
+export default CaseStudiesSlugHero

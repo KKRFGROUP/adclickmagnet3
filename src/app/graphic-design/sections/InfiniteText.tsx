@@ -20,7 +20,7 @@ export default function InfiniteText() {
                     <div className="scrolling-text-item-second">Thomas Merton</div>
                     <div className="scrolling-text-item-second">Pablo Picasso</div>
                     <div className="scrolling-text-item-second">Edgar Degas</div>
-                    <div className="scrolling-text-item-second">Vango Gogh</div>
+                    <div className="scrolling-text-item-second">Van Gogh</div>
                     <div className="scrolling-text-item-second">Henri Matisse</div>
                     <div className="scrolling-text-item-second">Da Vinci</div>
                 </div>

@@ -5,6 +5,7 @@ import { IoMdCloseCircle } from "react-icons/io"; //logo
 import { TextGenerateEffect } from '@/components/ui/TextGenerateEffect';
 import { Input, Label } from '../../../components/ui/Form';
 import { cn } from "@/lib/utils";
+import { useRouter } from "next/navigation";
 
 const BottomGradient = () => {
   return (
@@ -32,6 +33,7 @@ const LabelInputContainer = ({
 
 
 const HeroSection = () => {
+  const router = useRouter();
 const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [formData, setFormData] = useState({
       firstName: "",
@@ -50,38 +52,39 @@ const [isPopupOpen, setIsPopupOpen] = useState(false);
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
       setStatus({ message: "Submitting...", isError: false });
-  
-      try {
-        const response = await fetch("/api/contact", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        });
-  
-        const result = await response.json();
-  
-        if (result.success) {
-          setStatus({ message: "Form submitted successfully!", isError: false });
-          setFormData({
-            firstName: "",
-            lastName: "",
-            email: "",
-            phoneNumber: "",
-            message: "",
-          });
-        } else {
-          setStatus({ 
-            message: result.error || "Failed to submit form.", 
-            isError: true 
-          });
-        }
-      } catch (error) {
-        console.log(error);
-        setStatus({ 
-          message: "An error occurred while submitting the form.", 
-          isError: true 
-        });
-      }
+      router.push("/thank-you");
+
+      //try {
+      //  const response = await fetch("/api/contact", {
+      //    method: "POST",
+      //    headers: { "Content-Type": "application/json" },
+      //    body: JSON.stringify(formData),
+      //  });
+  //
+      //  const result = await response.json();
+  //
+      //  if (result.success) {
+      //    setStatus({ message: "Form submitted successfully!", isError: false });
+      //    setFormData({
+      //      firstName: "",
+      //      lastName: "",
+      //      email: "",
+      //      phoneNumber: "",
+      //      message: "",
+      //    });
+      //  } else {
+      //    setStatus({ 
+      //      message: result.error || "Failed to submit form.", 
+      //      isError: true 
+      //    });
+      //  }
+      //} catch (error) {
+      //  console.log(error);
+      //  setStatus({ 
+      //    message: "An error occurred while submitting the form.", 
+      //    isError: true 
+      //  });
+      //}
     };
 
   const handleChange = (e: { target: { name: any; value: any; }; }) => {

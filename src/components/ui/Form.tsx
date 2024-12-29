@@ -93,21 +93,33 @@ Input.displayName = "Input";
 // Input component exports...
 
 // New Dropdown Component
+type DropdownProps = SelectPrimitive.SelectProps & {
+  className?: string;
+};
+
+// Modified Dropdown component
 const Dropdown = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof SelectPrimitive.Root>
->(({ children, ...props }) => (
-  <SelectPrimitive.Root {...props} >
-    {children}
-  </SelectPrimitive.Root>
-));
+  DropdownProps
+>(({ children, className, ...props }) => {
+  // Since SelectPrimitive.Root doesn't accept className directly,
+  // we'll wrap it in a div that can take the className
+  return (
+    <div className={className}>
+      <SelectPrimitive.Root {...props}>
+        {children}
+      </SelectPrimitive.Root>
+    </div>
+  );
+});
 Dropdown.displayName = "Dropdown";
 
 const DropdownTrigger = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Trigger>,
-  React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger>
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
->(({ className, children, ...props }, ref) => {
+  React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger> & {
+    placeholder?: string;
+  }
+>(({ className, placeholder, ...props }, ref) => {
   const radius = 100;
   const [visible, setVisible] = React.useState(false);
 
@@ -153,7 +165,7 @@ const DropdownTrigger = React.forwardRef<
         )}
         {...props}
       >
-        <SelectPrimitive.Value placeholder={props.type} />
+        <SelectPrimitive.Value placeholder={placeholder || "Select an option"} />
         <SelectPrimitive.Icon asChild>
           <ChevronDown className="h-4 w-4 opacity-50" />
         </SelectPrimitive.Icon>
@@ -208,6 +220,8 @@ const DropdownItem = React.forwardRef<
   </SelectPrimitive.Item>
 ));
 DropdownItem.displayName = "DropdownItem";
+
+
 
 export { 
   Input, 

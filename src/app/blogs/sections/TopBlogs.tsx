@@ -292,7 +292,7 @@ function TopBlogs() {
         </Link>
 
           {/*top 3 blogs */}
-        <div className='flex  mb-[5%]'>
+        <div className='flex justify-between w-full flex-blogs-page-cards-container  mb-[5%]'>
           <Link href={`/blogs/${sortedBlogs[1].link}`} className="flex-blog-cards">
             
             <p className='mb-3 blog-card-content-category'>{sortedBlogs[1].category}</p>
@@ -328,22 +328,22 @@ function TopBlogs() {
         </div>
 
         {/* latest blogs list */}
-        <div className="lastest-blog-main-container">
+        <div className="latest-blog-main-container">
           <h2 className='blog-page-latest-head' >Latest</h2>
-          <div ref={latestBlogTriggerRef} className="flex">
+          <div ref={latestBlogTriggerRef} className="flex latest-blog-container">
             <div ref={latestBlogSectionRef} className="blog-page-latest-blog-list">
               {paginatedBlogs.map((blog) => (
                 <Link href={`/blogs/${blog.link}`} className='blog-page-latest-blog-card' key={blog.id}>
-                    <Image className='blog-page-lastest-blog-card-img' src={blog.image} alt={blog.heading} height={500} width={500} />
+                    <Image className='blog-page-latest-blog-card-img' src={blog.image} alt={blog.heading} height={500} width={500} />
 
-                    <div className='blog-page-lastest-blog-card-content'>
-                      <p className='blog-page-lastest-blog-card-content-category'>{blog.category}</p>
-                      <h2 className='blog-page-lastest-blog-card-content-heading'>{blog.heading}</h2>
+                    <div className='blog-page-latest-blog-card-content'>
+                      <p className='blog-page-latest-blog-card-content-category'>{blog.category}</p>
+                      <h2 className='blog-page-latest-blog-card-content-heading'>{blog.heading}</h2>
                       
-                      <p className='blog-page-lastest-blog-card-content-para'>{blog.paragraph}</p>
+                      <p className='blog-page-latest-blog-card-content-para'>{blog.paragraph}</p>
                       <div className='flex items-center'>
-                        <p className='blog-page-lastest-blog-card-content-name'>{blog.name}</p>
-                        <p className='blog-page-lastest-blog-card-content-name'>{new Date(blog.time).toDateString()}</p>
+                        <p className='blog-page-latest-blog-card-content-name'>{blog.name}</p>
+                        <p className='blog-page-latest-blog-card-content-name'>{new Date(blog.time).toDateString()}</p>
                       </div>
                       
                     </div>

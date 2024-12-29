@@ -4,7 +4,6 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import TopBlogs from "./sections/TopBlogs"
 import "./blogs.css"
-
 function Blogs() {
   const pageMainRef = useRef<HTMLDivElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
