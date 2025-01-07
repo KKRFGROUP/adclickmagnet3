@@ -2,7 +2,7 @@
 
 import React,{useState} from 'react'
 import Image from 'next/image';
-import { Input, Label,PhoneInput } from '@/components/ui/Form';
+import { Input,PhoneInput } from '@/components/ui/Form';
 import '../../../press-release/press-release.css'
 import { useRouter } from "next/navigation";
 function BlogSlugContent({content}: {content: {
