@@ -11,15 +11,20 @@
     }
 }
 
-.font-syne {
+.services-sec-hero-head {
     font-family: "Syne"; 
     font-size: 60px;
+    color: #fff;
 }
 .spotlight2 {
     position: absolute;
     top:-180px;
     left:12%;
     rotate: 110deg;
+}
+.sp2 {
+    left: 50%;
+    transform: rotateX(-90deg);
 }
 
 .service-hero-sec-container {
@@ -73,13 +78,12 @@
 
 /* pop up */
 .popup-z-index {
-    z-index: 11500;
+    z-index: 9998;
 }
 
 
 
 .service-page-popup {
-    background-image: url("https://res.cloudinary.com/dgdgrniut/image/upload/v1734538406/DALL_E_2024-12-18_20.22.23_-_A_minimalist_background_image_for_a_website_featuring_a_black_theme_with_subtle_glowing_light_effects_or_abstract_objects_in_the_center._The_objects_zin44f.webp");
     background-size: cover;
     border-radius: 20px;
     backdrop-filter: blur(20px);
@@ -97,22 +101,32 @@
 
 @media (max-width: 1028px) {
     .service-page-popup {
-        width: 45%;
-    }
-}
-@media (max-width: 768px) {
-    .service-page-popup {
         width: 55%;
     }
 }
-
-@media (max-width: 575px) {
+@media (max-width: 768px) {
     .service-page-popup {
         width: 70%;
     }
 }
 
+@media (max-width: 575px) {
+    .service-page-popup {
+        width: 85%;
+    }
+}
 
+
+
+
+
+@media (max-width: 1512px) {
+    .spotlight2 {
+        top:-41%;
+        left:4%;
+        rotate: 110deg;
+    }
+}
 
 
 @media (max-width: 1280px) {
@@ -135,13 +149,16 @@
     .spotlight2 {
         display: none;
     }
+    .spotlight1 {
+        display: none;
+    }
     .service-hero-sec-container {
         height: 90vh;
         padding: 30px;
         text-align: left;
         margin-top: 30%;
     }
-    .font-syne {
+    .services-sec-hero-head {
         font-family: "Syne"; 
         font-size: 30px;
     }
@@ -325,12 +342,19 @@
 
 /* section 3 */
 
+#service-section3 {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    position: relative;
+    z-index: 1;
+  }
 
 .services-sec3-flex-main-component {
     color: #000;
-   background-color: #E2E2E2;
+    background-color: #E2E2E2;
     padding: 70px;
-   height: max-content;
+    height: max-content;
+    scroll-margin-top: 80px;
 }
 .services-sec3-content {
     padding: 20px;
@@ -431,6 +455,7 @@ video::-webkit-media-controls {
 /* section 4 */
 .services-sec4-main-container {
     height: max-content;
+    color: #000;
 }
 .services-secs-main-container {
     padding: 70px;
@@ -577,12 +602,20 @@ video::-webkit-media-controls {
     justify-content: space-between;
     padding-top: 150px;
     padding-bottom: 0px;
+    position: relative; /* Added */
+    overflow: visible; /* Added */
+    z-index: 1; /* Added */
 }
-.mobile-services-sec6-main-container {
-    display: none;
-    
+.relative-service-sec6 {
+    min-height: 150vh; /* Added */
+    position: relative;
+    z-index: 1;
 }
 
+.mobile-services-sec6-main-container {
+    display: none;
+
+}
 .services-secs-main-para {
     color: grey;
     font-size: 17px;
@@ -596,6 +629,11 @@ video::-webkit-media-controls {
 }
 .services-sec6-right-content {
     width: 50%;
+    position: relative; /* Added */
+    will-change: transform; /* Added for performance */
+}
+.debug-outline {
+    outline: 2px solid red;
 }
 .services-sec6-right-content-card-img {
     height: 80px;
@@ -607,13 +645,13 @@ video::-webkit-media-controls {
     margin-bottom: 10px;
     font-weight:bold;
 }
-
 .mobile-services-sec6-right-content {
     display: none;
 }
 .services-sec6-right-content-card {
     transition: 0.4s;
     padding: 10px;
+    margin-bottom: 20px;
     border-radius: 20px;
 }
 .services-sec6-right-content-card:hover {
@@ -676,6 +714,9 @@ video::-webkit-media-controls {
     }
 }
 
+
+
+
 /* section 7 */
 .services-sec7-main-container {
     padding: 80px;
@@ -683,11 +724,11 @@ video::-webkit-media-controls {
 }
 .services-sec7-card {
     /*background-image: linear-gradient(120deg, #E2CBFF00, #393BB250, #E2CBFF );*/
-    background-image: url("https://res.cloudinary.com/dgdgrniut/image/upload/v1734714495/Screenshot_2024-12-20_at_10.34.33_PM_am2skb.png");
     background-size: cover;
     height: max-content;
     width: 100%;
     padding: 40px;
+    color: #fff;
     border-radius: 20px;
     box-shadow: 4px 4px 5px 1px #fff;
 }
@@ -833,6 +874,7 @@ video::-webkit-media-controls {
 }
 .contact-our-expert-card-content {
     padding: 50px;
+    color: #fff;
 }
 .contact-our-expert-card-img {
     width: 30%;
@@ -1072,6 +1114,7 @@ video::-webkit-media-controls {
     backdrop-filter: blur(30px);
     border-radius: 20px;
     padding: 20px;
+    color: #fff;
 }
 .faq-card {
     height:40vh;

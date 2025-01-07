@@ -35,59 +35,78 @@ function Section6({ content, translate, responsiveTranslate }: Section6Props) {
   const [windowWidth, setWindowWidth] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
+  // Debounced resize handler like in Cards3dSections
   useEffect(() => {
-    const checkMobile = () => {
-      const width = window.innerWidth;
-      setWindowWidth(width);
-      setIsMobile(width < 768); // Adjust breakpoint as needed
+    let timeout: NodeJS.Timeout;
+    const handleResize = () => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        const width = window.innerWidth;
+        setWindowWidth(width);
+        setIsMobile(width < 768);
+      }, 150);
     };
-    
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+
+    if (typeof window !== 'undefined') {
+      setWindowWidth(window.innerWidth);
+      setIsMobile(window.innerWidth < 768);
+      window.addEventListener("resize", handleResize);
+    }
+
+    return () => {
+      clearTimeout(timeout);
+      if (typeof window !== 'undefined') {
+        window.removeEventListener("resize", handleResize);
+      }
+    };
   }, []);
 
+  // GSAP animation setup following Cards3dSections pattern
   useEffect(() => {
-    if (!triggerRef.current || !sectionRef.current) return;
+    if (!triggerRef.current || !sectionRef.current || isMobile) return;
 
-    // Kill existing ScrollTriggers
-    const triggers = ScrollTrigger.getAll();
-    triggers.forEach(trigger => trigger.kill());
+    // Kill existing ScrollTriggers for this section only
+    ScrollTrigger.getAll().forEach(trigger => {
+      if (trigger.vars.trigger === triggerRef.current) {
+        trigger.kill();
+      }
+    });
 
+    // Create GSAP context
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: triggerRef.current,
-          start: "top top",
-          end: "bottom center",
-          scrub: 1,
-          pin: true,
-          pinSpacing: true, // Changed to false
-          anticipatePin: 1,
-          invalidateOnRefresh: true,
-        }
-      });
-
-      tl.fromTo(
+      const animation = gsap.fromTo(
         sectionRef.current,
         {
           y: 0,
         },
         {
-          y: windowWidth <= 1280 ? responsiveTranslate : translate || "-100%",
+          y: windowWidth <= 1280 ? responsiveTranslate || "-85%" : translate || "-70%",
           ease: "none",
+          scrollTrigger: {
+            trigger: triggerRef.current,
+            start:  "top 0%",
+            end: windowWidth <= 768 ? "+=1000" : "bottom center",
+            scrub: 2,
+            pin: true,
+            pinSpacing: true,
+            invalidateOnRefresh: true,
+            markers: false, // Remove in production
+          }
         }
       );
+
+      return () => {
+        animation.kill();
+      };
     }, containerRef);
 
     return () => {
       ctx.revert();
     };
-  }, [windowWidth, responsiveTranslate, translate]);
+  }, [windowWidth, translate, responsiveTranslate, isMobile]);
 
-  // Render based on device type
   return (
-    <div ref={containerRef}>
+    <div ref={containerRef} className="relative">
       {isMobile ? (
         // Mobile View
         <div className="mobile-services-sec6-main-container">
@@ -107,7 +126,7 @@ function Section6({ content, translate, responsiveTranslate }: Section6Props) {
                   width={100}
                 />
                 <div className='services-sec6-right-content-card-content'>
-                  <h2 className='services-sec6-right-content-card-content-head font-semibold mb-2 text-2xl'>
+                  <h2 className='services-sec6-right-content-card-content-head'>
                     {each.name}
                   </h2>
                   <p className='services-sec6-right-content-card-content-para'>{each.para}</p>
@@ -118,7 +137,10 @@ function Section6({ content, translate, responsiveTranslate }: Section6Props) {
         </div>
       ) : (
         // Desktop View with Animation
-        <div ref={triggerRef} className="services-sec6-main-container">
+        <div 
+          ref={triggerRef} 
+          className="services-sec6-main-container overflow-hidden"
+        >
           <div className="services-sec6-left-content">
             <p className='mb-8 services-secs-main-para'>{content.mainpara}</p>
             <TypewriterEffect className="services-secs-head" words={content.heading} />
@@ -126,7 +148,7 @@ function Section6({ content, translate, responsiveTranslate }: Section6Props) {
           </div>
           <div ref={sectionRef} className="services-sec6-right-content">
             {content.social.map((each, index) => (
-              <div key={index} className="flex items-center services-sec6-right-content-card mb-8">
+              <div key={index} className="flex items-center services-sec6-right-content-card">
                 <Image
                   className='rounded-[20px] services-sec6-right-content-card-img'
                   src={each.img}
@@ -135,7 +157,9 @@ function Section6({ content, translate, responsiveTranslate }: Section6Props) {
                   width={100}
                 />
                 <div className='services-sec6-right-content-card-content'>
-                  <h2 className='services-sec6-right-content-card-content-head'>{each.name}</h2>
+                  <h2 className='services-sec6-right-content-card-content-head'>
+                    {each.name}
+                  </h2>
                   <p className='services-sec6-right-content-card-content-para'>{each.para}</p>
                 </div>
               </div>

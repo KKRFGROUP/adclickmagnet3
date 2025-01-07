@@ -94,8 +94,8 @@ function PrivacyPolicy() {
                 <p className="term-content-section-para"><span className="text-bold">This Privacy Policy applies to the websites owned and operated by adClickMagnet.</span></p>
 
             </div>
+            <Footer /> 
         </div>
-        <Footer />
     </>
   )
 }

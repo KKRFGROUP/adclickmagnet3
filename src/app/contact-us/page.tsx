@@ -13,7 +13,7 @@ import "./contact.css"
 import '../../components/app.css'
 import "../../components/services-components/components.css"
 //ui animation
-import { Input, Label } from '../../components/ui/Form';
+import { Input, Label, PhoneInput } from '../../components/ui/Form';
 import { TracingBeam } from "../../components/ui/TracingBeam";
 import { useRouter } from "next/navigation";
 
@@ -173,8 +173,13 @@ export default function ContactUs() {
 
                                 <LabelInputContainer className="mb-4 contact-us-page-layout-right-form-label-input">
                                     <Label htmlFor="phoneNumber">Phone Number</Label>
-                                    <Input id="phoneNumber" value={formData.phoneNumber}
-                                        onChange={handleChange} name="phoneNumber" placeholder="+911234567889" type="text" />
+                                    <PhoneInput
+                                      value={formData.phoneNumber}
+                                      onChange={handleChange}
+                                      placeholder="Phone number"
+                                      className="flex-1"
+                                      name="phoneNumber"
+                                    />
                                 </LabelInputContainer>
 
                                 <LabelInputContainer className="mb-4 contact-us-page-layout-right-form-label-input">

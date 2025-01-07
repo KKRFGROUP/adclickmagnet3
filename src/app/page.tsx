@@ -17,11 +17,13 @@ import Footer from "@/components/Footer";
 import ClientVideSec from "@/components/homeSections/ClientVideSec";
 import Navbar from "@/components/Navbar";
 
-//import { useEffect, useState } from "react";
-//import Loading from "@/components/Loading";
-//import TextSection from '@/components/TextSection'
+import { useLoading } from '@/components/Loading';
+import PreloaderPage from '@/components/3dmodels/LoaderModel';
+
+
 
 export default function Home() {
+  const { isLoading } = useLoading();
   const pageMainRef = useRef<HTMLDivElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -36,43 +38,42 @@ export default function Home() {
       }
     }
   };
-  //const [loading, setLoading] = useState(false);
-//
-  //useEffect(() => {
-  //  setLoading(true);
-  //}, []);
 
   
     return (
       <>
-      <Navbar mobileOverlayOpen={toggleMenu} isOpen={isOpen}/>
-      <div ref={pageMainRef} className="dark:bg-balck bg-black overflow-hidden page-main">
-        
-        <HeroSection />
-        <div className="after-hero-sec">
-          <Section2 />
-          <Section3 />
-          <Section5 />
-          <ClientVideSec />
-          <AboutSection />
-          <TeamSection />
-          <Section6 />
-          <Section7 />
-          <Section8 />
-          <Section9 />
-          <Footer />
+      {isLoading ?  <PreloaderPage minimumLoadingTime={4000} /> : <main className={`transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+        {/* Your main content here */}
+      
+        <Navbar mobileOverlayOpen={toggleMenu} isOpen={isOpen}/>
+        <div ref={pageMainRef} className="dark:bg-balck bg-black overflow-hidden page-main">
+          
+          <HeroSection />
+          <div className="after-hero-sec">
+            <Section2 />
+            <Section3 />
+            <Section5 />
+            <ClientVideSec />
+            <AboutSection />
+            <TeamSection />
+            <Section6 />
+            <Section7 />
+            <Section8 />
+            <Section9 />
+            <Footer />
+          </div>
         </div>
-      </div>
+      </main>}
+      
       </>
     );
 
 }
 
 //<>
-//      {!loading ? (
-//        
-//      ) : (
-//        <Loading />
-//      )}
+//      {isLoading && <PreloaderPage minimumLoadingTime={2000} />}
+//      <main className={`transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+//        {/* Your main content here */}
+//      </main>
 //</>
 

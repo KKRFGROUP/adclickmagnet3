@@ -9,7 +9,7 @@ import './style.css'
 import { GrDocumentText } from "react-icons/gr";
 import { TbCaretRightFilled } from "react-icons/tb";
 import { GiSkills } from "react-icons/gi";
-import { Input, Label} from '@/components/ui/Form';
+import { Input, Label, PhoneInput} from '@/components/ui/Form';
 import { cn } from "@/lib/utils";
 import { IoMdCloseCircle } from "react-icons/io";
 import { useRouter } from "next/navigation";
@@ -205,7 +205,7 @@ function CareerSlug() {
         {isPopupOpen && (
         <div className="career-popup-container">
           <div className="career-apply-popup">
-            <div className="bg-blur rounded-2xl flex-col">
+            <div className=" rounded-2xl flex-col">
             <button
               onClick={() => setIsPopupOpen(false)}
               className="absolute top-4 right-4 text-black hover:text-gray-700"
@@ -215,7 +215,7 @@ function CareerSlug() {
             
             <h2 className="service-page-popup-head career-popup-head">APPLY FOR YOUR DREAM JOB!</h2>
             
-            <form className="my-8" onSubmit={handleSubmit}>
+            <form className="mt-8" onSubmit={handleSubmit}>
               <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
                 <LabelInputContainer>
                   <Label className="dark:text-black" htmlFor="firstname">First name</Label>
@@ -247,8 +247,13 @@ function CareerSlug() {
 
               <LabelInputContainer className="mb-4">
                 <Label className="dark:text-black" htmlFor="phoneNumber">Phone Number</Label>
-                <Input id="phoneNumber" value={formData.phoneNumber}
-                  onChange={handleChange} name="phoneNumber" placeholder="+911234567889" type="text" />
+                <PhoneInput
+                  value={formData.phoneNumber}
+                  onChange={handleChange}
+                  placeholder="Phone number"
+                  className="flex-1"
+                  name="phoneNumber"
+                />
               </LabelInputContainer>
               </div>
 
@@ -349,8 +354,8 @@ function CareerSlug() {
         </div>
 
         
+        <Footer />
       </div>
-    <Footer />
     </>
   )
 }

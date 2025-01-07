@@ -50,10 +50,13 @@ const content = [
 ];
 
 function Career() {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const pageMainRef = useRef<HTMLDivElement | null>(null);
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [isOpen, setIsOpen] = useState(false);
     
     // Pagination states
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 3;
 

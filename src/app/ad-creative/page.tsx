@@ -423,7 +423,7 @@ function AdCreative() {
             
             <Section2 Cards={section2}/>
             <Section3  content={section3} roundb="rounded-t-[50px]"/>
-            <Section4 content={section4}/>
+            <Section4 content={section4} roundb="rounded-b-[50px]"/>
             <Section6 content={section6} translate="-70%" responsiveTranslate='-85%'/>
             <Section7 content={section7}/>
             <Section8 content={section8}/>

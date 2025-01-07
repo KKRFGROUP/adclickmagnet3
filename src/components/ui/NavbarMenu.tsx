@@ -64,6 +64,36 @@ export const MenuItem: React.FC<MenuItemProps> = ({
   children,
 }) => {
   const buttonRef = React.useRef<HTMLDivElement>(null);
+  const lastScrollTop = React.useRef(0);
+
+  React.useEffect(() => {
+    // Function to handle scroll with debounce and threshold
+    let scrollTimeout: NodeJS.Timeout;
+    const handleScroll = () => {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollDelta = Math.abs(currentScroll - lastScrollTop.current);
+      
+      // Only close if scrolled more than 10 pixels
+      if (scrollDelta > 10 && active === item) {
+        // Clear any existing timeout
+        if (scrollTimeout) clearTimeout(scrollTimeout);
+        
+        // Set a new timeout for 150ms delay
+        scrollTimeout = setTimeout(() => {
+          setActive("");
+        }, 150);
+      }
+      
+      lastScrollTop.current = currentScroll;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (scrollTimeout) clearTimeout(scrollTimeout);
+    };
+  }, [active, item, setActive]);
 
   return (
     <div ref={buttonRef} onMouseEnter={() => setActive(item)} className="relative">

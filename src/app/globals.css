@@ -69,3 +69,30 @@ body {
     text-wrap: balance;
   }
 }
+
+
+/* Not Found*/
+
+.not-found-content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.not-found-content-head {
+  font-size: 150px; /* Adjust font size as needed */
+  font-weight: bold; /* Optional for bold text */
+  background-color: transparent; /* Make the text color transparent */
+  color: #ffffff15; /* Add a glow effect */
+  -webkit-text-stroke: 1px white; /* White border */
+   /* Blur the text */
+  text-align: center;
+}
+
+.not-found-content-para {
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 30px;
+}

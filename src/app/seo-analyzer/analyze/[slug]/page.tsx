@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import "../../analyze.css";
+import { AuroraBackground } from '@/components/ui/AuroraBackground';
 
 interface ProgressData {
   progress: number;
@@ -108,11 +109,13 @@ function Analyze({ params }: { params: { slug: string } }) {
   };
 
   return (
-    <div className="analyze-your-web-loader-main-container">
+    <AuroraBackground>
+
       <div className="backdrop-blur-2xl rounded-2xl border border-black/[0.2] dark:border-white/[0.2] shadow-xl analyze-your-web-loader">
         <Image 
           src="https://res.cloudinary.com/dgdgrniut/image/upload/v1732186526/adclickmagnetlogoblacklogo_reqzpl.png" 
           alt="analyzer-logo" 
+          className="seo-analyze-logo"
           height={200} 
           width={200}
           priority
@@ -126,7 +129,7 @@ function Analyze({ params }: { params: { slug: string } }) {
           onProgressChange={handleProgressChange}
         />
       </div>
-    </div>
+    </AuroraBackground>
   );
 }
 

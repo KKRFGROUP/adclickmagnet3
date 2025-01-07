@@ -1,16 +1,17 @@
 import 'animate.css';
 import { PiPaperPlaneRightBold } from "react-icons/pi";
 import Image from 'next/image';
-
+import Link from 'next/link';
 const Portfolio = () => {
     return (
       <section className="portfolio-sec-container">
         <div className="portfolio-container">
           <div className="flex justify-between items-center portfolio-container-flex">
             <p className='portfolio'>PORTFOLIO</p>
-            <button type='button' className="flex items-center gap-3 portfolio">SEE ALL PROJECTS
+            <Link href="case-studies"><button type='button' className="flex items-center gap-3 portfolio">SEE ALL PROJECTS
               <PiPaperPlaneRightBold />
-            </button>
+              </button>
+            </Link>
           </div>
           <hr className='portfolio-container-line'/>
         </div>

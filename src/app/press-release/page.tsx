@@ -5,8 +5,9 @@ import Image from 'next/image'
 import { LuMoveRight } from "react-icons/lu";
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import "./press-release.css"
 import Link from 'next/link';
+import { AuroraBackground } from '@/components/ui/AuroraBackground';
+import "./press-release.css"
 
 const pressReleases = [
   {
@@ -84,6 +85,11 @@ function PressRelease() {
     <>
     <Navbar mobileOverlayOpen={toggleMenu} isOpen={isOpen}/>
     <div ref={pageMainRef} className="page-main">
+        <AuroraBackground>
+              <div className="press-release-page-hero-sec" >
+                <h1>Press Release</h1>
+              </div>
+        </AuroraBackground>
       <div className="press-release-main-container">
           <div className="flex top-press-release-card">
               <div className="top-press-release-card-content">

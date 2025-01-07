@@ -2,9 +2,22 @@
     padding: 80px;
     height: max-content;
     background-color: #E2E2E2;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
+    border-radius: 50px;
+    position: relative;
+    bottom: 30px;
     color: #000;
+}
+.press-release-page-hero-sec {
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: "Syne";
+    font-size: 70px;
+    padding: 30px;
 }
 
 .top-press-release-card {

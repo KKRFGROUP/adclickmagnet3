@@ -67,7 +67,7 @@ function CaseStudiesSlugContent({content}: {content: {
                     </div>
 
                     <div className="blog-slug-contact-form-content-label-input">
-                        <input name="phoneNumber" className='blog-slug-contact-form-content-input' type="text" placeholder='Phone Number' />
+                        <input name="phoneNumber" className='blog-slug-contact-form-content-input' type="tel" placeholder='Phone Number' />
                         <hr />
                     </div>
 

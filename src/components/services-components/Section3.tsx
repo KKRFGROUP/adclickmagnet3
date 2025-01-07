@@ -21,7 +21,7 @@ function Section3({content, order, roundb, hide}: {content: {mainpara: string; h
     
     
   return (
-    <div id="service-section3" className={` pt-[130px]   flex justify-between services-sec3-flex-main-component ${roundb}`}>
+    <div id="service-section3" className={`flex justify-between services-sec3-flex-main-component ${roundb}`}>
        <div className={` services-sec3-content ${order}`}>
             <p className='services-secs-main-para'>{content.mainpara}</p>
             <div className=' mt-7 mb-9'>

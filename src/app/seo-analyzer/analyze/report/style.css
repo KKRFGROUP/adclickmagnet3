@@ -1,5 +1,4 @@
 .report-popup {
-    background-image: url("https://res.cloudinary.com/dgdgrniut/image/upload/v1734538406/DALL_E_2024-12-18_20.22.23_-_A_minimalist_background_image_for_a_website_featuring_a_black_theme_with_subtle_glowing_light_effects_or_abstract_objects_in_the_center._The_objects_zin44f.webp");
     background-size: cover;
     border-radius: 20px;
     backdrop-filter: blur(20px);
@@ -27,4 +26,20 @@
     color: #000;
 }
 
-.analyze-your-web-report-head {}
+
+@media (max-width: 1028px) {
+    .report-popup {
+        width: 70%;
+    }
+}
+@media (max-width: 768px) {
+    .report-popup {
+        width: 80%;
+    }
+}
+
+@media (max-width: 575px) {
+    .report-popup {
+        width: 90%;
+    }
+}

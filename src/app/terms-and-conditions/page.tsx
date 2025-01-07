@@ -91,8 +91,8 @@ function TermCondition() {
                 <p className="term-content-section-para">These Terms and Conditions apply to the websites owned and operated by <span className="text-bold">AdClickMagnet.</span></p>
 
             </div>
-        </div>
         <Footer />
+        </div>
     </>
   )
 }

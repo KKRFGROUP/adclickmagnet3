@@ -17,7 +17,7 @@ body{
     overflow: hidden;
     font-family: "Oswald", sans-serif;
     height: min-content;
-    
+    background-color: #000;
     .spline {
         position: absolute;
         top: 0;
@@ -81,7 +81,6 @@ body{
 }
 
 .what-we-do-hover-header {
-    background-image: url("https://res.cloudinary.com/dgdgrniut/image/upload/v1734538406/DALL_E_2024-12-18_20.22.23_-_A_minimalist_background_image_for_a_website_featuring_a_black_theme_with_subtle_glowing_light_effects_or_abstract_objects_in_the_center._The_objects_zin44f.webp");
     background-size: cover;
     height: 80%;
     
@@ -94,7 +93,6 @@ body{
     backdrop-filter: blur(20px);
 }
 .what-we-do-hover-footer {
-    background-image: url("https://media.istockphoto.com/id/1407063872/vector/modern-abstract-background-with-black-gradient-abstract-black-business-background.jpg?s=612x612&w=0&k=20&c=6QftyGArm3LTpQsLw29DpZ9ZB42HMNK-wboAWyFZvto=");
     background-size: cover;
     background-image: linear-gradient(120deg, #E2CBFF00, #393BB250, #E2CBFF );
 
@@ -140,7 +138,6 @@ body{
     margin-bottom: 20px;
 }
 .who-we-are-hover-sec1-img-card {
-    background-image: url("https://res.cloudinary.com/dvhmy6a4u/image/upload/v1735479812/man-593372_640_jzn0cw.jpg");
     background-size: cover;
 }
 
@@ -320,6 +317,24 @@ body{
 
 
 
+
+@media (max-width: 991px) {
+    .navbar-logo {
+        width: 20%;
+    }
+    .getintouch-card {
+        width: 17vw;
+        font-size: 10px;
+    }
+    .navlinks {
+        width: 60%;
+    }
+    .navlinks:hover {
+        width: 60%;
+    }
+    
+}
+
 @media (max-width: 768px) {
     .mobile-view-navbar-container {
         height: max-content;
@@ -350,22 +365,6 @@ body{
     }
     .navbar {
         display: none;
-    }
-    
-}
-@media (max-width: 991px) {
-    .navbar-logo {
-        width: 20%;
-    }
-    .getintouch-card {
-        width: 17vw;
-        font-size: 10px;
-    }
-    .navlinks {
-        width: 60%;
-    }
-    .navlinks:hover {
-        width: 60%;
     }
     
 }
@@ -432,7 +431,7 @@ body{
         font-size: 33px;
     }
     .home-model {
-        height: 100vh;
+        height: 90vh;
     }
 }
 
@@ -613,6 +612,14 @@ body{
     }
 }
 
+@media (max-width: 575px) {
+    .sec3-model {
+        height: 40vh;
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+}
+
 
 
 /* section 5 */
@@ -725,6 +732,7 @@ body{
     
 }
 .sec6-card-head {
+    color: #fff;
     font-weight: bold;
     font-size: 20px;
     margin: 10px;
@@ -872,12 +880,14 @@ body{
     width: 50%;
 }
 .team-behind {
+    color: #fff;
     font-weight: bold;
     font-size: 20px;
     margin-bottom: 15px;
 }
 
 .team-sec-head {
+    color: #fff;
     font-family: "Syne", sans-serif;
     font-weight: bold;
     font-size: 40px;
@@ -964,6 +974,7 @@ body{
 
 /* section 6 */
 .data-driven-head {
+    color: #000;
     font-family: "Syne", sans-serif;
 }
 @media (max-width: 768px) {
@@ -1044,6 +1055,7 @@ body{
 
 .client-video-section {
     background-color: #E2E2E2;
+    color: #000;
     padding: 80px;
     text-align: center;
     box-shadow: 0px 0px 10px 1px #fff;

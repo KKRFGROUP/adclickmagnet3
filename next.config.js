@@ -31,7 +31,9 @@ module.exports = {
   },
   transpilePackages: ['@splinetool/react-spline', '@splinetool/runtime', 'three'],
   swcMinify: true,
+  compress: true,
     images: {
+      minimumCacheTTL: 60,
       remotePatterns: [
         {
           protocol: 'https',

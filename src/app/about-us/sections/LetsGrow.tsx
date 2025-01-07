@@ -4,7 +4,7 @@ import React, { Suspense, useEffect, useState }  from 'react'
 import { OrbitControls } from '@react-three/drei/core/OrbitControls'
 import { Canvas } from "@react-three/fiber";
 import Cube2 from '@/components/3dmodels/Cube2';
-import { Input, Label } from '@/components/ui/Form';
+import { Input, Label,PhoneInput } from '@/components/ui/Form';
 import { cn } from "@/lib/utils";
 import { IoMdCloseCircle } from "react-icons/io";
 import "@/components/services-components/components.css";
@@ -144,8 +144,8 @@ function LetsGrow() {
         </div>
         {/* Popup Modal */}
             {isPopupOpen && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center pt-[20%] md:pt-[7%] h-[100vh] popup-z-index">
-                  <div className="service-page-popup">
+                <div className="fixed inset-0 bg-black flex items-center justify-center pt-[20%] md:pt-[7%] h-[100vh] popup-z-index">
+                  <div className="service-page-popup" style={{backgroundImage: "url(https://res.cloudinary.com/dgdgrniut/image/upload/v1734538406/DALL_E_2024-12-18_20.22.23_-_A_minimalist_background_image_for_a_website_featuring_a_black_theme_with_subtle_glowing_light_effects_or_abstract_objects_in_the_center._The_objects_zin44f.webp)"}}>
                     <div className="bg-blur rounded-2xl flex-col">
                     <button
                       onClick={() => setIsPopupOpen(false)}
@@ -156,7 +156,7 @@ function LetsGrow() {
                     
                     <h2 className="service-page-popup-head">Get Started</h2>
                     
-                    <form className="my-8" onSubmit={handleSubmit}>
+                    <form className="mt-8" onSubmit={handleSubmit}>
                       <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
                         <LabelInputContainer>
                           <Label htmlFor="firstname">First name</Label>
@@ -187,8 +187,13 @@ function LetsGrow() {
         
                       <LabelInputContainer className="mb-4">
                         <Label htmlFor="phoneNumber">Phone Number</Label>
-                        <Input id="phoneNumber" value={formData.phoneNumber}
-                          onChange={handleChange} name="phoneNumber" placeholder="+911234567889" type="text" />
+                        <PhoneInput
+                          value={formData.phoneNumber}
+                          onChange={handleChange}
+                          placeholder="+91123456789"
+                          className="flex-1"
+                          name="phoneNumber"
+                        />
                       </LabelInputContainer>
         
                       <LabelInputContainer className="mb-4">

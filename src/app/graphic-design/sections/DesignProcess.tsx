@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const DesignProcess = () => {
     return (
-      <section className="flex justify-between items-center graphic-page-sec2-container">
+      <section id="services-sec2-id" className="flex justify-between items-center graphic-page-sec2-container">
         <div className="graphic-page-sec2-content">
           <p className="graphic-page-sec2-content-variety">A variety of design services at your fingertips</p>
           <h2 className="graphic-page-sec2-content-head">Get graphic design,<br /> print, motion, video<br /> and more</h2>

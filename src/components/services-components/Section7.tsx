@@ -8,7 +8,7 @@ import { TypewriterEffect } from "../ui/TypewriterEffect";
 function Section7({content}: {content: {mainpara: string; heading: {text: string; className: string;}[]; para1: string; para2: string; button: string}}) {
   return (
     <div className="flex justify-center items-center services-sec7-main-container">
-        <div className="services-sec7-card">
+        <div className="services-sec7-card" style={{backgroundImage: "url(https://res.cloudinary.com/dgdgrniut/image/upload/v1734714495/Screenshot_2024-12-20_at_10.34.33_PM_am2skb.png)"}}>
             <div className="w-[50%] services-sec7-card-content">
 
                 <p className="services-secs-main-para mb-4">{content.mainpara}</p>

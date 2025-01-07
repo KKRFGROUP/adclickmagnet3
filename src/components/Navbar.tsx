@@ -127,7 +127,7 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
                                 <MenuItem setActive={setActive} active={active} item="Home" />
                             </Link>
                             <MenuItem setActive={setActive} active={active} item="What We Do">
-                                <div className='what-we-do-hover-header'>
+                                <div className='what-we-do-hover-header' style={{backgroundImage: "url(https://res.cloudinary.com/dgdgrniut/image/upload/v1734538406/DALL_E_2024-12-18_20.22.23_-_A_minimalist_background_image_for_a_website_featuring_a_black_theme_with_subtle_glowing_light_effects_or_abstract_objects_in_the_center._The_objects_zin44f.webp)"}}>
                                     <div className="bg-blur">
                                     <div className="what-we-do-hover-sec1">
                                         <h2 className="what-we-do-hover-sec1-head">Built to Elevate Your Growth</h2>
@@ -174,13 +174,13 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
                         
                         
                             <MenuItem setActive={setActive} active={active} item="Who We Are">
-                            <div className='what-we-do-hover-header'>
+                            <div className='what-we-do-hover-header' style={{backgroundImage: "url(https://res.cloudinary.com/dgdgrniut/image/upload/v1734538406/DALL_E_2024-12-18_20.22.23_-_A_minimalist_background_image_for_a_website_featuring_a_black_theme_with_subtle_glowing_light_effects_or_abstract_objects_in_the_center._The_objects_zin44f.webp)"}}>
                                     <div className="bg-blur">
                                     <div className="what-we-do-hover-sec1">
                                         <h2 className="what-we-do-hover-sec1-head">Crafted to Propel Your Success</h2>
                                         <p className="what-we-do-hover-sec1-para">Our case studies showcase how we transform visions into measurable outcomes.</p>
                                         <hr className="what-we-do-hover-sec1-line"/>
-                                        <Link href="/case-studies"><div className="what-we-do-hover-sec1-img-card who-we-are-hover-sec1-img-card">
+                                        <Link href="/case-studies"><div className="what-we-do-hover-sec1-img-card who-we-are-hover-sec1-img-card" style={{backgroundImage: "url(https://res.cloudinary.com/dvhmy6a4u/image/upload/v1735479812/man-593372_640_jzn0cw.jpg)"}}>
                                             <p className="what-we-do-hover-sec1-img-card-para text-black">Explore how we delivered impactful solutions for our clients' growth.</p>
                                             
                                         </div></Link>

@@ -164,6 +164,7 @@
 
 .blog-slug-contact-form-content-input {
     width: 100%;
+    outline: none;
     background-color: transparent;
 }
 

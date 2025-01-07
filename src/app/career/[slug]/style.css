@@ -68,7 +68,7 @@
     width: 60%;
     margin: 20px auto; /* Add margin for better spacing */
     max-width: 800px; /* Optional: limit maximum width */
-    padding: 20px;
+    padding: 45px;
 }
 
 
@@ -77,17 +77,20 @@
 @media (max-width: 1028px) {
     .career-apply-popup {
         width: 70%;
+        padding: 35px;
     }
 }
 @media (max-width: 768px) {
     .career-apply-popup {
         width: 80%;
+        padding: 25px;
     }
 }
 
 @media (max-width: 575px) {
     .career-apply-popup {
         width: 90%;
+        padding: 20px;
     }
 }
 

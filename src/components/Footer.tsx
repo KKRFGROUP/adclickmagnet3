@@ -2,7 +2,7 @@
 import { useState } from "react";
 import React from 'react';
 import Link from 'next/link';
-import { Input, Label } from './ui/Form';
+import { Input, Label, PhoneInput } from './ui/Form';
 import { cn } from "@/lib/utils";
 import { FaInstagram, FaFacebook  } from "react-icons/fa6";
 import { RiWhatsappFill } from "react-icons/ri";
@@ -178,8 +178,13 @@ export function SignupFormDemo() {
 
         <LabelInputContainer className="mb-4">
           <Label htmlFor="phoneNumber">Phone Number</Label>
-          <Input id="phoneNumber" value={formData.phoneNumber}
-            onChange={handleChange} name="phoneNumber" placeholder="+911234567889" type="text" />
+          <PhoneInput
+            value={formData.phoneNumber}
+            onChange={handleChange}
+            placeholder="Phone number"
+            className="flex-1"
+            name="phoneNumber"
+          />
         </LabelInputContainer>
 
         <LabelInputContainer className="mb-4">
