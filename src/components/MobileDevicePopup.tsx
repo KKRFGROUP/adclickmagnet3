@@ -13,20 +13,69 @@ import {
 const MobileDevicePopup = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Helper function to check if localStorage is available
+  const isLocalStorageAvailable = () => {
+    try {
+      const test = 'test';
+      localStorage.setItem(test, test);
+      localStorage.removeItem(test);
+      return true;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (e) {
+      return false;
+    }
+  };
+
+  // Helper function to get cookie
+  const getCookie = (name: string): string | null => {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) {
+      return parts.pop()?.split(';').shift() || null;
+    }
+    return null;
+  };
+
+  // Helper function to set cookie with 365 days expiry
+  const setCookie = (name: string, value: string) => {
+    const date = new Date();
+    date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000)); // 365 days
+    document.cookie = `${name}=${value}; expires=${date.toUTCString()}; path=/`;
+  };
+
+  // Helper function to check if user has seen popup
+  const hasUserSeenPopup = (): boolean => {
+    if (isLocalStorageAvailable()) {
+      return localStorage.getItem('hasSeenMobilePopup') === 'true';
+    }
+    return getCookie('hasSeenMobilePopup') === 'true';
+  };
+
+  // Helper function to mark popup as seen
+  const markPopupAsSeen = () => {
+    if (isLocalStorageAvailable()) {
+      localStorage.setItem('hasSeenMobilePopup', 'true');
+    } else {
+      setCookie('hasSeenMobilePopup', 'true');
+    }
+  };
+
   useEffect(() => {
-    const hasSeenPopup = localStorage.getItem('hasSeenMobilePopup');
-    
     const checkIsMobile = () => window.innerWidth < 768;
     
-    if (!hasSeenPopup && checkIsMobile()) {
+    const shouldShowPopup = () => {
+      return !hasUserSeenPopup() && checkIsMobile();
+    };
+
+    if (shouldShowPopup()) {
       setIsOpen(true);
-      localStorage.setItem('hasSeenMobilePopup', 'true');
+      markPopupAsSeen();
     }
 
     const handleResize = () => {
-      if (!hasSeenPopup && checkIsMobile()) {
+      if (shouldShowPopup()) {
         setIsOpen(true);
-        localStorage.setItem('hasSeenMobilePopup', 'true');
+        markPopupAsSeen();
       }
     };
 
@@ -38,7 +87,7 @@ const MobileDevicePopup = () => {
 
   return (
     <AlertDialog open={isOpen}>
-      <AlertDialogContent className="bg-white  rounded-2xl shadow-xl max-w-[80%] mx-2" style={{fontFamily: "Syne"}}>
+      <AlertDialogContent className="bg-white rounded-2xl shadow-xl max-w-[80%] mx-2" style={{fontFamily: "Syne"}}>
         <AlertDialogHeader>
           <AlertDialogTitle className="text-xl font-bold text-gray-900 mb-2">
             Desktop Recommended
