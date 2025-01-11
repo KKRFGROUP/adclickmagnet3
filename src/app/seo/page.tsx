@@ -20,7 +20,8 @@ import { TracingBeam } from "../../components/ui/TracingBeam";
 import { MdOutlineContentPasteSearch } from "react-icons/md";
 import { HiDevicePhoneMobile } from "react-icons/hi2";
 import { GrTechnology } from "react-icons/gr";
-import { SiPowerpages,SiPagespeedinsights } from "react-icons/si";
+import {SiPagespeedinsights } from "react-icons/si";
+import { LiaPagerSolid } from "react-icons/lia";
 import { VscSymbolKeyword } from "react-icons/vsc";
 import ContactOurExperts from '@/components/services-components/ContactOurExperts';
 
@@ -147,7 +148,7 @@ const section4: {mainpara: string; head: string;para?: string; cards: {logo: Rea
       para: "We optimize factors like site speed, mobile-friendliness, secure connections (HTTPS), and a well-structured URL hierarchy."
     },
     {
-      logo: <SiPowerpages className='text-3xl' />,
+      logo: <LiaPagerSolid className='text-3xl' />,
       head: "On-Page SEO",
       para: "We optimise meta titles, descriptions, and header tags, and ensure proper keyword usage."
     },

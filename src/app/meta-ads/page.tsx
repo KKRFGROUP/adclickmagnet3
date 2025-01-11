@@ -18,7 +18,8 @@ import { TbListSearch } from "react-icons/tb";
 import { FaRegEdit } from "react-icons/fa";
 import { HiDocumentReport } from "react-icons/hi";
 import { GiOnTarget } from "react-icons/gi";
-import { SiGoogleoptimize, SiMicrostrategy } from "react-icons/si";
+import { SiMicrostrategy } from "react-icons/si";
+import { GrOptimize } from "react-icons/gr";
 
 
 //logos
@@ -154,7 +155,7 @@ const section4 = {
         para: "We fine-tune audience targeting for Facebook and Instagram, using retargeting strategies to reach previous website visitors and maximize conversions."
       },
       {
-        logo: <SiGoogleoptimize className='text-3xl' />,
+        logo: <GrOptimize className='text-3xl' />,
         head: "Conversion Tracking & Optimization",
         para: "Implement advanced tracking tools to monitor conversions and optimize Meta Ads campaigns, ensuring continuous improvements in performance and ROI."
       },
