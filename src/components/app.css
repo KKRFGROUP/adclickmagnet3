@@ -1100,7 +1100,6 @@ video::-webkit-media-controls {
 
 .client-video-card-video {
     border-radius: 20px;
-    
 }
 
 @media (max-width: 1028px) {
