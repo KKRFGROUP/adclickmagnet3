@@ -6,8 +6,10 @@ import { LuMoveRight } from "react-icons/lu";
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import { FaCaretRight,FaCaretLeft } from "react-icons/fa";
 import { AuroraBackground } from '@/components/ui/AuroraBackground';
 import "./press-release.css"
+import '../blogs/blogs.css'
 
 const pressReleases = [
   {
@@ -57,6 +59,14 @@ const pressReleases = [
     img: "http://www.threegirlsmedia.com/wp-content/uploads/2015/10/promoting-press-release.jpg",
     time: "2024-11-17T12:20:00Z",
     link: "record-breaking-growth-in-annual-revenue-announced"
+  },
+  {
+    id: 7,
+    heading: "Record-Breaking Growth in Annual Revenue Announced",
+    para: "This year marks a record-breaking growth in our annual revenue, demonstrating the effectiveness of our strategic initiatives and commitment to delivering exceptional value.",
+    img: "http://www.threegirlsmedia.com/wp-content/uploads/2015/10/promoting-press-release.jpg",
+    time: "2024-11-17T12:20:00Z",
+    link: "record-breaking-growth-in-annual-revenue-announced"
   }
 ];
 
@@ -64,11 +74,22 @@ const pressReleases = [
   
   
   
-  
-
 function PressRelease() {
   const pageMainRef = useRef<HTMLDivElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6;
+
+  // Sort press releases by date if needed
+  const sortedPressReleases = pressReleases.sort(
+    (a, b) => new Date(b.time).getTime() - new Date(a.time).getTime()
+  );
+
+  // Get paginated items
+  const paginatedPressReleases = sortedPressReleases.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
 
   const toggleMenu = (arg?: boolean) => {
     setIsOpen(arg ?? !isOpen);
@@ -81,6 +102,24 @@ function PressRelease() {
       }
     }
   };
+
+  const scrollToTop = () => {
+    const pressReleaseSection = document.querySelector('.press-release-cards-container');
+    if (pressReleaseSection) {
+      pressReleaseSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  const handlePrevPage = () => {
+    setCurrentPage((prev) => prev - 1);
+    setTimeout(scrollToTop, 0);
+  };
+
+  const handleNextPage = () => {
+    setCurrentPage((prev) => prev + 1);
+    setTimeout(scrollToTop, 0);
+  };
+
   return (
     <>
     <Navbar mobileOverlayOpen={toggleMenu} isOpen={isOpen}/>
@@ -106,7 +145,7 @@ function PressRelease() {
           </div>
 
           <div className=" pb-8  press-release-cards-container">
-              {pressReleases.map((each,index) => (
+              {paginatedPressReleases.map((each,index) => (
                   <Link key={index} href={`/press-release/${each.link}`} className="press-release-card">
                       
                           <Image className="press-release-card-img" src={each.img} alt="press release img" height={500} width={500} />
@@ -122,6 +161,26 @@ function PressRelease() {
                       
                   </Link>
               ))}
+
+              {/* Pagination buttons */}
+            <div className='pagination-container w-full flex justify-between mx-9'>
+                <button 
+                  className='pagination-btn' 
+                  onClick={handlePrevPage} 
+                  disabled={currentPage === 1}
+                >
+                  <FaCaretLeft />
+                  Previous
+                </button>
+                <button 
+                  className='pagination-btn'
+                  onClick={handleNextPage}
+                  disabled={currentPage === Math.ceil(pressReleases.length / itemsPerPage)}
+                >
+                  Next
+                  <FaCaretRight />
+                </button>
+            </div>
           </div>
       </div>
       <Footer />

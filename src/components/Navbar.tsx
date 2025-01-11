@@ -1,7 +1,6 @@
 "use client";
 
-import React from 'react'
-import { useState,useEffect } from "react";
+import React, { useState, useEffect, useCallback, memo } from 'react';
 
 import { Menu, MenuItem } from "./ui/NavbarMenu";
 import { cn } from "@/lib/utils";
@@ -15,6 +14,9 @@ import { IoMdAdd } from "react-icons/io";
 import { FaInstagram, FaFacebook  } from "react-icons/fa6";
 import { RiWhatsappFill } from "react-icons/ri";
 import './app.css'
+
+
+
 
 const hoverImageArr = [
     {
@@ -73,45 +75,106 @@ const hoverImageArr = [
     
 ]
 
-const defaultImage =  "https://res.cloudinary.com/dgdgrniut/image/upload/v1734527641/acm_white_logo-removebg-preview_qgn8qq_hs2io7.png"
+
+const defaultImage = "https://res.cloudinary.com/dgdgrniut/image/upload/v1734527641/acm_white_logo-removebg-preview_qgn8qq_hs2io7.png";
+
+// Memoized Components
+const Logo = memo(() => (
+    <Link href="/" className="cursor-none">
+        <Image 
+            priority 
+            className="mobile-view-navbar-logo" 
+            src="https://res.cloudinary.com/dgdgrniut/image/upload/v1732186526/adclickmagnetlogoblacklogo_reqzpl.png"
+            alt="ACM Logo" 
+            height={100} 
+            width={150}
+        />
+    </Link>
+));
+
+Logo.displayName = 'Logo';
+
+const SocialLinks = memo(() => (
+    <div className="flex items-center gap-7">
+        <Link href="https://www.instagram.com/adclickmagnet" aria-label="Instagram">
+            <FaInstagram className="social-media-handle-logo"/>
+        </Link>
+        <Link href="https://wa.me/+918800262061" aria-label="WhatsApp">
+            <RiWhatsappFill className="social-media-handle-logo"/>
+        </Link>
+        <Link href="https://www.facebook.com/profile.php?id=61552551834420" aria-label="Facebook">
+            <FaFacebook className="social-media-handle-logo"/>
+        </Link>
+    </div>
+));
+
+SocialLinks.displayName = 'SocialLinks';
+
+// Main Navbar Component
+interface NavbarProps {
+    className?: string;
+    mobileOverlayOpen: (arg?: boolean) => void;
+    isOpen: boolean;
+}
 
 
-
-export default function Navbar({className, mobileOverlayOpen, isOpen }: {className?: string; mobileOverlayOpen:  (arg?: boolean) => void; isOpen: boolean;}) {
+export default function Navbar({className, mobileOverlayOpen, isOpen }: NavbarProps) {
     const [active, setActive] = useState<string | null>(null);
-    const [whoWeAre, setWhoWeAre] = useState(false);
-    const [services, setServices] = useState(false);
-    const [graphicDesign, setGraphicDesign] = useState(false);
-    const [adServices, setAdServices] = useState(false);
-   const [isVisible, setIsVisible] = useState(true);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [hoverImage, setHoverImage] = useState(defaultImage);
-  
+    const [menuStates, setMenuStates] = useState({
+        whoWeAre: false,
+        services: false,
+        graphicDesign: false,
+        adServices: false
+    });
+    const [isVisible, setIsVisible] = useState(true);
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [hoverImage, setHoverImage] = useState(defaultImage);
 
-  useEffect(() => {
+    // Scroll handler with throttling
+    useEffect(() => {
+        let ticking = false;
         const handleScroll = () => {
-        const currentScrollPos = window.scrollY;
-
-        // Hide navbar if scrolling down, show if scrolling up
-        setIsVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
-        setPrevScrollPos(currentScrollPos);
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    const currentScrollPos = window.scrollY;
+                    setIsVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+                    setPrevScrollPos(currentScrollPos);
+                    ticking = false;
+                });
+                ticking = true;
+            }
         };
 
-        window.addEventListener("scroll", handleScroll);
-
+        window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
     }, [prevScrollPos]);
 
-    
+    // Handlers
+    const toggleMenu = useCallback((key: keyof typeof menuStates) => {
+        setMenuStates(prev => ({
+            ...prev,
+            [key]: !prev[key]
+        }));
+    }, []);
 
-  
+    const handleHoverImage = useCallback((name: string) => {
+        const image = hoverImageArr.find(item => item.name === name)?.img || defaultImage;
+        setHoverImage(image);
+    }, []);
 
-  
+    const handleMobileMenuClick = useCallback(() => {
+        setMenuStates({
+            whoWeAre: false,
+            services: false,
+            graphicDesign: false,
+            adServices: false
+        });
+        mobileOverlayOpen(false);
+    }, [mobileOverlayOpen]);
 
-  const handleHoverImage = (name: string) => {
-    const object = hoverImageArr.find((each) => each.name === name)
-    setHoverImage(object?.img || defaultImage);
-  }
+    const contactNumberApi = {
+        contactNumber: "+1-718-577-2718"
+      }
   
 
   return (
@@ -121,7 +184,7 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
         transition: "top 0.4s",
         top: isVisible ? "10px" : "-120px", // Adjust "-80px" to the height of your navbar
         zIndex: 1000,
-    }} className={cn(" fixed inset-x-0 mx-auto z-50", className)}>
+        }} className={cn(" fixed inset-x-0 mx-auto z-50", className)}>
                     <Menu setActive={setActive}>
                             <Link href="/" className="cursor-none">
                                 <MenuItem setActive={setActive} active={active} item="Home" />
@@ -142,6 +205,7 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
                                         <Link href="/blogs"><p className="what-we-do-hover-sec1-para-company">Blogs</p></Link>
                                         <Link href="/press-release"><p className="what-we-do-hover-sec1-para-company">Press Release</p></Link>
                                     </div>
+
                                     <div className="what-we-do-hover-secs">  
                                         <h2 className="what-we-do-hover-secs-head">Creative services</h2>
                                         <Link href="/graphic-design" onMouseEnter={() => handleHoverImage("Graphic Design")} onMouseLeave={() => handleHoverImage(defaultImage)}><p className="what-we-do-hover-secs-para">Graphic Design</p></Link>
@@ -168,7 +232,7 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
                                 </div>
                                 <div className="what-we-do-hover-footer">
                                     <p>Need a dedicated solution tailored to your needs?<br />Contact us, we will create it especially for you!</p>
-                                    <p>or    call  +1 718 577 2718</p>
+                                    <a href={`tel:${contactNumberApi.contactNumber}`}><p>or    call  {contactNumberApi.contactNumber}</p></a>
                                 </div>
                             </MenuItem>
                         
@@ -209,34 +273,27 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
                                 </div>
                                 <div className="what-we-do-hover-footer">
                                     <p>Need a dedicated solution tailored to your needs?<br />Contact us, we will create it especially for you!</p>
-                                    <p>or    call  +1 718 577 2718</p>
+                                    <a href={`tel:${contactNumberApi.contactNumber}`}><p>or    call  {contactNumberApi.contactNumber}</p></a>
                                 </div>
                             </MenuItem>
                         
                         <Link href="/contact-us" className="cursor-none">
                             <MenuItem setActive={setActive} active={active} item="Contact Us" />
                         </Link>
-                    </Menu>
-
-                    
-                        
-                        
-                    
-                    
+                    </Menu>           
     </div>
 
 
     <div className="mobile-view-navbar-container fixed inset-x-0 z-50 mx-2 top-[10px] rounded-[20px] border border-transparent dark:bg-white/[0.4] dark:border-black bg-white shadow-input space-x-4 py-1 px-3 mx-1">
-                        <Link href="/" className=" font-bold">
-                            <Image className="mobile-view-navbar-logo" src="https://res.cloudinary.com/dgdgrniut/image/upload/v1732186526/adclickmagnetlogoblacklogo_reqzpl.png" alt="logo" height={100} width={150} />
-                        </Link>
+                <Logo />
+                <button 
+                    type="button" 
+                    className="navbar-menu-container" 
+                    onClick={() => mobileOverlayOpen()}>
+                    <CgMenuHotdog className="text-4xl text-black"/>
+                </button>
 
-                        
-                        <button type="button" className="navbar-menu-container" onClick={() => mobileOverlayOpen()}>
-                            <CgMenuHotdog className="text-4xl text-black bg:text-black"/>
-                        </button>
-
-                        {/* Fullscreen Overlay */}
+                {/* Fullscreen Overlay */}
                        
                     </div>
                         <div
@@ -246,33 +303,40 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
                         >
                             <div>
                                 <div className="mobile-overlay-logo-cross mx-4">
-                                    <Link href="/" className=" font-bold">
-                                        <Image className="mobile-view-navbar-logo" src="https://res.cloudinary.com/dgdgrniut/image/upload/v1732186526/adclickmagnetlogoblacklogo_reqzpl.png" alt="logo" height={200} width={250} />
-                                    </Link>
+                                <Logo />
+                                <button
+                                    onClick={() => mobileOverlayOpen(false)}
+                                    className="mr-3"
+                                >
+                                    <RxCross2 className="text-4xl text-black"/>
+                                </button>
 
-                                    <button
-                                        onClick={() => mobileOverlayOpen()}
-                                        className="mr-3"
-                                        >
-                                        <RxCross2 className="text-4xl text-black bg:text-black"/>
-                                    </button>
-
-                                </div>
+                            </div>
 
                                 <nav className="mobile-navlinks">
-                                    <Link className="w-full mb-7" href="/" onClick={() => mobileOverlayOpen(false)}>Home</Link>
+                                <Link 
+                                    className="w-full mb-7" 
+                                    href="/" 
+                                    onClick={handleMobileMenuClick}
+                                >
+                                    Home
+                                </Link>
+
+                                {/* Mobile Services Menu */}
+                                <div 
+                                    onClick={() => {toggleMenu('services'); setMenuStates(prev => ({...prev,["whoWeAre"]: false}));}} 
+                                    className="flex gap-4 items-center mb-7"
+                                >
+                                    <p>Services</p>
+                                    <IoMdAdd />
+                                </div>
                                     
-                                    <div onClick={() => {setServices(!services); setWhoWeAre(false)}} className="flex gap-4 items-center mb-7">
-                                        <p>Services</p>
-                                        <div >
-                                            <IoMdAdd /> 
-                                        </div>
-                                    </div>
                                     
-                                    
-                                    <div className={`services-drop-down ${services ? "scale-100" : "scale-0 h-0"}`}>
+                                    {/* Mobile Services Submenu */}
+                                    <div className={`services-drop-down ${menuStates.services ? "scale-100" : "scale-0 h-0"}`}>
+                                            {/* Add services submenu content */}
                                             
-                                            <div onClick={() => {setGraphicDesign(!graphicDesign); setAdServices(false); setWhoWeAre(false)}} className="flex gap-4 items-center mb-2" >
+                                            <div onClick={() => {toggleMenu("graphicDesign"); setMenuStates(prev => ({...prev,["adServices"]: false})); setMenuStates(prev => ({...prev,["whoWeAre"]: false}));}} className="flex gap-4 items-center mb-2" >
                                                 <p>Creative Design</p>
                                                 <div >
                                                     <IoMdAdd /> 
@@ -280,7 +344,7 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
                                             </div>
                                             <hr className="w-full mb-5"/>
                                                 
-                                                    <div className={`services-drop-down dark:text-black ${graphicDesign ? "animate__backInUp" : "animate__backOutDown scale-0 h-0"}`}>
+                                                    <div className={`services-drop-down dark:text-black ${menuStates.graphicDesign ? "animate__backInUp" : "animate__backOutDown scale-0 h-0"}`}>
                                                         <Link className="w-full mb-2" href="/graphic-design" onClick={() => mobileOverlayOpen(false)}>Graphic Design</Link>
                                                         <hr className="w-full mb-3"/>
                                                         <Link className="w-full mb-2" href="/ad-creative" onClick={() => mobileOverlayOpen(false)}>Ad Creative</Link>
@@ -294,14 +358,14 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
                                                         <Link className="w-full mb-2" href="/presentation-design" onClick={() => mobileOverlayOpen(false)}>Presentation Design</Link>
                                                         <hr className="w-full mb-5"/>
                                                     </div>
-                                            <div onClick={() => {setAdServices(!adServices); setGraphicDesign(false); setWhoWeAre(false)}} className="flex gap-4 items-center mb-2" >
+                                            <div onClick={() => {toggleMenu("adServices"); setMenuStates(prev => ({...prev,["graphicDesign"]: false})); setMenuStates(prev => ({...prev,["whoWeAre"]: false}));}} className="flex gap-4 items-center mb-2" >
                                                 <p>Digital Ads Services</p>
                                                 <div >
                                                     <IoMdAdd /> 
                                                 </div>
                                             </div>
                                             <hr className="w-full mb-5"/>
-                                            <div className={`services-drop-down dark:text-black ${adServices ? "animate__backInUp " : "animate__backOutDown scale-0 h-0"}`}>
+                                            <div className={`services-drop-down dark:text-black ${menuStates.adServices ? "animate__backInUp " : "animate__backOutDown scale-0 h-0"}`}>
                                                 <Link className="w-full mb-2" href="/google-ads" onClick={() => mobileOverlayOpen(false)}>Google ads</Link>
                                                 <hr className="w-full mb-3"/>
                                                 <Link className="w-full mb-2" href="/linkedin-ads" onClick={() => mobileOverlayOpen(false)}>Linkedin Ads</Link>
@@ -315,14 +379,14 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
                                             </div>
                                     </div>
 
-                                    <div onClick={() => {setWhoWeAre(!whoWeAre); setServices(false);}} className="flex gap-4 items-center mb-7">
+                                    <div onClick={() => {toggleMenu('whoWeAre'); setMenuStates(prev => ({...prev,["services"]: false}));}}  className="flex gap-4 items-center mb-7">
                                         <p>Who We Are</p>
                                         <div >
                                             <IoMdAdd /> 
                                         </div>
                                     </div>
                                     
-                                    <div className={`services-drop-down ${whoWeAre ? "scale-100" : "scale-0 h-0"}`}>
+                                    <div className={`services-drop-down ${menuStates.whoWeAre ? "scale-100" : "scale-0 h-0"}`}>
                                             <Link className="w-full mb-2" href="/about-us" onClick={() => mobileOverlayOpen(false)}>Who We Are</Link>
                                             <hr className="w-full mb-3"/>
                                             <Link className="w-full mb-2" href="/career" onClick={() => mobileOverlayOpen(false)}>Careers</Link>
@@ -350,4 +414,5 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: {classNa
     </>
   )
 }
+
 

@@ -875,7 +875,7 @@ video::-webkit-media-controls {
 }
 
 
-.scrolling-text-item {
+.scrolling-text-item1 {
     padding: 0 30px;
     transform: translateX(-100%);
 }
@@ -904,11 +904,11 @@ video::-webkit-media-controls {
 /* Setting the Animation using Keyframes */
 @keyframes scroll-left {
     0% {
-        transform: translateX(0%);
+        transform: translateX(50%);
     }
 
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-75%);
     }
 }
 

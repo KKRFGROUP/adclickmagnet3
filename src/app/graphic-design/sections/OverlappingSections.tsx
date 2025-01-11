@@ -6,7 +6,28 @@ import Image from "next/image";
 import Link from "next/link";
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
-
+const demoCaseStudies = [
+  {
+    id: 1,
+    heading: "10 Tips for Writing Clean Code",
+    paragraph: "Writing clean code is essential for maintainability and scalability. Here are 10 tips to help you write better code.",
+    time: "2024-11-22T09:00:00Z",
+    category: "web development",
+    name: "John Doe",
+    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+    link: "10-tips-for-writing-clean-code"
+  },
+  {
+    id: 2,
+    heading: "The Future of Responsive Design",
+    paragraph: "Learn how responsive design is evolving and why it's critical for modern web development.",
+    time: "2024-11-21T12:00:00Z",
+    category: "web development",
+    name: "Jane Smith",
+    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+    link: "the-future-of-responsive-design"
+  },
+]
 
 const OverlappingSections = () => {
   const [windowWidth, setWindowWidth] = useState(0);
@@ -75,12 +96,12 @@ const OverlappingSections = () => {
         <div className={`flex card1  custom-card ${windowWidth <= 768 ? "" : ""}`} >
           <div className="graphic-page-sec2-content text-black">
             <p className="graphic-page-sec2-content-variety mb-4">Customer Stories</p>
-            <h2 className="graphic-page-sec2-content-head mb-4">ACM Revamps To<br /> Build Trust &<br /> Reputation at Scale</h2>
-            <p className="graphic-page-sec2-content-para">ACM is transforming its digital marketing strategies to build trust and reputation at scale. By focusing on data-driven tactics, innovative campaigns, and a customer-first approach, ACM aims to enhance credibility, deliver measurable growth, and become the go-to partner for businesses seeking long-term success.</p>
-            <Link href="/case-studies">  <button className="read-customer-stories mt-[40px]" type="button">Get Customer Stories</button></Link>
+            <h2 className="graphic-page-sec2-content-head mb-4">{demoCaseStudies[0].heading}</h2>
+            <p className="graphic-page-sec2-content-para">{demoCaseStudies[0].paragraph}</p>
+            <Link href={`/case-studies/${demoCaseStudies[0].link}`}>  <button className="read-customer-stories mt-[40px]" type="button">Get Customer Stories</button></Link>
           </div>
             <div className="graphic-page-sec2-graphic-card">
-              <Image className="graphic-page-overlap-gif overlapping-cards-img" src="https://res.cloudinary.com/dgdgrniut/image/upload/v1733497938/Untitled_design_6_bm5rhg.png" alt="gif" width={300} height={300} />
+              <Image className="graphic-page-overlap-gif overlapping-cards-img" src={demoCaseStudies[0].image} alt="gif" width={300} height={300} />
             </div>
           
         </div>
@@ -88,14 +109,14 @@ const OverlappingSections = () => {
 
         <div className="flex card2   custom-card" >
             <div className="graphic-page-sec2-graphic-card graphic-page-sec2-graphic-card-second">
-              <Image className="graphic-page-overlap-gif overlapping-cards-img" src="https://res.cloudinary.com/dgdgrniut/image/upload/v1733497938/Untitled_design_7_digizs.png" alt="gif" width={300} height={300} />
+              <Image className="graphic-page-overlap-gif overlapping-cards-img" src={demoCaseStudies[1].image} alt="gif" width={300} height={300} />
             </div>
           
           <div className="graphic-page-sec2-content text-black">
             <p className="graphic-page-sec2-content-variety mb-4">Customer Stories</p>
-            <h2 className="graphic-page-sec2-content-head mb-4">Using ACM to<br /> untangle the flow of<br /> creative assets</h2>
-            <p className="graphic-page-sec2-content-para">The velocity and volume of Imperfect Food&apos;s growth teams creative needs were outpacing their internal design teams capacity. ACM was able to jump into action supporting their rigourous ad creative needs and contribute to customer acquisition.</p>
-            <Link href="/case-studies">  <button className="read-customer-stories mt-[40px]" type="button">Get Customer Stories</button></Link>
+            <h2 className="graphic-page-sec2-content-head mb-4">{demoCaseStudies[1].heading}</h2>
+            <p className="graphic-page-sec2-content-para">{demoCaseStudies[1].paragraph}</p>
+            <Link href={`/case-studies/${demoCaseStudies[1].link}`}>  <button className="read-customer-stories mt-[40px]" type="button">Get Customer Stories</button></Link>
           </div>
         </div>
         

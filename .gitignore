@@ -8,6 +8,9 @@
 
 .env
 
+sshkey
+sshkey.pub
+
 # testing
 /coverage
 

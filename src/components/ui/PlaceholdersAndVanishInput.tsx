@@ -1,3 +1,4 @@
+// PlaceholdersAndVanishInput.tsx
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
@@ -7,7 +8,9 @@ import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useRouter } from "next/navigation";
 
-gsap.registerPlugin(ScrollTrigger);
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 interface CanvasPoint {
   x: number;
@@ -28,6 +31,7 @@ export function PlaceholdersAndVanishInput({
 }) {
   const [windowWidth, setWindowWidth] = useState(0);
   const [currentPlaceholder, setCurrentPlaceholder] = useState(0);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const startAnimation = () => {
@@ -35,55 +39,83 @@ export function PlaceholdersAndVanishInput({
       setCurrentPlaceholder((prev) => (prev + 1) % placeholders.length);
     }, 3000);
   };
+
   const handleVisibilityChange = () => {
     if (document.visibilityState !== "visible" && intervalRef.current) {
-      clearInterval(intervalRef.current); // Clear the interval when the tab is not visible
+      clearInterval(intervalRef.current);
       intervalRef.current = null;
     } else if (document.visibilityState === "visible") {
-      startAnimation(); // Restart the interval when the tab becomes visible
+      startAnimation();
     }
   };
 
   useEffect(() => {
-    startAnimation();
-    document.addEventListener("visibilitychange", handleVisibilityChange);
     if (typeof window !== "undefined") {
-      gsap.registerPlugin(ScrollTrigger);
-
-      // Update windowWidth on resize
       const updateWidth = () => setWindowWidth(window.innerWidth);
       updateWidth();
       window.addEventListener("resize", updateWidth);
+
+      // Clean up the resize listener
+      return () => window.removeEventListener("resize", updateWidth);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (formRef.current && typeof window !== "undefined") {
       let startFrom;
+      let endTo: string | undefined;
       if (windowWidth <= 575) {
-        startFrom = "top 50%"
+        startFrom = "top 60%"
+        endTo = "bottom 90%"
       } else if (windowWidth <= 768) {
+        startFrom = "top 40%"
+        endTo = "bottom 85%"
+      } else if (windowWidth <= 1028) {
         startFrom = "top 30%"
       } else {
-        startFrom = "top -10%"
+        startFrom = "top 0%"
+        endTo = "bottom 80%"
       }
-      gsap.to(".placeholder", {
-        scale: 1,
-        height: windowWidth <= 1028 ? "8vh" : "10vh",
-        opacity: 1,
-        scrollTrigger: {
-          trigger: ".home-sec3-trigger",
-          start:  startFrom,
-          scroller: "body",
-          end: "bottom 90%",
-          scrub: true,
-        },
+      
+
+      const ctx = gsap.context(() => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".home-sec3-trigger",
+            start: startFrom,
+            end: endTo,
+            scrub: 1,
+          }
+        });
+
+        tl.fromTo(formRef.current, {
+          scale: 0.5,
+          opacity: 0,
+          height: windowWidth <= 1028 ? "10vh" : "8vh",
+        }, {
+          scale: 1,
+          opacity: 1,
+          height: windowWidth <= 1028 ? "13vh" : "12vh",
+          duration: 1,
+          ease: "power2.out"
+        });
       });
+
+      return () => ctx.revert();
     }
+  }, [windowWidth]);
+
+  useEffect(() => {
+    startAnimation();
+    document.addEventListener("visibilitychange", handleVisibilityChange);
 
     return () => {
       if (intervalRef.current) {
         clearInterval(intervalRef.current);
       }
-      
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
-  }, [placeholders, windowWidth]);
+  }, [placeholders]);
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const newDataRef = useRef<CanvasPoint[]>([]);
@@ -95,7 +127,7 @@ export function PlaceholdersAndVanishInput({
     if (!inputRef.current) return;
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d", { willReadFrequently: true });
     if (!ctx) return;
 
     canvas.width = 800;
@@ -124,7 +156,7 @@ export function PlaceholdersAndVanishInput({
           newData.push({
             x: n,
             y: t,
-            r:1,
+            r: 1,
             color: `rgba(${pixelData[e]}, ${pixelData[e + 1]}, ${pixelData[e + 2]}, ${pixelData[e + 3]})`,
           });
         }
@@ -143,8 +175,7 @@ export function PlaceholdersAndVanishInput({
       requestAnimationFrame(() => {
         const newArr: CanvasPoint[] = [];
         for (let i = 0; i < newDataRef.current.length; i++) {
-          // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-          const current: CanvasPoint= newDataRef.current[i] ;
+          const current: CanvasPoint = newDataRef.current[i];
           if (current.x < pos) {
             newArr.push(current);
           } else {
@@ -159,11 +190,10 @@ export function PlaceholdersAndVanishInput({
           }
         }
         newDataRef.current = newArr;
-        const ctx = canvasRef.current?.getContext("2d");
+        const ctx = canvasRef.current?.getContext("2d", { willReadFrequently: true });
         if (ctx) {
           ctx.clearRect(pos, 0, 800, 800);
           newDataRef.current.forEach((t) => {
-            // eslint-disable-next-line @typescript-eslint/no-unused-expressions
             const { x: n, y: i, r: s, color: color } = t;
             if (n > pos) {
               ctx.beginPath();
@@ -185,12 +215,6 @@ export function PlaceholdersAndVanishInput({
     animateFrame(start);
   };
 
-  //const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-  //  if (e.key === "Enter" && !animating) {
-  //    vanishAndSubmit();
-  //  }
-  //};
-
   const vanishAndSubmit = () => {
     setAnimating(true);
     draw();
@@ -198,7 +222,6 @@ export function PlaceholdersAndVanishInput({
     const value = inputRef.current?.value || "";
     if (value && inputRef.current) {
       const maxX = newDataRef.current.reduce(
-        
         (prev, current) => (current.x > prev ? current.x : prev),
         0
       );
@@ -208,21 +231,23 @@ export function PlaceholdersAndVanishInput({
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    //eslint-disable-next-line @typescript-eslint/no-unused-expressions
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     onSubmit && onSubmit(e);
     vanishAndSubmit();
   };
+
   return (
     <form
+      ref={formRef}
       className={cn(
-        " flex justify-center relative bg-white dark:bg-white/[0.7] h-12 rounded-full overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200 mx-auto sm:mx-10 sm:w-[85%] placeholder",
+        "flex justify-center relative bg-white dark:bg-white rounded-full overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200 mx-auto sm:mx-10 sm:w-[85%] placeholder",
         value && "bg-gray-50"
       )}
       onSubmit={handleSubmit}
     >
       <canvas
         className={cn(
-          "absolute pointer-events-none  text-base transform scale-50 top-[20%] left-2 sm:left-8 origin-top-left filter invert dark:invert-0 pr-20",
+          "absolute pointer-events-none text-base transform scale-50 top-[20%] left-2 sm:left-8 origin-top-left filter invert dark:invert-0 pr-20",
           !animating ? "opacity-0" : "opacity-100"
         )}
         ref={canvasRef}
@@ -235,13 +260,12 @@ export function PlaceholdersAndVanishInput({
             onChange && onChange(e);
           }
         }}
-        //onKeyDown={handleKeyDown}
         ref={inputRef}
         value={value}
         type="text"
         className={cn(
           "w-full relative text-xl z-50 border-none dark:text-black bg-transparent text-black h-full rounded-full focus:outline-none focus:ring-0 pl-4 sm:pl-10 pr-20",
-          animating && "text-transparent dark:text-transparent"
+          animating && "text-black dark:text-black"
         )}
       />
 
@@ -285,7 +309,6 @@ export function PlaceholdersAndVanishInput({
   );
 }
 
-
 export function PlaceholdersAndVanishInputDemo() {
   const router = useRouter();
   const [value, setValue] = useState("");
@@ -301,17 +324,16 @@ export function PlaceholdersAndVanishInputDemo() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
-    console.log(e.target.value);
   };
 
   function getWebsiteName(url: string): string {
     try {
-      const hostname = new URL(url).hostname; // Extract hostname (e.g., adclickmagnet.com)
-      const name = hostname.split(".")[0]; // Split by "." and take the first part
+      const hostname = new URL(url).hostname;
+      const name = hostname.split(".")[0];
       return name;
     } catch (error) {
       console.error("Invalid URL:", error);
-      return ""; // Return an empty string for invalid URLs
+      return "";
     }
   }
 
@@ -320,12 +342,12 @@ export function PlaceholdersAndVanishInputDemo() {
     const name = getWebsiteName(value);
     router.push(`/seo-analyzer/analyze/${name}`);
   };
-  return (
 
-      <PlaceholdersAndVanishInput
-        placeholders={placeholders}
-        onChange={handleChange}
-        onSubmit={onSubmit}
-      />
+  return (
+    <PlaceholdersAndVanishInput
+      placeholders={placeholders}
+      onChange={handleChange}
+      onSubmit={onSubmit}
+    />
   );
 }

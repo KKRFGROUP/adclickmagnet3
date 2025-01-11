@@ -1,6 +1,5 @@
 import { HoverEffect } from "../ui/CardHoverEffect";
 import Image from "next/image";
-//import img from '../../public/images/logo/adclickmagnetlogogrey.png'
 
 
 

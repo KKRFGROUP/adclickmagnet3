@@ -34,7 +34,7 @@ export const HeroParallax = ({
     offset: ["start start", "end start"],
   });
   useEffect(() => {
-    const t1 = gsap.timeline({
+    gsap.timeline({
         scrollTrigger:{
             trigger: ".text-anime-cont",
             start: "30% 50%",
@@ -42,9 +42,6 @@ export const HeroParallax = ({
             scrub: 1
         },
         
-    })
-    t1.to(".text-area-hover", {
-        width: "100%"
     })
 })
 

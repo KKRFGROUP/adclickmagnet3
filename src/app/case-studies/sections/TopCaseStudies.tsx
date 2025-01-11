@@ -255,7 +255,6 @@ function TopCaseStudies() {
           duration: 2,
           scrollTrigger:{
             trigger: latestBlogTriggerRef.current,
-            scroller: "body",
             start: "top -10%",
             end: "-10% top",
             scrub: 2,
@@ -268,6 +267,23 @@ function TopCaseStudies() {
       }
   
     })
+
+    const handlePrevPage = () => {
+      setCurrentPage((prev) => prev - 1);
+      setTimeout(scrollToTop, 0);
+    };
+    
+    const handleNextPage = () => {
+      setCurrentPage((prev) => prev + 1);
+      setTimeout(scrollToTop, 0);
+    };
+
+    const scrollToTop = () => {
+      const blogListSection = document.querySelector('.blog-page-latest-head');
+      if (blogListSection) {
+        blogListSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    };
 
 
 
@@ -355,12 +371,12 @@ function TopCaseStudies() {
                 </Link>
               ))}
               <div className=' flex justify-between mx-9 '>
-                <button className='pagination-btn' onClick={() => setCurrentPage((prev) => prev - 1)} disabled={currentPage === 1}>
+                <button className='pagination-btn' onClick={handlePrevPage}  disabled={currentPage === 1}>
                   <FaCaretLeft />
                   Previous
                 </button>
                 <button className='pagination-btn'
-                  onClick={() => setCurrentPage((prev) => prev + 1)}
+                  onClick={handleNextPage}
                   disabled={currentPage === Math.ceil(sortedBlogs.length / itemsPerPage)}
                 >
                   Next

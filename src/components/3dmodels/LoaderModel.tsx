@@ -1,95 +1,85 @@
-// PreloaderPage.tsx
 "use client";
-
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, useCallback } from 'react';
 import { useLoading } from "../Loading";
 import dynamic from 'next/dynamic';
 
-const OptimizedModel = dynamic(() => import('./OptimizedModel'), {
-  ssr: false,
-});
+const OptimizedModel = dynamic(() => import('./OptimizedModel'), { ssr: false });
 
-interface PreloaderProps {
-  minimumLoadingTime?: number;
-}
+const useAudio = (url: string) => {
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
-export default function PreloaderPage({ minimumLoadingTime = 2000 }: PreloaderProps) {
-  const { progress, setProgress, setIsLoading, audioElement } = useLoading();
-  const [showContent, setShowContent] = useState(false);
-  const startTimeRef = useRef<number>(Date.now());
-  const hasTriedPlayRef = useRef(false);
-
-  // Handle audio playback
   useEffect(() => {
-    if (!audioElement || hasTriedPlayRef.current) return;
-    hasTriedPlayRef.current = true;
+    audioRef.current = new Audio(url);
+    audioRef.current.volume = 1;
 
-    const playAudio = () => {
-      const playPromise = audioElement.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(error => {
-          console.log('Initial autoplay failed, adding interaction listener:', error);
-          
-          const handleInteraction = () => {
-            audioElement.play().catch(console.error);
-            document.removeEventListener('click', handleInteraction);
-            document.removeEventListener('touchstart', handleInteraction);
-          };
+    const playAudio = () => audioRef.current?.play().catch(console.error);
+    const events = ['click', 'touchstart'];
+    events.forEach(event => document.addEventListener(event, playAudio, { once: true }));
 
-          document.addEventListener('click', handleInteraction);
-          document.addEventListener('touchstart', handleInteraction);
-        });
-      }
+    return () => {
+      audioRef.current?.pause();
+      audioRef.current = null;
+      events.forEach(event => document.removeEventListener(event, playAudio));
+    };
+  }, [url]);
+
+  return audioRef;
+};
+
+export default function PreloaderPage({ minimumLoadingTime = 2000 }) {
+  const { progress, setProgress, setIsLoading } = useLoading();
+  const [showContent, setShowContent] = useState(false);
+  const startTimeRef = useRef(Date.now());
+  const audioRef = useAudio('/preloader-sound.mp3');
+
+  const handleComplete = useCallback(() => {
+    const fadeOutAudio = () => {
+      const fadeOut = setInterval(() => {
+        if (audioRef.current && audioRef.current?.volume > 0) {
+          audioRef.current.volume = Math.max(0, audioRef.current.volume - 0.1);
+        } else {
+          audioRef.current?.pause();
+          clearInterval(fadeOut);
+          setShowContent(true);
+        }
+      }, 50);
     };
 
-    playAudio();
-  }, [audioElement]);
+    const timeElapsed = Date.now() - startTimeRef.current;
+    const remainingTime = Math.max(0, minimumLoadingTime - timeElapsed);
 
-  // Progress handling
+    setTimeout(() => {
+      setIsLoading(false);
+      setTimeout(fadeOutAudio, 500);
+    }, remainingTime);
+  }, [setIsLoading, minimumLoadingTime]);
+
   useEffect(() => {
-    startTimeRef.current = Date.now();
     const progressInterval = setInterval(() => {
-      setProgress(prev => {
-        if (prev >= 100) {
-          clearInterval(progressInterval);
-          return 100;
-        }
-        return Math.min(prev + 1, 100);
-      });
+      const elapsedTime = Date.now() - startTimeRef.current;
+      const progressValue = Math.min(100, (elapsedTime / minimumLoadingTime) * 100);
+      setProgress(progressValue);
+      if (progressValue >= 100) clearInterval(progressInterval);
     }, 20);
 
     return () => clearInterval(progressInterval);
-  }, [setProgress]);
+  }, [setProgress, minimumLoadingTime]);
 
-  // Transition handling
   useEffect(() => {
-    if (progress === 100) {
-      const timeElapsed = Date.now() - startTimeRef.current;
-      const remainingTime = Math.max(0, minimumLoadingTime - timeElapsed);
-
-      const loadingTimeout = setTimeout(() => {
-        setIsLoading(false);
-        const contentTimeout = setTimeout(() => setShowContent(true), 500);
-        return () => clearTimeout(contentTimeout);
-      }, remainingTime);
-
-      return () => clearTimeout(loadingTimeout);
-    }
-  }, [progress, minimumLoadingTime, setIsLoading]);
+    if (progress === 100) handleComplete();
+  }, [progress, handleComplete]);
 
   return (
     <div className={`h-[100vh] bg-black transition-opacity duration-500 ${showContent ? 'opacity-0' : 'opacity-100'}`}>
-      <div className="absolute top-[75%] left-[80%] ">
+      <div className="absolute top-[75%] left-[70%] md:left-[75%] xl:left-[80%]">
         <div className="text-right">
           <span className="text-6xl font-semibold inline-block text-white" style={{fontFamily: "Syne"}}>
-            {progress}
+            {Math.round(progress)}
           </span>
         </div>
       </div>
       <div className="w-full h-[100vh]">
-        <OptimizedModel 
-          sceneUrl="https://prod.spline.design/kIf7eG6J9WtNLzN4/scene.splinecode"
-        />
+        <OptimizedModel sceneUrl="https://prod.spline.design/kIf7eG6J9WtNLzN4/scene.splinecode" />
       </div>        
     </div>
   );

@@ -181,7 +181,7 @@ function BlogCategory() {
     }
   };
     const params = useParams();
-    console.log(params.slug);
+    //console.log(params.slug);
     
   return (
     <>

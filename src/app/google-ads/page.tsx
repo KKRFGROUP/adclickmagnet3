@@ -18,7 +18,8 @@ import { TbListSearch } from "react-icons/tb";
 import { FaRegEdit } from "react-icons/fa";
 import { HiDocumentReport } from "react-icons/hi";
 import { GiOnTarget } from "react-icons/gi";
-import { SiGoogleoptimize, SiMicrostrategy } from "react-icons/si";
+import { GrOptimize } from "react-icons/gr";
+import {SiMicrostrategy } from "react-icons/si";
 
 
 //logos
@@ -153,7 +154,7 @@ const section4 = {
         para: "We fine-tune audience targeting to reach the right people and set up remarketing strategies to re-engage users, maximizing conversions from every interaction."
       },
       {
-        logo: <SiGoogleoptimize className='text-3xl' />,
+        logo: <GrOptimize  className='text-3xl' />,
         head: "Conversion Tracking & Optimization",
         para: "Implement robust tracking tools to monitor conversions and optimize campaigns, ensuring continuous improvements in performance and ROI across all ads."
       },

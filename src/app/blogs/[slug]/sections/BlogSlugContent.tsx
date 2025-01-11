@@ -100,14 +100,14 @@ function BlogSlugContent({content}: {content: {
                           name="email"
                           value={formData.email}
                           onChange={handleChange}
-                          required placeholder="projectmayhem@fc.com" />
+                          required placeholder="Your Email" />
                     </div>
 
                     <div className="blog-slug-contact-form-content-label-input">
                         <PhoneInput
                           value={formData.phoneNumber}
                           onChange={handleChange}
-                          placeholder="+91123456789"
+                          placeholder="Phone Number"
                           className="flex-1"
                           name="phoneNumber"
                         />

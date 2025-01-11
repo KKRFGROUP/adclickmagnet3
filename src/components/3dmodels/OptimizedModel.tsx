@@ -1,6 +1,6 @@
 "use client";
 
-
+import { memo } from 'react';
 import { Application } from '@splinetool/runtime';
 
 declare global {
@@ -26,9 +26,9 @@ interface OptimizedModelProps {
 const OptimizedModel = ({ sceneUrl }: OptimizedModelProps) => {
   return (
           <Spline 
-            scene={sceneUrl} 
+            scene={sceneUrl}
           />
   );
 };
 
-export default OptimizedModel;
+export default memo(OptimizedModel);

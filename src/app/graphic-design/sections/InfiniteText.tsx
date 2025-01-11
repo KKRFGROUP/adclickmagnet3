@@ -5,11 +5,11 @@ export default function InfiniteText() {
         <section className="infinite-text-section-container flex-col">
 
         <div className="scrolling-text-container flex items-center">
-            <div className="scrolling-text-inner"  >
+            <div className="scrolling-text-inner">
                 <div className="scrolling-text">
-                    <div className="scrolling-text-item">"Art enables us to find ourselves and lose ourselves at the same time."</div>
-                    <div className="scrolling-text-item">"The purpose of art is washing the dust of daily life off our souls."</div>
-                    <div className="scrolling-text-item">"Art is not what you see, but what you make others see."</div>
+                    <div className="scrolling-text-item1">"Art enables us to find ourselves and lose ourselves at the same time."</div>
+                    <div className="scrolling-text-item1">"The purpose of art is washing the dust of daily life off our souls."</div>
+                    <div className="scrolling-text-item1">"Art is not what you see, but what you make others see."</div>
                 </div>
             </div>
         </div>

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
 import 'animate.css';
+import "./globals.css";
 import { LoadingProvider } from '@/components/Loading';
 import NextTopLoader from 'nextjs-toploader';
-import MobileDevicePopup from '@/components/MobileDevicePopup';
+
 import Cursor from '../components/Cursor';
 
 const geistSans = localFont({
@@ -35,14 +35,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  
   return (
     <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans?.variable || ''} ${geistMono?.variable || ''} antialiased`}
       >
         <Cursor />
         <NextTopLoader />
-        <MobileDevicePopup />
+        
         <LoadingProvider>
           {children}
         </LoadingProvider>

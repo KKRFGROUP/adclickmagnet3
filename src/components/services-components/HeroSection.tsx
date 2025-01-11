@@ -219,7 +219,7 @@ function HeroSection({heading, preheading, para}: {
               <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
                 <LabelInputContainer>
                   <Label htmlFor="firstname">First name</Label>
-                  <Input id="firstname"  placeholder="Tyler" type="text"
+                  <Input id="firstname"  placeholder="First name" type="text"
                   name="firstName"
                   value={formData.firstName}
                   onChange={handleChange}
@@ -227,7 +227,7 @@ function HeroSection({heading, preheading, para}: {
                 </LabelInputContainer>
                 <LabelInputContainer>
                   <Label htmlFor="lastname" >Last name</Label>
-                  <Input id="lastname" placeholder="Durden" type="text"
+                  <Input id="lastname" placeholder="Last name" type="text"
                   name="lastName"
                   value={formData.lastName}
                   onChange={handleChange}
@@ -241,7 +241,7 @@ function HeroSection({heading, preheading, para}: {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  required placeholder="projectmayhem@fc.com" />
+                  required placeholder="Your Email" />
               </LabelInputContainer>
 
               <LabelInputContainer className="mb-4">

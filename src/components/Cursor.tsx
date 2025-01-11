@@ -1,61 +1,86 @@
 "use client";
 
-import React, { useEffect,useState } from 'react'
-import {gsap} from 'gsap'
-export default function Cursor() {
-    const [windowWidth, setWindowWidth] = useState(0);
+import React, { useEffect, useRef, useState } from 'react';
+import { gsap } from 'gsap';
 
-    
+export default function Cursor() {
+    const cursorRef = useRef<HTMLDivElement>(null);
+    const [isDesktop, setIsDesktop] = useState(false);
     
     useEffect(() => {
-        if (typeof window !== "undefined") {
-            setWindowWidth(window.innerWidth);
-            const handleResize = () => setWindowWidth(window.innerWidth);
-            window.addEventListener("resize", handleResize);
+        let animationFrameId: number;
+        const cursor = cursorRef.current;
         
-        }
-        const cursor = document.getElementById("custom-cursor");
+        // Check for desktop once on mount
+        const checkIsDesktop = () => window.innerWidth > 1028;
+        setIsDesktop(checkIsDesktop());
+
+        if (!cursor || !isDesktop) return;
+
         const links = document.querySelectorAll("a");
-        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-        //const cursorText = document.querySelector(".cursor-text") ;
-        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-        
-        const onMouseMove = (event: MouseEvent) => {
-            const {clientX, clientY} = event;
-            gsap.to(cursor,{x: clientX, y: clientY})
-        } 
-        
-        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-        const onMouseEnterLink = (event: MouseEvent) => {
-            const link = event.target as Element | null;
-            if (link && link.classList.contains("view")) {
-                gsap.to(cursor, {scale: 4})
-                //cursorText.style.display = "block"
-            }else {
-                gsap.to(cursor, {scale: 4})
+        let cursorPosition = { x: 0, y: 0 };
+        let isAnimating = false;
+
+        const animateCursor = () => {
+            if (!isAnimating) return;
+            
+            gsap.to(cursor, {
+                x: cursorPosition.x,
+                y: cursorPosition.y,
+                duration: 0.2,
+                ease: "power2.out"
+            });
+            
+            animationFrameId = requestAnimationFrame(animateCursor);
+        };
+
+        const onMouseMove = (e: MouseEvent) => {
+            cursorPosition = { x: e.clientX, y: e.clientY };
+            
+            if (!isAnimating) {
+                isAnimating = true;
+                animationFrameId = requestAnimationFrame(animateCursor);
             }
-        }
+        };
 
-        const onMouseLeave = () => {
-            gsap.to(cursor, {scale:1})
-            //cursorText.style.display = "none";
-        }
+        const onMouseEnterLink = () => {
+            gsap.to(cursor, {
+                scale: 4,
+                duration: 0.3
+            });
+        };
 
-        if (windowWidth > 1028) {
-            document.addEventListener("mousemove", onMouseMove)
-        }
-        links.forEach(link => {
-            link.addEventListener("mouseenter", onMouseEnterLink)
-            link.addEventListener("mouseleave", onMouseLeave)
-        })
+        const onMouseLeaveLink = () => {
+            gsap.to(cursor, {
+                scale: 1,
+                duration: 0.3
+            });
+        };
 
+        // Event listeners with proper cleanup
+        document.addEventListener("mousemove", onMouseMove);
         
-    }, [windowWidth])
+        links.forEach(link => {
+            link.addEventListener("mouseenter", onMouseEnterLink);
+            link.addEventListener("mouseleave", onMouseLeaveLink);
+        });
 
+        // Cleanup
+        return () => {
+            document.removeEventListener("mousemove", onMouseMove);
+            links.forEach(link => {
+                link.removeEventListener("mouseenter", onMouseEnterLink);
+                link.removeEventListener("mouseleave", onMouseLeaveLink);
+            });
+            cancelAnimationFrame(animationFrameId);
+        };
+    }, [isDesktop]);
 
-  return (
-    <div id="custom-cursor" className="custom-cursor">
-        <span className='cursor-text'>View</span>
-    </div>
-  )
+    if (!isDesktop) return null;
+
+    return (
+        <div ref={cursorRef} className="custom-cursor">
+            <span className="cursor-text">View</span>
+        </div>
+    );
 }

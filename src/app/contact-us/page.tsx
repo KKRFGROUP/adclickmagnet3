@@ -42,6 +42,12 @@ export default function ContactUs() {
         [name]: value,
       }));
     };
+
+    const contactNumberApi = {
+      contactNumber: "+1-718-577-2718"
+    }
+
+    const payNowLink = "https://razorpay.com/";
   
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
@@ -110,7 +116,7 @@ export default function ContactUs() {
                             <div className="mb-3">
                                 <p className="contact-us-page-layout-left-subhead">Visit us</p>
                                 <p className="contact-us-page-layout-left-para">Come say hello at our office HQ.</p>
-                                <p className="contact-us-page-layout-left-para">Noida, Delhi</p>
+                                <p className="contact-us-page-layout-left-para">Building No./Flat No.: 27/489, <br />Road/Street: TRILOKPURI, New Delhi, <br />PIN Code: 110091</p>
                             </div>
                             <div className="mb-3">
                                 <p className="contact-us-page-layout-left-subhead">Chat to us</p>
@@ -120,10 +126,10 @@ export default function ContactUs() {
                             <div className="mb-3">
                                 <p className="contact-us-page-layout-left-subhead">Call us</p>
                                 <p className="contact-us-page-layout-left-para">Monday to Friday from 8am to 5pm.</p>
-                                <p className="contact-us-page-layout-left-para">+1 718 577 2718</p>
+                                <p className="contact-us-page-layout-left-para">{contactNumberApi.contactNumber}</p>
                             </div>
                             <div className="mb-3">
-                                <p className="contact-us-page-layout-left-subhead">Call us</p>
+                                <p className="contact-us-page-layout-left-subhead">Connect to Us</p>
                                 <div className="flex items-center justify-between w-[50%] mt-4 contact-us-page-layout-left-logos">
                                     <Link href="https://wa.me/+918800262061"><FaLinkedinIn className='social-media-handle-logo'/> </Link>
                                     <Link href="https://www.instagram.com/adclickmagnet?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" ><FaInstagram className='social-media-handle-logo'/></Link>
@@ -131,13 +137,19 @@ export default function ContactUs() {
                                     <Link href="https://wa.me/+918800262061"><RiWhatsappFill className='social-media-handle-logo'/> </Link>
                                 </div>    
                             </div>
+
+                            <div className="mb-3">
+                                <p className="contact-us-page-layout-left-subhead">Cancellations & Refund Policies</p>
+                                <p className="contact-us-page-layout-left-para">Once a payment is processed, cancellations & refunds are not permitted.</p>
+                                
+                            </div>
                         </div>
                         <div className="contact-us-page-layout-right">
                             <form className="contact-us-page-layout-right-form" onSubmit={handleSubmit}>
                                 <div className="flex flex-col md:flex-row  md:space-y-0 md:space-x-2 mb-4">
                                     <LabelInputContainer className="contact-us-page-layout-right-form-label-input">
                                         <Label htmlFor="firstname">First name</Label>
-                                        <Input id="firstname"  placeholder="Tyler" type="text"
+                                        <Input id="firstname"  placeholder="First Name" type="text"
                                         name="firstName"
                                         value={formData.firstName}
                                         onChange={handleChange}
@@ -145,7 +157,7 @@ export default function ContactUs() {
                                     </LabelInputContainer>
                                     <LabelInputContainer className="contact-us-page-layout-right-form-label-input">
                                         <Label htmlFor="lastname" >Last name</Label>
-                                        <Input id="lastname" placeholder="Durden" type="text"
+                                        <Input id="lastname" placeholder="Last Name" type="text"
                                         name="lastName"
                                         value={formData.lastName}
                                         onChange={handleChange}
@@ -159,7 +171,7 @@ export default function ContactUs() {
                                         name="companyName"
                                         value={formData.companyName}
                                         onChange={handleChange}
-                                        required placeholder="Random Company" />
+                                        required placeholder="Your Company" />
                                 </LabelInputContainer>
 
                                 <LabelInputContainer className="mb-4 contact-us-page-layout-right-form-label-input">
@@ -168,7 +180,7 @@ export default function ContactUs() {
                                         name="email"
                                         value={formData.email}
                                         onChange={handleChange}
-                                        required placeholder="projectmayhem@fc.com" />
+                                        required placeholder="Your Email" />
                                 </LabelInputContainer>
 
                                 <LabelInputContainer className="mb-4 contact-us-page-layout-right-form-label-input">
@@ -240,14 +252,16 @@ export default function ContactUs() {
                         
                         <hr className='solution-gap-line'/>
 
+                        
                         <div className="flex justify-between lg:px-10 pt-3 footer-links">
-                        <Link href="/" className='solution-page-link'>Press Release</Link>
-                        <Link href="/" className='solution-page-link'>Blog</Link>
-                        <Link href="/" className='solution-page-link'>Careers</Link>
-                        <Link href="/" className='solution-page-link'>Case Studies</Link>
-                        <Link href="/" className='solution-page-link'>Awards</Link>
-                        <Link href="/contact-us" className='solution-page-link'>Contact</Link>
+                          <Link href="/press-release" className="solution-page-link">Press Release</Link>
+                          <Link href="/blogs" className="solution-page-link">Blog</Link>
+                          <Link href="/career" className="solution-page-link">Careers</Link>
+                          <Link href="/case-studies" className="solution-page-link">Case Studies</Link>
+                          <Link href={payNowLink} className="solution-page-link">Pay Now</Link>
+                          <Link href="/contact-us" className="solution-page-link">Contact</Link>
                         </div>
+
 
                         <hr className="solution-gap-line" />
                     
@@ -280,7 +294,7 @@ export default function ContactUs() {
                             <div className="mb-3">
                                 <p className="contact-us-page-layout-left-subhead">Visit us</p>
                                 <p className="contact-us-page-layout-left-para">Come say hello at our office HQ.</p>
-                                <p className="contact-us-page-layout-left-para">Noida, Delhi</p>
+                                <p className="contact-us-page-layout-left-para">Building No./Flat No.: 27/489, <br />Road/Street: TRILOKPURI, New Delhi, <br />PIN Code: 110091</p>
                             </div>
                             <div className="mb-3">
                                 <p className="contact-us-page-layout-left-subhead">Chat to us</p>
@@ -292,14 +306,20 @@ export default function ContactUs() {
                                 <p className="contact-us-page-layout-left-para">Monday to Friday from 8am to 5pm.</p>
                                 <p className="contact-us-page-layout-left-para">+1 718 577 2718</p>
                             </div>
-                            <div className="mb-3">
-                                <p className="contact-us-page-layout-left-subhead">Call us</p>
+                            <div className="mb-3 ">
+                                <p className="contact-us-page-layout-left-subhead">Connect To Us</p>
                                 <div className="flex items-center justify-between w-[50%] mt-4 contact-us-page-layout-left-logos">
                                     <Link href="https://wa.me/+918800262061"><FaLinkedinIn className='social-media-handle-logo'/> </Link>
                                     <Link href="https://www.instagram.com/adclickmagnet?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" ><FaInstagram className='social-media-handle-logo'/></Link>
                                     <Link href="https://www.facebook.com/profile.php?id=61552551834420" ><FaFacebook className='social-media-handle-logo'/></Link>
                                     <Link href="https://wa.me/+918800262061"><RiWhatsappFill className='social-media-handle-logo'/> </Link>
                                 </div>    
+                            </div>
+
+                            <div className="mt-3">
+                                <p className="contact-us-page-layout-left-subhead mb-2">Cancellations & Refund Policies</p>
+                                <p className="contact-us-page-layout-left-para">Once a payment is processed, cancellations & refunds are not permitted.</p>
+                                
                             </div>
                         </div>
                         <div className="contact-us-page-layout-right">
@@ -343,8 +363,13 @@ export default function ContactUs() {
 
                                 <LabelInputContainer className="mb-4 contact-us-page-layout-right-form-label-input">
                                     <Label htmlFor="phoneNumber">Phone Number</Label>
-                                    <Input id="phoneNumber" name="phoneNumber" value={formData.phoneNumber}
-                                        onChange={handleChange} placeholder="+911234567889" type="text" />
+                                    <PhoneInput
+                                      value={formData.phoneNumber}
+                                      onChange={handleChange}
+                                      placeholder="Phone number"
+                                      className="flex-1"
+                                      name="phoneNumber"
+                                    />
                                 </LabelInputContainer>
 
                                 <LabelInputContainer className="mb-4 contact-us-page-layout-right-form-label-input">
@@ -405,12 +430,12 @@ export default function ContactUs() {
                         <hr className='solution-gap-line'/>
 
                         <div className="flex justify-between lg:px-10 pt-3 footer-links">
-                        <Link href="/" className='solution-page-link'>Press Release</Link>
-                        <Link href="/" className='solution-page-link'>Blog</Link>
-                        <Link href="/" className='solution-page-link'>Careers</Link>
-                        <Link href="/" className='solution-page-link'>Case Studies</Link>
-                        <Link href="/" className='solution-page-link'>Awards</Link>
-                        <Link href="/contact-us" className='solution-page-link'>Contact</Link>
+                          <Link href="/press-release" className="solution-page-link">Press Release</Link>
+                          <Link href="/blogs" className="solution-page-link">Blog</Link>
+                          <Link href="/career" className="solution-page-link">Careers</Link>
+                          <Link href="/case-studies" className="solution-page-link">Case Studies</Link>
+                          <Link href={payNowLink} className="solution-page-link">Pay Now</Link>
+                          <Link href="/contact-us" className="solution-page-link">Contact</Link>
                         </div>
 
                         <hr className="solution-gap-line" />

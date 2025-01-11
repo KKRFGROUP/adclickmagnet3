@@ -97,8 +97,8 @@ function CareerSlug() {
             const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
               e.preventDefault();
               setStatus({ message: "Submitting...", isError: false });
-              console.log("Form Data:", formData);
-              console.log("Uploaded File:", uploadedFile);
+              //console.log("Form Data:", formData);
+              //console.log("Uploaded File:", uploadedFile);
               router.push("/career/thank-you");
           
               //try {
@@ -219,7 +219,7 @@ function CareerSlug() {
               <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
                 <LabelInputContainer>
                   <Label className="dark:text-black" htmlFor="firstname">First name</Label>
-                  <Input id="firstname"  placeholder="Tyler" type="text"
+                  <Input id="firstname"  placeholder="First Name" type="text"
                   name="firstName"
                   value={formData.firstName}
                   onChange={handleChange}
@@ -227,7 +227,7 @@ function CareerSlug() {
                 </LabelInputContainer>
                 <LabelInputContainer>
                   <Label className="dark:text-black" htmlFor="lastname" >Last name</Label>
-                  <Input id="lastname" placeholder="Durden" type="text"
+                  <Input id="lastname" placeholder="Last Name" type="text"
                   name="lastName"
                   value={formData.lastName}
                   onChange={handleChange}
@@ -242,7 +242,7 @@ function CareerSlug() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  required placeholder="projectmayhem@fc.com" />
+                  required placeholder="Your Email" />
               </LabelInputContainer>
 
               <LabelInputContainer className="mb-4">

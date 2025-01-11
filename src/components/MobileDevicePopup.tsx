@@ -10,38 +10,35 @@ import {
   AlertDialogDescription,
 } from '@/components/ui/alert-dialog';
 
-
 const MobileDevicePopup = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Check if the device is mobile using window width
-    const checkIsMobile = () => {
-      return window.innerWidth < 768; // Standard mobile breakpoint
-    };
+    const hasSeenPopup = localStorage.getItem('hasSeenMobilePopup');
+    
+    const checkIsMobile = () => window.innerWidth < 768;
+    
+    if (!hasSeenPopup && checkIsMobile()) {
+      setIsOpen(true);
+      localStorage.setItem('hasSeenMobilePopup', 'true');
+    }
 
-    // Set initial state
-    setIsOpen(checkIsMobile());
-
-    // Add resize listener
     const handleResize = () => {
-      setIsOpen(checkIsMobile());
+      if (!hasSeenPopup && checkIsMobile()) {
+        setIsOpen(true);
+        localStorage.setItem('hasSeenMobilePopup', 'true');
+      }
     };
 
     window.addEventListener('resize', handleResize);
-
-    // Cleanup
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Don't render anything if not mobile
   if (!isOpen) return null;
 
   return (
     <AlertDialog open={isOpen}>
-      <AlertDialogContent className="bg-white p-6 rounded-2xl shadow-xl max-w-sm mx-4" style={{fontFamily: "Syne"}}>
+      <AlertDialogContent className="bg-white  rounded-2xl shadow-xl max-w-[80%] mx-2" style={{fontFamily: "Syne"}}>
         <AlertDialogHeader>
           <AlertDialogTitle className="text-xl font-bold text-gray-900 mb-2">
             Desktop Recommended

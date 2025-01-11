@@ -122,7 +122,7 @@ function Report() {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              required placeholder="projectmayhem@fc.com" />
+              required placeholder="Your Email" />
           </LabelInputContainer>
 
           <LabelInputContainer>

@@ -3,7 +3,6 @@
 import React,{useRef,useState} from 'react'
 import Image from 'next/image'
 import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
 import Link from 'next/link'
 import '../../../components/app.css'
 import '../../../components/services-components/components.css'
@@ -38,7 +37,6 @@ function ThankYou() {
                       <Link href="/"> <button className="service-hero-sec-content-button thankyou-btn">Back To Home</button></Link>
                   </div>
               </div>
-          <Footer />
         </div>
     </>
   )

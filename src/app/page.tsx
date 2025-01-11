@@ -19,7 +19,7 @@ import Navbar from "@/components/Navbar";
 
 import { useLoading } from '@/components/Loading';
 import PreloaderPage from '@/components/3dmodels/LoaderModel';
-
+import MobileDevicePopup from '@/components/MobileDevicePopup';
 
 
 export default function Home() {
@@ -42,9 +42,9 @@ export default function Home() {
   
     return (
       <>
-      {isLoading ?  <PreloaderPage minimumLoadingTime={4000} /> : <main className={`transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+      {isLoading ?  <PreloaderPage minimumLoadingTime={10000} /> : <main className={`transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
         {/* Your main content here */}
-      
+        <MobileDevicePopup />
         <Navbar mobileOverlayOpen={toggleMenu} isOpen={isOpen}/>
         <div ref={pageMainRef} className="dark:bg-balck bg-black overflow-hidden page-main">
           

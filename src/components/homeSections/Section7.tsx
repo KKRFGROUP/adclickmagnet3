@@ -161,7 +161,7 @@ export default function Section7() {
             <TypewriterEffect className="data-driven-head"  words={words} />
             <div className="flex justify-between mt-10 sec7-logo-container">
               {bestBrand.map((each,index) => (
-                <Image key={index} className="sec7-logo" width={170} height={140} src={each.img} alt={each.name} />
+                <Image key={index} className="sec7-logo" width={170} height={140} style={{width: "auto", height: "auto"}} src={each.img} alt={each.name} />
               ))}
             </div>
         </div>

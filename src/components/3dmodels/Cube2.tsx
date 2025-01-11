@@ -4,6 +4,8 @@ import React,{ useState, useEffect} from "react";
 //import { useFrame } from "@react-three/fiber";
 import {  TextureLoader } from "three";
 import { useLoader } from "@react-three/fiber";
+
+
 const Cube2 = () => {
   //const cubeRef = useRef();
   const textures = [

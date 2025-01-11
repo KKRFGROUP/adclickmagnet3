@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { createPortal } from 'react-dom';
-//import adclickImage from '../../public/images/logo/adclickmagnetlogoblack.png';
 
 interface PortalProps {
   children: React.ReactNode;
@@ -33,26 +32,29 @@ const transition = {
 
 const DropdownPortal: React.FC<PortalProps> = ({ children, buttonRef }) => {
   const [mounted, setMounted] = React.useState(false);
+  const dropdownRef = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
     setMounted(true);
   }, []);
 
+  React.useEffect(() => {
+    if (!mounted || !buttonRef.current || !dropdownRef.current) return;
+    
+    const rect = buttonRef.current.getBoundingClientRect();
+    dropdownRef.current.style.top = `${rect.bottom + 20}px`;
+    dropdownRef.current.style.minWidth = `${rect.width * 1.5}px`;
+  }, [mounted, buttonRef]);
+
   if (!mounted || !buttonRef.current) return null;
 
-  const rect = buttonRef.current.getBoundingClientRect();
-  const dropdownStyle: React.CSSProperties = {
-    position: 'fixed',
-    top: `${rect.bottom + 20}px`,
-    left: '50%',  // Center horizontally
-    transform: 'translateX(-50%)',  // Offset by half width
-    zIndex: 1000,
-    width: 'auto',  // Let content determine width
-    minWidth: `${rect.width * 1.5}px`,  // Minimum width relative to button
-  };
-
   return createPortal(
-    <div style={dropdownStyle}>{children}</div>,
+    <div 
+      ref={dropdownRef}
+      className="fixed left-1/2 -translate-x-1/2 z-[1000] w-auto"
+    >
+      {children}
+    </div>,
     document.body
   );
 };
@@ -131,6 +133,10 @@ export const MenuItem: React.FC<MenuItemProps> = ({
   );
 };
 
+const contactNumberApi = {
+  contactNumber: "+1-718-577-2718"
+}
+
 export const Menu: React.FC<MenuProps> = ({
   setActive,
   children,
@@ -157,12 +163,12 @@ export const Menu: React.FC<MenuProps> = ({
         </span>
       </nav>
 
-      <Link href="tel:+17185772718">
+      <Link href={`tel:${contactNumberApi.contactNumber}`}>
         <button type="button" className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 getintouch-card">
         
           <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
           <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 lg:text-sm md:text-[10px] font-medium text-white backdrop-blur-3xl">
-           +1 718 577 2718
+           {contactNumberApi.contactNumber}
 
             <svg 
             width="25" 
