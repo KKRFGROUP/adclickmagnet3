@@ -159,9 +159,10 @@ function DigitalServices() {
                     ref={(element) => setVideoRef(item.id, element)}
                     preload="auto"
                     loop
-                    src={item.video}
                     playsInline
-                  />
+                  >
+                     <source src={item.video} type="video/mp4" />
+                  </video>
                 ) : (
                   <Image 
                     className='graphic-page-services-card-img'

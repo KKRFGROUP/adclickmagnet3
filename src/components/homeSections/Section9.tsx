@@ -13,7 +13,7 @@ const demoBlogs = [
       time: "2024-11-22T09:00:00Z",
       category: "web development",
       name: "John Doe",
-      image: "https://numerique.vamtam.com/wp-content/uploads/2023/05/milad-fakurian-58Z17lnVS4U-unsplash-Copy.jpg",
+      image: "/images/ai-brain.webp",
       link: "10-tips-for-writing-clean-code"
     },
     {
@@ -23,7 +23,7 @@ const demoBlogs = [
       time: "2024-11-21T12:00:00Z",
       category: "web development",
       name: "Jane Smith",
-      image: "https://numerique.vamtam.com/wp-content/uploads/2023/05/minh-pham-HI6gy-p-WBI-unsplash-Copy.jpg",
+      image: "/images/ar-vr.webp",
       link: "the-future-of-responsive-design"
     },
 ]

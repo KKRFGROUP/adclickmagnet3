@@ -141,14 +141,16 @@ function Cards3dSections({
                       loop
                       muted
                       playsInline
-                      src={each.video}
+                      
                       onLoadedData={(e) => {
                         const videoElement = e.target as HTMLVideoElement;
                         videoElement.play().catch((error: DOMException) => {
                           console.error('Autoplay failed:', error);
                         });
                       }}
-                    />
+                    >
+                      <source src={each.video}/>
+                    </video>
                   ) : (
                     <Image
                       src={each.img}

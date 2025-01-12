@@ -54,14 +54,16 @@ function Section3({content, order, roundb, hide}: {content: {mainpara: string; h
        </div>
 
        
-       {content.video ? <video className="services-sec3-img" autoPlay preload='auto' loop muted playsInline src={content.video} onLoadedData={(e) => {
+       {content.video ? <video className="services-sec3-img" autoPlay preload='auto' loop muted playsInline  onLoadedData={(e) => {
     const videoElement = e.target as HTMLVideoElement; // Explicitly cast to HTMLVideoElement
         videoElement
         .play()
         .catch((error: DOMException) => { // Provide a type for `error`
             console.error('Autoplay failed:', error);
             });
-        }}></video> : <Image className="services-sec3-img" src={content.image} alt="sec3-img" height={300} width={300} /> } 
+        }}>
+            <source src={content.video} type="video/mp4" />
+        </video> : <Image className="services-sec3-img" src={content.image} alt="sec3-img" height={300} width={300} /> } 
     </div>
   )
 }

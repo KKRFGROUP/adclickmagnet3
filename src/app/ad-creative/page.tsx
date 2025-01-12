@@ -29,6 +29,8 @@ const heroContent = {
     para: "From high-volume, multi-channel campaigns to testing and exploration, get the outstanding ad creative services you need. Plug-in a fully-stacked design team and start fueling your ad campaigns today.",
     imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/745fa5bedb9310bd461d7b69073547d975fab304-1200x1200.png?auto=format&fit=max&q=100&w=1200"
 }
+
+
 const section2 = [
   {
     id: 1,
