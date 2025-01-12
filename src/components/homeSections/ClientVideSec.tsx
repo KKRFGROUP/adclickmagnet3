@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useRef, useState, useCallback } from 'react'
+import React, { useRef, useState,useEffect, useCallback } from 'react'
 import { TypewriterEffect } from '../ui/TypewriterEffect'
 
 
@@ -37,28 +37,28 @@ const clientVideos: ClientVideo[] = [
         name: "Chris",
         position: "Founder",
         company: "PGroomer",
-        video: "https://res.cloudinary.com/dgdgrniut/video/upload/v1734703822/website_video_3_1_e3yc02.mp4",
+        video: "/videos/compressed/Chris.mp4",
         poster: "https://res.cloudinary.com/dgdgrniut/image/upload/v1736526079/Screenshot_2025-01-10_at_9.34.04_PM_1_ldz4l0.png" // Add your poster URLs
     },
     {
         name: "Elisha",
         position: "Marketing Head",
         company: "RockWood Kitchen",
-        video: "https://res.cloudinary.com/dgdgrniut/video/upload/v1734699962/website_video_2_afsyhy.mp4",
+        video: "/videos/compressed/Elisha.mp4",
         poster: "https://res.cloudinary.com/dgdgrniut/image/upload/v1736526079/Screenshot_2025-01-10_at_9.34.36_PM_1_fu67qs.png"
     },
     {
         name: "Mark",
         position: "Founder",
         company: "Real Result Sales Training",
-        video: "https://res.cloudinary.com/dgdgrniut/video/upload/v1734699453/website_video_4_icesty.mp4",
+        video: "/videos/compressed/Mark.mp4",
         poster: "https://res.cloudinary.com/dgdgrniut/image/upload/v1736526081/Screenshot_2025-01-10_at_9.34.46_PM_2_fip862.png"
     },
     {
         name: "Avnish",
         position: "Founder",
         company: "Spartan Tattoos",
-        video: "https://res.cloudinary.com/dgdgrniut/video/upload/v1734697861/website_video_1_rhydtt.mp4",
+        video: "/videos/compressed/Avnish.mp4",
         poster: "https://res.cloudinary.com/dgdgrniut/image/upload/v1736526079/Screenshot_2025-01-10_at_9.34.58_PM_1_mvte8x.png"
     }
 ];
@@ -66,32 +66,64 @@ const clientVideos: ClientVideo[] = [
 function ClientVideSec() {
     const videoRefs = useRef<Map<number, HTMLVideoElement>>(new Map());
     const [activeVideoIndex, setActiveVideoIndex] = useState<number | null>(null);
+    const [hasInteracted, setHasInteracted] = useState(false);
+
+    useEffect(() => {
+        // Add interaction listener to document
+        const handleInteraction = () => {
+            setHasInteracted(true);
+            // Remove listeners after first interaction
+            document.removeEventListener('click', handleInteraction);
+            document.removeEventListener('touchstart', handleInteraction);
+        };
+
+        document.addEventListener('click', handleInteraction);
+        document.addEventListener('touchstart', handleInteraction);
+
+        return () => {
+            document.removeEventListener('click', handleInteraction);
+            document.removeEventListener('touchstart', handleInteraction);
+        };
+    }, []);
 
     const setVideoRef = useCallback((index: number, element: HTMLVideoElement | null) => {
         if (element) {
             videoRefs.current.set(index, element);
+            // Always start with muted state
+            element.muted = true;
         }
     }, []);
 
     const handleMouseEnter = useCallback(async (index: number) => {
         const video = videoRefs.current.get(index);
-        if (video) {
-            try {
-                video.currentTime = 0; // Reset to start
+        if (!video) return;
+
+        try {
+            video.currentTime = 0; // Reset to start
+            
+            // If user has interacted, try unmuted playback
+            if (hasInteracted) {
                 video.muted = false;
                 setActiveVideoIndex(index);
                 await video.play();
-            } catch (error) {
-                console.error('Playback failed:', error);
+            } else {
+                // If no interaction yet, always play muted
                 video.muted = true;
-                try {
-                    await video.play();
-                } catch (mutedError) {
-                    console.error('Muted playback failed:', mutedError);
-                }
+                setActiveVideoIndex(index);
+                await video.play();
+            }
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        } catch (error) {
+            console.warn('Playback with sound failed, falling back to muted playback');
+            try {
+                video.muted = true;
+                setActiveVideoIndex(index);
+                await video.play();
+            } catch (mutedError) {
+                console.error('Muted playback also failed:', mutedError);
             }
         }
-    }, []);
+    }, [hasInteracted]);
 
     const handleMouseLeave = useCallback((index: number) => {
         const video = videoRefs.current.get(index);
@@ -104,7 +136,7 @@ function ClientVideSec() {
     }, []);
 
     return (
-        <div className="client-video-section">
+        <div className="client-video-section" onClick={() => setHasInteracted(true)}>
             <TypewriterEffect 
                 className="data-driven-head client-video-section-head" 
                 words={words} 
@@ -112,21 +144,28 @@ function ClientVideSec() {
             <div className="client-videos-card">
                 {clientVideos.map((each, index) => (
                     <div key={index} className="client-video-card">
-                        <div className="client-video-card-div">
+                        <div 
+                            className="client-video-card-div relative"
+                            onMouseEnter={() => handleMouseEnter(index)}
+                            onMouseLeave={() => handleMouseLeave(index)}
+                        >
                             <video 
                                 ref={(el) => setVideoRef(index, el)}
                                 className={`client-video-card-video ${index % 2 === 1 ? "mt-9" : ""}`}
-                                onMouseEnter={() => handleMouseEnter(index)}
-                                onMouseLeave={() => handleMouseLeave(index)}
-                                poster={each.poster}
+                                //poster={each.poster}
                                 preload="metadata"
                                 loop
                                 playsInline
-                                muted={activeVideoIndex !== index}
-                                src={each.video}
+                                muted={true}  // Start muted by default
                             >
+                                <source src={each.video} type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
+                            {!hasInteracted && activeVideoIndex === index && (
+                                <div className="absolute top-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">
+                                    Click anywhere to enable sound
+                                </div>
+                            )}
                         </div>
                         <p>{each.name}</p>
                         <p className="w-[80%] mt-2">{each.position}, {each.company}</p>

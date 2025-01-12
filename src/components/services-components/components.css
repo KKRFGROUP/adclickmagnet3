@@ -644,10 +644,16 @@ video::-webkit-media-controls {
     font-size: 19px;
     margin-bottom: 10px;
     font-weight:bold;
+    color: #fff;
+    font-family: "Syne";
 }
-.mobile-services-sec6-right-content {
-    display: none;
+.services-sec6-right-content-card-content-para {
+    font-family: "Unbounded";
+    color: #fff;
 }
+
+
+
 .services-sec6-right-content-card {
     transition: 0.4s;
     padding: 10px;

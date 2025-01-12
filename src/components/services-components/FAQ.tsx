@@ -49,7 +49,7 @@ function FAQ({content}: {content: {mainpara: string; people: {id: number;name: s
         <div className="w-[50%] h-[90%] faq-right-container">
         <Accordion variant="splitted">
             {content.list.map(each => (
-                <AccordionItem className='mb-2'  key={each.id} aria-label={`Accordion ${each.id}`} title={each.title}>
+                <AccordionItem className='mb-2 text-white dark:text-white'  key={each.id} aria-label={`Accordion ${each.id}`} title={each.title}>
                     {each.description}
                 </AccordionItem>
             ))}

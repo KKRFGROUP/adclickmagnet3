@@ -16,6 +16,7 @@
     border-radius: 20px; 
     height: 100%;
     width: 40%;
+    color: #fff;
 }
 .contact-us-page-layout-left-head {
     font-size: 20px;
@@ -72,6 +73,7 @@
         padding-bottom: 50px;
         height: max-content;
         width: 100%;
+        color: #fff;
         margin-bottom: 20%;
     }
     .contact-us-page-layout-right {
