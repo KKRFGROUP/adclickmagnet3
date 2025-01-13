@@ -3,7 +3,14 @@ import { useEffect, useState, useRef, useCallback } from 'react';
 import { useLoading } from "../Loading";
 import dynamic from 'next/dynamic';
 
-const OptimizedModel = dynamic(() => import('./OptimizedModel'), { ssr: false });
+const OptimizedModel = dynamic(
+  () => import('./OptimizedModel').then((mod) => mod.default),
+  {
+    ssr: false,
+    loading: () => <div className="w-full h-[100vh] bg-black" />
+  }
+);
+
 
 const useAudio = (url: string) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);

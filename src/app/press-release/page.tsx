@@ -163,7 +163,7 @@ function PressRelease() {
               ))}
 
               {/* Pagination buttons */}
-            <div className='pagination-container w-full flex justify-between mx-9'>
+            <div className='pagination-container w-[90%] flex justify-between mx-5 md:mx-9'>
                 <button 
                   className='pagination-btn' 
                   onClick={handlePrevPage} 

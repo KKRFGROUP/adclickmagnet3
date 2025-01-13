@@ -27,7 +27,7 @@ function ThankYou() {
     <>
         <Navbar mobileOverlayOpen={toggleMenu} isOpen={isOpen}/>
           <div ref={pageMainRef} className="page-main">
-              <div className="thankyou-main-container" style={{backgroundImage: "url(https://res.cloudinary.com/dgdgrniut/image/upload/v1734538406/DALL_E_2024-12-18_20.22.23_-_A_minimalist_background_image_for_a_website_featuring_a_black_theme_with_subtle_glowing_light_effects_or_abstract_objects_in_the_center._The_objects_zin44f.webp)"}}>
+              <div className="thankyou-main-container" style={{backgroundImage: "url(https://i.pinimg.com/1200x/5a/6b/50/5a6b5014f1c4e9e04fb8c0d78c72b193.jpg)"}}>
                   <div className="thanks-bg-blur">
                       <Image src="https://res.cloudinary.com/dgdgrniut/image/upload/c_crop,ar_16:9/v1734527641/acm_white_logo-removebg-preview_qgn8qq_hs2io7.png" alt="" height={300} width={300} />
                       <h1 className="thankyou-head">Thank you for Contacting us!</h1>

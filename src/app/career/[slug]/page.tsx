@@ -248,6 +248,7 @@ function CareerSlug() {
               <LabelInputContainer className="mb-4">
                 <Label className="dark:text-black" htmlFor="phoneNumber">Phone Number</Label>
                 <PhoneInput
+                  id="phoneNumber"
                   value={formData.phoneNumber}
                   onChange={handleChange}
                   placeholder="Phone number"

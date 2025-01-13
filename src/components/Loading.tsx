@@ -1,6 +1,6 @@
 "use client"
 // Loading.tsx
-import { createContext, useContext, useState, useRef, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, useRef, ReactNode } from 'react';
 
 interface LoadingContextType {
   isLoading: boolean;
@@ -16,12 +16,19 @@ export function LoadingProvider({ children }: { children: ReactNode }) {
   const [isLoading, setIsLoading] = useState(true);
   const [progress, setProgress] = useState(0);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   // Initialize audio only once at the provider level
   if (typeof window !== 'undefined' && !audioRef.current) {
     audioRef.current = new Audio('/preloader-sound.mp3');
     audioRef.current.volume = 1;
   }
+
+  useEffect(() => {
+    if (containerRef.current) {
+      containerRef.current.style.transform = 'translateZ(0)'; // Force GPU acceleration
+    }
+  }, []);
 
   return (
     <LoadingContext.Provider value={{ 
@@ -30,8 +37,9 @@ export function LoadingProvider({ children }: { children: ReactNode }) {
       progress, 
       setProgress,
       audioElement: audioRef.current
-    }}>
-      {children}
+    }}> 
+    {children}
+    
     </LoadingContext.Provider>
   );
 }

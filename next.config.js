@@ -4,12 +4,8 @@ module.exports = {
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
-      '@splinetool/runtime': '@splinetool/runtime'
+      '@splinetool/runtime': '@splinetool/runtime/build/runtime.js'
     };
-    config.module.rules.push({
-      test: /\.(gltf)$/,
-      type: 'asset/resource',
-    });
 
     // Add Draco loader configuration
     config.module.rules.push({

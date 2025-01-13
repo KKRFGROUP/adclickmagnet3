@@ -152,6 +152,7 @@ function SignupFormDemo() {
         <LabelInputContainer className="mb-4">
           <Label htmlFor="phoneNumber">Phone Number</Label>
           <PhoneInput
+            id="phoneNumber"
             value={formData.phoneNumber}
             onChange={handleChange}
             placeholder="Phone number"

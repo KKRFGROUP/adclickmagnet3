@@ -36,11 +36,12 @@ interface PhoneInputProps {
   className: string;
   placeholder: string;
   name: string;
+  id?: string;
   onChange: (e: { target: { name: string; value: string } }) => void;
 }
 
 // Phone Input Component
-const PhoneInput: React.FC<PhoneInputProps> = ({ value, className, placeholder,name,onChange, ...props  }) => {
+const PhoneInput: React.FC<PhoneInputProps> = ({ value, className, placeholder,id, name,onChange, ...props  }) => {
   const [selectedCountry, setSelectedCountry] = useState(countryCodes[0].code);
   const [phoneNumber, setPhoneNumber] = useState('');
   const radius = 100;
@@ -128,6 +129,7 @@ const PhoneInput: React.FC<PhoneInputProps> = ({ value, className, placeholder,n
           type="tel"
           className={cn(`w-[75%] sm:w-[85%] md:w-[80%] bg-transparent pl-1`,className
           )}
+          id={id}
           placeholder={placeholder}
           name={name}
           onChange={handlePhoneChange}

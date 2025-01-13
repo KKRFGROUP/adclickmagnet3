@@ -626,6 +626,7 @@ video::-webkit-media-controls {
 }
 .services-sec6-left-content-para {
     font-size: 20px;
+    color: #fff !important;
 }
 .services-sec6-right-content {
     width: 50%;
@@ -1115,6 +1116,15 @@ video::-webkit-media-controls {
     height: max-content;
 }
 
+.faq-right-container {
+    color: #fff !important;;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) { 
+    .faq-right-container {
+        color: #fff !important;;
+    }
+}
 
 .faq-content {
     backdrop-filter: blur(30px);

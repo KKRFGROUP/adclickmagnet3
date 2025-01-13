@@ -657,6 +657,7 @@ figure {
 }
 .creative-service-card-container {
     margin-top: 60px;
+    color: #fff!important;
 }
 .creative-service-card {
     width: 23%;
@@ -675,7 +676,9 @@ figure {
 }
 .creative-service-card-content {
     font-size: 20px;
+    color: #fff!important;
 }
+
 video::-webkit-media-controls {
     display: none !important;
 }

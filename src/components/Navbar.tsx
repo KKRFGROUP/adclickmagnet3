@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useCallback, memo } from 'react';
+import React, { useState, useEffect, useCallback, useRef,memo } from 'react';
 
 import { Menu, MenuItem } from "./ui/NavbarMenu";
 import { cn } from "@/lib/utils";
@@ -88,6 +88,7 @@ const Logo = memo(() => (
             alt="ACM Logo" 
             height={100} 
             width={150}
+            style={{width: "150", height: "100"}} 
         />
     </Link>
 ));
@@ -129,24 +130,31 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: NavbarPr
     const [isVisible, setIsVisible] = useState(true);
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [hoverImage, setHoverImage] = useState(defaultImage);
+    const scrollTimeout = useRef<NodeJS.Timeout>();
 
-    // Scroll handler with throttling
     useEffect(() => {
-        let ticking = false;
         const handleScroll = () => {
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    const currentScrollPos = window.scrollY;
-                    setIsVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
-                    setPrevScrollPos(currentScrollPos);
-                    ticking = false;
-                });
-                ticking = true;
+            if (scrollTimeout.current) {
+                clearTimeout(scrollTimeout.current);
             }
+
+            scrollTimeout.current = setTimeout(() => {
+                const currentScrollPos = window.pageYOffset;
+                const visible = prevScrollPos > currentScrollPos || currentScrollPos < 10;
+
+                setIsVisible(visible);
+                setPrevScrollPos(currentScrollPos);
+            }, 50);
         };
 
-        window.addEventListener("scroll", handleScroll, { passive: true });
-        return () => window.removeEventListener("scroll", handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            if (scrollTimeout.current) {
+                clearTimeout(scrollTimeout.current);
+            }
+        };
     }, [prevScrollPos]);
 
     // Handlers
@@ -190,7 +198,7 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: NavbarPr
                                 <MenuItem setActive={setActive} active={active} item="Home" />
                             </Link>
                             <MenuItem setActive={setActive} active={active} item="What We Do">
-                                <div className='what-we-do-hover-header' style={{backgroundImage: "url(https://res.cloudinary.com/dgdgrniut/image/upload/v1734538406/DALL_E_2024-12-18_20.22.23_-_A_minimalist_background_image_for_a_website_featuring_a_black_theme_with_subtle_glowing_light_effects_or_abstract_objects_in_the_center._The_objects_zin44f.webp)"}}>
+                                <div className='what-we-do-hover-header' style={{backgroundImage: "url()"}}>
                                     <div className="bg-blur">
                                     <div className="what-we-do-hover-sec1">
                                         <h2 className="what-we-do-hover-sec1-head">Built to Elevate Your Growth</h2>
@@ -238,7 +246,7 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: NavbarPr
                         
                         
                             <MenuItem setActive={setActive} active={active} item="Who We Are">
-                            <div className='what-we-do-hover-header' style={{backgroundImage: "url(https://res.cloudinary.com/dgdgrniut/image/upload/v1734538406/DALL_E_2024-12-18_20.22.23_-_A_minimalist_background_image_for_a_website_featuring_a_black_theme_with_subtle_glowing_light_effects_or_abstract_objects_in_the_center._The_objects_zin44f.webp)"}}>
+                            <div className='what-we-do-hover-header' style={{backgroundImage: "url()"}}>
                                     <div className="bg-blur">
                                     <div className="what-we-do-hover-sec1">
                                         <h2 className="what-we-do-hover-sec1-head">Crafted to Propel Your Success</h2>

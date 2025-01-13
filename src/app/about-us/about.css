@@ -163,6 +163,7 @@
 }
 .impact-matric-count-card-numbers {
     font-size: 120px;
+    color: #fff!important;
 }
 .impact-matric-count-card-numbers-sign {
     font-size: 120px;
@@ -347,6 +348,7 @@
 .inspired-us-content-card-head {
     font-size: 37px;
     font-family: "Unbounded";
+    color: #fff !important;
 }
 .inspired-video-card {
     margin-top: 10%;
@@ -364,6 +366,7 @@ video::-webkit-media-controls {
     left: 50%;
     text-align: center;
     transform: translate(-50%, -50%);
+    color: #fff!important;
 }
 
 .inspired-video-content-head {
@@ -474,6 +477,7 @@ video::-webkit-media-controls {
         font-family: "Syne";
         top: 30%;
         width: 90%;
+        color: #fff !important;
     }
     
     .inspired-video-content-head {
@@ -533,6 +537,7 @@ video::-webkit-media-controls {
     flex-direction: column;
     justify-content: center;
     text-align: left;
+    color: #fff!important;
 }
 .founder-content-para {
     font-family: "Unbounded";

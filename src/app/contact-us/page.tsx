@@ -186,6 +186,7 @@ export default function ContactUs() {
                                 <LabelInputContainer className="mb-4 contact-us-page-layout-right-form-label-input">
                                     <Label htmlFor="phoneNumber">Phone Number</Label>
                                     <PhoneInput
+                                      id="phoneNumber"
                                       value={formData.phoneNumber}
                                       onChange={handleChange}
                                       placeholder="Phone number"
@@ -364,6 +365,7 @@ export default function ContactUs() {
                                 <LabelInputContainer className="mb-4 contact-us-page-layout-right-form-label-input">
                                     <Label htmlFor="phoneNumber">Phone Number</Label>
                                     <PhoneInput
+                                      id="phoneNumber"
                                       value={formData.phoneNumber}
                                       onChange={handleChange}
                                       placeholder="Phone number"

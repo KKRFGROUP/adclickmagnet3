@@ -160,7 +160,7 @@ function InspiredBy() {
     {/* Popup Modal */}
     {isPopupOpen && (
         <div className="fixed inset-0 bg-black  flex items-center justify-center pt-[20%] md:pt-[7%] h-[100vh] popup-z-index">
-          <div className="service-page-popup" style={{backgroundImage: "url(https://res.cloudinary.com/dgdgrniut/image/upload/v1734538406/DALL_E_2024-12-18_20.22.23_-_A_minimalist_background_image_for_a_website_featuring_a_black_theme_with_subtle_glowing_light_effects_or_abstract_objects_in_the_center._The_objects_zin44f.webp)"}}>
+          <div className="service-page-popup" style={{backgroundImage: "url(https://i.pinimg.com/1200x/5a/6b/50/5a6b5014f1c4e9e04fb8c0d78c72b193.jpg)"}}>
             <div className="bg-blur rounded-2xl flex-col">
             <button
               onClick={() => setIsPopupOpen(false)}
@@ -203,6 +203,7 @@ function InspiredBy() {
               <LabelInputContainer className="mb-4">
                 <Label htmlFor="phoneNumber">Phone Number</Label>
                     <PhoneInput
+                      id="phoneNumber"
                       value={formData.phoneNumber}
                       onChange={handleChange}
                       placeholder="Phone Number"
