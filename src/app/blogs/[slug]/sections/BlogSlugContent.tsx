@@ -66,7 +66,7 @@ function BlogSlugContent({content}: {content: {
             ))}
             {/* author card
             <div className="press-release-author-card">
-                    <Image className="press-release-author-card-img" src="https://res.cloudinary.com/dgdgrniut/image/upload/v1732186526/adclickmagnetlogoblacklogo_reqzpl.png" alt="logo" height={500} width={500} />
+                    <Image className="press-release-author-card-img" src="/images/mobile-navbar-logo.webp" alt="logo" height={500} width={500} />
                     <div>
                       <p className="press-release-author-card-author">THE AUTHOR</p>
                      
@@ -76,7 +76,7 @@ function BlogSlugContent({content}: {content: {
         </div>
         <div className="blog-slug-contact-form-card">
             <div className="blog-slug-contact-form">
-                <Image className="blog-slug-contact-form-img" src="http://eliteflowpiping.com/images/contact-us.jpg" alt="contact form img" height={500} width={500} />
+                <Image className="blog-slug-contact-form-img" src="/images/slug-page-contact-us.webp" alt="contact form img" height={500} width={500} />
                 <form onSubmit={handleSubmit} className="blog-slug-contact-form-content">
                 <h2 className='blog-slug-contact-form-content-head' >Let's Build Digital Exellence Together</h2>
                     <div className="blog-slug-contact-form-content-label-input">

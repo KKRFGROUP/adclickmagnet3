@@ -28,8 +28,11 @@ module.exports = {
   transpilePackages: ['@splinetool/react-spline', '@splinetool/runtime', 'three'],
   swcMinify: true,
   compress: true,
+  poweredByHeader: false,
+  optimizeFonts: true,
     images: {
       minimumCacheTTL: 60,
+      formats: ['image/webp'],
       remotePatterns: [
         {
           protocol: 'https',
@@ -53,16 +56,6 @@ module.exports = {
         },
         {
           protocol: 'https',
-          hostname: 'png.pngtree.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'numerique.vamtam.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
           hostname: 'i.gifer.com',
           port: '',
         },
@@ -78,37 +71,12 @@ module.exports = {
         },
         {
           protocol: 'https',
-          hostname: 'i.graphicmama.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'media.istockphoto.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
           hostname: 'cdn.sanity.io',
           port: '',
         },
         {
           protocol: 'https',
           hostname: 'i.pinimg.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'outerorbittech.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'static-cse.canva.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'media.licdn.com',
           port: '',
         },
         {
@@ -126,36 +94,7 @@ module.exports = {
           hostname: 'images.pexels.com',
           port: '',
         },
-        {
-          protocol: 'https',
-          hostname: 'www.cflowapps.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'www.cflowapps.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'www.commercialdesignindia.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'ms-f7-sites-prod-cdn.akamaized.net',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'filecenter.deltaww.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'img.foodprocessing.com',
-          port: '',
-        },
+        
         {
           protocol: 'https',
           hostname: 'www.sparkfabrik.com',
@@ -173,37 +112,12 @@ module.exports = {
         },
         {
           protocol: 'https',
-          hostname: 'c8.alamy.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 't3.ftcdn.net',
-          port: '',
-        },
-        {
-          protocol: 'https',
           hostname: 'cdn.shopify.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'w7.pngwing.com',
           port: '',
         },
         {
           protocol: 'http',
           hostname: 'www.threegirlsmedia.com',
-          port: '',
-        },
-        {
-          protocol: 'http',
-          hostname: 'eliteflowpiping.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'www.thinkleansixsigma.com',
           port: '',
         },
         {

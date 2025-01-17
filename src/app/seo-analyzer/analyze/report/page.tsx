@@ -102,7 +102,7 @@ function Report() {
         {isPopupOpen === false ?  
           <div className="backdrop-blur-2xl rounded-2xl border border-black/[0.2] dark:border-white/[0.2] shadow-xl analyze-your-web-loader">
             <Image 
-              src="https://res.cloudinary.com/dgdgrniut/image/upload/v1732186526/adclickmagnetlogoblacklogo_reqzpl.png" 
+              src="/images/mobile-navbar-logo.webp" 
               alt="analyzer-logo" 
               height={200} 
               width={200}

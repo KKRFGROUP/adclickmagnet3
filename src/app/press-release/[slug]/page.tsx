@@ -3,6 +3,7 @@
 import React, { useEffect,useRef, useState } from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
+import Link from 'next/link';
 import { FaFacebook,FaLinkedin,FaTwitter } from "react-icons/fa";
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -252,7 +253,7 @@ function SlugPressRelease() {
                         </div>
                     ))}
                     <div className="press-release-author-card">
-                      <Image className="press-release-author-card-img" src="https://res.cloudinary.com/dgdgrniut/image/upload/v1732186526/adclickmagnetlogoblacklogo_reqzpl.png" alt="logo" height={500} width={500} />
+                      <Image className="press-release-author-card-img" src="/images/mobile-navbar-logo.webp" alt="logo" height={500} width={500} />
                       <div>
                         <p className="press-release-author-card-author">THE AUTHOR</p>
                       
@@ -267,7 +268,7 @@ function SlugPressRelease() {
                 <h2 className="read-more-press-release-head">Read More Press Release</h2>
                 <div className="flex justify-between read-more-press-release-flex">
                   {morePressRelease.map((each,index) => (
-                    <div key={index} className='read-more-press-release-card' >
+                    <Link key={index} href={`press-release/${each.link}`} className='read-more-press-release-card'>
                       <Image className="read-more-press-release-card-img" src={each.img} alt={each.heading} height={500} width={500} />
                       <h2 className="read-more-press-release-card-head">{each.heading}</h2>
                       <p className="read-more-press-release-card-para">{each.para}</p>
@@ -275,7 +276,7 @@ function SlugPressRelease() {
                         <p className="read-more-press-release-card-acm-date">adClickMagnet</p>
                         <p className="read-more-press-release-card-acm-date">{new Date(each.time).toLocaleTimeString()}</p>
                       </div>
-                    </div>
+                    </Link>
                   ))}
                 </div>
               </div>

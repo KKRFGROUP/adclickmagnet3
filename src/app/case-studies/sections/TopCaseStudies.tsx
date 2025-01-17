@@ -15,7 +15,7 @@ const demoBlogs = [
     time: "2024-11-22T09:00:00Z",
     category: "web development",
     name: "John Doe",
-    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+    image: "/images/blog-img-template.jpg",
     link: "10-tips-for-writing-clean-code"
   },
   {
@@ -25,7 +25,7 @@ const demoBlogs = [
     time: "2024-11-21T12:00:00Z",
     category: "web development",
     name: "Jane Smith",
-    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+    image: "/images/blog-img-template.jpg",
     link: "the-future-of-responsive-design"
   },
   {
@@ -35,7 +35,7 @@ const demoBlogs = [
     time: "2024-11-20T15:00:00Z",
     category: "graphic design",
     name: "Alex Johnson",
-    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+    image: "/images/blog-img-template.jpg",
     link: "top-5-graphic-design-trends-of-2024"
   },
   {
@@ -45,7 +45,7 @@ const demoBlogs = [
     time: "2024-11-19T10:00:00Z",
     category: "graphic design",
     name: "Emily Brown",
-    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+    image: "/images/blog-img-template.jpg",
     link: "mastering-logo-design-basics"
   },
   {
@@ -55,7 +55,7 @@ const demoBlogs = [
     time: "2024-11-18T08:30:00Z",
     category: "SEO",
     name: "Michael Green",
-    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+    image: "/images/blog-img-template.jpg",
     link: "how-seo-impacts-business-growth"
   },
   {
@@ -65,7 +65,7 @@ const demoBlogs = [
     time: "2024-11-17T11:15:00Z",
     category: "SEO",
     name: "Sophia Lee",
-    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+    image: "/images/blog-img-template.jpg",
     link: "seo-best-practices-for-2024"
   },
   {
@@ -75,7 +75,7 @@ const demoBlogs = [
     time: "2024-11-16T14:45:00Z",
     category: "meta ads",
     name: "Daniel Martinez",
-    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+    image: "/images/blog-img-template.jpg",
     link: "meta-ads-a-comprehensive-guide"
   },
   {
@@ -85,7 +85,7 @@ const demoBlogs = [
     time: "2024-11-15T09:00:00Z",
     category: "meta ads",
     name: "Olivia Wilson",
-    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+    image: "/images/blog-img-template.jpg",
     link: "maximizing-your-meta-ads-budget"
   },
   {
@@ -95,7 +95,7 @@ const demoBlogs = [
     time: "2024-11-14T13:30:00Z",
     category: "LinkedIn ads",
     name: "Ethan Taylor",
-    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+    image: "/images/blog-img-template.jpg",
     link: "linkedin-ads-targeting-professionals"
   },
   {
@@ -105,7 +105,7 @@ const demoBlogs = [
     time: "2024-11-13T16:00:00Z",
     category: "LinkedIn ads",
     name: "Isabella Davis",
-    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+    image: "/images/blog-img-template.jpg",
     link: "creating-compelling-linkedin-ads"
   },
 
@@ -117,7 +117,7 @@ const demoBlogs = [
     category: "google ads",
     name: "Aiden White",
     link: "the-basics-of-google-ads",
-    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png"
+    image: "/images/blog-img-template.jpg"
   },
   {
     id: 12,
@@ -127,7 +127,7 @@ const demoBlogs = [
     category: "google ads",
     name: "Mia Thompson",
     link: "advanced-google-ads-strategies",
-    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png"
+    image: "/images/blog-img-template.jpg"
   },
   {
     id: 13,
@@ -137,7 +137,7 @@ const demoBlogs = [
     category: "web development",
     name: "Liam Harris",
     link: "exploring-the-latest-javaScript-frameworks",
-    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png"
+    image: "/images/blog-img-template.jpg"
   },
   {
     id: 14,
@@ -147,7 +147,7 @@ const demoBlogs = [
     category: "graphic design",
     name: "Emma Walker",
     link: "building-ui-components-with-figma",
-    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png"
+    image: "/images/blog-img-template.jpg"
   },
   {
     id: 15,
@@ -157,7 +157,7 @@ const demoBlogs = [
     category: "SEO",
     name: "Noah Adams",
     link: "keyword-research-simplified",
-    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png"
+    image: "/images/blog-img-template.jpg"
   },
   {
     id: 16,
@@ -167,7 +167,7 @@ const demoBlogs = [
     category: "google ads",
     name: "Ava Scott",
     link: "getting-started-with-google-ads-for-beginners",
-    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png"
+    image: "/images/blog-img-template.jpg"
   },
   {
     id: 17,
@@ -177,7 +177,7 @@ const demoBlogs = [
     category: "meta ads",
     name: "Oliver Young",
     link: "leveraging-meta-ads-for-brand-awareness",
-    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png"
+    image: "/images/blog-img-template.jpg"
   }
 ];
 

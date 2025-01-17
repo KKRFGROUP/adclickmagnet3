@@ -37,42 +37,44 @@ const clientVideos: ClientVideo[] = [
         name: "Chris",
         position: "Founder",
         company: "PGroomer",
-        video: "/videos/compressed/Chris.mp4",
+        video: "https://res.cloudinary.com/deepcnbrz/video/upload/v1737116882/Chris_jph9o9.mp4",
         poster: "https://res.cloudinary.com/dgdgrniut/image/upload/v1736526079/Screenshot_2025-01-10_at_9.34.04_PM_1_ldz4l0.png" // Add your poster URLs
     },
     {
         name: "Elisha",
         position: "Marketing Head",
         company: "RockWood Kitchen",
-        video: "/videos/compressed/Elisha.mp4",
+        video: "https://res.cloudinary.com/deepcnbrz/video/upload/v1737116774/Elisha_flls56.mp4",
         poster: "https://res.cloudinary.com/dgdgrniut/image/upload/v1736526079/Screenshot_2025-01-10_at_9.34.36_PM_1_fu67qs.png"
     },
     {
         name: "Mark",
         position: "Founder",
         company: "Real Result Sales Training",
-        video: "/videos/compressed/Mark.mp4",
+        video: "https://res.cloudinary.com/deepcnbrz/video/upload/v1737116740/Mark_aqnnlg.mp4",
         poster: "https://res.cloudinary.com/dgdgrniut/image/upload/v1736526081/Screenshot_2025-01-10_at_9.34.46_PM_2_fip862.png"
     },
     {
         name: "Avnish",
         position: "Founder",
         company: "Spartan Tattoos",
-        video: "/videos/compressed/Avnish.mp4",
+        video: "https://res.cloudinary.com/deepcnbrz/video/upload/v1737116759/Avnish_dux08g.mp4",
         poster: "https://res.cloudinary.com/dgdgrniut/image/upload/v1736526079/Screenshot_2025-01-10_at_9.34.58_PM_1_mvte8x.png"
     }
 ];
+
 
 function ClientVideSec() {
     const videoRefs = useRef<Map<number, HTMLVideoElement>>(new Map());
     const [activeVideoIndex, setActiveVideoIndex] = useState<number | null>(null);
     const [hasInteracted, setHasInteracted] = useState(false);
+    const playPromiseRef = useRef<Map<number, Promise<void>>>(new Map());
 
+    
+    // Handle initial user interaction
     useEffect(() => {
-        // Add interaction listener to document
         const handleInteraction = () => {
             setHasInteracted(true);
-            // Remove listeners after first interaction
             document.removeEventListener('click', handleInteraction);
             document.removeEventListener('touchstart', handleInteraction);
         };
@@ -86,57 +88,86 @@ function ClientVideSec() {
         };
     }, []);
 
+    // Initialize video elements
     const setVideoRef = useCallback((index: number, element: HTMLVideoElement | null) => {
         if (element) {
             videoRefs.current.set(index, element);
-            // Always start with muted state
-            element.muted = true;
         }
     }, []);
 
-    const handleMouseEnter = useCallback(async (index: number) => {
+    const stopVideo = useCallback(async (index: number) => {
         const video = videoRefs.current.get(index);
         if (!video) return;
 
-        try {
-            video.currentTime = 0; // Reset to start
-            
-            // If user has interacted, try unmuted playback
-            if (hasInteracted) {
-                video.muted = false;
-                setActiveVideoIndex(index);
-                await video.play();
-            } else {
-                // If no interaction yet, always play muted
-                video.muted = true;
-                setActiveVideoIndex(index);
-                await video.play();
-            }
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        } catch (error) {
-            console.warn('Playback with sound failed, falling back to muted playback');
+        const playPromise = playPromiseRef.current.get(index);
+        if (playPromise) {
             try {
+                // Wait for any pending play operation to complete
+                await playPromise;
+                video.pause();
+                video.currentTime = 0;
                 video.muted = true;
-                setActiveVideoIndex(index);
-                await video.play();
-            } catch (mutedError) {
-                console.error('Muted playback also failed:', mutedError);
+            } catch (error) {
+                console.error('Error stopping video:', error);
             }
-        }
-    }, [hasInteracted]);
-
-    const handleMouseLeave = useCallback((index: number) => {
-        const video = videoRefs.current.get(index);
-        if (video) {
+        } else {
             video.pause();
             video.currentTime = 0;
             video.muted = true;
-            setActiveVideoIndex(null);
         }
+        playPromiseRef.current.delete(index);
     }, []);
 
+    const handleMouseEnter = useCallback(async (index: number) => {
+        if (!hasInteracted) return;
+
+        const video = videoRefs.current.get(index);
+        if (!video) return;
+
+        // Stop any currently playing video
+        if (activeVideoIndex !== null && activeVideoIndex !== index) {
+            await stopVideo(activeVideoIndex);
+        }
+
+        try {
+            video.muted = false;
+            video.currentTime = 0;
+            const playPromise = video.play();
+            playPromiseRef.current.set(index, playPromise);
+            
+            // Wait for the play operation to complete
+            await playPromise;
+            setActiveVideoIndex(index);
+        } catch (error) {
+            console.warn('Unmuted playback failed, trying muted:', error);
+            try {
+                video.muted = true;
+                const mutedPlayPromise = video.play();
+                playPromiseRef.current.set(index, mutedPlayPromise);
+                await mutedPlayPromise;
+            } catch (mutedError) {
+                console.error('Muted playback also failed:', mutedError);
+                playPromiseRef.current.delete(index);
+            }
+        }
+    }, [activeVideoIndex, hasInteracted, stopVideo]);
+
+    const handleMouseLeave = useCallback(async (index: number) => {
+        await stopVideo(index);
+        setActiveVideoIndex(null);
+    }, [stopVideo]);
+
+    // Cleanup on unmount
+    useEffect(() => {
+        return () => {
+            videoRefs.current.forEach((video, index) => {
+                stopVideo(index);
+            });
+        };
+    }, [stopVideo]);
+
     return (
-        <div className="client-video-section" onClick={() => setHasInteracted(true)}>
+        <div className="client-video-section">
             <TypewriterEffect 
                 className="data-driven-head client-video-section-head" 
                 words={words} 
@@ -156,12 +187,12 @@ function ClientVideSec() {
                                 preload="metadata"
                                 loop
                                 playsInline
-                                muted={true}  // Start muted by default
+                                muted={activeVideoIndex !== index}
                             >
                                 <source src={each.video} type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
-                            {!hasInteracted && activeVideoIndex === index && (
+                            {!hasInteracted && (
                                 <div className="absolute top-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">
                                     Click anywhere to enable sound
                                 </div>

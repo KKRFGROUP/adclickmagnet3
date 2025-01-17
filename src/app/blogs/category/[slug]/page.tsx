@@ -20,7 +20,7 @@ const categoryBlogs = [
       time: "2024-11-21T10:30:00Z",
       category: "web development",
       name: "John Doe",
-      image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+      image: "/images/blog-img-template.jpg",
       link: "understanding-javascript-closures",
     },
     {
@@ -30,7 +30,7 @@ const categoryBlogs = [
       time: "2024-11-20T14:00:00Z",
       category: "web development",
       name: "Jane Smith",
-      image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+      image: "/images/blog-img-template.jpg",
       link: "css-grid-vs-flexbox-when-to-use-which",
     },
     {
@@ -40,7 +40,7 @@ const categoryBlogs = [
       time: "2024-11-19T08:45:00Z",
       category: "web development",
       name: "Alice Johnson",
-      image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+      image: "/images/blog-img-template.jpg",
       link: "a-beginners-guide-to-react-hooks",
     },
     {
@@ -50,7 +50,7 @@ const categoryBlogs = [
       time: "2024-11-18T16:20:00Z",
       category: "web development",
       name: "Bob Brown",
-      image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+      image: "/images/blog-img-template.jpg",
       link: "top-10-web-development-trends-in-2024",
     },
     {
@@ -60,7 +60,7 @@ const categoryBlogs = [
       time: "2024-11-17T11:00:00Z",
       category: "web development",
       name: "Charlie Davis",
-      image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+      image: "/images/blog-img-template.jpg",
       link: "introduction-to-typescript-for-javascript-developers",
     },
     {
@@ -70,7 +70,7 @@ const categoryBlogs = [
       time: "2024-11-16T13:15:00Z",
       category: "web development",
       name: "Emily Evans",
-      image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+      image: "/images/blog-img-template.jpg",
       link: "best-practices-for-responsive-web-design",
     },
     {
@@ -80,7 +80,7 @@ const categoryBlogs = [
       time: "2024-11-15T09:50:00Z",
       category: "web development",
       name: "Frank Green",
-      image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+      image: "/images/blog-img-template.jpg",
       link: "how-to-optimize-web-performance",
     },
     {
@@ -90,7 +90,7 @@ const categoryBlogs = [
       time: "2024-11-14T18:40:00Z",
       category: "web development",
       name: "Grace Hall",
-      image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+      image: "/images/blog-img-template.jpg",
       link: "an-overview-of-progressive-web-apps",
     },
     {
@@ -100,7 +100,7 @@ const categoryBlogs = [
       time: "2024-11-13T12:30:00Z",
       category: "web development",
       name: "Henry Irving",
-      image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+      image: "/images/blog-img-template.jpg",
       link: "top-javascript-frameworks-to-learn-in-2024",
     },
     {
@@ -110,7 +110,7 @@ const categoryBlogs = [
       time: "2024-11-12T17:10:00Z",
       category: "web development",
       name: "Isla Jackson",
-      image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+      image: "/images/blog-img-template.jpg",
       link: "exploring-serverless-architecture",
     },
     {
@@ -120,7 +120,7 @@ const categoryBlogs = [
       time: "2024-11-11T14:45:00Z",
       category: "web development",
       name: "Jack Kelly",
-      image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+      image: "/images/blog-img-template.jpg",
       link: "accessibility-in-web-development",
     },
     {
@@ -130,7 +130,7 @@ const categoryBlogs = [
       time: "2024-11-10T10:20:00Z",
       category: "web development",
       name: "Karen Lewis",
-      image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+      image: "/images/blog-img-template.jpg",
       link: "mastering-git-for-web-developers",
     },
     {
@@ -140,7 +140,7 @@ const categoryBlogs = [
       time: "2024-11-09T15:30:00Z",
       category: "web development",
       name: "Leo Miller",
-      image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+      image: "/images/blog-img-template.jpg",
       link: "exploring-restful-apis-for-beginners",
     },
     {
@@ -150,7 +150,7 @@ const categoryBlogs = [
       time: "2024-11-08T13:00:00Z",
       category: "web development",
       name: "Mia Nelson",
-      image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+      image: "/images/blog-img-template.jpg",
       link: "best-tools-for-front-end-developers",
     },
     {
@@ -160,7 +160,7 @@ const categoryBlogs = [
       time: "2024-11-07T16:50:00Z",
       category: "web development",
       name: "Noah Owens",
-      image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+      image: "/images/blog-img-template.jpg",
       link: "the-basics-of-web-security",
     },
 ]

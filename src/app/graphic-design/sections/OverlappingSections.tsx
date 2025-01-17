@@ -14,7 +14,7 @@ const demoCaseStudies = [
     time: "2024-11-22T09:00:00Z",
     category: "web development",
     name: "John Doe",
-    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+    image: "/images/blog-img-template.jpg",
     link: "10-tips-for-writing-clean-code"
   },
   {
@@ -24,7 +24,7 @@ const demoCaseStudies = [
     time: "2024-11-21T12:00:00Z",
     category: "web development",
     name: "Jane Smith",
-    image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+    image: "/images/blog-img-template.jpg",
     link: "the-future-of-responsive-design"
   },
 ]

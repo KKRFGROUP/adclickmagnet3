@@ -12,7 +12,7 @@ const slugblogcontent = {
   name: "John Doe",
   time: "2024-11-22T09:00:00Z",
   category: "web development",
-  image: "https://png.pngtree.com/png-clipart/20220615/original/pngtree-blog-chalk-white-icon-on-black-background-png-image_8058245.png",
+  image: "/images/blog-img-template.jpg",
   content: {
     para: [
       "Writing clean code is not just about aesthetics; it's about creating a codebase that is easy to understand, maintain, and scale. Clean code reduces technical debt and improves collaboration among team members.",
