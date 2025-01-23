@@ -113,7 +113,7 @@ function Analyze({ params }: { params: { slug: string } }) {
 
       <div className="backdrop-blur-2xl rounded-2xl border border-black/[0.2] dark:border-white/[0.2] shadow-xl analyze-your-web-loader">
         <Image 
-          src="/images/mobile-navbar-logo.webp" 
+          src="/images/logos/mobile-navbar-logo.webp" 
           alt="analyzer-logo" 
           className="seo-analyze-logo"
           height={200} 

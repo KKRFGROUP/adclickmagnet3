@@ -29,7 +29,7 @@ function ThankYou() {
           <div ref={pageMainRef} className="page-main">
               <div className="thankyou-main-container" style={{backgroundImage: "url(https://i.pinimg.com/1200x/5a/6b/50/5a6b5014f1c4e9e04fb8c0d78c72b193.jpg)"}}>
                   <div className="thanks-bg-blur">
-                      <Image src="https://res.cloudinary.com/dgdgrniut/image/upload/c_crop,ar_16:9/v1734527641/acm_white_logo-removebg-preview_qgn8qq_hs2io7.png" alt="" height={300} width={300} />
+                      <Image src="/images/logos/white logo.webp" alt="" height={300} width={300} />
                       <h1 className="thankyou-head">Thank you for Contacting us!</h1>
                       <p className="thankyou-para">We have received your message and will contat you shortly to follow up, If you would like to speak to someone immidiately feel free to call.</p>
                       <Link href="/"> <button className="service-hero-sec-content-button thankyou-btn">Back To Home</button></Link>

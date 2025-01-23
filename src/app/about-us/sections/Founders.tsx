@@ -31,7 +31,7 @@ function Founders() {
             <TypewriterEffect className='impact-matric-head'  words={words}/>
             <div className="founder-img-cards">
                 <div className='founder-img-card'>
-                    <Image className="founder-img" src="https://res.cloudinary.com/dgdgrniut/image/upload/v1731761908/Untitled_design_1_yidmus.png" alt="founder" height={600} width={600} />
+                    <Image className="founder-img" src="/images/founders/abhi jain.webp" alt="founder" height={600} width={600} />
                     <div className="founder-content-card">
                         <div className="flex items-center gap-3 mb-3">
                             <FaChevronCircleRight />
@@ -41,7 +41,8 @@ function Founders() {
                     </div>
                 </div>
                 <div className="founder-img-card items-end">
-                    <Image className="founder-img " src="https://res.cloudinary.com/dgdgrniut/image/upload/v1731761906/Untitled_design_isejv4.png" alt="founder" height={600} width={600} />
+                    <Image className="founder-img " src="/images/founders/aftab khan.webp" alt="founder" height={600} width={600} />
+                    {/*<Image className="founder-img " src="https://res.cloudinary.com/dgdgrniut/image/upload/v1731761906/Untitled_design_isejv4.png" alt="founder" height={600} width={600} />*/}
                     <div className="founder-content-card items-end text-right">
                         <div className="flex items-center justify-end gap-3 mb-3">
                             <h2 className='inspired-us-content-card-head'>Aftab Khan</h2>

@@ -60,96 +60,96 @@ const bestBrand = [
   },
   {
     name: "Dekalash",
-    img: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734609723/dekalash_wj2iqh.png"
+    img: "/images/brands/Dekalash.webp"
   },
   {
     name: "HeartSaver-NY",
-    img: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734609723/heart_saver_logo_h3l3ry.png"
+    img: "/images/brands/HeartSaver-NY.webp"
   },
   {
     name: "Wiseman Hoffs",
-    img: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734609723/wiseman_hoffs_logo_mrx1x5.png"
+    img: "/images/brands/Wiseman Hoffs.webp"
   },
   {
     name: "FSilveira",
-    img: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734609723/fsilveira_logo_vslrsq.png"
+    img: "/images/brands/FSilveira.webp"
   },
 
   {
     name: "Spartans",
-    img: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734609723/spartans_tatto_su4wvf.png"
+    img: "/images/brands/Spartans.webp"
   },
   {
     name: "RockWood Kitchens",
-    img: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734609723/rockwood_kitchens_logo_zxhh7s.png"
+    img: "/images/brands/RockWood Kitchens.webp"
   },
   {
     name: "Recover Ease",
-    img: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734609724/recover_ease_logo_a4ibsp.png"
+    img: "/images/brands/Recover Ease.webp"
   },
   {
     name: "Roof Today",
-    img: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734609724/roof_today_logo_jqdqx5.png"
+    img: "/images/brands/Roof Today.webp"
   },
   {
     name: "Count Down Fitness",
-    img: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734609724/countdown_fitness_logo_vzimz8.png"
+    img: "/images/brands/Count Down Fitness.webp"
   },
   {
     name: "Tapis Rugs & Carpet",
-    img: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734609724/tapis_rugs_logo_lgesco.png"
+    img: "/images/brands/Tapis Rugs & Carpet.webp"
   },
   {
     name: "Devilered 2 Choices",
-    img: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734609724/deliverd_2_choices_isl2zy.png"
+    img: "/images/brands/Devilered 2 Choices.webp"
   },
   {
     name: "BON TON",
-    img: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734609725/bonton_logo_ypq3ye.png"
+    img: "/images/brands/BON TON.webp"
   },
   {
     name: "Real Results Sales",
-    img: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734609725/real_results_sales_nhf9da.png"
+    img: "/images/brands/Real Results Sales.webp"
   },
   {
     name: "Sakh Public School",
-    img: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734609725/sakh_public_school_logo_woylpv.png"
+    img: "/images/brands/Sakh Public School.webp"
   },
   {
     name: "Barista",
-    img: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734609725/barista_abs6th.png"
+    img: "/images/brands/Barista.webp"
   },
   {
     name: "Controller Chaos",
-    img: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734609725/contoller_chaos_logo_ccunu5.png"
+    img: "/images/brands/Controller Chaos.webp"
   },
   {
     name: "BI Soni Clean",
-    img: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734609726/bi_soniclean_ga4q3g.png"
+    img: "/images/brands/BI Soni Clean.webp"
   },
   {
     name: "Privacon",
-    img: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734609726/privacon_logo_zm0e7r.png"
+    img: "/images/brands/Privacon.webp"
   },
   {
     name: "Lexington Podiatry",
-    img: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734609726/lexington_podiatry_logo_zdujuf.png"
+    img: "/images/brands/Lexington Podiatry.webp"
   },
   {
     name: "Quick Check Tech",
-    img: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734609726/quick_check_tech_logo_zf2x0e.png"
+    img: "/images/brands/Quick Check Tech.webp"
   },
   {
     name: "Modern Podiatrist",
-    img: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734609727/modern_podiatrist_ku3bhj.png"
+    img: "/images/brands/Modern Podiatrist.webp"
   },
   {
     name: "Decorento",
-    img: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734609727/decorento_logo_m24xtm.png"
+    img: "/images/brands/Decorento.webp"
   },
   {
     name: "Mystic Journeys",
-    img: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734609727/mystic_journeys_logo_oendwe.png"
+    img: "/images/brands/Mystic Journeys.webp"
   },
 
 ]

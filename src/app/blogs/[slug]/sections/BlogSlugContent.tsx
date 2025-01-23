@@ -66,7 +66,7 @@ function BlogSlugContent({content}: {content: {
             ))}
             {/* author card
             <div className="press-release-author-card">
-                    <Image className="press-release-author-card-img" src="/images/mobile-navbar-logo.webp" alt="logo" height={500} width={500} />
+                    <Image className="press-release-author-card-img" src="/images/logos/mobile-navbar-logo.webp" alt="logo" height={500} width={500} />
                     <div>
                       <p className="press-release-author-card-author">THE AUTHOR</p>
                      

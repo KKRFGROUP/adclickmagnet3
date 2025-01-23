@@ -148,7 +148,7 @@ export const Menu: React.FC<MenuProps> = ({
           className="navbar-company-logo" 
           width={300} 
           height={300} 
-          src="https://res.cloudinary.com/dgdgrniut/image/upload/c_crop,w_900,h_200/v1734526527/adclick_magnet_black_logo-removebg-preview_sfbddu_c9us7e.png"
+          src="/images/logos/black logo.webp"
           alt="logo" 
         />
       </Link>

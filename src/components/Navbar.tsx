@@ -53,7 +53,7 @@ const hoverImageArr = [
     },
     {
         name: "Google Ads",
-        img: "https://res.cloudinary.com/dgdgrniut/image/upload/v1734627623/-m_lcxuia.png"
+        img: "/images/google ads logo.webp"
     },
     {
         name: "Meta Ads",
@@ -76,7 +76,7 @@ const hoverImageArr = [
 ]
 
 
-const defaultImage = "https://res.cloudinary.com/dgdgrniut/image/upload/v1734527641/acm_white_logo-removebg-preview_qgn8qq_hs2io7.png";
+const defaultImage = "/images/logos/white logo bigger.webp";
 
 // Memoized Components
 const Logo = memo(() => (
@@ -84,7 +84,7 @@ const Logo = memo(() => (
         <Image 
             priority 
             className="mobile-view-navbar-logo" 
-            src="/images/mobile-navbar-logo.webp"
+            src="/images/logos/mobile-navbar-logo.webp"
             alt="ACM Logo" 
             height={100} 
             width={150}
