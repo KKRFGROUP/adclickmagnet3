@@ -257,7 +257,7 @@ function InspiredBy() {
                 <br />
                 <p className='inspired-video-content-para' >We are committed to delivering measurable results, fostering meaningful connections between brands and their audiences, and helping our clients achieve sustainable growth.</p>
             </div>
-            <video style={{ width: windowWidth <= 768 ? "100%": "100%", height: windowWidth <= 1028? "90vh": "130vh", borderRadius: "50px" }} autoPlay preload='auto' loop muted playsInline src="https://res.cloudinary.com/dgdgrniut/video/upload/v1732097945/rewards-desktop-final_yqhhyy.mp4"></video>
+            <video style={{ width: windowWidth <= 768 ? "100%": "100%", height: windowWidth <= 1028? "90vh": "130vh", borderRadius: "50px" }} autoPlay preload='auto' loop muted playsInline src="https://web-images.credcdn.in/v2/_next/assets/videos/landing/desktop/rewards-desktop-final.mp4?tr=q-95"></video>
         </div> 
         </>
   )
