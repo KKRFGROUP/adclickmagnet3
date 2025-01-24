@@ -328,7 +328,7 @@ export default function ContactUs() {
                                 <div className="flex flex-col md:flex-row  md:space-y-0 md:space-x-2 mb-4">
                                     <LabelInputContainer className="contact-us-page-layout-right-form-label-input">
                                         <Label htmlFor="firstname">First name</Label>
-                                        <Input id="firstname"  placeholder="Tyler" type="text"
+                                        <Input id="firstname"  placeholder="First Name" type="text"
                                         name="firstName"
                                         value={formData.firstName}
                                         onChange={handleChange}
@@ -336,7 +336,7 @@ export default function ContactUs() {
                                     </LabelInputContainer>
                                     <LabelInputContainer className="contact-us-page-layout-right-form-label-input">
                                         <Label htmlFor="lastname" >Last name</Label>
-                                        <Input id="lastname" placeholder="Durden" type="text"
+                                        <Input id="lastname" placeholder="Last Name" type="text"
                                         name="lastName"
                                         value={formData.lastName}
                                         onChange={handleChange}
@@ -350,7 +350,7 @@ export default function ContactUs() {
                                         name="companyName"
                                         value={formData.companyName}
                                         onChange={handleChange}
-                                        required placeholder="Random Company" />
+                                        required placeholder="Company Name" />
                                 </LabelInputContainer>
 
                                 <LabelInputContainer className="mb-4 contact-us-page-layout-right-form-label-input">
@@ -359,7 +359,7 @@ export default function ContactUs() {
                                         name="email"
                                         value={formData.email}
                                         onChange={handleChange}
-                                        required placeholder="projectmayhem@fc.com" />
+                                        required placeholder="Your Email" />
                                 </LabelInputContainer>
 
                                 <LabelInputContainer className="mb-4 contact-us-page-layout-right-form-label-input">
