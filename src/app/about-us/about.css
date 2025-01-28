@@ -493,7 +493,7 @@ video::-webkit-media-controls {
 
 @media (max-width: 768px) {
     .lets-grow-head {
-        top: 30%;
+        top: 20%;
     }
 }
 
@@ -593,8 +593,9 @@ video::-webkit-media-controls {
 
 @media (max-width: 768px) {
     .founders-main-container {
-        padding: 20px;
+        padding: 25px;
         padding-top: 40px;
+        padding-bottom: 0px;
         height: max-content;
     }
     .words-from-our-founders {
@@ -609,16 +610,14 @@ video::-webkit-media-controls {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        margin-bottom: 30px;
-    }
-    .founder-img {
-        border-radius: 80px;
-        margin: 20px;
-        height: 50vh;
-        width: 50vh;
+        margin-bottom: 0px;
     }
     .founder-img-card {
         margin-bottom: 10%;
+    }
+    .founder-content-para {
+        
+        width: 100%;
     }
 }
 @media (max-width: 575px) {
@@ -633,7 +632,7 @@ video::-webkit-media-controls {
     }
     .founder-img {
         margin: 10px;
-        height: 60vh;
+        height: 50vh;
         width: 60vh;
     }
 }
@@ -680,4 +679,28 @@ video::-webkit-media-controls {
     font-weight: bold;
     border-radius: 20px;
     margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .lets-grow-main-container {
+        height: 80vh;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-lets-model {
+        position: relative;
+        bottom: 10%;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .lets-grow-head {
+        top: 15%;
+    }
+    .lets-grow-btn-card {
+        bottom:40%;
+    }
 }

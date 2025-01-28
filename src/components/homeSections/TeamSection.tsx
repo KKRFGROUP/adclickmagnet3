@@ -15,8 +15,8 @@ export default function TeamSection() {
                 <Link href="/contact-us" className="link-width"><button className="flex justify-center gap-3 items-center lets-connect-button" type="button">Let&apos;s connect <FaArrowRightLong /></button> </Link>
             </div>
             <div className="team-sec-image-container flex justify-end">
-                <Image className="team-sec-image" width={400} height={300} alt="team-img" src="https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734531691/Unlocking_Inspiration__The_Power_of_Keynote_Speakers_in_Driving_Change__ahj6xc.jpg" />
-                <Image className="team-sec-image small-img" width={500} height={500} alt="team-img" src="https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734531690/Choosing_the_Perfect_Keynote_Speaker_for_Your_Upcoming_Business_Event_tlgy38.jpg" />
+                <Image className="team-sec-image" width={400} height={300} alt="team-img" src="/images/home team/team sec 01.webp" />
+                <Image className="team-sec-image small-img" width={500} height={500} alt="team-img" src="/images/home team/team sec 02.webp" />
 
             </div>
         </div>

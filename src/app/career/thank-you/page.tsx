@@ -29,7 +29,7 @@ function ThankYou() {
         
         <div ref={pageMainRef} className='page-main'>
 
-              <div className="thankyou-main-container" style={{backgroundImage: "url(https://i.pinimg.com/1200x/5a/6b/50/5a6b5014f1c4e9e04fb8c0d78c72b193.jpg)"}}>
+              <div className="thankyou-main-container" style={{backgroundImage: "url(/images/form-popup-bg.webp)"}}>
                   <div className="thanks-bg-blur">
                       <Image src="/images/logos/white logo.webp" alt="" height={300} width={300} />
                       <h1 className="thankyou-head"> Thank You for Applying!</h1>

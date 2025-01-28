@@ -16,7 +16,7 @@ const pressReleases = [
     id: 1,
     heading: "Company Achieves Milestone with Innovative Product Launch",
     para: "Our company has reached a significant milestone with the launch of an innovative product designed to revolutionize the industry. This marks a new era of growth and innovation.",
-    img: "http://www.threegirlsmedia.com/wp-content/uploads/2015/10/promoting-press-release.jpg",
+    img: "/images/press release img.webp",
     time: "2024-11-22T09:00:00Z",
     link: "company-achieves-milestone-with-innovative-product-launch"
   },
@@ -24,7 +24,7 @@ const pressReleases = [
     id: 2,
     heading: "Global Partnership to Drive Sustainable Practices Announced",
     para: "A groundbreaking global partnership has been announced to advance sustainable practices in key industries. This collaboration aims to address pressing environmental challenges.",
-    img: "http://www.threegirlsmedia.com/wp-content/uploads/2015/10/promoting-press-release.jpg",
+    img: "/images/press release img.webp",
     time: "2024-11-21T14:30:00Z",
     link: "global-partnership-to-drive-sustainable-practices-announced"
   },
@@ -32,7 +32,7 @@ const pressReleases = [
     id: 3,
     heading: "New Research Center Opens to Foster Technological Innovation",
     para: "The grand opening of our new research center sets the stage for technological advancements. This facility is equipped with state-of-the-art tools to empower groundbreaking discoveries.",
-    img: "http://www.threegirlsmedia.com/wp-content/uploads/2015/10/promoting-press-release.jpg",
+    img: "/images/press release img.webp",
     time: "2024-11-20T11:00:00Z",
     link: "new-research-center-opens-to-foster-technological-innovation"
   },
@@ -40,7 +40,7 @@ const pressReleases = [
     id: 4,
     heading: "Innovative Education Program Launched for Future Leaders",
     para: "Our organization is proud to announce the launch of an innovative education program. This initiative is designed to cultivate leadership skills in young professionals worldwide.",
-    img: "http://www.threegirlsmedia.com/wp-content/uploads/2015/10/promoting-press-release.jpg",
+    img: "/images/press release img.webp",
     time: "2024-11-19T16:15:00Z",
     link: "innovative-education-program-launched-for-future-leaders"
   },
@@ -48,7 +48,7 @@ const pressReleases = [
     id: 5,
     heading: "Major Investment to Expand Green Energy Infrastructure",
     para: "In a bold move to combat climate change, our company has announced a major investment to expand green energy infrastructure, promoting a sustainable and eco-friendly future.",
-    img: "http://www.threegirlsmedia.com/wp-content/uploads/2015/10/promoting-press-release.jpg",
+    img: "/images/press release img.webp",
     time: "2024-11-18T10:45:00Z",
     link: "major-investment-to-expand-green-energy-infrastructure"
   },
@@ -56,7 +56,7 @@ const pressReleases = [
     id: 6,
     heading: "Record-Breaking Growth in Annual Revenue Announced",
     para: "This year marks a record-breaking growth in our annual revenue, demonstrating the effectiveness of our strategic initiatives and commitment to delivering exceptional value.",
-    img: "http://www.threegirlsmedia.com/wp-content/uploads/2015/10/promoting-press-release.jpg",
+    img: "/images/press release img.webp",
     time: "2024-11-17T12:20:00Z",
     link: "record-breaking-growth-in-annual-revenue-announced"
   },
@@ -64,7 +64,7 @@ const pressReleases = [
     id: 7,
     heading: "Record-Breaking Growth in Annual Revenue Announced",
     para: "This year marks a record-breaking growth in our annual revenue, demonstrating the effectiveness of our strategic initiatives and commitment to delivering exceptional value.",
-    img: "http://www.threegirlsmedia.com/wp-content/uploads/2015/10/promoting-press-release.jpg",
+    img: "/images/press release img.webp",
     time: "2024-11-17T12:20:00Z",
     link: "record-breaking-growth-in-annual-revenue-announced"
   }

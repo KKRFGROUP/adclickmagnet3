@@ -164,7 +164,7 @@ const [isPopupOpen, setIsPopupOpen] = useState(false);
 
 
     return (
-      <section  className="graphic-page-hero-sec-container flex justify-center items-center text-white py-16 text-center" style={{backgroundImage: "url(https://img.freepik.com/premium-photo/3d-black-podium-dark-geometric-background_167650-4016.jpg)"}}>
+      <section  className="graphic-page-hero-sec-container flex justify-center items-center text-white py-16 text-center" style={{backgroundImage: "url('/images/graphic design/graphic design hero bg.webp')"}}>
         <div className="graphic-page-hero-sec-content flex-col justify-center items-center mt-10 w-[80%]">
           
           <TextGenerateEffect className="graphic-page-hero-sec-head" color={"contact-us-main-head"} words={"adClickMagnet"} />
@@ -185,7 +185,7 @@ const [isPopupOpen, setIsPopupOpen] = useState(false);
         {/* Popup Modal */}
       {isPopupOpen && (
         <div className="fixed inset-0 bg-black  flex items-center justify-center pt-[20%] md:pt-[7%] h-[100vh] popup-z-index">
-          <div className="service-page-popup" style={{backgroundImage: "url(https://i.pinimg.com/1200x/5a/6b/50/5a6b5014f1c4e9e04fb8c0d78c72b193.jpg)"}}>
+          <div className="service-page-popup" style={{backgroundImage: "url(/images/form-popup-bg.webp)"}}>
             <div className="bg-blur rounded-2xl flex-col">
             <button
               onClick={() => setIsPopupOpen(false)}

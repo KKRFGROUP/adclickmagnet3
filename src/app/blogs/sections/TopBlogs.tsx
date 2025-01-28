@@ -350,7 +350,8 @@ function TopBlogs() {
         {/* latest blogs list */}
         <div className="latest-blog-main-container">
           <h2 className='blog-page-latest-head' >Latest</h2>
-          <div ref={latestBlogTriggerRef} className="flex latest-blog-container">
+          <div ref={latestBlogTriggerRef} className="latest-blog-container">
+          <div className="latest-blog-content-wrapper">
             <div ref={latestBlogSectionRef} className="blog-page-latest-blog-list">
               {paginatedBlogs.map((blog) => (
                 <Link href={`/blogs/${blog.link}`} className='blog-page-latest-blog-card' key={blog.id}>
@@ -384,6 +385,7 @@ function TopBlogs() {
               </div>
             </div>
             <div className="blog-page-latest-blog-categories">
+              <div className="categories-sticky-wrapper">
                 <h2 className='blog-page-categories-head'>Categories</h2>
                 <hr className='blog-page-categories-line'/>
                 <div className="flex flex-wrap">
@@ -394,7 +396,9 @@ function TopBlogs() {
                   </Link>
                   ))}
                 </div>
+              </div>
             </div>
+          </div>
           </div>
         </div>
 

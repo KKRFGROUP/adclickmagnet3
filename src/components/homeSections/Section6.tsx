@@ -9,7 +9,7 @@ const products = [
     title: "card 1",
     link: "/",
     thumbnail:
-      "https://www.webfx.com/wp-content/uploads/2023/12/MROIDashboardFX.png",
+      "/images/home/parallax/01.webp",
       head: "Channel-Specific ROI Dashboard",
       para: "Gain visibility and optimize your omnichannel marketing ROI effectively.",
       point: [
@@ -31,7 +31,7 @@ const products = [
     title: "card 2",
     link: "/",
     thumbnail:
-      "https://www.webfx.com/wp-content/uploads/2023/12/TeamworkFX.png",
+      "/images/home/parallax/02.webp",
       head: "Targeted Audience Segmentation",
       para: "Segment your audience and boost engagement with personalized campaigns.",
       point: [
@@ -53,7 +53,7 @@ const products = [
     title: "card 3",
     link: "/",
     thumbnail:
-      "https://www.webfx.com/wp-content/uploads/2023/12/CompetitorSpyFX.png",
+      "/images/home/parallax/03.webp",
       head: "Comprehensive Analytics & Reporting",
       para: "Track and optimize your campaigns with actionable analytics and insights.",
       point: [
@@ -75,7 +75,7 @@ const products = [
     title: "card 4",
     link: "/",
     thumbnail:
-      "https://www.webfx.com/wp-content/uploads/2023/12/ContentAnalyticsFX.png",
+      "/images/home/parallax/04.webp",
       head: "Conversion Rate Optimization (CRO)",
       para: "Maximize your conversions by optimizing websites and marketing channels.",
       point: [
@@ -97,7 +97,7 @@ const products = [
     title: "card 5",
     link: "/",
     thumbnail:
-      "https://www.webfx.com/wp-content/uploads/2023/12/MROIDashboardFX.png",
+      "/images/home/parallax/01.webp",
       head: "Multichannel Marketing Integration",
       para: "Create seamless, consistent brand experiences across digital touchpoints.",
       point: [
@@ -119,7 +119,7 @@ const products = [
     title: "card 6",
     link: "/",
     thumbnail:
-      "https://www.webfx.com/wp-content/uploads/2023/12/TeamworkFX.png",
+      "/images/home/parallax/02.webp",
       head: "Social Media & Influencer Marketing",
       para: "Expand brand reach and credibility with tailored strategies and influencers.",
       point: [
@@ -141,7 +141,7 @@ const products = [
     title: "card 7",
     link: "/",
     thumbnail:
-      "https://www.webfx.com/wp-content/uploads/2023/12/CompetitorSpyFX.png",
+      "/images/home/parallax/03.webp",
       head: "Email Marketing Automation",
       para: "Automate personalized emails to nurture leads and boost conversions.",
       point: [
@@ -163,7 +163,7 @@ const products = [
     title: "card 8",
     link: "/",
     thumbnail:
-      "https://www.webfx.com/wp-content/uploads/2023/12/ContentAnalyticsFX.png",
+      "/images/home/parallax/04.webp",
       head: "Search Engine Optimization (SEO)",
       para: "Improve visibility and attract organic traffic with optimized SEO strategies.",
       point: [

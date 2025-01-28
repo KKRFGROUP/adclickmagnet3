@@ -28,7 +28,6 @@ import ContactOurExperts from '@/components/services-components/ContactOurExpert
 const heroContent = {
     heading: "Branding Services",
     para: "From brand exploration and development to refreshes and rebrands, our world-class brand designers create cohesive, scalable brand experiences. Learn more and book a call today.",
-    imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/745fa5bedb9310bd461d7b69073547d975fab304-1200x1200.png?auto=format&fit=max&q=100&w=1200"
 }
 const section2 = [
   {
@@ -110,7 +109,7 @@ const section3:{mainpara: string; heading: {text: string; className: string;}[];
 ],
   para1: "Brands are fueled by a mixture of emotion and strategy. The true art of branding design is combining both—to stand out from the competition and forge memorable connections.",
   para2: "Our global team of brand experts, who’ve worked at top brand design agencies and well-known brands, will help you grow and elevate your brand. Whether it's a logo or a complete brand development, we help you express what makes your brand unique.", 
-  image: "https://i.pinimg.com/736x/19/db/4c/19db4c0e7d30bf925f95eb2a0cacc566.jpg"
+  image: "/images/services page/branding/branding sec3 img.webp"
 }
 
 
@@ -221,42 +220,42 @@ const faq:{mainpara: string; people: {id: number;name: string;designation: strin
       name: "John Doe",
       designation: "Software Engineer",
       image:
-        "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
+        "/images/services page/faq/john doe.webp",
     },
     {
       id: 2,
       name: "Robert Johnson",
       designation: "Product Manager",
       image:
-        "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+        "/images/services page/faq/Robert Johnson.webp",
     },
     {
       id: 3,
       name: "Jane Smith",
       designation: "Data Scientist",
       image:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+        "/images/services page/faq/Jane Smith.webp",
     },
     {
       id: 4,
       name: "Emily Davis",
       designation: "UX Designer",
       image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+        "/images/services page/faq/Emily Davis.webp",
     },
     {
       id: 5,
       name: "Tyler Durden",
       designation: "Soap Developer",
       image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80",
+        "/images/services page/faq/Tyler Durden.webp",
     },
     {
       id: 6,
       name: "Dora",
-      designation: "The Explorer",
+      designation: "The branding expert",
       image:
-        "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3534&q=80",
+        "/images/services page/faq/Dora Explorer.webp",
     },
   ],
   list: [

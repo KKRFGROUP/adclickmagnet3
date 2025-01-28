@@ -13,7 +13,7 @@ const DesignProcess = () => {
         <div className="flex justify-center graphic-page-sec2-graphic">
           <div className="graphic-page-sec2-graphic-card">
           
-            <Image className="graphic-page-overlap-gif graphic-page-sec2-gif" src="https://i.gifer.com/FsOd.gif" alt="gif" width={300} height={300} />
+            <Image className="graphic-page-overlap-gif graphic-page-sec2-gif" src="/images/graphic design/graphic design sec2 gif.gif" alt="gif" width={300} height={300} />
           </div>
         </div>
       </section>

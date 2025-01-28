@@ -5,7 +5,7 @@ import { IoMdCheckmark } from "react-icons/io";
 
 
 
-function Section3({content, order, roundb, hide}: {content: {mainpara: string; heading: {text: string; className: string;}[]; para1: string; para2: string; image: string; video?: string;}; order?: string;roundb?: string;hide?: string;}) {
+function Section3({content, order, roundb, hide, adCreativideo}: {content: {mainpara: string; heading: {text: string; className: string;}[]; para1: string; para2: string; image: string; video?: string;}; order?: string;roundb?: string;hide?: string; adCreativideo?: boolean;}) {
     const lines = content.para2.split('\n');
 
     //const handleMouseEnter = (event: React.MouseEvent<HTMLVideoElement>) => {
@@ -54,7 +54,7 @@ function Section3({content, order, roundb, hide}: {content: {mainpara: string; h
        </div>
 
        
-       {content.video ? <video className="services-sec3-img" autoPlay preload='auto' loop muted playsInline  onLoadedData={(e) => {
+       {content.video ? <video className={`services-sec3-img ${adCreativideo && "services-sec3-vdo"}`} autoPlay preload='auto' loop muted playsInline  onLoadedData={(e) => {
     const videoElement = e.target as HTMLVideoElement; // Explicitly cast to HTMLVideoElement
         videoElement
         .play()

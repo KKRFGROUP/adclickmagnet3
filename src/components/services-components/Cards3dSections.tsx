@@ -24,7 +24,7 @@ function Cards3dSections({
     cards: {
       head: string;
       para: string;
-      img: string;
+      img?: string;
       video?: string;
     }[];
   };
@@ -153,7 +153,7 @@ function Cards3dSections({
                     </video>
                   ) : (
                     <Image
-                      src={each.img}
+                      src={each.img || ""}
                       height="1000"
                       width="1000"
                       className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl mobile-card-3d-img"

@@ -26,6 +26,15 @@ body{
         background-color: #000;
     }
 }
+
+/*@media screen and (orientation: landscape) and (max-width: 768px){
+    .page-main {
+        padding-left:10vw;
+        padding-right: 10vw;
+    }
+}*/
+
+
 .display-none-mobile-navbar {
     display: none;
 }

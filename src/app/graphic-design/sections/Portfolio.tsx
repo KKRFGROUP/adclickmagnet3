@@ -21,7 +21,7 @@ const Portfolio = () => {
           <h2 className='portfolio-sec-head-second'>Works</h2>
         <div className='flex items-end gap-9 text-center portfolio-sec-card-container'>
           <figure>
-            <Image className='portfolio-sec-card-img' width={500} height={500} src="/images/graphic design/01.webp" alt="portfolio img" />
+            <Image className='portfolio-sec-card-img' width={500} height={500} src="/images/graphic design/portfolio/01.webp" alt="portfolio img" />
           </figure>
           <div className="flex justify-center items-center">
             <h2 className='portfolio-sec-card-head'>How ACM Create the Brand.</h2>
@@ -34,13 +34,13 @@ const Portfolio = () => {
             <h2 className='portfolio-sec-card-head'>How ACM Create the Logo.</h2>
           </div>
           <figure>
-            <Image className='portfolio-sec-card-img' width={500} height={500} src="/images/graphic design/02.webp" alt="portfolio img" />
+            <Image className='portfolio-sec-card-img' width={500} height={500} src="/images/graphic design/portfolio/02.webp" alt="portfolio img" />
           </figure>
         </div>
 
         <div className='portfolio-sec-card-container text-center flex items-end gap-9 mt-9'>
           <figure>
-            <Image className='portfolio-sec-card-img' width={500} height={500} src="/images/graphic design/03.webp" alt="portfolio img" />
+            <Image className='portfolio-sec-card-img' width={500} height={500} src="/images/graphic design/portfolio/03.webp" alt="portfolio img" />
           </figure>
           <div className="flex justify-center items-center">
             <h2 className='portfolio-sec-card-head'>How ACM Create the Brand Colors.</h2>

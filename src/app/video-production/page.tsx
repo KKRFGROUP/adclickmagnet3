@@ -26,8 +26,8 @@ import ContactOurExperts from '@/components/services-components/ContactOurExpert
 const heroContent = {
     heading: "Video Production Services",
     para: "Elevate your video campaigns with exceptional creative solutions tailored for multi-channel impact. Partner with a dedicated design team to bring your vision to life and supercharge your ad performance today.",
-    imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/745fa5bedb9310bd461d7b69073547d975fab304-1200x1200.png?auto=format&fit=max&q=100&w=1200"
 }
+
 const section2 = [
   {
     id: 1,
@@ -99,7 +99,7 @@ const section3a = {
   para2: 
     "From brand videos that build awareness to performance-driven videos that boost conversions, we offer a cost-effective, hassle-free approach with speed and flexibility through our subscription model.",
   image: 
-    "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1733753713/a90c8ee9adc73f1cc63b3556d751f372_1_mssj1g.gif",
+    "/images/services page/Video Production/video production sec3a.gif",
 };
 
 
@@ -138,7 +138,7 @@ const section3b:{mainpara: string; heading: {text: string; className: string;}[]
   para1: "Videos like brand films, explainers, demos, testimonials, case studies, and manifestos are perfect for positioning and elevating your brand.",
   para2: "1. Collaborate with video experts\n2. Shoot or repurpose existing footage\n3. Amplify with motion, animation and 3D\n4. Use our global, remote network with minimal overheads", 
   image: "https://res.cloudinary.com/deepcnbrz/image/upload/v1730822005/Screenshot_2024-11-05_212211_hhbsos.png",
-  video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1733754134/bf6a6475a11651b407a612026380a396_1_awqfcs.mp4"
+  video: "/images/services page/Video Production/video production sec3b vdo.mp4",
 }
 const section3c:{mainpara: string; heading: {text: string; className: string;}[]; para1: string; para2: string; image: string; video?: string;} = {
   mainpara: "SOCIAL VIDEO FOR ENGAGEMENT",
@@ -171,29 +171,28 @@ const section3c:{mainpara: string; heading: {text: string; className: string;}[]
   para1: "Establish a custom video content strategy and production cycle to create fresh video content that is geared to boost organic awareness and engagement.",
   para2: "1. Collaborate with video experts\n2. Shoot or repurpose existing footage\n3. Amplify with motion, animation and 3D\n4. Use our global, remote network with minimal overheads", 
   image: "https://res.cloudinary.com/deepcnbrz/image/upload/v1730822005/Screenshot_2024-11-05_212211_hhbsos.png",
-  video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1734434559/e1ac435d4bb6db97dcbadff381809a61_dzahc8.mp4"
+  video: "/images/services page/Video Production/video production sec3c vdo.mp4",
 }
 
 
-const section3dCards: {mainpara: string; head: string; cards: {head: string; para: string; img: string; video?: string}[]} = {
+const section3dCards: {mainpara: string; head: string; cards: {head: string; para: string; img?: string; video?: string}[]} = {
   mainpara: "WORKING WITH ACM",
   head: "Experience video excellence in every frame",
   cards: [
     {
         head: "Top 1% of global creative talent",
         para: "We're not limited by borders. Top-tier talent from diverse backgrounds equals consistently high-quality work for your brand.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734434830/a83bd63c2147df066ce4c89f3adbabff_wqlp7s.gif"
+        img: "/images/services page/video production/3dcards/01.gif"
     },
     {
         head: "Ultra-fast turnaround times",
         para: "With dedicated proejct managers, collaboratibe online tools and expert use of AI, projects can be completed in as little as 40, 24, or even 12 hours.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734435213/6b7146f63961d1142c6df3c3ed9fb16e_szjgdf.gif"
+        img: "/images/services page/video production/3dcards/02.gif"
     },
     {
         head: "Enhanced by AI",
         para: "Our creative talent is trained and certified on the latest AI tools. You get the best of both worlds: top talent enhanced by AI efficiency. The savings incurred from AI directly translate into lower costs for you.",
-        img: "https://images.pexels.com/photos/17483868/pexels-photo-17483868/free-photo-of-an-artist-s-illustration-of-artificial-intelligence-ai-this-image-represents-how-machine-learning-is-inspired-by-neuroscience-and-the-human-brain-it-was-created-by-novoto-studio-as-par.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1734436530/88476fd44a47341a7c3bdf0da16b50f6_hmyybv.mp4"
+        video: "/images/services page/video production/3dcards/03.mp4"
     },
 ]
 }
@@ -274,42 +273,42 @@ const faq:{mainpara: string; people: {id: number;name: string;designation: strin
       name: "John Doe",
       designation: "Software Engineer",
       image:
-        "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
+        "/images/services page/faq/john doe.webp",
     },
     {
       id: 2,
       name: "Robert Johnson",
       designation: "Product Manager",
       image:
-        "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+        "/images/services page/faq/Robert Johnson.webp",
     },
     {
       id: 3,
       name: "Jane Smith",
       designation: "Data Scientist",
       image:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+        "/images/services page/faq/Jane Smith.webp",
     },
     {
       id: 4,
       name: "Emily Davis",
       designation: "UX Designer",
       image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+        "/images/services page/faq/Emily Davis.webp",
     },
     {
       id: 5,
       name: "Tyler Durden",
       designation: "Soap Developer",
       image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80",
+        "/images/services page/faq/Tyler Durden.webp",
     },
     {
       id: 6,
       name: "Dora",
-      designation: "The Explorer",
+      designation: "The Video Producer",
       image:
-        "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3534&q=80",
+        "/images/services page/faq/Dora Explorer.webp",
     },
   ],
   list: [
@@ -376,7 +375,7 @@ function VideoProduction() {
               <Section3  content={section3b} order="order-1" roundb="" hide="invisible"/>
               <Section3  content={section3c}  hide="invisible" roundb=""/>
               {/*<Section3  content={section3d} order="order-1"  hide="invisible"/>*/}
-              <Cards3dSections content={section3dCards} translate='-10%' responsiveTraslate="-90%" end="+=500"/>
+              <Cards3dSections content={section3dCards} translate='-10%' responsiveTraslate="-90%" end="+=600"/>
               <Section4 content={section4}/>
               <Section8 content={section8} roundt="rounded-t-[0px]"/>
               <ContactOurExperts />
@@ -394,7 +393,7 @@ function VideoProduction() {
                 <Section3  content={section3b} order="" roundb="" hide="invisible"/>
                 <Section3  content={section3c}  hide="invisible" roundb=""/>
                 {/*<Section3  content={section3d} order="order-1"  hide="invisible"/>*/}
-                <Cards3dSections content={section3dCards} translate='-65%' responsiveTraslate="-90%" end="+=500"/>
+                <Cards3dSections content={section3dCards} translate='-65%' responsiveTraslate="-90%" end="+=600"/>
                 <Section4 content={section4}/>
                 <Section8 content={section8} roundt="rounded-t-[0px]"/>
                 <ContactOurExperts />

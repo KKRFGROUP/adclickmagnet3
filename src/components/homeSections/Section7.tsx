@@ -24,39 +24,39 @@ const words = [
 const bestBrand = [
   {
     name: "EBOWLA",
-    img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734539819/EBOWLA_Black_LOGO-removebg-preview_wegwag.png"
+    img: "/images/brands/EBOWLA.webp"
   },
   {
     name: "Canada View",
-    img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734539816/Canada_view_logo-removebg-preview_ejmaon.png"
+    img: "/images/brands/Canada View.webp"
   },
   {
     name: "Jen Thomson",
-    img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734539813/Jen_thomson_Black_logo-removebg-preview_pbs3x1.png"
+    img: "/images/brands/Jen Thomson.webp"
   },
   {
     name: "Sisli",
-    img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734539810/Sisli_black_logo-removebg-preview_wgwkop.png"
+    img: "/images/brands/Sisli.webp"
   },
   {
     name: "PGroomer",
-    img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734539808/PGroomer_logo-removebg-preview_tjbvmd.png"
+    img: "/images/brands/PGroomer.webp"
   },
   {
     name: "Smokey",
-    img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734539804/Smokey_black_logo-removebg-preview_lrgjta.png"
+    img: "/images/brands/Smokey.webp"
   },
   {
     name: "DonJon",
-    img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734539719/Donjon_black_logo-removebg-preview_rzndtm.png"
+    img: "/images/brands/DonJon.webp"
   },
   {
     name: "IQ Home Care",
-    img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734539725/IQ_HOME_CARE_LOGO__1_-removebg-preview_hinzq5.png"
+    img: "/images/brands/IQ Home Care.webp"
   },
   {
     name: "Blends",
-    img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734539718/Blinds_by_design_black_logo-removebg-preview_bm8h8p.png"
+    img: "/images/brands/Blends.webp"
   },
   {
     name: "Dekalash",

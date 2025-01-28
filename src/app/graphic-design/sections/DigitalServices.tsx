@@ -19,7 +19,8 @@ const items: {
     {
         id: 1,
         imageUrl: 'https://assets.pinterest.com/ext/embed.html?id=17310779813421983',
-        video: "https://res.cloudinary.com/dgdgrniut/video/upload/v1734619255/57124bc04f286670b7b126d11f2c0055_izib7c_lcglaa.mp4",
+        video: "/videos/graphic design/services/01.mp4",
+        //video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1737809741/57124bc04f286670b7b126d11f2c0055_izib7c.mp4",
         head: "Ad Creative",
         page: "/ad-creative",
         para: "Get static and motion ad creatives, concepts, and variations to test your way to better results on social media."
@@ -27,7 +28,8 @@ const items: {
       {
         id: 2,
         imageUrl: 'https://assets.pinterest.com/ext/embed.html?id=289074869851146379',
-        video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1733660227/2fc3296e70d1efba5915a76712eabf87_orx5z9.mp4",
+        video: "/videos/graphic design/services/02.mp4",
+        //video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1733660227/2fc3296e70d1efba5915a76712eabf87_orx5z9.mp4",
         head: "Branding Services",
         page: "/branding-services",
         para: "Get the brand expertise you need, from brand development and design to custom branding solutions."
@@ -35,7 +37,8 @@ const items: {
       {
         id: 3,
         imageUrl: 'https://assets.pinterest.com/ext/embed.html?id=3025924744020565',
-        video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1733659254/b2c9669c5de9f04909df5e71d2d6eea5_afsbbh.mp4",
+        video: "/videos/graphic design/services/03.mp4",
+        //video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1733659254/b2c9669c5de9f04909df5e71d2d6eea5_afsbbh.mp4",
         head: "Video Production",
         page: "/video-production",
         para: "Receive strategy-aligned video content services, from pre-production to final edit, to maximize your online success."
@@ -43,14 +46,15 @@ const items: {
       {
         id: 4,
         imageUrl: "https://assets.pinterest.com/ext/embed.html?id=448319337916941456" ,
-        video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1733681971/e7179a38ce0e25b77ac5c3c15b92dccc_tfhsfw.mp4",
+        video: "/videos/graphic design/services/04.mp4",
+        //video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1733681971/e7179a38ce0e25b77ac5c3c15b92dccc_tfhsfw.mp4",
         head: "Presentation Design",
         page: "/presentation-design",
         para: "Get original presentations designed for your persuasive pitch decks, sales decks, or PowerPoint presentations."
       },
       {
         id: 5,
-        imageUrl: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734172091/552a787860b6065cb634e51df02cdceb_osmbra.gif",
+        imageUrl: "/videos/graphic design/services/05.gif",
         head: "Motion Design",
         page: "/motion-design",
         para: "Get on-brand motion graphics designed to enhance your website, digital campaigns, presentations and ads."

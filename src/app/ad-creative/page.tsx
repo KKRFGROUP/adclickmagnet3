@@ -4,7 +4,11 @@ import React,{useRef,useState} from 'react'
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/services-components/HeroSection';
-import Section2 from '@/components/services-components/Section2';
+import dynamic from 'next/dynamic';
+const Section2 = dynamic(() => import('@/components/services-components/Section2'), {
+  ssr: false, // Optional: Disable SSR for this component
+});
+//import Section2 from '@/components/services-components/Section2';
 import Section3 from '@/components/services-components/Section3';
 import Section4 from '@/components/services-components/Section4';
 import Section6 from '@/components/services-components/Section6';
@@ -27,7 +31,6 @@ import ContactOurExperts from '@/components/services-components/ContactOurExpert
 const heroContent = {
     heading: "Ad Creative Services",
     para: "From high-volume, multi-channel campaigns to testing and exploration, get the outstanding ad creative services you need. Plug-in a fully-stacked design team and start fueling your ad campaigns today.",
-    imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/745fa5bedb9310bd461d7b69073547d975fab304-1200x1200.png?auto=format&fit=max&q=100&w=1200"
 }
 
 
@@ -83,7 +86,7 @@ const section2 = [
   },
 ]
 
-const section3:{mainpara: string; heading: {text: string; className: string;}[]; para1: string; para2: string; image: string;} = {
+const section3:{mainpara: string; heading: {text: string; className: string;}[]; para1: string; para2: string; image: string; video: string;} = {
   mainpara: "BUILT FOR COMMS, STRATEGY & MARKETING TEAMS",
   heading: [
     {  
@@ -113,7 +116,8 @@ const section3:{mainpara: string; heading: {text: string; className: string;}[];
 ],
   para1: "The need for compelling ad creative has never been greater. But, when your biggest challenge is getting to market, the best solution is plugging into ACM’s flexible ad design services.",
   para2: "In a world where talent is hard to find, ours has no borders. Our global team of highly skilled ad designers can help with everything from market research and concept development to applying the latest AI, AR and 3D overlays.", 
-  image: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734514156/Exceptional_designs_never_fail_to_impress_xumx5a.jpg"
+  image: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734514156/Exceptional_designs_never_fail_to_impress_xumx5a.jpg",
+  video: "/videos/graphic design/services/01.mp4"
 }
 
 const section4: {mainpara: string; head: string; cards: {logo: React.ReactNode; head: string; para: string;}[]} = {
@@ -219,27 +223,27 @@ const section6: {mainpara: string; heading: {text: string; className: string;}[]
   para: "Fueling growth crosses many channels. Thankfully, our highly experienced ad design talent does too. Every digital and social media platform has its own vibe that you need to understand to gain admittance and be accepted. ACM connects you with the ad creative services you need to crack and master these channels quickly and cost-effectively.",
   social: [
     {
-      img: "https://cdn.sanity.io/images/k0dlbavy/production/59f8b7facc913add8a662f928a5ade08d2c2ff8a-160x161.png?auto=format&fit=max&q=100&w=160",
+      img: "/images/services page/ad creative/tools/facebook.webp",
       name: "Facebook",
       para: "Maximize engagement with custom creative tailored for Facebook’s unique audience and platform capabilities." 
     },
     {
-      img: "https://cdn.sanity.io/images/k0dlbavy/production/b5c95f3ed54f0d8e5a8e7c746ffd9cdce3ae1543-160x161.png?auto=format&fit=max&q=100&w=160",
+      img: "/images/services page/ad creative/tools/LinkedIn.webp",
       name: "LinkedIn",
       para: "Position your brand as an industry leader with professional and engaging content designed for LinkedIn’s business-focused community." 
     },
     {
-      img: "https://cdn.sanity.io/images/k0dlbavy/production/c48bbbecd9489c0412c28c01ad15c7cabe334ea9-160x161.png?auto=format&fit=max&q=100&w=160",
+      img: "/images/services page/ad creative/tools/Insta.webp",
       name: "Instagram",
       para: "Captivate Instagram’s visually-driven audience with stunning graphics and innovative content formats." 
     },
     {
-      img: "https://cdn.sanity.io/images/k0dlbavy/production/36a30147f3d25054bf8e7a56c81ee9db37cac62c-160x161.png?auto=format&fit=max&q=100&w=160",
+      img: "/images/services page/ad creative/tools/TikTok.webp",
       name: "TikTok",
       para: "Tap into the power of viral content with TikTok creatives designed for maximum shareability and engagement." 
     },
     {
-      img: "https://cdn.sanity.io/images/k0dlbavy/production/34c777746e0984fc2b8484028f06c28cf8839781-160x161.png?auto=format&fit=max&q=100&w=160",
+      img: "/images/services page/ad creative/tools/YouTube.webp",
       name: "YouTube",
       para: "Optimize viewer interaction with tailored creatives designed for YouTube's diverse audience and video-friendly platform features." 
     },
@@ -311,42 +315,42 @@ const faq:{mainpara: string; people: {id: number;name: string;designation: strin
       name: "John Doe",
       designation: "Software Engineer",
       image:
-        "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
+        "/images/services page/faq/john doe.webp",
     },
     {
       id: 2,
       name: "Robert Johnson",
       designation: "Product Manager",
       image:
-        "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+        "/images/services page/faq/Robert Johnson.webp",
     },
     {
       id: 3,
       name: "Jane Smith",
       designation: "Data Scientist",
       image:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+        "/images/services page/faq/Jane Smith.webp",
     },
     {
       id: 4,
       name: "Emily Davis",
       designation: "UX Designer",
       image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+        "/images/services page/faq/Emily Davis.webp",
     },
     {
       id: 5,
       name: "Tyler Durden",
       designation: "Soap Developer",
       image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80",
+        "/images/services page/faq/Tyler Durden.webp",
     },
     {
       id: 6,
       name: "Dora",
-      designation: "The Explorer",
+      designation: "The ad expert",
       image:
-        "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3534&q=80",
+        "/images/services page/faq/Dora Explorer.webp",
     },
   ],
   list: [
@@ -424,7 +428,7 @@ function AdCreative() {
               <HeroSection heading={heroContent.heading} para={heroContent.para} />
             
             <Section2 Cards={section2}/>
-            <Section3  content={section3} roundb="rounded-t-[50px]"/>
+            <Section3  content={section3} adCreativideo={true} roundb="rounded-t-[50px]"/>
             <Section4 content={section4} roundb="rounded-b-[50px]"/>
             <Section6 content={section6} translate="-70%" responsiveTranslate='-85%'/>
             <Section7 content={section7}/>

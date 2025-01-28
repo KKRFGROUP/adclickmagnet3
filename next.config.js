@@ -34,11 +34,7 @@ module.exports = {
       minimumCacheTTL: 60,
       formats: ['image/webp'],
       remotePatterns: [
-        {
-          protocol: 'https',
-          hostname: 'www.webfx.com',
-          port: '',
-        },
+        
         {
           protocol: 'https',
           hostname: 'assets.pinterest.com',
@@ -46,88 +42,7 @@ module.exports = {
         },
         {
           protocol: 'https',
-          hostname: 'images.unsplash.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
           hostname: 'res.cloudinary.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'i.gifer.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'encrypted-tbn0.gstatic.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'img.freepik.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'cdn.sanity.io',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'i.pinimg.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'cdn3d.iconscout.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'plus.unsplash.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'images.pexels.com',
-          port: '',
-        },
-        
-        {
-          protocol: 'https',
-          hostname: 'www.sparkfabrik.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: '5.imimg.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'mir-s3-cdn-cf.behance.net',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'cdn.shopify.com',
-          port: '',
-        },
-        {
-          protocol: 'http',
-          hostname: 'www.threegirlsmedia.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'www.simplilearn.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'unctad.org',
           port: '',
         },
       ], 

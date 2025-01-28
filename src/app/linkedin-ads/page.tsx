@@ -36,7 +36,6 @@ import DynamicContentCard from '@/components/services-components/DynamicContentC
 const heroContent = {
     heading: "LinkedIn Ads Services",
     para: "Since 2004, we’ve specialized in LinkedIn Ads management, delivering targeted campaigns that drive engagement, generate quality leads, and boost conversions. Our proven strategies ensure your ad spend creates maximum impact with minimal waste, helping your business grow efficiently.",
-    imgUrl: "https://images.pexels.com/photos/67112/pexels-photo-67112.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
 }
 const section2 = [
   {
@@ -122,7 +121,7 @@ const section3 = {
     ],
     para1: "In today’s professional network-driven world, LinkedIn Ads offer a powerful way to amplify your brand, connect with decision-makers, and drive meaningful business growth. Our customized LinkedIn Ads services ensure your campaigns resonate with the right audience for maximum visibility and ROI.",
     para2: "Our team of LinkedIn Ads experts provides a complete suite of services, from audience targeting and content creation to performance analytics and continuous optimization, ensuring your ad spend is both effective and efficient.",
-    image: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524683/Untitled_design_11_gknymx.png"
+    image: "/images/services page/linkedin/linkedin sec3 img.webp",
 };
 
   
@@ -205,27 +204,27 @@ const section6 = {
     para: "Achieving success with LinkedIn Ads requires a deep understanding of the platform's unique tools and targeting capabilities. Our team uses an array of advanced software and strategies to maximize campaign impact, ensuring your ads achieve optimal reach, engagement, and conversions.",
     social: [
       {
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWK2nVTguVf7cLwkJqDVwDOKiMMlRaT2joDQ&s",
+        img: "/images/services page/linkedin/tools/LinkedIn Campaign Manager.webp",
         name: "LinkedIn Campaign Manager",
         para: "Create, manage, and optimize LinkedIn Ads campaigns, ensuring your content resonates with the right professional audience for maximum impact."
       },
       {
-        img: "https://cdn3d.iconscout.com/3d/free/thumb/free-analytics-3d-logo-download-in-png-blend-fbx-gltf-file-formats--statistics-graph-social-media-pack-company-brand-logos-4781242.png",
+        img: "/images/services page/linkedin/tools/LinkedIn Analytics.webp",
         name: "LinkedIn Analytics",
         para: "Measure campaign performance and audience engagement with LinkedIn Analytics, enabling data-driven decisions to refine your ads."
       },
       {
-        img: "https://www.gstatic.com/analytics-suite/header/suite/v2/ic_tag_manager.svg",
+        img: "/images/services page/linkedin/tools/LinkedIn Insight Tag.svg",
         name: "LinkedIn Insight Tag",
         para: "Track conversions, retarget website visitors, and unlock audience insights with the LinkedIn Insight Tag for precise targeting."
       },
       {
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBjXOKHUfK3gOaM_dxWFnHggOUWUZvvKxF0w&s",
+        img: "/images/services page/linkedin/tools/Hootsuite.webp",
         name: "Hootsuite",
         para: "Streamline LinkedIn Ads management with Hootsuite, ensuring consistent campaign monitoring and optimization across multiple channels."
       },
       {
-        img: "https://cdn.shopify.com/app-store/listing_images/415acef59ea18c992554e646bb315f54/icon/CNnqi5_U0fUCEAE=.png",
+        img: "/images/services page/linkedin/tools/clickcease.webp",
         name: "ClickCease",
         para: "Safeguard your LinkedIn Ads budget with ClickCease by identifying and preventing fraudulent clicks for better campaign performance."
       },
@@ -240,41 +239,42 @@ const section6 = {
   
 
 const section3dCards = { 
-    mainpara: "WORKING WITH ACM",
-    head: "Master LinkedIn Ads with our expertise",
-    cards: [
-      {
-        head: "Campaign Strategy",
-        para: "Design personalized LinkedIn Ads strategies that align with your business goals, enhancing professional reach and engagement.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734522012/COST-EFFECTIVE_9_rlfchx.png"
-      },
-      {
-        head: "Audience Targeting",
-        para: "Utilize LinkedIn’s advanced targeting options to connect with the right professionals and decision-makers for impactful results.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734521876/COST-EFFECTIVE_5_lntjvm.png"
-      },
-      {
-        head: "Ad Copy Optimization",
-        para: "Create persuasive ad copies tailored to LinkedIn’s professional audience to boost click-through rates and conversions.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734521804/COST-EFFECTIVE_6_ge7n3b.png"
-      },
-      {
-        head: "Performance Optimization",
-        para: "Continuously analyze campaign metrics to fine-tune strategies, ensuring the best ROI for your LinkedIn Ads campaigns.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734521815/COST-EFFECTIVE_8_zc4jka.png"
-      },
-      {
-        head: "Remarketing Campaigns",
-        para: "Reconnect with professionals who’ve interacted with your brand using LinkedIn’s remarketing tools to drive conversions.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734519384/website_new_photo_wppkrd.jpg"
-      },
-      {
-        head: "Analytics & Reporting",
-        para: "Gain in-depth insights into your campaign performance with detailed reports, enabling data-driven improvements.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734523294/COST-EFFECTIVE_10_yj5xpz.png"
-      },
-    ]
+  mainpara: "WORKING WITH ACM",
+  head: "Master LinkedIn Ads with our expertise",
+  cards: [
+    {
+      head: "Campaign Strategy",
+      para: "Design personalized LinkedIn Ads strategies that align with your business goals, enhancing professional reach and engagement.",
+      img: "/images/services page/linkedin/3dcards/01.webp"
+    },
+    {
+      head: "Audience Targeting",
+      para: "Leverage LinkedIn’s advanced targeting tools to connect with the right professionals, maximizing impact and engagement effectively and efficiently.",
+      img: "/images/services page/linkedin/3dcards/02.webp"
+    },
+    {
+      head: "Ad Copy Optimization",
+      para: "Craft compelling ad copies designed specifically for LinkedIn’s audience, driving higher engagement, click-through rates, and strong conversions.",
+      img: "/images/services page/linkedin/3dcards/03.webp"
+    },
+    {
+      head: "Performance Optimization",
+      para: "Continuously track campaign metrics and refine strategies to ensure the highest ROI for LinkedIn Ads campaigns every time.",
+      img: "/images/services page/linkedin/3dcards/04.webp"
+    },
+    {
+      head: "Remarketing Campaigns",
+      para: "Reengage with professionals who have interacted with your brand through LinkedIn’s remarketing tools, ensuring consistent conversions and growth.",
+      img: "/images/services page/linkedin/3dcards/05.webp"
+    },
+    {
+      head: "Analytics & Reporting",
+      para: "Get valuable insights into your campaign performance using detailed reports, enabling actionable decisions and constant strategic improvements.",
+      img: "/images/services page/linkedin/3dcards/06.webp"
+    },
+  ]
 };
+
 
   
 
@@ -352,42 +352,42 @@ const faq = {
         name: "John Doe",
         designation: "Senior LinkedIn Ads Specialist",
         image:
-          "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
+          "/images/services page/faq/john doe.webp",
       },
       {
         id: 2,
         name: "Robert Johnson",
         designation: "LinkedIn Ads Campaign Manager",
         image:
-          "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+          "/images/services page/faq/Robert Johnson.webp",
       },
       {
         id: 3,
         name: "Jane Smith",
         designation: "PPC Strategist",
         image:
-          "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+          "/images/services page/faq/Jane Smith.webp",
       },
       {
         id: 4,
         name: "Emily Davis",
         designation: "LinkedIn Ads Analyst",
         image:
-          "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+          "/images/services page/faq/Emily Davis.webp",
       },
       {
         id: 5,
         name: "Tyler Durden",
         designation: "Paid Search Specialist",
         image:
-          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80",
+          "/images/services page/faq/Tyler Durden.webp",
       },
       {
         id: 6,
-        name: "Dora Explorer",
+        name: "Dora",
         designation: "Conversion Optimization Expert",
         image:
-          "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3534&q=80",
+          "/images/services page/faq/Dora Explorer.webp",
       },
     ],
     list: [
@@ -471,7 +471,7 @@ function LinkedInAds() {
               <Section4 content={section4} roundb='rounded-b-[50px] h-[200vh]'/>
               <Section6 content={section6} translate="-55%" responsiveTranslate="-95%"/>
               <DynamicContentCard content={dynamicContentSec}/>
-              <Cards3dSections translate='-53%' responsiveTraslate="-90%" end="+=500" content={section3dCards} className="rounded-[50px]"/>
+              <Cards3dSections translate='-53%' responsiveTraslate="-90%" end="+=600" content={section3dCards} className="rounded-[50px]"/>
               
               <Section8 content={section8}/>
               <ContactOurExperts />

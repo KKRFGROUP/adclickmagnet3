@@ -13,6 +13,7 @@
     position: absolute;
     top: 35vh;
     left: 10vw;
+    color: #fff!important;
 }
 
 
@@ -109,6 +110,7 @@
         position: absolute;
         top: 25vh;
         left: 10vw;
+        color: #fff!important;
     }
     .career-slug-hero-content-head {
         font-family: "Syne";

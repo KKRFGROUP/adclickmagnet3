@@ -19,7 +19,6 @@ const heroContent = {
     preheading: "Designing Impactful",
     heading: "Presentations with Precision",
     para: "Engage, persuade and delight with ACM’s Presentation Design Services. From on-point PowerPoints to pitch-perfect pitch decks, we craft custom presentations and templates that suit your needs.",
-    imgUrl: "https://cdn.sanity.io/images/k0dlbavy/production/745fa5bedb9310bd461d7b69073547d975fab304-1200x1200.png?auto=format&fit=max&q=100&w=1200"
 }
 
 
@@ -61,7 +60,7 @@ const section3:{mainpara: string; heading: {text: string; className: string;}[];
 ],
   para1: "We do your ideas justice with beautifully designed presentations that follow a logical structure, showcase your data in a clear, compelling manner and convey your message in the most persuasive way possible.",
   para2: "Whether you need a pitch deck to persuade VCs, templates for internal communications or slides for a key event, our world-class team of presentation designers will work with you to deliver a stunning final product.", 
-  image: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734514461/Determ_by_studio_size______Determ_is_an_AI-powered_media_monitoring_tool_that_helps_you_track_measure_and_create_reports_about_your___Instagram_ukycbh.jpg",
+  image: "/images/services page/presentation/presentation sec3 img.webp",
   //video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1733681971/e7179a38ce0e25b77ac5c3c15b92dccc_tfhsfw.mp4"
 }
 
@@ -72,27 +71,27 @@ const section4: {mainpara: string; head: string; cards: {head: string; para: str
     {
         head: "Custom PowerPoint design",
         para: "Get unique, visually stunning PowerPoint designs that bring your ideas to life, ensuring your presentations are engaging and persuasive.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734171538/Dark_Innovation_Creative_Multipurpose_Keynote_Template_pfaquc.jpg"
+        img: "/images/services page/presentation/3dcards1/01.webp"
     },
     {
         head: "Presentation templates",
         para: "Enjoy customizable, on-brand presentation templates that deliver consistent messaging, incorporating existing designs or built from scratch.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734426467/Modern_Minimalist_PowerPoint_Template_pmhjy8.jpg"
+        img: "/images/services page/presentation/3dcards1/02.webp"
     },
     {
         head: "Custom & motion graphics",
         para: "Request captivating animations and custom graphics to add flair to your presentation designs and a dynamic layer to your storytelling.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734172091/552a787860b6065cb634e51df02cdceb_osmbra.gif"
+        img: "/images/services page/presentation/3dcards1/03.gif"
     },
     {
         head: "Data visualization",
         para: "Let us transform your complex data into clear, insightful and delightful visuals, making your information more accessible and impactful.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734171762/Data_Visualization_-_PowerPoint_Presentation_owvami.jpg"
+        img: "/images/services page/presentation/3dcards1/04.webp"
     },
     {
         head: "Infographics",
         para: "Add visually striking infographics to your presentation designs to convey information visually and share engagingly digestible messages.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734351200/Gemini_lvjydi.jpg"
+        img: "/images/services page/presentation/3dcards1/05.webp"
     },
 ]
 }
@@ -106,27 +105,27 @@ const section5: {mainpara: string; head: string; cards: {head: string; para: str
     {
         head: "Business presentations",
         para: "Get professional, effective presentations tailored to your business, designed to communicate your message clearly and leave a lasting impression on your audience.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734426064/Data_Visualization_-_Google_Slides_Presentation_isys6s.jpg"
+        img: "/images/services page/presentation/3dcards2/01.webp"
     },
     {
         head: "Elevator & pitch decks",
         para: "Collaborate on persuasive pitch decks perfect for supporting narratives and sealing partnerships, presented in a compelling format to capture immediate interest.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734426467/Modern_Minimalist_PowerPoint_Template_pmhjy8.jpg"
+        img: "/images/services page/presentation/3dcards2/02.webp"
     },
     {
         head: "Sales decks & reports",
         para: "Get sales decks designed to drive decisions and conversions, combining persuasive storytelling with clear data visualizations to communicate your message.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734427165/Ad_Astra_-_Territory_Studio_mqu2zo.jpg"
+        img: "/images/services page/presentation/3dcards2/03.webp"
     },
     {
         head: "Investor decks & reports",
         para: "Share detailed presentations and reports to engage investors, showcasing your business's value and potential with clear, persuasive narratives and visuals.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734427265/Smart_Financial_Analytics_Crypto_Tracking_tljkbd.jpg"
+        img: "/images/services page/presentation/3dcards2/04.webp"
     },
     {
         head: "Slide decks",
         para: "Get engaging slide decks customized to meet your specific objectives, whether you’re presenting ideas or getting buy-in from an internal or external audience.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734427359/Data_Financials_Slide_Templates_-_slidddo_o9bpbr.jpg"
+        img: "/images/services page/presentation/3dcards2/05.webp"
     },
 ]
 }
@@ -163,22 +162,22 @@ const section6: {mainpara: string; heading: {text: string; className: string;}[]
   para: "Our presentation designers can do it all. With expertise across all major presentation design platforms, we can adapt to your preferred tools and integrate with your creative workflows. Whether you’re a PowerPoint aficionado or Google Slides devotee, we’ll design in your platform of choice to deliver a powerful, high-impact presentation.",
   social: [
     {
-      img: "https://cdn.sanity.io/images/k0dlbavy/production/01d5744064c012140992a2cc21bbe3edab741e96-240x240.png?auto=format&fit=max&q=100&w=240",
+      img: "/images/services page/presentation/tools/power point.webp",
       name: "Microsoft PowerPoint",
       para: "An oldie but a goodie. Our designers are experts in this leading presentation software, ensuring your presentations are visually compelling and easy to build on." 
     },
     {
-      img: "https://cdn.sanity.io/images/k0dlbavy/production/9a2df0d6a7a9d89e570b3dbe6c242daa29163bb6-240x240.png?auto=format&fit=max&q=100&w=240",
+      img: "/images/services page/presentation/tools/Google Slides.webp",
       name: "Google Slides",
       para: "A versatile staple, Google Slides is another platform our designers know through and through, so they can build you engaging, interactive presentations designs." 
     },
     {
-      img: "https://cdn.sanity.io/images/k0dlbavy/production/a0bd07147f67a6a209e083c67c3079fc558650a0-240x240.png?auto=format&fit=max&q=100&w=240",
+      img: "/images/services page/presentation/tools/Keynote.webp",
       name: "Keynote",
       para: "More of a Keynote connoisseur? Apple’s Keynote is another one of our specialities. We’ll deliver stunning presentations on the double, so you can communicate in style." 
     },
     {
-      img: "https://cdn.sanity.io/images/k0dlbavy/production/073ab9da11f56aebe63ca6b07b9e2dc0f4392059-240x240.png?auto=format&fit=max&q=100&w=240",
+      img: "/images/services page/presentation/tools/Figma.webp",
       name: "Figma",
       para: "If you live in Figma, we’re right there with you. Our designers are fluent in Figma and prepared to deliver high-quality presentation designs using this collaborative platform." 
     },
@@ -222,42 +221,42 @@ const faq:{mainpara: string; people: {id: number;name: string;designation: strin
       name: "John Doe",
       designation: "Software Engineer",
       image:
-        "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
+        "/images/services page/faq/john doe.webp",
     },
     {
       id: 2,
       name: "Robert Johnson",
       designation: "Product Manager",
       image:
-        "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+        "/images/services page/faq/Robert Johnson.webp",
     },
     {
       id: 3,
       name: "Jane Smith",
       designation: "Data Scientist",
       image:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+        "/images/services page/faq/Jane Smith.webp",
     },
     {
       id: 4,
       name: "Emily Davis",
       designation: "UX Designer",
       image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+        "/images/services page/faq/Emily Davis.webp",
     },
     {
       id: 5,
       name: "Tyler Durden",
       designation: "Soap Developer",
       image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80",
+        "/images/services page/faq/Tyler Durden.webp",
     },
     {
       id: 6,
       name: "Dora",
-      designation: "The Explorer",
+      designation: "The Presentation Expert",
       image:
-        "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3534&q=80",
+        "/images/services page/faq/Dora Explorer.webp",
     },
   ],
   list: [
@@ -341,8 +340,8 @@ function AdCreative() {
               <div className="mt-10">
                 <Section3  content={section3} roundb="rounded-t-[50px]" />
               </div>
-              <Cards3dSections content={section4} translate='-40%' responsiveTraslate="-90%" end="+=500"/>
-              <Cards3dSections content={section5} translate='-40%' responsiveTraslate="-90%" end="+=500" className="rounded-b-[50px]"/>
+              <Cards3dSections content={section4} translate='-40%' responsiveTraslate="-90%" end="+=650"/>
+              <Cards3dSections content={section5} translate='-40%' responsiveTraslate="-90%" end="+=650" className="rounded-b-[50px]"/>
               <Section6 content={section6} translate="-50%" responsiveTranslate="-75%"/>
               <Section8 content={section8}/>
               <ContactOurExperts />
@@ -355,8 +354,8 @@ function AdCreative() {
                 <HeroSection heading={heroContent.heading} para={heroContent.para} />
               
               <Section3  content={section3} roundb="rounded-t-[50px]" />
-              <Cards3dSections content={section4} translate='-83%' end="+=500"/>
-              <Cards3dSections content={section5} translate='-83%' end="+=500" className="rounded-b-[50px]"/>
+              <Cards3dSections content={section4} translate='-83%' end="+=650"/>
+              <Cards3dSections content={section5} translate='-83%' end="+=650" className="rounded-b-[50px]"/>
               <Section6 content={section6} translate="-50%" responsiveTranslate="-75%"/>
               <Section8 content={section8}/>
               <ContactOurExperts />

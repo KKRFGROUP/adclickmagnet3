@@ -34,6 +34,8 @@
     scroll-snap-align: center;
 }
 
+
+
 .service-hero-sec-content-img {
     position:relative;
     transition: 0.4s;
@@ -197,6 +199,7 @@
     height: 80vh;
 }
 .services-sec2-card {
+    color: #fff;
     transition: 0.4s;
 }
 
@@ -271,6 +274,7 @@
         width: 90%;
         height:50%;
         background-color: #fffFFF70;
+        color: #fff;
         backdrop-filter: blur(10px);
         border-radius: 20px;
         padding: 20px;
@@ -315,6 +319,7 @@
         width: 90%;
         height:50%;
         background-color: #fffFFF70;
+        color: #fff!important;
         backdrop-filter: blur(10px);
         border-radius: 20px;
         padding: 20px;
@@ -392,6 +397,10 @@ video::-webkit-media-controls {
     height: 75%;
     transition: 0.4s;
 }
+.services-sec3-vdo {
+    width: 20%;
+}
+
 .services-sec3-img:hover {
     rotate: 10deg;
 }
@@ -1117,13 +1126,7 @@ video::-webkit-media-controls {
 }
 
 .faq-right-container {
-    color: #fff !important;;
-}
-
-@media (-webkit-min-device-pixel-ratio: 2) { 
-    .faq-right-container {
-        color: #fff !important;;
-    }
+    color: #fff !important;
 }
 
 .faq-content {

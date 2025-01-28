@@ -21,55 +21,55 @@ import './app.css'
 const hoverImageArr = [
     {
         name: "Creative services",
-        img: "https://www.simplilearn.com/ice9/free_resources_article_thumb/Is_Graphic_Design_A_Good_Career.jpg"
+        img: "/images/navbar/creative services.webp"
     },
     {
         name: "Digital Ads Services",
-        img: "https://unctad.org/sites/default/files/inline-images/2019-03-29_DigitalServices_400x225.jpg"
+        img: "/images/navbar/Digital Ads Services.webp"
     },
     {
         name: "Graphic Design",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734468025/unions___highlights_up12yg.jpg"
+        img: "/images/navbar/Graphic Design.webp"
     },
     {
         name: "Ad Creative",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734468145/lovesbitesberlin_cg61ks.jpg"
+        img: "/images/navbar/Ad Creative.webp"
     },
     {
         name: "Branding Services",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734468488/emerald_postermockup_003_jpg_by_Emily_Xie_llqglz.jpg"
+        img: "/images/navbar/Branding Services.webp"
     },
     {
         name: "Presentation Design",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734468588/Premium_PSD___Interface_presentation_mockup_with_frosted_glass_morphism_effects_3D_Render_fszpnk.jpg"
+        img: "/images/navbar/Presentation Design.webp"
     },
     {
         name: "Video Production",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734468646/Video_Production_Agency_Website_tj2bxd.jpg"
+        img: "/images/navbar/Video Production.webp"
     },
     {
         name: "Motion Design",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734468750/join_us__Photo_jhlnet.gif"
+        img: "/images/navbar/Motion Design.gif"
     },
     {
         name: "Google Ads",
-        img: "/images/google ads logo.webp"
+        img: "/images/navbar/google ads logo.webp"
     },
     {
         name: "Meta Ads",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734518219/meta_logo_white_grvgck.jpg"
+        img: "/images/navbar/Meta Ads.webp"
     },
     {
         name: "Search Engine Optimization",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734442064/seo_logo_white_tgmpnn.jpg"
+        img: "/images/navbar/seo.webp"
     },
     {
         name: "Linkedin Ads",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734524683/Untitled_design_11_gknymx.png"
+        img: "/images/navbar/Linkedin.webp"
     },
     {
         name: "Web Development",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734434830/a83bd63c2147df066ce4c89f3adbabff_wqlp7s.gif"
+        img: "/images/navbar/Web Development.gif"
     },
    
     
@@ -252,7 +252,7 @@ export default function Navbar({className, mobileOverlayOpen, isOpen }: NavbarPr
                                         <h2 className="what-we-do-hover-sec1-head">Crafted to Propel Your Success</h2>
                                         <p className="what-we-do-hover-sec1-para">Our case studies showcase how we transform visions into measurable outcomes.</p>
                                         <hr className="what-we-do-hover-sec1-line"/>
-                                        <Link href="/case-studies"><div className="what-we-do-hover-sec1-img-card who-we-are-hover-sec1-img-card" style={{backgroundImage: "url(https://res.cloudinary.com/dvhmy6a4u/image/upload/v1735479812/man-593372_640_jzn0cw.jpg)"}}>
+                                        <Link href="/case-studies"><div className="what-we-do-hover-sec1-img-card who-we-are-hover-sec1-img-card" style={{backgroundImage: "url('/images/navbar/navbar card bg.webp')"}}>
                                             <p className="what-we-do-hover-sec1-img-card-para text-black">Explore how we delivered impactful solutions for our clients' growth.</p>
                                             
                                         </div></Link>

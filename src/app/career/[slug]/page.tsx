@@ -149,7 +149,7 @@ function CareerSlug() {
     <>
     <Navbar mobileOverlayOpen={toggleMenu} isOpen={isOpen}/>
       <div ref={pageMainRef} className='page-main'>
-        <div className="career-slug-hero" style={{backgroundImage: "url(https://res.cloudinary.com/dvhmy6a4u/image/upload/v1735383745/entrepreneur-593371_jbjpey.jpg)", backgroundSize: "cover"}}>
+        <div className="career-slug-hero" style={{backgroundImage: `url("/images/background images/career-slug-page-bg.webp")`, backgroundSize: "cover"}}>
         </div>
           <div className="career-slug-hero-content">
             <h1 className="career-slug-hero-content-head">Be Part of Our Dynamic Team</h1>
@@ -196,7 +196,7 @@ function CareerSlug() {
                     ))}
                   </ul>
 
-                  <button onClick={() => setIsPopupOpen(true)} type="button" className="service-hero-sec-content-button dark:bg-black dark:text-white mt-5">Apply Now</button>
+                  <button onClick={() => setIsPopupOpen(true)} type="button" className="service-hero-sec-content-button dark:bg-black dark:text-white mt-5" style={{width: "150px"}}>Apply Now</button>
               </div>
                 
             </div>
@@ -259,14 +259,7 @@ function CareerSlug() {
               </div>
 
               <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
-              <LabelInputContainer className="">
-                <Label className="dark:text-black" htmlFor="message">Drop a Message</Label>
-                <Input id="message" type="text"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required placeholder="What can we help you with?" />
-              </LabelInputContainer>
+              
 
               <LabelInputContainer className="">
                 <Label className="dark:text-black" htmlFor="linkedin">Linkedin Profile</Label>

@@ -46,13 +46,13 @@ function FAQ({content}: {content: {mainpara: string; people: {id: number;name: s
             </div>
         </div>
 
-        <div className="w-[50%] h-[90%] faq-right-container">
+        <div className="w-[50%] h-[90%] faq-right-container" style={{color: "#fff"}}>
         <Accordion variant="splitted">
             {content.list.map(each => (
-                <AccordionItem className='mb-2 faq-right-content'  key={each.id} aria-label={`Accordion ${each.id}`} title={each.title}>
+                <AccordionItem className='mb-2 faq-right-content'  key={each.id} aria-label={`Accordion ${each.id}`} title={<span style={{ color: "#fff" }}>{each.title}</span>}>
                     {each.description}
                 </AccordionItem>
-            ))}
+        ))}
             
             
             
@@ -65,14 +65,3 @@ function FAQ({content}: {content: {mainpara: string; people: {id: number;name: s
 export default FAQ
 
 
-//animation card alternative
-
-//<div className="faq-card">
-//                <div className='faq-card-inner'>
-//                    <Image className='faq-card-inner-img mb-5' src="https://cdn.sanity.io/images/k0dlbavy/production/f4c1cf92a058f2aa534cf36cf25f2ae2d772cc5c-793x240.png?w=960&auto=format&h=291&fit=min" alt="faq" height={300} width={300} />
-//                    <p className="faq-card-inner-para text-black font-semibold mb-4 text-2xl">Find the right solution for you now</p>
-//                    <button type="button" className='flex items-center justify-center faq-card-inner-button'>Book a quick call
-//                        <FaAngleRight />
-//                    </button>
-//                </div>
-//</div>

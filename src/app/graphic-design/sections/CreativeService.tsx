@@ -97,22 +97,22 @@ export default function CreativeService() {
           <h2 className='creative-service-head-second mb-9'>Elegance.</h2>
           <div className="flex justify-between items-start creative-service-card-container">
             <div className="creative-service-card">
-              <Image className='creative-service-card-img' src="https://res.cloudinary.com/dvhmy6a4u/image/upload/v1733682584/4501ec186308f5038f02eb919dbf80f7_azjpct.gif" alt="crative image" height={300} width={300} />
+              <Image className='creative-service-card-img' src="/images/graphic design/creative/01.gif" alt="crative image" height={300} width={300} />
               <p className='creative-service-card-content' >Precision-driven designs that enhance brand identity, focusing on high-quality, impactful visuals crafted for long-term success.</p>
               <hr className='creative-service-card-content-line ' />
             </div>
             <div className="creative-service-card">
-              <video className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl creative-service-card-img" autoPlay preload='auto' loop muted playsInline > <source src="https://res.cloudinary.com/dvhmy6a4u/video/upload/v1733738086/534d6aff87e86b29b17312ba147078a9_yplz9m.mp4" /></video>
+              <video className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl creative-service-card-img" autoPlay preload='auto' loop muted playsInline > <source src="/images/graphic design/creative/02.mp4" /></video>
               <p className='creative-service-card-content' >Delivering sophisticated, creative solutions that blend modern aesthetics with strategic design to effectively communicate your message.              </p>
               <hr className='creative-service-card-content-line' />
             </div>
             <div className="creative-service-card">
-              <Image className='creative-service-card-img' src="https://res.cloudinary.com/dvhmy6a4u/image/upload/v1733744640/pinterestdownloader.com-1733744603.09512_x4zzrx.gif" alt="crative image" height={300} width={300} />
+              <Image className='creative-service-card-img' src="/images/graphic design/creative/03.gif" alt="crative image" height={300} width={300} />
               <p className='creative-service-card-content' >Pushing the boundaries of design, we create innovative and visually compelling graphics that set your brand apart in a competitive market.</p>
               <hr className='creative-service-card-content-line' />
             </div>
             <div className="creative-service-card">
-              <Image className='creative-service-card-img' src="https://res.cloudinary.com/dvhmy6a4u/image/upload/v1733749999/05ba8567214b5d0c0bdeb73a0d908d7a_c1aatc.gif" alt="crative image" height={300} width={300} />
+              <Image className='creative-service-card-img' src="/images/graphic design/creative/04.gif" alt="crative image" height={300} width={300} />
               <p className='creative-service-card-content' >Focused on results, we design with purpose. Our graphics are built for performance, ensuring maximum engagement and effectiveness.</p>
               <hr className='creative-service-card-content-line' />
             </div>
@@ -123,7 +123,7 @@ export default function CreativeService() {
       {/* Popup Modal */}
       {isPopupOpen && (
           <div className="fixed inset-0 bg-black  flex items-center justify-center pt-[20%] md:pt-[7%] h-[100vh] popup-z-index">
-            <div className="service-page-popup" style={{backgroundImage: "url(https://i.pinimg.com/1200x/5a/6b/50/5a6b5014f1c4e9e04fb8c0d78c72b193.jpg)"}}>
+            <div className="service-page-popup" style={{backgroundImage: "url(/images/form-popup-bg.webp)"}}>
               <div className="bg-blur rounded-2xl flex-col">
               <button
                 onClick={() => setIsPopupOpen(false)}

@@ -29,7 +29,6 @@ import ContactOurExperts from '@/components/services-components/ContactOurExpert
 const heroContent = {
     heading: "SEO Services for Enhanced Visibility",
     para: "Boost your online presence and drive targeted traffic with our expert SEO strategies. We optimize your website to rank higher on search engines, helping you reach the right audience and make a lasting impression.",
-    imgUrl: "https://i.pinimg.com/736x/ea/a4/bf/eaa4bf626bc139948956117cdb53b02e.jpg"
 };
 
 const section2 = [
@@ -123,7 +122,7 @@ const section3 = {
     ],
     para1: "Achieve a strong digital presence with a site built for optimal performance, speed, and search visibility. At ACM, we specialize in web development with SEO as a core focus, ensuring your website is seen and trusted by users and search engines alike.",
     para2: "Our team of SEO-savvy developers and strategists collaborates globally to deliver full-stack solutions, from front-end to back-end, elevating your site’s functionality and search visibility for an unparalleled digital experience.",
-    image: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734442064/seo_logo_white_tgmpnn.jpg"
+    image: "/images/services page/seo/seo sec3 img.webp"
 };
 
 
@@ -202,22 +201,22 @@ const section6 = {
     para: "Achieving top-tier SEO results requires a mastery of powerful tools that enhance keyword targeting, performance analytics, and technical SEO. ACM leverages industry-leading software for robust analysis, content optimization, and sustained rankings.",
     social: [
       {
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBdMjfVilFgdbbFIHDvjVXo-jZXHBQWhE6fw&s",
+        img: "/images/services page/seo/tools/01.webp",
         name: "SEMrush",
         para: "Comprehensive insights into competitor strategies, keyword trends, and backlink analysis to fine-tune your SEO approach."
       },
       {
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq5eIwGo6Egn4vRQMCI7mvXbVRVAbDoOQJdw&s",
+        img: "/images/services page/seo/tools/02.webp",
         name: "Ahrefs",
         para: "Powerful backlink analysis, content exploration, and site audits to elevate your SEO strategy and drive meaningful results."
       },
       {
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2atinpxS_-9f8jTUYOJAyACUDKCxrn42_Ww&s",
+        img: "/images/services page/seo/tools/03.webp",
         name: "Google Analytics",
         para: "Real-time traffic analysis, user behavior insights, and conversion tracking to measure and optimize performance effectively."
       },
       {
-        img: "https://cdn3d.iconscout.com/3d/free/thumb/free-google-3d-logo-download-in-png-blend-fbx-gltf-file-formats--social-media-ios-apps-pack-logos-3105336.png?f=webp",
+        img: "/images/services page/seo/tools/04.webp",
         name: "Google Search Console",
         para: "Monitor your website’s indexing status, optimize visibility in Google search results, and fix technical SEO issues."
       },
@@ -261,27 +260,27 @@ const section3dCards: {mainpara: string; head: string; cards: {head: string; par
     {
         head: "Organic Search",
         para: "Organic search results drive most website traffic, with over 50% coming from organic search. If your website isn’t search-optimized, you’re missing a major traffic opportunity.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734518969/seo_logo_new_pyjljd.jpg"
+        img: "/images/services page/seo/3dcards/01.webp"
     },
     {
         head: "Helps Build Trust And Credibility",
         para: "People trust search engines, and a high rank in search results builds credibility. It shows your site is relevant and authoritative to your audience.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734458072/COST-EFFECTIVE_1_hvjk4g.png"
+        img: "/images/services page/seo/3dcards/02.webp"
     },
     {
         head: "Improves User Experience",
         para: "SEO optimizes your site’s structure and content for search engines, improving user experience by making your site organized, informative, and user-friendly.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734458620/COST-EFFECTIVE_2_r2fh0c.png"
+        img: "/images/services page/seo/3dcards/03.webp"
     },
     {
       head: "Cost-Effective",
       para: "SEO is a cost-effective strategy to drive traffic. Unlike paid ads requiring ongoing investment, SEO offers long-term results with minimal costs.",
-      img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734457644/COST-EFFECTIVE_qarpb0.png"
+      img: "/images/services page/seo/3dcards/04.webp"
   },
   {
       head: "Competitive Advantage",
       para: "SEO is highly competitive. Businesses investing in SEO attract more traffic, leading to increased leads, sales, and a stronger market position.",
-      img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734457312/Untitled_design_9_fhdsyo.png"
+      img: "/images/services page/seo/3dcards/05.webp"
   },
 ]
 }
@@ -324,42 +323,42 @@ const faq = {
         name: "John Doe",
         designation: "Senior SEO Specialist",
         image:
-          "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
+          "/images/services page/faq/john doe.webp",
       },
       {
         id: 2,
         name: "Robert Johnson",
         designation: "SEO Strategist",
         image:
-          "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+          "/images/services page/faq/Robert Johnson.webp",
       },
       {
         id: 3,
         name: "Jane Smith",
         designation: "SEO Content Specialist",
         image:
-          "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+          "/images/services page/faq/Jane Smith.webp",
       },
       {
         id: 4,
         name: "Emily Davis",
         designation: "Technical SEO Specialist",
         image:
-          "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+          "/images/services page/faq/Emily Davis.webp",
       },
       {
         id: 5,
         name: "Tyler Durden",
         designation: "SEO Analytics Expert",
         image:
-          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80",
+          "/images/services page/faq/Tyler Durden.webp",
       },
       {
         id: 6,
         name: "Dora Explorer",
         designation: "SEO Specialist",
         image:
-          "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3534&q=80",
+          "/images/services page/faq/Dora Explorer.webp",
       },
     ],
     list: [
@@ -441,7 +440,7 @@ function Seo() {
                       <Section3  content={section3} roundb="rounded-t-[50px]" />
                       <Section4 content={section4} roundb='rounded-b-[50px]'/>
                       <Section6 content={section6} translate="-50%" responsiveTranslate="-75%"/>
-                      <Cards3dSections translate='-40%' responsiveTraslate="-90%" end="+=500" content={section3dCards} className="rounded-[50px]"/>
+                      <Cards3dSections translate='-40%' responsiveTraslate="-90%" end="+=600" content={section3dCards} className="rounded-[50px]"/>
                       <Section7 content={section7}/>
                       <Section8 content={section8}/>
                       <ContactOurExperts />
@@ -457,7 +456,7 @@ function Seo() {
                   <Section3  content={section3} roundb="rounded-t-[50px]" />
                   <Section4 content={section4} roundb='rounded-b-[50px]'/>
                   <Section6 content={section6} translate="-50%" responsiveTranslate="-75%"/>
-                  <Cards3dSections translate='-80%' responsiveTraslate="-90%" end="+=500" content={section3dCards} className="rounded-[50px]"/>
+                  <Cards3dSections translate='-80%' responsiveTraslate="-90%" end="+=600" content={section3dCards} className="rounded-[50px]"/>
                   <Section7 content={section7}/>
                   <Section8 content={section8}/>
                   <ContactOurExperts />

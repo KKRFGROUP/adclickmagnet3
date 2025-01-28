@@ -1,15 +1,15 @@
 "use client"
 import { TypewriterEffect } from '@/components/ui/TypewriterEffect'
-import React, { Suspense, useEffect, useState }  from 'react'
+import React, { Suspense, useEffect, useState, useRef }  from 'react'
 import { OrbitControls } from '@react-three/drei/core/OrbitControls'
-import { Canvas } from "@react-three/fiber";
+import { Canvas,useFrame } from "@react-three/fiber";
 import Cube2 from '@/components/3dmodels/Cube2';
 import { Input, Label,PhoneInput } from '@/components/ui/Form';
 import { cn } from "@/lib/utils";
 import { IoMdCloseCircle } from "react-icons/io";
 import "@/components/services-components/components.css";
 import { useRouter } from "next/navigation";
-
+import { Group } from 'three';
 
 
 const BottomGradient = () => {
@@ -48,6 +48,23 @@ const words = [
     },
     
 ];
+
+const AutoRotate = () => {
+  const groupRef = useRef<Group>(null);
+  
+  useFrame(() => {
+    if (groupRef.current) {
+      groupRef.current.rotation.y += 0.01;
+    }
+  });
+
+  return (
+    <group ref={groupRef}>
+      <Cube2 />
+    </group>
+  );
+};
+
 
 function LetsGrow() {
   const router = useRouter();
@@ -123,19 +140,23 @@ function LetsGrow() {
     }, [windowWidth])
   return (
     <div className='lets-grow-main-container'>
-        <div className=" lets-grow-head">
+        <div className="lets-grow-head">
 
             <TypewriterEffect className='impact-matric-head'  words={words}/>
         </div>
         <div className="about-lets-model">
-            <Canvas camera={{ position: [windowWidth <= 768 ? 25 : 10, 0, 5], fov: 25 }}>
+            <Canvas camera={{ position: [windowWidth <= 768 ? 20 : 10, 0, 5], fov: 25 }}>
                 <Suspense fallback={null}>
                 <ambientLight intensity={0.5} />
                 <directionalLight position={[5, 2, 5]} />
-                <Cube2 />
-                <OrbitControls 
-                    enableZoom={false} 
-                    />
+                {windowWidth <= 768 ? (<AutoRotate />) : (<>
+                  <Cube2 />
+                  <OrbitControls 
+                      enableZoom={false} 
+                      />
+                  </>
+                  )}
+                
                 </Suspense>
             </Canvas>
         </div>
@@ -145,7 +166,7 @@ function LetsGrow() {
         {/* Popup Modal */}
             {isPopupOpen && (
                 <div className="fixed inset-0 bg-black flex items-center justify-center pt-[20%] md:pt-[7%] h-[100vh] popup-z-index">
-                  <div className="service-page-popup" style={{backgroundImage: "url(https://i.pinimg.com/1200x/5a/6b/50/5a6b5014f1c4e9e04fb8c0d78c72b193.jpg)"}}>
+                  <div className="service-page-popup" style={{backgroundImage: "url(/images/form-popup-bg.webp)"}}>
                     <div className="bg-blur rounded-2xl flex-col">
                     <button
                       onClick={() => setIsPopupOpen(false)}

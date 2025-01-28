@@ -38,7 +38,6 @@ import DynamicContentCard from '@/components/services-components/DynamicContentC
 const heroContent = {
     heading: "Google Ads Services",
     para: "Since 2004, we’ve been a paid search marketing agency focused on Google Ads management – our services boosting paid search conversions by more than 485%. We’ll apply proven Ads management strategies to your campaign – increasing conversions and eliminating wasted spend!",
-    imgUrl: "https://images.pexels.com/photos/67112/pexels-photo-67112.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
 }
 const section2 = [
   {
@@ -124,7 +123,7 @@ const section3 = {
     ],
     para1: "In a competitive digital landscape, targeted Google Ads can elevate your brand’s visibility and drive high-quality traffic to your website. Our tailored Google Ads services help you reach the right audience effectively and maximize your ROI.",
     para2: "Our team of certified Google Ads specialists provides end-to-end solutions, from keyword research and ad creation to performance tracking and optimization, ensuring you achieve the best possible outcomes for your ad spend.",
-    image: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734512567/google_ads_1_arhyff.jpg"
+    image: "/images/services page/google ads/google ads sec3 img.webp"
   };
   
 
@@ -205,27 +204,27 @@ const section6 = {
     para: "Achieving success with Google Ads requires expertise across multiple tools and platforms. Our team leverages a wide array of specialized software to deliver impactful results, ensuring your campaigns are optimized for performance, reach, and conversions.",
     social: [
       {
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWK2nVTguVf7cLwkJqDVwDOKiMMlRaT2joDQ&s",
+        img: "/images/services page/google ads/tools/01.webp",
         name: "Google Ads Manager",
         para: "Optimize campaigns with Google Ads Manager to reach the right audience and maximize ad spend."
       },
       {
-        img: "https://cdn3d.iconscout.com/3d/free/thumb/free-analytics-3d-logo-download-in-png-blend-fbx-gltf-file-formats--statistics-graph-social-media-pack-company-brand-logos-4781242.png",
+        img: "/images/services page/google ads/tools/02.webp",
         name: "Google Analytics",
         para: "Track campaign performance and user behavior with Google Analytics for data-driven decisions."
       },
       {
-        img: "https://www.gstatic.com/analytics-suite/header/suite/v2/ic_tag_manager.svg",
+        img: "/images/services page/google ads/tools/03.svg",
         name: "Google Tag Manager",
         para: "Track user interactions and manage tags for retargeting and conversion tracking with ease."
       },
       {
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBjXOKHUfK3gOaM_dxWFnHggOUWUZvvKxF0w&s",
+        img: "/images/services page/google ads/tools/04.webp",
         name: "Optmyzr",
         para: "Use Optmyzr to automate bid optimization, keyword analysis, and A/B testing for better ads."
       },
       {
-        img: "https://cdn.shopify.com/app-store/listing_images/415acef59ea18c992554e646bb315f54/icon/CNnqi5_U0fUCEAE=.png",
+        img: "/images/services page/google ads/tools/05.webp",
         name: "ClickCease",
         para: "Protect your ad budget with ClickCease by detecting and stopping click fraud to boost ROI."
       },
@@ -280,32 +279,32 @@ const section7 = {
       {
         head: "Campaign Strategy",
         para: "Develop customized Google Ads strategies tailored to your business goals, ensuring maximum reach and conversions.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734522123/website_photo_7_v9f7lh.jpg"
+        img: "/images/services page/google ads/3dcards/01.webp"
       },
       {
         head: "Keyword Research",
         para: "Leverage in-depth keyword research to target the right audience and maximize the efficiency of your ad spend.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734519384/website_photo_2_zlelxg.jpg"
+        img: "/images/services page/google ads/3dcards/02.webp"
       },
       {
         head: "Ad Copy Creation",
         para: "Craft compelling ad copies that engage users, drive traffic, and boost click-through rates across campaigns.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734519384/website_photo_5_fgxfk7.jpg"
+        img: "/images/services page/google ads/3dcards/03.webp"
       },
       {
         head: "Performance Optimization",
         para: "Continuously monitor and optimize ad performance for better ROI by analyzing metrics and implementing data-driven changes.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734519383/website_photo_4_pijonc.jpg"
+        img: "/images/services page/google ads/3dcards/04.webp"
       },
       {
         head: "Remarketing Campaigns",
         para: "Re-engage your audience with strategic remarketing campaigns that increase conversions and brand loyalty.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734519384/website_new_photo_wppkrd.jpg"
+        img: "/images/services page/google ads/3dcards/05.webp"
       },
       {
         head: "Analytics & Reporting",
         para: "Receive detailed insights and reports to understand your campaign’s performance and make informed decisions.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734519384/website_photo_3_dz0xdi.jpg"
+        img: "/images/services page/google ads/3dcards/06.webp"
       },
     ]
   };
@@ -387,42 +386,42 @@ const faq = {
         name: "John Doe",
         designation: "Senior Google Ads Specialist",
         image:
-          "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
+          "/images/services page/faq/john doe.webp",
       },
       {
         id: 2,
         name: "Robert Johnson",
         designation: "Google Ads Campaign Manager",
         image:
-          "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+          "/images/services page/faq/Robert Johnson.webp",
       },
       {
         id: 3,
         name: "Jane Smith",
         designation: "PPC Strategist",
         image:
-          "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+          "/images/services page/faq/Jane Smith.webp",
       },
       {
         id: 4,
         name: "Emily Davis",
         designation: "Google Ads Analyst",
         image:
-          "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+          "/images/services page/faq/Emily Davis.webp",
       },
       {
         id: 5,
         name: "Tyler Durden",
         designation: "Paid Search Specialist",
         image:
-          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80",
+          "/images/services page/faq/Tyler Durden.webp",
       },
       {
         id: 6,
-        name: "Dora Explorer",
+        name: "Dora",
         designation: "Conversion Optimization Expert",
         image:
-          "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3534&q=80",
+          "/images/services page/faq/Dora Explorer.webp",
       },
     ],
     list: [
@@ -506,7 +505,7 @@ function GoogleAds() {
               <Section4 content={section4} roundb='rounded-b-[50px] h-[200vh]'/>
               <Section6 content={section6} translate="-50%" responsiveTranslate='-85%'/>
               <DynamicContentCard content={dynamicContentSec}  />
-              <Cards3dSections translate='-55%' responsiveTraslate="-90%" end="+=900" content={section3dCards} className="rounded-[50px]"/>
+              <Cards3dSections translate='-55%' responsiveTraslate="-90%" end="+=1000" content={section3dCards} className="rounded-[50px]"/>
               <Section7 content={section7}/>
               <Section8 content={section8}/>
               <ContactOurExperts />
@@ -523,7 +522,7 @@ function GoogleAds() {
               <Section4 content={section4} roundb='rounded-b-[50px] h-[200vh]'/>
               <Section6 content={section6} translate="-50%" responsiveTranslate='-85%'/>
               <DynamicContentCard content={dynamicContentSec}/>
-              <Cards3dSections translate='-83%' end="+=900" content={section3dCards} className="rounded-[50px]"/>
+              <Cards3dSections translate='-83%' end="+=1000" content={section3dCards} className="rounded-[50px]"/>
               <Section7 content={section7}/>
               <Section8 content={section8}/>
               <ContactOurExperts />

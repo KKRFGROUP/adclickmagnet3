@@ -38,7 +38,6 @@ import DynamicContentCard from '@/components/services-components/DynamicContentC
 const heroContent = {
     heading: "Meta Ads Services",
     para: "Since 2004, we’ve specialized in Meta Ads (Facebook & Instagram) management, creating targeted campaigns that drive engagement, generate quality leads, and increase conversions. Our proven strategies ensure your ad spend creates maximum impact with minimal waste, helping your business grow efficiently on the world’s leading social platforms.",
-    imgUrl: "https://images.pexels.com/photos/67112/pexels-photo-67112.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
 }
 
 const section2 = [
@@ -124,7 +123,7 @@ const section3 = {
     ],
     para1: "In today’s social media-driven world, Meta Ads (Facebook & Instagram) offer a powerful way to boost your brand's presence, engage with potential customers, and drive significant business growth. Our customized Meta Ads services ensure that your campaigns reach the right audience for maximum engagement and ROI.",
     para2: "Our team of Meta Ads specialists offers a full range of services, from audience targeting and creative ad design to performance tracking and continuous optimization, ensuring that your ad spend is impactful and efficient for optimal results.",
-    image: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734466565/Untitled_design_10_xynrvx.png"
+    image: "/images/services page/meta ads/meta sec3 img.webp"
 };
 
 
@@ -207,27 +206,27 @@ const section6 = {
     para: "Achieving success with Meta Ads requires expertise across multiple tools and platforms. Our team leverages a wide array of specialized software to deliver impactful results, ensuring your campaigns are optimized for performance, reach, and conversions.",
     social: [
       {
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWK2nVTguVf7cLwkJqDVwDOKiMMlRaT2joDQ&s",
+        img: "/images/services page/meta ads/tools/Facebook Ads Manager.webp",
         name: "Facebook Ads Manager",
         para: "Manage and optimize campaigns with Facebook Ads Manager, ensuring every ad reaches the right audience and maximizes your ad spend."
       },
       {
-        img: "https://cdn3d.iconscout.com/3d/free/thumb/free-analytics-3d-logo-download-in-png-blend-fbx-gltf-file-formats--statistics-graph-social-media-pack-company-brand-logos-4781242.png",
+        img: "/images/services page/meta ads/tools/Instagram Ads Manager.webp",
         name: "Instagram Ads Manager",
         para: "Design and manage Instagram ad campaigns to reach a targeted audience and achieve business objectives with visual and creative engagement."
       },
       {
-        img: "https://www.gstatic.com/analytics-suite/header/suite/v2/ic_tag_manager.svg",
+        img: "/images/services page/meta ads/tools/Facebook Pixel.webp",
         name: "Facebook Pixel",
         para: "Track and analyze website interactions to create custom audiences and optimize ad targeting with Facebook Pixel."
       },
       {
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBjXOKHUfK3gOaM_dxWFnHggOUWUZvvKxF0w&s",
+        img: "/images/services page/meta ads/tools/Meta Analytics.webp",
         name: "Meta Analytics",
         para: "Monitor campaign performance across Facebook and Instagram with Meta's robust analytics to drive data-driven decisions and optimize strategies."
       },
       {
-        img: "https://cdn.shopify.com/app-store/listing_images/415acef59ea18c992554e646bb315f54/icon/CNnqi5_U0fUCEAE=.png",
+        img: "/images/services page/meta ads/tools/AdEspresso.webp",
         name: "AdEspresso",
         para: "Enhance your Meta Ads management with AdEspresso, automating campaign A/B testing, optimization, and creative variation management."
       },
@@ -281,32 +280,32 @@ const section3dCards = {
       {
         head: "Campaign Strategy",
         para: "Develop customized Meta Ads strategies tailored to your business goals, ensuring maximum reach and conversions on Facebook and Instagram.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734518375/Facebook_ads_campaign_expert_u126ir.jpg"
+        img: "/images/services page/meta ads/3dcards/01.webp"
       },
       {
         head: "Audience Research",
         para: "Leverage in-depth audience research to target the right users on Facebook and Instagram, maximizing the efficiency of your ad spend.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734518375/I_will_manage_and_setup_your_facebook_ads_campaign_efficiently_kcmq7s.jpg"
+        img: "/images/services page/meta ads/3dcards/02.webp"
       },
       {
         head: "Ad Copy & Creative Design",
         para: "Create engaging ad copies and visually appealing creatives that resonate with your target audience, boosting interaction and engagement.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734518220/Screenshot_2024-12-17_at_7.02.29_PM_j42f67.png"
+        img: "/images/services page/meta ads/3dcards/03.webp"
       },
       {
         head: "Performance Optimization",
         para: "Continuously monitor and optimize Meta Ads performance by analyzing metrics and implementing data-driven changes to enhance ROI.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734518219/facebook-meta-business_sfwicr.webp"
+        img: "/images/services page/meta ads/3dcards/04.webp"
       },
       {
         head: "Remarketing Campaigns",
         para: "Re-engage users who have interacted with your ads or website with strategic remarketing campaigns, driving more conversions.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734518219/word-image-11_aor4gr.png"
+        img: "/images/services page/meta ads/3dcards/05.webp"
       },
       {
         head: "Analytics & Reporting",
         para: "Receive detailed reports on Meta Ads performance, helping you understand results and make informed decisions for further improvements.",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734518219/Screenshot_2024-12-17_at_7.00.34_PM_pg0ajr.png"
+        img: "/images/services page/meta ads/3dcards/06.webp"
       },
     ]
 };
@@ -388,42 +387,42 @@ const faq = {
         name: "John Doe",
         designation: "Senior Meta Ads Specialist",
         image:
-          "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
+          "/images/services page/faq/john doe.webp",
       },
       {
         id: 2,
         name: "Robert Johnson",
         designation: "Meta Ads Campaign Manager",
         image:
-          "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+          "/images/services page/faq/Robert Johnson.webp",
       },
       {
         id: 3,
         name: "Jane Smith",
         designation: "PPC Strategist",
         image:
-          "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+          "/images/services page/faq/Jane Smith.webp",
       },
       {
         id: 4,
         name: "Emily Davis",
         designation: "Meta Ads Analyst",
         image:
-          "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+          "/images/services page/faq/Emily Davis.webp",
       },
       {
         id: 5,
         name: "Tyler Durden",
         designation: "Paid Search Specialist",
         image:
-          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80",
+          "/images/services page/faq/Tyler Durden.webp",
       },
       {
         id: 6,
-        name: "Dora Explorer",
+        name: "Dora",
         designation: "Conversion Optimization Expert",
         image:
-          "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3534&q=80",
+          "/images/services page/faq/Dora Explorer.webp",
       },
     ],
     list: [

@@ -27,8 +27,9 @@ import ContactOurExperts from '@/components/services-components/ContactOurExpert
 const heroContent = {
     heading: "Website Development",
     para: "Your website is the first impression of your company and speaks volumes about your work, not just in terms of the information that it carries but more importantly through the experience it gives to website visitors. ",
-    imgUrl: "https://i.pinimg.com/736x/ea/a4/bf/eaa4bf626bc139948956117cdb53b02e.jpg"
 }
+
+
 const section2 = [
   {
     id: 1,
@@ -114,7 +115,7 @@ const section3 = {
     para1: "The need for reliable, scalable websites has never been greater. When your priority is a seamless digital experience, ACM’s flexible web development services are the solution.",
     para2: "Our global team of expert web developers can help with everything from concept and planning to implementation, integrating the latest in front-end, back-end, and full-stack solutions for a truly comprehensive digital presence.",
     image: "https://res.cloudinary.com/deepcnbrz/image/upload/v1730822005/Screenshot_2024-11-05_212211_hhbsos.png",
-    video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1734526689/04d0c008e3499a6210058c048be30fe7_jeizan.mp4"
+    video: "/images/services page/web dev/web dev sec3 vdo.mp4"
   };
 
 
@@ -197,27 +198,27 @@ const section6 = {
     para: "Developing robust, multi-platform web solutions requires a deep understanding of each digital ecosystem. ACM’s expert web developers bring platform-specific knowledge and a commitment to building solutions that adapt and excel, no matter the requirements.",
     social: [
       {
-        img: "https://cdn3d.iconscout.com/3d/free/thumb/free-wordpress-3d-icon-download-in-png-blend-fbx-gltf-file-formats--content-management-system-cms-logo-blogging-coding-lang-pack-logos-icons-7577993.png?f=webp",
+        img: "/images/services page/web dev/tools/01.webp",
         name: "WordPress",
         para: "Create dynamic websites with customized themes and plugins designed to maximize WordPress’s flexibility and extensive capabilities."
       },
       {
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREqnkEr6yH3TPgX620adAsMdbzYEb23DoKsA&s",
+        img: "/images/services page/web dev/tools/02.webp",
         name: "Shopify",
         para: "Launch e-commerce platforms with advanced Shopify solutions, tailored for seamless shopping experiences and powerful sales management tools."
       },
       {
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYZ-joCjW2IvNmqZOFR8L8WqLQ3nN0rkNkqQ&s",
+        img: "/images/services page/web dev/tools/03.webp",
         name: "Magento",
         para: "Elevate your online store with Magento’s robust, scalable e-commerce capabilities, ideal for businesses needing extensive customization and integrations."
       },
       {
-        img: "https://cdn3d.iconscout.com/3d/free/thumb/free-react-3d-icon-download-in-png-blend-fbx-gltf-file-formats--facebook-logo-native-javascript-library-user-interfaces-coding-lang-pack-logos-icons-7578010.png",
+        img: "/images/services page/web dev/tools/04.webp",
         name: "React & Angular",
         para: "Develop fast, responsive applications with React and Angular, offering unparalleled performance and seamless user experiences across all devices."
       },
       {
-        img: "https://www.sparkfabrik.com/images/servizi/drupal/drupal@2560.webp",
+        img: "/images/services page/web dev/tools/05.webp",
         name: "Drupal",
         para: "Utilize Drupal’s powerful CMS features to create content-rich websites that adapt to complex requirements and high levels of customization."
       },
@@ -254,32 +255,29 @@ const section7 = {
     button: "AI Web Development Service"
 };
 
-const section3dCards: {mainpara: string; head: string; cards: {head: string; para: string; img: string; video?: string;}[]} = {
+const section3dCards: {mainpara: string; head: string; cards: {head: string; para: string; img?: string; video?: string;}[]} = {
     mainpara: "WORKING WITH ACM",
     head: "Experience video excellence in every frame",
     cards: [
       {
           head: "Static Website Designing",
           para: "A static website is a type of website that consists of a set of HTML pages that remain unchanged until they are manually updated.",
-          img: "https://5.imimg.com/data5/SELLER/Default/2024/6/428433457/KL/LG/NL/224212668/static-website-designing-service-500x500.jpg",
-          video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1734526739/726fb854de761daa523edf50e93f595d_vgmku9.mp4"
+          video: "/images/services page/web dev/3dcards/01.mp4"
         },
       {
           head: "E- commerce websites",
           para: "An e-commerce website is an online platform where businesses sell their products or services to customers over the internet.",
-          img: "https://plus.unsplash.com/premium_photo-1683758344058-60a1506db480?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1734526687/9bf3809cae7b54e7505023fa7ef7bba6_zxugwr.mp4"
+          video: "/images/services page/web dev/3dcards/02.mp4"
         },
       {
         head: "Idea based websites",
         para: "An idea-based website is a digital platform centered around sharing and exploring concepts, innovations, or creative thoughts.",
-        img: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/6f5bc0101084519.5f170c2bc09c7.png",
-        video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1734526993/b85d984c64debd3ed46640ce77dbaf16_fcsdbw.mp4"
+        video: "/images/services page/web dev/3dcards/03.mp4"
       },
     {
         head: "Corporate Website",
         para: "A corporate website serves as the digital face of a company, providing a comprehensive overview of its identity, offerings, and values to various stakeholders",
-        img: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734526682/Proxima_website_template_hjwlwi.jpg"
+        img: "/images/services page/web dev/3dcards/04.webp"
     },
   ]
 } 
@@ -320,42 +318,42 @@ const faq = {
         name: "John Doe",
         designation: "Senior Web Developer",
         image:
-          "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
+          "/images/services page/faq/john doe.webp",
       },
       {
         id: 2,
         name: "Robert Johnson",
         designation: "Project Manager",
         image:
-          "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+          "/images/services page/faq/Robert Johnson.webp",
       },
       {
         id: 3,
         name: "Jane Smith",
         designation: "UX/UI Designer",
         image:
-          "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+          "/images/services page/faq/Jane Smith.webp",
       },
       {
         id: 4,
         name: "Emily Davis",
         designation: "Frontend Developer",
         image:
-          "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+          "/images/services page/faq/Emily Davis.webp",
       },
       {
         id: 5,
         name: "Tyler Durden",
         designation: "Backend Developer",
         image:
-          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80",
+          "/images/services page/faq/Tyler Durden.webp",
       },
       {
         id: 6,
         name: "Dora Explorer",
         designation: "SEO Specialist",
         image:
-          "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3534&q=80",
+          "/images/services page/faq/Dora Explorer.webp",
       },
     ],
     list: [
@@ -439,7 +437,7 @@ function WebDev() {
               <Section3  content={section3} roundb="rounded-t-[50px]" />
               <Section4 content={section4} roundb='rounded-b-[50px]'/>
               <Section6 content={section6} translate="-60%" responsiveTranslate="-120%"/>
-              <Cards3dSections translate='-25%' responsiveTraslate="-80%" end="+=900"  content={section3dCards} className="rounded-[50px]"/>
+              <Cards3dSections translate='-25%' responsiveTraslate="-80%" end="+=1100"  content={section3dCards} className="rounded-[50px]"/>
               <Section7 content={section7}/>
               <Section8 content={section8}/>
               <ContactOurExperts />
@@ -455,7 +453,7 @@ function WebDev() {
               <Section3  content={section3} roundb="rounded-t-[50px]" />
               <Section4 content={section4} roundb='rounded-b-[50px]'/>
               <Section6 content={section6}  translate="-60%" responsiveTranslate="-120%"/>
-              <Cards3dSections translate='-80%'  end="+=900" content={section3dCards} className="rounded-[50px]"/>
+              <Cards3dSections translate='-80%'  end="+=1100" content={section3dCards} className="rounded-[50px]"/>
               <Section7 content={section7}/>
               <Section8 content={section8}/>
               <ContactOurExperts />

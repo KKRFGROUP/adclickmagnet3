@@ -30,7 +30,7 @@ const content = [
               "With the success of this launch, our focus now shifts to expanding the product’s reach and exploring new markets. We have ambitious plans to introduce updates and enhancements that will keep us ahead of the curve. Our roadmap includes continuous improvement and customer-centric innovation as core principles.",
           }
         ],
-        img: "http://www.threegirlsmedia.com/wp-content/uploads/2015/10/promoting-press-release.jpg",
+        img: "/images/press release img.webp",
         time: "2024-11-22T09:00:00Z",
         link: "company-achieves-milestone-with-innovative-product-launch",
       },
@@ -55,7 +55,7 @@ const content = [
               "This initiative is poised to transform industries by encouraging sustainable practices that reduce environmental footprints. Communities will benefit from improved air and water quality, reduced waste, and access to eco-friendly technologies. The collaboration also prioritizes education and awareness to empower individuals to contribute to sustainability efforts."
           }
         ],
-        img: "http://www.threegirlsmedia.com/wp-content/uploads/2015/10/promoting-press-release.jpg",
+        img: "/images/press release img.webp",
         time: "2024-11-21T14:30:00Z",
         link: "global-partnership-to-drive-sustainable-practices-announced",
       },
@@ -84,7 +84,7 @@ const content = [
               "Looking ahead, our research center will focus on emerging fields such as artificial intelligence, renewable energy, and advanced manufacturing. By fostering a culture of continuous learning and exploration, we aim to position ourselves as leaders in technological innovation. Our vision is to empower future generations of researchers and entrepreneurs to shape a better tomorrow."
           }
         ],
-        img: "http://www.threegirlsmedia.com/wp-content/uploads/2015/10/promoting-press-release.jpg",
+        img: "/images/press release img.webp",
         time: "2024-11-20T11:00:00Z",
         link: "new-research-center-opens-to-foster-technological-innovation",
       },
@@ -108,7 +108,7 @@ const content = [
               "By launching this program, we aim to inspire future generations to take on leadership roles in their respective fields. The initiative is expected to create ripple effects, promoting a culture of excellence and responsibility. Participants will leave the program with a renewed sense of purpose, ready to contribute to their communities and industries.",
           }
         ],
-        img: "http://www.threegirlsmedia.com/wp-content/uploads/2015/10/promoting-press-release.jpg",
+        img: "/images/press release img.webp",
         time: "2024-11-19T16:15:00Z",
         link: "innovative-education-program-launched-for-future-leaders",
       },
@@ -132,7 +132,7 @@ const content = [
               "Our initiative involves partnerships with leading organizations and governments worldwide. These collaborations aim to pool resources and expertise to drive large-scale implementation of green energy projects. Together, we hope to create a ripple effect that accelerates the transition to a sustainable energy future."
           }
         ],
-        img: "http://www.threegirlsmedia.com/wp-content/uploads/2015/10/promoting-press-release.jpg",
+        img: "/images/press release img.webp",
         time: "2024-11-18T10:45:00Z",
         link: "major-investment-to-expand-green-energy-infrastructure",
       },
@@ -156,7 +156,7 @@ const content = [
               "As we celebrate this achievement, we are equally focused on the future. Plans are underway to further diversify our offerings, strengthen our market position, and invest in technology-driven solutions. By continuing to prioritize innovation and customer satisfaction, we aim to maintain this upward trajectory.",
           }
         ],
-        img: "http://www.threegirlsmedia.com/wp-content/uploads/2015/10/promoting-press-release.jpg",
+        img: "/images/press release img.webp",
         time: "2024-11-17T12:20:00Z",
         link: "record-breaking-growth-in-annual-revenue-announced",
       }
@@ -167,7 +167,7 @@ const morePressRelease = [
     id: 4,
     heading: "Innovative Education Program Launched for Future Leaders",
     para: "Our organization is proud to announce the launch of an innovative education program. This initiative is designed to cultivate leadership skills in young professionals worldwide.",
-    img: "http://www.threegirlsmedia.com/wp-content/uploads/2015/10/promoting-press-release.jpg",
+    img: "/images/press release img.webp",
     time: "2024-11-19T16:15:00Z",
     link: "innovative-education-program-launched-for-future-leaders"
   },
@@ -175,7 +175,7 @@ const morePressRelease = [
     id: 5,
     heading: "Major Investment to Expand Green Energy Infrastructure",
     para: "In a bold move to combat climate change, our company has announced a major investment to expand green energy infrastructure, promoting a sustainable and eco-friendly future.",
-    img: "http://www.threegirlsmedia.com/wp-content/uploads/2015/10/promoting-press-release.jpg",
+    img: "/images/press release img.webp",
     time: "2024-11-18T10:45:00Z",
     link: "major-investment-to-expand-green-energy-infrastructure"
   },
@@ -183,7 +183,7 @@ const morePressRelease = [
     id: 6,
     heading: "Record-Breaking Growth in Annual Revenue Announced",
     para: "This year marks a record-breaking growth in our annual revenue, demonstrating the effectiveness of our strategic initiatives and commitment to delivering exceptional value.",
-    img: "http://www.threegirlsmedia.com/wp-content/uploads/2015/10/promoting-press-release.jpg",
+    img: "/images/press release img.webp",
     time: "2024-11-17T12:20:00Z",
     link: "record-breaking-growth-in-annual-revenue-announced"
   },

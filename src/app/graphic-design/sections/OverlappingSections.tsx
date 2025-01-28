@@ -129,7 +129,7 @@ const OverlappingSections = () => {
             <Link href="/contact-us"><button className="read-customer-stories mt-[40px]" type="button">Book A Call</button></Link>
           </div>
             <div className="graphic-page-sec2-graphic-card">
-              <Image className="graphic-page-overlap-gif overlapping-cards-img" src="https://i.gifer.com/fxVE.gif" alt="gif" width={300} height={300} />
+              <Image className="graphic-page-overlap-gif overlapping-cards-img" src="/images/graphic design/graphic design gif2.gif" alt="gif" width={300} height={300} />
             </div>
           
         </div>
