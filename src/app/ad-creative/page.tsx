@@ -228,22 +228,22 @@ const section6: {mainpara: string; heading: {text: string; className: string;}[]
       para: "Maximize engagement with custom creative tailored for Facebook’s unique audience and platform capabilities." 
     },
     {
-      img: "/images/services page/ad creative/tools/LinkedIn.webp",
+      img: "/images/services page/ad creative/tools/linkedin.webp",
       name: "LinkedIn",
       para: "Position your brand as an industry leader with professional and engaging content designed for LinkedIn’s business-focused community." 
     },
     {
-      img: "/images/services page/ad creative/tools/Insta.webp",
+      img: "/images/services page/ad creative/tools/insta.webp",
       name: "Instagram",
       para: "Captivate Instagram’s visually-driven audience with stunning graphics and innovative content formats." 
     },
     {
-      img: "/images/services page/ad creative/tools/TikTok.webp",
+      img: "/images/services page/ad creative/tools/tiktok.webp",
       name: "TikTok",
       para: "Tap into the power of viral content with TikTok creatives designed for maximum shareability and engagement." 
     },
     {
-      img: "/images/services page/ad creative/tools/YouTube.webp",
+      img: "/images/services page/ad creative/tools/youtube.webp",
       name: "YouTube",
       para: "Optimize viewer interaction with tailored creatives designed for YouTube's diverse audience and video-friendly platform features." 
     },
@@ -322,35 +322,35 @@ const faq:{mainpara: string; people: {id: number;name: string;designation: strin
       name: "Robert Johnson",
       designation: "Product Manager",
       image:
-        "/images/services page/faq/Robert Johnson.webp",
+        "/images/services page/faq/robert johnson.webp",
     },
     {
       id: 3,
       name: "Jane Smith",
       designation: "Data Scientist",
       image:
-        "/images/services page/faq/Jane Smith.webp",
+        "/images/services page/faq/jane smith.webp",
     },
     {
       id: 4,
       name: "Emily Davis",
       designation: "UX Designer",
       image:
-        "/images/services page/faq/Emily Davis.webp",
+        "/images/services page/faq/emily davis.webp",
     },
     {
       id: 5,
       name: "Tyler Durden",
       designation: "Soap Developer",
       image:
-        "/images/services page/faq/Tyler Durden.webp",
+        "/images/services page/faq/tyler durden.webp",
     },
     {
       id: 6,
       name: "Dora",
       designation: "The ad expert",
       image:
-        "/images/services page/faq/Dora Explorer.webp",
+        "/images/services page/faq/dora explorer.webp",
     },
   ],
   list: [

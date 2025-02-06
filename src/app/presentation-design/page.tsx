@@ -228,35 +228,35 @@ const faq:{mainpara: string; people: {id: number;name: string;designation: strin
       name: "Robert Johnson",
       designation: "Product Manager",
       image:
-        "/images/services page/faq/Robert Johnson.webp",
+        "/images/services page/faq/robert johnson.webp",
     },
     {
       id: 3,
       name: "Jane Smith",
       designation: "Data Scientist",
       image:
-        "/images/services page/faq/Jane Smith.webp",
+        "/images/services page/faq/jane smith.webp",
     },
     {
       id: 4,
       name: "Emily Davis",
       designation: "UX Designer",
       image:
-        "/images/services page/faq/Emily Davis.webp",
+        "/images/services page/faq/emily davis.webp",
     },
     {
       id: 5,
       name: "Tyler Durden",
       designation: "Soap Developer",
       image:
-        "/images/services page/faq/Tyler Durden.webp",
+        "/images/services page/faq/tyler durden.webp",
     },
     {
       id: 6,
       name: "Dora",
       designation: "The Presentation Expert",
       image:
-        "/images/services page/faq/Dora Explorer.webp",
+        "/images/services page/faq/dora explorer.webp",
     },
   ],
   list: [

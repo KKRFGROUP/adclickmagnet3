@@ -330,35 +330,35 @@ const faq = {
         name: "Robert Johnson",
         designation: "SEO Strategist",
         image:
-          "/images/services page/faq/Robert Johnson.webp",
+          "/images/services page/faq/robert johnson.webp",
       },
       {
         id: 3,
         name: "Jane Smith",
         designation: "SEO Content Specialist",
         image:
-          "/images/services page/faq/Jane Smith.webp",
+          "/images/services page/faq/jane smith.webp",
       },
       {
         id: 4,
         name: "Emily Davis",
         designation: "Technical SEO Specialist",
         image:
-          "/images/services page/faq/Emily Davis.webp",
+          "/images/services page/faq/emily davis.webp",
       },
       {
         id: 5,
         name: "Tyler Durden",
         designation: "SEO Analytics Expert",
         image:
-          "/images/services page/faq/Tyler Durden.webp",
+          "/images/services page/faq/tyler durden.webp",
       },
       {
         id: 6,
         name: "Dora Explorer",
         designation: "SEO Specialist",
         image:
-          "/images/services page/faq/Dora Explorer.webp",
+          "/images/services page/faq/dora explorer.webp",
       },
     ],
     list: [
