@@ -192,11 +192,7 @@ function ClientVideSec() {
                                 <source src={each.video} type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
-                            {!hasInteracted && (
-                                <div className="absolute top-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">
-                                    Click anywhere to enable sound
-                                </div>
-                            )}
+                            {!hasInteracted && (<div></div>)}
                         </div>
                         <p>{each.name}</p>
                         <p className="w-[80%] mt-2">{each.position}, {each.company}</p>
