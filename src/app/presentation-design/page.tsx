@@ -167,17 +167,17 @@ const section6: {mainpara: string; heading: {text: string; className: string;}[]
       para: "An oldie but a goodie. Our designers are experts in this leading presentation software, ensuring your presentations are visually compelling and easy to build on." 
     },
     {
-      img: "/images/services page/presentation/tools/Google Slides.webp",
+      img: "/images/services page/presentation/tools/google slides.webp",
       name: "Google Slides",
       para: "A versatile staple, Google Slides is another platform our designers know through and through, so they can build you engaging, interactive presentations designs." 
     },
     {
-      img: "/images/services page/presentation/tools/Keynote.webp",
+      img: "/images/services page/presentation/tools/keynote.webp",
       name: "Keynote",
       para: "More of a Keynote connoisseur? Apple’s Keynote is another one of our specialities. We’ll deliver stunning presentations on the double, so you can communicate in style." 
     },
     {
-      img: "/images/services page/presentation/tools/Figma.webp",
+      img: "/images/services page/presentation/tools/figma.webp",
       name: "Figma",
       para: "If you live in Figma, we’re right there with you. Our designers are fluent in Figma and prepared to deliver high-quality presentation designs using this collaborative platform." 
     },
