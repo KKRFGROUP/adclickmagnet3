@@ -86,7 +86,7 @@ const section2 = [
   },
 ]
 
-const section3:{mainpara: string; heading: {text: string; className: string;}[]; para1: string; para2: string; image: string; video: string;} = {
+const section3:{mainpara: string; heading: {text: string; className: string;}[]; para1: string; para2: string; image: string;} = {
   mainpara: "BUILT FOR COMMS, STRATEGY & MARKETING TEAMS",
   heading: [
     {  
