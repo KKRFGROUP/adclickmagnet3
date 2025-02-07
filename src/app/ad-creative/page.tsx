@@ -116,8 +116,8 @@ const section3:{mainpara: string; heading: {text: string; className: string;}[];
 ],
   para1: "The need for compelling ad creative has never been greater. But, when your biggest challenge is getting to market, the best solution is plugging into ACM’s flexible ad design services.",
   para2: "In a world where talent is hard to find, ours has no borders. Our global team of highly skilled ad designers can help with everything from market research and concept development to applying the latest AI, AR and 3D overlays.", 
-  image: "https://res.cloudinary.com/dvhmy6a4u/image/upload/v1734514156/Exceptional_designs_never_fail_to_impress_xumx5a.jpg",
-  video: "/videos/graphic design/services/01.mp4"
+  image: "/images/services page/ad creative/acm website img.webp",
+  //video: "/videos/graphic design/services/01.mp4"
 }
 
 const section4: {mainpara: string; head: string; cards: {logo: React.ReactNode; head: string; para: string;}[]} = {
