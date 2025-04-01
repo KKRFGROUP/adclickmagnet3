@@ -37,28 +37,28 @@ const clientVideos: ClientVideo[] = [
         name: "Chris",
         position: "Founder",
         company: "PGroomer",
-        video: "https://res.cloudinary.com/deepcnbrz/video/upload/v1737116882/Chris_jph9o9.mp4",
+        video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1743535700/Chris_jph9o9_aqjjhz.mp4",
         poster: "https://res.cloudinary.com/dgdgrniut/image/upload/v1736526079/Screenshot_2025-01-10_at_9.34.04_PM_1_ldz4l0.png" // Add your poster URLs
     },
     {
         name: "Elisha",
         position: "Marketing Head",
         company: "RockWood Kitchen",
-        video: "https://res.cloudinary.com/deepcnbrz/video/upload/v1737116774/Elisha_flls56.mp4",
+        video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1743535803/Elisha_flls56_dtk4zl.mp4",
         poster: "https://res.cloudinary.com/dgdgrniut/image/upload/v1736526079/Screenshot_2025-01-10_at_9.34.36_PM_1_fu67qs.png"
     },
     {
         name: "Mark",
         position: "Founder",
         company: "Real Result Sales Training",
-        video: "https://res.cloudinary.com/deepcnbrz/video/upload/v1737116740/Mark_aqnnlg.mp4",
+        video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1743535898/Mark_aqnnlg_izzb9l.mp4",
         poster: "https://res.cloudinary.com/dgdgrniut/image/upload/v1736526081/Screenshot_2025-01-10_at_9.34.46_PM_2_fip862.png"
     },
     {
         name: "Avnish",
         position: "Founder",
         company: "Spartan Tattoos",
-        video: "https://res.cloudinary.com/deepcnbrz/video/upload/v1737116759/Avnish_dux08g.mp4",
+        video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1743535977/Avnish_dux08g_jn0ufw.mp4",
         poster: "https://res.cloudinary.com/dgdgrniut/image/upload/v1736526079/Screenshot_2025-01-10_at_9.34.58_PM_1_mvte8x.png"
     }
 ];

@@ -54,7 +54,7 @@ export const CardSpotlight = ({
               transparent 80%
             )
           `,
-        }}
+        }} 
       >
         {isHovering && (
           <CanvasRevealEffect

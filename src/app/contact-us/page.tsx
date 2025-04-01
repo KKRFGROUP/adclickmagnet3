@@ -108,7 +108,7 @@ export default function ContactUs() {
         <>
             <Navbar mobileOverlayOpen={toggleMenu} isOpen={isOpen}/>
             <div ref={pageMainRef} className="page-main">
-              <div className='tracing-beam'>
+            <div className='tracing-beam'>
                 <TracingBeam>
                     <div className="contact-us-page-main-container"> 
                         <div className="contact-us-page-layout-left">

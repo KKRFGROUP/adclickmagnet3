@@ -43,8 +43,8 @@ const GraphicDesignPage = () => {
           <div className='tracing-beam'>
             <TracingBeam>
               <HeroSection />
-              <DesignProcess />
-              <DigitalServices />
+        
+             <DesignProcess />       <DigitalServices />
               
               <Portfolio />
               <CreativeService />

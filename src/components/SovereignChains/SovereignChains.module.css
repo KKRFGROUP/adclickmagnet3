@@ -1,0 +1,219 @@
+/* components/SovereignChains/SovereignChains.module.css */
+
+.sovereignHeroSection {
+    position: relative;
+    width: 100%;
+    min-height: 120vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem ;
+    overflow: hidden;
+    background-color: #000;
+    color: #fff;
+    cursor: auto; /* Ensure cursor is visible */
+  }
+  
+  /* Video background */
+  .sovereignVideoContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+  }
+  
+  .sovereignBackgroundVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
+    z-index: 0;
+  }
+  
+  /* Content styles */
+  .sovereignContentContainer {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin-bottom: 6rem;
+    width: 100%; /* Ensure full width within constraints */
+    padding: 15px; /* Add padding for smaller screens */
+  }
+  
+  .sovereignBadge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(0, 255, 221, 0.4);
+    border-radius: 30px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    margin-top:1rem;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba(0, 255, 221, 0.2);
+    font-family: 'syne', sans-serif;
+  }
+  
+  .sovereignTitle {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #fff; /* Updated to match #808080 color */
+    line-height: 1.2;
+    font-family: 'syne', sans-serif;
+  }
+  
+  .sovereignDescription {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 4rem;
+    
+    font-family: 'syne', sans-serif;
+  }
+  
+  /* Class for "p.services" text styling */
+  .sovereignServices {
+    font-family: 'syne', sans-serif;
+    font-size: 24px;
+    color: #808080;
+  }
+  
+  .sovereignNewBadge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(0, 255, 221, 0.4);
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 255, 221, 0.2);
+    backdrop-filter: blur(5px);
+  }
+  
+  .sovereignNewLabel {
+    display: inline-block;
+    background-color: rgb(0, 255, 221);
+    color: #000;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-right: 12px;
+    font-family: 'syne', sans-serif;
+  }
+  
+  .sovereignNewText {
+    color: rgb(0, 255, 221);
+    font-size: 14px;
+    font-family: 'syne', sans-serif;
+  }
+  
+  .sovereignNewLink {
+    color: rgb(0, 255, 221);
+    text-decoration: none;
+    cursor: pointer; /* Explicitly set cursor for links */
+  }
+  
+  .sovereignNewLink:hover {
+    text-decoration: underline;
+  }
+  
+  /* Glow effect */
+  .sovereignGlow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    pointer-events: none;
+    transition: transform 0.3s ease-out;
+  }
+  
+  /* Overlay to enhance text readability over video */
+  .sovereignHeroSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    pointer-events: none; /* Ensure overlay doesn't block interactions */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1200px) {
+    .sovereignTitle {
+      font-size: 3rem;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .sovereignHeroSection {
+      padding: 3rem 1.5rem;
+    }
+    
+    .sovereignTitle {
+      font-size: 2.8rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .sovereignHeroSection {
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+    
+    .sovereignTitle {
+      font-size: 2.2rem;
+    }
+    
+    .sovereignDescription {
+      font-size: 1rem;
+      margin-bottom: 3rem;
+    }
+    
+    .sovereignContentContainer {
+      margin-bottom: 4rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .sovereignTitle {
+      font-size: 1.8rem;
+    }
+    
+    .sovereignBadge {
+      font-size: 12px;
+      padding: 0.4rem 1.2rem;
+    }
+    
+    .sovereignNewBadge {
+      padding: 0.4rem 1rem;
+    }
+    
+    .sovereignNewText {
+      font-size: 12px;
+    }
+    
+    .sovereignNewLabel {
+      font-size: 10px;
+      padding: 2px 6px;
+    }
+  }
