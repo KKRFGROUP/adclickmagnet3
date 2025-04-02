@@ -19,7 +19,7 @@
     font-family: 'Syne', sans-serif; /* Changed to Syne font */
 }
   
-/* GIF background */
+/* Video background */
 .backgroundContainer {
     position: absolute;
     top: 0;
@@ -42,16 +42,15 @@
     z-index: 1;
     pointer-events: none;
 }
-  
-.gifBackground {
+
+/* Video background styles */
+.videoBackground {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    object-fit: cover;
     z-index: 0;
     opacity: 1;
     filter: brightness(1.3);
@@ -117,7 +116,7 @@
     box-shadow: 0 4px 25px rgba(255, 255, 255, 0.15);
     transition: all 0.3s ease;
     position: relative;
-    margin-bottom: 30px; /* Added space for error message */
+    margin-bottom: 3rem; /* Added space for error message */
 }
   
 .inputContainer:hover {
@@ -340,6 +339,7 @@
     .newsletterSection {
         margin: 10px; /* Even smaller margins */
         padding: 15px 10px;
+        
     }
     
     .backgroundContainer {
@@ -388,3 +388,4 @@
         font-size: 1.1rem;
     }
 }
+

@@ -3,6 +3,11 @@
 import React, { useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 
+// Import the Cursor component (with dynamic import to avoid SSR issues)
+const Cursor = dynamic(() => import('@/components/Cursor'), {
+  ssr: false,
+});
+
 //import HeroSection from "@/components/homeSections/HeroSection";
 const SovereignChains = dynamic(() => import('@/components/SovereignChains/SovereignChains'), {
   ssr: false, // Optional: Disable SSR for this component
@@ -46,12 +51,13 @@ const Navbar = dynamic(() => import('@/components/Navbar'), {
 });
 //import Navbar from "@/components/Navbar";
 
+// This import was missing - add it back
 import MobileDevicePopup from '@/components/MobileDevicePopup';
 
 export default function Home() {
   const pageMainRef = useRef<HTMLDivElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
-
+  
   const toggleMenu = (arg?: boolean) => {
     setIsOpen(arg ?? !isOpen);
     
@@ -67,6 +73,9 @@ export default function Home() {
   return (
     <>
       <main className="opacity-100">
+        {/* Add the cursor component */}
+        <Cursor />
+        
         {/* Your main content here */}
         <MobileDevicePopup />
         <Navbar mobileOverlayOpen={toggleMenu} isOpen={isOpen}/>

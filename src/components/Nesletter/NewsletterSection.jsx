@@ -57,13 +57,20 @@ const NewsletterSection = () => {
 
   return (
     <section className={styles.newsletterSection}>
-      {/* GIF Background */}
+      {/* Video Background */}
       <div className={styles.backgroundContainer}>
         <div className={styles.backgroundOverlay}></div>
-        <div 
-          className={styles.gifBackground}
-          style={{ backgroundImage: 'url("/images/home/download_edrjgo.gif")' }}
-        ></div>
+        <video 
+          className={styles.videoBackground}
+          src="/images/home/vivek.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+        >
+          Your browser does not support the video tag.
+        </video>
       </div>
       
       {/* Content with headline and input */}
@@ -91,7 +98,7 @@ const NewsletterSection = () => {
               )}
             </div>
             <button 
-              type="submit" 
+              type="submit"
               className={styles.submitButton}
               disabled={isSubmitting}
             >
