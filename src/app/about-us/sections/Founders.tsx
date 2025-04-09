@@ -42,7 +42,7 @@ function Founders() {
                 </div>
                 <div className="founder-img-card items-end">
                     <Image className="founder-img" src="/images/founders/aftab khan.webp" alt="founder" height={600} width={600} />
-                    {/*<Image className="founder-img " src="https://res.cloudinary.com/dgdgrniut/image/upload/v1731761906/Untitled_design_isejv4.png" alt="founder" height={600} width={600} />*/}
+                    {/*<Image className="founder-img " src="https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/WhatsApp%20Image%202025-04-09%20at%2011.54.55%20PM.jpeg" alt="founder" height={600} width={600} />*/}
                     <div className="founder-content-card items-end text-right">
                         <div className="flex items-center justify-end gap-3 mb-3">
                             <h2 className='inspired-us-content-card-head'>Aftab Khan</h2>
