@@ -436,7 +436,7 @@ function WebDev() {
               <Section2 Cards={section2}/>
               <Section3  content={section3} roundb="rounded-t-[50px]" />
               <Section4 content={section4} roundb='rounded-b-[50px]'/>
-              <Section6 content={section6} translate="-60%" responsiveTranslate="-120%"/>
+              <Section6 content={section6} />
               <Cards3dSections translate='-25%' responsiveTraslate="-80%" end="+=1100"  content={section3dCards} className="rounded-[50px]"/>
               <Section7 content={section7}/>
               <Section8 content={section8}/>
@@ -452,7 +452,7 @@ function WebDev() {
               <Section2 Cards={section2}/>
               <Section3  content={section3} roundb="rounded-t-[50px]" />
               <Section4 content={section4} roundb='rounded-b-[50px]'/>
-              <Section6 content={section6}  translate="-60%" responsiveTranslate="-120%"/>
+              <Section6 content={section6}  />
               <Cards3dSections translate='-80%'  end="+=1100" content={section3dCards} className="rounded-[50px]"/>
               <Section7 content={section7}/>
               <Section8 content={section8}/>

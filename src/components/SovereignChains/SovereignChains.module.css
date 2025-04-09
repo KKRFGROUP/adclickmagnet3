@@ -11,7 +11,7 @@
     text-align: center;
     padding: 4rem ;
     overflow: hidden;
-    background-color: #000;
+    background-color: transparent;
     color: #fff;
     cursor: auto; /* Ensure cursor is visible */
   }
@@ -38,6 +38,7 @@
     transform: translateX(-50%) translateY(-50%);
     object-fit: cover;
     z-index: 0;
+    
   }
   
   /* Content styles */

@@ -293,7 +293,7 @@ const section7 = {
       },
       {
         head: "Performance Optimization",
-        para: "Continuously monitor and optimize ad performance for better ROI by analyzing metrics and implementing data-driven changes.",
+        para: "Monitor and optimize ad performance for ROI by analyzing metrics and implementing changes.",
         img: "/images/services page/google ads/3dcards/04.webp"
       },
       {
@@ -503,7 +503,7 @@ function GoogleAds() {
               <Section2 Cards={section2}/>
               <Section3  content={section3} roundb="rounded-t-[50px]" />
               <Section4 content={section4} roundb='rounded-b-[50px] h-[200vh]'/>
-              <Section6 content={section6} translate="-50%" responsiveTranslate='-85%'/>
+              <Section6 content={section6} />
               <DynamicContentCard content={dynamicContentSec}  />
               <Cards3dSections translate='-55%' responsiveTraslate="-90%" end="+=1000" content={section3dCards} className="rounded-[50px]"/>
               <Section7 content={section7}/>
@@ -520,7 +520,7 @@ function GoogleAds() {
               <Section2 Cards={section2}/>
               <Section3  content={section3} roundb="rounded-t-[50px]" />
               <Section4 content={section4} roundb='rounded-b-[50px] h-[200vh]'/>
-              <Section6 content={section6} translate="-50%" responsiveTranslate='-85%'/>
+              <Section6 content={section6} />
               <DynamicContentCard content={dynamicContentSec}/>
               <Cards3dSections translate='-83%' end="+=1000" content={section3dCards} className="rounded-[50px]"/>
               <Section7 content={section7}/>

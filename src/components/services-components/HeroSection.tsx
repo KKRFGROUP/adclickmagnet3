@@ -204,7 +204,7 @@ function HeroSection({heading, preheading, para}: {
       {/* Popup Modal */}
       {isPopupOpen && (
         <div className="fixed inset-0 bg-black flex items-center justify-center pt-[20%] md:pt-[7%] h-[100vh] popup-z-index">
-          <div className="service-page-popup" style={{backgroundImage: "url(/images/form-popup-bg.webp)"}}>
+          <div className="service-page-popup" >
             <div className="bg-blur rounded-2xl flex-col">
             <button
               onClick={() => setIsPopupOpen(false)}

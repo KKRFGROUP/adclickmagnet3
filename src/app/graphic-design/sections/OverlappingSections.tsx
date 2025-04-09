@@ -14,7 +14,7 @@ const demoCaseStudies = [
     time: "2024-11-22T09:00:00Z",
     category: "web development",
     name: "John Doe",
-    image: "/images/blog-img-template.jpg",
+    image: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Graphicdesign/blog-img-template.jpg",
     link: "10-tips-for-writing-clean-code"
   },
   {
@@ -24,7 +24,7 @@ const demoCaseStudies = [
     time: "2024-11-21T12:00:00Z",
     category: "web development",
     name: "Jane Smith",
-    image: "/images/blog-img-template.jpg",
+    image: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Graphicdesign/blog-img-template.jpg",
     link: "the-future-of-responsive-design"
   },
 ]
@@ -129,7 +129,7 @@ const OverlappingSections = () => {
             <Link href="/contact-us"><button className="read-customer-stories mt-[40px]" type="button">Book A Call</button></Link>
           </div>
             <div className="graphic-page-sec2-graphic-card">
-              <Image className="graphic-page-overlap-gif overlapping-cards-img" src="/images/graphic design/graphic design gif2.gif" alt="gif" width={300} height={300} />
+              <Image className="graphic-page-overlap-gif overlapping-cards-img" src="https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Graphicdesign/what%20make%20our.gif" alt="gif" width={300} height={300} />
             </div>
           
         </div>

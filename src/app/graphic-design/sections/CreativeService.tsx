@@ -97,22 +97,22 @@ export default function CreativeService() {
           <h2 className='creative-service-head-second mb-9'>Elegance.</h2>
           <div className="flex justify-between items-start creative-service-card-container">
             <div className="creative-service-card">
-              <Image className='creative-service-card-img' src="/images/graphic design/creative/01.gif" alt="crative image" height={300} width={300} />
+              <Image className='creative-service-card-img' src="https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Graphicdesign/Elegace-1.gif" alt="crative image" height={300} width={300} />
               <p className='creative-service-card-content' >Precision-driven designs that enhance brand identity, focusing on high-quality, impactful visuals crafted for long-term success.</p>
               <hr className='creative-service-card-content-line ' />
             </div>
             <div className="creative-service-card">
-              <video className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl creative-service-card-img" autoPlay preload='auto' loop muted playsInline > <source src="/images/graphic design/creative/02.mp4" /></video>
+              <video className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl creative-service-card-img" autoPlay preload='auto' loop muted playsInline > <source src="https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Graphicdesign/Elegance-2.mp4" /></video>
               <p className='creative-service-card-content' >Delivering sophisticated, creative solutions that blend modern aesthetics with strategic design to effectively communicate your message.              </p>
               <hr className='creative-service-card-content-line' />
             </div>
             <div className="creative-service-card">
-              <Image className='creative-service-card-img' src="/images/graphic design/creative/03.gif" alt="crative image" height={300} width={300} />
+              <Image className='creative-service-card-img' src="https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Graphicdesign/Elegance-3.gif" alt="crative image" height={300} width={300} />
               <p className='creative-service-card-content' >Pushing the boundaries of design, we create innovative and visually compelling graphics that set your brand apart in a competitive market.</p>
               <hr className='creative-service-card-content-line' />
             </div>
             <div className="creative-service-card">
-              <Image className='creative-service-card-img' src="/images/graphic design/creative/04.gif" alt="crative image" height={300} width={300} />
+              <Image className='creative-service-card-img' src="https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Graphicdesign/Elegance-4.gif" alt="crative image" height={300} width={300} />
               <p className='creative-service-card-content' >Focused on results, we design with purpose. Our graphics are built for performance, ensuring maximum engagement and effectiveness.</p>
               <hr className='creative-service-card-content-line' />
             </div>

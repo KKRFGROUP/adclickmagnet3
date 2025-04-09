@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { FaCaretRight,FaCaretLeft } from "react-icons/fa";
 import Link from 'next/link';
 import gsap from 'gsap';
+
 import { AuroraBackground } from '@/components/ui/AuroraBackground';
 
 const demoBlogs = [
@@ -352,6 +353,7 @@ function TopCaseStudies() {
         <div className="latest-blog-main-container">
           <h2 className='blog-page-latest-head' >Latest</h2>
           <div ref={latestBlogTriggerRef} className="flex latest-blog-container">
+          <div className="latest-blog-content-wrapper">
             <div ref={latestBlogSectionRef} className="blog-page-latest-blog-list">
               {paginatedBlogs.map((blog) => (
                 <Link href={`/blogs/${blog.link}`} className='blog-page-latest-blog-card' key={blog.id}>
@@ -395,6 +397,7 @@ function TopCaseStudies() {
                   </Link>
                   ))}
                 </div>
+            </div>
             </div>
           </div>
         </div>

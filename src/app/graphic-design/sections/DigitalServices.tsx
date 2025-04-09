@@ -19,7 +19,7 @@ const items: {
     {
         id: 1,
         imageUrl: 'https://assets.pinterest.com/ext/embed.html?id=17310779813421983',
-        video: "/videos/graphic design/services/01.mp4",
+        video: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Graphicdesign/01.mp4",
         //video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1737809741/57124bc04f286670b7b126d11f2c0055_izib7c.mp4",
         head: "Ad Creative",
         page: "/ad-creative",
@@ -28,7 +28,7 @@ const items: {
       {
         id: 2,
         imageUrl: 'https://assets.pinterest.com/ext/embed.html?id=289074869851146379',
-        video: "/videos/graphic design/services/02.mp4",
+        video: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Graphicdesign/02.mp4",
         //video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1733660227/2fc3296e70d1efba5915a76712eabf87_orx5z9.mp4",
         head: "Branding Services",
         page: "/branding-services",
@@ -37,7 +37,7 @@ const items: {
       {
         id: 3,
         imageUrl: 'https://assets.pinterest.com/ext/embed.html?id=3025924744020565',
-        video: "/videos/graphic design/services/03.mp4",
+        video: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Graphicdesign/03.mp4",
         //video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1733659254/b2c9669c5de9f04909df5e71d2d6eea5_afsbbh.mp4",
         head: "Video Production",
         page: "/video-production",
@@ -46,7 +46,7 @@ const items: {
       {
         id: 4,
         imageUrl: "https://assets.pinterest.com/ext/embed.html?id=448319337916941456" ,
-        video: "/videos/graphic design/services/04.mp4",
+        video: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Graphicdesign/04.mp4",
         //video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1733681971/e7179a38ce0e25b77ac5c3c15b92dccc_tfhsfw.mp4",
         head: "Presentation Design",
         page: "/presentation-design",
@@ -54,7 +54,7 @@ const items: {
       },
       {
         id: 5,
-        imageUrl: "/videos/graphic design/services/05.gif",
+        imageUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Graphicdesign/05.gif",
         head: "Motion Design",
         page: "/motion-design",
         para: "Get on-brand motion graphics designed to enhance your website, digital campaigns, presentations and ads."

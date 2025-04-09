@@ -17,7 +17,7 @@ function Section7({content}: {content: {mainpara: string; heading: {text: string
                 <br />
                 <p className="services-sec7-content-para mb-9">{content.para2}</p>
                 <div className="flex items-center">
-                    <button type="button" className='book-a-call'>Book a call</button>
+                    <button type="button" className='book-a-call'><a href="tel:+17185772718">Book a call</a></button>
                     
                 </div>
             </div>

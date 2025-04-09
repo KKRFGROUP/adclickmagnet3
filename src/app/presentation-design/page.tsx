@@ -60,7 +60,7 @@ const section3:{mainpara: string; heading: {text: string; className: string;}[];
 ],
   para1: "We do your ideas justice with beautifully designed presentations that follow a logical structure, showcase your data in a clear, compelling manner and convey your message in the most persuasive way possible.",
   para2: "Whether you need a pitch deck to persuade VCs, templates for internal communications or slides for a key event, our world-class team of presentation designers will work with you to deliver a stunning final product.", 
-  image: "/images/services page/presentation/presentation sec3 img.webp",
+  image: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Pransentation-design/presentation%20sec3%20img.webp",
   //video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1733681971/e7179a38ce0e25b77ac5c3c15b92dccc_tfhsfw.mp4"
 }
 
@@ -71,27 +71,27 @@ const section4: {mainpara: string; head: string; cards: {head: string; para: str
     {
         head: "Custom PowerPoint design",
         para: "Get unique, visually stunning PowerPoint designs that bring your ideas to life, ensuring your presentations are engaging and persuasive.",
-        img: "/images/services page/presentation/3dcards1/01.webp"
+        img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Pransentation-design/custom-powerpoint%20design.webp"
     },
     {
         head: "Presentation templates",
         para: "Enjoy customizable, on-brand presentation templates that deliver consistent messaging, incorporating existing designs or built from scratch.",
-        img: "/images/services page/presentation/3dcards1/02.webp"
+        img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Pransentation-design/Presentaion%20template.webp"
     },
     {
         head: "Custom & motion graphics",
         para: "Request captivating animations and custom graphics to add flair to your presentation designs and a dynamic layer to your storytelling.",
-        img: "/images/services page/presentation/3dcards1/03.gif"
+        img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Pransentation-design/Custom%20&%20motion%20graphics.gif"
     },
     {
         head: "Data visualization",
         para: "Let us transform your complex data into clear, insightful and delightful visuals, making your information more accessible and impactful.",
-        img: "/images/services page/presentation/3dcards1/04.webp"
+        img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Pransentation-design/Data%20visualization.webp"
     },
     {
         head: "Infographics",
         para: "Add visually striking infographics to your presentation designs to convey information visually and share engagingly digestible messages.",
-        img: "/images/services page/presentation/3dcards1/05.webp"
+        img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Pransentation-design/Infographics.webp"
     },
 ]
 }
@@ -105,27 +105,27 @@ const section5: {mainpara: string; head: string; cards: {head: string; para: str
     {
         head: "Business presentations",
         para: "Get professional, effective presentations tailored to your business, designed to communicate your message clearly and leave a lasting impression on your audience.",
-        img: "/images/services page/presentation/3dcards2/01.webp"
+        img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Pransentation-design/custom-powerpoint%20design.webp"
     },
     {
         head: "Elevator & pitch decks",
         para: "Collaborate on persuasive pitch decks perfect for supporting narratives and sealing partnerships, presented in a compelling format to capture immediate interest.",
-        img: "/images/services page/presentation/3dcards2/02.webp"
+        img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Pransentation-design/levator%20&%20pitch%20decks.webp"
     },
     {
         head: "Sales decks & reports",
         para: "Get sales decks designed to drive decisions and conversions, combining persuasive storytelling with clear data visualizations to communicate your message.",
-        img: "/images/services page/presentation/3dcards2/03.webp"
+        img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Pransentation-design/Sales%20decks%20&%20reports.webp"
     },
     {
         head: "Investor decks & reports",
         para: "Share detailed presentations and reports to engage investors, showcasing your business's value and potential with clear, persuasive narratives and visuals.",
-        img: "/images/services page/presentation/3dcards2/04.webp"
+        img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Pransentation-design/Investor%20decks%20&%20reports.webp"
     },
     {
         head: "Slide decks",
         para: "Get engaging slide decks customized to meet your specific objectives, whether you’re presenting ideas or getting buy-in from an internal or external audience.",
-        img: "/images/services page/presentation/3dcards2/05.webp"
+        img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Pransentation-design/Sales%20decks%20&%20reports.webp"
     },
 ]
 }
@@ -221,42 +221,42 @@ const faq:{mainpara: string; people: {id: number;name: string;designation: strin
       name: "John Doe",
       designation: "Software Engineer",
       image:
-        "/images/services page/faq/john doe.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/john%20doe.webp",
     },
     {
       id: 2,
       name: "Robert Johnson",
       designation: "Product Manager",
       image:
-        "/images/services page/faq/robert johnson.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/robert%20johnson.webp",
     },
     {
       id: 3,
       name: "Jane Smith",
       designation: "Data Scientist",
       image:
-        "/images/services page/faq/jane smith.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/jane%20smith.webp",
     },
     {
       id: 4,
       name: "Emily Davis",
       designation: "UX Designer",
       image:
-        "/images/services page/faq/emily davis.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/emily%20davis.webp",
     },
     {
       id: 5,
       name: "Tyler Durden",
       designation: "Soap Developer",
       image:
-        "/images/services page/faq/tyler durden.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/tyler%20durden.webp",
     },
     {
       id: 6,
       name: "Dora",
-      designation: "The Presentation Expert",
+      designation: "The ad expert",
       image:
-        "/images/services page/faq/dora explorer.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/dora%20explorer.webp",
     },
   ],
   list: [
@@ -342,11 +342,11 @@ function AdCreative() {
               </div>
               <Cards3dSections content={section4} translate='-40%' responsiveTraslate="-90%" end="+=650"/>
               <Cards3dSections content={section5} translate='-40%' responsiveTraslate="-90%" end="+=650" className="rounded-b-[50px]"/>
-              <Section6 content={section6} translate="-50%" responsiveTranslate="-75%"/>
+              <Section6 content={section6}/>
               <Section8 content={section8}/>
               <ContactOurExperts />
               <FAQ  content={faq}/>
-              <Footer />
+              <Footer />x
             </TracingBeam>
           </div>
 
@@ -356,7 +356,7 @@ function AdCreative() {
               <Section3  content={section3} roundb="rounded-t-[50px]" />
               <Cards3dSections content={section4} translate='-83%' end="+=650"/>
               <Cards3dSections content={section5} translate='-83%' end="+=650" className="rounded-b-[50px]"/>
-              <Section6 content={section6} translate="-50%" responsiveTranslate="-75%"/>
+              <Section6 content={section6} />
               <Section8 content={section8}/>
               <ContactOurExperts />
               <FAQ  content={faq}/>

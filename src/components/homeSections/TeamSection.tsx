@@ -15,8 +15,8 @@ export default function TeamSection() {
                 <Link href="/contact-us" className="link-width"><button className="flex justify-center gap-3 items-center lets-connect-button" type="button">Let&apos;s connect <FaArrowRightLong /></button> </Link>
             </div>
             <div className="team-sec-image-container flex justify-end">
-                <Image className="team-sec-image" width={400} height={300} alt="team-img" src="/images/home team/team sec 01.webp" />
-                <Image className="team-sec-image small-img" width={500} height={500} alt="team-img" src="/images/home team/team sec 02.webp" />
+                <Image className="team-sec-image" width={400} height={300} alt="team-img" src="https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/team%20sec%2001.webp" />
+                <Image className="team-sec-image small-img" width={500} height={500} alt="team-img" src="https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/team%20sec%2002.webp" />
 
             </div>
         </div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { CardSpotlight } from "@/components/ui/CardSpotlight";
 
+
 interface Card {
   title: string;
   count: string;

@@ -32,55 +32,54 @@ const heroContent = {
 const section2 = [
   {
     id: 1,
-    imgUrl: "/images/companies/Smokey.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Smokey.webp",
     customer: "Smokey",
     industry: "Restaurant"
   },
   {
       id: 2,
-      imgUrl: "/images/companies/Blinds.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Blinds.webp",
       customer: "Blinds",
       industry: "Interior"
   },
   {
       id: 3,
-      imgUrl: "/images/companies/PGroomer.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/PGroomer.webp",
       customer: "PGroomer",
       industry: "Tools..."
   },
   {
     id: 4,
-    imgUrl: "/images/companies/Silsi.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Silsi.webp",
     customer: "Silsi",
     industry: "Restaurant"
   },
   {
     id: 5,
-    imgUrl: "/images/companies/IQ Home Care.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/IQ%20Home%20Care.webp",
     customer: "IQ Home Care",
     industry: "Cleaning..."
   },
   
   {
       id: 6,
-      imgUrl: "/images/companies/Canada View.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Canada%20View.webp",
       customer: "Canada View",
       industry: "Cleaning..."
   },
   {
       id: 7,
-      imgUrl: "/images/companies/Jen Thomson.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Jen%20Thomson.webp",
       customer: "Jen Thomson",
       industry: "Realtor..."
   },
   {
     id: 8,
-    imgUrl: "/images/companies/DonGon.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/DonGon.webp",
     customer: "DonGon",
     industry: "Restaurant"
   },
 ]
-
 
 
 const section3:{mainpara: string; heading: {text: string; className: string;}[]; para1: string; para2: string; image: string;} = {
@@ -109,7 +108,7 @@ const section3:{mainpara: string; heading: {text: string; className: string;}[];
 ],
   para1: "Brands are fueled by a mixture of emotion and strategy. The true art of branding design is combining both—to stand out from the competition and forge memorable connections.",
   para2: "Our global team of brand experts, who’ve worked at top brand design agencies and well-known brands, will help you grow and elevate your brand. Whether it's a logo or a complete brand development, we help you express what makes your brand unique.", 
-  image: "/images/services page/branding/branding sec3 img.webp"
+  image: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/BrandingServices/Branding-hero.webp"
 }
 
 
@@ -220,42 +219,42 @@ const faq:{mainpara: string; people: {id: number;name: string;designation: strin
       name: "John Doe",
       designation: "Software Engineer",
       image:
-        "/images/services page/faq/john doe.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/john%20doe.webp",
     },
     {
       id: 2,
       name: "Robert Johnson",
       designation: "Product Manager",
       image:
-        "/images/services page/faq/robert johnson.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/robert%20johnson.webp",
     },
     {
       id: 3,
       name: "Jane Smith",
       designation: "Data Scientist",
       image:
-        "/images/services page/faq/jane smith.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/jane%20smith.webp",
     },
     {
       id: 4,
       name: "Emily Davis",
       designation: "UX Designer",
       image:
-        "/images/services page/faq/emily davis.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/emily%20davis.webp",
     },
     {
       id: 5,
       name: "Tyler Durden",
       designation: "Soap Developer",
       image:
-        "/images/services page/faq/tyler durden.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/tyler%20durden.webp",
     },
     {
       id: 6,
       name: "Dora",
-      designation: "The branding expert",
+      designation: "The ad expert",
       image:
-        "/images/services page/faq/dora explorer.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/dora%20explorer.webp",
     },
   ],
   list: [

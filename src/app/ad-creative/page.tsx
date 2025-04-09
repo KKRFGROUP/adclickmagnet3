@@ -37,50 +37,50 @@ const heroContent = {
 const section2 = [
   {
     id: 1,
-    imgUrl: "/images/companies/Smokey.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Smokey.webp",
     customer: "Smokey",
     industry: "Restaurant"
   },
   {
       id: 2,
-      imgUrl: "/images/companies/Blinds.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Blinds.webp",
       customer: "Blinds",
       industry: "Interior"
   },
   {
       id: 3,
-      imgUrl: "/images/companies/PGroomer.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/PGroomer.webp",
       customer: "PGroomer",
       industry: "Tools..."
   },
   {
     id: 4,
-    imgUrl: "/images/companies/Silsi.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Silsi.webp",
     customer: "Silsi",
     industry: "Restaurant"
   },
   {
     id: 5,
-    imgUrl: "/images/companies/IQ Home Care.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/IQ%20Home%20Care.webp",
     customer: "IQ Home Care",
     industry: "Cleaning..."
   },
   
   {
       id: 6,
-      imgUrl: "/images/companies/Canada View.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Canada%20View.webp",
       customer: "Canada View",
       industry: "Cleaning..."
   },
   {
       id: 7,
-      imgUrl: "/images/companies/Jen Thomson.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Jen%20Thomson.webp",
       customer: "Jen Thomson",
       industry: "Realtor..."
   },
   {
     id: 8,
-    imgUrl: "/images/companies/DonGon.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/DonGon.webp",
     customer: "DonGon",
     industry: "Restaurant"
   },
@@ -116,7 +116,7 @@ const section3:{mainpara: string; heading: {text: string; className: string;}[];
 ],
   para1: "The need for compelling ad creative has never been greater. But, when your biggest challenge is getting to market, the best solution is plugging into ACM’s flexible ad design services.",
   para2: "In a world where talent is hard to find, ours has no borders. Our global team of highly skilled ad designers can help with everything from market research and concept development to applying the latest AI, AR and 3D overlays.", 
-  image: "/images/services page/ad creative/acm website img.webp",
+  image: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/acm%20website%20img.webp",
   //video: "/videos/graphic design/services/01.mp4"
 }
 
@@ -315,42 +315,42 @@ const faq:{mainpara: string; people: {id: number;name: string;designation: strin
       name: "John Doe",
       designation: "Software Engineer",
       image:
-        "/images/services page/faq/john doe.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/john%20doe.webp",
     },
     {
       id: 2,
       name: "Robert Johnson",
       designation: "Product Manager",
       image:
-        "/images/services page/faq/robert johnson.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/robert%20johnson.webp",
     },
     {
       id: 3,
       name: "Jane Smith",
       designation: "Data Scientist",
       image:
-        "/images/services page/faq/jane smith.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/jane%20smith.webp",
     },
     {
       id: 4,
       name: "Emily Davis",
       designation: "UX Designer",
       image:
-        "/images/services page/faq/emily davis.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/emily%20davis.webp",
     },
     {
       id: 5,
       name: "Tyler Durden",
       designation: "Soap Developer",
       image:
-        "/images/services page/faq/tyler durden.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/tyler%20durden.webp",
     },
     {
       id: 6,
       name: "Dora",
       designation: "The ad expert",
       image:
-        "/images/services page/faq/dora explorer.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/dora%20explorer.webp",
     },
   ],
   list: [
@@ -429,8 +429,9 @@ function AdCreative() {
             
             <Section2 Cards={section2}/>
             <Section3  content={section3} adCreativideo={true} roundb="rounded-t-[50px]"/>
+            <Section6 content={section6} />
             <Section4 content={section4} roundb="rounded-b-[50px]"/>
-            <Section6 content={section6} translate="-70%" responsiveTranslate='-85%'/>
+            
             <Section7 content={section7}/>
             <Section8 content={section8}/>
             <ContactOurExperts />
@@ -444,8 +445,9 @@ function AdCreative() {
             
             <Section2 Cards={section2}/>
             <Section3  content={section3} roundb="rounded-t-[50px]"/>
+            <Section6 content={section6}/>
             <Section4 content={section4}/>
-            <Section6 content={section6} translate="-70%" responsiveTranslate='-85%'/>
+            
             <Section7 content={section7}/>
             <Section8 content={section8}/>
             <ContactOurExperts />

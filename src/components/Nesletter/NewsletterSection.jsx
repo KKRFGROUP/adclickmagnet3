@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import styles from './NewsletterSection.module.css';
 
@@ -9,6 +9,51 @@ const NewsletterSection = () => {
   const [isValidUrl, setIsValidUrl] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const router = useRouter();
+  const videoRef = useRef(null);
+  
+  // Direct CDN URL to the video
+  const videoUrl = "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/multiversx-header-2k.mp4";
+  
+  useEffect(() => {
+    // Function to ensure video plays and handles iOS-specific issues
+    const ensureVideoPlays = () => {
+      if (videoRef.current) {
+        // For iOS: Apply additional attributes programmatically
+        videoRef.current.playsInline = true;
+        videoRef.current.webkitPlaysInline = true; // For older iOS versions
+        
+        if (videoRef.current.paused) {
+          videoRef.current.play().catch(error => {
+            console.log('Auto-play was prevented:', error);
+          });
+        }
+      }
+    };
+    
+    // Add event listeners for video playback
+    window.addEventListener('focus', ensureVideoPlays);
+    window.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') {
+        ensureVideoPlays();
+      }
+    });
+    
+    // Handle iOS touch events to trigger play
+    const handleTouch = () => {
+      ensureVideoPlays();
+    };
+    window.addEventListener('touchstart', handleTouch);
+    
+    // Initial play attempt
+    ensureVideoPlays();
+    
+    // Cleanup
+    return () => {
+      window.removeEventListener('focus', ensureVideoPlays);
+      window.removeEventListener('visibilitychange', ensureVideoPlays);
+      window.removeEventListener('touchstart', handleTouch);
+    };
+  }, []);
 
   // Validate URL format
   const validateUrl = (value) => {
@@ -61,14 +106,19 @@ const NewsletterSection = () => {
       <div className={styles.backgroundContainer}>
         <div className={styles.backgroundOverlay}></div>
         <video 
+          ref={videoRef}
           className={styles.videoBackground}
-          src="/images/home/vivek.mp4"
           autoPlay
-          loop
           muted
+          loop
           playsInline
+          webkit-playsinline="true"
+          controls={false}
+          disablePictureInPicture
+          disableRemotePlayback
           preload="auto"
         >
+          <source src={videoUrl} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>

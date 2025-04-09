@@ -505,7 +505,7 @@ function MetaAds() {
               <Section2 Cards={section2}/>
               <Section3  content={section3} roundb="rounded-t-[50px]" />
               <Section4 content={section4} roundb='rounded-b-[50px] h-[200vh]'/>
-              <Section6 content={section6} translate="-65%" responsiveTranslate="-100%"/>
+              <Section6 content={section6} />
               <DynamicContentCard content={dynamicContentSec}/>
               <Cards3dSections translate='-50%' end="+=500" content={section3dCards} className="rounded-[50px]"/>
               <Section7 content={section7}/>
@@ -522,7 +522,7 @@ function MetaAds() {
               <Section2 Cards={section2}/>
               <Section3  content={section3} roundb="rounded-t-[50px]" />
               <Section4 content={section4} roundb='rounded-b-[50px] h-[200vh]'/>
-              <Section6 content={section6} translate="-60%" responsiveTranslate="-95%"/>
+              <Section6 content={section6} />
               <DynamicContentCard content={dynamicContentSec}/>
               <Cards3dSections translate='-85%' end="+=900" content={section3dCards} className="rounded-[50px]"/>
               <Section7 content={section7}/>

@@ -24,132 +24,132 @@ const words = [
 const bestBrand = [
   {
     name: "EBOWLA",
-    img: "/images/brands/EBOWLA.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/EBOWLA.webp"
   },
   {
     name: "Canada View",
-    img: "/images/brands/Canada View.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Canada%20View.webp"
   },
   {
     name: "Jen Thomson",
-    img: "/images/brands/Jen Thomson.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Jen%20Thomson.webp"
   },
   {
     name: "Sisli",
-    img: "/images/brands/Sisli.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Sisli.webp"
   },
   {
     name: "PGroomer",
-    img: "/images/brands/PGroomer.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/PGroomer.webp"
   },
   {
     name: "Smokey",
-    img: "/images/brands/Smokey.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Smokey.webp"
   },
   {
     name: "DonJon",
-    img: "/images/brands/DonJon.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/DonJon.webp"
   },
   {
     name: "IQ Home Care",
-    img: "/images/brands/IQ Home Care.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/IQ%20Home%20Care.webp"
   },
   {
     name: "Blends",
-    img: "/images/brands/Blends.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Blends.webp"
   },
   {
     name: "Dekalash",
-    img: "/images/brands/Dekalash.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Dekalash.webp"
   },
   {
     name: "HeartSaver-NY",
-    img: "/images/brands/HeartSaver-NY.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/HeartSaver-NY.webp"
   },
   {
     name: "Wiseman Hoffs",
-    img: "/images/brands/Wiseman Hoffs.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Wiseman%20Hoffs.webp"
   },
   {
     name: "FSilveira",
-    img: "/images/brands/FSilveira.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/FSilveira.webp"
   },
 
   {
     name: "Spartans",
-    img: "/images/brands/Spartans.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Spartans.webp"
   },
   {
     name: "RockWood Kitchens",
-    img: "/images/brands/RockWood Kitchens.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/RockWood%20Kitchens.webp"
   },
   {
     name: "Recover Ease",
-    img: "/images/brands/Recover Ease.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Recover%20Ease.webp"
   },
   {
     name: "Roof Today",
-    img: "/images/brands/Roof Today.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Roof%20Today.webp"
   },
   {
     name: "Count Down Fitness",
-    img: "/images/brands/Count Down Fitness.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Count%20Down%20Fitness.webp"
   },
   {
     name: "Tapis Rugs & Carpet",
-    img: "/images/brands/Tapis Rugs & Carpet.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Tapis%20Rugs%20&%20Carpet.webp"
   },
   {
     name: "Devilered 2 Choices",
-    img: "/images/brands/Devilered 2 Choices.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Devilered%202%20Choices.webp"
   },
   {
     name: "BON TON",
-    img: "/images/brands/BON TON.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/BON%20TON.webp"
   },
   {
     name: "Real Results Sales",
-    img: "/images/brands/Real Results Sales.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Real%20Results%20Sales.webp"
   },
   {
     name: "Sakh Public School",
-    img: "/images/brands/Sakh Public School.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Sakh%20Public%20School.webp"
   },
   {
     name: "Barista",
-    img: "/images/brands/Barista.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Barista.webp"
   },
   {
     name: "Controller Chaos",
-    img: "/images/brands/Controller Chaos.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Controller%20Chaos.webp"
   },
   {
     name: "BI Soni Clean",
-    img: "/images/brands/BI Soni Clean.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/BI%20Soni%20Clean.webp"
   },
   {
     name: "Privacon",
-    img: "/images/brands/Privacon.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Privacon.webp"
   },
   {
     name: "Lexington Podiatry",
-    img: "/images/brands/Lexington Podiatry.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Lexington%20Podiatry.webp"
   },
   {
     name: "Quick Check Tech",
-    img: "/images/brands/Quick Check Tech.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Quick%20Check%20Tech.webp"
   },
   {
     name: "Modern Podiatrist",
-    img: "/images/brands/Modern Podiatrist.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Modern%20Podiatrist.webp"
   },
   {
     name: "Decorento",
-    img: "/images/brands/Decorento.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Decorento.webp"
   },
   {
     name: "Mystic Journeys",
-    img: "/images/brands/Mystic Journeys.webp"
+    img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Mystic%20Journeys.webp"
   },
 
 ]

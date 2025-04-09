@@ -84,7 +84,7 @@ const Logo = memo(() => (
         <Image 
             priority 
             className="mobile-view-navbar-logo" 
-            src="/images/logos/mobile-navbar-logo.webp"
+            src="https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Graphicdesign/mobile-navbar-logo.webp"
             alt="ACM Logo" 
             height={100} 
             width={150}

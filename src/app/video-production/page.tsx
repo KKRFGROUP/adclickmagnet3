@@ -31,50 +31,50 @@ const heroContent = {
 const section2 = [
   {
     id: 1,
-    imgUrl: "/images/companies/Smokey.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Smokey.webp",
     customer: "Smokey",
     industry: "Restaurant"
   },
   {
       id: 2,
-      imgUrl: "/images/companies/Blinds.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Blinds.webp",
       customer: "Blinds",
       industry: "Interior"
   },
   {
       id: 3,
-      imgUrl: "/images/companies/PGroomer.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/PGroomer.webp",
       customer: "PGroomer",
       industry: "Tools..."
   },
   {
     id: 4,
-    imgUrl: "/images/companies/Silsi.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Silsi.webp",
     customer: "Silsi",
     industry: "Restaurant"
   },
   {
     id: 5,
-    imgUrl: "/images/companies/IQ Home Care.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/IQ%20Home%20Care.webp",
     customer: "IQ Home Care",
     industry: "Cleaning..."
   },
   
   {
       id: 6,
-      imgUrl: "/images/companies/Canada View.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Canada%20View.webp",
       customer: "Canada View",
       industry: "Cleaning..."
   },
   {
       id: 7,
-      imgUrl: "/images/companies/Jen Thomson.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Jen%20Thomson.webp",
       customer: "Jen Thomson",
       industry: "Realtor..."
   },
   {
     id: 8,
-    imgUrl: "/images/companies/DonGon.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/DonGon.webp",
     customer: "DonGon",
     industry: "Restaurant"
   },
@@ -99,7 +99,7 @@ const section3a = {
   para2: 
     "From brand videos that build awareness to performance-driven videos that boost conversions, we offer a cost-effective, hassle-free approach with speed and flexibility through our subscription model.",
   image: 
-    "/images/services page/Video Production/video production sec3a.gif",
+    "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/video-production/video%20production%20sec3a.gif",
 };
 
 
@@ -138,7 +138,7 @@ const section3b:{mainpara: string; heading: {text: string; className: string;}[]
   para1: "Videos like brand films, explainers, demos, testimonials, case studies, and manifestos are perfect for positioning and elevating your brand.",
   para2: "1. Collaborate with video experts\n2. Shoot or repurpose existing footage\n3. Amplify with motion, animation and 3D\n4. Use our global, remote network with minimal overheads", 
   image: "https://res.cloudinary.com/deepcnbrz/image/upload/v1730822005/Screenshot_2024-11-05_212211_hhbsos.png",
-  video: "/images/services page/Video Production/video production sec3b vdo.mp4",
+  video: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/video-production/video%20production%20sec3b%20vdo.mp4",
 }
 const section3c:{mainpara: string; heading: {text: string; className: string;}[]; para1: string; para2: string; image: string; video?: string;} = {
   mainpara: "SOCIAL VIDEO FOR ENGAGEMENT",
@@ -171,7 +171,7 @@ const section3c:{mainpara: string; heading: {text: string; className: string;}[]
   para1: "Establish a custom video content strategy and production cycle to create fresh video content that is geared to boost organic awareness and engagement.",
   para2: "1. Collaborate with video experts\n2. Shoot or repurpose existing footage\n3. Amplify with motion, animation and 3D\n4. Use our global, remote network with minimal overheads", 
   image: "https://res.cloudinary.com/deepcnbrz/image/upload/v1730822005/Screenshot_2024-11-05_212211_hhbsos.png",
-  video: "/images/services page/Video Production/video production sec3c vdo.mp4",
+  video: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/video-production/video%20production%20sec3c%20vdo.mp4",
 }
 
 
@@ -182,17 +182,17 @@ const section3dCards: {mainpara: string; head: string; cards: {head: string; par
     {
         head: "Top 1% of global creative talent",
         para: "We're not limited by borders. Top-tier talent from diverse backgrounds equals consistently high-quality work for your brand.",
-        img: "/images/services page/video production/3dcards/01.gif"
+        img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/video-production/01.gif"
     },
     {
         head: "Ultra-fast turnaround times",
         para: "With dedicated proejct managers, collaboratibe online tools and expert use of AI, projects can be completed in as little as 40, 24, or even 12 hours.",
-        img: "/images/services page/video production/3dcards/02.gif"
+        img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/video-production/02.gif"
     },
     {
         head: "Enhanced by AI",
         para: "Our creative talent is trained and certified on the latest AI tools. You get the best of both worlds: top talent enhanced by AI efficiency. The savings incurred from AI directly translate into lower costs for you.",
-        video: "/images/services page/video production/3dcards/03.mp4"
+        video: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/video-production/03.mp4"
     },
 ]
 }
@@ -273,42 +273,42 @@ const faq:{mainpara: string; people: {id: number;name: string;designation: strin
       name: "John Doe",
       designation: "Software Engineer",
       image:
-        "/images/services page/faq/john doe.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/john%20doe.webp",
     },
     {
       id: 2,
       name: "Robert Johnson",
       designation: "Product Manager",
       image:
-        "/images/services page/faq/robert johnson.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/robert%20johnson.webp",
     },
     {
       id: 3,
       name: "Jane Smith",
       designation: "Data Scientist",
       image:
-        "/images/services page/faq/jane smith.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/jane%20smith.webp",
     },
     {
       id: 4,
       name: "Emily Davis",
       designation: "UX Designer",
       image:
-        "/images/services page/faq/emily davis.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/emily%20davis.webp",
     },
     {
       id: 5,
       name: "Tyler Durden",
       designation: "Soap Developer",
       image:
-        "/images/services page/faq/tyler durden.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/tyler%20durden.webp",
     },
     {
       id: 6,
       name: "Dora",
-      designation: "The Video Producer",
+      designation: "The ad expert",
       image:
-        "/images/services page/faq/dora explorer.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/dora%20explorer.webp",
     },
   ],
   list: [

@@ -47,4 +47,12 @@ module.exports = {
         },
       ], 
     },
+    experimental: {
+      serverComponentsExternalPackages: ['@aws-sdk/client-s3', '@aws-sdk/s3-request-presigner']
+    },
+    
+    // Include in your existing config if you also want to use public images
+    images: {
+      domains: ['adclickmagnetimage.blr1.cdn.digitaloceanspaces.com'],
+    },
   }

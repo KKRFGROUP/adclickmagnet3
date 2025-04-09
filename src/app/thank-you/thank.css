@@ -1,5 +1,6 @@
 .thankyou-main-container {
     background-size: cover;
+    background-image: linear-gradient(120deg, #E2CBFF00, #393BB250, #E2CBFF );
     height: 100vh;
 }
 
@@ -29,6 +30,12 @@
     font-family: "Unbounded";
     margin-bottom: 30px;
     color:#fff;
+}
+.thankyou-btn {
+    width: 130px !important;
+    margin: 0 auto !important;
+    display: block !important;
+    text-align: center !important;
 }
 
 @media (max-width: 768px) {

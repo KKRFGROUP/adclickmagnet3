@@ -107,7 +107,7 @@ function Cards3dSections({
     <div ref={containerRef}>
       <div
         ref={card3dTriggerRef}
-        className={`services-secs-main-container overflow-hidden flex-col justify-center items-center text-center services-3dcard-main-container ${className}`}
+        className={`services-secs-main-container1 overflow-hidden flex-col justify-center items-center text-center services-3dcard-main-container ${className}`}
       >
         <p className="services-secs-para">{content.mainpara}</p>
         <h2 className="services-secs-head">{content.head}</h2>

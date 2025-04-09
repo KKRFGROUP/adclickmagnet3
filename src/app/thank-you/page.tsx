@@ -27,7 +27,7 @@ function ThankYou() {
     <>
         <Navbar mobileOverlayOpen={toggleMenu} isOpen={isOpen}/>
           <div ref={pageMainRef} className="page-main">
-              <div className="thankyou-main-container" style={{backgroundImage: "url(/images/form-popup-bg.webp)"}}>
+              <div className="thankyou-main-container" >
                   <div className="thanks-bg-blur">
                       <Image src="/images/logos/white logo.webp" alt="" height={300} width={300} />
                       <h1 className="thankyou-head">Thank you for Contacting us!</h1>

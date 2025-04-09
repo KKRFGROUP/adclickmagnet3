@@ -469,7 +469,7 @@ function LinkedInAds() {
               <Section2 Cards={section2}/>
               <Section3  content={section3} roundb="rounded-t-[50px]" />
               <Section4 content={section4} roundb='rounded-b-[50px] h-[200vh]'/>
-              <Section6 content={section6} translate="-55%" responsiveTranslate="-95%"/>
+              <Section6 content={section6} />
               <DynamicContentCard content={dynamicContentSec}/>
               <Cards3dSections translate='-53%' responsiveTraslate="-90%" end="+=600" content={section3dCards} className="rounded-[50px]"/>
               
@@ -487,7 +487,7 @@ function LinkedInAds() {
               <Section2 Cards={section2}/>
               <Section3  content={section3} roundb="rounded-t-[50px]" />
               <Section4 content={section4} roundb='rounded-b-[50px] h-[200vh]'/>
-              <Section6 content={section6} translate="-65%" responsiveTranslate="-85%"/>
+              <Section6 content={section6} />
               <DynamicContentCard content={dynamicContentSec}/>
               <Cards3dSections translate='-85%' end="+=1000" content={section3dCards} className="rounded-[50px]"/>
               

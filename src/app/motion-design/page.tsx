@@ -64,7 +64,7 @@ const section3:{mainpara: string; heading: {text: string; className: string;}[];
   para1: "Goodbye, static creativity. Hello, motion! Our motion design brings dynamic graphics and animations to every touchpoint, ensuring attention-grabbing content that boosts conversions.",
   para2: "Our expert motion designers collaborate closely with you, crafting custom creative from concept to final product. We ensure engaging experiences that captivate your audience.", 
   image: "https://res.cloudinary.com/deepcnbrz/image/upload/v1730822005/Screenshot_2024-11-05_212211_hhbsos.png",
-  video: "/images/services page/motion design/motion sec3 vdo.mp4"
+  video: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/video-production/motion%20sec3%20vdo.mp4"
 }
 
 
@@ -179,42 +179,42 @@ const faq:{mainpara: string; people: {id: number;name: string;designation: strin
       name: "John Doe",
       designation: "Software Engineer",
       image:
-        "/images/services page/faq/john doe.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/john%20doe.webp",
     },
     {
       id: 2,
       name: "Robert Johnson",
       designation: "Product Manager",
       image:
-        "/images/services page/faq/robert johnson.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/robert%20johnson.webp",
     },
     {
       id: 3,
       name: "Jane Smith",
       designation: "Data Scientist",
       image:
-        "/images/services page/faq/jane smith.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/jane%20smith.webp",
     },
     {
       id: 4,
       name: "Emily Davis",
       designation: "UX Designer",
       image:
-        "/images/services page/faq/emily davis.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/emily%20davis.webp",
     },
     {
       id: 5,
       name: "Tyler Durden",
       designation: "Soap Developer",
       image:
-        "/images/services page/faq/tyler durden.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/tyler%20durden.webp",
     },
     {
       id: 6,
       name: "Dora",
-      designation: "The Motion Design Expert",
+      designation: "The ad expert",
       image:
-        "/images/services page/faq/dora explorer.webp",
+        "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/dora%20explorer.webp",
     },
   ],
   list: [
