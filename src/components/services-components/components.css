@@ -1711,8 +1711,8 @@ video::-webkit-media-controls {
     object-fit: contain !important;
     object-position: center;
     border-radius: 0.75rem;
-    width: 100% !important;
-    height: 100% !important;
+    width: 40% !important;
+    height: 40% !important;
     max-height: 100%;
     max-width: 100%;
     image-rendering: auto;
@@ -1764,4 +1764,57 @@ video::-webkit-media-controls {
   }
 
 
+  .services-secs-main-container {
+    padding: 70px;
+    background-color: #E2E2E2;
+    color: #000;
+  }
   
+  @media screen and (min-width: 700px) and (max-width: 1300px) {
+    .services-secs-main-container {
+      overflow: hidden; /* Hide main container scrollbar */
+    }
+    
+    .services-secs-main-container .mobile-card-3d-container {
+      width: max-content; /* Allow container to expand as needed */
+      gap: 20px; /* Add gap between cards */
+      overflow-x: auto; /* Enable scrolling on inner container */
+      scrollbar-width: none; /* Hide scrollbar for Firefox */
+      -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+      padding-bottom: 15px; /* Space for invisible scrollbar */
+    }
+    
+    /* Hide scrollbar for Webkit browsers */
+    .services-secs-main-container .mobile-card-3d-container::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .services-secs-main-container .CardContainer,
+    .services-secs-main-container .inter-var {
+      min-width: 320px !important; /* Force minimum width */
+      width: 320px !important; /* Set fixed width */
+      margin-right: 15px;
+    }
+    
+    /* Add padding at the end to ensure the last card is fully visible */
+    .services-secs-main-container .mobile-card-3d-container::after {
+      content: "";
+      display: block;
+      min-width: 60px; /* Increased to ensure last card is fully visible */
+    }
+    
+    /* Fix text overflow issues */
+    .services-secs-main-container .mobile-card-3d-head,
+    .services-secs-main-container .mobile-card-3d-para {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+      word-wrap: break-word;
+    }
+    
+    /* Ensure card body properly contains text */
+    .services-secs-main-container .mobile-card-3d {
+      overflow: hidden;
+      height: auto;
+    }
+  }

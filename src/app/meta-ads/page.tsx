@@ -43,50 +43,50 @@ const heroContent = {
 const section2 = [
   {
     id: 1,
-    imgUrl: "/images/companies/Smokey.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Smokey.webp",
     customer: "Smokey",
     industry: "Restaurant"
   },
   {
       id: 2,
-      imgUrl: "/images/companies/Blinds.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Blinds.webp",
       customer: "Blinds",
       industry: "Interior"
   },
   {
       id: 3,
-      imgUrl: "/images/companies/PGroomer.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/PGroomer.webp",
       customer: "PGroomer",
       industry: "Tools..."
   },
   {
     id: 4,
-    imgUrl: "/images/companies/Silsi.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Silsi.webp",
     customer: "Silsi",
     industry: "Restaurant"
   },
   {
     id: 5,
-    imgUrl: "/images/companies/IQ Home Care.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/IQ%20Home%20Care.webp",
     customer: "IQ Home Care",
     industry: "Cleaning..."
   },
   
   {
       id: 6,
-      imgUrl: "/images/companies/Canada View.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Canada%20View.webp",
       customer: "Canada View",
       industry: "Cleaning..."
   },
   {
       id: 7,
-      imgUrl: "/images/companies/Jen Thomson.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Jen%20Thomson.webp",
       customer: "Jen Thomson",
       industry: "Realtor..."
   },
   {
     id: 8,
-    imgUrl: "/images/companies/DonGon.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/DonGon.webp",
     customer: "DonGon",
     industry: "Restaurant"
   },
@@ -123,7 +123,7 @@ const section3 = {
     ],
     para1: "In today’s social media-driven world, Meta Ads (Facebook & Instagram) offer a powerful way to boost your brand's presence, engage with potential customers, and drive significant business growth. Our customized Meta Ads services ensure that your campaigns reach the right audience for maximum engagement and ROI.",
     para2: "Our team of Meta Ads specialists offers a full range of services, from audience targeting and creative ad design to performance tracking and continuous optimization, ensuring that your ad spend is impactful and efficient for optimal results.",
-    image: "/images/services page/meta ads/meta sec3 img.webp"
+    image: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/meta/meta%20sec3%20img.webp"
 };
 
 
@@ -280,32 +280,32 @@ const section3dCards = {
       {
         head: "Campaign Strategy",
         para: "Develop customized Meta Ads strategies tailored to your business goals, ensuring maximum reach and conversions on Facebook and Instagram.",
-        img: "/images/services page/meta ads/3dcards/01.webp"
+        img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/meta/01.webp"
       },
       {
         head: "Audience Research",
         para: "Leverage in-depth audience research to target the right users on Facebook and Instagram, maximizing the efficiency of your ad spend.",
-        img: "/images/services page/meta ads/3dcards/02.webp"
+        img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/meta/02.webp"
       },
       {
         head: "Ad Copy & Creative Design",
         para: "Create engaging ad copies and visually appealing creatives that resonate with your target audience, boosting interaction and engagement.",
-        img: "/images/services page/meta ads/3dcards/03.webp"
+        img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/meta/03.webp"
       },
       {
         head: "Performance Optimization",
         para: "Continuously monitor and optimize Meta Ads performance by analyzing metrics and implementing data-driven changes to enhance ROI.",
-        img: "/images/services page/meta ads/3dcards/04.webp"
+        img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/meta/04.webp"
       },
       {
         head: "Remarketing Campaigns",
         para: "Re-engage users who have interacted with your ads or website with strategic remarketing campaigns, driving more conversions.",
-        img: "/images/services page/meta ads/3dcards/05.webp"
+        img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/meta/05.webp"
       },
       {
         head: "Analytics & Reporting",
         para: "Receive detailed reports on Meta Ads performance, helping you understand results and make informed decisions for further improvements.",
-        img: "/images/services page/meta ads/3dcards/06.webp"
+        img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/meta/06.webp"
       },
     ]
 };
@@ -385,44 +385,44 @@ const faq = {
       {
         id: 1,
         name: "John Doe",
-        designation: "Senior Meta Ads Specialist",
+        designation: "Software Engineer",
         image:
-          "/images/services page/faq/john doe.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/john%20doe.webp",
       },
       {
         id: 2,
         name: "Robert Johnson",
-        designation: "Meta Ads Campaign Manager",
+        designation: "Product Manager",
         image:
-          "/images/services page/faq/robert johnson.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/robert%20johnson.webp",
       },
       {
         id: 3,
         name: "Jane Smith",
-        designation: "PPC Strategist",
+        designation: "Data Scientist",
         image:
-          "/images/services page/faq/jane smith.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/jane%20smith.webp",
       },
       {
         id: 4,
         name: "Emily Davis",
-        designation: "Meta Ads Analyst",
+        designation: "UX Designer",
         image:
-          "/images/services page/faq/emily davis.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/emily%20davis.webp",
       },
       {
         id: 5,
         name: "Tyler Durden",
-        designation: "Paid Search Specialist",
+        designation: "Soap Developer",
         image:
-          "/images/services page/faq/tyler durden.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/tyler%20durden.webp",
       },
       {
         id: 6,
         name: "Dora",
-        designation: "Conversion Optimization Expert",
+        designation: "The ad expert",
         image:
-          "/images/services page/faq/dora explorer.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/dora%20explorer.webp",
       },
     ],
     list: [

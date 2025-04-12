@@ -1,15 +1,14 @@
 "use client"
 
-import React, { useRef, useState,useEffect, useCallback } from 'react'
+import React, { useRef, useState, useEffect, useCallback } from 'react'
 import { TypewriterEffect } from '../ui/TypewriterEffect'
-
 
 interface ClientVideo {
     name: string;
     position: string;
     company: string;
     video: string;
-    poster: string; // Add poster URLs to your clientVideos array
+    poster: string;
 }
 
 const words = [
@@ -38,7 +37,7 @@ const clientVideos: ClientVideo[] = [
         position: "Founder",
         company: "PGroomer",
         video: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Graphicdesign/0408(2).mp4",
-        poster: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Graphicdesign/0408(2)-Cover.jpg" // Add your poster URLs
+        poster: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Graphicdesign/0408(2)-Cover.jpg"
     },
     {
         name: "Elisha",
@@ -63,13 +62,18 @@ const clientVideos: ClientVideo[] = [
     }
 ];
 
-
 function ClientVideSec() {
     const videoRefs = useRef<Map<number, HTMLVideoElement>>(new Map());
     const [activeVideoIndex, setActiveVideoIndex] = useState<number | null>(null);
     const [hasInteracted, setHasInteracted] = useState(false);
+    const [isIOS, setIsIOS] = useState(false);
     const playPromiseRef = useRef<Map<number, Promise<void>>>(new Map());
 
+    // Detect iOS device
+    useEffect(() => {
+        const iosCheck = /iPad|iPhone|iPod/.test(navigator.userAgent);
+        setIsIOS(iosCheck);
+    }, []);
     
     // Handle initial user interaction
     useEffect(() => {
@@ -88,12 +92,24 @@ function ClientVideSec() {
         };
     }, []);
 
-    // Initialize video elements
+    // Initialize video elements and preload posters for iOS
     const setVideoRef = useCallback((index: number, element: HTMLVideoElement | null) => {
         if (element) {
             videoRefs.current.set(index, element);
+            
+            // Special handling for iOS
+            if (isIOS) {
+                // Ensure poster is loaded
+                const img = new Image();
+                img.src = clientVideos[index].poster;
+                
+                // Add click handler directly on video for iOS
+                element.addEventListener('click', () => {
+                    handleVideoClick(index);
+                });
+            }
         }
-    }, []);
+    }, [isIOS]);
 
     const stopVideo = useCallback(async (index: number) => {
         const video = videoRefs.current.get(index);
@@ -118,28 +134,27 @@ function ClientVideSec() {
         playPromiseRef.current.delete(index);
     }, []);
 
-    const handleMouseEnter = useCallback(async (index: number) => {
-        if (!hasInteracted) return;
-
+    const playVideo = useCallback(async (index: number) => {
         const video = videoRefs.current.get(index);
         if (!video) return;
 
-        // Stop any currently playing video
-        if (activeVideoIndex !== null && activeVideoIndex !== index) {
-            await stopVideo(activeVideoIndex);
-        }
-
         try {
-            video.muted = false;
+            // For iOS, always start with muted playback then unmute
+            video.muted = isIOS;
             video.currentTime = 0;
             const playPromise = video.play();
             playPromiseRef.current.set(index, playPromise);
             
-            // Wait for the play operation to complete
             await playPromise;
+            
+            // After successful play, unmute if needed
+            if (isIOS && index === activeVideoIndex) {
+                video.muted = false;
+            }
+            
             setActiveVideoIndex(index);
         } catch (error) {
-            console.warn('Unmuted playback failed, trying muted:', error);
+            console.warn('Playback failed, trying muted:', error);
             try {
                 video.muted = true;
                 const mutedPlayPromise = video.play();
@@ -150,17 +165,52 @@ function ClientVideSec() {
                 playPromiseRef.current.delete(index);
             }
         }
-    }, [activeVideoIndex, hasInteracted, stopVideo]);
+    }, [activeVideoIndex, isIOS]);
+
+    const handleVideoClick = useCallback((index: number) => {
+        if (!hasInteracted) return;
+        
+        const video = videoRefs.current.get(index);
+        if (!video) return;
+        
+        // For iOS, we need to explicitly handle clicks
+        if (isIOS) {
+            if (video.paused) {
+                playVideo(index);
+            } else {
+                stopVideo(index);
+            }
+        }
+    }, [hasInteracted, isIOS, playVideo, stopVideo]);
+
+    const handleMouseEnter = useCallback(async (index: number) => {
+        if (!hasInteracted) return;
+
+        // For iOS, we rely on click events instead of hover
+        if (isIOS) return;
+        
+        // Stop any currently playing video
+        if (activeVideoIndex !== null && activeVideoIndex !== index) {
+            await stopVideo(activeVideoIndex);
+        }
+        
+        playVideo(index);
+    }, [activeVideoIndex, hasInteracted, isIOS, playVideo, stopVideo]);
 
     const handleMouseLeave = useCallback(async (index: number) => {
+        // For iOS, we rely on click events instead of hover
+        if (isIOS) return;
+        
         await stopVideo(index);
         setActiveVideoIndex(null);
-    }, [stopVideo]);
+    }, [isIOS, stopVideo]);
 
     // Cleanup on unmount
     useEffect(() => {
+        const currentVideoRefs = videoRefs.current;
+        
         return () => {
-            videoRefs.current.forEach((video, index) => {
+            currentVideoRefs.forEach((_, index) => {
                 stopVideo(index);
             });
         };
@@ -179,12 +229,13 @@ function ClientVideSec() {
                             className="client-video-card-div relative"
                             onMouseEnter={() => handleMouseEnter(index)}
                             onMouseLeave={() => handleMouseLeave(index)}
+                            onClick={() => handleVideoClick(index)}
                         >
                             <video 
                                 ref={(el) => setVideoRef(index, el)}
                                 className={`client-video-card-video ${index % 2 === 1 ? "mt-9" : ""}`}
-                                //poster={each.poster}
-                                preload="metadata"
+                                poster={each.poster}
+                                preload={isIOS ? "none" : "metadata"}
                                 loop
                                 playsInline
                                 muted={activeVideoIndex !== index}

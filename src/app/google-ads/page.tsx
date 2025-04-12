@@ -42,55 +42,54 @@ const heroContent = {
 const section2 = [
   {
     id: 1,
-    imgUrl: "/images/companies/Smokey.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Smokey.webp",
     customer: "Smokey",
     industry: "Restaurant"
   },
   {
       id: 2,
-      imgUrl: "/images/companies/Blinds.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Blinds.webp",
       customer: "Blinds",
       industry: "Interior"
   },
   {
       id: 3,
-      imgUrl: "/images/companies/PGroomer.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/PGroomer.webp",
       customer: "PGroomer",
       industry: "Tools..."
   },
   {
     id: 4,
-    imgUrl: "/images/companies/Silsi.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Silsi.webp",
     customer: "Silsi",
     industry: "Restaurant"
   },
   {
     id: 5,
-    imgUrl: "/images/companies/IQ Home Care.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/IQ%20Home%20Care.webp",
     customer: "IQ Home Care",
     industry: "Cleaning..."
   },
   
   {
       id: 6,
-      imgUrl: "/images/companies/Canada View.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Canada%20View.webp",
       customer: "Canada View",
       industry: "Cleaning..."
   },
   {
       id: 7,
-      imgUrl: "/images/companies/Jen Thomson.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Jen%20Thomson.webp",
       customer: "Jen Thomson",
       industry: "Realtor..."
   },
   {
     id: 8,
-    imgUrl: "/images/companies/DonGon.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/DonGon.webp",
     customer: "DonGon",
     industry: "Restaurant"
   },
 ]
-
 
 
 const section3 = {
@@ -123,7 +122,7 @@ const section3 = {
     ],
     para1: "In a competitive digital landscape, targeted Google Ads can elevate your brand’s visibility and drive high-quality traffic to your website. Our tailored Google Ads services help you reach the right audience effectively and maximize your ROI.",
     para2: "Our team of certified Google Ads specialists provides end-to-end solutions, from keyword research and ad creation to performance tracking and optimization, ensuring you achieve the best possible outcomes for your ad spend.",
-    image: "/images/services page/google ads/google ads sec3 img.webp"
+    image: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/googleads/google%20ads%20sec3%20img.webp"
   };
   
 
@@ -204,7 +203,7 @@ const section6 = {
     para: "Achieving success with Google Ads requires expertise across multiple tools and platforms. Our team leverages a wide array of specialized software to deliver impactful results, ensuring your campaigns are optimized for performance, reach, and conversions.",
     social: [
       {
-        img: "/images/services page/google ads/tools/01.webp",
+        img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/icons8-google-ads.svg",
         name: "Google Ads Manager",
         para: "Optimize campaigns with Google Ads Manager to reach the right audience and maximize ad spend."
       },
@@ -279,32 +278,32 @@ const section7 = {
       {
         head: "Campaign Strategy",
         para: "Develop customized Google Ads strategies tailored to your business goals, ensuring maximum reach and conversions.",
-        img: "/images/services page/google ads/3dcards/01.webp"
+        img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/googleads/01.webp"
       },
       {
         head: "Keyword Research",
         para: "Leverage in-depth keyword research to target the right audience and maximize the efficiency of your ad spend.",
-        img: "/images/services page/google ads/3dcards/02.webp"
+        img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/googleads/02.webp"
       },
       {
         head: "Ad Copy Creation",
         para: "Craft compelling ad copies that engage users, drive traffic, and boost click-through rates across campaigns.",
-        img: "/images/services page/google ads/3dcards/03.webp"
+        img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/googleads/03.webp"
       },
       {
         head: "Performance Optimization",
         para: "Monitor and optimize ad performance for ROI by analyzing metrics and implementing changes.",
-        img: "/images/services page/google ads/3dcards/04.webp"
+        img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/googleads/04.webp"
       },
       {
         head: "Remarketing Campaigns",
         para: "Re-engage your audience with strategic remarketing campaigns that increase conversions and brand loyalty.",
-        img: "/images/services page/google ads/3dcards/05.webp"
+        img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/googleads/05.webp"
       },
       {
         head: "Analytics & Reporting",
         para: "Receive detailed insights and reports to understand your campaign’s performance and make informed decisions.",
-        img: "/images/services page/google ads/3dcards/06.webp"
+        img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/googleads/06.webp"
       },
     ]
   };
@@ -384,44 +383,44 @@ const faq = {
       {
         id: 1,
         name: "John Doe",
-        designation: "Senior Google Ads Specialist",
+        designation: "Software Engineer",
         image:
-          "/images/services page/faq/john doe.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/john%20doe.webp",
       },
       {
         id: 2,
         name: "Robert Johnson",
-        designation: "Google Ads Campaign Manager",
+        designation: "Product Manager",
         image:
-          "/images/services page/faq/robert johnson.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/robert%20johnson.webp",
       },
       {
         id: 3,
         name: "Jane Smith",
-        designation: "PPC Strategist",
+        designation: "Data Scientist",
         image:
-          "/images/services page/faq/jane smith.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/jane%20smith.webp",
       },
       {
         id: 4,
         name: "Emily Davis",
-        designation: "Google Ads Analyst",
+        designation: "UX Designer",
         image:
-          "/images/services page/faq/emily davis.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/emily%20davis.webp",
       },
       {
         id: 5,
         name: "Tyler Durden",
-        designation: "Paid Search Specialist",
+        designation: "Soap Developer",
         image:
-          "/images/services page/faq/tyler durden.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/tyler%20durden.webp",
       },
       {
         id: 6,
         name: "Dora",
-        designation: "Conversion Optimization Expert",
+        designation: "The ad expert",
         image:
-          "/images/services page/faq/dora explorer.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/dora%20explorer.webp",
       },
     ],
     list: [

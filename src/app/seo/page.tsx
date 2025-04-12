@@ -34,50 +34,50 @@ const heroContent = {
 const section2 = [
   {
     id: 1,
-    imgUrl: "/images/companies/Smokey.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Smokey.webp",
     customer: "Smokey",
     industry: "Restaurant"
   },
   {
       id: 2,
-      imgUrl: "/images/companies/Blinds.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Blinds.webp",
       customer: "Blinds",
       industry: "Interior"
   },
   {
       id: 3,
-      imgUrl: "/images/companies/PGroomer.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/PGroomer.webp",
       customer: "PGroomer",
       industry: "Tools..."
   },
   {
     id: 4,
-    imgUrl: "/images/companies/Silsi.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Silsi.webp",
     customer: "Silsi",
     industry: "Restaurant"
   },
   {
     id: 5,
-    imgUrl: "/images/companies/IQ Home Care.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/IQ%20Home%20Care.webp",
     customer: "IQ Home Care",
     industry: "Cleaning..."
   },
   
   {
       id: 6,
-      imgUrl: "/images/companies/Canada View.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Canada%20View.webp",
       customer: "Canada View",
       industry: "Cleaning..."
   },
   {
       id: 7,
-      imgUrl: "/images/companies/Jen Thomson.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Jen%20Thomson.webp",
       customer: "Jen Thomson",
       industry: "Realtor..."
   },
   {
     id: 8,
-    imgUrl: "/images/companies/DonGon.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/DonGon.webp",
     customer: "DonGon",
     industry: "Restaurant"
   },
@@ -122,7 +122,7 @@ const section3 = {
     ],
     para1: "Achieve a strong digital presence with a site built for optimal performance, speed, and search visibility. At ACM, we specialize in web development with SEO as a core focus, ensuring your website is seen and trusted by users and search engines alike.",
     para2: "Our team of SEO-savvy developers and strategists collaborates globally to deliver full-stack solutions, from front-end to back-end, elevating your site’s functionality and search visibility for an unparalleled digital experience.",
-    image: "/images/services page/seo/seo sec3 img.webp"
+    image: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/seo/seo%20sec3%20img.webp"
 };
 
 
@@ -260,27 +260,27 @@ const section3dCards: {mainpara: string; head: string; cards: {head: string; par
     {
         head: "Organic Search",
         para: "Organic search results drive most website traffic, with over 50% coming from organic search. If your website isn’t search-optimized, you’re missing a major traffic opportunity.",
-        img: "/images/services page/seo/3dcards/01.webp"
+        img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/seo/01.webp"
     },
     {
         head: "Helps Build Trust And Credibility",
         para: "People trust search engines, and a high rank in search results builds credibility. It shows your site is relevant and authoritative to your audience.",
-        img: "/images/services page/seo/3dcards/02.webp"
+        img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/seo/02.webp"
     },
     {
         head: "Improves User Experience",
         para: "SEO optimizes your site’s structure and content for search engines, improving user experience by making your site organized, informative, and user-friendly.",
-        img: "/images/services page/seo/3dcards/03.webp"
+        img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/seo/03.webp"
     },
     {
       head: "Cost-Effective",
       para: "SEO is a cost-effective strategy to drive traffic. Unlike paid ads requiring ongoing investment, SEO offers long-term results with minimal costs.",
-      img: "/images/services page/seo/3dcards/04.webp"
+      img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/seo/04.webp"
   },
   {
       head: "Competitive Advantage",
       para: "SEO is highly competitive. Businesses investing in SEO attract more traffic, leading to increased leads, sales, and a stronger market position.",
-      img: "/images/services page/seo/3dcards/05.webp"
+      img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/seo/05.webp"
   },
 ]
 }
@@ -321,44 +321,44 @@ const faq = {
       {
         id: 1,
         name: "John Doe",
-        designation: "Senior SEO Specialist",
+        designation: "Software Engineer",
         image:
-          "/images/services page/faq/john doe.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/john%20doe.webp",
       },
       {
         id: 2,
         name: "Robert Johnson",
-        designation: "SEO Strategist",
+        designation: "Product Manager",
         image:
-          "/images/services page/faq/robert johnson.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/robert%20johnson.webp",
       },
       {
         id: 3,
         name: "Jane Smith",
-        designation: "SEO Content Specialist",
+        designation: "Data Scientist",
         image:
-          "/images/services page/faq/jane smith.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/jane%20smith.webp",
       },
       {
         id: 4,
         name: "Emily Davis",
-        designation: "Technical SEO Specialist",
+        designation: "UX Designer",
         image:
-          "/images/services page/faq/emily davis.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/emily%20davis.webp",
       },
       {
         id: 5,
         name: "Tyler Durden",
-        designation: "SEO Analytics Expert",
+        designation: "Soap Developer",
         image:
-          "/images/services page/faq/tyler durden.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/tyler%20durden.webp",
       },
       {
         id: 6,
-        name: "Dora Explorer",
-        designation: "SEO Specialist",
+        name: "Dora",
+        designation: "The ad expert",
         image:
-          "/images/services page/faq/dora explorer.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/dora%20explorer.webp",
       },
     ],
     list: [

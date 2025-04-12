@@ -31,7 +31,7 @@ function Founders() {
             <TypewriterEffect className='impact-matric-head'  words={words}/>
             <div className="founder-img-cards">
                 <div className='founder-img-card'>
-                    <Image className="founder-img" src="/images/founders/abhi jain.webp" alt="founder" height={600} width={600} />
+                    <Image className="founder-img" src="https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/aboutus/abhi%20jain.webp" alt="founder" height={600} width={600} />
                     <div className="founder-content-card">
                         <div className="flex items-center gap-3 mb-3">
                             <FaChevronCircleRight />
@@ -41,7 +41,7 @@ function Founders() {
                     </div>
                 </div>
                 <div className="founder-img-card items-end">
-                    <Image className="founder-img" src="/images/founders/aftab khan.webp" alt="founder" height={600} width={600} />
+                    <Image className="founder-img" src="https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/WhatsApp%20Image%202025-04-09%20at%2011.54.55%20PM.jpeg" alt="founder" height={600} width={600} />
                     {/*<Image className="founder-img " src="https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/WhatsApp%20Image%202025-04-09%20at%2011.54.55%20PM.jpeg" alt="founder" height={600} width={600} />*/}
                     <div className="founder-content-card items-end text-right">
                         <div className="flex items-center justify-end gap-3 mb-3">
@@ -50,6 +50,7 @@ function Founders() {
                         </div>
                         <p className="founder-content-para">As the founder of adClickMagnet, I am proud to lead a company that is driven by creativity, innovation, and a passion for digital excellence.<br /><br /> Our mission is to empower businesses with cutting-edge digital solutions that not only enhance their online presence but also drive growth and engagement. We believe that every brand has a unique story to tell, and our team is here to help you tell it in the most impactful way possible.</p>
                     </div>
+                    
                 </div>
             </div>
         </div>

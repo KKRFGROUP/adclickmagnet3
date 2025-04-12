@@ -33,50 +33,50 @@ const heroContent = {
 const section2 = [
   {
     id: 1,
-    imgUrl: "/images/companies/Smokey.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Smokey.webp",
     customer: "Smokey",
     industry: "Restaurant"
   },
   {
       id: 2,
-      imgUrl: "/images/companies/Blinds.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Blinds.webp",
       customer: "Blinds",
       industry: "Interior"
   },
   {
       id: 3,
-      imgUrl: "/images/companies/PGroomer.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/PGroomer.webp",
       customer: "PGroomer",
       industry: "Tools..."
   },
   {
     id: 4,
-    imgUrl: "/images/companies/Silsi.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Silsi.webp",
     customer: "Silsi",
     industry: "Restaurant"
   },
   {
     id: 5,
-    imgUrl: "/images/companies/IQ Home Care.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/IQ%20Home%20Care.webp",
     customer: "IQ Home Care",
     industry: "Cleaning..."
   },
   
   {
       id: 6,
-      imgUrl: "/images/companies/Canada View.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Canada%20View.webp",
       customer: "Canada View",
       industry: "Cleaning..."
   },
   {
       id: 7,
-      imgUrl: "/images/companies/Jen Thomson.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Jen%20Thomson.webp",
       customer: "Jen Thomson",
       industry: "Realtor..."
   },
   {
     id: 8,
-    imgUrl: "/images/companies/DonGon.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/DonGon.webp",
     customer: "DonGon",
     industry: "Restaurant"
   },
@@ -115,7 +115,7 @@ const section3 = {
     para1: "The need for reliable, scalable websites has never been greater. When your priority is a seamless digital experience, ACM’s flexible web development services are the solution.",
     para2: "Our global team of expert web developers can help with everything from concept and planning to implementation, integrating the latest in front-end, back-end, and full-stack solutions for a truly comprehensive digital presence.",
     image: "https://res.cloudinary.com/deepcnbrz/image/upload/v1730822005/Screenshot_2024-11-05_212211_hhbsos.png",
-    video: "/images/services page/web dev/web dev sec3 vdo.mp4"
+    video: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/web/web%20dev%20sec3%20vdo.mp4"
   };
 
 
@@ -262,22 +262,22 @@ const section3dCards: {mainpara: string; head: string; cards: {head: string; par
       {
           head: "Static Website Designing",
           para: "A static website is a type of website that consists of a set of HTML pages that remain unchanged until they are manually updated.",
-          video: "/images/services page/web dev/3dcards/01.mp4"
+          video: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/web/01.mp4"
         },
       {
           head: "E- commerce websites",
           para: "An e-commerce website is an online platform where businesses sell their products or services to customers over the internet.",
-          video: "/images/services page/web dev/3dcards/02.mp4"
+          video: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/web/02.mp4"
         },
       {
         head: "Idea based websites",
         para: "An idea-based website is a digital platform centered around sharing and exploring concepts, innovations, or creative thoughts.",
-        video: "/images/services page/web dev/3dcards/03.mp4"
+        video: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/web/03.mp4"
       },
     {
         head: "Corporate Website",
         para: "A corporate website serves as the digital face of a company, providing a comprehensive overview of its identity, offerings, and values to various stakeholders",
-        img: "/images/services page/web dev/3dcards/04.webp"
+        img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/web/04.webp"
     },
   ]
 } 
@@ -316,44 +316,44 @@ const faq = {
       {
         id: 1,
         name: "John Doe",
-        designation: "Senior Web Developer",
+        designation: "Software Engineer",
         image:
-          "/images/services page/faq/john doe.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/john%20doe.webp",
       },
       {
         id: 2,
         name: "Robert Johnson",
-        designation: "Project Manager",
+        designation: "Product Manager",
         image:
-          "/images/services page/faq/robert johnson.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/robert%20johnson.webp",
       },
       {
         id: 3,
         name: "Jane Smith",
-        designation: "UX/UI Designer",
+        designation: "Data Scientist",
         image:
-          "/images/services page/faq/jane smith.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/jane%20smith.webp",
       },
       {
         id: 4,
         name: "Emily Davis",
-        designation: "Frontend Developer",
+        designation: "UX Designer",
         image:
-          "/images/services page/faq/emily davis.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/emily%20davis.webp",
       },
       {
         id: 5,
         name: "Tyler Durden",
-        designation: "Backend Developer",
+        designation: "Soap Developer",
         image:
-          "/images/services page/faq/tyler durden.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/tyler%20durden.webp",
       },
       {
         id: 6,
-        name: "Dora Explorer",
-        designation: "SEO Specialist",
+        name: "Dora",
+        designation: "The ad expert",
         image:
-          "/images/services page/faq/dora explorer.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/dora%20explorer.webp",
       },
     ],
     list: [

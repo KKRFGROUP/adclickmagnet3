@@ -40,50 +40,50 @@ const heroContent = {
 const section2 = [
   {
     id: 1,
-    imgUrl: "/images/companies/Smokey.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Smokey.webp",
     customer: "Smokey",
     industry: "Restaurant"
   },
   {
       id: 2,
-      imgUrl: "/images/companies/Blinds.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Blinds.webp",
       customer: "Blinds",
       industry: "Interior"
   },
   {
       id: 3,
-      imgUrl: "/images/companies/PGroomer.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/PGroomer.webp",
       customer: "PGroomer",
       industry: "Tools..."
   },
   {
     id: 4,
-    imgUrl: "/images/companies/Silsi.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Silsi.webp",
     customer: "Silsi",
     industry: "Restaurant"
   },
   {
     id: 5,
-    imgUrl: "/images/companies/IQ Home Care.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/IQ%20Home%20Care.webp",
     customer: "IQ Home Care",
     industry: "Cleaning..."
   },
   
   {
       id: 6,
-      imgUrl: "/images/companies/Canada View.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Canada%20View.webp",
       customer: "Canada View",
       industry: "Cleaning..."
   },
   {
       id: 7,
-      imgUrl: "/images/companies/Jen Thomson.webp",
+      imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/Jen%20Thomson.webp",
       customer: "Jen Thomson",
       industry: "Realtor..."
   },
   {
     id: 8,
-    imgUrl: "/images/companies/DonGon.webp",
+    imgUrl: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/company/DonGon.webp",
     customer: "DonGon",
     industry: "Restaurant"
   },
@@ -121,7 +121,7 @@ const section3 = {
     ],
     para1: "In today’s professional network-driven world, LinkedIn Ads offer a powerful way to amplify your brand, connect with decision-makers, and drive meaningful business growth. Our customized LinkedIn Ads services ensure your campaigns resonate with the right audience for maximum visibility and ROI.",
     para2: "Our team of LinkedIn Ads experts provides a complete suite of services, from audience targeting and content creation to performance analytics and continuous optimization, ensuring your ad spend is both effective and efficient.",
-    image: "/images/services page/linkedin/linkedin sec3 img.webp",
+    image: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/linkedin/linkedin%20sec3%20img.webp",
 };
 
   
@@ -245,32 +245,32 @@ const section3dCards = {
     {
       head: "Campaign Strategy",
       para: "Design personalized LinkedIn Ads strategies that align with your business goals, enhancing professional reach and engagement.",
-      img: "/images/services page/linkedin/3dcards/01.webp"
+      img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/linkedin/01.webp"
     },
     {
       head: "Audience Targeting",
       para: "Leverage LinkedIn’s advanced targeting tools to connect with the right professionals, maximizing impact and engagement effectively and efficiently.",
-      img: "/images/services page/linkedin/3dcards/02.webp"
+      img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/linkedin/02.webp"
     },
     {
       head: "Ad Copy Optimization",
       para: "Craft compelling ad copies designed specifically for LinkedIn’s audience, driving higher engagement, click-through rates, and strong conversions.",
-      img: "/images/services page/linkedin/3dcards/03.webp"
+      img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/linkedin/03.webp"
     },
     {
       head: "Performance Optimization",
       para: "Continuously track campaign metrics and refine strategies to ensure the highest ROI for LinkedIn Ads campaigns every time.",
-      img: "/images/services page/linkedin/3dcards/04.webp"
+      img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/linkedin/04.webp"
     },
     {
       head: "Remarketing Campaigns",
       para: "Reengage with professionals who have interacted with your brand through LinkedIn’s remarketing tools, ensuring consistent conversions and growth.",
-      img: "/images/services page/linkedin/3dcards/05.webp"
+      img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/linkedin/05.webp"
     },
     {
       head: "Analytics & Reporting",
       para: "Get valuable insights into your campaign performance using detailed reports, enabling actionable decisions and constant strategic improvements.",
-      img: "/images/services page/linkedin/3dcards/06.webp"
+      img: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/linkedin/06.webp"
     },
   ]
 };
@@ -350,44 +350,44 @@ const faq = {
       {
         id: 1,
         name: "John Doe",
-        designation: "Senior LinkedIn Ads Specialist",
+        designation: "Software Engineer",
         image:
-          "/images/services page/faq/john doe.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/john%20doe.webp",
       },
       {
         id: 2,
         name: "Robert Johnson",
-        designation: "LinkedIn Ads Campaign Manager",
+        designation: "Product Manager",
         image:
-          "/images/services page/faq/robert johnson.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/robert%20johnson.webp",
       },
       {
         id: 3,
         name: "Jane Smith",
-        designation: "PPC Strategist",
+        designation: "Data Scientist",
         image:
-          "/images/services page/faq/jane smith.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/jane%20smith.webp",
       },
       {
         id: 4,
         name: "Emily Davis",
-        designation: "LinkedIn Ads Analyst",
+        designation: "UX Designer",
         image:
-          "/images/services page/faq/emily davis.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/emily%20davis.webp",
       },
       {
         id: 5,
         name: "Tyler Durden",
-        designation: "Paid Search Specialist",
+        designation: "Soap Developer",
         image:
-          "/images/services page/faq/tyler durden.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/tyler%20durden.webp",
       },
       {
         id: 6,
         name: "Dora",
-        designation: "Conversion Optimization Expert",
+        designation: "The ad expert",
         image:
-          "/images/services page/faq/dora explorer.webp",
+          "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/dora%20explorer.webp",
       },
     ],
     list: [

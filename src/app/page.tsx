@@ -52,7 +52,7 @@ const Navbar = dynamic(() => import('@/components/Navbar'), {
 //import Navbar from "@/components/Navbar";
 
 // This import was missing - add it back
-import MobileDevicePopup from '@/components/MobileDevicePopup';
+
 
 export default function Home() {
   const pageMainRef = useRef<HTMLDivElement | null>(null);
@@ -77,7 +77,7 @@ export default function Home() {
         <Cursor />
         
         {/* Your main content here */}
-        <MobileDevicePopup />
+        
         <Navbar mobileOverlayOpen={toggleMenu} isOpen={isOpen}/>
         <div ref={pageMainRef} className="dark:bg-balck bg-black overflow-hidden page-main">
           {/* Add SovereignChains section here */}

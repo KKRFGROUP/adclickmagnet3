@@ -31,7 +31,7 @@ function ThankYou() {
                   <div className="thanks-bg-blur">
                       <Image src="/images/logos/white logo.webp" alt="" height={300} width={300} />
                       <h1 className="thankyou-head">Thank you for Contacting us!</h1>
-                      <p className="thankyou-para">We have received your message and will contat you shortly to follow up, If you would like to speak to someone immidiately feel free to call.</p>
+                      <p className="thankyou-para">We have received your message and we will contact you shortly to follow up, If you would like to speak to someone immidiately feel free to call.</p>
                       <Link href="/"> <button className="service-hero-sec-content-button thankyou-btn">Back To Home</button></Link>
                   </div>
               </div>
