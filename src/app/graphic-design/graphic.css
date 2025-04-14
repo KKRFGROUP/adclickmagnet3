@@ -2193,3 +2193,238 @@ video::-webkit-media-controls {
         -webkit-animation-duration: 30s;
     }
 }
+
+
+/* Mobile Landscape Orientation Only */
+@media (orientation: landscape) and (max-height: 500px) {
+    /* Hero section adjustments */
+    .graphic-page-hero-sec-container {
+      height: auto;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    
+    .graphic-page-hero-sec-head {
+      font-size: 30px;
+    }
+    
+    .graphic-page-hero-sec-para {
+      font-size: 12px;
+    }
+    
+    .graphic-page-hero-sec-para-last {
+      font-size: 16px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    
+    /* Section 2 adjustments */
+    .graphic-page-sec2-container {
+      padding: 20px;
+      border-radius: 30px;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+    }
+    
+    .graphic-page-sec2-content {
+      width: 50%;
+    }
+    
+    .graphic-page-sec2-graphic {
+      width: 50%;
+    }
+    
+    .graphic-page-sec2-content-head {
+      font-size: 24px;
+    }
+    
+    .graphic-page-sec2-content-para {
+      font-size: 14px;
+      margin-bottom:14px;
+    }
+    
+    /* Services section adjustments */
+    .graphic-page-services-sec-container {
+      padding: 20px;
+      height: auto;
+      border-radius: 30px;
+    }
+    
+    .graphic-page-services-sec-head,
+    .graphic-page-services-sec-head-second {
+      font-size: 30px;
+    }
+    
+    .graphic-page-services-sec-head-second {
+      left: 50px;
+    }
+    
+    .graphic-page-services-cards-container {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+    }
+    
+    .graphic-page-services-card {
+      width: 250px;
+      height: 300px;
+      min-height: auto;
+      flex-shrink: 0;
+    }
+    
+    .graphic-page-services-card-img {
+      height: 150px;
+    }
+    
+    .graphic-page-services-card-head {
+      font-size: 18px;
+    }
+    
+    .graphic-page-services-card-para {
+      font-size: 14px;
+      padding-bottom: 30px;
+    }
+    
+    /* Portfolio section adjustments */
+    .portfolio-sec-container {
+      padding: 20px;
+      height: auto;
+      border-radius: 30px;
+    }
+    
+    .portfolio-sec-head,
+    .portfolio-sec-head-second {
+      font-size: 30px;
+    }
+    
+    .portfolio-sec-head-second {
+      left: 50px;
+    }
+    
+    .portfolio-sec-card-container {
+      display: flex;
+      flex-direction: row;
+    }
+    
+    figure {
+      height: 200px;
+      width: 300px;
+    }
+    
+    /* Creative services adjustments */
+    .creative-service-section-container {
+      padding: 20px;
+      height: auto;
+      border-radius: 30px;
+    }
+    
+    .creative-service-head,
+    .creative-service-head-second {
+      font-size: 30px;
+    }
+    
+    .creative-service-head-second {
+      left: 50px;
+    }
+    
+    .creative-service-card-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .creative-service-card {
+      width: 45%;
+      height: auto;
+      min-height: 300px;
+      margin-bottom: 20px;
+    }
+    
+    .creative-service-card-img {
+      height: 120px;
+    }
+    
+    .creative-service-card-content {
+      font-size: 14px;
+    }
+    
+    /* Overlapping cards adjustments */
+    .overlapping-cards {
+      height: auto;
+    }
+    
+    .custom-card {
+      min-height: 100vh;
+      height: auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: row;
+    }
+    
+    .card-text-content {
+      width: 50%;
+    }
+    
+    .custom-card img {
+      width: 45%;
+      margin: 0;
+    }
+    
+    .read-customer-stories {
+      height: 40px;
+      width: 180px;
+      font-size: 14px;
+    }
+    
+    /* Infinite scroll text adjustments */
+    .infinite-text-section-container {
+      height: 300px;
+    }
+    
+    .scrolling-text-container,
+    .scrolling-text-container-second {
+      height: 60px;
+    }
+    
+    .scrolling-text-inner {
+      font-size: 30px;
+      padding: 10px 0;
+    }
+    
+    /* Navigation adjustments */
+    .main-nav {
+      padding: 10px;
+    }
+    
+    .image-hover {
+      height: auto;
+      padding: 10px 0;
+    }
+    
+    .image-hover .title {
+      font-size: 24px;
+    }
+  }
+  
+  /* Fix for scrolling on mobile */
+  @media (orientation: landscape) and (max-height: 500px) {
+    .overlapping-cards,
+    .graphic-page-services-cards-container {
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Fix for iOS devices */
+    @supports (-webkit-touch-callout: none) {
+      .overlapping-cards,
+      .graphic-page-services-cards-container {
+        -webkit-overflow-scrolling: touch;
+      }
+    }
+  }
+
+/* Class to hide elements in mobile landscape orientation */
+@media (orientation: landscape) and (max-height: 500px) {
+    .hide-mobile-landscape {
+      display: none !important;
+    }
+  }

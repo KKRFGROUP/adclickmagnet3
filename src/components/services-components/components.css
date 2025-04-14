@@ -1818,3 +1818,241 @@ video::-webkit-media-controls {
       height: auto;
     }
   }
+
+/* Fixed column layout for mobile landscape */
+@media (orientation: landscape) and (max-height: 500px) {
+  /* Container styles */
+  .services-sec2-main-component {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center; /* Center the inline-block elements */
+    font-size: 0; /* Remove spacing between inline-block elements */
+  }
+  
+  /* Fixed width cards using inline-block */
+  .services-sec2-flex-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 32%; /* Fixed percentage */
+    height: auto;
+    min-height: 0;
+    margin:2%;
+    font-size: 14px; /* Reset font size for content */
+  }
+  
+  /* Ensure no wrapping for card containers */
+  .services-sec2-flex-card:nth-child(3n+1) {
+    clear: none;
+  }
+  
+  /* Card styling */
+  .services-sec2-card {
+    width: 100% !important;
+    height: auto !important;
+    background-color: #ffffff70;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    
+    text-align: left;
+  }
+  
+  /* Image styling */
+  .services-sec2-card-img {
+    width: 100% !important;
+    height: 100px !important;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 0 8px 0 !important;
+  }
+  
+  /* Always show content */
+  .services-sec2-card-content {
+    display: block !important;
+  }
+  
+  /* Text styling */
+  .services-sec2-card-content-key {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+  
+  .services-sec2-card-content-value {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+  
+  /* Override any hover effects */
+  .services-sec2-card:hover {
+    background-color: #ffffff70 !important;
+    backdrop-filter: blur(10px) !important;
+    border-radius: 15px !important;
+    padding: 10px !important;
+    
+  }
+  
+  .services-sec2-card:hover .services-sec2-card-img {
+    margin: 0 0 8px 0 !important;
+    width: 100% !important;
+  }
+  
+  /* Force all important properties to ensure override */
+  .services-sec2-card,
+  .services-sec2-card-img,
+  .services-sec2-flex-card {
+    float: none !important;
+    position: static !important;
+    display: inline-block !important;
+  }
+  
+  .services-sec2-card-content {
+    position: static !important;
+    float: none !important;
+    display: block !important;
+  }
+}
+
+/* Mobile Landscape styles for ContactOurExperts component */
+@media (orientation: landscape) and (max-height: 500px) {
+  /* Container adjustments */
+  .contact-our-expert-container {
+    padding: 15px;
+    margin: 15px 0;
+  }
+  
+  /* Card layout - change to horizontal layout with proper spacing */
+  .contact-our-expert-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 80vh;
+    overflow: hidden;
+  }
+  
+  /* Content area - adjust width for landscape */
+  .contact-our-expert-card-content {
+    width: 60%;
+    padding-right: 15px;
+  }
+  .contact-our-expert-card-content-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    white-space: nowrap; /* Prevent text from wrapping */
+    min-width: 180px; /* Ensure button is wide enough for text */
+    text-align: center; /* Center the text */
+    display: inline-block; /* Proper button display */
+  }
+  
+  /* Improve button appearance */
+  .contact-our-expert-card-content-btn:hover {
+    opacity: 0.9; /* Subtle hover effect */
+  }
+  
+  /* Image sizing for landscape */
+  .contact-our-expert-card-img {
+    width: 35% !important;
+    height: auto !important;
+    max-height: 75vh;
+    object-fit: contain;
+  }
+  
+  /* Typography adjustments for landscape */
+  .contact-our-expert-card-content-head {
+    font-size: 18px;
+    margin-bottom: 10px !important;
+    line-height: 1.3;
+  }
+  
+  .services-sec7-content-para {
+    font-size: 14px;
+    margin-bottom: 10px !important;
+    line-height: 1.4;
+  }
+  
+  /* Button styling */
+  .contact-our-expert-card-content-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+  
+
+/* Mobile Landscape Orientation for Section 8 */
+@media (orientation: landscape) and (max-height: 500px) {
+  /* Container adjustments */
+  .services-sec8-main-container {
+    padding: 20px;
+    height: auto;
+    min-height: auto;
+  }
+  
+  /* Content cards container */
+  .services-sec8-content-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+  }
+  
+  /* Individual card styling */
+  .services-sec8-card {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 15px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Typography adjustments */
+  .services-sec8-card-title {
+    font-size: 0.75rem;
+    margin-bottom: 5px;
+  }
+  
+  .services-sec8-card-count {
+    font-size: 1.75rem;
+    margin: 5px 0;
+  }
+  
+  .services-sec8-card-para {
+    font-size: 0.75rem;
+  }
+  
+  /* Section heading adjustments */
+  .services-secs-para {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .services-secs-head {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .services-secs-content-para {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* For very small screens in landscape, adjust to 2 columns */
+  @media (max-width: 700px) {
+    .services-sec8-content-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .services-sec8-card {
+      padding: 10px;
+    }
+    
+    .services-sec8-card-count {
+      font-size: 1.5rem;
+    }
+  }
+}

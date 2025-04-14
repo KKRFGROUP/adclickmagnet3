@@ -44,7 +44,8 @@ const GraphicDesignPage = () => {
             <TracingBeam>
               <HeroSection />
         
-             <DesignProcess />       <DigitalServices />
+             <DesignProcess />      
+              <DigitalServices />
               
               <Portfolio />
               <CreativeService />

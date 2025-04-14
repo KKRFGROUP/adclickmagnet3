@@ -124,8 +124,7 @@ const OverlappingSections = () => {
         <div className="flex custom-card card3   mb-4" >
           <div className="graphic-page-sec2-content text-black">
             <h2 className="graphic-page-sec2-content-head mb-4">What makes our design services different?</h2>
-            <p className="graphic-page-sec2-content-para">We deliver speedy, high-quality graphic design services through a transparent subscription model. We are a tech-enabled company, developing its own proprietary software to brief, manage, and coordinate a high-volume of design projects, making it possible to keep pace with teams at Amazon, Puma, Facebook, and more.
-                Learn how we can revolutionize the way your organization gets design work done. Book a call today.</p>
+            <p className="graphic-page-sec2-content-para hide-mobile-landscape">We deliver speedy, high-quality graphic design services through a transparent subscription model. We are a tech-enabled company, developing its own proprietary software to brief, manage, and coordinate a high-volume of design projects, making it possible to keep pace with teams at Amazon, Puma, Facebook, and more. Learn how we can revolutionize the way your organization gets design work done. Book a call today.</p>
             <Link href="/contact-us"><button className="read-customer-stories mt-[40px]" type="button">Book A Call</button></Link>
           </div>
             <div className="graphic-page-sec2-graphic-card">
