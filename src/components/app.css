@@ -1630,3 +1630,53 @@ video::-webkit-media-controls {
         margin-top: 10px;
     }
 }
+
+
+/* Add these styles to your global CSS file */
+
+.custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Default styling for dark backgrounds */
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+    color: white;
+    
+    /* Add this for better visibility on various backgrounds */
+    mix-blend-mode: difference;
+  }
+  
+  /* For sites with light backgrounds */
+  .custom-cursor.on-light-bg {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid black;
+    color: black;
+    mix-blend-mode: normal;
+  }
+  
+  /* Always use this for the app.jsx page with black background */
+  .custom-cursor.on-dark-bg {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+    color: white;
+    mix-blend-mode: difference;
+  }
+  
+  .cursor-text {
+    font-size: 8px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .custom-cursor.scale-up .cursor-text {
+    opacity: 1;
+  }

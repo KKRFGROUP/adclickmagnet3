@@ -1,62 +1,90 @@
 'use client';
 
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, lazy, Suspense } from 'react';
 import dynamic from 'next/dynamic';
+
+// Full-screen loading component with logo
+const FullScreenLoader = () => (
+  <div className="fixed inset-0 bg-black flex flex-col justify-center items-center z-50">
+    <div className="mb-8">
+      {/* Logo image */}
+      <img 
+        src="/images/logos/white logo bigger.webp" 
+        alt="ACM Logo" 
+        className="h-56 w-auto" 
+      />
+    </div>
+    <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-white"></div>
+  </div>
+);
 
 // Import the Cursor component (with dynamic import to avoid SSR issues)
 const Cursor = dynamic(() => import('@/components/Cursor'), {
   ssr: false,
+  loading: () => <FullScreenLoader />
 });
 
-//import HeroSection from "@/components/homeSections/HeroSection";
-const SovereignChains = dynamic(() => import('@/components/SovereignChains/SovereignChains'), {
-  ssr: false, // Optional: Disable SSR for this component
-});
+// Lazily load all components
+const SovereignChains = lazy(() => import('@/components/SovereignChains/SovereignChains'));
+const NewsletterSection = lazy(() => import('@/components/Nesletter/NewsletterSection'));
+const Section2 = lazy(() => import('@/components/homeSections/Section2'));
+const Section5 = lazy(() => import('@/components/homeSections/Section5'));
+const AboutSection = lazy(() => import('@/components/homeSections/AboutSection'));
+const TeamSection = lazy(() => import('@/components/homeSections/TeamSection'));
+const Section7 = lazy(() => import('@/components/homeSections/Section7'));
+const Section8 = lazy(() => import('@/components/homeSections/Section8'));
+const Section9 = lazy(() => import('@/components/homeSections/Section9'));
+const ClientVideSec = lazy(() => import('@/components/homeSections/ClientVideSec'));
+const Navbar = lazy(() => import('@/components/Navbar'));
+const Footer = lazy(() => import('@/components/Footer'));
 
-const NewsletterSection = dynamic(() => import('@/components/Nesletter/NewsletterSection'), {
-  ssr: false,
-});
+// Use intersection observer for viewport-based loading
+const LazyLoadOnVisible = ({ children }: { children: React.ReactNode }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
 
-//import Section3 from "@/components/homeSections/Section3";
-const Section2 = dynamic(() => import('@/components/homeSections/Section2'), {
-  ssr: false, // Optional: Disable SSR for this component
-});
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '200px' } // Load when within 200px of viewport
+    );
 
-const Section5 = dynamic(() => import('@/components/homeSections/Section5'), {
-  ssr: false, // Optional: Disable SSR for this component
-});
-//import Section5 from "@/components/homeSections/Section5";
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
 
-//import Section6 from "@/components/homeSections/Section6";
-import AboutSection from "@/components/homeSections/AboutSection";
-import TeamSection from "@/components/homeSections/TeamSection";
-const Section7 = dynamic(() => import('@/components/homeSections/Section7'), {
-  ssr: false, // Optional: Disable SSR for this component
-});
-//import Section7 from "@/components/homeSections/Section7";
-const Section8 = dynamic(() => import('@/components/homeSections/Section8'), {
-  ssr: false, // Optional: Disable SSR for this component
-});
-//import Section8 from "@/components/homeSections/Section8";
-import Section9 from "@/components/homeSections/Section9";
-import Footer from "@/components/Footer";
+    return () => {
+      if (ref.current) {
+        observer.disconnect();
+      }
+    };
+  }, []);
 
-const ClientVideSec = dynamic(() => import('@/components/homeSections/ClientVideSec'), {
-  ssr: false, // Optional: Disable SSR for this component
-});
-//import ClientVideSec from "@/components/homeSections/ClientVideSec";
-
-const Navbar = dynamic(() => import('@/components/Navbar'), {
-  ssr: false, // Optional: Disable SSR for this component
-});
-//import Navbar from "@/components/Navbar";
-
-// This import was missing - add it back
-
+  return (
+    <div ref={ref}>
+      {isVisible ? children : <div style={{ height: '100px' }} />}
+    </div>
+  );
+};
 
 export default function Home() {
   const pageMainRef = useRef<HTMLDivElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  
+  // Set loading state to false after initial load
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // 2 second minimum loading time for better UX
+    
+    return () => clearTimeout(timer);
+  }, []);
   
   const toggleMenu = (arg?: boolean) => {
     setIsOpen(arg ?? !isOpen);
@@ -72,28 +100,82 @@ export default function Home() {
   
   return (
     <>
-      <main className="opacity-100">
+      {/* Main full-screen loader */}
+      {isLoading && <FullScreenLoader />}
+      
+      <main className={`opacity-100 ${isLoading ? 'invisible' : 'visible'}`}>
         {/* Add the cursor component */}
         <Cursor />
         
         {/* Your main content here */}
+        <Suspense fallback={<FullScreenLoader />}>
+          <Navbar mobileOverlayOpen={toggleMenu} isOpen={isOpen}/>
+        </Suspense>
         
-        <Navbar mobileOverlayOpen={toggleMenu} isOpen={isOpen}/>
         <div ref={pageMainRef} className="dark:bg-balck bg-black overflow-hidden page-main">
           {/* Add SovereignChains section here */}
-          <SovereignChains />
-          <Section2 />
-          <NewsletterSection />
+          <Suspense fallback={<FullScreenLoader />}>
+            <SovereignChains />
+          </Suspense>
+          
+          <Suspense fallback={<FullScreenLoader />}>
+            <Section2 />
+          </Suspense>
+          
+          <LazyLoadOnVisible>
+            <Suspense fallback={<FullScreenLoader />}>
+              <NewsletterSection />
+            </Suspense>
+          </LazyLoadOnVisible>
           
           <div className="after-hero-sec">
-            <Section5 />
-            <ClientVideSec />
-            <AboutSection />
-            <TeamSection />
-            <Section7 />
-            <Section8 />
-            <Section9 />
-            <Footer />
+            <LazyLoadOnVisible>
+              <Suspense fallback={<FullScreenLoader />}>
+                <Section5 />
+              </Suspense>
+            </LazyLoadOnVisible>
+            
+            <LazyLoadOnVisible>
+              <Suspense fallback={<FullScreenLoader />}>
+                <ClientVideSec />
+              </Suspense>
+            </LazyLoadOnVisible>
+            
+            <LazyLoadOnVisible>
+              <Suspense fallback={<FullScreenLoader />}>
+                <AboutSection />
+              </Suspense>
+            </LazyLoadOnVisible>
+            
+            <LazyLoadOnVisible>
+              <Suspense fallback={<FullScreenLoader />}>
+                <TeamSection />
+              </Suspense>
+            </LazyLoadOnVisible>
+            
+            <LazyLoadOnVisible>
+              <Suspense fallback={<FullScreenLoader />}>
+                <Section7 />
+              </Suspense>
+            </LazyLoadOnVisible>
+            
+            <LazyLoadOnVisible>
+              <Suspense fallback={<FullScreenLoader />}>
+                <Section8 />
+              </Suspense>
+            </LazyLoadOnVisible>
+            
+            <LazyLoadOnVisible>
+              <Suspense fallback={<FullScreenLoader />}>
+                <Section9 />
+              </Suspense>
+            </LazyLoadOnVisible>
+            
+            <LazyLoadOnVisible>
+              <Suspense fallback={<FullScreenLoader />}>
+                <Footer />
+              </Suspense>
+            </LazyLoadOnVisible>
           </div>
         </div>
       </main>
