@@ -266,3 +266,222 @@
         border-radius: 10px;
     }
 }
+
+/* Press Release Page - Mobile Landscape Only CSS */
+
+/* General mobile landscape styles - will not affect laptops */
+@media only screen and (max-device-width: 915px) and (max-height: 500px) and (orientation: landscape) {
+    /* Press Release Hero Section */
+    .press-release-page-hero-sec {
+        height: 100vh; /* Adjusted for landscape */
+        padding: 20px;
+        font-size: 50px;
+    }
+    
+    /* Press Release Main Container */
+    .press-release-main-container {
+        padding: 30px;
+        border-radius: 30px;
+        bottom: 20px;
+    }
+    
+    /* Top Press Release Card */
+    .top-press-release-card {
+        flex-direction: row; /* Keep as row in landscape */
+        margin-top: 5%;
+        margin-bottom: 5%;
+        min-height: unset;
+        gap: 20px;
+    }
+    
+    .top-press-release-card-img {
+        width: 40%;
+        order: 0; /* Restore original order */
+    }
+    
+    .top-press-release-card-content {
+        width: 60%;
+        padding: 15px;
+    }
+    
+    .top-press-release-card-head {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .top-press-release-card-para {
+        font-size: 12px;
+        margin-bottom: 8px;
+        /* Limit to 4 lines with ellipsis */
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    /* Press Release Cards Container */
+    .press-release-cards-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 15px;
+    }
+    
+    .press-release-card {
+        width: calc(50% - 10px); /* Two cards per row */
+        height: auto;
+        margin-bottom: 20px;
+    }
+    
+    .press-release-card-img {
+        height: auto;
+        aspect-ratio: 16/9; /* Force aspect ratio */
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .press-release-card-content {
+        padding: 10px;
+    }
+    
+    .press-release-card-head {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .press-release-card-para {
+        font-size: 12px;
+        margin-bottom: 10px;
+        /* Limit to 3 lines with ellipsis */
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    .press-release-card-line {
+        margin-top: 10px;
+        height: 2px;
+    }
+}
+
+/* Smaller mobile landscape */
+@media only screen and (max-device-width: 740px) and (max-height: 420px) and (orientation: landscape) {
+    .press-release-page-hero-sec {
+        height: 120vh;
+        font-size: 40px;
+    }
+    
+    .top-press-release-card-head {
+        font-size: 22px;
+    }
+    
+    .top-press-release-card-para {
+        font-size: 11px;
+        -webkit-line-clamp: 3; /* Reduce to 3 lines */
+    }
+    
+    .top-press-release-card-btn {
+        font-size: 14px;
+    }
+    
+    /* Adjust card layout */
+    .press-release-card-head {
+        font-size: 18px;
+    }
+    
+    .press-release-card-para {
+        font-size: 11px;
+        -webkit-line-clamp: 2; /* Reduce to 2 lines */
+    }
+}
+
+/* Extra small mobile landscape (iPhone SE, etc.) */
+@media only screen and (max-device-width: 640px) and (max-height: 375px) and (orientation: landscape) {
+    .press-release-page-hero-sec {
+        height: 130vh;
+        font-size: 34px;
+        padding: 15px;
+    }
+    
+    .press-release-main-container {
+        padding: 20px;
+        border-radius: 25px;
+    }
+    
+    /* Make top card more compact */
+    .top-press-release-card {
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+    
+    .top-press-release-card-head {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+    
+    .top-press-release-card-para {
+        font-size: 10px;
+        -webkit-line-clamp: 2; /* Reduce to 2 lines */
+        margin-bottom: 5px;
+    }
+    
+    /* Adjust card grid to be more compact */
+    .press-release-cards-container {
+        gap: 10px;
+    }
+    
+    .press-release-card {
+        margin-bottom: 15px;
+    }
+    
+    .press-release-card-head {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    
+    .press-release-card-para {
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+}
+
+/* Very small mobile landscape */
+@media only screen and (max-device-width: 568px) and (max-height: 320px) and (orientation: landscape) {
+    .press-release-page-hero-sec {
+        height: 150vh;
+        font-size: 30px;
+    }
+    
+    /* Further reduce spacing */
+    .press-release-main-container {
+        padding: 15px;
+        border-radius: 20px;
+        bottom: 15px;
+    }
+    
+    /* Extreme compact mode for top card */
+    .top-press-release-card-head {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    
+    .top-press-release-card-para {
+        -webkit-line-clamp: 1; /* Show just 1 line */
+    }
+    
+    /* Optimize grid layout for very small screens */
+    .press-release-card-head {
+        font-size: 14px;
+    }
+    
+    .press-release-card-para {
+        display: none; /* Hide paragraph on extremely small screens */
+    }
+    
+    .press-release-card-line {
+        margin-top: 5px;
+        height: 1px;
+    }
+}

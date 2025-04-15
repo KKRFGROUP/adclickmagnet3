@@ -704,3 +704,271 @@ video::-webkit-media-controls {
         bottom:40%;
     }
 }
+
+/* Mobile Landscape Media Queries */
+
+/* General landscape orientation media query */
+@media (max-width: 915px) and (max-height: 450px) and (orientation: landscape) {
+    /* About Us Hero Section */
+    .about-us-hero-sec-container {
+        height: 150vh; /* Increased to accommodate content in landscape */
+    }
+    
+    .about-hero-model {
+        top: 0;
+        height: 120vh;
+    }
+    
+    .about-hero-para-1, .about-hero-para-2 {
+        font-size: 80px;
+    }
+    
+    .about-hero-infinite-text-1, .about-hero-infinite-text-2 {
+        font-size: 120px;
+    }
+    
+    /* Impact Metrics Section */
+    .impact-matrics-main-container {
+        height: 150vh;
+        padding: 30px;
+    }
+    
+    .impact-matrics-head-card {
+        margin: 20px;
+    }
+    
+    .impact-matric-head-1, .impact-matric-head-2 {
+        font-size: 40px;
+        line-height: 120%;
+    }
+    
+    .impact-matric-count-card-numbers, .impact-matric-count-card-numbers-sign {
+        font-size: 60px;
+    }
+    
+    /* Inspired By Section */
+    .inspired-us-main-container {
+        padding: 30px;
+    }
+    
+    .inspired-us-content-card, .inspired-us-content-card-right {
+        width: 80%;
+    }
+    
+    .inspired-video-card {
+        height: auto;
+    }
+    
+    .inspired-video-content {
+        top: 50%;
+    }
+    
+    .inspired-video-content-head {
+        font-size: 30px;
+    }
+    
+    .inspired-us-content-card-btn-case {
+        width: 30%;
+    }
+    
+    /* Founders Section */
+    .founders-main-container {
+        padding: 30px;
+    }
+    
+    .words-from-our-founders {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+    
+    .founder-img {
+        height: 30vh;
+        width: 30vh;
+        margin: 10px;
+    }
+    
+    .founder-img-cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .founder-img-card {
+        width: 45%;
+    }
+    
+    /* Let's Grow Section */
+    .lets-grow-main-container {
+        height: 150vh;
+    }
+    
+    .about-lets-model {
+        height: 100vh;
+    }
+    
+    .lets-grow-head {
+        top: 5%;
+    }
+    
+    .lets-grow-btn-card {
+        bottom: 15%;
+    }
+}
+
+/* Smaller mobile landscape */
+@media (max-width: 740px) and (max-height: 420px) and (orientation: landscape) {
+    .about-hero-para-1, .about-hero-para-2 {
+        font-size: 60px;
+    }
+    
+    .about-hero-infinite-text-1, .about-hero-infinite-text-2 {
+        font-size: 90px;
+    }
+    
+    .impact-matric-head-1, .impact-matric-head-2 {
+        font-size: 32px;
+    }
+    
+    .impact-matric-count-card-numbers, .impact-matric-count-card-numbers-sign {
+        font-size: 50px;
+    }
+    
+    .founder-img {
+        height: 25vh;
+        width: 25vh;
+    }
+    
+    .founder-content-para {
+        font-size: 12px;
+    }
+    
+    .inspired-video-content-head {
+        font-size: 24px;
+    }
+}
+
+/* Extra small mobile landscape (iPhone SE, etc.) */
+@media (max-width: 640px) and (max-height: 375px) and (orientation: landscape) {
+    .about-hero-para-1, .about-hero-para-2 {
+        font-size: 45px;
+    }
+    
+    .about-hero-infinite-text-1, .about-hero-infinite-text-2 {
+        font-size: 70px;
+    }
+    
+    .impact-matric-head-1, .impact-matric-head-2 {
+        font-size: 28px;
+    }
+    
+    .impact-matric-count-card-numbers, .impact-matric-count-card-numbers-sign {
+        font-size: 40px;
+    }
+    
+    .founder-img {
+        height: 22vh;
+        width: 22vh;
+        border-radius: 40px;
+    }
+    
+    .words-from-our-founders {
+        font-size: 32px;
+    }
+    
+    .inspired-us-content-card-btn, .lets-grow-btn {
+        height: 40px;
+    }
+}
+
+/* Specific fixes for Inspired By section in landscape mode */
+
+@media (max-width: 915px) and (orientation: landscape) {
+    /* Fix for the Inspired By section going up */
+    .inspired-us-main-container {
+        padding-top: 50px; /* Add more top padding */
+        margin-top: 50px; /* Add margin to push section down */
+        position: relative; /* Ensure proper positioning */
+    }
+    
+    /* Adjust the video card positioning */
+    .inspired-video-card {
+        margin-top: 5%;
+        height: auto;
+        max-height: 80vh;
+    }
+    
+    /* Fix content positioning */
+    .inspired-video-content {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin: 20px auto;
+        text-align: center;
+        width: 90%;
+    }
+    
+    /* Adjust the spacing of content between cards */
+    .inspired-us-content-card-between {
+        margin-top: 10%;
+    }
+    
+    /* Make sure the section has enough space */
+    .inspired-us-main-container {
+        height: auto;
+        min-height: 150vh;
+    }
+}
+
+/* Smaller mobile landscape adjustments */
+@media (max-width: 740px) and (max-height: 420px) and (orientation: landscape) {
+    .inspired-us-main-container {
+        padding-top: 80px; /* More top padding for smaller devices */
+        min-height: 180vh; /* Increase minimum height */
+    }
+    
+    /* Make content cards full width for better readability */
+    .inspired-us-content-card, 
+    .inspired-us-content-card-right {
+        width: 95%;
+    }
+    
+    /* Adjust heading size */
+    .inspired-us-content-card-head {
+        font-size: 30px;
+    }
+    
+    /* Make the button wider for easier tapping */
+    .inspired-us-content-card-btn,
+    .inspired-us-content-card-btn-case {
+        width: 50%;
+        height: 45px;
+    }
+    
+    /* Ensure video and content are properly aligned */
+    .inspired-video-card {
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+}
+
+/* iPhone SE and very small landscapes */
+@media (max-width: 640px) and (max-height: 375px) and (orientation: landscape) {
+    .inspired-us-main-container {
+        padding-top: 100px; /* Even more padding for very small devices */
+        min-height: 200vh; /* Further increase minimum height */
+    }
+    
+    /* Further reduce text sizes */
+    .inspired-us-content-card-para {
+        font-size: 13px;
+    }
+    
+    .inspired-video-content-head {
+        font-size: 22px;
+    }
+    
+    .inspired-video-content-para {
+        font-size: 13px;
+    }
+}

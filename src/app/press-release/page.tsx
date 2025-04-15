@@ -132,7 +132,7 @@ function PressRelease() {
       <div className="press-release-main-container">
           <div className="flex top-press-release-card">
               <div className="top-press-release-card-content">
-                  <h2 className="top-press-release-card-head">{pressReleases[0].heading}</h2>
+                  <h2 className="top-press-release-card-head mt-5">{pressReleases[0].heading}</h2>
                   <div>
                       <p className="top-press-release-card-para">{pressReleases[0].para}</p>
                       <button type="button" className="flex items-center top-press-release-card-btn">
