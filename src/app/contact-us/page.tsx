@@ -131,7 +131,7 @@ export default function ContactUs() {
                             <div className="mb-3">
                                 <p className="contact-us-page-layout-left-subhead">Connect to Us</p>
                                 <div className="flex items-center justify-between w-[50%] mt-4 contact-us-page-layout-left-logos">
-                                    <Link href="https://wa.me/+918800262061"><FaLinkedinIn className='social-media-handle-logo'/> </Link>
+                                    <Link href="https://www.linkedin.com/company/adclickmagnet/"><FaLinkedinIn className='social-media-handle-logo'/> </Link>
                                     <Link href="https://www.instagram.com/adclickmagnet?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" ><FaInstagram className='social-media-handle-logo'/></Link>
                                     <Link href="https://www.facebook.com/profile.php?id=61552551834420" ><FaFacebook className='social-media-handle-logo'/></Link>
                                     <Link href="https://wa.me/+918800262061"><RiWhatsappFill className='social-media-handle-logo'/> </Link>
