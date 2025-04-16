@@ -65,7 +65,7 @@ const hoverImageArr = [
     },
     {
         name: "Linkedin Ads",
-        img: "/images/navbar/Linkedin.webp"
+        img: "/images/navbar/linkedin.webp"
     },
     {
         name: "Web Development",
