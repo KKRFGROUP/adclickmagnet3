@@ -18,72 +18,26 @@ const FullScreenLoader = () => (
   </div>
 );
 
-// Create a custom Space Circle Cursor component
-const SpaceCircleCursor = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [isVisible, setIsVisible] = useState(false);
-  const [isTouchDevice, setIsTouchDevice] = useState(false);
+// Custom single-circle cursor for home page only
+const SimpleCircleCursor = () => {
 
-  // Only run on client-side
-  React.useEffect(() => {
-    // Check if device is touch-enabled
-    setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
-    
-    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
-      return; // Don't initialize cursor on touch devices
-    }
+  // Don't render on touch devices
+  if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+    return null;
+  }
 
-    // Hide default cursor
-    document.body.style.cursor = 'none';
-    
-    const handleMouseMove = (e) => {
-      setPosition({ x: e.clientX, y: e.clientY });
-    };
-    
-    const handleMouseEnter = () => {
-      setIsVisible(true);
-    };
-    
-    const handleMouseLeave = () => {
-      setIsVisible(false);
-    };
-    
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseenter', handleMouseEnter);
-    document.addEventListener('mouseleave', handleMouseLeave);
-    
-    return () => {
-      document.body.style.cursor = '';
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseenter', handleMouseEnter);
-      document.removeEventListener('mouseleave', handleMouseLeave);
-    };
-  }, []);
-  
-  if (isTouchDevice) return null;
-  
   return (
-    <div
-      className="fixed pointer-events-none z-50 transition-opacity duration-300"
-      style={{
-        opacity: isVisible ? 1 : 0,
-        left: `${position.x}px`,
-        top: `${position.y}px`,
-        transform: 'translate(-50%, -50%)',
-        width: '32px',
-        height: '32px',
-        borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(24,24,24,0.8) 0%, rgba(0,0,0,0.9) 70%, rgba(0,0,0,0) 100%)',
-        boxShadow: '0 0 10px 2px rgba(255,255,255,0.1)'
-      }}
-    />
+    <>
+      {/* Small circle cursor */}
+      <div
+       
+      />
+    </>
   );
 };
 
-// Import the custom cursor with dynamic import to avoid SSR issues
-const Cursor = dynamic(() => Promise.resolve(SpaceCircleCursor), {
-  ssr: false
-});
+// Load the custom cursor only for the home page
+const CustomCursor = dynamic(() => Promise.resolve(SimpleCircleCursor), { ssr: false });
 
 // Lazily load all components
 const SovereignChains = lazy(() => import('@/components/SovereignChains/SovereignChains'));
@@ -165,8 +119,8 @@ export default function Home() {
       {isLoading && <FullScreenLoader />}
       
       <main className={`opacity-100 ${isLoading ? 'invisible' : 'visible'}`}>
-        {/* Add the space circle cursor component */}
-        <Cursor />
+        {/* Use custom single-circle cursor for home page only */}
+        <CustomCursor />
         
         {/* Your main content here */}
         <Suspense fallback={<FullScreenLoader />}>
