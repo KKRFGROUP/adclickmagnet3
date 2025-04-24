@@ -30,29 +30,61 @@ module.exports = {
   compress: true,
   poweredByHeader: false,
   optimizeFonts: true,
-    images: {
-      minimumCacheTTL: 60,
-      formats: ['image/webp'],
-      remotePatterns: [
-        
-        {
-          protocol: 'https',
-          hostname: 'assets.pinterest.com',
-          port: '',
-        },
-        {
-          protocol: 'https',
-          hostname: 'res.cloudinary.com',
-          port: '',
-        },
-      ], 
-    },
-    experimental: {
-      serverComponentsExternalPackages: ['@aws-sdk/client-s3', '@aws-sdk/s3-request-presigner']
-    },
-    
-    // Include in your existing config if you also want to use public images
-    images: {
-      domains: ['adclickmagnetimage.blr1.cdn.digitaloceanspaces.com'],
-    },
-  }
+  
+  // Force HTTPS in production
+  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://adclickmagnet.com' : '',
+  
+  // Consolidated images config (merged the two separate configs)
+  images: {
+    minimumCacheTTL: 60,
+    formats: ['image/webp'],
+    domains: ['adclickmagnetimage.blr1.cdn.digitaloceanspaces.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'assets.pinterest.com',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        port: '',
+      },
+    ],
+  },
+  
+  experimental: {
+    serverComponentsExternalPackages: ['@aws-sdk/client-s3', '@aws-sdk/s3-request-presigner']
+  },
+  
+  // Add security headers to fix SSL issues
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=63072000; includeSubDomains; preload'
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: "upgrade-insecure-requests"
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff'
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block'
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin'
+          }
+        ],
+      },
+    ];
+  },
+}
