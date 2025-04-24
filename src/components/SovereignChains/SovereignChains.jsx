@@ -8,7 +8,7 @@ const SovereignChains = () => {
   const videoRef = useRef(null);
   
   // Direct CDN URL to the video
-  const videoUrl = "http://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/6597cc7be68d63ec0c8ce338_6650944b0367d5a7dde099fc_non-zero-sum-copy-transcode%20(2).mp4";
+  const videoUrl = "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/6597cc7be68d63ec0c8ce338_6650944b0367d5a7dde099fc_non-zero-sum-copy-transcode%20(2).mp4";
 
   useEffect(() => {
     const handleMouseMove = (e) => {
