@@ -101,7 +101,8 @@ function Career() {
                 <div className="career-hero-sec" style={{backgroundImage: `url("/images/background images/career-page-bg.webp")`, backgroundSize: "cover"}}>
                     <div className="career-hero-sec-content">
                         <h1 className="career-hero-sec-head">Shape Your Future with Us!</h1>
-                        <p className="career-hero-sec-para">Discover a dynamic workplace where innovation drives growth, and your career aspirations take center stage. At Radiant Web Technology, we prioritize our people, fostering a team of skilled and passionate professionals. Here, you'll find opportunities for career progression, continuous learning, and a culture that values collaboration and support. Join us to work on exciting projects and gain invaluable experience alongside industry experts, all while making a meaningful impact.</p>
+                        <p className="career-hero-sec-para">Discover a dynamic workplace where innovation drives growth, and your career aspirations take center stage. At adclickmagnet
+                    , we prioritize our people, fostering a team of skilled and passionate professionals. Here, you'll find opportunities for career progression, continuous learning, and a culture that values collaboration and support. Join us to work on exciting projects and gain invaluable experience alongside industry experts, all while making a meaningful impact.</p>
                     </div>
                 </div>
 
