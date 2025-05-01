@@ -116,7 +116,7 @@ export default function ContactUs() {
                             <div className="mb-3">
                                 <p className="contact-us-page-layout-left-subhead">Visit us</p>
                                 <p className="contact-us-page-layout-left-para">Come say hello at our office HQ.</p>
-                                <p className="contact-us-page-layout-left-para">Building No./Flat No.: 27/489, <br />Road/Street: TRILOKPURI, New Delhi, <br />PIN Code: 110091</p>
+                                <p className="contact-us-page-layout-left-para">Building No./Flat No.: 27/489, <br />Road/Street: New Delhi, <br />PIN Code: 110091</p>
                             </div>
                             <div className="mb-3">
                                 <p className="contact-us-page-layout-left-subhead">Chat to us</p>
