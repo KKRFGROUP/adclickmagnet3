@@ -47,7 +47,7 @@ export default function ContactUs() {
       contactNumber: "+1-718-577-2718"
     }
 
-    const payNowLink = "https://razorpay.com/";
+    const payNowLink = "https://rzp.io/rzp/5UThEojT/";
   
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
