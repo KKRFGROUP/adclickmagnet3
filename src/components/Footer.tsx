@@ -94,9 +94,41 @@ function SignupFormDemo() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus({ message: "Submitting...", isError: false });
-    router.push("/thank-you");
-  };
 
+    try {
+      const response = await fetch('https://api.shareconnection.in/public/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          recipient_email: 'pankajjha0191@gmail.com', // Use the email from the form data
+          subject: "AdClickMagnet Inquiry", // You can set a default subject or include it in the form
+          body: `
+            First Name: ${formData.firstName}
+            Last Name: ${formData.lastName}
+            Email: ${formData.email}
+            Phone Number: ${formData.phoneNumber}
+            Message: ${formData.message}
+          `, // Construct the email body with form data
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        console.log("Email sent successfully:", data);
+        setStatus({ message: "Message sent successfully!", isError: false });
+        router.push("/thank-you"); // Redirect on successful submission
+      } else {
+        console.log("Email sent successfully:", data);
+        setStatus({ message: `Failed to send message: ${data.message || 'Something went wrong.'}`, isError: true });
+      }
+    } catch (error: any) {
+      console.error("Error sending message:", error);
+      setStatus({ message: "Failed to send message. Please try again later.", isError: true });
+    }
+  };
   
 
   return (
