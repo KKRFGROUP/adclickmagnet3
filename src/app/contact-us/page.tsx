@@ -268,7 +268,7 @@ export default function ContactUs() {
                     
                         <div className="term-and-condition-cont flex justify-between items-center">
                         <div className="term-and-condition-content flex items-center gap-6">
-                            <p>© 2024
+                            <p>© 2025
                             ACM</p>
                             <p>Terms & Conditions</p>
                             <p>Privacy Policy</p>
