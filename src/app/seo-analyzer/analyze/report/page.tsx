@@ -224,7 +224,7 @@ function Report() {
                 <DropdownContent>
                 
                     <DropdownItem value="I Need Help IMMEDIATELY">I need help immediately</DropdownItem>
-                    <DropdownItem value="I Need to start working on this quarter">I Need to start working on it THIS quarter</DropdownItem>
+                    <DropdownItem value="I Need to start working on this quarter">I Need to start working on it this quarter</DropdownItem>
                     <DropdownItem value="I Have 6 months to decide">I Have 6 months to decide</DropdownItem>
                     <DropdownItem value="I Have more than A year">I Have more than a year</DropdownItem>
                     <DropdownItem value="Not a Priority">Not a Priority</DropdownItem>
