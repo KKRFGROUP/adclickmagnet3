@@ -162,7 +162,7 @@ function Career() {
                     <div className="career-current-openings-flex">
                         <h2 className="career-current-openings-head">Current Openings ({careerData.length})</h2>
                         <div className="career-current-opening-list">
-                            {currentItems.map((job, id) => (
+                            {currentItems.map((job) => (
                                 <div key={job.id} className='mb-4'>
                                     <div className="career-current-opening-list-item">
                                         <div className="career-current-opening-list-item-left">
