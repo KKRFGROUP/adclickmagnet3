@@ -116,7 +116,7 @@ export default function Home() {
   return (
     <>
       {/* Main full-screen loader */}
-      {isLoading && <FullScreenLoader />}
+      {/* {isLoading && <FullScreenLoader />} */}
       
       <main className={`opacity-100 ${isLoading ? 'invisible' : 'visible'}`}>
         {/* Use custom single-circle cursor for home page only */}
