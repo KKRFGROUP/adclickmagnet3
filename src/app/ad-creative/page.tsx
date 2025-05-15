@@ -90,27 +90,27 @@ const section3:{mainpara: string; heading: {text: string; className: string;}[];
   mainpara: "BUILT FOR COMMS, STRATEGY & MARKETING TEAMS",
   heading: [
     {  
-      text: "Ad",
+      text: "High-Converting",
       className: "text-black dark:text-white-500 tracking-wider",
     },
     {
-        text: "creative",
+        text: "Ad",
         className: "text-black dark:text-white-500 tracking-wider",
     },
     {
-        text: "for",
+        text: "Creative Services",
         className: "text-black dark:text-white-500 tracking-wider",
     },
     {   
-        text: "campaigns",
+        text: "for US",
         className: "text-black dark:text-white-500 tracking-wider",
     },
     {
-        text: "that",
+        text: "&",
         className: "text-black dark:text-white-500 tracking-wider",
     },
     {  
-        text: "perform",
+        text: "Canadian Brands",
         className: "text-black dark:text-white-500 tracking-wider",
       },
 ],
