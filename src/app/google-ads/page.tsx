@@ -96,6 +96,10 @@ const section3 = {
     mainpara: "OPTIMIZED FOR GROWTH, VISIBILITY & ROI",
     heading: [
       {  
+        text: "ROI-Driven",
+        className: "text-black dark:text-white-500 tracking-wider",
+      },
+      {
         text: "Google",
         className: "text-black dark:text-white-500 tracking-wider",
       },
@@ -103,25 +107,33 @@ const section3 = {
         text: "Ads",
         className: "text-black dark:text-white-500 tracking-wider",
       },
-      {
-        text: "Solutions",
-        className: "text-black dark:text-white-500 tracking-wider",
-      },
       {   
-        text: "that",
+        text: "management",
         className: "text-black dark:text-white-500 tracking-wider",
       },
       {
-        text: "Drive",
+        text: "Across",
         className: "text-black dark:text-white-500 tracking-wider",
       },
       {  
-        text: "Results",
+        text: "the",
+        className: "text-black dark:text-white-500 tracking-wider",
+      }, 
+        {  
+        text: "USA",
+        className: "text-black dark:text-white-500 tracking-wider",
+      },
+        {  
+        text: "&",
+        className: "text-black dark:text-white-500 tracking-wider",
+      },
+         {  
+        text: "Canada",
         className: "text-black dark:text-white-500 tracking-wider",
       },
     ],
     para1: "In a competitive digital landscape, targeted Google Ads can elevate your brand’s visibility and drive high-quality traffic to your website. Our tailored Google Ads services help you reach the right audience effectively and maximize your ROI.",
-    para2: "Our team of certified Google Ads specialists provides end-to-end solutions, from keyword research and ad creation to performance tracking and optimization, ensuring you achieve the best possible outcomes for your ad spend.",
+    para2: "As specialists in Google Ads, our team provides end-to-end solutions, from keyword research and ad creation to performance tracking and optimization, ensuring you achieve the best possible outcomes for your ad spend.",
     image: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/googleads/google%20ads%20sec3%20img.webp"
   };
   
