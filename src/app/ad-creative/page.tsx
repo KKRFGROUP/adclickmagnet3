@@ -117,6 +117,10 @@ const section3:{mainpara: string; heading: {text: string; className: string;}[];
         text: "Canadian Brands",
         className: "text-black dark:text-white-500 tracking-wider",
       },
+ {  
+        text: "Brands",
+        className: "text-black dark:text-white-500 tracking-wider",
+      },
 ],
   para1: "Brands are fueled by a mixture of emotion and strategy. The true art of branding design is combining both—to stand out from the competition and forge memorable connections.",
   para2: "Our global team of brand experts, who’ve worked at top brand design agencies and well-known brands, will help you grow and elevate your brand. From creative branding services like logo design to complete brand development, we help you express what makes your brand unique.", 
