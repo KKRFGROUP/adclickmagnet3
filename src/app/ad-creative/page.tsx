@@ -114,7 +114,7 @@ const section3:{mainpara: string; heading: {text: string; className: string;}[];
         className: "text-black dark:text-white-500 tracking-wider",
       },
     {  
-        text: "Canadian Brands",
+        text: "Canadian",
         className: "text-black dark:text-white-500 tracking-wider",
       },
  {  
