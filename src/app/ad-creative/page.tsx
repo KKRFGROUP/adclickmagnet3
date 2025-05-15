@@ -98,17 +98,21 @@ const section3:{mainpara: string; heading: {text: string; className: string;}[];
         className: "text-black dark:text-white-500 tracking-wider",
     },
     {
-        text: "Creative Services",
+        text: "Creative-Services",
         className: "text-black dark:text-white-500 tracking-wider",
     },
     {   
-        text: "for US",
+        text: "for",
         className: "text-black dark:text-white-500 tracking-wider",
     },
     {
-        text: "&",
+        text: "US",
         className: "text-black dark:text-white-500 tracking-wider",
     },
+    {  
+        text: "&",
+        className: "text-black dark:text-white-500 tracking-wider",
+      },
     {  
         text: "Canadian Brands",
         className: "text-black dark:text-white-500 tracking-wider",
