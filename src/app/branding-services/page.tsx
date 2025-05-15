@@ -94,20 +94,32 @@ const section3:{mainpara: string; heading: {text: string; className: string;}[];
         className: "text-black dark:text-white-500 tracking-wider",
     },
     {
-        text: "for",
+        text: "services",
         className: "text-black dark:text-white-500 tracking-wider",
     },
     {   
-        text: "every",
+        text: "for",
         className: "text-black dark:text-white-500 tracking-wider",
     },
     {
-        text: "business",
+        text: "USA",
+        className: "text-black dark:text-white-500 tracking-wider",
+    },
+       {
+        text: "&",
+        className: "text-black dark:text-white-500 tracking-wider",
+    },
+       {
+        text: "Canadian",
+        className: "text-black dark:text-white-500 tracking-wider",
+    },
+{
+        text: "Businesses",
         className: "text-black dark:text-white-500 tracking-wider",
     },
 ],
-  para1: "Brands are fueled by a mixture of emotion and strategy. The true art of branding design is combining both—to stand out from the competition and forge memorable connections.",
-  para2: "Our global team of brand experts, who’ve worked at top brand design agencies and well-known brands, will help you grow and elevate your brand. Whether it's a logo or a complete brand development, we help you express what makes your brand unique.", 
+  para1: "Leverage the power of AI to improve efficiency and cost savings in our design services. ACM’s AI-enhanced workflows streamline the creation of brand creative, delivering up to 60% savings for our customers.",
+  para2: "This ensures that every project is handled with precision, enhancing both the quality and speed of your creative production. Experience unparalleled efficiency and innovation with our AI-driven design solutions, tailored to elevate your brand’s image using branding a company strategies.", 
   image: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/BrandingServices/Branding-hero.webp"
 }
 
