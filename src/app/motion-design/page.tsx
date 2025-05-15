@@ -33,36 +33,45 @@ const section3:{mainpara: string; heading: {text: string; className: string;}[];
   mainpara: "BUILT FOR COMMS, STRATEGY & MARKETING TEAMS",
   heading: [
     {  
-      text: "Move",
+      text: "Dynamic",
       className: "text-black dark:text-white-500 tracking-wider",
     },
     {
-        text: "the",
+        text: "Motion",
         className: "text-black dark:text-white-500 tracking-wider",
     },
     {
-        text: "needle",
+        text: "Design",
         className: "text-black dark:text-white-500 tracking-wider",
     },
     {   
-        text: "with",
+        text: "Services",
         className: "text-black dark:text-white-500 tracking-wider",
     },
     {
-        text: "expert",
+        text: "for",
         className: "text-black dark:text-white-500 tracking-wider",
     },
     {  
-        text: "motion",
+        text: "USA",
         className: "text-black dark:text-white-500 tracking-wider",
       },
       {  
-        text: "design",
+        text: "&",
+        className: "text-black dark:text-white-500 tracking-wider",
+      },    
+       {  
+        text: "Canadian",
+        className: "text-black dark:text-white-500 tracking-wider",
+      },   
+       {  
+        text: "Brands",
         className: "text-black dark:text-white-500 tracking-wider",
       },    
 ],
-  para1: "Goodbye, static creativity. Hello, motion! Our motion design brings dynamic graphics and animations to every touchpoint, ensuring attention-grabbing content that boosts conversions.",
-  para2: "Our expert motion designers collaborate closely with you, crafting custom creative from concept to final product. We ensure engaging experiences that captivate your audience.", 
+  para1: "Goodbye, static creativity. Hello, motion! As a leading motion graphics company, we bring dynamic graphics and animations to every touchpoint, ensuring attention-grabbing content that boosts conversions.",
+  para2: "Our expert motion designers collaborate closely with you, crafting custom creative from concept to final product, delivering engaging experiences that captivate your audience.
+", 
   image: "https://res.cloudinary.com/deepcnbrz/image/upload/v1730822005/Screenshot_2024-11-05_212211_hhbsos.png",
   video: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/video-production/motion%20sec3%20vdo.mp4"
 }
