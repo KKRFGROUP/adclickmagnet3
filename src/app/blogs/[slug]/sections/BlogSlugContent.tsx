@@ -51,29 +51,30 @@ function BlogSlugContent({content}: {content: {
 
   return (
     <div className="blog-slug-content-sec">
-        <div className="blog-slug-content">
-            {content.content.para.map((each, index) => (
-                <>
-                <p key={index}>{each}</p>
-                <br />
-                </>
-            ))}
-            {content.content.subcontent.map((each,index) => (
-                <div key={index} className='blog-slug-content-suncontent'>
-                    <h2 className='blog-slug-content-head'>{each.subhead}</h2>
-                    <p>{each.subpara}</p>
-                </div>
-            ))}
-            {/* author card
-            <div className="press-release-author-card">
-                    <Image className="press-release-author-card-img" src="/images/logos/mobile-navbar-logo.webp" alt="logo" height={500} width={500} />
-                    <div>
-                      <p className="press-release-author-card-author">THE AUTHOR</p>
-                     
-                      <p className="press-release-author-card-name">Aftab • adClickMagnet</p>
-                    </div>
-            </div> */}
-        </div>
+       <div className="blog-slug-content">
+  {content.content.para.map((each, index) => (
+    <React.Fragment key={index}>
+
+      <p dangerouslySetInnerHTML={{ __html: each }} />
+
+      <br />
+    </React.Fragment>
+  ))}
+  {content.content.subcontent.map((each, index) => (
+    <div key={index} className="blog-slug-content-suncontent">
+      <h2 className="blog-slug-content-head">{each.subhead}</h2>
+      <p>{each.subpara}</p>
+    </div>
+  ))}
+  {/* author card
+  <div className="press-release-author-card">
+    <Image className="press-release-author-card-img" src="/images/logos/mobile-navbar-logo.webp" alt="logo" height={500} width={500} />
+    <div>
+      <p className="press-release-author-card-author">THE AUTHOR</p>
+      <p className="press-release-author-card-name">Aftab • adClickMagnet</p>
+    </div>
+  </div> */}
+</div>
         <div className="blog-slug-contact-form-card">
             <div className="blog-slug-contact-form">
                 <Image className="blog-slug-contact-form-img" src="/images/slug-page-contact-us.webp" alt="contact form img" height={500} width={500} />
