@@ -26,40 +26,36 @@ const section3:{mainpara: string; heading: {text: string; className: string;}[];
   mainpara: "BUILT FOR COMMS, STRATEGY & MARKETING TEAMS",
   heading: [
     {  
-      text: "Elevate",
+      text: "Impactful",
       className: "text-black dark:text-white-500 tracking-wider",
     },
     {
-        text: "your",
+        text: "Presentation",
         className: "text-black dark:text-white-500 tracking-wider",
     },
     {
-        text: "presentations",
+        text: "Design",
         className: "text-black dark:text-white-500 tracking-wider",
     },
     {   
-        text: "and",
+        text: "for",
         className: "text-black dark:text-white-500 tracking-wider",
     },
     {
-        text: "sales",
+        text: "North",
         className: "text-black dark:text-white-500 tracking-wider",
     },
     {  
-        text: "decks",
+        text: "American",
         className: "text-black dark:text-white-500 tracking-wider",
     },
     {  
-      text: "with",
-      className: "text-black dark:text-white-500 tracking-wider",
-    },
-    {  
-      text: "ACM",
+      text: "Professionals",
       className: "text-black dark:text-white-500 tracking-wider",
     },
 ],
-  para1: "We do your ideas justice with beautifully designed presentations that follow a logical structure, showcase your data in a clear, compelling manner and convey your message in the most persuasive way possible.",
-  para2: "Whether you need a pitch deck to persuade VCs, templates for internal communications or slides for a key event, our world-class team of presentation designers will work with you to deliver a stunning final product.", 
+  para1: "We do your ideas justice with beautifully designed presentations that follow a logical structure, showcase your data in a clear, compelling manner, and convey your message in the most persuasive way possible.",
+  para2: "Whether you need a pitch deck to persuade VCs, templates for internal communications, or slides for a key event, our world-class presentation designers will work with you to deliver a stunning final product.", 
   image: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/Pransentation-design/presentation%20sec3%20img.webp",
   //video: "https://res.cloudinary.com/dvhmy6a4u/video/upload/v1733681971/e7179a38ce0e25b77ac5c3c15b92dccc_tfhsfw.mp4"
 }

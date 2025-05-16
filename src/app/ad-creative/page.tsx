@@ -90,32 +90,40 @@ const section3:{mainpara: string; heading: {text: string; className: string;}[];
   mainpara: "BUILT FOR COMMS, STRATEGY & MARKETING TEAMS",
   heading: [
     {  
-      text: "Ad",
+      text: "High-Converting",
       className: "text-black dark:text-white-500 tracking-wider",
     },
     {
-        text: "creative",
+        text: "Ad",
         className: "text-black dark:text-white-500 tracking-wider",
     },
     {
-        text: "for",
+        text: "Creative-Services",
         className: "text-black dark:text-white-500 tracking-wider",
     },
     {   
-        text: "campaigns",
+        text: "for",
         className: "text-black dark:text-white-500 tracking-wider",
     },
     {
-        text: "that",
+        text: "US",
         className: "text-black dark:text-white-500 tracking-wider",
     },
     {  
-        text: "perform",
+        text: "&",
+        className: "text-black dark:text-white-500 tracking-wider",
+      },
+    {  
+        text: "Canadian",
+        className: "text-black dark:text-white-500 tracking-wider",
+      },
+ {  
+        text: "Brands",
         className: "text-black dark:text-white-500 tracking-wider",
       },
 ],
-  para1: "The need for compelling ad creative has never been greater. But, when your biggest challenge is getting to market, the best solution is plugging into ACM’s flexible ad design services.",
-  para2: "In a world where talent is hard to find, ours has no borders. Our global team of highly skilled ad designers can help with everything from market research and concept development to applying the latest AI, AR and 3D overlays.", 
+  para1: "Brands are fueled by a mixture of emotion and strategy. The true art of branding design is combining both—to stand out from the competition and forge memorable connections.",
+  para2: "Our global team of brand experts, who’ve worked at top brand design agencies and well-known brands, will help you grow and elevate your brand. From creative branding services like logo design to complete brand development, we help you express what makes your brand unique.", 
   image: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/adcreative/acm%20website%20img.webp",
   //video: "/videos/graphic design/services/01.mp4"
 }

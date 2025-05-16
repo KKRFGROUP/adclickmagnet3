@@ -97,7 +97,7 @@ const section3a = {
   para1: 
     "Harness the power of video in today’s digital world. Our comprehensive video production services cater to creative and marketing teams, delivering impactful content tailored to your audience.",
   para2: 
-    "From brand videos that build awareness to performance-driven videos that boost conversions, we offer a cost-effective, hassle-free approach with speed and flexibility through our subscription model.",
+    "As one of the leading video production agencies, we offer brand videos that build awareness and performance-driven videos that boost conversions, providing a cost-effective, hassle-free approach with speed and flexibility through our subscription model.",
   image: 
     "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/video-production/video%20production%20sec3a.gif",
 };
@@ -107,7 +107,7 @@ const section3b:{mainpara: string; heading: {text: string; className: string;}[]
   mainpara: "BRAND VIDEO FOR AWARENESS",
   heading: [
     {  
-      text: "Brand",
+      text: "Professional",
       className: "text-black dark:text-white-500 tracking-wider",
     },
     {
@@ -115,23 +115,31 @@ const section3b:{mainpara: string; heading: {text: string; className: string;}[]
         className: "text-black dark:text-white-500 tracking-wider",
     },
     {
-        text: "that",
+        text: "Production",
         className: "text-black dark:text-white-500 tracking-wider",
     },
     {   
-        text: "captures",
+        text: "Services",
         className: "text-black dark:text-white-500 tracking-wider",
     },
     {
-        text: "the",
+        text: "in",
         className: "text-black dark:text-white-500 tracking-wider",
     },
     {  
-        text: "big",
+        text: "the",
         className: "text-black dark:text-white-500 tracking-wider",
       },
       {  
-        text: "picture",
+        text: "USA",
+        className: "text-black dark:text-white-500 tracking-wider",
+      },
+       {  
+        text: "&",
+        className: "text-black dark:text-white-500 tracking-wider",
+      },
+        {  
+        text: "Canada",
         className: "text-black dark:text-white-500 tracking-wider",
       },
 ],
