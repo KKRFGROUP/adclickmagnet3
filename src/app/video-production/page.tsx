@@ -1,6 +1,7 @@
 "use client"
 
 import React,{useRef,useState} from 'react'
+import Head from 'next/head'; // Import the Head component
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/services-components/HeroSection';
@@ -358,6 +359,10 @@ function VideoProduction() {
   const pageMainRef = useRef<HTMLDivElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
 
+    const pageTitle = " Video Production Services USA & Canada | adClickMagnet";
+    const pageDescription = " Boost brand awareness with expert video production services across the US and Canada. We craft marketing videos that connect, engage, and drive conversions";
+  
+
   const toggleMenu = (arg?: boolean) => {
     setIsOpen(arg ?? !isOpen);
 
@@ -372,6 +377,14 @@ function VideoProduction() {
   
   return (
     <>
+    <Head>
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+    {/* You can add other meta tags here, like Open Graph tags */}
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    {/* <meta property="og:image" content="URL_TO_YOUR_IMAGE" /> */}
+  </Head>
         <Navbar mobileOverlayOpen={toggleMenu} isOpen={isOpen}/>
         <div ref={pageMainRef} className="page-main">
           <div className='tracing-beam'>
