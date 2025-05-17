@@ -70,8 +70,7 @@ const section3:{mainpara: string; heading: {text: string; className: string;}[];
       },    
 ],
   para1: "Goodbye, static creativity. Hello, motion! As a leading motion graphics company, we bring dynamic graphics and animations to every touchpoint, ensuring attention-grabbing content that boosts conversions.",
-  para2: "Our expert motion designers collaborate closely with you, crafting custom creative from concept to final product, delivering engaging experiences that captivate your audience.
-", 
+para2: "Our expert motion designers collaborate closely with you, crafting custom creative from concept to final product, delivering engaging experiences that captivate your audience.", 
   image: "https://res.cloudinary.com/deepcnbrz/image/upload/v1730822005/Screenshot_2024-11-05_212211_hhbsos.png",
   video: "https://adclickmagnetimage.blr1.cdn.digitaloceanspaces.com/video-production/motion%20sec3%20vdo.mp4"
 }
