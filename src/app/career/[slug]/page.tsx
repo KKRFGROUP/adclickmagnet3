@@ -77,9 +77,15 @@ function CareerSlug() {
         setLoading(false);
       }
     };
-
-    fetchCareer();
-  }, []);
+  
+    if (slug) { // Ensure slug is defined before fetching
+      fetchCareer();
+    } else {
+      // Handle the case where slug is initially undefined (optional)
+      setLoading(false);
+      setError("Career slug not found.");
+    }
+  }, [slug]); // Include 'slug' in the dependency array
 
   const handleChange = (e: { target: { name: any; value: any; }; }) => {
     const { name, value } = e.target;
