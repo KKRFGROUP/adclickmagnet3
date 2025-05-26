@@ -32,8 +32,8 @@ interface MorePressReleaseItem {
 }
 
 // Configuration for API URLs, using window.APP_CONFIG for flexibility
-const weburl = "http://127.0.0.1:8000/api";
-const imageUrlBase =  "http://127.0.0.1:8000"; // Base URL for images
+const weburl = "http://api.adclickmagnet.us/api";
+const imageUrlBase =  "http://api.adclickmagnet.us"; // Base URL for images
 
 // Helper function to get full image URL
 const getFullImageUrl = (relativePath: string): string => {
@@ -42,7 +42,7 @@ const getFullImageUrl = (relativePath: string): string => {
     return relativePath || "https://placehold.co/500x300/E0E0E0/333333?text=No+Image";
   }
   // Assuming Laravel Storage::url() returns paths like /storage/path/to/image.jpg
-  // We concatenate the base URL (e.g., http://127.0.0.1:8000) with the relative path from the API
+  // We concatenate the base URL (e.g., http://api.adclickmagnet.us) with the relative path from the API
   return `${imageUrlBase}${relativePath}`;
 };
 
