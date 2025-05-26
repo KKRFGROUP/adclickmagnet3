@@ -13,6 +13,7 @@ if (typeof window !== 'undefined') {
 }
 
 const API_URL = 'https://api.adclickmagnet.us/api/blogs';
+const BASE_URL = 'https://api.adclickmagnet.us/storage/';
 
 function TopBlogs() {
     interface Blog {
@@ -125,26 +126,39 @@ function TopBlogs() {
                 {sortedBlogs[0] && (
                     <Link href={`/blogs/${sortedBlogs[0].slug || sortedBlogs[0].id}`} className="top1-blog-card mb-9">
                         {sortedBlogs[0].featured_image && (
+                            // <Image
+                            //     className='blogs-page-blog-img'
+                            //     src='/images/blog-img-template.jpg'
+                            //     alt={sortedBlogs[0].title}
+                            //     height={500}
+                            //     width={500}
+                            //     onError={(e) => {
+                            //         console.error("Error loading image:", sortedBlogs[0].featured_image);
+                            //         e.currentTarget.onerror = null; // Prevent infinite loop
+                            //         e.currentTarget.src = "/images/blog-img-template.jpg"; // Fallback image
+                            //     }}
+                            // />
                             <Image
-                                className='blogs-page-blog-img'
-                                src='/images/blog-img-template.jpg'
-                                alt={sortedBlogs[0].title}
-                                height={500}
-                                width={500}
-                                onError={(e) => {
-                                    console.error("Error loading image:", sortedBlogs[0].featured_image);
-                                    e.currentTarget.onerror = null; // Prevent infinite loop
-                                    e.currentTarget.src = "/images/blog-img-template.jpg"; // Fallback image
-                                }}
-                            />
+                            className="flex-blogs-page-blog-img mb-5"
+                            src={BASE_URL + sortedBlogs[0].featured_image}
+                            alt={sortedBlogs[0].title}
+                            height={400}
+                            width={400}
+                            onError={(e) => {
+                                console.error("Error loading image:", sortedBlogs[0].featured_image);
+                                e.currentTarget.onerror = null;
+                                e.currentTarget.src = "images/blog-img-template.jpg"; // Changed to vcgcgch.jpg
+                            }}
+                        />
                         )}
                         <div className='top1-blog-card-content '>
                             <p className='blog-card-content-category'>{(sortedBlogs[0].category || 'Uncategorized')}</p>
                             <h2 className='blog-card-content-heading'>{sortedBlogs[0].title}</h2>
-                            <p className='blog-card-content-para'>{sortedBlogs[0].content?.substring(0, 150)}...</p> {/* Basic excerpt */}
-                            {/* Assuming there isn't an author name directly in the API response */}
+                            <div
+                                        className='blog-page-latest-blog-card-content-para'
+                                        dangerouslySetInnerHTML={{ __html: sortedBlogs[0].content?.substring(0, 100) + '...' || '' }}
+                                    />                            {/* Assuming there isn't an author name directly in the API response */}
                             {/* You might need to fetch author details separately based on author_id */}
-                            <p className='blog-card-content-name'>Author: {sortedBlogs[0].author_id}</p>
                         </div>
                     </Link>
                 )}
@@ -156,21 +170,23 @@ function TopBlogs() {
                             {blog.featured_image && (
                                 <Image
                                     className="flex-blogs-page-blog-img mb-5"
-                                    src='/images/blog-img-template.jpg'
+                                    src={BASE_URL + blog.featured_image}
                                     alt={blog.title}
                                     height={500}
                                     width={500}
                                     onError={(e) => {
                                         console.error("Error loading image:", blog.featured_image);
                                         e.currentTarget.onerror = null;
-                                        e.currentTarget.src = "/images/blog-img-template.jpg";
+                                        e.currentTarget.src = "images/blog-img-template.jpg"; // Changed to vcgcgch.jpg
                                     }}
                                 />
                             )}
                             <div className='flex-blog-content'>
                                 <h2 className='flex-blog-card-content-heading'>{blog.title}</h2>
-                                <p className='flex-blog-card-content-para'>{blog.content?.substring(0, 100)}...</p> {/* Basic excerpt */}
-                                <p className='flex-blog-card-content-name'>Author: {blog.author_id}</p>
+                                <div
+                                        className='blog-page-latest-blog-card-content-para'
+                                        dangerouslySetInnerHTML={{ __html: blog.content?.substring(0, 100) + '...' || '' }}
+                                    />
                             </div>
                         </Link>
                     ))}
@@ -185,24 +201,27 @@ function TopBlogs() {
                                     <Link key={blog.id} href={`/blogs/${blog.slug || blog.id}`} className='blog-page-latest-blog-card'>
                                         {blog.featured_image && (
                                             <Image
-                                                className='blog-page-latest-blog-card-img'
-                                                                        src='/images/blog-img-template.jpg'
-                                                alt={blog.title}
-                                                height={500}
-                                                width={500}
-                                                onError={(e) => {
-                                                    console.error("Error loading image:", blog.featured_image);
-                                                    e.currentTarget.onerror = null;
-                                                    e.currentTarget.src = "/images/blog-img-template.jpg";
-                                                }}
-                                            />
+                                            className="flex-blogs-page-blog-img mb-5"
+                                            src={BASE_URL + blog.featured_image}
+                                            alt={blog.title}
+                                            height={400}
+                                            width={400}
+                                            onError={(e) => {
+                                                console.error("Error loading image:", blog.featured_image);
+                                                e.currentTarget.onerror = null;
+                                                e.currentTarget.src = "images/blog-img-template.jpg"; // Changed to vcgcgch.jpg
+                                            }}
+                                        />
+
+                                            
                                         )}
                                         <div className='blog-page-latest-blog-card-content'>
                                             <p className='blog-page-latest-blog-card-content-category'>{(blog.category || 'Uncategorized')}</p>
                                             <h2 className='blog-page-latest-blog-card-content-heading'>{blog.title}</h2>
-                                            <p className='blog-page-latest-blog-card-content-para'>{blog.content?.substring(0, 80)}...</p> {/* Basic excerpt */}
-                                            <div className='flex items-center'>
-                                                <p className='blog-page-latest-blog-card-content-name'>Author: {blog.author_id}</p>
+                                            <div
+                                        className='blog-page-latest-blog-card-content-para'
+                                        dangerouslySetInnerHTML={{ __html: blog.content?.substring(0, 100) + '...' || '' }}
+                                    />                                            <div className='flex items-center'>
                                                 <p className='blog-page-latest-blog-card-content-name'>{new Date(blog.created_at).toDateString()}</p>
                                             </div>
                                         </div>

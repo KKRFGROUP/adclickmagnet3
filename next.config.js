@@ -38,7 +38,7 @@ module.exports = {
   images: {
     minimumCacheTTL: 60,
     formats: ['image/webp'],
-    domains: ['adclickmagnetimage.blr1.cdn.digitaloceanspaces.com'],
+    domains: ['adclickmagnetimage.blr1.cdn.digitaloceanspaces.com', 'api.adclickmagnet.us', '127.0.0.1'],
     remotePatterns: [
       {
         protocol: 'https',
@@ -57,6 +57,7 @@ module.exports = {
     serverComponentsExternalPackages: ['@aws-sdk/client-s3', '@aws-sdk/s3-request-presigner']
   },
   
+
   // Add security headers to fix SSL issues
   async headers() {
     return [
