@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
-import { FaCaretRight, FaCaretLeft } from "react-icons/fa";
 import Link from 'next/link';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
@@ -31,15 +30,8 @@ function TopBlogs() {
     const [error, setError] = useState(null);
     const latestBlogTriggerRef = useRef(null);
     const latestBlogSectionRef = useRef(null);
-    const [currentPage, setCurrentPage] = useState(1);
 
-    const categories = [
-        { name: 'Technology', link: 'technology' },
-        { name: 'Health', link: 'health' },
-        { name: 'Lifestyle', link: 'lifestyle' },
-        { name: 'Education', link: 'education' },
-    ];
-    const itemsPerPage = 10;
+    // const itemsPerPage = 10;
 
     useEffect(() => {
         const fetchBlogs = async () => {
@@ -58,12 +50,26 @@ function TopBlogs() {
         fetchBlogs();
     }, []);
 
+
+  const getFullImageUrl = (relativePath: string) => {
+    // Check if the path already contains the base URL or is a full URL
+    // if not empty relative path 
+    console.log("Relative Path:", relativePath);
+    if (!relativePath) {
+      return "/images/blog-img-template.jpg"; // Fallback image
+    }
+    console.log("Relative Path:",BASE_URL  + relativePath);
+    // Assuming Laravel Storage::url() returns paths like /storage/path/to/image.jpg
+    // We concatenate the base URL (e.g., https://api.adclickmagnet.us/) with the relative path from the API
+    return `${BASE_URL}${relativePath}`;
+  };
+
     // Sort blogs after fetching, ensuring 'blogs' is populated
     const sortedBlogs = [...blogs].sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
-    const paginatedBlogs = sortedBlogs.slice(
-        (currentPage - 1) * itemsPerPage,
-        currentPage * itemsPerPage
-    );
+    // const paginatedBlogs = sortedBlogs.slice(
+    //     (currentPage - 1) * itemsPerPage,
+    //     currentPage * itemsPerPage
+    // );
 
     useEffect(() => {
         if (latestBlogSectionRef.current) {
@@ -88,24 +94,14 @@ function TopBlogs() {
                 hscroll.kill();
             };
         }
-    }, [paginatedBlogs]); // Re-run animation on data update
+    },); // Re-run animation on data update
 
-    const handlePrevPage = () => {
-        setCurrentPage((prev) => prev - 1);
-        setTimeout(scrollToTop, 0);
-    };
-
-    const handleNextPage = () => {
-        setCurrentPage((prev) => prev + 1);
-        setTimeout(scrollToTop, 0);
-    };
-
-    const scrollToTop = () => {
-        const blogListSection = document.querySelector('.blog-page-latest-head');
-        if (blogListSection) {
-            blogListSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    };
+    // const scrollToTop = () => {
+    //     const blogListSection = document.querySelector('.blog-page-latest-head');
+    //     if (blogListSection) {
+    //         blogListSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    //     }
+    // };
 
     if (error) {
         return <div className="error">Error: {error}</div>;
@@ -152,10 +148,9 @@ function TopBlogs() {
                         />
                         )}
                         <div className='top1-blog-card-content '>
-                            <p className='blog-card-content-category'>{(sortedBlogs[0].category || 'Uncategorized')}</p>
                             <h2 className='blog-card-content-heading'>{sortedBlogs[0].title}</h2>
                             <div
-                                        className='blog-page-latest-blog-card-content-para'
+                                        className='blog-page-latest-blog-card-content-para mt-4'
                                         dangerouslySetInnerHTML={{ __html: sortedBlogs[0].content?.substring(0, 100) + '...' || '' }}
                                     />                            {/* Assuming there isn't an author name directly in the API response */}
                             {/* You might need to fetch author details separately based on author_id */}
@@ -164,23 +159,23 @@ function TopBlogs() {
                 )}
 
                 <div className='flex justify-between w-full flex-blogs-page-cards-container mb-[5%]'>
-                    {sortedBlogs.slice(1, 4).map((blog) => (
+                    {sortedBlogs.slice(1, 9).map((blog) => (
                         <Link key={blog.id} href={`/blogs/${blog.slug || blog.id}`} className="flex-blog-cards">
-                            <p className='mb-3 blog-card-content-category'>{(blog.category || 'Uncategorized')}</p>
                             {blog.featured_image && (
                                 <Image
                                     className="flex-blogs-page-blog-img mb-5"
-                                    src={BASE_URL + blog.featured_image}
+                                    src={getFullImageUrl(blog.featured_image)}
                                     alt={blog.title}
                                     height={500}
                                     width={500}
                                     onError={(e) => {
                                         console.error("Error loading image:", blog.featured_image);
                                         e.currentTarget.onerror = null;
-                                        e.currentTarget.src = "images/blog-img-template.jpg"; // Changed to vcgcgch.jpg
+                                        e.currentTarget.src = "/images/blog-img-template.jpg"; // Changed to vcgcgch.jpg
                                     }}
                                 />
                             )}
+
                             <div className='flex-blog-content'>
                                 <h2 className='flex-blog-card-content-heading'>{blog.title}</h2>
                                 <div
@@ -192,42 +187,37 @@ function TopBlogs() {
                     ))}
                 </div>
 
-                <div className="latest-blog-main-container">
-                    <h2 className='blog-page-latest-head' >Latest</h2>
-                    <div ref={latestBlogTriggerRef} className="latest-blog-container">
-                        <div className="latest-blog-content-wrapper">
-                            <div ref={latestBlogSectionRef} className="blog-page-latest-blog-list">
-                                {paginatedBlogs.map((blog) => (
-                                    <Link key={blog.id} href={`/blogs/${blog.slug || blog.id}`} className='blog-page-latest-blog-card'>
-                                        {blog.featured_image && (
-                                            <Image
-                                            className="flex-blogs-page-blog-img mb-5"
-                                            src={BASE_URL + blog.featured_image}
-                                            alt={blog.title}
-                                            height={400}
-                                            width={400}
-                                            onError={(e) => {
-                                                console.error("Error loading image:", blog.featured_image);
-                                                e.currentTarget.onerror = null;
-                                                e.currentTarget.src = "images/blog-img-template.jpg"; // Changed to vcgcgch.jpg
-                                            }}
-                                        />
+    {/* <h3 className='e' >Latest Blogs</h3>
+                <div className='flex justify-between w-full flex-blogs-page-cards-container mb-[5%]'>
+              
+                    {paginatedBlogs.slice(1, 4).map((blog) => (
+                        <Link key={blog.id} href={`/blogs/${blog.slug || blog.id}`} className="flex-blog-cards">
+                            {blog.featured_image && (
+                                <Image
+                                    className="flex-blogs-page-blog-img mb-5"
+                                    src={getFullImageUrl(blog.featured_image)}
+                                    alt={blog.title}
+                                    height={500}
+                                    width={500}
+                                    onError={(e) => {
+                                        console.error("Error loading image:", blog.featured_image);
+                                        e.currentTarget.onerror = null;
+                                        e.currentTarget.src = "/images/blog-img-template.jpg"; // Changed to vcgcgch.jpg
+                                    }}
+                                />
+                            )}
 
-                                            
-                                        )}
-                                        <div className='blog-page-latest-blog-card-content'>
-                                            <p className='blog-page-latest-blog-card-content-category'>{(blog.category || 'Uncategorized')}</p>
-                                            <h2 className='blog-page-latest-blog-card-content-heading'>{blog.title}</h2>
-                                            <div
+                            <div className='flex-blog-content'>
+                                <h2 className='flex-blog-card-content-heading'>{blog.title}</h2>
+                                <div
                                         className='blog-page-latest-blog-card-content-para'
                                         dangerouslySetInnerHTML={{ __html: blog.content?.substring(0, 100) + '...' || '' }}
-                                    />                                            <div className='flex items-center'>
-                                                <p className='blog-page-latest-blog-card-content-name'>{new Date(blog.created_at).toDateString()}</p>
-                                            </div>
-                                        </div>
-                                    </Link>
-                                ))}
-                                <div className='pagination-container flex justify-between mx-9 '>
+                                    />
+                            </div>
+                        </Link>
+                    ))}
+
+                                                    <div className='pagination-container flex justify-between mx-9 '>
                                     <button className='pagination-btn' onClick={handlePrevPage} disabled={currentPage === 1}>
                                         <FaCaretLeft />
                                         Previous
@@ -241,23 +231,8 @@ function TopBlogs() {
                                         <FaCaretRight />
                                     </button>
                                 </div>
-                            </div>
-                            <div className="blog-page-latest-blog-categories">
-                                <div className="categories-sticky-wrapper">
-                                    <h2 className='blog-page-categories-head'>Categories</h2>
-                                    <hr className='blog-page-categories-line' />
-                                    <div className="flex flex-wrap">
-                                        {categories.map((each, index) => (
-                                            <Link key={index} href={`/blogs/category/${each.link}`}>
-                                                <button className='blog-page-category-btn' type="button" >{each.name}</button>
-                                            </Link>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div> */}
+
             </div>
         </>
     );

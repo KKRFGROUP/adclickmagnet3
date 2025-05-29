@@ -92,9 +92,9 @@ function SlugBlogs() {
 
   const blogContent = {
     heroHeading: blogData.title,
-    name: 'Unknown Author',
-    time: blogData.created_at,
-    category: 'Uncategorized', // Replace with actual category if available
+    // name: 'Unknown Author',
+    // time: blogData.created_at,
+    // category: 'Uncategorized', // Replace with actual category if available
     image: '/images/blog-img-template.jpg',
     content: {
       para: [blogData.content],

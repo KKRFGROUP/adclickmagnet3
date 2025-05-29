@@ -1,15 +1,12 @@
 "use client"
 
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import Image from 'next/image';
 import { Input,PhoneInput } from '@/components/ui/Form';
 import '../../../press-release/press-release.css'
 import { useRouter } from "next/navigation";
 function BlogSlugContent({content}: {content: {
     heroHeading: string;
-    name: string;
-    time: string; // ISO 8601 format date-time string
-    category: string;
     image: string;
     content: {
       para: string[];
@@ -41,6 +38,10 @@ function BlogSlugContent({content}: {content: {
         router.push("/thank-you");
     }
 
+    const [processedContent, setProcessedContent] = useState(content.content);
+
+    const backendBaseUrl = "https://api.adclickmagnet.us"; 
+
     const handleChange = (e: { target: { name: any; value: any; }; }) => {
         const { name, value } = e.target;
         setFormData((prevData) => ({
@@ -49,32 +50,66 @@ function BlogSlugContent({content}: {content: {
         }));
       };
 
+    useEffect(() => {
+        // Function to process HTML content and make image URLs absolute
+        const processHtmlContent = (htmlString: string) => {
+            if (!htmlString) return htmlString;
+
+            try {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(htmlString, 'text/html');
+                const images = doc.querySelectorAll('img');
+
+                images.forEach(img => {
+                    const src = img.getAttribute('src');
+                    // Check if the src starts with /storage/ and is not already an absolute URL
+                    if (src && src.startsWith('/storage/') && !src.startsWith('http')) {
+                        img.setAttribute('src', `${backendBaseUrl}${src}`);
+                    }
+                });
+
+                // Return the modified HTML string
+                return doc.body.innerHTML;
+            } catch (error) {
+                console.error("Error processing HTML content:", error);
+                return htmlString; // Return original in case of error
+            }
+        };
+
+        // Apply processing to all relevant content parts
+        const newPara = content.content.para.map(processHtmlContent);
+        const newSubcontent = content.content.subcontent.map(sub => ({
+            ...sub,
+            subpara: sub.subpara.map(processHtmlContent) // Assuming subpara can also contain HTML
+        }));
+
+        setProcessedContent({
+            para: newPara,
+            subcontent: newSubcontent
+        });
+
+    }, [content, backendBaseUrl]); // Re-run if content or base URL changes
+
+
+
   return (
     <div className="blog-slug-content-sec">
-       <div className="blog-slug-content">
-  {content.content.para.map((each, index) => (
-    <React.Fragment key={index}>
-
-      <p dangerouslySetInnerHTML={{ __html: each }} />
-
-      <br />
-    </React.Fragment>
-  ))}
-  {content.content.subcontent.map((each, index) => (
-    <div key={index} className="blog-slug-content-suncontent">
-      <h2 className="blog-slug-content-head">{each.subhead}</h2>
-      <p>{each.subpara}</p>
-    </div>
-  ))}
-  {/* author card
-  <div className="press-release-author-card">
-    <Image className="press-release-author-card-img" src="/images/logos/mobile-navbar-logo.webp" alt="logo" height={500} width={500} />
-    <div>
-      <p className="press-release-author-card-author">THE AUTHOR</p>
-      <p className="press-release-author-card-name">Aftab • adClickMagnet</p>
-    </div>
-  </div> */}
-</div>
+            <div className="blog-slug-content">
+                {processedContent.para.map((each, index) => (
+                    <React.Fragment key={index}>
+                        {/* Use dangerouslySetInnerHTML to render the HTML string */}
+                        <p dangerouslySetInnerHTML={{ __html: each }} />
+                        <br />
+                    </React.Fragment>
+                ))}
+                {processedContent.subcontent.map((each, index) => (
+                    <div key={index} className="blog-slug-content-suncontent">
+                        <h2 className="blog-slug-content-head">{each.subhead}</h2>
+                        {/* Use dangerouslySetInnerHTML here too if subpara can contain HTML */}
+                        <p dangerouslySetInnerHTML={{ __html: each.subpara }} />
+                    </div>
+                ))}
+            </div>
         <div className="blog-slug-contact-form-card">
             <div className="blog-slug-contact-form">
                 <Image className="blog-slug-contact-form-img" src="/images/slug-page-contact-us.webp" alt="contact form img" height={500} width={500} />
