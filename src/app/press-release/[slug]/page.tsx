@@ -228,10 +228,14 @@ const PressReleasePage = () => {
                     onError={(e) => { (e.target as HTMLImageElement).onerror = null; (e.target as HTMLImageElement).src = "https://placehold.co/500x300/E0E0E0/333333?text=Image+Error"; }} // Fix EventTarget error
                   />
                   <h2 className="read-more-press-release-card-head">{item.heading}</h2>
-                  <p className="read-more-press-release-card-para">{item.para}</p>
+                             <div
+                                        className='read-more-press-release-card-para'
+                                        dangerouslySetInnerHTML={{ __html: item.para?.substring(0, 100) + '...' || '' }}
+                                    />    
                   <div className="flex">
-                    <p className="read-more-press-release-card-acm-date">adClickMagnet</p>
-                    <p className="read-more-press-release-card-acm-date">{formatDate(item.publish_time)}</p> {/* Use publish_time */}
+                    {/* <p className="read-more-press-release-card-acm-date">adClickMagnet</p> */}
+                    {/* <p className="read-more-press-release-card-acm-date">{formatDate(item.publish_time)}</p> */}
+                     {/* Use publish_time */}
                   </div>
                 </Link>
               ))}

@@ -155,7 +155,11 @@ function PressRelease() {
                   <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">{sortedPressReleases[0].heading}</h2>
                   <div>
                     {/* Display paragraph, limiting to 3 lines */}
-                    <p className="text-gray-600 text-lg mb-6 line-clamp-3">{sortedPressReleases[0].para}</p>
+                        <div
+                                        className='press-release-card-para'
+                                        dangerouslySetInnerHTML={{ __html: sortedPressReleases[0].para?.substring(0, 100) + '...' || '' }}
+                                    />                         
+
                     {/* Link to full press release */}
                     <a href={`/press-release/${sortedPressReleases[0].link}`} className="flex items-center top-press-release-card-btn">
                       Read More
