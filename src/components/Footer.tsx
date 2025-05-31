@@ -12,7 +12,7 @@ import { useRouter } from "next/navigation";
 // Memoized solution links component
 
 
-const payNowLink = "https://razorpay.com/";
+const payNowLink = "https://adclickmagnet.us";
 
 
 const SolutionLinks = memo(() => (

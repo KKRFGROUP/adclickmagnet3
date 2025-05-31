@@ -16,6 +16,7 @@ import "../../components/services-components/components.css"
 import { Input, Label, PhoneInput } from '../../components/ui/Form';
 import { TracingBeam } from "../../components/ui/TracingBeam";
 import { useRouter } from "next/navigation";
+import Footer from '@/components/Footer';
 
 export default function ContactUs() {
   const router = useRouter();
@@ -47,12 +48,11 @@ export default function ContactUs() {
       contactNumber: "+1-718-577-2718"
     }
 
-    const payNowLink = "https://rzp.io/rzp/5UThEojT/";
+    const payNowLink = "https://adclickmagnet.us";
   
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-      setStatus({ message: "Submitting...", isError: false });
-      router.push("/thank-you");
+
   
       try {
         const apiUrl = "https://api.adclickmagnet.us/api/contact";  // Default API URL
@@ -67,6 +67,8 @@ export default function ContactUs() {
   
        if (result.success) {
          setStatus({ message: "Form submitted successfully!", isError: false });
+            
+      router.push("/thank-you");
          setFormData({
            firstName: "",
            lastName: "",
@@ -412,55 +414,7 @@ export default function ContactUs() {
                     
                     </div>
 
-
-
-                    {/* Footer for contact us */}
-                    <div className="footer-container-2">
-                        <h2 className="solutions" >SOLUTIONS</h2>
-                        <div className="flex flex-wrap justify-between solution-paras">
-                        <Link href="web-development" className="solution-para"><p >Web Development</p></Link>
-                        <Link href="google-ads" className="solution-para"><p >Google Ads</p></Link>
-                        <Link href="seo" className="solution-para"><p >SEO</p></Link>
-                        <Link href="graphic-design" className="solution-para"><p >Graphic Design</p></Link>
-                        
-                        <Link href="ad-creative" className="solution-para"><p >Ad Creative</p></Link>
-                        <Link href="motion-design" className="solution-para"><p >Motion Design</p></Link>
-                        <Link href="video-production" className="solution-para"><p >Video Production</p></Link>
-                        <Link href="presentation-design" className="solution-para"><p >Presentation Design</p></Link>
-                        
-                        
-                        </div>
-                        
-                        <hr className='solution-gap-line'/>
-
-                        <div className="flex justify-between lg:px-10 pt-3 footer-links">
-                          <Link href="/press-release" className="solution-page-link">Press Release</Link>
-                          <Link href="/blogs" className="solution-page-link">Blog</Link>
-                          <Link href="/career" className="solution-page-link">Careers</Link>
-                          <Link href="/case-studies" className="solution-page-link">Case Studies</Link>
-                          <Link href={payNowLink} className="solution-page-link">Pay Now</Link>
-                          <Link href="/contact-us" className="solution-page-link">Contact</Link>
-                        </div>
-
-                        <hr className="solution-gap-line" />
-                    
-                        <div className="term-and-condition-cont flex justify-between items-center">
-                        <div className="term-and-condition-content flex items-center gap-6">
-                            <p>© 2025
-                            ACM</p>
-                            <p>Terms & Conditions</p>
-                            <p>Privacy Policy</p>
-                        </div>
-
-                        <div className="social-media-handles-card flex items-center gap-7">
-                            <Link href="https://www.instagram.com/adclickmagnet?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><FaInstagram className='social-media-handle-logo'/> </Link>
-                            <Link href="https://wa.me/+918800262061"><RiWhatsappFill className='social-media-handle-logo'/> </Link>
-                            <Link href="https://www.facebook.com/profile.php?id=61552551834420"><FaFacebook className='social-media-handle-logo'/> </Link>
-                            <Link href="mailto:info@adclickmagnet.com"><MdAttachEmail className='social-media-handle-logo'/> </Link>
-                            
-                        </div>
-                        </div>
-                    </div>
+                     <Footer />                 
               </div>
             </div>
         </>
