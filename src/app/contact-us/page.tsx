@@ -54,38 +54,40 @@ export default function ContactUs() {
       setStatus({ message: "Submitting...", isError: false });
       router.push("/thank-you");
   
-      //try {
-      //  const response = await fetch("/api/contact", {
-      //    method: "POST",
-      //    headers: { "Content-Type": "application/json" },
-      //    body: JSON.stringify(formData),
-      //  });
-  //
-      //  const result = await response.json();
-  //
-      //  if (result.success) {
-      //    setStatus({ message: "Form submitted successfully!", isError: false });
-      //    setFormData({
-      //      firstName: "",
-      //      lastName: "",
-      //      email: "",
-      //      companyName: "",
-      //      phoneNumber: "",
-      //      message: "",
-      //    });
-      //  } else {
-      //    setStatus({ 
-      //      message: result.error || "Failed to submit form.", 
-      //      isError: true 
-      //    });
-      //  }
-      //} catch (error) {
-      //  console.error(error);
-      //  setStatus({ 
-      //    message: "An error occurred while submitting the form.", 
-      //    isError: true 
-      //  });
-      //}
+      try {
+        const apiUrl = "https://api.adclickmagnet.us/api/contact";  // Default API URL
+
+       const response = await fetch(apiUrl, {
+         method: "POST",
+         headers: { "Content-Type": "application/json" },
+         body: JSON.stringify(formData),
+       });
+  
+       const result = await response.json();
+  
+       if (result.success) {
+         setStatus({ message: "Form submitted successfully!", isError: false });
+         setFormData({
+           firstName: "",
+           lastName: "",
+           email: "",
+           companyName: "",
+           phoneNumber: "",
+           message: "",
+         });
+       } else {
+         setStatus({ 
+           message: result.error || "Failed to submit form.", 
+           isError: true 
+         });
+       }
+      } catch (error) {
+       console.error(error);
+       setStatus({ 
+         message: "An error occurred while submitting the form.", 
+         isError: true 
+       });
+      }
     };
   
 

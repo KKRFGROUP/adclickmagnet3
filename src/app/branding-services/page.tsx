@@ -1,8 +1,8 @@
 import BrandingServices from './brandingservices';
       
   export const metadata = {
-    title: "Video Production Services USA & Canada | adClickMagnet",
-    description: "Boost brand awareness with expert video production services across the US and Canada. We craft marketing videos that connect, engage, and drive conversions",
+    title: " Expert Branding Services USA & Canada | adClickMagnet",
+    description: " Define your brand identity with expert branding services across the US and Canada. Get strategic design and messaging that builds recognition and trust.",
   };
   
   export default function Page() {

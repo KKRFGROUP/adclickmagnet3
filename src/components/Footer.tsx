@@ -96,21 +96,19 @@ function SignupFormDemo() {
     setStatus({ message: "Submitting...", isError: false });
 
     try {
-      const response = await fetch('https://api.shareconnection.in/public/api/send-email', {
+      const response = await fetch('https://api.adclickmagnet.us/api/contact-us', { // Corrected URL: removed extra 'http://'
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          recipient_email: 'pankajjha0191@gmail.com', // Use the email from the form data
-          subject: "AdClickMagnet Inquiry", // You can set a default subject or include it in the form
-          body: `
-            First Name: ${formData.firstName}
-            Last Name: ${formData.lastName}
-            Email: ${formData.email}
-            Phone Number: ${formData.phoneNumber}
-            Message: ${formData.message}
-          `, // Construct the email body with form data
+          recipient_email: 'pankajjha0191@gmail.com', // The target recipient for the email
+          subject: "AdClickMagnet Inquiry", // The subject of the email
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email, // This is the email of the person filling the form
+          phoneNumber: formData.phoneNumber,
+          message: formData.message, // The actual message content
         }),
       });
 

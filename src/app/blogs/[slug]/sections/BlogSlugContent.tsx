@@ -1,10 +1,9 @@
 "use client"
 
 import React,{useState, useEffect} from 'react'
-import Image from 'next/image';
-import { Input,PhoneInput } from '@/components/ui/Form';
 import '../../../press-release/press-release.css'
 import { useRouter } from "next/navigation";
+import ContactFormComponent from '@/components/ContactFormComponent';
 function BlogSlugContent({content}: {content: {
     heroHeading: string;
     image: string;
@@ -17,38 +16,11 @@ function BlogSlugContent({content}: {content: {
     };
   }}) {
     const router = useRouter();
-      const [formData, setFormData] = useState({
-            firstName: "",
-            lastName: "",
-            email: "",
-            phoneNumber: "",
-            message: "",
-        });
-      
-        const [status, setStatus] = useState({
-          message: "",
-          isError: false
-        });
-
-    
-
-    const handleSubmit = (e: { preventDefault: () => void; }) => {
-        e.preventDefault();
-        setStatus({ message: "Submitting...", isError: false });
-        router.push("/thank-you");
-    }
 
     const [processedContent, setProcessedContent] = useState(content.content);
 
     const backendBaseUrl = "https://api.adclickmagnet.us"; 
 
-    const handleChange = (e: { target: { name: any; value: any; }; }) => {
-        const { name, value } = e.target;
-        setFormData((prevData) => ({
-          ...prevData,
-          [name]: value,
-        }));
-      };
 
     useEffect(() => {
         // Function to process HTML content and make image URLs absolute
@@ -110,66 +82,13 @@ function BlogSlugContent({content}: {content: {
                     </div>
                 ))}
             </div>
-        <div className="blog-slug-contact-form-card">
-            <div className="blog-slug-contact-form">
-                <Image className="blog-slug-contact-form-img" src="/images/slug-page-contact-us.webp" alt="contact form img" height={500} width={500} />
-                <form onSubmit={handleSubmit} className="blog-slug-contact-form-content">
-                <h2 className='blog-slug-contact-form-content-head' >Let's Build Digital Exellence Together</h2>
-                    <div className="blog-slug-contact-form-content-label-input">
-                        <Input id="firstname"  placeholder="First Name" type="text"
-                        name="firstName"
-                        value={formData.firstName}
-                        onChange={handleChange}
-                        required />
-                        
-                    </div>
-                    <div className="blog-slug-contact-form-content-label-input">
-                        <Input id="lastname" placeholder="Last Name" type="text"
-                          name="lastName"
-                          value={formData.lastName}
-                          onChange={handleChange}
-                          required />
-                    </div>
-
-                    <div className="blog-slug-contact-form-content-label-input">
-                        <Input id="email" type="email"
-                          name="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          required placeholder="Your Email" />
-                    </div>
-
-                    <div className="blog-slug-contact-form-content-label-input">
-                        <PhoneInput
-                          value={formData.phoneNumber}
-                          onChange={handleChange}
-                          placeholder="Phone Number"
-                          className="flex-1"
-                          name="phoneNumber"
-                        />
-                    </div>
-
-                    <div className="blog-slug-contact-form-content-label-input">
-                        <Input id="message" type="text"
-                          name="message"
-                          value={formData.message}
-                          onChange={handleChange}
-                          required placeholder="What can we help you with?" />
-                    </div>
-
-                    {status.message && (
-                        <div className={`mb-4 p-4 rounded ${
-                          status.isError 
-                            ? 'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-100' 
-                            : 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-100'
-                        }`}>
-                          {status.message}
-                        </div>
-                      )}
-                    <button type="submit" className='blog-slug-contact-form-content-btn'>Submit</button>
-                </form>
-            </div>
-        </div>
+             <ContactFormComponent
+          apiEndpoint="http://127.0.0.1:8000/api/contact-us" // Your Laravel API endpoint for this form
+          recipientEmail="pankajjha0191@gmail.com" // The email to send the inquiries to
+          onSuccess={() => router.push("/thank-you")} // Redirect on successful submission
+          formTitle="Let's Build Digital Excellence Together"
+          imageSrc="/images/slug-page-contact-us.webp"
+        />
     </div>
   )
 }
