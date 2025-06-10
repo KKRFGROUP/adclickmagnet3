@@ -86,14 +86,15 @@ const section2 = [
 const section3a = {
   mainpara: "ENGINEERED FOR IMPACT",
   heading: [
-    { text: "Unleash", className: "text-black dark:text-white-500 tracking-wider" },
+    { text: "Professional", className: "text-black dark:text-white-500 tracking-wider" },
+    { text: "Video", className: "text-black dark:text-white-500 tracking-wider" },
+    { text: "Production", className: "text-black dark:text-white-500 tracking-wider" },
+    { text: "Services", className: "text-black dark:text-white-500 tracking-wider" },
+    { text: "in", className: "text-black dark:text-white-500 tracking-wider" },
     { text: "the", className: "text-black dark:text-white-500 tracking-wider" },
-    { text: "power", className: "text-black dark:text-white-500 tracking-wider" },
-    { text: "of", className: "text-black dark:text-white-500 tracking-wider" },
-    { text: "video", className: "text-black dark:text-white-500 tracking-wider" },
-    { text: "for", className: "text-black dark:text-white-500 tracking-wider" },
-    { text: "your", className: "text-black dark:text-white-500 tracking-wider" },
-    { text: "marketing", className: "text-black dark:text-white-500 tracking-wider" },
+    { text: "US", className: "text-black dark:text-white-500 tracking-wider" },
+    { text: "&", className: "text-black dark:text-white-500 tracking-wider" },
+    { text: "Canada", className: "text-black dark:text-white-500 tracking-wider" },
   ],
   para1: 
     "Harness the power of video in today’s digital world. Our comprehensive video production services cater to creative and marketing teams, delivering impactful content tailored to your audience.",
