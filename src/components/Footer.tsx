@@ -264,7 +264,7 @@ export default function Footer() {
               <span className='six'>6.<span className='seven'>7</span></span> / Average ROAS
             </p>
             <p className="footer-para">
-              across our 100+ Global<br /> Clients on SEO, PPC & Social
+              across our 100+ Global<br /> Clients on SEO & Social
             </p>
           </div>
           <div className="footer-mobile-signup-form">
