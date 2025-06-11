@@ -105,7 +105,7 @@ const section3 = {
         className: "text-black dark:text-white-500 tracking-wider",
       },
       {
-        text: "Solutions",
+        text: "Services",
         className: "text-black dark:text-white-500 tracking-wider",
       },
       {   
@@ -113,11 +113,27 @@ const section3 = {
         className: "text-black dark:text-white-500 tracking-wider",
       },
       {
-        text: "Deliver",
+        text: "Drive",
         className: "text-black dark:text-white-500 tracking-wider",
       },
       {  
-        text: "Growth",
+        text: "Result",
+        className: "text-black dark:text-white-500 tracking-wider",
+      },
+          {  
+        text: "in",
+        className: "text-black dark:text-white-500 tracking-wider",
+      },
+          {  
+        text: "USA",
+        className: "text-black dark:text-white-500 tracking-wider",
+      },
+          {  
+        text: "&",
+        className: "text-black dark:text-white-500 tracking-wider",
+      },
+  {  
+        text: "Canada",
         className: "text-black dark:text-white-500 tracking-wider",
       },
     ],
