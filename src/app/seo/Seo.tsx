@@ -88,35 +88,35 @@ const section3 = {
     mainpara: "BUILT FOR TECH, STRATEGY & DIGITAL EXCELLENCE",
     heading: [
       {  
+        text: "Expert",
+        className: "text-black dark:text-white-500 tracking-wider",
+      },
+      {
         text: "SEO",
         className: "text-black dark:text-white-500 tracking-wider",
       },
       {
-        text: "and",
-        className: "text-black dark:text-white-500 tracking-wider",
-      },
-      {
-        text: "Web",
+        text: "Services",
         className: "text-black dark:text-white-500 tracking-wider",
       },
       {   
-        text: "Optimization",
-        className: "text-black dark:text-white-500 tracking-wider",
-      },
-      {
         text: "for",
         className: "text-black dark:text-white-500 tracking-wider",
       },
+      {
+        text: "US",
+        className: "text-black dark:text-white-500 tracking-wider",
+      },
       {  
-        text: "Sites",
+        text: "&",
         className: "text-black dark:text-white-500 tracking-wider",
       },
       {
-        text: "That",
+        text: "Canadian",
         className: "text-black dark:text-white-500 tracking-wider",
       },
       {
-        text: "Perform",
+        text: "Businesses",
         className: "text-black dark:text-white-500 tracking-wider",
       },
     ],
