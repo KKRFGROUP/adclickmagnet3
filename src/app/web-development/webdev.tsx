@@ -87,6 +87,10 @@ const section2 = [
 const section3 = {
     mainpara: "BUILT FOR TECH, STRATEGY & DIGITAL TEAMS",
     heading: [
+          {  
+        text: "Custom",
+        className: "text-black dark:text-white-500 tracking-wider",
+      },
       {  
         text: "Web",
         className: "text-black dark:text-white-500 tracking-wider",
@@ -96,19 +100,27 @@ const section3 = {
         className: "text-black dark:text-white-500 tracking-wider",
       },
       {
-        text: "for",
+        text: "Services",
         className: "text-black dark:text-white-500 tracking-wider",
       },
       {   
-        text: "websites",
+        text: "for",
         className: "text-black dark:text-white-500 tracking-wider",
       },
       {
-        text: "that",
+        text: "USA",
         className: "text-black dark:text-white-500 tracking-wider",
       },
       {  
-        text: "excel",
+        text: "&",
+        className: "text-black dark:text-white-500 tracking-wider",
+      },
+          {  
+        text: "Canadian",
+        className: "text-black dark:text-white-500 tracking-wider",
+      },
+          {  
+        text: "Brands",
         className: "text-black dark:text-white-500 tracking-wider",
       },
     ],
