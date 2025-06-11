@@ -95,27 +95,43 @@ const section3 = {
     mainpara: "DRIVEN BY STRATEGY, IMPACT & ROI",
     heading: [
       {  
-        text: "LinkedIn",
+        text: "Targeted",
+        className: "text-black dark:text-white-500 tracking-wider",
+      },
+      {
+        text: "Linkedin",
         className: "text-black dark:text-white-500 tracking-wider",
       },
       {
         text: "Ads",
         className: "text-black dark:text-white-500 tracking-wider",
       },
-      {
-        text: "Solutions",
-        className: "text-black dark:text-white-500 tracking-wider",
-      },
       {   
-        text: "that",
+        text: "for",
         className: "text-black dark:text-white-500 tracking-wider",
       },
       {
-        text: "Deliver",
+        text: "B2B",
         className: "text-black dark:text-white-500 tracking-wider",
       },
       {  
         text: "Growth",
+        className: "text-black dark:text-white-500 tracking-wider",
+      },
+          {  
+        text: "in",
+        className: "text-black dark:text-white-500 tracking-wider",
+      },
+          {  
+        text: "USA",
+        className: "text-black dark:text-white-500 tracking-wider",
+      },
+        {  
+        text: "&",
+        className: "text-black dark:text-white-500 tracking-wider",
+      },
+          {  
+        text: "Canada",
         className: "text-black dark:text-white-500 tracking-wider",
       },
     ],
