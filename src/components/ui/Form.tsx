@@ -47,7 +47,6 @@ const countryCodes: {
   { code: '+351', country: 'Portugal', flag: '🇵🇹' },
   { code: '+64', country: 'New Zealand', flag: '🇳🇿' },
   { code: '+598', country: 'Uruguay', flag: '🇺🇾' },
-  { code: '+64', country: 'New Zealand', flag: '🇳🇿' },
   { code: '+1-246', country: 'Barbados', flag: '🇧🇧' },
   { code: '+1-441', country: 'Bermuda', flag: '🇧🇲' },
   { code: '+968', country: 'Oman', flag: '🇴🇲' },
@@ -58,7 +57,6 @@ const countryCodes: {
   { code: '+961', country: 'Lebanon', flag: '🇱🇧' },
   { code: '+965', country: 'Kuwait', flag: '🇰🇼' },
   { code: '+372', country: 'Estonia', flag: '🇪🇪' },
-  { code: '+372', country: 'Latvia', flag: '🇱🇻' },
   { code: '+66', country: 'Thailand', flag: '🇹🇭' },
   { code: '+94', country: 'Sri Lanka', flag: '🇱🇰' },
   { code: '+998', country: 'Uzbekistan', flag: '🇺🇿' },
@@ -66,9 +64,7 @@ const countryCodes: {
   { code: '+880', country: 'Bangladesh', flag: '🇧🇩' },
   { code: '+376', country: 'Andorra', flag: '🇦🇩' },
   { code: '+374', country: 'Armenia', flag: '🇦🇲' },
-  { code: '+1242', country: 'Bahamas', flag: '🇧🇸' },
   { code: '+973', country: 'Bahrain', flag: '🇧🇭' },
-  { code: '+1-441', country: 'Bermuda', flag: '🇧🇲' },
 ];
 
 

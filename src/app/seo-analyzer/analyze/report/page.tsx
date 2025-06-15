@@ -35,21 +35,23 @@ function Report() {
     urgency: "",
   });
 
-  const handleChange = (e: { target: { name: string; value: string } }) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
+const handleChange = (e: { target: { name: string; value: string } }) => {
+  const { name, value } = e.target;
+  console.log("Changing:", name, "to", value);
+  setFormData((prevData) => ({
+    ...prevData,
+    [name]: value,
+  }));
+};
 
   // Handle dropdown changes
-  const handleDropdownChange = (name: string, value: string) => {
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
+ const handleDropdownChange = (name: string, value: string) => {
+  console.log("Dropdown Change:", name, value);
+  setFormData((prevData) => ({
+    ...prevData,
+    [name]: value,
+  }));
+};
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -193,23 +195,29 @@ function Report() {
                   </div>
 
                   <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
-                    <Dropdown className='w-full'>
-                      <DropdownTrigger placeholder='Monthly Budget'>
-                        <Label>Choose an option</Label>
-                      </DropdownTrigger>
-                      <DropdownContent>
-                        {/* Ensure DropdownItem onClick or value prop updates state */}
-                        <DropdownItem value="Under $750" onSelect={() => handleDropdownChange('monthlyBudget', 'Under $750')}>Under $750</DropdownItem>
-                        <DropdownItem value="$750 to $1,500" onSelect={() => handleDropdownChange('monthlyBudget', '$750 to $1,500')}>$750 to $1,500</DropdownItem>
-                        <DropdownItem value="$1,500 to $5,000" onSelect={() => handleDropdownChange('monthlyBudget', '$1,500 to $5,000')}>$1,500 to $5,000</DropdownItem>
-                        <DropdownItem value="$5,000 to $10,000" onSelect={() => handleDropdownChange('monthlyBudget', '$5,000 to $10,000')}>$5,000 to $10,000</DropdownItem>
-                        <DropdownItem value="$10,000 to $25,000" onSelect={() => handleDropdownChange('monthlyBudget', '$10,000 to $25,000')}>$10,000 to $25,000</DropdownItem>
-                        <DropdownItem value="$25,000 to $50,000" onSelect={() => handleDropdownChange('monthlyBudget', '$25,000 to $50,000')}>$25,000 to $50,000</DropdownItem>
-                      </DropdownContent>
-                    </Dropdown>
+            
+                    <Dropdown className='w-full' value={formData.monthlyBudget} onValueChange={(val) => handleDropdownChange('monthlyBudget', val)}>
 
-                    <Dropdown className='w-full'>
-                      <DropdownTrigger placeholder='Monthly Team Size'>
+                    <DropdownTrigger placeholder={formData.monthlyBudget || 'Monthly Budget'}>
+                      <Label>Choose an option</Label>
+                    </DropdownTrigger>
+                    <DropdownContent>
+                      <DropdownItem value="Under $750" onSelect={() => handleDropdownChange('monthlyBudget', 'Under $750')}>Under $750</DropdownItem>
+                      <DropdownItem value="$750 to $1,500" onSelect={() => handleDropdownChange('monthlyBudget', '$750 to $1,500')}>$750 to $1,500</DropdownItem>
+                      <DropdownItem value="$1,500 to $5,000" onSelect={() => handleDropdownChange('monthlyBudget', '$1,500 to $5,000')}>$1,500 to $5,000</DropdownItem>
+                      <DropdownItem value="$5,000 to $10,000" onSelect={() => handleDropdownChange('monthlyBudget', '$5,000 to $10,000')}>$5,000 to $10,000</DropdownItem>
+                      <DropdownItem value="$10,000 to $25,000" onSelect={() => handleDropdownChange('monthlyBudget', '$10,000 to $25,000')}>$10,000 to $25,000</DropdownItem>
+                      <DropdownItem value="$25,000 to $50,000" onSelect={() => handleDropdownChange('monthlyBudget', '$25,000 to $50,000')}>$25,000 to $50,000</DropdownItem>
+                    </DropdownContent>
+                  </Dropdown>
+
+                    <Dropdown className='w-full' value={formData.monthlyTeamSize} onValueChange={(val) => handleDropdownChange('monthlyTeamSize', val)}>
+
+                      {/*
+                        Changed: Use formData.monthlyTeamSize as the placeholder if it's not empty,
+                        otherwise use the default "Monthly Team Size".
+                      */}
+                      <DropdownTrigger placeholder={formData.monthlyTeamSize || 'Monthly Team Size'}>
                         <Label>Choose an option</Label>
                       </DropdownTrigger>
                       <DropdownContent>
@@ -223,8 +231,12 @@ function Report() {
                   </div>
 
                   <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
-                    <Dropdown className='w-full'>
-                      <DropdownTrigger placeholder='Business Type'>
+                    <Dropdown className='w-full' value={formData.businessType} onValueChange={(val) => handleDropdownChange('businessType', val)}>
+                      {/*
+                        Changed: Use formData.businessType as the placeholder if it's not empty,
+                        otherwise use the default "Business Type".
+                      */}
+                      <DropdownTrigger placeholder={formData.businessType || 'Business Type'}>
                         <Label>Choose an option</Label>
                       </DropdownTrigger>
                       <DropdownContent>
@@ -235,8 +247,13 @@ function Report() {
                       </DropdownContent>
                     </Dropdown>
 
-                    <Dropdown className='w-full'>
-                      <DropdownTrigger placeholder='Industry'>
+                    <Dropdown className='w-full' value={formData.industry} onValueChange={(val) => handleDropdownChange('industry', val)}>
+
+                      {/*
+                        Changed: Use formData.industry as the placeholder if it's not empty,
+                        otherwise use the default "Industry".
+                      */}
+                      <DropdownTrigger placeholder={formData.industry || 'Industry'}>
                         <Label>Choose an option</Label>
                       </DropdownTrigger>
                       <DropdownContent>
@@ -251,13 +268,18 @@ function Report() {
                     </Dropdown>
                   </div>
 
-                  <Dropdown className='w-full mb-4'>
-                    <DropdownTrigger placeholder='Your Urgency for hiring help'>
+                    <Dropdown className='w-full' value={formData.urgency} onValueChange={(val) => handleDropdownChange('urgency', val)}>
+
+                    {/*
+                      Changed: Use formData.urgency as the placeholder if it's not empty,
+                      otherwise use the default "Your Urgency for hiring help".
+                    */}
+                    <DropdownTrigger placeholder={formData.urgency || 'Your Urgency for hiring help'}>
                       <Label>Choose an option</Label>
                     </DropdownTrigger>
                     <DropdownContent>
                       <DropdownItem value="I Need Help IMMEDIATELY" onSelect={() => handleDropdownChange('urgency', 'I Need Help IMMEDIATELY')}>I need help immediately</DropdownItem>
-                      <DropdownItem value="I Need to start working on this quarter" onSelect={() => handleDropdownChange('urgency', 'I Need to start working on this quarter')}>I Need to start working on it this quarter</DropdownItem>
+                      <DropdownItem value="I Need to start working on this quarter" onSelect={() => handleDropdownChange('urgency', 'I Need to start working on it this quarter')}>I Need to start working on it this quarter</DropdownItem>
                       <DropdownItem value="I Have 6 months to decide" onSelect={() => handleDropdownChange('urgency', 'I Have 6 months to decide')}>I Have 6 months to decide</DropdownItem>
                       <DropdownItem value="I Have more than A year" onSelect={() => handleDropdownChange('urgency', 'I Have more than a year')}>I Have more than a year</DropdownItem>
                       <DropdownItem value="Not a Priority" onSelect={() => handleDropdownChange('urgency', 'Not a Priority')}>Not a Priority</DropdownItem>
