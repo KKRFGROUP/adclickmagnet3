@@ -50,7 +50,10 @@ const AnalyzeProgress = ({
             setTimeout(fetchProgress, 1000);
           }
           else {
-            router.push(`/seo-analyzer/analyze/report`);
+            const domain = url.replace(/^(?:https?:\/\/)?(?:www\.)?/i, "").split('/')[0];
+    
+          router.push(`/seo-analyzer/analyze/report?url=${domain}`);
+
           }
         }
       } catch (err) {

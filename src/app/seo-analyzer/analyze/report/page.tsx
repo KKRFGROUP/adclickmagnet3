@@ -1,6 +1,6 @@
-"use client"
+'use client'
 
-import React,{useState, useRef} from 'react'
+import React,{useState, useRef, useEffect} from 'react' // Import useEffect
 import Image from 'next/image';
 import "../../analyze.css";
 import { Input, Label, PhoneInput, DropdownTrigger, Dropdown, DropdownContent, DropdownItem } from '../../../../components/ui/Form';
@@ -13,13 +13,14 @@ import Link from 'next/link';
 import {AuroraBackground} from '../../../../components/ui/AuroraBackground'
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
-
+import { useSearchParams } from 'next/navigation';
 
 function Report() {
+  const searchParams = useSearchParams();
+
   const pageMainRef = useRef<HTMLDivElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-  // Add state for form submission status (success/error)
   const [submissionStatus, setSubmissionStatus] = useState<{ message: string; isError: boolean } | null>(null);
 
   const [formData, setFormData] = useState({
@@ -27,54 +28,63 @@ function Report() {
     lastName: "",
     email: "",
     phoneNumber: "",
-    message: "", // Assuming 'message' field is for the general inquiry message
-    monthlyBudget: "", // Add new fields from dropdowns
+    message: "",
+    monthlyBudget: "",
     monthlyTeamSize: "",
     businessType: "",
     industry: "",
     urgency: "",
+    analyzedUrl: "" // Initialize as an empty string
   });
 
-const handleChange = (e: { target: { name: string; value: string } }) => {
-  const { name, value } = e.target;
-  console.log("Changing:", name, "to", value);
-  setFormData((prevData) => ({
-    ...prevData,
-    [name]: value,
-  }));
-};
+  // Get analyzedUrl here, outside of useState initial value
+  const analyzedUrl = searchParams.get('url');
 
-  // Handle dropdown changes
- const handleDropdownChange = (name: string, value: string) => {
-  console.log("Dropdown Change:", name, value);
-  setFormData((prevData) => ({
-    ...prevData,
-    [name]: value,
-  }));
-};
+  // Use useEffect to update formData with analyzedUrl once it's available
+  useEffect(() => {
+    if (analyzedUrl && formData.analyzedUrl !== analyzedUrl) { // Only update if it's new/different
+      setFormData(prevData => ({
+        ...prevData,
+        analyzedUrl: analyzedUrl // Update the analyzedUrl in formData
+      }));
+    }
+  }, [analyzedUrl, formData.analyzedUrl]); // Dependency array: run when analyzedUrl or formData.analyzedUrl changes
+
+  const handleChange = (e: { target: { name: string; value: string } }) => {
+    const { name, value } = e.target;
+    console.log("Changing:", name, "to", value);
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleDropdownChange = (name: string, value: string) => {
+    console.log("Dropdown Change:", name, value);
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Reset status message
     setSubmissionStatus(null);
 
     try {
-      const analyze_url = 'https://api.adclickmagnet.us/api/analyze/report'; // **Your API endpoint**
-      const response = await fetch(analyze_url, { // **Your API endpoint**
+      const analyze_url = 'https://api.adclickmagnet.us/api/analyze/report';
+      const response = await fetch(analyze_url, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          // Include fixed recipient and subject for the email
-          recipient_email: 'pankajjha0191@gmail.com', // The actual recipient of the report email
-          subject: "AdClickMagnet SEO Report Inquiry", // A clear subject for your email
-
-          // Pass all form data fields directly
+          recipient_email: 'pankajjha0191@gmail.com',
+          subject: "AdClickMagnet SEO Report Inquiry",
           firstName: formData.firstName,
           lastName: formData.lastName,
-          email: formData.email, // This is the user's email for reply/confirmation
+          email: formData.email,
           phoneNumber: formData.phoneNumber,
           message: formData.message,
           monthlyBudget: formData.monthlyBudget,
@@ -82,15 +92,15 @@ const handleChange = (e: { target: { name: string; value: string } }) => {
           businessType: formData.businessType,
           industry: formData.industry,
           urgency: formData.urgency,
+          analyzedUrl: formData.analyzedUrl, // Make sure to send it from formData
         }),
       });
 
       const result = await response.json();
 
-      if (response.ok) { // Check for successful HTTP status (2xx)
+      if (response.ok) {
         setSubmissionStatus({ message: result.message || "Your report request has been sent!", isError: false });
-        setIsPopupOpen(true); // Open success popup
-        // Optionally clear form data on success
+        setIsPopupOpen(true);
         setFormData({
             firstName: "",
             lastName: "",
@@ -102,14 +112,13 @@ const handleChange = (e: { target: { name: string; value: string } }) => {
             businessType: "",
             industry: "",
             urgency: "",
+            analyzedUrl: "" // Clear analyzedUrl as well on success if desired
         });
       } else {
-        // Handle API errors (e.g., validation errors from Laravel)
         setSubmissionStatus({
           message: result.message || "Failed to send report request.",
           isError: true,
         });
-        // Optionally, don't open popup on error or show a different error popup
         console.error("API Error:", result);
       }
     } catch (error) {
@@ -156,6 +165,14 @@ const handleChange = (e: { target: { name: string; value: string } }) => {
                   Fill out the form below to receive your results on your email.
                 </p>
 
+                {/* Displaying the analyzed URL */}
+                {formData.analyzedUrl && ( // Display from formData for consistency
+                    <p className="text-center text-lg text-white/80 mt-4 mb-4">
+                        Report for: <span className="font-semibold break-all">{decodeURIComponent(formData.analyzedUrl)}</span>
+                    </p>
+                )}
+
+
                 <form className="mt-8 w-[85%]" onSubmit={handleSubmit}>
                   <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
                     <LabelInputContainer className="">
@@ -169,7 +186,7 @@ const handleChange = (e: { target: { name: string; value: string } }) => {
                     <LabelInputContainer>
                       <PhoneInput
                         value={formData.phoneNumber}
-                        onChange={handleChange} // PhoneInput likely needs an event-like object or a specific way to pass name/value
+                        onChange={handleChange}
                         placeholder="Phone number"
                         className="flex-1"
                         name="phoneNumber"
@@ -195,28 +212,23 @@ const handleChange = (e: { target: { name: string; value: string } }) => {
                   </div>
 
                   <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
-            
+
                     <Dropdown className='w-full' value={formData.monthlyBudget} onValueChange={(val) => handleDropdownChange('monthlyBudget', val)}>
 
-                    <DropdownTrigger placeholder={formData.monthlyBudget || 'Monthly Budget'}>
-                      <Label>Choose an option</Label>
-                    </DropdownTrigger>
-                    <DropdownContent>
-                      <DropdownItem value="Under $750" onSelect={() => handleDropdownChange('monthlyBudget', 'Under $750')}>Under $750</DropdownItem>
-                      <DropdownItem value="$750 to $1,500" onSelect={() => handleDropdownChange('monthlyBudget', '$750 to $1,500')}>$750 to $1,500</DropdownItem>
-                      <DropdownItem value="$1,500 to $5,000" onSelect={() => handleDropdownChange('monthlyBudget', '$1,500 to $5,000')}>$1,500 to $5,000</DropdownItem>
-                      <DropdownItem value="$5,000 to $10,000" onSelect={() => handleDropdownChange('monthlyBudget', '$5,000 to $10,000')}>$5,000 to $10,000</DropdownItem>
-                      <DropdownItem value="$10,000 to $25,000" onSelect={() => handleDropdownChange('monthlyBudget', '$10,000 to $25,000')}>$10,000 to $25,000</DropdownItem>
-                      <DropdownItem value="$25,000 to $50,000" onSelect={() => handleDropdownChange('monthlyBudget', '$25,000 to $50,000')}>$25,000 to $50,000</DropdownItem>
-                    </DropdownContent>
-                  </Dropdown>
+                      <DropdownTrigger placeholder={formData.monthlyBudget || 'Monthly Budget'}>
+                        <Label>Choose an option</Label>
+                      </DropdownTrigger>
+                      <DropdownContent>
+                        <DropdownItem value="Under $750" onSelect={() => handleDropdownChange('monthlyBudget', 'Under $750')}>Under $750</DropdownItem>
+                        <DropdownItem value="$750 to $1,500" onSelect={() => handleDropdownChange('monthlyBudget', '$750 to $1,500')}>$750 to $1,500</DropdownItem>
+                        <DropdownItem value="$1,500 to $5,000" onSelect={() => handleDropdownChange('monthlyBudget', '$1,500 to $5,000')}>$1,500 to $5,000</DropdownItem>
+                        <DropdownItem value="$5,000 to $10,000" onSelect={() => handleDropdownChange('monthlyBudget', '$5,000 to $10,000')}>$5,000 to $10,000</DropdownItem>
+                        <DropdownItem value="$10,000 to $25,000" onSelect={() => handleDropdownChange('monthlyBudget', '$10,000 to $25,000')}>$10,000 to $25,000</DropdownItem>
+                        <DropdownItem value="$25,000 to $50,000" onSelect={() => handleDropdownChange('monthlyBudget', '$25,000 to $50,000')}>$25,000 to $50,000</DropdownItem>
+                      </DropdownContent>
+                    </Dropdown>
 
                     <Dropdown className='w-full' value={formData.monthlyTeamSize} onValueChange={(val) => handleDropdownChange('monthlyTeamSize', val)}>
-
-                      {/*
-                        Changed: Use formData.monthlyTeamSize as the placeholder if it's not empty,
-                        otherwise use the default "Monthly Team Size".
-                      */}
                       <DropdownTrigger placeholder={formData.monthlyTeamSize || 'Monthly Team Size'}>
                         <Label>Choose an option</Label>
                       </DropdownTrigger>
@@ -232,10 +244,6 @@ const handleChange = (e: { target: { name: string; value: string } }) => {
 
                   <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
                     <Dropdown className='w-full' value={formData.businessType} onValueChange={(val) => handleDropdownChange('businessType', val)}>
-                      {/*
-                        Changed: Use formData.businessType as the placeholder if it's not empty,
-                        otherwise use the default "Business Type".
-                      */}
                       <DropdownTrigger placeholder={formData.businessType || 'Business Type'}>
                         <Label>Choose an option</Label>
                       </DropdownTrigger>
@@ -248,11 +256,6 @@ const handleChange = (e: { target: { name: string; value: string } }) => {
                     </Dropdown>
 
                     <Dropdown className='w-full' value={formData.industry} onValueChange={(val) => handleDropdownChange('industry', val)}>
-
-                      {/*
-                        Changed: Use formData.industry as the placeholder if it's not empty,
-                        otherwise use the default "Industry".
-                      */}
                       <DropdownTrigger placeholder={formData.industry || 'Industry'}>
                         <Label>Choose an option</Label>
                       </DropdownTrigger>
@@ -269,11 +272,6 @@ const handleChange = (e: { target: { name: string; value: string } }) => {
                   </div>
 
                     <Dropdown className='w-full' value={formData.urgency} onValueChange={(val) => handleDropdownChange('urgency', val)}>
-
-                    {/*
-                      Changed: Use formData.urgency as the placeholder if it's not empty,
-                      otherwise use the default "Your Urgency for hiring help".
-                    */}
                     <DropdownTrigger placeholder={formData.urgency || 'Your Urgency for hiring help'}>
                       <Label>Choose an option</Label>
                     </DropdownTrigger>
@@ -286,7 +284,6 @@ const handleChange = (e: { target: { name: string; value: string } }) => {
                     </DropdownContent>
                   </Dropdown>
 
-                  {/* Add a textarea for the message field */}
                   <LabelInputContainer className="mb-4">
                     <Label htmlFor="message">Your Message</Label>
                     <textarea
@@ -309,7 +306,7 @@ const handleChange = (e: { target: { name: string; value: string } }) => {
 
                   <button
                     className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-neutral-400 rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset] report-page-submit-btn"
-                    type="submit" // Change to type="submit" to trigger form onSubmit
+                    type="submit"
                   >
                     Send the Report &rarr;
                     <BottomGradient />
