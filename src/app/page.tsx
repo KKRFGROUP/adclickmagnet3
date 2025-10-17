@@ -134,7 +134,7 @@ export default function Home() {
 
   return (
     <>
-      {/* Main full-screen loader */}
+      
       {/* {isLoading && <FullScreenLoader />} */}
 
       {/* 404 Page Not Found */}
