@@ -1,0 +1,202 @@
+.press-release-slug-page-container {
+    padding: 100px;
+    padding-top: 13%;
+    height: max-content;
+    background-color: #e2e2e2;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    color: #000;
+}
+.press-release-hero-sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.press-release-hero-sec-head {
+    font-family: "Syne";
+    font-size: 50px;
+    margin-bottom: 10%;
+}
+.press-release-hero-sec-img {
+    border-radius: 10px;
+}
+.press-release-hero-sec-para {
+    font-size: 20px;
+    font-family: "Unbounded";
+}
+
+.sharing-social-handles {
+    width: 20%;
+    padding: 30px;  
+    padding-right: 60px;  
+}
+.sharing-social-handles-para {
+    font-family: "Unbounded";
+    font-size: 13px;
+    margin-top: 30px;
+}
+.press-release-slug-content {
+    width: 80%;
+}
+
+.press-release-slug-content-para {
+    font-family: "Unbounded";
+    font-weight: 300;
+    font-size: 16px;
+}
+.press-release-slug-content-head {
+    font-family: "Syne";
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .press-release-slug-page-container {
+        padding: 20px;
+        padding-top: 23%;
+    }
+    .press-release-hero-sec {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .press-release-hero-sec-head {
+        font-size: 30px;
+        margin-bottom: 5%;
+    }
+    .press-release-hero-sec-img {
+        border-radius: 10px;
+        margin-top: 5%;
+    }
+    .press-release-hero-sec-para {
+        font-size: 20px;
+        font-family: "Unbounded";
+    }
+    .sharing-social-handles {
+        display: none;
+    }
+}
+
+
+
+/* author section */
+
+.press-release-author-card {
+    display: flex;
+    font-family: "Unbounded";
+    align-items: center;
+}
+.press-release-author-card-img{
+    width: 20%;
+    margin-right: 30px;
+}
+.press-release-author-card-author {
+    color: grey;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .press-release-author-card-img{
+        width: 40%;
+        margin-right: 30px;
+    }
+    .press-release-author-card-author {
+        color: grey;
+        font-size: 10px;
+        margin-bottom: 15px;
+    }
+    .press-release-author-card-name {
+        font-size: 13px;
+    }
+}
+
+
+
+
+/* read more press release*/
+
+.read-more-press-release-head {
+    font-family: "Syne";
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 35px;
+}
+
+.read-more-press-release-card {
+    width: 30%;
+}
+
+.read-more-press-release-card-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+
+.read-more-press-release-card-head {
+    font-family: "Syne";
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.read-more-press-release-card-para {
+    font-family: "Unbounded";
+    font-weight: 300;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.read-more-press-release-card-acm-date {
+    font-family: "Unbounded";
+    font-weight: 300;
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: grey;
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .read-more-press-release-head {
+        font-size: 27px;
+        margin-bottom: 35px;
+    }
+    .read-more-press-release-flex {
+        flex-direction: column;
+        padding-bottom: 10%;
+    }
+    
+    .read-more-press-release-card {
+        width: 100%;
+    }
+    
+    .read-more-press-release-card-img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 30px;
+    }
+    
+    
+    .read-more-press-release-card-head {
+        font-family: "Syne";
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .read-more-press-release-card-para {
+        font-family: "Unbounded";
+        font-weight: 300;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .read-more-press-release-card-acm-date {
+        font-family: "Unbounded";
+        font-weight: 300;
+        font-size: 15px;
+        margin-bottom: 20px;
+        color: grey;
+        margin-right: 20px;
+    }
+}

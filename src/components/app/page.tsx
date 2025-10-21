@@ -2,12 +2,13 @@
 
 import React, { useRef, useState, lazy, Suspense, useEffect } from "react";
 import dynamic from "next/dynamic";
+import NotFound from "./not-found";
 
-
+// Full-screen loading component with logo
 const FullScreenLoader = () => (
   <div className="fixed inset-0 bg-black flex flex-col justify-center items-center z-50">
     <div className="mb-8">
-
+      {/* Logo image */}
       <img
         src="/images/logos/white logo bigger.webp"
         alt="ACM Logo"
@@ -18,7 +19,7 @@ const FullScreenLoader = () => (
   </div>
 );
 
-
+// Custom single-circle cursor for home page only
 const SimpleCircleCursor = () => {
   // Don't render on touch devices
   if ("ontouchstart" in window || navigator.maxTouchPoints > 0) {
@@ -60,6 +61,7 @@ const ClientVideSec = lazy(
 const Navbar = lazy(() => import("@/components/Navbar"));
 const Footer = lazy(() => import("@/components/Footer"));
 
+// Use intersection observer for viewport-based loading
 const LazyLoadOnVisible = ({ children }: { children: React.ReactNode }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
@@ -72,7 +74,7 @@ const LazyLoadOnVisible = ({ children }: { children: React.ReactNode }) => {
           observer.disconnect();
         }
       },
-      { rootMargin: "200px" }
+      { rootMargin: "200px" } // Load when within 200px of viewport
     );
 
     if (ref.current) {
@@ -99,11 +101,11 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   // useRouteBlocker();
 
-  
+  // Set loading state to false after initial load
   React.useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 2000); // 2 second minimum loading time for better UX
 
     return () => clearTimeout(timer);
   }, []);
@@ -120,21 +122,49 @@ export default function Home() {
     }
   };
 
+  // useEffect(() => {
+  //   if (typeof window === "undefined") return;
+
+  //   const interval = setInterval(() => {
+  //     window.location.reload();
+  //   }, 5000); // reload every 100 ms
+
+  //   return () => clearInterval(interval); // cleanup on unmount
+  // }, []);
+
   return (
     <>
+      
       {/* {isLoading && <FullScreenLoader />} */}
 
-      <main className={`opacity-100 ${isLoading ? "invisible" : "visible"}`}>
+      {/* 404 Page Not Found */}
+
+      {/* <div className="fixed inset-0 bg-black flex flex-col justify-center items-center z-50">
+        <img
+          src="/images/logos/white logo bigger.webp"
+          alt="ACM Logo"
+          className="h-56 w-auto mb-8"
+        />
+        <h1 className="text-white text-4xl font-bold mb-4">
+          404 - Page Not Found
+        </h1>
+        <p className="text-white mb-8">
+          The page you are looking for does not exist.
+        </p>
+      </div> */}
+
+      <NotFound/>
+
+      {/* <main className={`opacity-100 ${isLoading ? 'invisible' : 'visible'}`}>
+
         <CustomCursor />
 
         <Suspense fallback={<FullScreenLoader />}>
-          <Navbar mobileOverlayOpen={toggleMenu} isOpen={isOpen} />
+          <Navbar mobileOverlayOpen={toggleMenu} isOpen={isOpen}/>
         </Suspense>
 
-        <div
-          ref={pageMainRef}
-          className="dark:bg-balck bg-black overflow-hidden page-main"
-        >
+        <div ref={pageMainRef} className="dark:bg-balck bg-black overflow-hidden page-main">
+
           <Suspense fallback={<FullScreenLoader />}>
             <SovereignChains />
           </Suspense>
@@ -199,7 +229,7 @@ export default function Home() {
             </LazyLoadOnVisible>
           </div>
         </div>
-      </main>
+      </main> */}
     </>
   );
 }
